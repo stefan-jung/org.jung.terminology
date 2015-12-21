@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <public publicId="-//DOCTALES//DTD DITA DOCTALES Term//EN" uri="dtd/term.dtd" />
+  <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Term//EN" uri="dtd/term.mod" />
+</catalog>

@@ -1,0 +1,5 @@
+*.zip
+out/
+temp/
+*.xpr
+build_deploy.xml

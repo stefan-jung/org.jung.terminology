@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin id="org.dita.specialization.org.doctales.terminology">
+  <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
+</plugin>
