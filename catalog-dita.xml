@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES Term//EN" uri="dtd/term.dtd" />
-  <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Term//EN" uri="dtd/term.mod" />
+  <public publicId="-//DOCTALES//DTD DITA DOCTALES Termentry//EN" uri="dtd/termentry.dtd"/>
+  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.x Termentry//EN" uri="dtd/termentry.dtd"/>
+  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.2 Termentry//EN" uri="dtd/termentry.dtd"/>
+  <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
+  <public publicId="-//DOCTALES//ELEMENTS DITA 1.x DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
+  <public publicId="-//DOCTALES//ELEMENTS DITA 1.2 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
 </catalog>
