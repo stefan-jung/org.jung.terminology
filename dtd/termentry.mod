@@ -18,10 +18,24 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % termentry             "termentry"                                            >
-<!ENTITY % definition            "definition"                                           >
+<!ENTITY % termDefinition        "termDefinition"                                       >
 <!ENTITY % termMeta              "termMeta"                                             >
-<!ENTITY % definitionSource      "definitionSource"                                     >
+<!ENTITY % termDefinitionSource  "termDefinitionSource"                                 >
 <!ENTITY % termBody              "termBody"                                             >
+<!ENTITY % termFullForm          "termFullForm"                                         >
+<!ENTITY % termVariant           "termVariant"                                          >
+
+
+
+<!-- ================================================================================ -->
+<!--                              COMMON ATTLIST SETS                                 -->
+<!-- ================================================================================ -->
+
+<!ENTITY % usage-atts 
+                                 'usage
+                                     (deprecated |
+                                      allowed)
+                                         #IMPLIED'>
 
 
 
@@ -40,7 +54,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!--                                 LONG NAME: Term Entry                            -->
 
 <!ENTITY % termentry.content        "((%title;),
-                                      (%definition;)?,
+                                      (%termDefinition;)?,
                                       (%termMeta;)?,
                                       (%termBody;)?,
                                       (%termentry-info-types;)*)">
@@ -63,17 +77,17 @@ Category: Termentry elements-->
                                      domains CDATA "&included-domains;">
 
 <!--                                 LONG NAME: Term Definition                       -->
-<!ENTITY % definition.content
+<!ENTITY % termDefinition.content
                        "(%abstract.cnt;)*"
 >
-<!ENTITY % definition.attributes
+<!ENTITY % termDefinition.attributes
              "%univ-atts;
               outputclass 
                         CDATA 
                                   #IMPLIED"
 >
-<!ELEMENT definition    %definition.content;>
-<!ATTLIST definition    %definition.attributes;>
+<!ELEMENT termDefinition    %termDefinition.content;>
+<!ATTLIST termDefinition    %termDefinition.attributes;>
 
 <!--                                 LONG NAME: Term Meta                             -->
 <!ENTITY % termMeta.content
@@ -99,7 +113,8 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Term Body                             -->
 <!ENTITY % termBody.content
-                       "EMPTY"
+                       "((%termDefinitionSource;)?,
+                         (%termFullForm;)*)"
 >
 <!ENTITY % termBody.attributes
              "%id-atts;
@@ -115,14 +130,70 @@ Category: Termentry elements-->
 <!ELEMENT termBody    %termBody.content;>
 <!ATTLIST termBody    %termBody.attributes;>
 
+
+<!--                    LONG NAME: Term Definition Source                             -->
+<!ENTITY % termDefinitionSource.content
+                       "EMPTY
+">
+<!ENTITY % termDefinitionSource.attributes
+             "%data-element-atts;"
+>
+<!ELEMENT termDefinitionSource    %termDefinitionSource.content;>
+<!ATTLIST termDefinitionSource    %termDefinitionSource.attributes;>
+
+<!--                    LONG NAME: Term Full Form                                     -->
+<!ENTITY % termFullForm.content
+                       "((%termVariant;))
+">
+<!ENTITY % termFullForm.attributes
+             "%univ-atts;
+              %localization-atts;
+              %usage-atts;
+              domain 
+                        CDATA
+                                  #IMPLIED
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
+>
+<!ELEMENT termFullForm    %termFullForm.content;>
+<!ATTLIST termFullForm    %termFullForm.attributes;>
+
+<!--                    LONG NAME: Term Variant                                       -->
+<!ENTITY % termVariant.content
+                       "(#PCDATA |
+                         %keyword; |
+                         %term; |
+                         %tm;)*"
+>
+<!ENTITY % termVariant.attributes
+             "%id-atts;
+              %localization-atts;
+              base 
+                        CDATA 
+                                  #IMPLIED
+              %base-attribute-extensions;
+              outputclass
+                        CDATA 
+                                  #IMPLIED"
+>
+<!ELEMENT termVariant    %termVariant.content;>
+<!ATTLIST termVariant    %termVariant.attributes;>
+
+
+
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
 <!-- ================================================================================ -->
 
 <!ATTLIST termentry  %global-atts; class CDATA "- topic/topic concept/concept termentry/termentry ">
-<!ATTLIST definition %global-atts;  class CDATA "- topic/abstract concept/abstract termentry/definition ">
+<!ATTLIST termDefinition %global-atts;  class CDATA "- topic/abstract concept/abstract termentry/termDefinition ">
 <!ATTLIST termMeta  %global-atts;  class CDATA "- topic/prolog termentry/termMeta ">
 <!ATTLIST termBody   %global-atts;  class CDATA "- topic/body concept/conbody termentry/termBody ">
+<!ATTLIST termDefinitionSource   %global-atts;  class CDATA "- topic/data concept/data termentry/termDefinitionSource ">
+<!ATTLIST termFullForm    %global-atts;  class CDATA "- topic/section concept/section termentry/termFullForm ">
+<!ATTLIST termVariant    %global-atts;  class CDATA "- topic/data concept/data termEntry/termVariant ">
+
 
 <!-- synonyms, antonyms, related, hyponym (Unterbegriff), hypernym (Oberbegriff), definition, definition source, agreed with, annotation, domain, part of speech, language, usage, context, source of context, annotations, source of term-->
 
