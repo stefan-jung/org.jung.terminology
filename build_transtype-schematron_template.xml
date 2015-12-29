@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="dita2schematron" default="dita2schematron" xmlns:dita="http://dita-ot.sourceforge.net">
+
+    <!-- ================================================== 
+         Properties
+    -->
+
+    <!-- HTML version. Property is required by DITA-OT2.x -->
+    <property name="html-version" value="html"/>
+    
+    <!-- File extension of the output files -->
+    <property name="args.outext" value=".sch"/>
+
+
+
+    <!-- ==================================================
+         Extension Points
+    -->
+    <extension-point id="org.doctales.schematron.param" name="Custom parameters"/>
+    
+    
+
+    <!-- ================================================== 
+         Targets
+    -->
+
+    <!-- The main target -->
+    <target name="dita2schematron" unless="noMap" depends="
+        build-init,
+        preprocess,
+        dita.map.xhtml,
+        dita.topics.xhtml.schematron
+        " dita:extension="depends org.dita.dost.platform.InsertDependsAction"/>
+    
+    <target name="schematron" unless="noMap" depends="dita2schematron" />  
+    
+    <!-- XSLT transformation -->
+    <target name="dita.topics.xhtml.schematron" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension="${args.outext}"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2schematron.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
+            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+    </target>
+    
+    <!-- Automatically set "chunk='to-content'" on the temporary input file. -->
+    <target name="setchunk" description="Set @chunk to-content on the temp input bookmap">
+        <replace file="${dita.temp.dir}${file.separator}${dita.input.filename}" token="chunk=.to-content." value="" encoding="UTF-8"/>	
+        <replace file="${dita.temp.dir}${file.separator}${dita.input.filename}" token="&lt;bookmap " value="&lt;bookmap chunk='to-content' " encoding="UTF-8"/>
+        <replace file="${dita.temp.dir}${file.separator}${dita.input.filename}" token="&lt;map " value="&lt;map chunk='to-content' " encoding="UTF-8"/>
+    </target>
+</project>
