@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="terminology">
+ <title>Terminology</title>
+ <topicref href="car.dita" keys="car"/>
+ <topicref href="truck.dita" keys="truck"/>
+</map>
