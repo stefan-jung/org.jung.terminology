@@ -1,4 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <plugin id="org.doctales.terminology">
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
+  
+  <!-- 
+    The feature element is adding the value 'reveal' to the
+    extension point 'dita.conductor.transtype.check'. The
+    @type attribute value of 'txt' indicates that the plugin
+    is adding the value of the @value attribute.
+  -->
+  <feature extension="dita.conductor.transtype.check" value="schematron" type="txt"/>
+  
+  <!--
+    The contents of the 'build.xml' build file are added to the
+    'dita.conductor.target.relative' extension point.
+    Because the value of @type is 'file', the value of @value is used
+    as a filename. It is also possible to use @file instead of @value.
+  -->
+  <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
+  
+  <!-- 
+    Automatically set the map-attribute 'chunk' to 'to-content' in the preprocess.
+  -->
+  <feature extension="depend.preprocess.chunk.pre" value="setchunk"/>
 </plugin>
