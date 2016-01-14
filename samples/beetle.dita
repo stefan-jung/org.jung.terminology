@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="beetle">
+ <title>Volkswagen BeetleCar</title>
+ <definition>The Volkswagen Beetle is a two-door, four passenger, rear-engine economy car manufactured and marketed by German automaker Volkswagen (VW) from 1938 until 2003.</definition>
+ <definitionSource href="https://en.wikipedia.org/wiki/Volkswagen_Beetle" format="html"/>
+ <termBody>
+  <fullForm usage="allowed" language="en">
+   <termVariant>beetle</termVariant>
+  </fullForm>
+  <fullForm usage="deprecated" language="en">
+   <termVariant>bug</termVariant>
+  </fullForm>
+  <!-- The name of the beetle in the USA is 'bug' -->
+  <fullForm usage="allowed" language="en-us">
+   <termVariant>bug</termVariant>
+  </fullForm>
+  <abbreviation usage="allowed" language="de">
+   <termVariant>Auto</termVariant>
+  </abbreviation>
+ </termBody>
+ <relatedTerms>
+  <hypernym keyref="car"/>
+ </relatedTerms>
+</termentry>

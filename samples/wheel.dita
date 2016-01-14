@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="wheel">
+ <title>Wheel</title>
+ <definition>A wheel is a circular component that is intended to rotate on an axle bearing.</definition>
+ <definitionSource href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
+ <termBody>
+  <fullForm usage="deprecated" language="de">
+   <termVariant>Automobil</termVariant>
+  </fullForm>
+  <abbreviation usage="allowed" language="de">
+   <termVariant>Auto</termVariant>
+  </abbreviation>
+ </termBody>
+ <relatedTerms>
+  <relatedTerm keyref="car"/>
+ </relatedTerms>
+</termentry>
