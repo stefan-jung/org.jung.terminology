@@ -138,9 +138,17 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 
 <!ENTITY included-domains
                         "
+                         &link-constraints;
                         ">
 
+<!-- ================================================================================ -->
+<!--                          CONTENT CONSTRAINT INTEGRATION                          -->
+<!-- ================================================================================ -->
 
+<!ENTITY % linkHasSpecialRoles-c-def
+  PUBLIC "-//DOCTALES//CONSTRAINTS DITA DOCTALES Link Constraint//EN"
+  "linkHasSpecialRolesConstraint.mod"
+>%linkHasSpecialRoles-c-def;
                         
 <!-- ================================================================================ -->
 <!--                            TOPIC ELEMENT INTEGRATION                             -->
