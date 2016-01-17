@@ -13,6 +13,6 @@
     </synoynm>
   </termBody>
   <relatedTerms>
-    <relatedTerm keyref="car"/>
+    <relatedTerm keyref="car" outputclass="relatedTerm"/>
   </relatedTerms>
 </termentry>

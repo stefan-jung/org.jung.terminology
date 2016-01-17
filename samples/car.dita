@@ -12,4 +12,7 @@
    <termVariant>Auto</termVariant>
   </abbreviation>
  </termBody>
+ <relatedTerms>
+  <relatedTerm keyref="truck" outputclass="relatedTerm"/>
+ </relatedTerms>
 </termentry>
