@@ -10,6 +10,12 @@
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
   <transtype name="termbrowser"/>
   
+  <!-- Overriding XSLT -->
+  <feature extension="dita.xsl.xhtml" file="xsl/related-links.xsl"/>
+  
+  <!-- New strings -->
+  <feature extension="dita.xsl.strings" file="xsl/term-strings.xml"/>
+  
   <!--
     The contents of the 'build.xml' build file are added to the
     'dita.conductor.target.relative' extension point.
