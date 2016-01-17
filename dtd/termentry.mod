@@ -373,10 +373,10 @@ Category: Termentry elements-->
 <!ATTLIST definitionSource %global-atts;   class CDATA "- topic/xref concept/xref termentry/definitionSource ">
 <!ATTLIST domain           %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
 <!ATTLIST fullForm         %global-atts;   class CDATA "- topic/section concept/section termentry/fullForm ">
-<!ATTLIST hypernym         %global-atts;   class CDATA "- topic/link ">
-<!ATTLIST hyponym          %global-atts;   class CDATA "- topic/link ">
+<!ATTLIST hypernym         %global-atts;   class CDATA "- topic/link termentry/hypernym ">
+<!ATTLIST hyponym          %global-atts;   class CDATA "- topic/link termentry/hyponym ">
 <!ATTLIST partOfSpeech     %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
-<!ATTLIST relatedTerm      %global-atts;   class CDATA "- topic/link ">
+<!ATTLIST relatedTerm      %global-atts;   class CDATA "- topic/link termentry/relatedTerm ">
 <!ATTLIST relatedTerms     %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
 <!ATTLIST synoynm          %global-atts;   class CDATA "- topic/section concept/section termentry/synoynm ">
 <!ATTLIST termBody         %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
