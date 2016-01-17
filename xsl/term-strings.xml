@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Provide strings for my plug-in; this plug-in supports
+     English and German. -->
+<langlist>
+    <lang xml:lang="en"     filename="term-strings-en-us.xml"/>
+    <lang xml:lang="en-US"  filename="term-strings-en-us.xml"/>
+    <lang xml:lang="de"     filename="term-strings-de-de.xml"/>
+    <lang xml:lang="de-DE"  filename="term-strings-de-de.xml"/>
+</langlist>

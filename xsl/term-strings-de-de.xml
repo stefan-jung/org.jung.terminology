@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings xml:lang="de-DE">
+    <str name="Related hypernyms">Oberbegriffe</str>
+    <str name="Related hyponyms">Unterbegriffe</str>
+    <str name="Related terms">Verwandte Terme</str>
+</strings>

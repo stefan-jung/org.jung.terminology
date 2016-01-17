@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings xml:lang="en-US">
+    <str name="Related hypernyms">Hypernyms</str>
+    <str name="Related hyponyms">Hyponyms</str>
+    <str name="Related terms">Related terms</str>
+</strings>
