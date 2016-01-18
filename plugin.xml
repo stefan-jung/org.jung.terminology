@@ -3,8 +3,136 @@
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
-  <feature extension="dita.conductor.transtype.check" value="schematron"/>
-  <transtype name="termbrowser"/>
+  <feature extension="dita.conductor.transtype.check" value="termchecker"/>
+  <transtype name="termchecker" extends="base-html" desc="Generate Schematron based terminology check rules">
+    <param name="args.language" desc="Language of the terminology check rules" type="enum">
+      <val default="true">en</val>
+      <val>af</val> 
+      <val>ar-ae</val> 
+      <val>ar-bh</val> 
+      <val>ar-dz</val> 
+      <val>ar-eg</val> 
+      <val>ar-iq</val> 
+      <val>ar-jo</val> 
+      <val>ar-kw</val> 
+      <val>ar-lb</val> 
+      <val>ar-ly</val> 
+      <val>ar-ma</val> 
+      <val>ar-om</val> 
+      <val>ar-qa</val> 
+      <val>ar-sa</val> 
+      <val>ar-sy</val> 
+      <val>ar-tn</val> 
+      <val>ar-ye</val> 
+      <val>be</val> 
+      <val>bg</val> 
+      <val>ca</val> 
+      <val>cs</val> 
+      <val>da</val> 
+      <val>de</val> 
+      <val>de-at</val> 
+      <val>de-ch</val> 
+      <val>de-li</val> 
+      <val>de-lu</val> 
+      <val>el</val> 
+      <val>en-au</val> 
+      <val>en-bz</val> 
+      <val>en-ca</val> 
+      <val>en-gb</val> 
+      <val>en-ie</val> 
+      <val>en-jm</val> 
+      <val>en-nz</val> 
+      <val>en-tt</val> 
+      <val>en-us</val> 
+      <val>en-za</val> 
+      <val>es</val> 
+      <val>es-ar</val> 
+      <val>es-bo</val> 
+      <val>es-cl</val> 
+      <val>es-co</val> 
+      <val>es-cr</val> 
+      <val>es-do</val> 
+      <val>es-ec</val> 
+      <val>es-gt</val> 
+      <val>es-hn</val> 
+      <val>es-mx</val> 
+      <val>es-ni</val> 
+      <val>es-pa</val> 
+      <val>es-pe</val> 
+      <val>es-pr</val> 
+      <val>es-py</val> 
+      <val>es-sv</val> 
+      <val>es-uy</val> 
+      <val>es-ve</val> 
+      <val>et</val> 
+      <val>eu</val> 
+      <val>fa</val> 
+      <val>fi</val> 
+      <val>fo</val> 
+      <val>fr</val> 
+      <val>fr-be</val> 
+      <val>fr-ca</val> 
+      <val>fr-ch</val> 
+      <val>fr-lu</val> 
+      <val>ga</val> 
+      <val>gd</val> 
+      <val>he</val> 
+      <val>hi</val> 
+      <val>hr</val> 
+      <val>hu</val> 
+      <val>id</val> 
+      <val>is</val> 
+      <val>it</val> 
+      <val>it-ch</val> 
+      <val>ja</val> 
+      <val>ji</val> 
+      <val>ko</val> 
+      <val>lt</val> 
+      <val>lv</val> 
+      <val>mk</val> 
+      <val>ms</val> 
+      <val>mt</val> 
+      <val>nl</val> 
+      <val>nl-be</val> 
+      <val>no</val> 
+      <val>pl</val> 
+      <val>pt</val> 
+      <val>pt-br</val> 
+      <val>rm</val> 
+      <val>ro</val> 
+      <val>ro-mo</val> 
+      <val>ru</val> 
+      <val>ru-mo</val> 
+      <val>sb</val> 
+      <val>sk</val> 
+      <val>sl</val> 
+      <val>sq</val> 
+      <val>sr</val> 
+      <val>sv</val> 
+      <val>sv-fi</val> 
+      <val>sx</val> 
+      <val>sz</val> 
+      <val>th</val> 
+      <val>tn</val> 
+      <val>tr</val> 
+      <val>ts</val> 
+      <val>uk</val> 
+      <val>ur</val> 
+      <val>ve</val> 
+      <val>vi</val> 
+      <val>xh</val> 
+      <val>zh-cn</val> 
+      <val>zh-hk</val> 
+      <val>zh-sg</val> 
+      <val>zh-tw</val> 
+      <val>zu</val>
+    </param>
+    <param name="args.reveal.generate.vertical.slides"
+      desc="Generate vertical slides for level 2 and below references." type="enum">
+      <val default="true">true</val>
+      <val>false</val>
+    </param>
+  </transtype>
   
   <!-- Add new transtype to generate a termbrowser. -->
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
@@ -28,4 +156,5 @@
     Automatically set the map-attribute 'chunk' to 'to-content' in the preprocess.
   -->
   <!--<feature extension="depend.preprocess.chunk.pre" value="setchunk"/>-->
+  
 </plugin>
