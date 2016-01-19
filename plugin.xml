@@ -1,10 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <plugin id="org.doctales.terminology">
+  <require plugin="org.dita.xhtml"/>
+  <require plugin="org.dita.html5"/>
+  
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
+
   <feature extension="dita.conductor.transtype.check" value="termchecker"/>
-  <transtype name="termchecker" extends="base-html" desc="Generate Schematron based terminology check rules">
+  <transtype name="termchecker" extends="html5" desc="Generate Schematron based terminology check rules">
     <param name="args.language" desc="Language of the terminology check rules" type="enum">
       <val default="true">en</val>
       <val>af</val> 
@@ -127,14 +131,10 @@
       <val>zh-tw</val> 
       <val>zu</val>
     </param>
-    <param name="args.reveal.generate.vertical.slides"
-      desc="Generate vertical slides for level 2 and below references." type="enum">
-      <val default="true">true</val>
-      <val>false</val>
-    </param>
   </transtype>
   
   <!-- Add new transtype to generate a termbrowser. -->
+  
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
   <transtype name="termbrowser"/>
   
@@ -150,7 +150,7 @@
     Because the value of @type is 'file', the value of @value is used
     as a filename. It is also possible to use @file instead of @value.
   -->
-  <!--<feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>-->
+  <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
   
   <!-- 
     Automatically set the map-attribute 'chunk' to 'to-content' in the preprocess.

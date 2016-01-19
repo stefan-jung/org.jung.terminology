@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <import file="build_transtype-schematron_template.xml"/>
+    <import file="build_dita2termbrowser_template.xml"/>
+    <import file="build_dita2termchecker_template.xml"/>    
 </project>
