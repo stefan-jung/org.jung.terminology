@@ -5,8 +5,12 @@
   
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
-  <!-- Add new transtype to generate Schematron rules for terminology checks. -->
+  <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
+  <feature extension="dita.conductor.transtype.check" value="tbx"/>
+  <transtype name="tbx"/>
+  
 
+  <!-- Add new transtype to generate Schematron rules for terminology checks. -->
   <feature extension="dita.conductor.transtype.check" value="termchecker"/>
   <transtype name="termchecker" extends="html5" desc="Generate Schematron based terminology check rules">
     <param name="args.language" desc="Language of the terminology check rules" type="enum">
@@ -134,7 +138,6 @@
   </transtype>
   
   <!-- Add new transtype to generate a termbrowser. -->
-  
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
   <transtype name="termbrowser"/>
   
