@@ -31,8 +31,10 @@
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <sch:pattern>
             <sch:rule context="text()">
-                <xsl:for-each select="termBody/termFullForm[@usage='deprecated']">
-                    <xsl:variable name="deprecatedTerm" select="normalize-space(.)"/>
+                <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/fullForm ')][@usage='deprecated']">
+                    <!-- normalize-space(.) -->
+                    <xsl:variable name="deprecatedTerm" select="normalize-space(termVariant)"/>
+                    <xsl:message><xsl:value-of select="$deprecatedTerm"/></xsl:message>
                     <xsl:element name="sch:report">
                         <xsl:attribute name="test"><xsl:text>contains(., '</xsl:text><xsl:value-of select="$deprecatedTerm"/><xsl:text>')</xsl:text></xsl:attribute>
                         <xsl:attribute name="sqf:fix">changeWord</xsl:attribute>
@@ -43,11 +45,24 @@
                         <xsl:element name="sqf:description">
                             <xsl:element name="sqf:title">Replace with an allowed term</xsl:element>
                         </xsl:element>
-                        <xsl:for-each select="../termFullForm[@usage='allowed']">
+                        <xsl:for-each select="//*[contains(@class, ' termentry/fullForm ')][@usage='allowed']">
                             <xsl:variable name="allowedTerm" select="normalize-space(.)"/>
                             <xsl:element name="sqf:stringReplace">
                                 <xsl:attribute name="regex"><xsl:value-of select="$deprecatedTerm"/></xsl:attribute>
                                 <xsl:value-of select="$allowedTerm"/>
+                            </xsl:element>
+                        </xsl:for-each>
+                    </xsl:element>
+                    <xsl:element name="sqf:fix">
+                        <xsl:attribute name="id">changeWord</xsl:attribute>
+                        <xsl:element name="sqf:description">
+                            <xsl:element name="sqf:title">Replace with an allowed abbreviation</xsl:element>
+                        </xsl:element>
+                        <xsl:for-each select="//*[contains(@class, ' termentry/abbreviation ')][@usage='allowed']">
+                            <xsl:variable name="allowedAbbreviation" select="normalize-space(.)"/>
+                            <xsl:element name="sqf:stringReplace">
+                                <xsl:attribute name="regex"><xsl:value-of select="$deprecatedTerm"/></xsl:attribute>
+                                <xsl:value-of select="$allowedAbbreviation"/>
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:element>
