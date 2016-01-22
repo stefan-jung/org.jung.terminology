@@ -29,11 +29,38 @@
             <xsl:apply-templates/>
         </sch:schema>
     </xsl:template>
-
+    
+    <!-- TODO: Implement a language check -->
+    <!--
+        <sch:rule context="/*">
+            <sch:report test="@xml:lang='de'"></sch:report>
+        </sch:rule>
+    -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
-        <sch:pattern>
+        <xsl:variable name="termentryId" select="@id"/>
+        <xsl:element name="sch:pattern">
+            <xsl:attribute name="id" select="@id"/>
             <sch:rule context="text()">
                 <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/fullForm ') or contains(@class, ' termentry/abbreviation ') or contains(@class, ' termentry/acronym ')][@usage='deprecated']">
+                    <xsl:message><xsl:text>termVariant1: </xsl:text><xsl:value-of select="normalize-space(termVariant)"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant2: </xsl:text><xsl:value-of select="normalize-space(.)"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant3: </xsl:text><xsl:value-of select="/*[contains(@class, ' termentry/termVariant ')][0]"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant4: </xsl:text><xsl:value-of select="normalize-space(//*[contains(@class, ' termentry/termVariant ')][0])"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant5: </xsl:text><xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]/text()"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant6: </xsl:text><xsl:value-of select="normalize-space(*[contains(@class, ' termentry/termVariant ')]/text())"/></xsl:message>
+                    <xsl:message><xsl:text>languageOfTermEntry: </xsl:text><xsl:value-of select="//*[contains(@class, ' termentry/termentry ')][@xml:lang][1]/@xml:lang"/></xsl:message>
+                    <xsl:message><xsl:text>languageOfTermEntry: </xsl:text><xsl:value-of select="//@xml:lang"/></xsl:message>
+                    <xsl:message><xsl:text>languageOfTermEntry: </xsl:text><xsl:value-of select="/*/@xml:lang"/></xsl:message>
+                    
+                    
+                    
+                    <xsl:message><xsl:text>termVariant8: </xsl:text><xsl:value-of select="normalize-space(/*[contains(@class, ' termentry/termVariant ')])"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant9: </xsl:text><xsl:value-of select="/*[contains(@class, ' termentry/termVariant ')]/text()"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant6: </xsl:text><xsl:value-of select="normalize-space(/*[contains(@class, ' termentry/termVariant ')]/text())"/></xsl:message>
+                    <xsl:message><xsl:text>termVariant7: </xsl:text></xsl:message>
+                    <xsl:message><xsl:text>termVariant8: </xsl:text></xsl:message>
+                    <xsl:message><xsl:text>termVariant9: </xsl:text></xsl:message>
+                    <xsl:message><xsl:text>termVariant0: </xsl:text></xsl:message>
                     <xsl:variable name="deprecatedTerm" select="normalize-space(termVariant)"/>
                     <xsl:variable name="replaceTerm" select="concat('replace', $deprecatedTerm)"/>
                     <xsl:element name="sch:report">
@@ -121,7 +148,7 @@
                     </xsl:element>
                 </xsl:for-each>
             </sch:rule>
-        </sch:pattern>
+        </xsl:element>
     </xsl:template>
         
     
