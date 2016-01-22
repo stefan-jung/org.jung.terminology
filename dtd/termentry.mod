@@ -29,6 +29,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % fullForm              "fullForm"                                             >
 <!ENTITY % hypernym              "hypernym"                                             >
 <!ENTITY % hyponym               "hyponym"                                              >
+<!ENTITY % isPartOf              "isPartOf"                                             >
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
 <!ENTITY % relatedTerms          "relatedTerms"                                         >
@@ -183,7 +184,24 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          zu)
                                            #REQUIRED   
                                     ">
-                                    
+
+<!--                                 Gender of term                                   -->
+<!ENTITY % genderSelection-atts     "
+                                     gender
+                                        (neuter |
+                                         masculine |
+                                         feminine)
+                                           #IMPLIED   
+                                    ">
+
+<!--                                 Word types                                       -->
+<!ENTITY % wordTypeSelection-atts   "
+                                     wordType
+                                        (noun |
+                                         verb |
+                                         adjective)
+                                           #IMPLIED   
+                                    ">
 
 <!-- ================================================================================ -->
 <!--                            DOMAINS ATTRIBUTE OVERRIDE                            -->
@@ -204,7 +222,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                       (%definitionSource;)?,
                                       (%termBody;)?,
                                       (%relatedTerms;)?,
-                                      (%termentry-info-types;)*)">
+                                      (%termentry-info-types;)?)">
 <!ENTITY % termentry.attributes
                                     "%id-atts;
                                      %localization-atts;
@@ -239,11 +257,14 @@ Category: Termentry elements-->
 <!--                                 LONG NAME: Term Body                             -->
 <!ENTITY % termBody.content
                        "((%definitionSource;)?,
+                         (((%fig;) |
+                           (%note;))*),
                          ((%fullForm;) |
                           (%abbreviation;) |
                           (%acronym;) |
                           (%antonym;) |
-                          (%synoynm;))*)"
+                          (%synoynm;) |
+                          (%isPartOf;))*)"
 >
 <!ENTITY % termBody.attributes
              "%id-atts;
@@ -316,6 +337,8 @@ Category: Termentry elements-->
 <!ENTITY % genericTerm.attributes       "
                                          %term-atts;
                                          %languageSelection-atts;
+                                         %genderSelection-atts;
+                                         %wordTypeSelection-atts;
                                         ">
 
 <!--doc:The <fullForm> element contains the full written form of a term.
@@ -353,6 +376,11 @@ Category: Termentry elements-->
 <!ELEMENT hyponym         %xref.content;>
 <!ATTLIST hyponym         %xref.attributes;>
 
+<!--doc:The <isPartOf> element indicates, that the current term is part ot the referenced term.
+Category: Termentry elements-->
+<!ELEMENT isPartOf        %xref.content;>
+<!ATTLIST isPartOf        %xref.attributes;>
+
 <!--doc:The <relatedTerm> element refers to a related term.
 Category: Termentry elements-->
 <!ELEMENT relatedTerm     %xref.content;>
@@ -375,6 +403,7 @@ Category: Termentry elements-->
 <!ATTLIST fullForm         %global-atts;   class CDATA "- topic/section concept/section termentry/fullForm ">
 <!ATTLIST hypernym         %global-atts;   class CDATA "- topic/link termentry/hypernym ">
 <!ATTLIST hyponym          %global-atts;   class CDATA "- topic/link termentry/hyponym ">
+<!ATTLIST isPartOf         %global-atts;   class CDATA "- topic/link termentry/isPartOf ">
 <!ATTLIST partOfSpeech     %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
 <!ATTLIST relatedTerm      %global-atts;   class CDATA "- topic/link termentry/relatedTerm ">
 <!ATTLIST relatedTerms     %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">

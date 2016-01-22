@@ -20,7 +20,23 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
          "termentry.ent"
 >%termentry-dec;
 
+<!-- To use equations to explain terms -->
+<!ENTITY % equation-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Equation Domain//EN"
+         "equationDomain.ent"
+>%equation-d-dec;
 
+<!-- To use equations to explain terms -->
+<!ENTITY % mathml-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 MathML Domain//EN"
+         "mathmlDomain.ent"
+>%mathml-d-dec;
+
+<!-- To use SVG images -->
+<!ENTITY % svg-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 SVG Domain//EN"
+         "svgDomain.ent"
+>%svg-d-dec;
 
 <!-- ================================================================================ -->
 <!--                           DOMAIN ENTITY DECLARATIONS                             -->
@@ -99,8 +115,9 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
                                 %abbrev-d-term;
                                ">
 <!ENTITY % fig                 "fig |
+                                %ut-d-fig; |
                                 %pr-d-fig; |
-                                %ut-d-fig;
+                                %equation-d-fig;
                                ">
 <!ENTITY % dl                  "dl |
                                 %pr-d-dl;
@@ -111,7 +128,13 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 <!ENTITY % note                "note | 
                                 %hazard-d-note;
                                ">
-
+<!ENTITY % foreign             "foreign |
+                                %svg-d-foreign; |
+                                %mathml-d-foreign;
+                               ">
+<!ENTITY % div                 "div |
+                                %equation-d-div;
+                               ">
 
 
 <!-- ================================================================================ -->
@@ -138,7 +161,11 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 
 <!ENTITY included-domains
                         "
+                         &concept-att;
+                         &equation-d-att;
+                         &mathml-d-att;
                          &link-constraints;
+                         &svg-d-att;
                         ">
 
 <!-- ================================================================================ -->
@@ -163,5 +190,24 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
   PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
          "termentry.mod">
 %termentry-typemod;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % equation-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Equation Domain//EN"
+         "equationDomain.mod"
+>%equation-d-def;
+
+<!ENTITY % mathml-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 MathML Domain//EN"
+         "mathmlDomain.mod"
+>%mathml-d-def;
+
+<!ENTITY % svg-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 SVG Domain//EN"
+         "svgDomain.mod"
+>%svg-d-def;
 
 <!-- ================================= End of file ================================== -->
