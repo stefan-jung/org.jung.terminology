@@ -2,7 +2,8 @@
 <project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2termchecker">
     
     <target name="dita2termchecker"
-        depends="html5.init,
+        depends="terminology.init,
+        html5.init,
         build-init,
         preprocess,
         html5.topic,
@@ -20,14 +21,32 @@
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2schematron.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
-            
             <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
+        <delete>
+            <fileset dir="${output.dir}" >
+                <exclude name="**/*.sch"/>
+                <!--
+                    <exclude name="**/*.jpg"/>
+                    <exclude name="**/*.jpeg"/>
+                    <exclude name="**/*.gif"/>
+                    <exclude name="**/*.png"/>
+                    <exclude name="**/*.svg"/>
+                -->
+            </fileset>
+        </delete>
     </target>
     
-    <target name="setchunk" description="Set @chunk to-content on the temp input bookmap">
+    <target name="terminology.init">
+        <condition property="setChunkToContent" value="true">
+            <equals arg1="${transtype}" arg2="termchecker"/>
+        </condition>
+    </target>
+    
+    <target name="setchunk" description="Set @chunk to-content on the temp input bookmap" if="setChunkToContent">
+        <echo>setChunk</echo>
         <replace file="${dita.temp.dir}${file.separator}${dita.input.filename}" token="chunk=.to-content." value="" encoding="UTF-8"/>	
         <replace file="${dita.temp.dir}${file.separator}${dita.input.filename}" token="&lt;bookmap " value="&lt;bookmap chunk='to-content' " encoding="UTF-8"/>
         <replace file="${dita.temp.dir}${file.separator}${dita.input.filename}" token="&lt;map " value="&lt;map chunk='to-content' " encoding="UTF-8"/>
