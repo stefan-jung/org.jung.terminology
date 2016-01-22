@@ -7,10 +7,10 @@
     extension-element-prefixes="math"
     exclude-result-prefixes="xs"
     version="2.0">
-
+    
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
-
+    
     <xsl:output method="xml"
         encoding="UTF-8"
         indent="yes"
@@ -25,7 +25,7 @@
     
     <xsl:template match="/">
         <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                    xmlns:sqf="http://www.schematron-quickfix.com/validator/process" queryBinding="xslt2">
+            xmlns:sqf="http://www.schematron-quickfix.com/validator/process" queryBinding="xslt2">
             <xsl:apply-templates/>
         </sch:schema>
     </xsl:template>
@@ -42,25 +42,6 @@
             <xsl:attribute name="id" select="@id"/>
             <sch:rule context="text()">
                 <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/fullForm ') or contains(@class, ' termentry/abbreviation ') or contains(@class, ' termentry/acronym ')][@usage='deprecated']">
-                    <xsl:message><xsl:text>termVariant1: </xsl:text><xsl:value-of select="normalize-space(termVariant)"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant2: </xsl:text><xsl:value-of select="normalize-space(.)"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant3: </xsl:text><xsl:value-of select="/*[contains(@class, ' termentry/termVariant ')][0]"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant4: </xsl:text><xsl:value-of select="normalize-space(//*[contains(@class, ' termentry/termVariant ')][0])"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant5: </xsl:text><xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]/text()"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant6: </xsl:text><xsl:value-of select="normalize-space(*[contains(@class, ' termentry/termVariant ')]/text())"/></xsl:message>
-                    <xsl:message><xsl:text>languageOfTermEntry: </xsl:text><xsl:value-of select="//*[contains(@class, ' termentry/termentry ')][@xml:lang][1]/@xml:lang"/></xsl:message>
-                    <xsl:message><xsl:text>languageOfTermEntry: </xsl:text><xsl:value-of select="//@xml:lang"/></xsl:message>
-                    <xsl:message><xsl:text>languageOfTermEntry: </xsl:text><xsl:value-of select="/*/@xml:lang"/></xsl:message>
-                    
-                    
-                    
-                    <xsl:message><xsl:text>termVariant8: </xsl:text><xsl:value-of select="normalize-space(/*[contains(@class, ' termentry/termVariant ')])"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant9: </xsl:text><xsl:value-of select="/*[contains(@class, ' termentry/termVariant ')]/text()"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant6: </xsl:text><xsl:value-of select="normalize-space(/*[contains(@class, ' termentry/termVariant ')]/text())"/></xsl:message>
-                    <xsl:message><xsl:text>termVariant7: </xsl:text></xsl:message>
-                    <xsl:message><xsl:text>termVariant8: </xsl:text></xsl:message>
-                    <xsl:message><xsl:text>termVariant9: </xsl:text></xsl:message>
-                    <xsl:message><xsl:text>termVariant0: </xsl:text></xsl:message>
                     <xsl:variable name="deprecatedTerm" select="normalize-space(termVariant)"/>
                     <xsl:variable name="replaceTerm" select="concat('replace', $deprecatedTerm)"/>
                     <xsl:element name="sch:report">
@@ -74,83 +55,83 @@
                         <xsl:value-of select="$deprecatedTerm"/>
                         <xsl:text>' is not allowed.</xsl:text>
                     </xsl:element>
-
+                    
                     <xsl:element name="sqf:group">
                         <xsl:attribute name="id" select="$replaceTerm"/>
-                            <!-- Create Schematron Quick Fix to replace deprecated term with another full form term -->
-                            <xsl:for-each select="//*[contains(@class, ' termentry/fullForm ')][@usage='allowed']">
-                                <xsl:variable name="counter" select="position()"/>
-                                <xsl:variable name="quickFixId" select="concat('term', $counter)"/>
-                                <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
-                                    <xsl:element name="sqf:fix">
-                                        <xsl:attribute name="id" select="$quickFixId"/>
-                                        <xsl:element name="sqf:description">
-                                            <xsl:element name="sqf:title">
-                                                <xsl:text>Replace with an allowed term: '</xsl:text>
-                                                <xsl:value-of select="$allowedFullForm"/>
-                                                <xsl:text>'</xsl:text>
-                                            </xsl:element>
-                                        </xsl:element>
-                                        <xsl:element name="sqf:stringReplace">
-                                            <xsl:attribute name="regex">
-                                                <xsl:value-of select="$deprecatedTerm"/>
-                                            </xsl:attribute>
-                                            <xsl:value-of select="$allowedFullForm"/>
-                                        </xsl:element>
+                        <!-- Create Schematron Quick Fix to replace deprecated term with another full form term -->
+                        <xsl:for-each select="//*[contains(@class, ' termentry/fullForm ')][@usage='allowed']">
+                            <xsl:variable name="counter" select="position()"/>
+                            <xsl:variable name="quickFixId" select="concat('term', $counter)"/>
+                            <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
+                            <xsl:element name="sqf:fix">
+                                <xsl:attribute name="id" select="$quickFixId"/>
+                                <xsl:element name="sqf:description">
+                                    <xsl:element name="sqf:title">
+                                        <xsl:text>Replace with an allowed term: '</xsl:text>
+                                        <xsl:value-of select="$allowedFullForm"/>
+                                        <xsl:text>'</xsl:text>
                                     </xsl:element>
-                            </xsl:for-each>
+                                </xsl:element>
+                                <xsl:element name="sqf:stringReplace">
+                                    <xsl:attribute name="regex">
+                                        <xsl:value-of select="$deprecatedTerm"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$allowedFullForm"/>
+                                </xsl:element>
+                            </xsl:element>
+                        </xsl:for-each>
                         
-                            <!-- Create Schematron Quick Fix to replace deprecated term with an abbreviation -->
-                            <xsl:for-each select="//*[contains(@class, ' termentry/abbreviation ')][@usage='allowed']">
-                                <xsl:variable name="counter" select="position()"/>
-                                <xsl:variable name="quickFixId" select="concat('abbreviation', $counter)"/>
-                                <xsl:variable name="allowedAbbreviation" select="normalize-space(.)"/>
-                                    <xsl:element name="sqf:fix">
-                                        <xsl:attribute name="id" select="$quickFixId"/>
-                                        <xsl:element name="sqf:description">
-                                            <xsl:element name="sqf:title">
-                                                <xsl:text>Replace with an allowed abbreviation: '</xsl:text>
-                                                <xsl:value-of select="$allowedAbbreviation"/>
-                                                <xsl:text>'</xsl:text>
-                                            </xsl:element>
-                                        </xsl:element>
-                                        <xsl:element name="sqf:stringReplace">
-                                            <xsl:attribute name="regex">
-                                                <xsl:value-of select="$deprecatedTerm"/>
-                                            </xsl:attribute>
-                                            <xsl:value-of select="$allowedAbbreviation"/>
-                                        </xsl:element>
+                        <!-- Create Schematron Quick Fix to replace deprecated term with an abbreviation -->
+                        <xsl:for-each select="//*[contains(@class, ' termentry/abbreviation ')][@usage='allowed']">
+                            <xsl:variable name="counter" select="position()"/>
+                            <xsl:variable name="quickFixId" select="concat('abbreviation', $counter)"/>
+                            <xsl:variable name="allowedAbbreviation" select="normalize-space(.)"/>
+                            <xsl:element name="sqf:fix">
+                                <xsl:attribute name="id" select="$quickFixId"/>
+                                <xsl:element name="sqf:description">
+                                    <xsl:element name="sqf:title">
+                                        <xsl:text>Replace with an allowed abbreviation: '</xsl:text>
+                                        <xsl:value-of select="$allowedAbbreviation"/>
+                                        <xsl:text>'</xsl:text>
                                     </xsl:element>
-                            </xsl:for-each>
+                                </xsl:element>
+                                <xsl:element name="sqf:stringReplace">
+                                    <xsl:attribute name="regex">
+                                        <xsl:value-of select="$deprecatedTerm"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$allowedAbbreviation"/>
+                                </xsl:element>
+                            </xsl:element>
+                        </xsl:for-each>
                         
-                            <!-- Create Schematron Quick Fix to replace deprecated term with an acronym -->
-                            <xsl:for-each select="//*[contains(@class, ' termentry/acronym ')][@usage='allowed']">
-                                <xsl:variable name="counter" select="position()"/>
-                                <xsl:variable name="quickFixId" select="concat('acronym', $counter)"/>
-                                <xsl:variable name="allowedAcronym" select="normalize-space(.)"/>
-                                    <xsl:element name="sqf:fix">
-                                        <xsl:attribute name="id" select="$quickFixId"/>
-                                        <xsl:element name="sqf:description">
-                                            <xsl:element name="sqf:title">
-                                                <xsl:text>Replace with an allowed acronym: '</xsl:text>
-                                                <xsl:value-of select="$allowedAcronym"/>
-                                                <xsl:text>'</xsl:text>
-                                            </xsl:element>
-                                        </xsl:element>
-                                        <xsl:element name="sqf:stringReplace">
-                                            <xsl:attribute name="regex">
-                                                <xsl:value-of select="$deprecatedTerm"/>
-                                            </xsl:attribute>
-                                            <xsl:value-of select="$allowedAcronym"/>
-                                        </xsl:element>
+                        <!-- Create Schematron Quick Fix to replace deprecated term with an acronym -->
+                        <xsl:for-each select="//*[contains(@class, ' termentry/acronym ')][@usage='allowed']">
+                            <xsl:variable name="counter" select="position()"/>
+                            <xsl:variable name="quickFixId" select="concat('acronym', $counter)"/>
+                            <xsl:variable name="allowedAcronym" select="normalize-space(.)"/>
+                            <xsl:element name="sqf:fix">
+                                <xsl:attribute name="id" select="$quickFixId"/>
+                                <xsl:element name="sqf:description">
+                                    <xsl:element name="sqf:title">
+                                        <xsl:text>Replace with an allowed acronym: '</xsl:text>
+                                        <xsl:value-of select="$allowedAcronym"/>
+                                        <xsl:text>'</xsl:text>
                                     </xsl:element>
-                            </xsl:for-each>
+                                </xsl:element>
+                                <xsl:element name="sqf:stringReplace">
+                                    <xsl:attribute name="regex">
+                                        <xsl:value-of select="$deprecatedTerm"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$allowedAcronym"/>
+                                </xsl:element>
+                            </xsl:element>
+                        </xsl:for-each>
                     </xsl:element>
                 </xsl:for-each>
             </sch:rule>
         </xsl:element>
     </xsl:template>
-        
+    
     
     <!-- Remove HTML clutter -->
     <xsl:template name="chapter-setup">
