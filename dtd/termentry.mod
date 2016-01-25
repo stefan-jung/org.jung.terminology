@@ -193,6 +193,24 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          feminine)
                                            #IMPLIED   
                                     ">
+                                    
+<!--                                 Case of term                                     -->
+<!ENTITY % caseSelection-atts     "
+                                     case
+                                        (nominative |
+                                         accusative |
+                                         dative |
+                                         genitive)
+                                           #IMPLIED   
+                                    ">
+                                    
+<!--                                 Number of term                                   -->
+<!ENTITY % numberSelection-atts     "
+                                     number
+                                        (singular |
+                                         plural)
+                                           #IMPLIED   
+                                    ">
 
 <!--                                 Word types                                       -->
 <!ENTITY % wordTypeSelection-atts   "
@@ -252,8 +270,6 @@ Category: Termentry elements-->
 <!ELEMENT definition    %definition.content;>
 <!ATTLIST definition    %definition.attributes;>
 
-
-
 <!--                                 LONG NAME: Term Body                             -->
 <!ENTITY % termBody.content
                        "((%definitionSource;)?,
@@ -308,23 +324,25 @@ Category: Termentry elements-->
 
 
 <!--                    LONG NAME: Term Variant                                       -->
-<!ENTITY % termVariant.content
-                       "(#PCDATA |
-                         %keyword; |
-                         %term; |
-                         %tm;)*"
->
-<!ENTITY % termVariant.attributes
-             "%id-atts;
-              %localization-atts;
-              base 
-                        CDATA 
-                                  #IMPLIED
-              %base-attribute-extensions;
-              outputclass
-                        CDATA 
-                                  #IMPLIED"
->
+<!ENTITY % termVariant.content          "
+                                         (#PCDATA | 
+                                          %keyword; | 
+                                          %term; | 
+                                          %tm;)*
+                                        ">
+<!ENTITY % termVariant.attributes       "
+                                         %id-atts;
+                                         %localization-atts;
+                                         base
+                                            CDATA
+                                               #IMPLIED
+                                         %base-attribute-extensions;
+                                         %caseSelection-atts;
+                                         %numberSelection-atts;
+                                         outputclass
+                                            CDATA
+                                               #IMPLIED
+                                        ">
 <!--doc:The <termVariant> element contains the written form of a term.
 Category: Termentry elements-->
 <!ELEMENT termVariant    %termVariant.content;>
@@ -332,7 +350,7 @@ Category: Termentry elements-->
 
 <!--                    LONG NAME: Generic Term                                       -->
 <!ENTITY % genericTerm.content          "
-                                         (%termVariant;)
+                                         ((%termVariant;)+)
                                         ">
 <!ENTITY % genericTerm.attributes       "
                                          %term-atts;
