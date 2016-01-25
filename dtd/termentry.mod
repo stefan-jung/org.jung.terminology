@@ -33,7 +33,6 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
 <!ENTITY % relatedTerms          "relatedTerms"                                         >
-<!ENTITY % synoynm               "synoynm"                                              >
 <!ENTITY % termBody              "termBody"                                             >
 <!ENTITY % termVariant           "termVariant"                                          >
 <!ENTITY % termentry             "termentry"                                            >
@@ -279,7 +278,6 @@ Category: Termentry elements-->
                           (%abbreviation;) |
                           (%acronym;) |
                           (%antonym;) |
-                          (%synoynm;) |
                           (%isPartOf;))*)"
 >
 <!ENTITY % termBody.attributes
@@ -374,11 +372,6 @@ Category: Termentry elements-->
 <!ELEMENT acronym         %genericTerm.content;>
 <!ATTLIST acronym         %genericTerm.attributes;>
 
-<!--doc:The <synoynm> element contains the synoynm of a term.
-Category: Termentry elements-->
-<!ELEMENT synoynm         %genericTerm.content;>
-<!ATTLIST synoynm         %genericTerm.attributes;>
-
 <!--doc:The <antonym> element refers to the antonym of a term.
 Category: Termentry elements-->
 <!ELEMENT antonym         %xref.content;>
@@ -425,7 +418,6 @@ Category: Termentry elements-->
 <!ATTLIST partOfSpeech     %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
 <!ATTLIST relatedTerm      %global-atts;   class CDATA "- topic/link termentry/relatedTerm ">
 <!ATTLIST relatedTerms     %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
-<!ATTLIST synoynm          %global-atts;   class CDATA "- topic/section concept/section termentry/synoynm ">
 <!ATTLIST termBody         %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
 <!ATTLIST termVariant      %global-atts;   class CDATA "- topic/data concept/data termEntry/termVariant ">
 <!ATTLIST termentry        %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
