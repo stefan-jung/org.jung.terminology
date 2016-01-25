@@ -5,12 +5,12 @@
   <definition>A truck is a motor vehicle designed to transport cargo.</definition>
   <definitionSource href="https://en.wikipedia.org/wiki/Truck" format="html"/>
   <termBody>
+    <fullForm usage="deprecated" language="en">
+      <termVariant>lorry</termVariant>
+    </fullForm>
     <fullForm usage="allowed" language="en">
       <termVariant>truck</termVariant>
     </fullForm>
-    <synoynm usage="deprecated" language="en">
-      <termVariant>lorry</termVariant>
-    </synoynm>
   </termBody>
   <relatedTerms>
     <relatedTerm keyref="car" outputclass="relatedTerm"/>
