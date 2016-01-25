@@ -15,9 +15,6 @@
   <fullForm usage="allowed" language="en-us">
    <termVariant>bug</termVariant>
   </fullForm>
-  <abbreviation usage="allowed" language="de">
-   <termVariant>Auto</termVariant>
-  </abbreviation>
  </termBody>
  <relatedTerms>
   <hypernym keyref="car"/>

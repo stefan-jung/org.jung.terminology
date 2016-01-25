@@ -5,12 +5,12 @@
  <definition>A wheel is a circular component that is intended to rotate on an axle bearing.</definition>
  <definitionSource href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
  <termBody>
-  <fullForm usage="deprecated" language="de">
-   <termVariant>Automobil</termVariant>
+  <fullForm usage="allowed" language="de">
+   <termVariant>Rad</termVariant>
   </fullForm>
-  <abbreviation usage="allowed" language="de">
-   <termVariant>Auto</termVariant>
-  </abbreviation>
+  <fullForm usage="allowed" language="en">
+   <termVariant>wheel</termVariant>
+  </fullForm>
  </termBody>
  <relatedTerms>
   <relatedTerm keyref="car"/>
