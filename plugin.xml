@@ -13,6 +13,7 @@
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
   <feature extension="dita.conductor.transtype.check" value="termchecker"/>
   <transtype name="termchecker" extends="html5" desc="Generate Schematron based terminology check rules">
+    <param name="root-chunk-override" default="true" desc="Set the 'chunk' attribute of the map.">to-content</param>
     <param name="args.language" desc="Language of the terminology check rules" type="enum">
       <val default="true">en</val>
       <val>af</val> 
@@ -154,10 +155,5 @@
     as a filename. It is also possible to use @file instead of @value.
   -->
   <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
-  
-  <!-- 
-    Automatically set the map-attribute 'chunk' to 'to-content' in the preprocess.
-  -->
-  <feature extension="depend.preprocess.chunk.pre" value="setchunk"/>
   
 </plugin>
