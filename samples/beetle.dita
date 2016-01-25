@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="beetle">
- <title>Volkswagen BeetleCar</title>
+ <title>Volkswagen Beetle</title>
  <definition>The Volkswagen Beetle is a two-door, four passenger, rear-engine economy car manufactured and marketed by German automaker Volkswagen (VW) from 1938 until 2003.</definition>
  <definitionSource href="https://en.wikipedia.org/wiki/Volkswagen_Beetle" format="html"/>
  <termBody>
@@ -14,6 +14,16 @@
   <!-- The name of the beetle in the USA is 'bug' -->
   <fullForm usage="allowed" language="en-us">
    <termVariant>bug</termVariant>
+  </fullForm>
+  <fullForm gender="masculine" usage="allowed" language="de">
+   <termVariant case="nominative" number="singular">Käfer</termVariant>
+   <termVariant case="dative" number="singular">Käfer</termVariant>
+   <termVariant case="accusative" number="singular">Käfer</termVariant>
+   <termVariant case="genitive" number="singular">Käfers</termVariant>
+   <termVariant case="nominative" number="plural">Käfer</termVariant>
+   <termVariant case="dative" number="plural">Käfern</termVariant>
+   <termVariant case="accusative" number="plural">Käfern</termVariant>
+   <termVariant case="genitive" number="plural">Käfer</termVariant>
   </fullForm>
  </termBody>
  <relatedTerms>
