@@ -158,6 +158,6 @@
   <!-- 
     Automatically set the map-attribute 'chunk' to 'to-content' in the preprocess.
   -->
-  <!--<feature extension="depend.preprocess.chunk.pre" value="setchunk"/>-->
+  <feature extension="depend.preprocess.chunk.pre" value="setchunk"/>
   
 </plugin>
