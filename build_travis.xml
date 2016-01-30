@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="travis">
+  
+  <target name="travis">
+      <echo>Hello Travis</echo>
+  </target>
+    
+</project>
