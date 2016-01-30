@@ -1,6 +1,8 @@
 org.doctales.terminology
 ========================
 
+[![Build Status](https://travis-ci.org/doctales/org.doctales.terminology.svg?branch=master)](https://travis-ci.org/doctales/org.doctales.terminology)
+
 Use DITA XML to manage your company specific terminology. A terminolgy will help you to provide consistent language for all publications and to manage your translations.
 
 This DITA-OT plugin has (or will have) the following main features:
