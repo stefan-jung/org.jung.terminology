@@ -276,9 +276,7 @@ Category: Termentry elements-->
                            (%note;))*),
                          ((%fullForm;) |
                           (%abbreviation;) |
-                          (%acronym;) |
-                          (%antonym;) |
-                          (%isPartOf;))*)"
+                          (%acronym;))*)"
 >
 <!ENTITY % termBody.attributes
              "%id-atts;
@@ -298,8 +296,10 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Related Terms                         -->
 <!ENTITY % relatedTerms.content
-                       "(((%hypernym;) |
+                       "(((%antonym;) |
+                          (%hypernym;) |
                           (%hyponym;) |
+                          (%isPartOf;) |
                           (%link;) |
                           (%relatedTerm;))*)"
 >
@@ -407,7 +407,7 @@ Category: Termentry elements-->
 <!ATTLIST acronym          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
 <!ATTLIST agreedWith       %global-atts;   class CDATA "- topic/data concept/data termEntry/agreedWith ">
 <!ATTLIST annotation       %global-atts;   class CDATA "- topic/data concept/data termEntry/annotation ">
-<!ATTLIST antonym          %global-atts;   class CDATA "- topic/section concept/section termentry/antonym ">
+<!ATTLIST antonym          %global-atts;   class CDATA "- topic/link termentry/antonym ">
 <!ATTLIST definition       %global-atts;   class CDATA "- topic/abstract concept/abstract termentry/definition ">
 <!ATTLIST definitionSource %global-atts;   class CDATA "- topic/xref concept/xref termentry/definitionSource ">
 <!ATTLIST domain           %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
