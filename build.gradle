@@ -31,8 +31,8 @@ dependencies {
 }
 */
 
-task check {
+task travis {
     doLast {
-        println 'Hello world!'
+        println 'Hello Travis!'
     }
 }
