@@ -1,3 +1,7 @@
 language: java
 install: ./travis.sh
 script: gradle travis
+notifications:
+  slack:
+    rooms:
+      - doctales:aauBZMfrbD04vfiHdZ3GLXgF#terminology
