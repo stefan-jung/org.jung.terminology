@@ -33,5 +33,5 @@ dependencies {
 
 task travis(type:Exec) {
     workingDir 'dita-ot-2.2.2/bin/'
-    commandLine './dita -i', '../../samples/terminology.ditamap -f termchecker'
+    commandLine './dita -i ../../samples/terminology.ditamap -f termchecker'
 }
