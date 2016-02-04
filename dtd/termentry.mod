@@ -36,6 +36,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % termBody              "termBody"                                             >
 <!ENTITY % termVariant           "termVariant"                                          >
 <!ENTITY % termentry             "termentry"                                            >
+<!ENTITY % termCommitteeMember   "termCommitteeMember"                                  >
 
 
 
@@ -237,6 +238,9 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % termentry.content        "((%title;),
                                       (%definition;)?,
                                       (%definitionSource;)?,
+                                      (%domain;)*,
+                                      (%agreedWith;)?,
+                                      (%annotation;)*,
                                       (%termBody;)?,
                                       (%relatedTerms;)?,
                                       (%termentry-info-types;)?)">
@@ -268,6 +272,69 @@ Category: Termentry elements-->
 Category: Termentry elements-->
 <!ELEMENT definition    %definition.content;>
 <!ATTLIST definition    %definition.attributes;>
+
+<!--                                 LONG NAME: Agreed With                           -->
+<!ENTITY % agreedWith.content
+                       "(%termCommitteeMember;)*"
+>
+<!ENTITY % agreedWith.attributes
+             "%univ-atts;
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
+>
+<!--doc:The <agreedWith> element contains multiple Terminology Committee Members who accepted a term.
+Category: Termentry elements-->
+<!ELEMENT agreedWith    %agreedWith.content;>
+<!ATTLIST agreedWith    %agreedWith.attributes;>
+
+<!--                                 LONG NAME: Terminology Committee Member          -->
+<!ENTITY % termCommitteeMember.content
+                       "(#PCDATA)*"
+>
+<!ENTITY % termCommitteeMember.attributes
+             "%univ-atts;
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
+>
+<!--doc:The <termCommitteeMember> element contains the name of a person who has voted for a term.
+Category: Termentry elements-->
+<!ELEMENT termCommitteeMember   %termCommitteeMember.content;>
+<!ATTLIST termCommitteeMember   %termCommitteeMember.attributes;>
+
+<!--                                 LONG NAME: Domain                                -->
+<!ENTITY % domain.content
+                       "EMPTY"
+>
+<!ENTITY % domain.attributes
+             "%univ-atts;
+              value
+                 CDATA
+                    #REQUIRED
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
+>
+<!--doc:The <domain> element contains the domain of the term.
+Category: Termentry elements-->
+<!ELEMENT domain   %domain.content;>
+<!ATTLIST domain   %domain.attributes;>
+
+<!--                                 LONG NAME: Annotation                            -->
+<!ENTITY % annotation.content
+                       "(#PCDATA)*"
+>
+<!ENTITY % annotation.attributes
+             "%univ-atts;
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
+>
+<!--doc:The <annotation> element contains annotations of the term.
+Category: Termentry elements-->
+<!ELEMENT annotation   %annotation.content;>
+<!ATTLIST annotation   %annotation.attributes;>
 
 <!--                                 LONG NAME: Term Body                             -->
 <!ENTITY % termBody.content
@@ -403,23 +470,24 @@ Category: Termentry elements-->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
 <!-- ================================================================================ -->
 
-<!ATTLIST abbreviation     %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/abbreviation ">
-<!ATTLIST acronym          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
-<!ATTLIST agreedWith       %global-atts;   class CDATA "- topic/data concept/data termEntry/agreedWith ">
-<!ATTLIST annotation       %global-atts;   class CDATA "- topic/data concept/data termEntry/annotation ">
-<!ATTLIST antonym          %global-atts;   class CDATA "- topic/link termentry/antonym ">
-<!ATTLIST definition       %global-atts;   class CDATA "- topic/abstract concept/abstract termentry/definition ">
-<!ATTLIST definitionSource %global-atts;   class CDATA "- topic/xref concept/xref termentry/definitionSource ">
-<!ATTLIST domain           %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
-<!ATTLIST fullForm         %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
-<!ATTLIST hypernym         %global-atts;   class CDATA "- topic/link termentry/hypernym ">
-<!ATTLIST hyponym          %global-atts;   class CDATA "- topic/link termentry/hyponym ">
-<!ATTLIST isPartOf         %global-atts;   class CDATA "- topic/link termentry/isPartOf ">
-<!ATTLIST partOfSpeech     %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
-<!ATTLIST relatedTerm      %global-atts;   class CDATA "- topic/link termentry/relatedTerm ">
-<!ATTLIST relatedTerms     %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
-<!ATTLIST termBody         %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
-<!ATTLIST termVariant      %global-atts;   class CDATA "- topic/data concept/data termEntry/termVariant ">
-<!ATTLIST termentry        %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
+<!ATTLIST abbreviation          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/abbreviation ">
+<!ATTLIST acronym               %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
+<!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/data concept/data termEntry/agreedWith ">
+<!ATTLIST annotation            %global-atts;   class CDATA "- topic/data concept/data termEntry/annotation ">
+<!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/antonym ">
+<!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract concept/abstract termentry/definition ">
+<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/xref concept/xref termentry/definitionSource ">
+<!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
+<!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
+<!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/hypernym ">
+<!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/hyponym ">
+<!ATTLIST isPartOf              %global-atts;   class CDATA "- topic/link termentry/isPartOf ">
+<!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
+<!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/relatedTerm ">
+<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
+<!ATTLIST termBody              %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
+<!ATTLIST termVariant           %global-atts;   class CDATA "- topic/data concept/data termEntry/termVariant ">
+<!ATTLIST termentry             %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
+<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/data concept/data termEntry/termCommitteeMember ">
 
 <!-- ================================= End of file ================================== -->
