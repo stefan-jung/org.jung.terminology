@@ -25,6 +25,8 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % antonym               "antonym"                                              >
 <!ENTITY % definition            "definition"                                           >
 <!ENTITY % definitionSource      "definitionSource"                                     >
+<!ENTITY % documentName          "documentName"                                         >
+<!ENTITY % documentReference     "documentReference"                                    >
 <!ENTITY % domain                "domain"                                               >
 <!ENTITY % fullForm              "fullForm"                                             >
 <!ENTITY % hypernym              "hypernym"                                             >
@@ -238,6 +240,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % termentry.content        "((%title;),
                                       (%definition;)?,
                                       (%definitionSource;)?,
+                                      (%partOfSpeech;)?,
                                       (%domain;)*,
                                       (%agreedWith;)?,
                                       (%annotation;)*,
@@ -321,6 +324,24 @@ Category: Termentry elements-->
 <!ELEMENT domain   %domain.content;>
 <!ATTLIST domain   %domain.attributes;>
 
+<!--                                 LONG NAME: Part of Speech                        -->
+<!ENTITY % partOfSpeech.content
+                       "EMPTY"
+>
+<!ENTITY % partOfSpeech.attributes
+             "%univ-atts;
+              value
+                 CDATA
+                    #REQUIRED
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
+>
+<!--doc:The <partOfSpeech> element contains the part of speech of the term.
+Category: Termentry elements-->
+<!ELEMENT partOfSpeech   %partOfSpeech.content;>
+<!ATTLIST partOfSpeech   %partOfSpeech.attributes;>
+
 <!--                                 LONG NAME: Annotation                            -->
 <!ENTITY % annotation.content
                        "(#PCDATA)*"
@@ -377,14 +398,36 @@ Category: Termentry elements-->
 
 <!--                    LONG NAME: Term Definition Source                             -->
 <!ENTITY % definitionSource.content
-                       "EMPTY">
+                        "(((%documentReference;) |
+                           (%documentName;))+)"
+>
 <!ENTITY % definitionSource.attributes
-             "%data-element-atts;"
+             "%univ-atts;
+              outputclass 
+                        CDATA 
+                                  #IMPLIED"
 >
 <!--doc:The <definitionSource> element refers to the source of a definition, e.g. a link to Wikipedia.
 Category: Termentry elements-->
 <!ELEMENT definitionSource    %definitionSource.content;>
 <!ATTLIST definitionSource    %definitionSource.attributes;>
+
+<!--                    LONG NAME: Document Reference                                 -->
+<!--doc:The <documentReference> refers to the source of a definition, e.g. to a file or website.
+Category: Termentry elements-->
+<!ELEMENT documentReference    %xref.content;>
+<!ATTLIST documentReference    %xref.attributes;>
+
+<!--                    LONG NAME: Document Name                                      -->
+<!ENTITY % documentName.content
+                       "(#PCDATA)*">
+<!ENTITY % documentName.attributes
+             "%data-element-atts;"
+>
+<!--doc:The <documentName> refers to a document and contains its name.
+Category: Termentry elements-->
+<!ELEMENT documentName    %documentName.content;>
+<!ATTLIST documentName    %documentName.attributes;>
 
 
 
@@ -476,7 +519,9 @@ Category: Termentry elements-->
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/data concept/data termEntry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/antonym ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract concept/abstract termentry/definition ">
-<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/xref concept/xref termentry/definitionSource ">
+<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/data concept/data termEntry/definitionSource ">
+<!ATTLIST documentName          %global-atts;   class CDATA "- topic/data concept/data termEntry/documentName ">
+<!ATTLIST documentReference     %global-atts;   class CDATA "- topic/xref concept/xref termentry/documentReference ">
 <!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
 <!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/hypernym ">
