@@ -1,0 +1,125 @@
+// Colors
+
+@labelFontSize: 0.7em;             
+@hintsColor: #105B63;
+@placeholderColor: #BD4932;
+@focusedPlaceholderColor: #105B63;
+@borderColor: #3d3d3d;
+
+// Blocks
+
+.beforeBlock {
+    font-size: 0.7em;
+    display: block;
+    color: #005544;
+    border: 1pt solid @borderColor;
+    padding: 0.1em;
+}
+
+.mainBlock {
+    border: 1pt solid @borderColor;
+    padding: 0.1em;
+}
+
+.afterBlock {
+    font-size: 0.7em;
+    display: block;
+    color: #005544;
+    border: 1pt solid @borderColor;
+    padding: 0.1em;
+}
+
+// Elements
+
+*[class~="termentry/definition"]:before(10) {
+    .beforeBlock();
+    content: "Definition";
+}
+
+*[class~="termentry/definition"] {
+    .mainBlock();
+}
+
+*[class~="termentry/definitionSource"]:before(10) {
+    .beforeBlock();
+    content: "Source of Definition";
+}
+
+*[class~="termentry/definitionSource"] {
+    .mainBlock();
+}
+
+*[class~="termentry/termNotation"]:before(10) {
+    .beforeBlock();
+}
+
+*[class~="termentry/termNotation"] {
+    .mainBlock();
+}
+
+*[class~="termentry/fullForm"]:before(10) {
+    content: "Full Form";
+}
+*[class~="termentry/abbreviation"]:before(10) {
+    content: "Abbreviation";
+}
+*[class~="termentry/acronym"]:before(10) {
+    content: "Acronym";
+}
+
+*[class~="termEntry/termVariant"]:before {
+    content: "";
+}
+*[class~="termEntry/termVariant"] {
+    display: inline;
+}
+
+*[class~="termEntry/relatedTerms"]:before(10) {
+    content: "Related Terms"
+    oxy_action();
+}
+
+*[class~="termEntry/relatedTerms"] {
+    .mainBlock();
+}
+
+*[class~="termEntry/relatedTerm"]:before(10) {
+    content: "Related Term";
+}
+
+*[class~="termEntry/relatedTerm"] {
+    .mainBlock();
+}
+
+*[class~="termEntry/antonym"]:before(10) {
+    content: "Antonym";
+}
+
+*[class~="termEntry/antonym"] {
+    .mainBlock();
+}
+
+*[class~="termEntry/hypernym"]:before(10) {
+    content: "Hypernym";
+}
+
+*[class~="termEntry/hypernym"] {
+    .mainBlock();
+}
+
+*[class~="termEntry/hyponym"]:before(10) {
+    content: "Hyponym";
+}
+
+*[class~="termEntry/hyponym"] {
+    .mainBlock();
+}
+
+*[class~="termEntry/isPartOf"]:before(10) {
+    content: "Is Part Of";
+}
+
+*[class~="termEntry/isPartOf"] {
+    .mainBlock();
+}
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <serialized version="17.1" xml:space="preserve">
-	<map>
+	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
@@ -21,6 +21,33 @@
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>17</Integer>
+										</field>
+										<field name="value">
+											<cssFile>
+												<field name="href">
+													<String>${framework}/css/termentry.less</String>
+												</field>
+												<field name="title">
+													<String>DOCTALES Termentry</String>
+												</field>
+												<field name="alternate">
+													<Boolean>true</Boolean>
+												</field>
+											</cssFile>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
 										</field>
 										<field name="anchor">
 											<null/>
@@ -7588,5 +7615,5 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 				</documentTypeDescriptor>
 			</documentTypeDescriptor-array>
 		</entry>
-	</map>
+	</serializableOrderedMap>
 </serialized>
