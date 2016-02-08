@@ -13,6 +13,6 @@
     </fullForm>
   </termBody>
   <relatedTerms>
-    <relatedTerm keyref="car" outputclass="relatedTerm"/>
+    <relatedTerm keyref="car"/>
   </relatedTerms>
 </termentry>

@@ -2,8 +2,11 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="car">
  <title>Car</title>
- <definition>A car is a wheeled, self-powered motor vehicle used for transportation.</definition>
- <definitionSource href="https://en.wikipedia.org/wiki/Car" format="html"/>
+ <definition class="- topic/abstract concept/abstract termentry/definition ">A car is a wheeled,
+  self-powered motor vehicle used for transportation.</definition>
+ <definitionSource>
+  <documentReference href="https://en.wikipedia.org/wiki/Car" format="html"/>
+ </definitionSource>
  <termBody>
   <fig id="carFigure">
    <title>Drawing of a car</title>
@@ -19,6 +22,6 @@
   </abbreviation>
  </termBody>
  <relatedTerms>
-  <relatedTerm keyref="truck"/>
+  <antonym keyref="wheel"/>
  </relatedTerms>
 </termentry>

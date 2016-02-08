@@ -20,8 +20,8 @@
    <termVariant>bug</termVariant>
   </fullForm>
   <fullForm gender="masculine" usage="allowed" language="de">
-   <termVariant case="nominative" number="singular">Käfer</termVariant>
    <termVariant case="dative" number="singular">Käfer</termVariant>
+   <termVariant case="nominative" number="singular">Käfer</termVariant>
    <termVariant case="accusative" number="singular">Käfer</termVariant>
    <termVariant case="genitive" number="singular">Käfers</termVariant>
    <termVariant case="nominative" number="plural">Käfer</termVariant>
