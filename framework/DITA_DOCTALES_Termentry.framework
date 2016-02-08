@@ -45,7 +45,208 @@
 													<Boolean>true</Boolean>
 												</field>
 											</cssFile>
-
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>67</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.move.element.up</String>
+												</field>
+												<field name="name">
+													<String>Move element up</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/up-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/up-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>boolean(preceding-sibling::*[1])</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Before</String>
+																	</entry>
+																	<entry>
+																		<String>sourceLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>targetLocation</String>
+																		<String>preceding-sibling::*[1]</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>68</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.move.element.down</String>
+												</field>
+												<field name="name">
+													<String>Move element down</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/down-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/down-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>boolean(following-sibling::*[1])</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																	<entry>
+																		<String>sourceLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>targetLocation</String>
+																		<String>following-sibling::*[1]</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>69</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.element</String>
+												</field>
+												<field name="name">
+													<String>Delete element</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -6922,146 +7123,6 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 					</field>
 					<field name="scenarios">
 						<scenario-array>
-							<antScenario>
-								<field name="additionalAntArgs">
-									<String></String>
-								</field>
-								<field name="buildTarget">
-									<String>rebuild-environment</String>
-								</field>
-								<field name="buildFilePath">
-									<String>${homeDir}\DITA\build.xml</String>
-								</field>
-								<field name="ditaParams">
-									<list>
-										<antParameter>
-											<field name="name">
-												<String>dita.ot.version</String>
-											</field>
-											<field name="description">
-												<String></String>
-											</field>
-											<field name="value">
-												<String>${ask('Geben Sie die Version des zu verwendenden DITA-OTs an (2.1.2, 2.2.0, 2.2.1 oder 2.2.2)', input_type, '2.2.2')}</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>5</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-										</antParameter>
-									</list>
-								</field>
-								<field name="jvmArgs">
-									<String>-Xmx256m</String>
-								</field>
-								<field name="useCustomJavaHome">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="customJavaHomeDir">
-									<String></String>
-								</field>
-								<field name="useCustomANTHome">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="customANTHomeDir">
-									<String></String>
-								</field>
-								<field name="workingDir">
-									<String>${homeDir}\DITA</String>
-								</field>
-								<field name="showConsoleAlways">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="advancedOptionsMap">
-									<null/>
-								</field>
-								<field name="name">
-									<String>Rebuild Environment</String>
-								</field>
-								<field name="baseURL">
-									<null/>
-								</field>
-								<field name="footerURL">
-									<null/>
-								</field>
-								<field name="fOPMethod">
-									<null/>
-								</field>
-								<field name="fOProcessorName">
-									<null/>
-								</field>
-								<field name="headerURL">
-									<null/>
-								</field>
-								<field name="inputXSLURL">
-									<null/>
-								</field>
-								<field name="inputXMLURL">
-									<null/>
-								</field>
-								<field name="defaultScenario">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="isFOPPerforming">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="type">
-									<String>ANT</String>
-								</field>
-								<field name="saveAs">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="openInBrowser">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="outputFile">
-									<null/>
-								</field>
-								<field name="outputResource">
-									<null/>
-								</field>
-								<field name="openOtherLocationInBrowser">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="locationToOpenInBrowserURL">
-									<String></String>
-								</field>
-								<field name="openInEditor">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInHTMLPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInXMLPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInSVGPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInResultSetPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useXSLTInput">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="xsltParams">
-									<list/>
-								</field>
-								<field name="cascadingStylesheets">
-									<String-array/>
-								</field>
-								<field name="xslTransformer">
-									<String>ANT</String>
-								</field>
-								<field name="extensionURLs">
-									<String-array/>
-								</field>
-							</antScenario>
 							<ditaScenario>
 								<field name="useXEP">
 									<Boolean>false</Boolean>
@@ -7073,13 +7134,13 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 									<String>${cfd}</String>
 								</field>
 								<field name="outputDir">
-									<String>${cfd}/out/pdf</String>
+									<String>${cfd}/out/topic-pdf</String>
 								</field>
 								<field name="tempDir">
-									<String>${cfd}/temp/pdf</String>
+									<String>${cfd}/temp/topic-pdf</String>
 								</field>
 								<field name="transtype">
-									<String>pdf</String>
+									<String>pdf2</String>
 								</field>
 								<field name="filters">
 									<ditavalFilters>
@@ -7122,19 +7183,228 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 									<list>
 										<ditaParameter>
 											<field name="name">
-												<String>transtype</String>
+												<String>dita.dir</String>
 											</field>
 											<field name="description">
 												<null/>
 											</field>
 											<field name="value">
-												<String>dakpdf</String>
+												<String>${configured.ditaot.dir}</String>
 											</field>
 											<field name="defaultValue">
 												<null/>
 											</field>
 											<field name="type">
-												<Integer>2</Integer>
+												<Integer>3</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+										</ditaParameter>
+										<ditaParameter>
+											<field name="name">
+												<String>xep.failOnError</String>
+											</field>
+											<field name="description">
+												<null/>
+											</field>
+											<field name="value">
+												<String>true</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>4</Integer>
+											</field>
+											<field name="possibleValues">
+												<String-array>
+													<null/>
+													<String>true</String>
+												</String-array>
+											</field>
+										</ditaParameter>
+									</list>
+								</field>
+								<field name="jvmArgs">
+									<String>-Xmx384m</String>
+								</field>
+								<field name="useCustomJavaHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customJavaHomeDir">
+									<String></String>
+								</field>
+								<field name="useCustomANTHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customANTHomeDir">
+									<String></String>
+								</field>
+								<field name="workingDir">
+									<null/>
+								</field>
+								<field name="showConsoleAlways">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>DITA PDF</String>
+								</field>
+								<field name="baseURL">
+									<null/>
+								</field>
+								<field name="footerURL">
+									<null/>
+								</field>
+								<field name="fOPMethod">
+									<null/>
+								</field>
+								<field name="fOProcessorName">
+									<null/>
+								</field>
+								<field name="headerURL">
+									<null/>
+								</field>
+								<field name="inputXSLURL">
+									<null/>
+								</field>
+								<field name="inputXMLURL">
+									<null/>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>DITAMAP</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputFile">
+									<null/>
+								</field>
+								<field name="outputResource">
+									<null/>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<String></String>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>DITA-OT</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</ditaScenario>
+							<ditaScenario>
+								<field name="useXEP">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useAntennaHouse">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="baseDir">
+									<String>${cfd}</String>
+								</field>
+								<field name="outputDir">
+									<String>${cfd}/out/topic-xhtml</String>
+								</field>
+								<field name="tempDir">
+									<String>${cfd}/temp/topic-xhtml</String>
+								</field>
+								<field name="transtype">
+									<String>xhtml</String>
+								</field>
+								<field name="filters">
+									<ditavalFilters>
+										<field name="useDitavalFilePath">
+											<Boolean>false</Boolean>
+										</field>
+										<field name="useAppliedConditionSet">
+											<Boolean>true</Boolean>
+										</field>
+										<field name="appliedConditionSet">
+											<null/>
+										</field>
+										<field name="ditavalFilePath">
+											<String></String>
+										</field>
+										<field name="simpleFiltersList">
+											<list/>
+										</field>
+									</ditavalFilters>
+								</field>
+								<field name="addOxygenJars">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="skinCssFile">
+									<null/>
+								</field>
+								<field name="lastCustomSkinCssPath">
+									<null/>
+								</field>
+								<field name="additionalAntArgs">
+									<String></String>
+								</field>
+								<field name="buildTarget">
+									<String></String>
+								</field>
+								<field name="buildFilePath">
+									<String></String>
+								</field>
+								<field name="ditaParams">
+									<list>
+										<ditaParameter>
+											<field name="name">
+												<String>dita.dir</String>
+											</field>
+											<field name="description">
+												<null/>
+											</field>
+											<field name="value">
+												<String>${configured.ditaot.dir}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>3</Integer>
 											</field>
 											<field name="possibleValues">
 												<null/>
@@ -7167,7 +7437,7 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 									<null/>
 								</field>
 								<field name="name">
-									<String>DITA DAKOSY PDF</String>
+									<String>DITA XHTML</String>
 								</field>
 								<field name="baseURL">
 									<null/>

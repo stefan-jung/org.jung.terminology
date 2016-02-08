@@ -8,17 +8,58 @@
 
 // Blocks
 
+@font-face {
+  font-family: 'fontello';
+  src: url('../icons/fontello/font/fontello.ttf?24192630') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*    oxy_button(
+        action, oxy_action(
+            name, '\e800',
+            description, 'Move up',
+            operation, 'ro.sync.ecss.extensions.commons.operations.MoveElementOperation',
+            arg-targetLocation, 'preceding-sibling::*[1]',
+            arg-insertPosition, 'Before'
+        ),
+        transparent, true,
+        actionContext, element,
+        showIcon, false,
+        fontInherit, true
+    )
+*/
+
+*[class~="topic/related-links"]:before {
+    display: none;
+}
+/*.icon-up-big:before { content: '\e800'; } /\* '' *\/
+.icon-down-big:before { content: '\e801'; } /\* '' *\/
+.icon-trash-empty:before { content: '\e802'; } /\* '' *\/
+.icon-trash:before { content: '\e803'; } /\* '' *\/
+.icon-file-code:before { content: '\e804'; } /\* '' *\/
+.icon-file-image:before { content: '\e805'; } /\* '' *\/
+.icon-file-pdf:before { content: '\e806'; } /\* '' *\/
+.icon-git:before { content: '\e807'; } /\* '' *\/
+.icon-github-squared:before { content: '\e808'; } /\* '' *\/
+*/
 .beforeBlock {
+    color: #767676;
     font-size: 0.7em;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     display: block;
-    color: #005544;
-    border: 1pt solid @borderColor;
-    padding: 0.1em;
+    border-bottom: 1pt solid #767676;
+    width: inherit;
+    font-style: normal;
+    padding-left: 0.3em;
 }
 
 .mainBlock {
     border: 1pt solid @borderColor;
-    padding: 0.1em;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
 }
 
 .afterBlock {
@@ -29,7 +70,64 @@
     padding: 0.1em;
 }
 
+.uiElement {
+    display: block;
+    margin-top: -1.5em;
+    margin-left: 100px;
+}
+
+.uiElementLabel {
+    display: block;
+    width: 100px;
+    font-weight: normal;
+}
+
+.standardButtons {
+    content:
+        oxy_button(actionID, 'doctales.move.element.up', showIcon, true)
+        oxy_button(actionID, 'doctales.move.element.down', showIcon, true)
+        oxy_button(actionID, 'doctales.delete.element', showIcon, true);
+    display: block;
+    margin-top: -1.5em;
+    text-align:right;
+    margin-left: 300px;
+
+}
+
 // Elements
+*[class~="termentry/termBody"]:before(10) {
+    .beforeBlock();
+    content: oxy_buttonGroup(
+    label, 'Add Term Variant', 
+    actions, 
+      oxy_action_list(
+          oxy_action(
+                name, 'Full Form', 
+                description, 'Insert a full form element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<fullForm usage="allowed" language="en"><termVariant>...</termVariant></fullForm>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside'
+          ),
+          oxy_action(
+                name, 'Acronym', 
+                description, 'Insert an acronym element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<acronym usage="allowed" language="en"><termVariant>...</termVariant></acronym>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside'
+          ),
+          oxy_action(
+                name, 'Abbreviation', 
+                description, 'Insert an abbreviation element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<abbreviation usage="allowed" language="en"><termVariant>...</termVariant></abbreviation>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside'
+          )
+      )
+  );
+}
 
 *[class~="termentry/definition"]:before(10) {
     .beforeBlock();
@@ -53,30 +151,139 @@
     .beforeBlock();
 }
 
-*[class~="termentry/termNotation"] {
-    .mainBlock();
+*[class~="termentry/fullForm"]:before(10) {
+    content: "Full Form"
 }
 
-*[class~="termentry/fullForm"]:before(10) {
-    content: "Full Form";
-}
 *[class~="termentry/abbreviation"]:before(10) {
     content: "Abbreviation";
 }
+
 *[class~="termentry/acronym"]:before(10) {
     content: "Acronym";
 }
 
-*[class~="termEntry/termVariant"]:before {
-    content: "";
-}
-*[class~="termEntry/termVariant"] {
-    display: inline;
+*[class~="termentry/termNotation"]:before(8) {
+    content: "Usage: ";
+    .uiElementLabel();
 }
 
+*[class~="termentry/termNotation"]:before(7) {
+    content:
+    oxy_combobox( 
+        edit, '@usage',
+        editable, false,
+        columns, 15,
+        values, 'allowed, deprecated',
+        labels, 'allowed, deprecated'
+    );
+    .uiElement();
+}
+
+*[class~="termentry/termNotation"]:before(6) {
+    .standardButtons();
+}
+
+*[class~="termentry/termNotation"]:before(5) {
+    content: "Language: ";
+    .uiElementLabel();
+}
+
+*[class~="termentry/termNotation"]:before(4) {
+    content:
+    oxy_combobox( 
+        edit, '@language',
+        editable, false,
+        columns, 15,
+        values, 'af, ar-ae, ar-bh, ar-dz, ar-eg, ar-iq, ar-jo, ar-kw, ar-lb, ar-ly, ar-ma, ar-om, ar-qa, ar-sa, ar-sy, ar-tn, ar-ye, be, bg, ca, cs, da, de, de-at, de-ch, de-li, de-lu, el, en, en-au, en-bz, en-ca, en-gb, en-ie, en-jm, en-nz, en-tt, en-us, en-za, es, es-ar, es-bo, es-cl, es-co, es-cr, es-do, es-ec, es-gt, es-hn, es-mx, es-ni, es-pa, es-pe, es-pr, es-py, es-sv, es-uy, es-ve, et, eu, fa, fi, fo, fr, fr-be, fr-ca, fr-ch, fr-lu, ga, gd, he, hi, hr, hu, id, is, it, it-ch, ja, ji, ko, lt, lv, mk, ms, mt, nl, nl-be, no, pl, pt, pt-br, rm, ro, ro-mo, ru, ru-mo, sb, sk, sl, sq, sr, sv, sv-fi, sx, sz, th, tn, tr, ts, uk, ur, ve, vi, xh, zh-cn, zh-hk, zh-sg, zh-tw, zu',
+        labels, 'af, ar-ae, ar-bh, ar-dz, ar-eg, ar-iq, ar-jo, ar-kw, ar-lb, ar-ly, ar-ma, ar-om, ar-qa, ar-sa, ar-sy, ar-tn, ar-ye, be, bg, ca, cs, da, de, de-at, de-ch, de-li, de-lu, el, en, en-au, en-bz, en-ca, en-gb, en-ie, en-jm, en-nz, en-tt, en-us, en-za, es, es-ar, es-bo, es-cl, es-co, es-cr, es-do, es-ec, es-gt, es-hn, es-mx, es-ni, es-pa, es-pe, es-pr, es-py, es-sv, es-uy, es-ve, et, eu, fa, fi, fo, fr, fr-be, fr-ca, fr-ch, fr-lu, ga, gd, he, hi, hr, hu, id, is, it, it-ch, ja, ji, ko, lt, lv, mk, ms, mt, nl, nl-be, no, pl, pt, pt-br, rm, ro, ro-mo, ru, ru-mo, sb, sk, sl, sq, sr, sv, sv-fi, sx, sz, th, tn, tr, ts, uk, ur, ve, vi, xh, zh-cn, zh-hk, zh-sg, zh-tw, zu'
+    );
+    .uiElement();
+}
+
+*[class~="termentry/termNotation"] {
+    .mainBlock();
+}
+
+
+*[class~="termEntry/termVariant"]:before(10) {
+    content: "Term";
+    .beforeBlock();
+}
+
+*[class~="termEntry/termVariant"]:before(9) {
+    content: "Term: ";
+    .uiElementLabel();
+}
+
+*[class~="termEntry/termVariant"]:before(8) {
+    content: oxy_textfield(
+          edit, '#text',
+          columns, 40)
+;
+    .uiElement();
+}
+
+*[class~="termEntry/termVariant"]:before(7) {
+    .standardButtons();
+}
+
+*[class~="termEntry/termVariant"]:before {
+    content: "" !important;
+}
+
+*[class~="termEntry/termVariant"]{
+    .mainBlock();
+}
+
+*[class~="termEntry/termVariant"]:after(1) {
+    content: "Case: ";
+    .uiElementLabel();
+}
+
+*[class~="termEntry/termVariant"]:after(2) {
+    content:
+    oxy_combobox( 
+        edit, '@case',
+        editable, false,
+        columns, 15,
+        values, 'nominative, dative, accusative, genitive',
+        labels, 'nominative, dative, accusative, genitive'
+    );
+   .uiElement();
+}
+*[class~="termEntry/termVariant"]:after(3) {
+    content: "Number: ";
+    .uiElementLabel();
+}
+*[class~="termEntry/termVariant"]:after(4) {
+    content: 
+    oxy_combobox( 
+        edit, '@number',
+        editable, false,
+        columns, 15,
+        values, 'singular, plural',
+        labels, 'singular, plural'
+    );
+    .uiElement();
+}
+
+/* Related Terms */
 *[class~="termEntry/relatedTerms"]:before(10) {
-    content: "Related Terms"
-    oxy_action();
+    content: "Related Terms";
+    .beforeBlock();
+}
+
+*[class~="termEntry/relatedTerms"]:before(9) {
+    content:
+    oxy_button(
+        action, oxy_action(
+            name, 'Add Related Term', 
+            description, 'Insert an element after the current one', 
+            operation, 'ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation'
+            ), 
+        showIcon, false
+    );
 }
 
 *[class~="termEntry/relatedTerms"] {
@@ -93,6 +300,7 @@
 
 *[class~="termEntry/antonym"]:before(10) {
     content: "Antonym";
+    .beforeBlock();
 }
 
 *[class~="termEntry/antonym"] {
@@ -123,3 +331,40 @@
     .mainBlock();
 }
 
+*[class~="topic/abstract"]:before {
+    content: "";
+}
+
+
+/* Footer */
+*[class~="termentry/termentry"]:after(9) {
+    content: 'Developed by Doctales ';
+    link : 'https://doctales.github.io';
+    color: #767676;
+    font-size: 0.7em;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+*[class~="termentry/termentry"]:after(10) {
+    content: '\e809';
+    link : 'https://doctales.github.io';
+    font-family: "fontello" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 0.8em !important;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
+
+*[class~="termentry/termentry"]:after(11) {
+    content: '\e807';
+    link : 'https://github.com/doctales';
+    font-family: "fontello" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 0.8em !important;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+}
