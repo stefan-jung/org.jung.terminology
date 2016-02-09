@@ -94,7 +94,36 @@
 
 }
 
-// Elements
+// Definition
+*[class~="termentry/definition"]:before(10) {
+    .beforeBlock();
+    content: "Definition";
+}
+
+*[class~="termentry/definition"]{
+    .mainBlock();
+}
+
+*[class~="termentry/definitionText"]:before(7) {
+    .uiElement();
+    content: 
+    oxy_textArea(
+        edit, '#text',
+        rows, 3,
+        columns, 80
+    );
+}
+
+*[class~="termentry/definitionSource"]:before(10) {
+    .beforeBlock();
+    content: "Source of Definition";
+}
+
+*[class~="termentry/definitionSource"] {
+    .mainBlock();
+}
+
+// Body
 *[class~="termentry/termBody"]:before(10) {
     .beforeBlock();
     content: oxy_buttonGroup(
@@ -127,24 +156,6 @@
           )
       )
   );
-}
-
-*[class~="termentry/definition"]:before(10) {
-    .beforeBlock();
-    content: "Definition";
-}
-
-*[class~="termentry/definition"] {
-    .mainBlock();
-}
-
-*[class~="termentry/definitionSource"]:before(10) {
-    .beforeBlock();
-    content: "Source of Definition";
-}
-
-*[class~="termentry/definitionSource"] {
-    .mainBlock();
 }
 
 *[class~="termentry/termNotation"]:before(10) {
@@ -205,40 +216,35 @@
     .mainBlock();
 }
 
-
 *[class~="termEntry/termVariant"]:before(10) {
     content: "Term";
     .beforeBlock();
-}
-
-*[class~="termEntry/termVariant"]:before(9) {
-    content: "Term: ";
-    .uiElementLabel();
-}
-
-*[class~="termEntry/termVariant"]:before(8) {
-    content: oxy_textfield(
-          edit, '#text',
-          columns, 40)
-;
-    .uiElement();
+    color: black !important;
 }
 
 *[class~="termEntry/termVariant"]:before(7) {
     .standardButtons();
 }
 
-*[class~="termEntry/termVariant"]:before {
-    content: "" !important;
+*[class~="termEntry/termVariant"]:before(1) {
+    content: "";
 }
 
 *[class~="termEntry/termVariant"]{
-    .mainBlock();
+    display: inline;
+    border: 1pt solid black;
+    padding: 2pt;
 }
 
 *[class~="termEntry/termVariant"]:after(1) {
     content: "Case: ";
-    .uiElementLabel();
+    display: block;
+    width: 3.0em;
+    font-weight: normal;
+    margin-top: -1.5em;
+    margin-left: 15em;
+    color: black !important;
+    font-size: 1em !important;
 }
 
 *[class~="termEntry/termVariant"]:after(2) {
@@ -246,26 +252,43 @@
     oxy_combobox( 
         edit, '@case',
         editable, false,
-        columns, 15,
+        columns, 10,
         values, 'nominative, dative, accusative, genitive',
         labels, 'nominative, dative, accusative, genitive'
     );
-   .uiElement();
+    display: block;
+    margin-top: -1.5em;
+    margin-left: 18em;
 }
 *[class~="termEntry/termVariant"]:after(3) {
     content: "Number: ";
-    .uiElementLabel();
+    display: block;
+    width: 4em;
+    font-weight: normal;
+    color: black !important;
+    font-size: 1em !important;
+    margin-top: -1.49em;
+    margin-left: 25em;
 }
 *[class~="termEntry/termVariant"]:after(4) {
     content: 
     oxy_combobox( 
         edit, '@number',
         editable, false,
-        columns, 15,
+        columns, 10,
         values, 'singular, plural',
         labels, 'singular, plural'
     );
-    .uiElement();
+    display: block;
+    margin-top: -1.48em;
+    margin-left: 30em;
+}
+
+*[class~="termEntry/termVariant"]:after(5) {
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 1px;
 }
 
 /* Related Terms */
