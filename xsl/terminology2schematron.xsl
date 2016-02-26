@@ -19,11 +19,56 @@
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
     <xsl:template match="/">
-        <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-            xmlns:sqf="http://www.schematron-quickfix.com/validator/process" queryBinding="xslt2">
+        <sch:schema
+            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+            xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+            queryBinding="xslt2">
+            <sch:title>Terminology</sch:title>
             <xsl:apply-templates/>
         </sch:schema>
     </xsl:template>
+    
+    <xsl:function name="dtl:generateId" as="xs:string?">
+        <xsl:param name="baseString" as="xs:string?"/>
+        <xsl:param name="prefixString" as="xs:string?"/>
+        <xsl:variable name="idStage1" select="lower-case(replace(replace(replace(replace(replace(replace(replace(replace($baseString, 'ä', 'ae')
+          , 'ö', 'oe')
+          , 'ü', 'ue')
+          , 'Ä', 'Ae')
+          , 'Ö', 'Oe')
+          , 'Ü', 'Ue')
+          , 'ß', 'ss')
+          , '[^0-9a-zA-Z]', ' '))"/>
+        <xsl:variable name="idStage2" select="concat(upper-case(substring($idStage1,1,1)), substring($idStage1, 2),' '[not(last())])"/>                                                      
+        <xsl:variable name="idStage3" select="
+            replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace($idStage2, ' a', ' A'), ' b', ' B')
+          , ' d', ' D')
+          , ' c', ' C')
+          , ' e', ' E')
+          , ' f', ' F')
+          , ' g', ' G')
+          , ' h', ' H')
+          , ' i', ' I')
+          , ' j', ' J')
+          , ' k', ' K')
+          , ' l', ' L')
+          , ' m', ' M')
+          , ' n', ' N')
+          , ' o', ' O')
+          , ' p', ' P')
+          , ' q', ' Q')
+          , ' r', ' R')
+          , ' s', ' S')
+          , ' t', ' T')
+          , ' u', ' U')
+          , ' v', ' V')
+          , ' w', ' W')
+          , ' x', ' X')
+          , ' y', ' Y')
+          , ' z', ' Z')
+          , '[^0-9a-zA-Z]', '')"/>
+    <xsl:sequence select="concat(normalize-space($prefixString), $idStage3)"/> 
+  </xsl:function>
 
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
@@ -37,7 +82,7 @@
                 <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'deprecated']">
                     <xsl:variable name="termLanguage" select="normalize-space(@language)"/>
                     <xsl:variable name="deprecatedTerm" select="normalize-space(termVariant)"/>
-                    <xsl:variable name="replaceTerm" select="concat('replace', $deprecatedTerm)"/>
+                    <xsl:variable name="sqfGroupName" select="dtl:generateId($deprecatedTerm, 'sqfGroup')"/>
                     
                     <!-- 
                         Create a report that will be reported if the tested topic: 
@@ -46,13 +91,13 @@
                     -->
                     <xsl:element name="sch:report">
                         <xsl:attribute name="test">
-                            <xsl:text>/*/@xml:lang = '</xsl:text>
+                            <xsl:text>contains(/*/@xml:lang, '</xsl:text>
                             <xsl:value-of select="$termLanguage"/>
-                            <xsl:text>' and contains(., '</xsl:text>
+                            <xsl:text>') and contains(., '</xsl:text>
                             <xsl:value-of select="$deprecatedTerm"/>
                             <xsl:text>')</xsl:text>
                         </xsl:attribute>
-                        <xsl:attribute name="sqf:fix" select="$replaceTerm"/>
+                        <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
                         <xsl:text>The term '</xsl:text>
                         <xsl:value-of select="$deprecatedTerm"/>
                         <xsl:text>' is not allowed.</xsl:text>
@@ -62,24 +107,49 @@
 
                     <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
                     <xsl:element name="sqf:group">
-                        <xsl:attribute name="id" select="$replaceTerm"/>
+                        <xsl:attribute name="id" select="$sqfGroupName"/>
 
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
-                            <xsl:call-template name="createSqfFix">
-                                <xsl:with-param name="deprecatedTerm" select="$deprecatedTerm"/>
-                                <xsl:with-param name="termLanguage" select="$termLanguage"/>
-                                <xsl:with-param name="definition" select="$definition"/>
-                            </xsl:call-template>
+                            <xsl:choose>
+                                <xsl:when test="@language = $termLanguage">
+                                    <xsl:call-template name="createSqfFix">
+                                        <xsl:with-param name="deprecatedTerm" select="$deprecatedTerm"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="definition" select="$definition"/>
+                                    </xsl:call-template>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:message>
+                                        <xsl:text>Language of term does not match, skipping. @language: '</xsl:text>
+                                        <xsl:value-of select="@language"/>
+                                        <xsl:text>', $termLanguage: '</xsl:text>
+                                        <xsl:value-of select="$termLanguage"/>
+                                        <xsl:text>'</xsl:text>
+                                    </xsl:message>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:for-each>
                         
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
-                            <xsl:call-template name="createSqfFix">
-                                <xsl:with-param name="deprecatedTerm" select="$deprecatedTerm"/>
-                                <xsl:with-param name="termLanguage" select="$termLanguage"/>
-                                <xsl:with-param name="definition" select="$definition"/>
-                            </xsl:call-template>
+                            <xsl:choose>
+                                <xsl:when test="@language = $termLanguage">
+                                    <xsl:call-template name="createSqfFix">
+                                        <xsl:with-param name="deprecatedTerm" select="$deprecatedTerm"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="definition" select="$definition"/>
+                                    </xsl:call-template>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:message>
+                                        <xsl:text>Language of term does not match, skipping. @language: '</xsl:text>
+                                        <xsl:value-of select="@language"/>
+                                        <xsl:text>', $termLanguage: '</xsl:text>
+                                        <xsl:value-of select="$termLanguage"/>
+                                    </xsl:message>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:for-each>
                     </xsl:element>
                 </xsl:for-each>
@@ -101,9 +171,7 @@
         <xsl:message>@usage: <xsl:value-of select="@usage"/></xsl:message>
         <xsl:message>@language: <xsl:value-of select="@language"/></xsl:message>
         <xsl:message>Content: <xsl:value-of select="."/></xsl:message>
-        <xsl:variable name="allowedTerm" select="termVariant[1]">
-            
-        </xsl:variable>
+        <xsl:variable name="allowedTerm" select="termVariant[1]"/>
         <xsl:variable name="sqfTitle">
             <xsl:choose>
                 <xsl:when test="self::*[contains(@class, ' termentry/fullForm ')]">
@@ -126,7 +194,7 @@
         <xsl:message>variable sqfTitle: <xsl:value-of select="normalize-space($sqfTitle)"/></xsl:message>
         
         <xsl:variable name="counter" select="position()"/>
-        <xsl:variable name="quickFixId" select="concat('term', $counter)"/>
+        <xsl:variable name="quickFixId" select="concat(dtl:generateId($deprecatedTerm, 'term'), $counter)"/>
         
         <!-- FIXME: This uses the first termVariant but should use all and respect the flection of the deprecated term. -->
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
