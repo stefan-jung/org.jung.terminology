@@ -2,8 +2,12 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="truck">
   <title>Truck</title>
-  <definition>A truck is a motor vehicle designed to transport cargo.</definition>
-  <definitionSource href="https://en.wikipedia.org/wiki/Truck" format="html"/>
+  <definition>
+    <definitionText>A truck is a motor vehicle designed to transport cargo.</definitionText>
+    <definitionSource>
+      <documentReference href="https://en.wikipedia.org/wiki/Truck" format="html"/>
+    </definitionSource>
+  </definition>
   <termBody>
     <fullForm usage="deprecated" language="en">
       <termVariant>lorry</termVariant>

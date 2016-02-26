@@ -2,8 +2,12 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="wheel">
  <title>Wheel</title>
- <definition>A wheel is a circular component that is intended to rotate on an axle bearing.</definition>
- <definitionSource href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
+ <definition>
+  <definitionText>A wheel is a circular component that is intended to rotate on an axle bearing.</definitionText>
+  <definitionSource>
+   <documentReference href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
+  </definitionSource>
+ </definition>
  <termBody>
   <fullForm usage="allowed" language="de">
    <termVariant>Rad</termVariant>

@@ -2,15 +2,16 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="car">
  <title>Car</title>
- <definition class="- topic/abstract concept/abstract termentry/definition ">A car is a wheeled,
-  self-powered motor vehicle used for transportation.</definition>
- <definitionSource>
-  <documentReference href="https://en.wikipedia.org/wiki/Car" format="html"/>
- </definitionSource>
+ <definition>
+  <definitionText>A car is a wheeled, self-powered motor vehicle used for transportation.</definitionText>
+  <definitionSource>
+   <documentReference href="https://en.wikipedia.org/wiki/Car" format="html"/>
+  </definitionSource>
+ </definition>
  <termBody>
   <fig id="carFigure">
    <title>Drawing of a car</title>
-   <image href="images/car.png" id="image_cyv_vm3_t5">
+   <image href="images/car.png">
     <alt>Drawing of a car</alt>
    </image>
   </fig>
