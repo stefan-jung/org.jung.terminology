@@ -15,6 +15,12 @@
   font-style: normal;
 }
 
+/**, *:before, *:after {
+    background-color: red;
+    display: none;
+    content: "" !important;
+}*/
+
 /*    oxy_button(
         action, oxy_action(
             name, '\e800',
@@ -80,54 +86,27 @@
     display: block;
     width: 100px;
     font-weight: normal;
+    color: black !important;
 }
 
-.standardButtons {
-    content:
-        oxy_button(actionID, 'doctales.move.element.up', showIcon, true)
-        oxy_button(actionID, 'doctales.move.element.down', showIcon, true)
-        oxy_button(actionID, 'doctales.delete.element', showIcon, true);
-    display: block;
-    margin-top: -1.5em;
-    text-align:right;
-    margin-left: 300px;
+// Elements
 
+*[class~="termentry/definition"] {}
+*[class~="termentry/definitionSource"] {}
+*[class~="termentry/domain"] {}
+*[class~="termentry/documentReference"] {}
+*[class~="termentry/documentName"] {}
+*[class~="termentry/agreedWith"] {}
+*[class~="termentry/termCommitteeMember"] {}
+
+*[class~="termentry/termVariant"] {
+    background-color: yellow !important;
 }
 
-// Definition
-*[class~="termentry/definition"]:before(10) {
-    .beforeBlock();
-    content: "Definition";
-}
-
-*[class~="termentry/definition"]{
-    .mainBlock();
-}
-
-*[class~="termentry/definitionText"]:before(7) {
-    .uiElement();
-    content: 
-    oxy_textArea(
-        edit, '#text',
-        rows, 3,
-        columns, 80
-    );
-}
-
-*[class~="termentry/definitionSource"]:before(10) {
-    .beforeBlock();
-    content: "Source of Definition";
-}
-
-*[class~="termentry/definitionSource"] {
-    .mainBlock();
-}
-
-// Body
 *[class~="termentry/termBody"]:before(10) {
     .beforeBlock();
     content: oxy_buttonGroup(
-    label, 'Add Term Variant', 
+    label, 'Add Term', 
     actions, 
       oxy_action_list(
           oxy_action(
@@ -192,7 +171,45 @@
 }
 
 *[class~="termentry/termNotation"]:before(6) {
-    .standardButtons();
+    content: 
+    oxy_button(actionID, 'doctales.move.element.up', showIcon, true)
+    oxy_button(actionID, 'doctales.move.element.down', showIcon, true)
+    oxy_buttonGroup(
+        label, '', 
+        icon, url('../icons/add-icon.png'),
+        tooltip, 'These actions do this and that..',    
+        actions, oxy_action_list(
+            oxy_action(
+                name, 'Full Form', 
+                description, 'Insert a full form element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<fullForm usage="allowed" language="en"><termVariant>...</termVariant></fullForm>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside'
+            ),
+            oxy_action(
+                name, 'Acronym', 
+                description, 'Insert an acronym element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<acronym usage="allowed" language="en"><termVariant>...</termVariant></acronym>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside'
+            ),
+            oxy_action(
+                name, 'Abbreviation', 
+                description, 'Insert an abbreviation element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<abbreviation usage="allowed" language="en"><termVariant>...</termVariant></abbreviation>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'Inside'
+            )
+        )
+    )
+    oxy_button(actionID, 'doctales.delete.element', showIcon, true);
+    display: block;
+    margin-top: -1.5em;
+    text-align:right;
+    margin-left: 300px;
 }
 
 *[class~="termentry/termNotation"]:before(5) {
@@ -216,14 +233,79 @@
     .mainBlock();
 }
 
+*[class~="termentry/termNotation"]:text {
+    background-color: purple;
+}
+
+
 *[class~="termEntry/termVariant"]:before(10) {
     content: "Term";
     .beforeBlock();
-    color: black !important;
+}
+
+*[class~="termEntry/termVariant"]:before(9) {
+    content: "Term: ";
+    .uiElementLabel();
+}
+
+*[class~="termEntry/termVariant"]:before(8) {
+    content: 
+    oxy_textfield(
+        edit, '#text',
+        columns, 40
+    );
+    .uiElement();
 }
 
 *[class~="termEntry/termVariant"]:before(7) {
-    .standardButtons();
+    content:
+    oxy_button(actionID, 'doctales.move.element.up', showIcon, true)
+    oxy_button(actionID, 'doctales.move.element.down', showIcon, true)
+    oxy_buttonGroup(
+        label, '', 
+        icon, url('../icons/add-icon.png'),
+        tooltip, 'These actions do this and that..',    
+        actions, oxy_action_list(
+            oxy_action(
+                name, 'Term Variant', 
+                description, 'Insert a term variant element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<termVariant></termVariant>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Context', 
+                description, 'Insert a context element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<contextOfTerm><contextContent></contextContent></contextOfTerm>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Source of Term', 
+                description, 'Insert a source of term element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<sourceOfTerm></sourceOfTerm>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            ),
+            oxy_action(
+                name, 'Annotation', 
+                description, 'Insert an annotation element', 
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                arg-fragment, '<annotation></annotation>',
+                arg-insertLocation, '.',
+                arg-insertPosition, 'After'
+            )
+        )
+    )
+    oxy_button(actionID, 'doctales.delete.element', showIcon, true);
+    display: block;
+    color: black !important;
+    margin-top: -1.5em;
+    text-align:right;
+    margin-left: 300px;
 }
 
 *[class~="termEntry/termVariant"]:before(1) {
@@ -231,9 +313,17 @@
 }
 
 *[class~="termEntry/termVariant"]{
-    display: inline;
-    border: 1pt solid black;
-    padding: 2pt;
+    border: 1pt solid @borderColor;
+    display: block;
+    color: transparent;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+}
+
+*[class~="topic/data"]:before {
+    display:block;
+    content: "Data name: "oxy_textfield(edit, '@name', columns, 15) " Value: "oxy_textfield(edit, '@value', columns, 15) " ";
 }
 
 *[class~="termEntry/termVariant"]:after(1) {
@@ -304,7 +394,7 @@
             name, 'Add Related Term', 
             description, 'Insert an element after the current one', 
             operation, 'ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation'
-            ), 
+        ), 
         showIcon, false
     );
 }
