@@ -23,13 +23,14 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % acronym               "acronym"                                              >
 <!ENTITY % annotation            "annotation"                                           >
 <!ENTITY % antonym               "antonym"                                              >
-<!ENTITY % contextContent        "contextContent"                                       >
-<!ENTITY % contextOfTerm         "contextOfTerm"                                        >
+<!ENTITY % termContext           "termContext"                                          >
+<!ENTITY % termContextText       "termContextText"                                      >
+<!ENTITY % termContextSource     "termContextSource"                                    >
 <!ENTITY % definition            "definition"                                           >
 <!ENTITY % definitionText        "definitionText"                                       >
 <!ENTITY % definitionSource      "definitionSource"                                     >
-<!ENTITY % documentName          "documentName"                                         >
-<!ENTITY % documentReference     "documentReference"                                    >
+<!ENTITY % sourceName            "sourceName"                                           >
+<!ENTITY % sourceReference       "sourceReference"                                      >
 <!ENTITY % domain                "domain"                                               >
 <!ENTITY % fullForm              "fullForm"                                             >
 <!ENTITY % hypernym              "hypernym"                                             >
@@ -38,8 +39,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
 <!ENTITY % relatedTerms          "relatedTerms"                                         >
-<!ENTITY % sourceOfContext       "sourceOfContext"                                      >
-<!ENTITY % sourceOfTerm          "sourceOfTerm"                                         >
+<!ENTITY % termSource            "termSource"                                           >
 <!ENTITY % termBody              "termBody"                                             >
 <!ENTITY % termVariant           "termVariant"                                          >
 <!ENTITY % termentry             "termentry"                                            >
@@ -387,9 +387,9 @@ Category: Termentry elements-->
 <!ELEMENT  relatedTerms %relatedTerms.content;>
 <!ATTLIST  relatedTerms %related-links.attributes;>
 
-<!--                                 LONG NAME: Term Definition Source                -->
-<!ENTITY % definitionSource.content "(((%documentReference;) |
-                                       (%documentName;))+)">
+<!--                                 LONG NAME: Definition Source                     -->
+<!ENTITY % definitionSource.content "(((%sourceName;)?),
+                                      ((%sourceReference;)?))">
 <!ENTITY % definitionSource.attributes
                                     "%univ-atts;
                                      outputclass
@@ -401,18 +401,18 @@ Category: Termentry elements-->
 <!ATTLIST definitionSource    %definitionSource.attributes;>
 
 <!--                                 LONG NAME: Document Reference                    -->
-<!--doc:The <documentReference> refers to the source of a definition, e.g. to a file or website.
+<!--doc:The <sourceReference> refers to the source of a definition, e.g. to a file or website.
 Category: Termentry elements-->
-<!ELEMENT documentReference    %xref.content;>
-<!ATTLIST documentReference    %xref.attributes;>
+<!ELEMENT sourceReference    %xref.content;>
+<!ATTLIST sourceReference    %xref.attributes;>
 
 <!--                                 LONG NAME: Document Name                         -->
-<!ENTITY % documentName.content     "(#PCDATA)*">
-<!ENTITY % documentName.attributes  "%data-element-atts;">
-<!--doc:The <documentName> refers to a document and contains its name.
+<!ENTITY % sourceName.content     "(#PCDATA)*">
+<!ENTITY % sourceName.attributes  "%data-element-atts;">
+<!--doc:The <sourceName> refers to a document and contains its name.
 Category: Termentry elements-->
-<!ELEMENT documentName    %documentName.content;>
-<!ATTLIST documentName    %documentName.attributes;>
+<!ELEMENT sourceName    %sourceName.content;>
+<!ATTLIST sourceName    %sourceName.attributes;>
 
 <!--                                 LONG NAME: Term Variant                          -->
 <!ENTITY % termVariant.content      "(#PCDATA | 
@@ -435,58 +435,60 @@ Category: Termentry elements-->
 <!ELEMENT termVariant    %termVariant.content;>
 <!ATTLIST termVariant    %termVariant.attributes;>
 
-<!--                                 LONG NAME: Context of Term                       -->
-<!ENTITY % contextOfTerm.content    "((%contextContent;),
-                                     (%sourceOfContext;)?)">
-<!ENTITY % contextOfTerm.attributes "%univ-atts;
+<!--                                 LONG NAME: Term Context Text                     -->
+<!ENTITY % termContext.content      "((%termContextText;),
+                                      (%termContextSource;)?)">
+<!ENTITY % termContext.attributes "%univ-atts;
                                      outputclass
                                         CDATA
                                            #IMPLIED">
-<!--doc:The <contextOfTerm> element contain a context example of the term.
+<!--doc:The <termContext> element contain a context example of the term.
 Category: Termentry elements-->
-<!ELEMENT contextOfTerm   %contextOfTerm.content;>
-<!ATTLIST contextOfTerm   %contextOfTerm.attributes;>
+<!ELEMENT termContext   %termContext.content;>
+<!ATTLIST termContext   %termContext.attributes;>
 
-<!--                                 LONG NAME: Context Content                       -->
-<!ENTITY % contextContent.content   "(#PCDATA)*">
-<!ENTITY % contextContent.attributes
+<!--                                 LONG NAME: Term Context Text                     -->
+<!ENTITY % termContextText.content  "(#PCDATA)*">
+<!ENTITY % termContextText.attributes
                                     "%univ-atts;
                                      outputclass 
                                         CDATA 
                                            #IMPLIED">
-<!--doc:The <contextContent> element contain a context example of the term.
+<!--doc:The <termContextText> element contain a context example of the term.
 Category: Termentry elements-->
-<!ELEMENT contextContent   %contextContent.content;>
-<!ATTLIST contextContent   %contextContent.attributes;>
+<!ELEMENT termContextText   %termContextText.content;>
+<!ATTLIST termContextText   %termContextText.attributes;>
 
-<!--                                 LONG NAME: Source of Context                     -->
-<!ENTITY % sourceOfContext.content  "(#PCDATA)*">
-<!ENTITY % sourceOfContext.attributes
+<!--                                 LONG NAME: Term Context Source                   -->
+<!ENTITY % termContextSource.content "(((%sourceName;)?),
+                                       ((%sourceReference;)?))">
+<!ENTITY % termContextSource.attributes
                                     "%univ-atts;
                                      outputclass 
                                         CDATA 
                                            #IMPLIED">
-<!--doc:The <sourceOfContext> element contains the source of the context example.
+<!--doc:The <termContextSource> element contains the source of the context example.
 Category: Termentry elements-->
-<!ELEMENT sourceOfContext   %sourceOfContext.content;>
-<!ATTLIST sourceOfContext   %sourceOfContext.attributes;>
+<!ELEMENT termContextSource   %termContextSource.content;>
+<!ATTLIST termContextSource   %termContextSource.attributes;>
 
-<!--                                 LONG NAME: Source of Term                        -->
-<!ENTITY % sourceOfTerm.content     "(#PCDATA)*">
-<!ENTITY % sourceOfTerm.attributes  "%univ-atts;
+<!--                                 LONG NAME: Term Source                           -->
+<!ENTITY % termSource.content       "(((%sourceName;)?),
+                                      ((%sourceReference;)?))">
+<!ENTITY % termSource.attributes  "%univ-atts;
                                      outputclass 
                                         CDATA 
                                            #IMPLIED">
-<!--doc:The <sourceOfTerm> element contains the source of the term.
+<!--doc:The <termSource> element contains the source of the term.
 Category: Termentry elements-->
-<!ELEMENT sourceOfTerm   %sourceOfTerm.content;>
-<!ATTLIST sourceOfTerm   %sourceOfTerm.attributes;>
+<!ELEMENT termSource   %termSource.content;>
+<!ATTLIST termSource   %termSource.attributes;>
 
 <!--                                 LONG NAME: Generic Term                          -->
 <!ENTITY % genericTerm.content      "(((%termVariant;)+),
-                                      ((%contextOfTerm;)?),
+                                      ((%termContext;)?),
                                       ((%annotation;)?),
-                                      ((%sourceOfTerm;)?))">
+                                      ((%termSource;)?))">
 <!ENTITY % genericTerm.attributes   "%term-atts;
                                      %languageSelection-atts;
                                      %genderSelection-atts;
@@ -551,13 +553,11 @@ Category: Termentry elements-->
 <!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/data concept/data termEntry/agreedWith ">
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/data concept/data termEntry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
-<!ATTLIST contextOfTerm         %global-atts;   class CDATA "- topic/data concept/data termEntry/contextOfTerm ">
-<!ATTLIST contextContent        %global-atts;   class CDATA "- topic/data concept/data termEntry/contextContent ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
 <!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/data concept/data termEntry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
-<!ATTLIST documentName          %global-atts;   class CDATA "- topic/data concept/data termEntry/documentName ">
-<!ATTLIST documentReference     %global-atts;   class CDATA "- topic/xref concept/xref termentry/documentReference ">
+<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/data concept/data termEntry/sourceName ">
+<!ATTLIST sourceReference       %global-atts;   class CDATA "- topic/xref concept/xref termentry/sourceReference ">
 <!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
 <!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hypernym ">
@@ -566,8 +566,10 @@ Category: Termentry elements-->
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
 <!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
-<!ATTLIST sourceOfContext       %global-atts;   class CDATA "- topic/data concept/data termEntry/sourceOfContext ">
-<!ATTLIST sourceOfTerm          %global-atts;   class CDATA "- topic/data concept/data termEntry/sourceOfTerm ">
+<!ATTLIST termContext           %global-atts;   class CDATA "- topic/data concept/data termEntry/termContext ">
+<!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/data concept/data termEntry/termContextSource ">
+<!ATTLIST termContextText       %global-atts;   class CDATA "- topic/data concept/data termEntry/termContextText ">
+<!ATTLIST termSource            %global-atts;   class CDATA "- topic/data concept/data termEntry/termSource ">
 <!ATTLIST termBody              %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
 <!ATTLIST termVariant           %global-atts;   class CDATA "- topic/data concept/data termEntry/termVariant ">
 <!ATTLIST termentry             %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">

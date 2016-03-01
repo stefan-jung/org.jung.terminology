@@ -5,7 +5,7 @@
   <definition>
     <definitionText>A truck is a motor vehicle designed to transport cargo.</definitionText>
     <definitionSource>
-      <documentReference href="https://en.wikipedia.org/wiki/Truck" format="html"/>
+      <sourceReference href="https://en.wikipedia.org/wiki/Truck" format="html"/>
     </definitionSource>
   </definition>
   <termBody>
