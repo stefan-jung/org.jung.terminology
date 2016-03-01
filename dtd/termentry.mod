@@ -335,7 +335,7 @@ Category: Termentry elements-->
                                          conjunction |
                                          interjection |
                                          article)
-                                           'noun' #REQUIRED
+                                           'noun'
                                      outputclass
                                         CDATA
                                            #IMPLIED">
