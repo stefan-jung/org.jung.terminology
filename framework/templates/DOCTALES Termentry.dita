@@ -2,8 +2,12 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="ui_${id}">
  <title>Term</title>
- <definition>Definition of a term</definition>
- <definitionSource href="https://en.wikipedia.org" format="html"/>
+ <definition>
+  <definitionText>Definition of a term</definitionText>
+  <definitionSource>
+    <documentReference href="https://en.wikipedia.org" format="html"/>
+  </definitionSource>
+ </definition>
  <termBody>
   <fullForm usage="deprecated" language="de">
    <termVariant>Deprecated full form</termVariant>
