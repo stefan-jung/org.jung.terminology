@@ -326,8 +326,16 @@ Category: Termentry elements-->
 <!ENTITY % partOfSpeech.content     "EMPTY">
 <!ENTITY % partOfSpeech.attributes  "%univ-atts;
                                      value
-                                        CDATA
-                                           #REQUIRED
+                                        (noun |
+                                         pronoun |
+                                         adjective |
+                                         verb |
+                                         adverb |
+                                         preposition |
+                                         conjunction |
+                                         interjection |
+                                         article)
+                                           'noun' #REQUIRED
                                      outputclass
                                         CDATA
                                            #IMPLIED">
