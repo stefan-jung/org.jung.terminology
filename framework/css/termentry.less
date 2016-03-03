@@ -103,6 +103,7 @@
     background-color: yellow !important;
 }
 
+// Elements
 *[class~="termentry/termBody"]:before(10) {
     .beforeBlock();
     content: oxy_buttonGroup(
@@ -135,6 +136,24 @@
           )
       )
   );
+}
+
+*[class~="termentry/definition"]:before(10) {
+    .beforeBlock();
+    content: "Definition";
+}
+
+*[class~="termentry/definition"] {
+    .mainBlock();
+}
+
+*[class~="termentry/definitionSource"]:before(10) {
+    .beforeBlock();
+    content: "Source of Definition";
+}
+
+*[class~="termentry/definitionSource"] {
+    .mainBlock();
 }
 
 *[class~="termentry/termNotation"]:before(10) {
