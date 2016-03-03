@@ -5,7 +5,7 @@
  <definition>
   <definitionText>A wheel is a circular component that is intended to rotate on an axle bearing.</definitionText>
   <definitionSource>
-   <documentReference href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
+   <sourceReference href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
   </definitionSource>
  </definition>
  <termBody>
