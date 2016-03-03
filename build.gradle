@@ -16,4 +16,5 @@ task cloneGitRepo(type: GitClone) {
 task travis(type:Exec, dependsOn: cloneGitRepo) {
     // workingDir 'dita-ot-2.2.2/bin'
     // commandLine 'dita -i ../../samples/terminology.ditamap -f termchecker'
+    commandLine 'ls'
 }
