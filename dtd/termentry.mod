@@ -20,7 +20,6 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % abbreviation          "abbreviation"                                         >
 <!ENTITY % acronym               "acronym"                                              >
 <!ENTITY % agreedWith            "agreedWith"                                           >
-<!ENTITY % acronym               "acronym"                                              >
 <!ENTITY % annotation            "annotation"                                           >
 <!ENTITY % antonym               "antonym"                                              >
 <!ENTITY % termContext           "termContext"                                          >
@@ -274,18 +273,17 @@ Category: Termentry elements-->
 <!ATTLIST definition    %definition.attributes;>
 
 <!--                                 LONG NAME: Definition Text                       -->
-<!ENTITY % definitionText.content   "(#PCDATA)*">
 <!ENTITY % definitionText.attributes "%univ-atts;
                                       outputclass
                                          CDATA
                                             #IMPLIED">
 <!--doc:The <definitionText> element contains the textual content of the definition.
 Category: Termentry elements-->
-<!ELEMENT definitionText    %definitionText.content;>
+<!ELEMENT definitionText    %shortdesc.content;>
 <!ATTLIST definitionText    %definitionText.attributes;>
 
 <!--                                 LONG NAME: Agreed With                           -->
-<!ENTITY % agreedWith.content       "(%termCommitteeMember;)*">
+<!ENTITY % agreedWith.content       "(%termCommitteeMember;)+">
 <!ENTITY % agreedWith.attributes    "%univ-atts;
                                      outputclass
                                         CDATA
@@ -345,7 +343,8 @@ Category: Termentry elements-->
 <!ATTLIST partOfSpeech   %partOfSpeech.attributes;>
 
 <!--                                 LONG NAME: Annotation                            -->
-<!ENTITY % annotation.content       "(#PCDATA)*">
+<!ENTITY % annotation.content       "(#PCDATA |
+                                      %text;)*">
 <!ENTITY % annotation.attributes    "%univ-atts;
                                      outputclass
                                         CDATA
@@ -550,13 +549,13 @@ Category: Termentry elements-->
 
 <!ATTLIST abbreviation          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/abbreviation ">
 <!ATTLIST acronym               %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
-<!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/data concept/data termEntry/agreedWith ">
-<!ATTLIST annotation            %global-atts;   class CDATA "- topic/data concept/data termEntry/annotation ">
+<!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termEntry/agreedWith ">
+<!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termEntry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
-<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/data concept/data termEntry/definitionSource ">
+<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termEntry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
-<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/data concept/data termEntry/sourceName ">
+<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/text termEntry/sourceName ">
 <!ATTLIST sourceReference       %global-atts;   class CDATA "- topic/xref concept/xref termentry/sourceReference ">
 <!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
@@ -566,13 +565,13 @@ Category: Termentry elements-->
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
 <!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
-<!ATTLIST termContext           %global-atts;   class CDATA "- topic/data concept/data termEntry/termContext ">
-<!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/data concept/data termEntry/termContextSource ">
-<!ATTLIST termContextText       %global-atts;   class CDATA "- topic/data concept/data termEntry/termContextText ">
-<!ATTLIST termSource            %global-atts;   class CDATA "- topic/data concept/data termEntry/termSource ">
+<!ATTLIST termContext           %global-atts;   class CDATA "- topic/div termEntry/termContext ">
+<!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/div termEntry/termContextSource ">
+<!ATTLIST termContextText       %global-atts;   class CDATA "- topic/text termEntry/termContextText ">
+<!ATTLIST termSource            %global-atts;   class CDATA "- topic/text termEntry/termSource ">
 <!ATTLIST termBody              %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
-<!ATTLIST termVariant           %global-atts;   class CDATA "- topic/data concept/data termEntry/termVariant ">
+<!ATTLIST termVariant           %global-atts;   class CDATA "- topic/text termEntry/termVariant ">
 <!ATTLIST termentry             %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
-<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/data concept/data termEntry/termCommitteeMember ">
+<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/li termEntry/termCommitteeMember ">
 
 <!-- ================================= End of file ================================== -->
