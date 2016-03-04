@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
 <plugin id="org.doctales.terminology">
-  <require plugin="org.dita.xhtml"/>
-  <require plugin="org.dita.html5"/>
+   <!-- Workaroung for #2146 -->
+  <require plugin="org.dita.base"/>
+  
+  <!--<require plugin="org.dita.xhtml"/>-->
+  <!--<require plugin="org.dita.html5"/>-->
+  
+
   
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
@@ -143,7 +148,7 @@
   <transtype name="termbrowser"/>
   
   <!-- Overriding XSLT -->
-  <feature extension="dita.xsl.xhtml" file="xsl/related-links.xsl"/>
+  <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
   
   <!-- New strings -->
   <feature extension="dita.xsl.strings" file="xsl/term-strings.xml"/>
