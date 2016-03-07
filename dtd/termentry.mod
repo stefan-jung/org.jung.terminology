@@ -30,6 +30,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % definitionSource      "definitionSource"                                     >
 <!ENTITY % sourceName            "sourceName"                                           >
 <!ENTITY % sourceReference       "sourceReference"                                      >
+<!ENTITY % domains               "domains"                                              >
 <!ENTITY % domain                "domain"                                               >
 <!ENTITY % fullForm              "fullForm"                                             >
 <!ENTITY % hypernym              "hypernym"                                             >
@@ -238,7 +239,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % termentry.content        "((%title;),
                                       (%definition;)?,
                                       (%partOfSpeech;)?,
-                                      (%domain;)*,
+                                      (%domains;)?,
                                       (%agreedWith;)?,
                                       (%annotation;)*,
                                       (%termBody;)?,
@@ -305,6 +306,17 @@ Category: Termentry elements-->
 Category: Termentry elements-->
 <!ELEMENT termCommitteeMember   %termCommitteeMember.content;>
 <!ATTLIST termCommitteeMember   %termCommitteeMember.attributes;>
+
+<!--                                 LONG NAME: Domains                               -->
+<!ENTITY % domains.content          "((%domain;)+)">
+<!ENTITY % domains.attributes       "%univ-atts;
+                                     outputclass
+                                        CDATA
+                                           #IMPLIED">
+<!--doc:The <domains> element contains at least one domain of the term.
+Category: Termentry elements-->
+<!ELEMENT domains   %domains.content;>
+<!ATTLIST domains   %domains.attributes;>
 
 <!--                                 LONG NAME: Domain                                -->
 <!ENTITY % domain.content           "EMPTY">
@@ -484,10 +496,10 @@ Category: Termentry elements-->
 <!ATTLIST termSource   %termSource.attributes;>
 
 <!--                                 LONG NAME: Generic Term                          -->
-<!ENTITY % genericTerm.content      "(((%termVariant;)+),
+<!ENTITY % genericTerm.content      "(((%annotation;)?),
                                       ((%termContext;)?),
-                                      ((%annotation;)?),
-                                      ((%termSource;)?))">
+                                      ((%termSource;)?),
+                                      ((%termVariant;)+))">
 <!ENTITY % genericTerm.attributes   "%term-atts;
                                      %languageSelection-atts;
                                      %genderSelection-atts;
@@ -549,29 +561,30 @@ Category: Termentry elements-->
 
 <!ATTLIST abbreviation          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/abbreviation ">
 <!ATTLIST acronym               %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
-<!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termEntry/agreedWith ">
-<!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termEntry/annotation ">
+<!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termentry/agreedWith ">
+<!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
-<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termEntry/definitionSource ">
+<!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termentry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
-<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/text termEntry/sourceName ">
+<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/text termentry/sourceName ">
 <!ATTLIST sourceReference       %global-atts;   class CDATA "- topic/xref concept/xref termentry/sourceReference ">
-<!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termEntry/domain ">
+<!ATTLIST domains               %global-atts;   class CDATA "- topic/div termentry/domains ">
+<!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termentry/domain ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
 <!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hypernym ">
 <!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hyponym ">
 <!ATTLIST isPartOf              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/isPartOf ">
-<!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termEntry/partOfSpeech ">
+<!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
-<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/related-links termEntry/relatedTerms ">
-<!ATTLIST termContext           %global-atts;   class CDATA "- topic/div termEntry/termContext ">
-<!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/div termEntry/termContextSource ">
-<!ATTLIST termContextText       %global-atts;   class CDATA "- topic/text termEntry/termContextText ">
-<!ATTLIST termSource            %global-atts;   class CDATA "- topic/text termEntry/termSource ">
+<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/related-links termentry/relatedTerms ">
+<!ATTLIST termContext           %global-atts;   class CDATA "- topic/div termentry/termContext ">
+<!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/div termentry/termContextSource ">
+<!ATTLIST termContextText       %global-atts;   class CDATA "- topic/text termentry/termContextText ">
+<!ATTLIST termSource            %global-atts;   class CDATA "- topic/text termentry/termSource ">
 <!ATTLIST termBody              %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
-<!ATTLIST termVariant           %global-atts;   class CDATA "- topic/text termEntry/termVariant ">
+<!ATTLIST termVariant           %global-atts;   class CDATA "- topic/text termentry/termVariant ">
 <!ATTLIST termentry             %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
-<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/li termEntry/termCommitteeMember ">
+<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/li termentry/termCommitteeMember ">
 
 <!-- ================================= End of file ================================== -->
