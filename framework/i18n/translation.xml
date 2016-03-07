@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<translation>
+    <languageList>
+        <language description="English" lang="en_US"/>
+        <language description="German" lang="de_DE"/>
+    </languageList>
+    <key type="action" value="doctales.move.element.up">
+        <comment>Move the current element up.</comment>
+        <val lang="en_US">Move element up.</val>
+        <val lang="de_DE">Element nach oben schieben.</val>
+    </key>
+    <key value="doctales.move.element.up_description">
+        <comment>You can order the elements without interferring the processing.</comment>
+        <val lang="en_US">The element order does not interfer the processing.</val>
+        <val lang="de_DE">Die Reihenfolge beeinflusst nicht die Verarbeitung.</val>
+    </key>
+    <key type="action" value="doctales.move.element.down">
+        <comment>Move the current element down.</comment>
+        <val lang="en_US">Move element down.</val>
+        <val lang="de_DE">Element nach unten schieben.</val>
+    </key>
+    <key value="doctales.move.element.down_description">
+        <comment>You can order the elements without interferring the processing.</comment>
+        <val lang="en_US">The element order does not interfer the processing.</val>
+        <val lang="de_DE">Die Reihenfolge beeinflusst nicht die Verarbeitung.</val>
+    </key>
+    <key type="action" value="doctales.delete.element">
+        <comment>Delete the current element.</comment>
+        <val lang="en_US">Delete the current element.</val>
+        <val lang="de_DE">Lösche das aktuelle Element.</val>
+    </key>
+    <key value="doctales.delete.element_description">
+        <comment>Delete the element at the cursor position.</comment>
+        <val lang="en_US">Delete the element at the cursor position.</val>
+        <val lang="de_DE">Lösche das Element an der Cursor-Position.</val>
+    </key>
+    <key type="action" value="doctales.add.termVariant">
+        <comment>Add a new termVariant element.</comment>
+        <val lang="en_US">Add a new termVariant element.</val>
+        <val lang="de_DE">Neues termVariant Element einfügen.</val>
+    </key>
+    <key value="doctales.add.termVariant_description">
+        <comment>A termVariant element contains a term in a specific case and number.</comment>
+        <val lang="en_US">A termVariant element contains a term in a specific case and number.</val>
+        <val lang="de_DE">Ein termVariant Element enthält einen Term in einem Kasus und Numerus.</val>
+    </key>
+    <key type="action" value="doctales.add.fullForm">
+        <comment>Add a new fullForm element.</comment>
+        <val lang="en_US">Add a new fullForm element.</val>
+        <val lang="de_DE">Neues fullForm Element einfügen.</val>
+    </key>
+    <key value="doctales.add.fullForm_description">
+        <comment>A fullForm element contains the full notation of a term.</comment>
+        <val lang="en_US">A fullForm element contains the full notation of a term.</val>
+        <val lang="de_DE">Ein fullForm Element enthält die vollständige Schreibweise eines Terms.</val>
+    </key>
+    
+    <!-- CSS Labels -->
+    <key value="doctales.terminology.css.case">
+        <comment>Case</comment>
+        <val lang="en_US">Case</val>
+        <val lang="de_DE">Kasus</val>
+    </key>
+    <key value="doctales.terminology.css.number">
+        <comment>Number</comment>
+        <val lang="en_US">Number</val>
+        <val lang="de_DE">Numerus</val>
+    </key>
+    <key value="doctales.terminology.css.add.term">
+        <comment>Add a new term.</comment>
+        <val lang="en_US">Add new term</val>
+        <val lang="de_DE">Neuen Term einfügen</val>
+    </key>
+    <key value="doctales.terminology.css.fullForm">
+        <comment>Full Form</comment>
+        <val lang="en_US">Full Form</val>
+        <val lang="de_DE">Langform</val>
+    </key>
+    <key value="doctales.terminology.css.fullForm_description">
+        <comment>Insert a full form element.</comment>
+        <val lang="en_US">Insert a term in standard notation (full form).</val>
+        <val lang="de_DE">Term in Standardschreibweise (full form) einfügen.</val>
+    </key>
+    <key value="doctales.terminology.css.abbreviation">
+        <comment>Abbreviation</comment>
+        <val lang="en_US">Abbreviation</val>
+        <val lang="de_DE">Abkürzung</val>
+    </key>
+    <key value="doctales.terminology.css.abbreviation_description">
+        <comment>Insert an abbreviation element.</comment>
+        <val lang="en_US">Insert an abbreviation of a term.</val>
+        <val lang="de_DE">Abkürzung eines Terms einfügen.</val>
+    </key>
+    <key value="doctales.terminology.css.acronym">
+        <comment>Acronym</comment>
+        <val lang="en_US">Acronym</val>
+        <val lang="de_DE">Akronym</val>
+    </key>
+    <key value="doctales.terminology.css.acronym_description">
+        <comment>Insert an acronym element.</comment>
+        <val lang="en_US">Insert an acronym of a term.</val>
+        <val lang="de_DE">Akronym eines Terms einfügen.</val>
+    </key>
+    <key value="doctales.terminology.css.definition">
+        <comment>Definition</comment>
+        <val lang="en_US">Definition</val>
+        <val lang="de_DE">Definition</val>
+    </key>
+    <key value="doctales.terminology.css.definitionSource">
+        <comment>Source of Definition</comment>
+        <val lang="en_US">Source of Definition</val>
+        <val lang="de_DE">Quelle der Definition</val>
+    </key>
+    <key value="doctales.terminology.css.sourceReference">
+        <comment>Reference to Source</comment>
+        <val lang="en_US">Reference to Source</val>
+        <val lang="de_DE">Verweis auf Quelle</val>
+    </key>
+    <key value="doctales.terminology.css.sourceName">
+        <comment>Name of Source</comment>
+        <val lang="en_US">Name of Source</val>
+        <val lang="de_DE">Name der Quelle</val>
+    </key>
+    <key value="doctales.terminology.css.domains">
+        <comment>Domains</comment>
+        <val lang="en_US">Domains</val>
+        <val lang="de_DE">Domänen</val>
+    </key>
+    <key value="doctales.terminology.css.domain">
+        <comment>Domain</comment>
+        <val lang="en_US">Domain</val>
+        <val lang="de_DE">Domäne</val>
+    </key>
+    <key value="doctales.terminology.css.agreedWith">
+        <comment>Agreed With</comment>
+        <val lang="en_US">Agreed With</val>
+        <val lang="de_DE">Abgestimmt mit</val>
+    </key>
+    <key value="doctales.terminology.css.termCommitteeMember">
+        <comment>Term Committee Member</comment>
+        <val lang="en_US">Term Committee Member</val>
+        <val lang="de_DE">Term-Komitee-Mitglied</val>
+    </key>
+    <key value="doctales.terminology.css.usage">
+        <comment>Usage</comment>
+        <val lang="en_US">Usage</val>
+        <val lang="de_DE">Verwendung</val>
+    </key>
+    <key value="doctales.terminology.css.usage">
+        <comment>Usage</comment>
+        <val lang="en_US">Usage</val>
+        <val lang="de_DE">Verwendung</val>
+    </key>
+    <key value="doctales.terminology.css.language">
+        <comment>Language</comment>
+        <val lang="en_US">Language</val>
+        <val lang="de_DE">Sprache</val>
+    </key>
+    <key value="doctales.terminology.css.related.terms">
+        <comment>Related Terms</comment>
+        <val lang="en_US">Related Terms</val>
+        <val lang="de_DE">Verwandte Begriffe</val>
+    </key>
+    <key value="doctales.terminology.css.related.term">
+        <comment>Related Term</comment>
+        <val lang="en_US">Related Term</val>
+        <val lang="de_DE">Verwandter Begriff</val>
+    </key>
+    <key value="doctales.terminology.css.antonym">
+        <comment>Antonym</comment>
+        <val lang="en_US">Antonym</val>
+        <val lang="de_DE">Antonym</val>
+    </key>
+    <key value="doctales.terminology.css.hypernym">
+        <comment>Hypernym</comment>
+        <val lang="en_US">Hypernym</val>
+        <val lang="de_DE">Hypernym</val>
+    </key>
+    <key value="doctales.terminology.css.hyponym">
+        <comment>Hyponym</comment>
+        <val lang="en_US">Hyponym</val>
+        <val lang="de_DE">Hyponym</val>
+    </key>
+    <key value="doctales.terminology.css.isPartOf">
+        <comment>Is Part Of</comment>
+        <val lang="en_US">Is Part Of</val>
+        <val lang="de_DE">Ist Teil von</val>
+    </key>
+    <key value="doctales.terminology.css.developedByDoctales">
+        <comment>Developed by Doctales</comment>
+        <val lang="en_US">Developed by Doctales</val>
+        <val lang="de_DE">Entwickelt von Doctales</val>
+    </key>
+    <key value="doctales.terminology.css.link.related.terms">
+        <comment>Add Related Term</comment>
+        <val lang="en_US">Link a Related Term</val>
+        <val lang="de_DE">Verwandten Begriff verlinken</val>
+    </key>
+    <key value="doctales.terminology.css.link.related.terms_description">
+        <comment>Add links to related terms to model a semantic net</comment>
+        <val lang="en_US">Add links to related terms to model a semantic net</val>
+        <val lang="de_DE">Verlinke verwandte Begriffe, um ein semantisches Netz zu bilden.</val>
+    </key>
+</translation>
