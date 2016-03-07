@@ -183,7 +183,7 @@
             <linklist class="- topic/linklist " outputclass="relinfo relrelatedTerm">
                 <title class="- topic/title ">
                     <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Related terms'"/>
+                        <xsl:with-param name="id" select="'Related Terms'"/>
                     </xsl:call-template>
                 </title>
                 <xsl:copy-of select="$links"/>
