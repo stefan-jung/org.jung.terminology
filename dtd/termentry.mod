@@ -17,19 +17,15 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!--                              ELEMENT NAME ENTITIES                               -->
 <!-- ================================================================================ -->
 
+<!ENTITY % termentry             "termentry"                                            >
 <!ENTITY % abbreviation          "abbreviation"                                         >
 <!ENTITY % acronym               "acronym"                                              >
 <!ENTITY % agreedWith            "agreedWith"                                           >
 <!ENTITY % annotation            "annotation"                                           >
 <!ENTITY % antonym               "antonym"                                              >
-<!ENTITY % termContext           "termContext"                                          >
-<!ENTITY % termContextText       "termContextText"                                      >
-<!ENTITY % termContextSource     "termContextSource"                                    >
 <!ENTITY % definition            "definition"                                           >
 <!ENTITY % definitionText        "definitionText"                                       >
 <!ENTITY % definitionSource      "definitionSource"                                     >
-<!ENTITY % sourceName            "sourceName"                                           >
-<!ENTITY % sourceReference       "sourceReference"                                      >
 <!ENTITY % domains               "domains"                                              >
 <!ENTITY % domain                "domain"                                               >
 <!ENTITY % fullForm              "fullForm"                                             >
@@ -39,11 +35,16 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
 <!ENTITY % relatedTerms          "relatedTerms"                                         >
-<!ENTITY % termSource            "termSource"                                           >
+<!ENTITY % sourceName            "sourceName"                                           >
+<!ENTITY % sourceReference       "sourceReference"                                      >
 <!ENTITY % termBody              "termBody"                                             >
+<!ENTITY % termContext           "termContext"                                          >
+<!ENTITY % termContextText       "termContextText"                                      >
+<!ENTITY % termContextSource     "termContextSource"                                    >
+<!ENTITY % termSource            "termSource"                                           >
 <!ENTITY % termVariant           "termVariant"                                          >
-<!ENTITY % termentry             "termentry"                                            >
 <!ENTITY % termCommitteeMember   "termCommitteeMember"                                  >
+<!ENTITY % verb                  "verb"                                                 >
 
 
 
@@ -371,7 +372,8 @@ Category: Termentry elements-->
                                       (%note;))*),
                                       ((%fullForm;) |
                                        (%abbreviation;) |
-                                       (%acronym;))*)">
+                                       (%acronym;) |
+                                       (%verb;))*)">
 <!ENTITY % termBody.attributes      "%id-atts;
                                      %localization-atts;
                                      base
@@ -523,6 +525,12 @@ Category: Termentry elements-->
 <!ELEMENT acronym         %genericTerm.content;>
 <!ATTLIST acronym         %genericTerm.attributes;>
 
+<!--                                 LONG NAME: Verb                                  -->
+<!--doc:The <verb> element contains a verb.
+Category: Termentry elements-->
+<!ELEMENT verb            %genericTerm.content;>
+<!ATTLIST verb            %genericTerm.attributes;>
+
 <!--                                 LONG NAME: Antonym                               -->
 <!--doc:The <antonym> element refers to the antonym of a term.
 Category: Termentry elements-->
@@ -586,5 +594,6 @@ Category: Termentry elements-->
 <!ATTLIST termVariant           %global-atts;   class CDATA "- topic/text termentry/termVariant ">
 <!ATTLIST termentry             %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
 <!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/li termentry/termCommitteeMember ">
+<!ATTLIST verb                  %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/verb ">
 
 <!-- ================================= End of file ================================== -->
