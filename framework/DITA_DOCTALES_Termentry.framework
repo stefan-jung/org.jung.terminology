@@ -376,13 +376,13 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm>
+																		<String>&lt;fullForm language="en" usage="allowed">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -416,6 +416,857 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>72</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.add.abbreviation</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.add.abbreviation)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.add.abbreviation_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;abbreviation language="en" usage="allowed">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/abbreviation></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>73</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.add.acronym</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.add.acronym)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.add.acronym_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;acronym language="en" usage="allowed">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/acronym></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>74</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.add.verb</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.add.verb)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.add.verb_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;verb language="en" usage="allowed">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/verb></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>75</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.fullForm</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.fullForm)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.fullForm_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/fullForm ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>76</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.abbreviation</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.abbreviation)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.abbreviation_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/abbreviation ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>77</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.acronym</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.acronym)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.acronym_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/acronym ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>78</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.verb</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.verb)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.verb_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/verb ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>20</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>styleguide</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>19</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>18</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>generate.ids</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>17</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>id.options</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>16</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>15</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(table)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>14</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(list)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>13</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(link)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>12</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(style)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>11</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(insert)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>10</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(paste.special)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>9</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>8</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>insert_reusable_component</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>7</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>create_reusable_component</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>6</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>5</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>remove_content_reference</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>4</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>conref.replace</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>3</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>add_edit_content_reference</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>push.element</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>reuse.content</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<menu>
+												<field name="label">
+													<String>${i18n(doctales.terminology)}</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String>${framework}/icons/termentry-icon16.png</String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array/>
+												</field>
+											</menu>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
@@ -424,7 +1275,7 @@
 										<field name="value">
 											<menu>
 												<field name="label">
-													<String>Terminology</String>
+													<String>${i18n(doctales.terminology)}</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -436,12 +1287,47 @@
 													<menuEntry-array>
 														<menuItem>
 															<field name="actionID">
+																<String>doctales.add.fullForm</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>doctales.add.abbreviation</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>doctales.add.acronym</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>doctales.add.verb</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
 																<String>doctales.add.termVariant</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.delete.element</String>
+																<String>doctales.delete.fullForm</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>doctales.delete.abbreviation</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>doctales.delete.acronym</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>doctales.delete.verb</String>
 															</field>
 														</menuItem>
 														<menuItem>
@@ -460,6 +1346,23 @@
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/toolbarDescriptor/id</String>
+										</field>
+										<field name="index">
+											<Integer>-1</Integer>
+										</field>
+										<field name="value">
+											<String>${i18n(doctales.terminology)}</String>
+										</field>
+										<field name="patchHandling">
+											<String>set</String>
 										</field>
 										<field name="anchor">
 											<null/>

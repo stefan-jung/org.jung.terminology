@@ -4,6 +4,14 @@
         <language description="English" lang="en_US"/>
         <language description="German" lang="de_DE"/>
     </languageList>
+    
+    <!-- Menu entry -->
+    <key type="action" value="doctales.terminology">
+        <comment>doctales.terminology</comment>
+        <val lang="en_US">DOCTALES Terminology</val>
+        <val lang="de_DE">DOCTALES Terminologie</val>
+    </key>
+    
     <key type="action" value="doctales.move.element.up">
         <comment>Move the current element up.</comment>
         <val lang="en_US">Move element up.</val>
@@ -29,6 +37,26 @@
         <val lang="en_US">Delete the current element.</val>
         <val lang="de_DE">Lösche das aktuelle Element.</val>
     </key>
+    <key type="action" value="doctales.delete.fullForm">
+        <comment>Delete the current fullForm element.</comment>
+        <val lang="en_US">Delete full form (&lt;fullForm&gt;)</val>
+        <val lang="de_DE">Langform (&lt;fullForm&gt;) löschen</val>
+    </key>
+    <key type="action" value="doctales.delete.abbreviation">
+        <comment>Delete the current abbreviation element.</comment>
+        <val lang="en_US">Delete abbreviation (&lt;abbreviation&gt;)</val>
+        <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) löschen</val>
+    </key>
+    <key type="action" value="doctales.delete.acronym">
+        <comment>Delete the current acronym element.</comment>
+        <val lang="en_US">Delete acronym (&lt;acronym&gt;)</val>
+        <val lang="de_DE">Akronym (&lt;acronym&gt;) löschen</val>
+    </key>
+    <key type="action" value="doctales.delete.verb">
+        <comment>Delete the current verb element.</comment>
+        <val lang="en_US">Delete verb (&lt;verb&gt;)</val>
+        <val lang="de_DE">Verb (&lt;verb&gt;) löschen</val>
+    </key>
     <key value="doctales.delete.element_description">
         <comment>Delete the element at the cursor position.</comment>
         <val lang="en_US">Delete the element at the cursor position.</val>
@@ -39,6 +67,11 @@
         <val lang="en_US">Add a new termVariant element.</val>
         <val lang="de_DE">Neues termVariant Element einfügen.</val>
     </key>
+    <key type="action" value="doctales.terminology.termVariant.placeholder">
+        <comment>Enter new term</comment>
+        <val lang="en_US">Enter new term</val>
+        <val lang="de_DE">Neuen Term eingeben</val>
+    </key>
     <key value="doctales.add.termVariant_description">
         <comment>A termVariant element contains a term in a specific case and number.</comment>
         <val lang="en_US">A termVariant element contains a term in a specific case and number.</val>
@@ -46,8 +79,23 @@
     </key>
     <key type="action" value="doctales.add.fullForm">
         <comment>Add a new fullForm element.</comment>
-        <val lang="en_US">Add a new fullForm element.</val>
-        <val lang="de_DE">Neues fullForm Element einfügen.</val>
+        <val lang="en_US">Add full form (&lt;fullForm&gt;)</val>
+        <val lang="de_DE">Langform (&lt;fullForm&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.abbreviation">
+        <comment>Add a new abbreviation element.</comment>
+        <val lang="en_US">Add abbreviation (&lt;abbreviation&gt;)</val>
+        <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.acronym">
+        <comment>Add a new acronym element.</comment>
+        <val lang="en_US">Add acronym (&lt;acronym&gt;)</val>
+        <val lang="de_DE">Akronym (&lt;acronym&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.verb">
+        <comment>Add a new verb element.</comment>
+        <val lang="en_US">Add verb (&lt;verb&gt;)</val>
+        <val lang="de_DE">Verb (&lt;verb&gt;) einfügen</val>
     </key>
     <key value="doctales.add.fullForm_description">
         <comment>A fullForm element contains the full notation of a term.</comment>
