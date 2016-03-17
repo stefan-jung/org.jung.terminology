@@ -57,6 +57,26 @@
         <val lang="en_US">Delete verb (&lt;verb&gt;)</val>
         <val lang="de_DE">Verb (&lt;verb&gt;) löschen</val>
     </key>
+    <key type="action" value="doctales.add.attribute.number">
+        <comment>Add attribute number</comment>
+        <val lang="en_US">Add number (@number)</val>
+        <val lang="de_DE">Numerus (@number) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.attribute.number_description">
+        <comment>Add a new attribute "number" to the current "termNotation" element.</comment>
+        <val lang="en_US">Add number (@number)</val>
+        <val lang="de_DE">Numerus (@number) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.attribute.case">
+        <comment>Add attribute case</comment>
+        <val lang="en_US">Add case (@case)</val>
+        <val lang="de_DE">Kasus (@case) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.attribute.case_description">
+        <comment>Add a new attribute "case" to the current "termNotation" element.</comment>
+        <val lang="en_US">Add case (@case)</val>
+        <val lang="de_DE">Kasus (@case) einfügen</val>
+    </key>
     <key value="doctales.delete.element_description">
         <comment>Delete the element at the cursor position.</comment>
         <val lang="en_US">Delete the element at the cursor position.</val>
@@ -158,6 +178,11 @@
         <comment>Source of Definition</comment>
         <val lang="en_US">Source of Definition</val>
         <val lang="de_DE">Quelle der Definition</val>
+    </key>
+    <key value="doctales.terminology.css.termSource">
+        <comment>Source of Term</comment>
+        <val lang="en_US">Source of Term</val>
+        <val lang="de_DE">Quelle des Terms</val>
     </key>
     <key value="doctales.terminology.css.sourceReference">
         <comment>Reference to Source</comment>

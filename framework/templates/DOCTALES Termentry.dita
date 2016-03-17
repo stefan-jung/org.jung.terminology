@@ -3,17 +3,14 @@
 <termentry id="ui_${id}">
  <title>Term</title>
  <definition>
-  <definitionText>Definition of a term</definitionText>
+  <definitionText></definitionText>
   <definitionSource>
     <sourceReference href="https://en.wikipedia.org" format="html"/>
   </definitionSource>
  </definition>
  <termBody>
-  <fullForm usage="deprecated" language="de">
-   <termVariant>Deprecated full form</termVariant>
-  </fullForm>
-  <fullForm usage="allowed" language="de">
-   <termVariant>Allowed full form</termVariant>
+  <fullForm usage="allowed" language="en">
+   <termVariant></termVariant>
   </fullForm>
  </termBody>
 </termentry>

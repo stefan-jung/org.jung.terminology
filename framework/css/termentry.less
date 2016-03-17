@@ -140,6 +140,15 @@
     .mainBlock();
 }
 
+*[class~="termentry/termSource"]:before(10) {
+    .beforeBlock();
+    content: "\A ${i18n(doctales.terminology.css.termSource)}";
+}
+
+*[class~="termentry/termSource"] {
+    .mainBlock();
+}
+
 *[class~="termentry/sourceReference"]:before {
     content: "${i18n(doctales.terminology.css.sourceReference)}:" !important;
     link: none;
@@ -152,8 +161,7 @@
 }
 
 *[class~="termentry/sourceName"]:before(10) {
-    .beforeBlock();
-    content: "${i18n(doctales.terminology.css.sourceName)}:";
+    content: "${i18n(doctales.terminology.css.sourceName)}: ";
 }
 
 *[class~="termentry/domains"]:before(10) {
@@ -334,6 +342,11 @@
     content: "";
 }*/
 
+*[class~="termentry/definitionText"]{
+    -oxy-placeholder-content: "Definition";
+    -oxy-show-placeholder: always;
+}
+
 *[class~="termentry/termVariant"]{
     display: inline-block;
     -oxy-placeholder-content: "Term";
@@ -341,12 +354,12 @@
     .mainBlock();
 }
 
-*[class~="termentry/termVariant"]:after(2) {
+*[class~="termentry/termVariant"][case]:after(2) {
     content: "\A ${i18n(doctales.terminology.css.case)}: ";
     width: 10em;
 }
 
-*[class~="termentry/termVariant"]:after(3) {
+*[class~="termentry/termVariant"][case]:after(3) {
     content:
     oxy_combobox( 
         edit, '@case',
@@ -360,13 +373,13 @@
     width: 10em;
 }
 
-*[class~="termentry/termVariant"]:after(5) {
+*[class~="termentry/termVariant"][number]:after(5) {
     content: "\A ${i18n(doctales.terminology.css.number)}: ";
     display: inline-block;
     width: 10em;
 }
 
-*[class~="termentry/termVariant"]:after(6) {
+*[class~="termentry/termVariant"][number]:after(6) {
     content: 
     oxy_combobox( 
         edit, '@number',
