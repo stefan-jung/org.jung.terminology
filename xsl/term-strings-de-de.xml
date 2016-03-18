@@ -24,6 +24,8 @@
     <str name="Term Committee Member">Terminologe</str>
     <str name="Related hypernyms">Oberbegriffe</str>
     <str name="Related hyponyms">Unterbegriffe</str>
+    <str name="Usage Allowed">erlaubt</str>
+    <str name="Usage Deprecated">verboten</str>
     <str name="Verb">Verb</str>
     
     <!-- Term Table -->

@@ -48,10 +48,12 @@
        
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')]">
         <xsl:element name="tr">
+            <!-- Term -->
             <xsl:element name="td">
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]"/>
             </xsl:element>
+            <!-- Type -->
             <xsl:element name="td">
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:choose>
@@ -77,14 +79,28 @@
                     </xsl:when>
                 </xsl:choose>
             </xsl:element>
+            <!-- Language -->
             <xsl:element name="td">
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:value-of select="@language"/>
             </xsl:element>
+            <!-- Usage -->
             <xsl:element name="td">
                 <xsl:attribute name="class">termTable</xsl:attribute>
-                <xsl:value-of select="@usage"/>
+                <xsl:choose>
+                    <xsl:when test="contains(@usage, 'allowed')">
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Usage Allowed'"/>
+                        </xsl:call-template>
+                    </xsl:when>
+                    <xsl:when test="contains(@usage, 'deprecated')">
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Usage Deprecated'"/>
+                        </xsl:call-template>
+                    </xsl:when>
+                </xsl:choose>
             </xsl:element>
+            <!-- Source -->
             <xsl:element name="td">
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:apply-templates select="*[contains(@class, ' termentry/termSource ')]"/>

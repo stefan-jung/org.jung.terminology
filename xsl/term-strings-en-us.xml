@@ -24,6 +24,8 @@
     <str name="Term Committee Member">Term Committee Member</str>
     <str name="Related hypernyms">Related Superordinate Concepts</str>
     <str name="Related hyponyms">Related Subordinate Concepts</str>
+    <str name="Usage Allowed">allowed</str>
+    <str name="Usage Deprecated">deprecated</str>
     <str name="Verb">Verb</str>
     
     <!-- Term Table -->
