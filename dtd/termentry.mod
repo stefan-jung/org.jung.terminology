@@ -216,11 +216,17 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                     ">
 
 <!--                                 Word types                                       -->
-<!ENTITY % wordTypeSelection-atts   "wordType
+<!ENTITY % partOfSpeech-atts        "value
                                         (noun |
+                                         pronoun |
+                                         adjective |
                                          verb |
-                                         adjective)
-                                           #IMPLIED   
+                                         adverb |
+                                         preposition |
+                                         conjunction |
+                                         interjection |
+                                         article)
+                                           'noun'
                                     ">
 
 <!-- ================================================================================ -->
@@ -336,17 +342,7 @@ Category: Termentry elements-->
 <!--                                 LONG NAME: Part of Speech                        -->
 <!ENTITY % partOfSpeech.content     "EMPTY">
 <!ENTITY % partOfSpeech.attributes  "%univ-atts;
-                                     value
-                                        (noun |
-                                         pronoun |
-                                         adjective |
-                                         verb |
-                                         adverb |
-                                         preposition |
-                                         conjunction |
-                                         interjection |
-                                         article)
-                                           'noun'
+                                     %partOfSpeech-atts;
                                      outputclass
                                         CDATA
                                            #IMPLIED">
@@ -504,8 +500,7 @@ Category: Termentry elements-->
                                       ((%termVariant;)+))">
 <!ENTITY % genericTerm.attributes   "%term-atts;
                                      %languageSelection-atts;
-                                     %genderSelection-atts;
-                                     %wordTypeSelection-atts;">
+                                     %genderSelection-atts;">
 
 <!--                                 LONG NAME: Full Form                             -->
 <!--doc:The <fullForm> element contains the full written form of a term.
