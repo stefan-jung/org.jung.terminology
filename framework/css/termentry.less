@@ -11,31 +11,10 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url('../icons/fontello/font/fontello.ttf?24192630') format('truetype');
+  src: url('../icons/fontello/font/term.ttf?64916464') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
-/**, *:before, *:after {
-    background-color: red;
-    display: none;
-    content: "" !important;
-}*/
-
-/*    oxy_button(
-        action, oxy_action(
-            name, '\e800',
-            description, 'Move up',
-            operation, 'ro.sync.ecss.extensions.commons.operations.MoveElementOperation',
-            arg-targetLocation, 'preceding-sibling::*[1]',
-            arg-insertPosition, 'Before'
-        ),
-        transparent, true,
-        actionContext, element,
-        showIcon, false,
-        fontInherit, true
-    )
-*/
 
 *[class~="topic/related-links"]:before {
     display: none;
@@ -87,40 +66,13 @@
     content: "" !important;
 }
 
-// Elements
-/**[class~="termentry/termBody"]:before(10) {
-    .beforeBlock();
-    content: oxy_buttonGroup(
-    label, '${i18n(doctales.terminology.css.add.term)}', 
-    actions, 
-      oxy_action_list(
-          oxy_action(
-                name, '${i18n(doctales.terminology.css.fullForm)}', 
-                description, '${i18n(doctales.terminology.css.fullForm_description)}', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<fullForm usage="allowed" language="en"><termVariant>...</termVariant></fullForm>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'Inside'
-          ),
-          oxy_action(
-                name, '${i18n(doctales.terminology.css.acronym)}', 
-                description, '${i18n(doctales.terminology.css.acronym_description)}', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<acronym usage="allowed" language="en"><termVariant>...</termVariant></acronym>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'Inside'
-          ),
-          oxy_action(
-                name, '${i18n(doctales.terminology.css.abbreviation)}', 
-                description, '${i18n(doctales.terminology.css.abbreviation_description)}', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<abbreviation usage="allowed" language="en"><termVariant>...</termVariant></abbreviation>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'Inside'
-          )
-      )
-  );
-}*/
+.fontello {
+    font-family: "fontello" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 0.8em !important;
+}
 
 *[class~="termentry/definition"]:before(10) {
     .beforeBlock();
@@ -162,6 +114,27 @@
 
 *[class~="termentry/sourceName"]:before(10) {
     content: "${i18n(doctales.terminology.css.sourceName)}: ";
+}
+
+*[class~="termentry/partOfSpeech"]:before(10) {
+    content: "${i18n(doctales.terminology.css.partOfSpeech)}: ";
+}
+
+*[class~="termentry/partOfSpeech"]:before(7) {
+    content:
+    oxy_combobox( 
+        edit, '@value',
+        editable, false,
+        columns, 15,
+        values, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article',
+        labels, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article'
+    );
+    .uiElement();
+    padding-left: 0.5em;
+}
+
+*[class~="termentry/partOfSpeech"]:before {
+    .hideContent();
 }
 
 *[class~="termentry/domains"]:before(10) {
@@ -213,15 +186,71 @@
 }
 
 *[class~="termentry/fullForm"]:before(10) {
-    content: "${i18n(doctales.terminology.css.fullForm)}";
+    content: "${i18n(doctales.terminology.css.fullForm)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.abbreviation'),
+            oxy_action(id, 'doctales.add.acronym'),
+            oxy_action(id, 'doctales.add.fullForm'),
+            oxy_action(id, 'doctales.add.verb'),
+            oxy_action(id, 'doctales.delete.fullForm')
+        )
+    );
 }
 
 *[class~="termentry/abbreviation"]:before(10) {
-    content: "${i18n(doctales.terminology.css.abbreviation)}";
+    content: "${i18n(doctales.terminology.css.abbreviation)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.abbreviation'),
+            oxy_action(id, 'doctales.add.acronym'),
+            oxy_action(id, 'doctales.add.fullForm'),
+            oxy_action(id, 'doctales.add.verb'),
+            oxy_action(id, 'doctales.delete.abbreviation')
+        )
+    );
 }
 
 *[class~="termentry/acronym"]:before(10) {
-    content: "${i18n(doctales.terminology.css.acronym)}";
+    content: "${i18n(doctales.terminology.css.acronym)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.abbreviation'),
+            oxy_action(id, 'doctales.add.acronym'),
+            oxy_action(id, 'doctales.add.fullForm'),
+            oxy_action(id, 'doctales.add.verb'),
+            oxy_action(id, 'doctales.delete.acronym')
+        )
+    );
+}
+
+*[class~="termentry/verb"]:before(10) {
+    content: "${i18n(doctales.terminology.css.verb)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.abbreviation'),
+            oxy_action(id, 'doctales.add.acronym'),
+            oxy_action(id, 'doctales.add.fullForm'),
+            oxy_action(id, 'doctales.add.verb'),
+            oxy_action(id, 'doctales.delete.verb')
+        )
+    );
 }
 
 *[class~="termentry/termNotation"]:before(8) {
@@ -269,78 +298,23 @@
 }
 
 *[class~="termentry/termVariant"]:before(10) {
-    content: "Term";
+    content: "Term "
+        oxy_buttonGroup(
+            label, '',
+            icon, url('../icons/pencil-icon.png'),
+            transparent, 'true',
+            actions, 
+            oxy_action_list(
+                oxy_action(id, 'doctales.add.attribute.number'),
+                oxy_action(id, 'doctales.add.attribute.case')
+            )
+        );
     .beforeBlock();
 }
 
 *[class~="termentry/termVariant"]:before(9) {
     content: "Term: ";
-    width: 10em;
 }
-
-/*/\**[class~="termentry/termVariant"]:before(8) {
-    content: 
-    oxy_textfield(
-        edit, '#text',
-        columns, 40
-    );
-    .uiElement();
-}
-*\/
-*[class~="termentry/termVariant"]:before(7) {
-    content:
-    oxy_button(actionID, 'doctales.move.element.up', showIcon, true)
-    oxy_button(actionID, 'doctales.move.element.down', showIcon, true)
-    oxy_buttonGroup(
-        label, '', 
-        icon, url('../icons/add-icon.png'),
-        tooltip, 'These actions do this and that..',    
-        actions, oxy_action_list(
-            oxy_action(
-                name, 'Term Variant', 
-                description, 'Insert a term variant element', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<termVariant></termVariant>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'After'
-            ),
-            oxy_action(
-                name, 'Context', 
-                description, 'Insert a context element', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<contextOfTerm><contextContent></contextContent></contextOfTerm>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'After'
-            ),
-            oxy_action(
-                name, 'Source of Term', 
-                description, 'Insert a source of term element', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<sourceOfTerm></sourceOfTerm>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'After'
-            ),
-            oxy_action(
-                name, 'Annotation', 
-                description, 'Insert an annotation element', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-                arg-fragment, '<annotation></annotation>',
-                arg-insertLocation, '.',
-                arg-insertPosition, 'After'
-            )
-        )
-    )
-    oxy_button(actionID, 'doctales.delete.element', showIcon, true);
-    display: block;
-    color: black !important;
-    margin-top: -1.5em;
-    text-align:right;
-    margin-left: 300px;
-}
-
-*[class~="termentry/termVariant"]:before(1) {
-    content: "";
-}*/
 
 *[class~="termentry/definitionText"]{
     -oxy-placeholder-content: "Definition";
@@ -469,11 +443,7 @@
 *[class~="termentry/termentry"]:after(10) {
     content: '\e809';
     link: 'https://doctales.github.io';
-    font-family: "fontello" !important;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-size: 0.8em !important;
+    .fontello();
     padding-left: 0.1em;
     padding-right: 0.1em;
 }
@@ -481,11 +451,7 @@
 *[class~="termentry/termentry"]:after(11) {
     content: '\e807';
     link : 'https://github.com/doctales';
-    font-family: "fontello" !important;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-size: 0.8em !important;
+    .fontello();
     padding-left: 0.1em;
     padding-right: 0.1em;
 }
