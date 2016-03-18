@@ -124,6 +124,16 @@
     </key>
     
     <!-- CSS Labels -->
+    <key value="doctales.terminology.css.termVariant">
+        <comment>termVariant</comment>
+        <val lang="en_US">Term</val>
+        <val lang="de_DE">Term</val>
+    </key>
+    <key value="doctales.terminology.css.partOfSpeech">
+        <comment>partOfSpeech</comment>
+        <val lang="en_US">Part of Speech</val>
+        <val lang="de_DE">Wortklasse</val>
+    </key>
     <key value="doctales.terminology.css.case">
         <comment>Case</comment>
         <val lang="en_US">Case</val>
