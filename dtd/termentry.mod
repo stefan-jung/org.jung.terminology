@@ -60,7 +60,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                      outputclass   CDATA   #IMPLIED
                                      usage
                                         (allowed | deprecated)
-                                           #REQUIRED
+                                           'allowed'
                                      domain
                                         CDATA
                                            #IMPLIED   
@@ -188,7 +188,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          zh-sg | 
                                          zh-tw | 
                                          zu)
-                                           #REQUIRED   
+                                           'en-us'
                                     ">
 
 <!--                                 Gender of term                                   -->
@@ -196,7 +196,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                         (neuter |
                                          masculine |
                                          feminine)
-                                           #IMPLIED   
+                                           'masculine'
                                     ">
                                     
 <!--                                 Case of term                                     -->
@@ -205,14 +205,14 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          accusative |
                                          dative |
                                          genitive)
-                                           #IMPLIED   
+                                           'nominative'
                                     ">
                                     
 <!--                                 Number of term                                   -->
 <!ENTITY % numberSelection-atts     "number
                                         (singular |
                                          plural)
-                                           #IMPLIED   
+                                           'singular'
                                     ">
 
 <!--                                 Word types                                       -->
