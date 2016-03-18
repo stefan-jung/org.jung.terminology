@@ -8,25 +8,36 @@
         <!-- Does the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
             <xsl:element name="table">
+                <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:element name="tr">
                     <xsl:element name="th">
+                        <xsl:attribute name="class">termTable</xsl:attribute>
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term'"/>
                         </xsl:call-template>
                     </xsl:element>
                     <xsl:element name="th">
+                        <xsl:attribute name="class">termTable</xsl:attribute>
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Type'"/>
                         </xsl:call-template>
                     </xsl:element>
                     <xsl:element name="th">
+                        <xsl:attribute name="class">termTable</xsl:attribute>
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Language'"/>
                         </xsl:call-template>
                     </xsl:element>
                     <xsl:element name="th">
+                        <xsl:attribute name="class">termTable</xsl:attribute>
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Usage'"/>
+                        </xsl:call-template>
+                    </xsl:element>
+                    <xsl:element name="th">
+                        <xsl:attribute name="class">termTable</xsl:attribute>
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Term Source'"/>
                         </xsl:call-template>
                     </xsl:element>
                 </xsl:element>
@@ -38,9 +49,11 @@
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')]">
         <xsl:element name="tr">
             <xsl:element name="td">
-                <xsl:apply-templates/>
+                <xsl:attribute name="class">termTable</xsl:attribute>
+                <xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]"/>
             </xsl:element>
             <xsl:element name="td">
+                <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:choose>
                     <xsl:when test="contains(@class, ' termentry/fullForm ')">
                         <xsl:call-template name="getVariable">
@@ -57,15 +70,30 @@
                             <xsl:with-param name="id" select="'Acronym'"/>
                         </xsl:call-template>
                     </xsl:when>
+                    <xsl:when test="contains(@class, ' termentry/verb ')">
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Verb'"/>
+                        </xsl:call-template>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:element>
             <xsl:element name="td">
+                <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:value-of select="@language"/>
             </xsl:element>
             <xsl:element name="td">
+                <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:value-of select="@usage"/>
             </xsl:element>
+            <xsl:element name="td">
+                <xsl:attribute name="class">termTable</xsl:attribute>
+                <xsl:apply-templates select="*[contains(@class, ' termentry/termSource ')]"/>
+            </xsl:element>
         </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/sourceName ')]">
+        <xsl:value-of select="."/>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/agreedWith ')]">
