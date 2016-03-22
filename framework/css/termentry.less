@@ -58,6 +58,7 @@
 
 .uiElementLabel {
     width: 10em;
+    padding-top: 0.1em;
     font-weight: normal;
     color: black !important;
 }
@@ -158,7 +159,6 @@
     ) !important;
     float: right;
     display: inline-block;
-    background-color: green;
 }
 
 *[class~="termentry/domain"] {
@@ -293,6 +293,11 @@
     padding-left: 0.5em;
 }
 
+*[class~="termentry/definitionText"] {
+    -oxy-placeholder-content: "Definition";
+    -oxy-show-placeholder: always;
+}
+
 *[class~="termentry/termNotation"] {
     .mainBlock();
 }
@@ -305,31 +310,32 @@
             transparent, 'true',
             actions, 
             oxy_action_list(
-                oxy_action(id, 'doctales.add.attribute.number'),
-                oxy_action(id, 'doctales.add.attribute.case')
+                oxy_action(id, 'doctales.add.termVariant'),
+                oxy_action(id, 'doctales.delete.termVariant')
             )
         );
     .beforeBlock();
 }
 
 *[class~="termentry/termVariant"]:before(9) {
-    content: "Term: ";
+    content: "Term:";
 }
 
-*[class~="termentry/definitionText"]{
-    -oxy-placeholder-content: "Definition";
-    -oxy-show-placeholder: always;
+*[class~="termentry/termVariant"]:before(8) {
+    content: oxy_textfield(
+        edit, '#text',
+        columns, 50
+    );
+    .uiElement();
+    width: 30em;
 }
 
-*[class~="termentry/termVariant"]{
-    display: inline-block;
-    -oxy-placeholder-content: "Term";
-    -oxy-show-placeholder: always;
-    .mainBlock();
+*[class~="termentry/termVariant"] {
+    visibility: -oxy-collapse-text;
 }
 
 *[class~="termentry/termVariant"][case]:after(2) {
-    content: "\A ${i18n(doctales.terminology.css.case)}: ";
+    content: "${i18n(doctales.terminology.css.case)}: ";
     width: 10em;
 }
 
