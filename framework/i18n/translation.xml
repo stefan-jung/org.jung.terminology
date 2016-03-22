@@ -43,6 +43,11 @@
         <val lang="en_US">Add full form (&lt;fullForm&gt;)</val>
         <val lang="de_DE">Langform (&lt;fullForm&gt;) einfügen</val>
     </key>
+    <key value="doctales.add.fullForm_description">
+        <comment>A fullForm element contains the full notation of a term.</comment>
+        <val lang="en_US">A fullForm element contains the full notation of a term.</val>
+        <val lang="de_DE">Ein fullForm Element enthält die vollständige Schreibweise eines Terms.</val>
+    </key>
     <key value="doctales.delete.fullForm">
         <comment>Delete the current fullForm element.</comment>
         <val lang="en_US">Delete full form (&lt;fullForm&gt;)</val>
@@ -107,6 +112,39 @@
         <val lang="en_US">Delete term variant (&lt;termVariant&gt;)</val>
         <val lang="de_DE">Term (&lt;termVariant&gt;) löschen</val>
     </key>
+    <!-- termContext -->
+    <key type="action" value="doctales.add.termContext">
+        <comment>Add a new termContext element.</comment>
+        <val lang="en_US">Add context (&lt;termContext&gt;)</val>
+        <val lang="de_DE">Kontext (&lt;termContext&gt;) einfügen</val>
+    </key>
+    <key value="doctales.add.termContext_description">
+        <comment>A termContext contains a context example of the term.</comment>
+        <val lang="en_US">A termContext element contains a context example of the term.</val>
+        <val lang="de_DE">Ein termContext Element enthält ein Kontextbeispiels eines Terms.</val>
+    </key>
+    <!-- termSource -->
+    <key type="action" value="doctales.add.termSource">
+        <comment>Add a new termSource element.</comment>
+        <val lang="en_US">Add term source (&lt;termSource&gt;)</val>
+        <val lang="de_DE">Termquelle (&lt;termSource&gt;) einfügen</val>
+    </key>
+    <key value="doctales.add.termSource_description">
+        <comment>A termSource contains the source of the term.</comment>
+        <val lang="en_US">A termSource element contains the source of the term.</val>
+        <val lang="de_DE">Ein termSource Element enthält die Quellenangabe eines Terms.</val>
+    </key>
+    <!-- annotation -->
+    <key type="action" value="doctales.add.annotation">
+        <comment>Add a new annotation element.</comment>
+        <val lang="en_US">Add annotation (&lt;annotation&gt;)</val>
+        <val lang="de_DE">Bemerkung (&lt;annotation&gt;) einfügen</val>
+    </key>
+    <key value="doctales.add.annotation_description">
+        <comment>An annotation contains annotations to the term.</comment>
+        <val lang="en_US">An annotation element contains annotations to the term.</val>
+        <val lang="de_DE">Ein annotation Element enthält Anmerkungen zu einem Term.</val>
+    </key>
     <!-- @number -->
     <key value="doctales.add.attribute.number">
         <comment>Add attribute number</comment>
@@ -134,11 +172,8 @@
         <val lang="en_US">Delete the element at the cursor position.</val>
         <val lang="de_DE">Lösche das Element an der Cursor-Position.</val>
     </key>
-    <key value="doctales.add.fullForm_description">
-        <comment>A fullForm element contains the full notation of a term.</comment>
-        <val lang="en_US">A fullForm element contains the full notation of a term.</val>
-        <val lang="de_DE">Ein fullForm Element enthält die vollständige Schreibweise eines Terms.</val>
-    </key>
+    
+    
     
     <!-- CSS Labels -->
     <key value="doctales.terminology.css.termVariant">
