@@ -23,6 +23,8 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % agreedWith            "agreedWith"                                           >
 <!ENTITY % annotation            "annotation"                                           >
 <!ENTITY % antonym               "antonym"                                              >
+<!ENTITY % antonyms              "antonyms"                                             >
+<!ENTITY % arePartOf             "arePartOf"                                            >
 <!ENTITY % definition            "definition"                                           >
 <!ENTITY % definitionText        "definitionText"                                       >
 <!ENTITY % definitionSource      "definitionSource"                                     >
@@ -30,9 +32,12 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % domain                "domain"                                               >
 <!ENTITY % fullForm              "fullForm"                                             >
 <!ENTITY % hypernym              "hypernym"                                             >
+<!ENTITY % hypernyms             "hypernyms"                                            >
 <!ENTITY % hyponym               "hyponym"                                              >
+<!ENTITY % hyponyms              "hyponyms"                                             >
 <!ENTITY % isPartOf              "isPartOf"                                             >
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
+<!ENTITY % related-terms         "related-terms"                                        >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
 <!ENTITY % relatedTerms          "relatedTerms"                                         >
 <!ENTITY % sourceName            "sourceName"                                           >
@@ -250,8 +255,8 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                       (%agreedWith;)?,
                                       (%annotation;)*,
                                       (%termBody;)?,
-                                      (%relatedTerms;)?,
-                                      (%termentry-info-types;)?)
+                                      (%related-terms;)?,
+                                      (%termentry-info-types;)*)
                                     ">
 <!ENTITY % termentry.attributes     "%id-atts;
                                      %localization-atts;
@@ -384,17 +389,126 @@ Category: Termentry elements-->
 <!ELEMENT termBody    %termBody.content;>
 <!ATTLIST termBody    %termBody.attributes;>
 
+<!--                                 LONG NAME: Related Terms Container               -->
+<!ENTITY % related-terms.content    "(((%antonyms;) |
+                                       (%hypernyms;) |
+                                       (%hyponyms;) |
+                                       (%arePartOf;) |
+                                       (%relatedTerms;))*)">
+<!--doc:The <related-terms> element contains groups of term relations.
+Category: Termentry elements-->
+<!ELEMENT  related-terms %related-terms.content;>
+<!ATTLIST  related-terms %related-links.attributes;>
+
+<!--                                 Generic attributes for related terms groups      -->
+<!ENTITY % termLinkGroup-atts       "collection-type
+                                       (choice |
+                                        family |
+                                        sequence |
+                                        unordered |
+                                        -dita-use-conref-target |
+                                        tree)
+                                           #IMPLIED
+                                     duplicates
+                                       (no |
+                                        yes |
+                                        -dita-use-conref-target)
+                                           #IMPLIED
+                                     mapkeyref
+                                        CDATA
+                                           #IMPLIED
+                                     cascade
+                                        CDATA
+                                           #IMPLIED
+                                     format
+                                        CDATA
+                                           #IMPLIED
+                                     scope
+                                       (external |
+                                        local |
+                                        peer |
+                                        -dita-use-conref-target)
+                                           #IMPLIED
+                                     role
+                                       (ancestor |
+                                        child |
+                                        cousin |
+                                        descendant |
+                                        external |
+                                        friend |
+                                        next |
+                                        other |
+                                        parent |
+                                        previous |
+                                        sample |
+                                        sibling |
+                                        -dita-use-conref-target)
+                                           #IMPLIED
+                                     otherrole
+                                        CDATA
+                                           #IMPLIED
+                                     %univ-atts;
+                                     spectitle
+                                        CDATA
+                                           #IMPLIED
+                                     outputclass
+                                        CDATA
+                                           #IMPLIED">
+
+<!--                                 LONG NAME: Antonyms                              -->
+<!ENTITY % antonyms.content         "((%antonym;)+)">
+<!ENTITY % antonyms.attributes      "%termLinkGroup-atts;
+                                     type
+                                        CDATA
+                                           'antonyms'">
+<!--doc:The <antonyms> element contains references to antonyms.
+Category: Termentry elements-->
+<!ELEMENT  antonyms %antonyms.content;>
+<!ATTLIST  antonyms %antonyms.attributes;>
+
+<!--                                 LONG NAME: Hypernyms                             -->
+<!ENTITY % hypernyms.content        "((%hypernym;)+)">
+<!ENTITY % hypernyms.attributes     "%termLinkGroup-atts;
+                                     type
+                                        CDATA
+                                           'hypernyms'">
+<!--doc:The <hypernyms> element contains references to hypernyms.
+Category: Termentry elements-->
+<!ELEMENT  hypernyms %hypernyms.content;>
+<!ATTLIST  hypernyms %hypernyms.attributes;>
+
+<!--                                 LONG NAME: Hyponyms                              -->
+<!ENTITY % hyponyms.content         "((%hyponym;)+)">
+<!ENTITY % hyponyms.attributes      "%termLinkGroup-atts;
+                                     type
+                                        CDATA
+                                           'hyponyms'">
+<!--doc:The <hyponyms> element contains references to hyponyms.
+Category: Termentry elements-->
+<!ELEMENT  hyponyms %hyponyms.content;>
+<!ATTLIST  hyponyms %hyponyms.attributes;>
+
+<!--                                 LONG NAME: Are Part Of                           -->
+<!ENTITY % arePartOf.content        "((%isPartOf;)+)">
+<!ENTITY % arePartOf.attributes     "%termLinkGroup-atts;
+                                     type
+                                        CDATA
+                                           'arePartOf'">
+<!--doc:The <arePartOf> element contains references to isPartOf elements.
+Category: Termentry elements-->
+<!ELEMENT  arePartOf %arePartOf.content;>
+<!ATTLIST  arePartOf %arePartOf.attributes;>
+
 <!--                                 LONG NAME: Related Terms                         -->
-<!ENTITY % relatedTerms.content     "(((%antonym;) |
-                                       (%hypernym;) |
-                                       (%hyponym;) |
-                                       (%isPartOf;) |
-                                       (%link;) |
-                                       (%relatedTerm;))*)">
-<!--doc:The <relatedTerms> element contains references to related terms.
+<!ENTITY % relatedTerms.content     "((%relatedTerm;)+)">
+<!ENTITY % relatedTerms.attributes  "%termLinkGroup-atts;
+                                     type
+                                        CDATA
+                                           'relatedTerms'">
+<!--doc:The <relatedTerms> element contains references to relatedTerm elements.
 Category: Termentry elements-->
 <!ELEMENT  relatedTerms %relatedTerms.content;>
-<!ATTLIST  relatedTerms %related-links.attributes;>
+<!ATTLIST  relatedTerms %relatedTerms.attributes;>
 
 <!--                                 LONG NAME: Definition Source                     -->
 <!ENTITY % definitionSource.content "(((%sourceName;)?),
@@ -502,6 +616,54 @@ Category: Termentry elements-->
                                      %languageSelection-atts;
                                      %genderSelection-atts;">
 
+<!--                                 Generic link attributes for term relation links  -->
+<!ENTITY % termLink-atts            "href
+                                        CDATA
+                                           #IMPLIED
+                                     keyref
+                                        CDATA
+                                           #IMPLIED
+                                     type
+                                        CDATA
+                                           'termentry'
+                                     query
+                                        CDATA
+                                           #IMPLIED
+                                     cascade
+                                        CDATA
+                                           #IMPLIED
+                                     format
+                                        CDATA
+                                           #IMPLIED
+                                     scope
+                                       (external |
+                                        local |
+                                        peer |
+                                        -dita-use-conref-target)
+                                           #IMPLIED
+                                     role
+                                       (ancestor |
+                                        child |
+                                        cousin |
+                                        descendant |
+                                        external |
+                                        friend |
+                                        next |
+                                        other |
+                                        parent |
+                                        previous |
+                                        sample |
+                                        sibling |
+                                        -dita-use-conref-target)
+                                           #IMPLIED
+                                     otherrole
+                                        CDATA
+                                           #IMPLIED
+                                     %univ-atts;
+                                     outputclass
+                                        CDATA
+                                           #IMPLIED">
+
 <!--                                 LONG NAME: Full Form                             -->
 <!--doc:The <fullForm> element contains the full written form of a term.
 Category: Termentry elements-->
@@ -527,34 +689,39 @@ Category: Termentry elements-->
 <!ATTLIST verb            %genericTerm.attributes;>
 
 <!--                                 LONG NAME: Antonym                               -->
+<!ENTITY % antonym.attributes       "%termLink-atts;">
 <!--doc:The <antonym> element refers to the antonym of a term.
 Category: Termentry elements-->
-<!ELEMENT antonym         %xref.content;>
-<!ATTLIST antonym         %xref.attributes;>
+<!ELEMENT antonym         %link.content;>
+<!ATTLIST antonym         %antonym.attributes;>
 
 <!--                                 LONG NAME: Hypernym                              -->
+<!ENTITY % hypernym.attributes      "%termLink-atts;">
 <!--doc:The <hypernym> element refers to the hypernym of a term.
 Category: Termentry elements-->
-<!ELEMENT hypernym        %xref.content;>
-<!ATTLIST hypernym        %xref.attributes;>
+<!ELEMENT hypernym        %link.content;>
+<!ATTLIST hypernym        %hypernym.attributes;>
 
 <!--                                 LONG NAME: Hyponym                               -->
+<!ENTITY % hyponym.attributes       "%termLink-atts;">
 <!--doc:The <hyponym> element refers to the hyponym of a term.
 Category: Termentry elements-->
-<!ELEMENT hyponym         %xref.content;>
-<!ATTLIST hyponym         %xref.attributes;>
+<!ELEMENT hyponym         %link.content;>
+<!ATTLIST hyponym         %hyponym.attributes;>
 
 <!--                                 LONG NAME: Is Part Of                            -->
+<!ENTITY % isPartOf.attributes      "%termLink-atts;">
 <!--doc:The <isPartOf> element indicates, that the current term is part ot the referenced term.
 Category: Termentry elements-->
-<!ELEMENT isPartOf        %xref.content;>
-<!ATTLIST isPartOf        %xref.attributes;>
+<!ELEMENT isPartOf        %link.content;>
+<!ATTLIST isPartOf        %isPartOf.attributes;>
 
 <!--                                 LONG NAME: Related Term                          -->
+<!ENTITY % relatedTerm.attributes   "%termLink-atts;">
 <!--doc:The <relatedTerm> element refers to a related term.
 Category: Termentry elements-->
-<!ELEMENT relatedTerm     %xref.content;>
-<!ATTLIST relatedTerm     %xref.attributes;>
+<!ELEMENT relatedTerm     %link.content;>
+<!ATTLIST relatedTerm     %relatedTerm.attributes;>
 
 
 
@@ -567,6 +734,7 @@ Category: Termentry elements-->
 <!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termentry/agreedWith ">
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
+<!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/antonyms ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
 <!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termentry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
@@ -576,11 +744,15 @@ Category: Termentry elements-->
 <!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termentry/domain ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
 <!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hypernym ">
+<!ATTLIST hypernyms             %global-atts;   class CDATA "- topic/linklist termentry/hypernyms ">
 <!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hyponym ">
+<!ATTLIST hyponyms              %global-atts;   class CDATA "- topic/linklist termentry/hyponyms ">
 <!ATTLIST isPartOf              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/isPartOf ">
+<!ATTLIST arePartOf             %global-atts;   class CDATA "- topic/linklist termentry/arePartOf ">
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
-<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/related-links termentry/relatedTerms ">
+<!ATTLIST related-terms         %global-atts;   class CDATA "- topic/related-links termentry/related-terms ">
+<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/linklist termentry/relatedTerms ">
 <!ATTLIST termContext           %global-atts;   class CDATA "- topic/div termentry/termContext ">
 <!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/div termentry/termContextSource ">
 <!ATTLIST termContextText       %global-atts;   class CDATA "- topic/text termentry/termContextText ">

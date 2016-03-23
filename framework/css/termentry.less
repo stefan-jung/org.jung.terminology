@@ -373,6 +373,117 @@
     );
 }
 
+/* related-terms */
+*[class~="termentry/related-terms"]:before(10) {
+    .beforeBlock();
+    content: "${i18n(doctales.terminology.related-terms)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.antonyms'),
+            oxy_action(id, 'doctales.add.arePartOf'),
+            oxy_action(id, 'doctales.add.hypernyms'),
+            oxy_action(id, 'doctales.add.hyponyms'),
+            oxy_action(id, 'doctales.add.relatedTerms')
+        )
+    );
+}
+
+*[class~="termentry/related-terms"]:before(9) {
+    content: "";
+}
+
+/* Antonyms */
+*[class~="termentry/antonyms"]:before(10) {
+    content: "${i18n(doctales.terminology.antonyms)}";
+    .beforeBlock();
+}
+
+*[class~="termentry/antonyms"]:before(9) {
+    content:
+    oxy_button(
+        action, oxy_action(
+            name, "${i18n(doctales.terminology.link.antonym)}", 
+            description, "${i18n(doctales.terminology.css.link.related.terms_description)}", 
+            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
+        ), 
+        showIcon, false
+    );
+}
+
+*[class~="termentry/antonyms"] {
+    .mainBlock();
+}
+
+/* Are Part of */
+*[class~="termentry/arePartOf"]:before(10) {
+    content: "${i18n(doctales.terminology.arePartOf)}";
+    .beforeBlock();
+}
+
+*[class~="termentry/arePartOf"]:before(9) {
+    content:
+    oxy_button(
+        action, oxy_action(
+            name, "${i18n(doctales.terminology.link.isPartOf)}", 
+            description, "${i18n(doctales.terminology.css.link.related.terms_description)}", 
+            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
+        ), 
+        showIcon, false
+    );
+}
+
+*[class~="termentry/arePartOf"] {
+    .mainBlock();
+}
+
+/* Hypernyms */
+*[class~="termentry/hypernyms"]:before(10) {
+    content: "${i18n(doctales.terminology.hypernyms)}";
+    .beforeBlock();
+}
+
+*[class~="termentry/hypernyms"]:before(9) {
+    content:
+    oxy_button(
+        action, oxy_action(
+            name, "${i18n(doctales.terminology.link.hypernym)}", 
+            description, "${i18n(doctales.terminology.css.link.related.terms_description)}", 
+            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
+        ), 
+        showIcon, false
+    );
+}
+
+*[class~="termentry/hypernyms"] {
+    .mainBlock();
+}
+
+/* Hyponyms */
+*[class~="termentry/hyponyms"]:before(10) {
+    content: "${i18n(doctales.terminology.hyponyms)}";
+    .beforeBlock();
+}
+
+*[class~="termentry/hyponyms"]:before(9) {
+    content:
+    oxy_button(
+        action, oxy_action(
+            name, "${i18n(doctales.terminology.link.hyponym)}", 
+            description, "${i18n(doctales.terminology.css.link.related.terms_description)}", 
+            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
+        ), 
+        showIcon, false
+    );
+}
+
+*[class~="termentry/hyponyms"] {
+    .mainBlock();
+}
+
 /* Related Terms */
 *[class~="termentry/relatedTerms"]:before(10) {
     content: "${i18n(doctales.terminology.css.related.terms)}";
@@ -383,7 +494,7 @@
     content:
     oxy_button(
         action, oxy_action(
-            name, "${i18n(doctales.terminology.css.link.related.terms)}", 
+            name, "${i18n(doctales.terminology.link.relatedTerm)}", 
             description, "${i18n(doctales.terminology.css.link.related.terms_description)}", 
             operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
         ), 

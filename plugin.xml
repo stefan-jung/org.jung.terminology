@@ -3,8 +3,7 @@
 <plugin id="org.doctales.terminology">
    <!-- Workaroung for #2146 -->
   <require plugin="org.dita.base"/>
-  
-  <!--<require plugin="org.dita.xhtml"/>-->
+  <require plugin="org.dita.xhtml"/>
   <!--<require plugin="org.dita.html5"/>-->
   
 

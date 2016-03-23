@@ -164,18 +164,12 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
                          &concept-att;
                          &equation-d-att;
                          &mathml-d-att;
-                         &link-constraints;
                          &svg-d-att;
                         ">
 
 <!-- ================================================================================ -->
 <!--                          CONTENT CONSTRAINT INTEGRATION                          -->
 <!-- ================================================================================ -->
-
-<!ENTITY % linkHasSpecialRoles-c-def
-  PUBLIC "-//DOCTALES//CONSTRAINTS DITA DOCTALES Link Constraint//EN"
-  "linkHasSpecialRolesConstraint.mod"
->%linkHasSpecialRoles-c-def;
                         
 <!-- ================================================================================ -->
 <!--                            TOPIC ELEMENT INTEGRATION                             -->
