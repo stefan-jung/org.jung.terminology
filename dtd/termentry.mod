@@ -64,8 +64,11 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                      %base-attribute-extensions;
                                      outputclass   CDATA   #IMPLIED
                                      usage
-                                        (allowed | deprecated)
-                                           'allowed'
+                                       (admitted | 
+                                        notRecommended |
+                                        obsolete |
+                                        preferred)
+                                           'preferred'
                                      domain
                                         CDATA
                                            #IMPLIED   
