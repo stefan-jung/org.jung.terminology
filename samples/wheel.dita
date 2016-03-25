@@ -9,14 +9,16 @@
   </definitionSource>
  </definition>
  <termBody>
-  <fullForm usage="allowed" language="de">
+  <fullForm usage="preferred" language="de">
    <termVariant>Rad</termVariant>
   </fullForm>
-  <fullForm usage="allowed" language="en">
+  <fullForm usage="preferred" language="en">
    <termVariant>wheel</termVariant>
   </fullForm>
  </termBody>
- <relatedTerms>
-  <relatedTerm keyref="car"/>
- </relatedTerms>
+ <related-terms>
+  <relatedTerms>
+   <relatedTerm keyref="car"/>
+  </relatedTerms>
+ </related-terms>
 </termentry>

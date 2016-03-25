@@ -9,14 +9,16 @@
     </definitionSource>
   </definition>
   <termBody>
-    <fullForm usage="deprecated" language="en">
+    <fullForm usage="notRecommended" language="en">
       <termVariant>lorry</termVariant>
     </fullForm>
-    <fullForm usage="allowed" language="en">
+    <fullForm usage="preferred" language="en">
       <termVariant>truck</termVariant>
     </fullForm>
   </termBody>
-  <relatedTerms>
-    <relatedTerm keyref="car"/>
-  </relatedTerms>
+  <related-terms>
+    <relatedTerms>
+      <relatedTerm keyref="car"/>
+    </relatedTerms>
+  </related-terms>
 </termentry>

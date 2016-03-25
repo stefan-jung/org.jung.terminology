@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="ui_lwp_dxg_hv">
+ <title>Richtig</title>
+ <definition>
+  <definitionText>Definition of a term</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org" format="html"/>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <fullForm usage="allowed" language="de">
+   <termVariant case="nominative" number="singular">Stuhl</termVariant>
+  </fullForm>
+  <fullForm usage="allowed" language="de">
+   <termVariant case="genitive" number="singular">Stuhls</termVariant>
+  </fullForm>
+  <fullForm usage="deprecated" language="de">
+   <termVariant case="genitive" number="singular">Tisches</termVariant>
+  </fullForm>
+ </termBody>
+</termentry>

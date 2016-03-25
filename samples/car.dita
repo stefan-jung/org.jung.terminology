@@ -8,6 +8,10 @@
    <sourceReference href="https://en.wikipedia.org/wiki/Car" format="html"/>
   </definitionSource>
  </definition>
+ <partOfSpeech value="noun"/>
+ <domains>
+  <domain value="autos"/>
+ </domains>
  <termBody>
   <fig id="carFigure">
    <title>Drawing of a car</title>
@@ -15,14 +19,14 @@
     <alt>Drawing of a car</alt>
    </image>
   </fig>
-  <fullForm usage="deprecated" language="de">
+  <fullForm usage="preferred" language="en">
+   <termVariant>car</termVariant>
+  </fullForm>
+  <fullForm usage="notRecommended" language="de">
    <termVariant>Automobil</termVariant>
   </fullForm>
-  <abbreviation usage="allowed" language="de">
+  <abbreviation usage="preferred" language="de">
    <termVariant>Auto</termVariant>
   </abbreviation>
  </termBody>
- <relatedTerms>
-  <antonym keyref="wheel"/>
- </relatedTerms>
 </termentry>

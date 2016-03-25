@@ -15,17 +15,17 @@
   <termCommitteeMember>Winterkorn</termCommitteeMember>
  </agreedWith>
  <termBody>
-  <fullForm usage="allowed" language="en">
+  <fullForm usage="preferred" language="en">
    <termVariant>beetle</termVariant>
   </fullForm>
-  <fullForm usage="deprecated" language="en">
+  <fullForm usage="notRecommended" language="en">
    <termVariant>bug</termVariant>
   </fullForm>
-  <fullForm usage="allowed" language="en-us">
+  <fullForm usage="preferred" language="en-us">
    <annotation>The Name of the beetle in the USA is 'bug'</annotation>
    <termVariant>bug</termVariant>
   </fullForm>
-  <fullForm gender="masculine" usage="allowed" language="de">
+  <fullForm gender="masculine" usage="preferred" language="de">
    <termVariant case="nominative" number="singular">Käfer</termVariant>
    <termVariant case="dative" number="singular">Käfer</termVariant>
    <termVariant case="accusative" number="singular">Käfer</termVariant>
@@ -36,7 +36,9 @@
    <termVariant case="genitive" number="plural">Käfer</termVariant>
   </fullForm>
  </termBody>
- <relatedTerms>
-  <hypernym keyref="car"/>
- </relatedTerms>
+ <related-terms>
+  <hypernyms>
+   <hypernym keyref="car"/>
+  </hypernyms>
+ </related-terms>
 </termentry>
