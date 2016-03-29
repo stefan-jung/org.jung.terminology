@@ -21,7 +21,7 @@
             includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
-            extension=".xml"
+            extension=".tbxm"
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2tbx-min.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
@@ -34,7 +34,7 @@
         <basename property="tbx-min" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >
-                <exclude name="**/${tbx-min}.xml"/>
+                <exclude name="**/${tbx-min}.tbxm"/>
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
