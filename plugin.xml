@@ -388,6 +388,10 @@
     </param>
   </transtype>
   
+  <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
+  <feature extension="dita.conductor.transtype.check" value="tbx-basic"/>
+  <transtype name="tbx-basic" extends="html5" desc="TBX-Basic"/>
+  
   <!-- Add new transtype to generate a termbrowser. -->
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
   <transtype name="termbrowser"/>
