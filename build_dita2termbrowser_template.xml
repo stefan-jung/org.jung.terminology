@@ -2,11 +2,42 @@
 <project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2termbrowser">
     
     <target name="dita2termbrowser"
-        depends="html5.init,
+        depends="termbrowser.init,
+        html5.init,
         build-init,
         preprocess,
         html5.topic,
         html5.map,
-        html5.css"/>
+        html5.css,
+        dita.topics.html.termbrowser"/>
+    
+    <target name="termbrowser.init">
+        <property name="root-chunk-override" value="to-content"/>
+    </target>
+    
+    <target name="dita.topics.html.termbrowser" description="Generate terminology stats and put them in a HTML file.">
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension=".stats"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termbrowser.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
+            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        <basename property="terminology-statistics" file="${args.input}" suffix=".ditamap"/>
+        <delete>
+            <fileset dir="${output.dir}" >
+                <exclude name="**/${terminology-statistics}.stats"/>
+            </fileset>
+            <dirset dir="${output.dir}"/>
+        </delete>
+        <move file="${output.dir}/${terminology-statistics}.stats" tofile="${output.dir}/${terminology-statistics}.html"/>
+        <copy file="${dita.plugin.org.doctales.terminology.dir}/js/d3pie.min.js" todir="${output.dir}/js"/>
+    </target>
     
 </project>
