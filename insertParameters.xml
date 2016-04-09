@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dummy>
+    
+    <!-- Parameters for TBX-Min -->
+    <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
+    <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
+    
+</dummy>

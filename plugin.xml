@@ -5,7 +5,6 @@
   <!-- Workaroung for #2146 -->
   <require plugin="org.dita.base"/>
   <require plugin="org.dita.xhtml"/>
-  <!--<require plugin="org.dita.html5"/>-->
 
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
@@ -390,7 +389,7 @@
   
   <!-- Add new transtype to generate a termbrowser. -->
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
-  <transtype name="termbrowser"/>
+  <transtype name="termbrowser" extends="html5" desc="Termbrowser"/>
 
   <!-- Overriding XSLT -->
   <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
