@@ -2775,6 +2775,132 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>doctypeRules</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<documentTypeRule>
+												<field name="namespace">
+													<String>*</String>
+												</field>
+												<field name="rootElem">
+													<String>*</String>
+												</field>
+												<field name="fileName">
+													<String>*</String>
+												</field>
+												<field name="publicID">
+													<String>*</String>
+												</field>
+												<field name="javaRuleClass">
+													<String>ro.sync.ecss.extensions.dita.map.DITAMapCustomRuleMatcher</String>
+												</field>
+												<field name="attributeLocalName">
+													<String>*</String>
+												</field>
+												<field name="attributeNamespace">
+													<String>*</String>
+												</field>
+												<field name="attributeValue">
+													<String>*</String>
+												</field>
+											</documentTypeRule>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>doctypeRules</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<documentTypeRule>
+												<field name="namespace">
+													<String>*</String>
+												</field>
+												<field name="rootElem">
+													<String>*</String>
+												</field>
+												<field name="fileName">
+													<String>*</String>
+												</field>
+												<field name="publicID">
+													<String>*-//OASIS//DTD DITA Map*</String>
+												</field>
+												<field name="javaRuleClass">
+													<String></String>
+												</field>
+												<field name="attributeLocalName">
+													<String>*</String>
+												</field>
+												<field name="attributeNamespace">
+													<String>*</String>
+												</field>
+												<field name="attributeValue">
+													<String>*</String>
+												</field>
+											</documentTypeRule>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>doctypeRules</String>
+										</field>
+										<field name="index">
+											<Integer>3</Integer>
+										</field>
+										<field name="value">
+											<documentTypeRule>
+												<field name="namespace">
+													<String>*</String>
+												</field>
+												<field name="rootElem">
+													<String>*</String>
+												</field>
+												<field name="fileName">
+													<String>*</String>
+												</field>
+												<field name="publicID">
+													<String>*-//OASIS//DTD DITA BookMap*</String>
+												</field>
+												<field name="javaRuleClass">
+													<String></String>
+												</field>
+												<field name="attributeLocalName">
+													<String>*</String>
+												</field>
+												<field name="attributeNamespace">
+													<String>*</String>
+												</field>
+												<field name="attributeValue">
+													<String>*</String>
+												</field>
+											</documentTypeRule>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>scenarios</String>
 										</field>
 										<field name="index">
@@ -3007,212 +3133,6 @@
 													<String>${cfd}</String>
 												</field>
 												<field name="outputDir">
-													<String>${cfd}/out/webhelp</String>
-												</field>
-												<field name="tempDir">
-													<String>${cfd}/temp/webhelp</String>
-												</field>
-												<field name="transtype">
-													<String>webhelp</String>
-												</field>
-												<field name="filters">
-													<ditavalFilters>
-														<field name="useDitavalFilePath">
-															<Boolean>false</Boolean>
-														</field>
-														<field name="useAppliedConditionSet">
-															<Boolean>true</Boolean>
-														</field>
-														<field name="appliedConditionSet">
-															<null/>
-														</field>
-														<field name="ditavalFilePath">
-															<String></String>
-														</field>
-														<field name="simpleFiltersList">
-															<list/>
-														</field>
-													</ditavalFilters>
-												</field>
-												<field name="addOxygenJars">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="skinCssFile">
-													<String>${framework}/webhelp-skin/doctales/skin.css</String>
-												</field>
-												<field name="lastCustomSkinCssPath">
-													<String>${framework}/webhelp-skin/doctales/skin.css</String>
-												</field>
-												<field name="additionalAntArgs">
-													<String></String>
-												</field>
-												<field name="buildTarget">
-													<String></String>
-												</field>
-												<field name="buildFilePath">
-													<String></String>
-												</field>
-												<field name="ditaParams">
-													<list>
-														<ditaParameter>
-															<field name="name">
-																<String>args.xhtml.classattr</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>yes</String>
-															</field>
-															<field name="defaultValue">
-																<String>yes</String>
-															</field>
-															<field name="type">
-																<Integer>4</Integer>
-															</field>
-															<field name="possibleValues">
-																<String-array>
-																	<String>yes</String>
-																	<String>no</String>
-																	<null/>
-																</String-array>
-															</field>
-														</ditaParameter>
-													</list>
-												</field>
-												<field name="jvmArgs">
-													<String>-Xmx1024m</String>
-												</field>
-												<field name="useCustomJavaHome">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="customJavaHomeDir">
-													<String></String>
-												</field>
-												<field name="useCustomANTHome">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="customANTHomeDir">
-													<String></String>
-												</field>
-												<field name="workingDir">
-													<null/>
-												</field>
-												<field name="showConsoleAlways">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="advancedOptionsMap">
-													<null/>
-												</field>
-												<field name="name">
-													<String>Termbrowser</String>
-												</field>
-												<field name="baseURL">
-													<null/>
-												</field>
-												<field name="footerURL">
-													<null/>
-												</field>
-												<field name="fOPMethod">
-													<null/>
-												</field>
-												<field name="fOProcessorName">
-													<null/>
-												</field>
-												<field name="headerURL">
-													<null/>
-												</field>
-												<field name="inputXSLURL">
-													<null/>
-												</field>
-												<field name="inputXMLURL">
-													<null/>
-												</field>
-												<field name="defaultScenario">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="isFOPPerforming">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="type">
-													<String>DITAMAP</String>
-												</field>
-												<field name="saveAs">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="openInBrowser">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="outputFile">
-													<null/>
-												</field>
-												<field name="outputResource">
-													<null/>
-												</field>
-												<field name="openOtherLocationInBrowser">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="locationToOpenInBrowserURL">
-													<String></String>
-												</field>
-												<field name="openInEditor">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInHTMLPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInXMLPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInSVGPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInResultSetPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="useXSLTInput">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="xsltParams">
-													<list/>
-												</field>
-												<field name="cascadingStylesheets">
-													<String-array/>
-												</field>
-												<field name="xslTransformer">
-													<String>DITA-OT</String>
-												</field>
-												<field name="extensionURLs">
-													<String-array/>
-												</field>
-											</ditaScenario>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>scenarios</String>
-										</field>
-										<field name="index">
-											<Integer>2</Integer>
-										</field>
-										<field name="value">
-											<ditaScenario>
-												<field name="useXEP">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="useAntennaHouse">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="baseDir">
-													<String>${cfd}</String>
-												</field>
-												<field name="outputDir">
 													<String>${cfd}/out/common-html</String>
 												</field>
 												<field name="tempDir">
@@ -3323,6 +3243,187 @@
 												</field>
 												<field name="openInBrowser">
 													<Boolean>true</Boolean>
+												</field>
+												<field name="outputFile">
+													<null/>
+												</field>
+												<field name="outputResource">
+													<null/>
+												</field>
+												<field name="openOtherLocationInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="locationToOpenInBrowserURL">
+													<String></String>
+												</field>
+												<field name="openInEditor">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInHTMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInXMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInSVGPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInResultSetPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useXSLTInput">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="xsltParams">
+													<list/>
+												</field>
+												<field name="cascadingStylesheets">
+													<String-array/>
+												</field>
+												<field name="xslTransformer">
+													<String>DITA-OT</String>
+												</field>
+												<field name="extensionURLs">
+													<String-array/>
+												</field>
+											</ditaScenario>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/termbrowser</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/termbrowser</String>
+												</field>
+												<field name="transtype">
+													<String>termbrowser</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<String></String>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="additionalAntArgs">
+													<String></String>
+												</field>
+												<field name="buildTarget">
+													<String></String>
+												</field>
+												<field name="buildFilePath">
+													<String></String>
+												</field>
+												<field name="ditaParams">
+													<list/>
+												</field>
+												<field name="jvmArgs">
+													<String>-Xmx384m</String>
+												</field>
+												<field name="useCustomJavaHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customJavaHomeDir">
+													<String></String>
+												</field>
+												<field name="useCustomANTHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customANTHomeDir">
+													<String></String>
+												</field>
+												<field name="workingDir">
+													<null/>
+												</field>
+												<field name="showConsoleAlways">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="advancedOptionsMap">
+													<null/>
+												</field>
+												<field name="name">
+													<String>DITA DOCTALES Termbrowser</String>
+												</field>
+												<field name="baseURL">
+													<null/>
+												</field>
+												<field name="footerURL">
+													<null/>
+												</field>
+												<field name="fOPMethod">
+													<null/>
+												</field>
+												<field name="fOProcessorName">
+													<null/>
+												</field>
+												<field name="headerURL">
+													<null/>
+												</field>
+												<field name="inputXSLURL">
+													<null/>
+												</field>
+												<field name="inputXMLURL">
+													<null/>
+												</field>
+												<field name="defaultScenario">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="isFOPPerforming">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="type">
+													<String>DITAMAP</String>
+												</field>
+												<field name="saveAs">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="openInBrowser">
+													<Boolean>false</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
