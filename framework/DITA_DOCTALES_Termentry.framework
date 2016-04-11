@@ -3414,11 +3414,7 @@
 													<null/>
 												</field>
 												<field name="name">
-<<<<<<< HEAD
-													<String>DITA DOCTALES Termbrowser</String>
-=======
 													<String>Termchecker</String>
->>>>>>> d1bcc42afcf40554f225796cf27232f6a949e954
 												</field>
 												<field name="baseURL">
 													<null/>
