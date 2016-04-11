@@ -3,10 +3,13 @@
   <public publicId="-//DOCTALES//DTD DITA DOCTALES Termentry//EN" uri="dtd/termentry.dtd"/>
   <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.x Termentry//EN" uri="dtd/termentry.dtd"/>
   <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.2 Termentry//EN" uri="dtd/termentry.dtd"/>
+  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termentry//EN" uri="dtd/termentry.dtd"/>
   <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
   <public publicId="-//DOCTALES//ELEMENTS DITA 1.x DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
   <public publicId="-//DOCTALES//ELEMENTS DITA 1.2 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
+  <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
   <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
   <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
   <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
 </catalog>

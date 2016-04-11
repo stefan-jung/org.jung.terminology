@@ -9,7 +9,7 @@
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
-  <feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>
+  <!--<feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>-->
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
   <feature extension="dita.conductor.transtype.check" value="tbx-min"/>
@@ -386,6 +386,10 @@
       <val>zu</val>
     </param>
   </transtype>
+  
+  <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
+  <feature extension="dita.conductor.transtype.check" value="tbx-basic"/>
+  <transtype name="tbx-basic" extends="html5" desc="TBX-Basic"/>
   
   <!-- Add new transtype to generate a termbrowser. -->
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
