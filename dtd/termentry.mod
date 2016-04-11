@@ -253,10 +253,6 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 
 <!ENTITY % termentry.content        "((%title;),
                                       (%definition;)?,
-                                      (%partOfSpeech;)?,
-                                      (%domains;)?,
-                                      (%agreedWith;)?,
-                                      (%annotation;)*,
                                       (%termBody;)?,
                                       (%related-terms;)?,
                                       (%termentry-info-types;)*)
@@ -373,7 +369,11 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Term Body                             -->
 <!ENTITY % termBody.content         "((((%fig;) | 
-                                      (%note;))*),
+                                       (%note;) |
+                                       (%domains;) |
+                                       (%annotation;))*),
+                                       (%agreedWith;)?,
+                                       (%partOfSpeech;)?,                                       
                                       ((%fullForm;) |
                                        (%abbreviation;) |
                                        (%acronym;) |
