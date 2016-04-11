@@ -9,7 +9,8 @@
         html5.topic,
         html5.map,
         html5.css,
-        dita.topics.html.termbrowser"/>
+        dita.topics.html.termbrowser,
+        termgraph"/>
     
     <target name="termbrowser.init">
         <property name="root-chunk-override" value="to-content"/>
@@ -38,6 +39,29 @@
         </delete>
         <move file="${output.dir}/${terminology-statistics}.stats" tofile="${output.dir}/${terminology-statistics}.html"/>
         <copy file="${dita.plugin.org.doctales.terminology.dir}/js/d3pie.min.js" todir="${output.dir}/js"/>
+    </target>
+    
+    <target name="termgraph" description="Generate a terminology graph.">
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}/graph"
+            includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension=".html"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termgraph.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
+            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        <basename property="output.file" file="${args.input}" suffix=".ditamap"/>
+        <delete>
+            <fileset dir="${output.dir}/graph" >
+                <exclude name="**/${output.file}.html"/>
+            </fileset>
+            <dirset dir="${output.dir}/graph"/>
+        </delete>
     </target>
     
 </project>
