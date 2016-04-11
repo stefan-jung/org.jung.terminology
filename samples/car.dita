@@ -8,10 +8,6 @@
    <sourceReference href="https://en.wikipedia.org/wiki/Car" format="html"/>
   </definitionSource>
  </definition>
- <partOfSpeech value="noun"/>
- <domains>
-  <domain value="autos"/>
- </domains>
  <termBody>
   <fig id="carFigure">
    <title>Drawing of a car</title>
@@ -19,6 +15,10 @@
     <alt>Drawing of a car</alt>
    </image>
   </fig>
+  <domains>
+   <domain value="autos"/>
+  </domains>
+  <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en">
    <termVariant>car</termVariant>
   </fullForm>

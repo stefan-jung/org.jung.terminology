@@ -8,13 +8,13 @@
    <sourceReference href="https://en.wikipedia.org/wiki/Volkswagen_Beetle" format="html"/>
   </definitionSource>
  </definition>
- <domains>
-  <domain value="vw"/>
- </domains>
- <agreedWith>
-  <termCommitteeMember>Winterkorn</termCommitteeMember>
- </agreedWith>
  <termBody>
+  <domains>
+   <domain value="vw"/>
+  </domains>
+  <agreedWith>
+   <termCommitteeMember>Winterkorn</termCommitteeMember>
+  </agreedWith>
   <fullForm usage="preferred" language="en">
    <termVariant>beetle</termVariant>
   </fullForm>
