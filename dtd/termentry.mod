@@ -204,7 +204,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                         (neuter |
                                          masculine |
                                          feminine)
-                                           'masculine'
+                                            #IMPLIED
                                     ">
                                     
 <!--                                 Case of term                                     -->
