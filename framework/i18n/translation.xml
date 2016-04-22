@@ -84,6 +84,58 @@
         <val lang="en_US">Delete source of definition (&lt;definitionSource&gt;)</val>
         <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) löschen</val>
     </key>
+    <!-- sourceName -->
+    <key value="doctales.terminology.label.sourceName">
+        <comment>Name of Source</comment>
+        <val lang="en_US">Name of Source</val>
+        <val lang="de_DE">Name der Quelle</val>
+    </key>
+    <key type="action" value="doctales.add.sourceName">
+        <comment>Add a sourceName element.</comment>
+        <val lang="en_US">Add name of source (&lt;sourceName&gt;)</val>
+        <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.sourceName_description">
+        <comment>Add a sourceName element.</comment>
+        <val lang="en_US">Add name of source (&lt;sourceName&gt;)</val>
+        <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.sourceName">
+        <comment>Delete the current definitionSource element.</comment>
+        <val lang="en_US">Delete name of source (&lt;sourceName&gt;)</val>
+        <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.sourceName_description">
+        <comment>Delete the current definitionSource element.</comment>
+        <val lang="en_US">Delete name of source (&lt;sourceName&gt;)</val>
+        <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) löschen</val>
+    </key>
+     <!-- sourceReference -->
+    <key value="doctales.terminology.label.sourceReference">
+        <comment>Reference to Source</comment>
+        <val lang="en_US">Reference to Source</val>
+        <val lang="de_DE">Verweis auf Quelle</val>
+    </key>
+    <key type="action" value="doctales.add.sourceReference">
+        <comment>Add a sourceReference element.</comment>
+        <val lang="en_US">Add reference to source (&lt;sourceReference&gt;)</val>
+        <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.sourceReference_description">
+        <comment>Add a sourceReference element.</comment>
+        <val lang="en_US">Add reference to source (&lt;sourceReference&gt;)</val>
+        <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.sourceReference">
+        <comment>Delete the current sourceReference element.</comment>
+        <val lang="en_US">Delete reference to source (&lt;sourceReference&gt;)</val>
+        <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.sourceReference_description">
+        <comment>Delete the current sourceReference element.</comment>
+        <val lang="en_US">Delete reference to source (&lt;sourceReference&gt;)</val>
+        <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) löschen</val>
+    </key>
     <!-- partOfSpeech -->
     <key value="doctales.terminology.label.partOfSpeech">
         <comment>partOfSpeech</comment>

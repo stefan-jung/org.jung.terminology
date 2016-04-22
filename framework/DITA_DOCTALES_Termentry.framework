@@ -2250,7 +2250,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/definition ')][1])</String>
+																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -2320,7 +2320,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/definition ')][1])</String>
+																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -2334,7 +2334,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -2390,13 +2390,13 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' doctales.delete.sourceName ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>elementLocation</String>
-																		<String>.</String>
+																		<String>child::*[contains(@class, ' termentry/sourceName ')][1]</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -2452,13 +2452,13 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' doctales.delete.sourceReference ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>elementLocation</String>
-																		<String>.</String>
+																		<String>child::*[contains(@class, ' termentry/sourceReference ')][1]</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
