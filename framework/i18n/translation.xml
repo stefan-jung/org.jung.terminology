@@ -58,6 +58,32 @@
         <val lang="en_US">Delete definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
     </key>
+    <!-- definitionSource -->
+    <key value="doctales.terminology.label.definitionSource">
+        <comment>Source of Definition</comment>
+        <val lang="en_US">Source of Definition</val>
+        <val lang="de_DE">Quelle der Definition</val>
+    </key>
+    <key type="action" value="doctales.add.definitionSource">
+        <comment>Add a definitionSource element.</comment>
+        <val lang="en_US">Add source of definition (&lt;definitionSource&gt;)</val>
+        <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.definitionSource_description">
+        <comment>Add a definitionSource element.</comment>
+        <val lang="en_US">Add source of definition (&lt;definitionSource&gt;)</val>
+        <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.definitionSource">
+        <comment>Delete the current definitionSource element.</comment>
+        <val lang="en_US">Delete source of definition (&lt;definitionSource&gt;)</val>
+        <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.definitionSource_description">
+        <comment>Delete the current definitionSource element.</comment>
+        <val lang="en_US">Delete source of definition (&lt;definitionSource&gt;)</val>
+        <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) löschen</val>
+    </key>
     <!-- partOfSpeech -->
     <key value="doctales.terminology.label.partOfSpeech">
         <comment>partOfSpeech</comment>
@@ -323,7 +349,6 @@
         <val lang="en_US">Delete the element at the cursor position.</val>
         <val lang="de_DE">Lösche das Element an der Cursor-Position.</val>
     </key>
-    
     <!-- Related Terms -->
     <key value="doctales.terminology.related-terms">
         <val lang="en_US">Links to Related Terms</val>
@@ -505,11 +530,6 @@
         <comment>Definition</comment>
         <val lang="en_US">Definition</val>
         <val lang="de_DE">Definition</val>
-    </key>
-    <key value="doctales.terminology.label.definitionSource">
-        <comment>Source of Definition</comment>
-        <val lang="en_US">Source of Definition</val>
-        <val lang="de_DE">Quelle der Definition</val>
     </key>
     <key value="doctales.terminology.label.termAdministration">
         <comment>Term Administration</comment>

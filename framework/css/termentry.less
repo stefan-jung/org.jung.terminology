@@ -82,6 +82,7 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
+            oxy_action(id, 'doctales.add.definitionSource'),
             oxy_action(id, 'doctales.delete.definition')
         )
     );
@@ -119,13 +120,13 @@
             oxy_action(id, 'doctales.add.abbreviation'),
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
-            oxy_action(id, 'doctales.add.verb'),
+            oxy_action(id, 'doctales.add.verb')
         )
     );
 }
 
 *[class~="termentry/termBody"] {
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
 *[class~="termentry/termSource"]:before(10) {
@@ -157,6 +158,12 @@
     content: "${i18n(doctales.terminology.label.sourceReference)}: ";
     .uiElementLabel();
     padding-left: 0.5em;
+    link: attr(href);
+    -ah-link: attr(href);  
+    pointer-events: none;
+    cursor: default;
+    text-decoration-style: dotted;
+    color: @labelColor !important;
 }
 
 *[class~="termentry/sourceReference"]:before(7) {
@@ -164,7 +171,7 @@
     oxy_textfield(
         edit, '@href',
         columns, 50
-    )
+    )"\A"
     oxy_combobox( 
         edit, '@format',
         columns, 8
@@ -172,29 +179,10 @@
     oxy_combobox( 
         edit, '@scope',
         columns, 17
-    ) " x";
+    );
     .uiElement();
     padding-left: 0.5em;
-    link: attr(href);
-    -ah-link: attr(href);  
-
-    pointer-events: none;
-    cursor: default;
-    text-decoration: none !important;
-    text-decoration-style: none;
-    color: @labelColor !important;
 }
-
-/**[class~="termentry/sourceReference"]:before(6) {
-    content: "x" !important;
-    link: none;
-    -ah-link: none;
-    pointer-events: none;
-    cursor: default;
-    text-decoration: none !important;
-    text-decoration-style: none;
-    color: @labelColor !important;
-}*/
 
 *[class~="termentry/sourceReference"]:before {
     display: none !important;
@@ -393,7 +381,19 @@
 
 *[class~="termentry/definitionSource"]:before(10) {
     .beforeBlock();
-    content: "\A ${i18n(doctales.terminology.label.definitionSource)}";
+    content: "\A ${i18n(doctales.terminology.label.definitionSource)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.sourceName'),
+            oxy_action(id, 'doctales.add.sourceReference'),
+            oxy_action(id, 'doctales.remove.sourceName'),
+            oxy_action(id, 'doctales.remove.sourceReference')
+        )
+    );
 }
 
 *[class~="termentry/definitionSource"] {
