@@ -77,73 +77,76 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!--                                 Language of term                                 -->
 <!ENTITY % languageSelection-atts   "language
                                         (af | 
-                                         ar-ae | 
-                                         ar-bh | 
-                                         ar-dz | 
-                                         ar-eg | 
-                                         ar-iq | 
-                                         ar-jo | 
-                                         ar-kw | 
-                                         ar-lb | 
-                                         ar-ly | 
-                                         ar-ma | 
-                                         ar-om | 
-                                         ar-qa | 
-                                         ar-sa | 
-                                         ar-sy | 
-                                         ar-tn | 
-                                         ar-ye | 
+                                         ar-AE | 
+                                         ar-BH | 
+                                         ar-DZ | 
+                                         ar-EG | 
+                                         ar-IQ | 
+                                         ar-JO | 
+                                         ar-KW | 
+                                         ar-LB | 
+                                         ar-LY | 
+                                         ar-MA | 
+                                         ar-OM | 
+                                         ar-QA | 
+                                         ar-SA | 
+                                         ar-SY | 
+                                         ar-TN | 
+                                         ar-YE | 
                                          be | 
                                          bg | 
                                          ca | 
                                          cs | 
+                                         cs-CZ | 
                                          da | 
+                                         da-DK | 
                                          de | 
-                                         de-at | 
-                                         de-ch | 
-                                         de-li | 
-                                         de-lu | 
+                                         de-AT | 
+                                         de-CH |
+                                         de-DE |
+                                         de-LI | 
+                                         de-LU | 
                                          el | 
                                          en | 
-                                         en-au | 
-                                         en-bz | 
-                                         en-ca | 
-                                         en-gb | 
-                                         en-ie | 
-                                         en-jm | 
-                                         en-nz | 
-                                         en-tt | 
-                                         en-us | 
-                                         en-za | 
+                                         en-AU | 
+                                         en-BZ | 
+                                         en-CA | 
+                                         en-GB | 
+                                         en-IE | 
+                                         en-JM | 
+                                         en-NZ | 
+                                         en-TT | 
+                                         en-US | 
+                                         en-ZA | 
                                          es | 
-                                         es-ar | 
-                                         es-bo | 
-                                         es-cl | 
-                                         es-co | 
-                                         es-cr | 
-                                         es-do | 
-                                         es-ec | 
-                                         es-gt | 
-                                         es-hn | 
-                                         es-mx | 
-                                         es-ni | 
-                                         es-pa | 
-                                         es-pe | 
-                                         es-pr | 
-                                         es-py | 
-                                         es-sv | 
-                                         es-uy | 
-                                         es-ve | 
+                                         es-AR | 
+                                         es-BO | 
+                                         es-CL | 
+                                         es-CO | 
+                                         es-CR | 
+                                         es-DO | 
+                                         es-EC | 
+                                         es-GT | 
+                                         es-HN | 
+                                         es-MX | 
+                                         es-NI | 
+                                         es-PA | 
+                                         es-PE | 
+                                         es-PR | 
+                                         es-PY | 
+                                         es-SV | 
+                                         es-UY | 
+                                         es-VE | 
                                          et | 
                                          eu | 
                                          fa | 
                                          fi | 
                                          fo | 
                                          fr | 
-                                         fr-be | 
-                                         fr-ca | 
-                                         fr-ch | 
-                                         fr-lu | 
+                                         fr-BE | 
+                                         fr-CA | 
+                                         fr-CH | 
+                                         fr-LU | 
                                          ga | 
                                          gd | 
                                          he | 
@@ -153,7 +156,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          id | 
                                          is | 
                                          it | 
-                                         it-ch | 
+                                         it-CH | 
                                          ja | 
                                          ji | 
                                          ko | 
@@ -163,23 +166,24 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          ms | 
                                          mt | 
                                          nl | 
-                                         nl-be | 
+                                         nl-BE | 
                                          no | 
                                          pl | 
+                                         pl-PL | 
                                          pt | 
-                                         pt-br | 
+                                         pt-BR | 
                                          rm | 
                                          ro | 
-                                         ro-mo | 
+                                         ro-MO | 
                                          ru | 
-                                         ru-mo | 
+                                         ru-MO | 
                                          sb | 
                                          sk | 
                                          sl | 
                                          sq | 
                                          sr | 
                                          sv | 
-                                         sv-fi | 
+                                         sv-FI | 
                                          sx | 
                                          sz | 
                                          th | 
@@ -191,12 +195,12 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          ve | 
                                          vi | 
                                          xh | 
-                                         zh-cn | 
-                                         zh-hk | 
-                                         zh-sg | 
-                                         zh-tw | 
+                                         zh-CN | 
+                                         zh-HK | 
+                                         zh-SG | 
+                                         zh-TW | 
                                          zu)
-                                           'en-us'
+                                           'en-GB'
                                     ">
 
 <!--                                 Gender of term                                   -->
