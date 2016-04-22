@@ -428,9 +428,30 @@
         <val lang="de_DE">Lösche das Element an der Cursor-Position.</val>
     </key>
     <!-- Related Terms -->
-    <key value="doctales.terminology.related-terms">
+    <key value="doctales.terminology.label.related-terms">
+        <comment>Related Terms</comment>
         <val lang="en_US">Links to Related Terms</val>
         <val lang="de_DE">Verweise auf Verwandte Begriffe</val>
+    </key>
+    <key type="action" value="doctales.add.related-terms">
+        <comment>Add an related-terms element.</comment>
+        <val lang="en_US">Add Related Terms (&lt;related-terms&gt;)</val>
+        <val lang="de_DE">Verwandte Begriffe (&lt;related-terms&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.related-terms_description">
+        <comment>Add an related-terms element.</comment>
+        <val lang="en_US">Add Related Terms (&lt;related-terms&gt;)</val>
+        <val lang="de_DE">Verwandte Begriffe (&lt;related-terms&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.related-terms">
+        <comment>Delete the related-terms element.</comment>
+        <val lang="en_US">Delete Related Terms (&lt;related-terms&gt;)</val>
+        <val lang="de_DE">Verwandte Begriffe (&lt;related-terms&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.related-terms_description">
+        <comment>Delete the related-terms element.</comment>
+        <val lang="en_US">Delete Related Terms (&lt;related-terms&gt;)</val>
+        <val lang="de_DE">Verwandte Begriffe (&lt;related-terms&gt;) löschen</val>
     </key>
     <!-- antonyms -->
     <key value="doctales.terminology.antonyms">
