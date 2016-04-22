@@ -37,6 +37,27 @@
         <val lang="en_US">Delete the current element.</val>
         <val lang="de_DE">Lösche das aktuelle Element.</val>
     </key>
+    <!-- definition -->
+    <key type="action" value="doctales.add.definition">
+        <comment>Add a definition element.</comment>
+        <val lang="en_US">Add definition (&lt;definition&gt;)</val>
+        <val lang="de_DE">Definition (&lt;definition&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.definition_description">
+        <comment>Add a definition element.</comment>
+        <val lang="en_US">Add definition (&lt;definition&gt;)</val>
+        <val lang="de_DE">Definition (&lt;definition&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.definition_description">
+        <comment>Delete the current definition element.</comment>
+        <val lang="en_US">Delete definition (&lt;definition&gt;)</val>
+        <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.definition">
+        <comment>Delete the current definition element.</comment>
+        <val lang="en_US">Delete definition (&lt;definition&gt;)</val>
+        <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
+    </key>
     <!-- fullForm -->
     <key type="action" value="doctales.add.fullForm">
         <comment>Add a new fullForm element.</comment>
@@ -364,6 +385,11 @@
         <comment>Source of Definition</comment>
         <val lang="en_US">Source of Definition</val>
         <val lang="de_DE">Quelle der Definition</val>
+    </key>
+    <key value="doctales.terminology.css.termAdministration">
+        <comment>Term Administration</comment>
+        <val lang="en_US">Term Administration</val>
+        <val lang="de_DE">Term-Verwaltung</val>
     </key>
     <key value="doctales.terminology.css.termSource">
         <comment>Source of Term</comment>

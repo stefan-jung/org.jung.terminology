@@ -21,7 +21,6 @@
 }
 
 .beforeBlock {
-    color: #767676;
     font-size: 0.7em;
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     display: block;
@@ -60,7 +59,6 @@
     width: 10em;
     padding-top: 0.1em;
     font-weight: normal;
-    color: black !important;
 }
 
 .hideContent {
@@ -77,7 +75,16 @@
 
 *[class~="termentry/definition"]:before(10) {
     .beforeBlock();
-    content: "${i18n(doctales.terminology.css.definition)}";
+    content: "${i18n(doctales.terminology.css.definition)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.definition')
+        )
+    );
 }
 
 *[class~="termentry/definition"] {
@@ -93,6 +100,29 @@
     .mainBlock();
 }
 
+*[class~="termentry/termBody"]:before(10) {
+    .beforeBlock();
+    content: "\A ${i18n(doctales.terminology.css.termAdministration)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.definition'),
+            oxy_action(id, 'doctales.add.abbreviation'),
+            oxy_action(id, 'doctales.add.acronym'),
+            oxy_action(id, 'doctales.add.fullForm'),
+            oxy_action(id, 'doctales.add.verb'),
+            oxy_action(id, 'doctales.delete.fullForm')
+        )
+    );
+}
+
+*[class~="termentry/termBody"] {
+    margin-top: 3em;
+}
+
 *[class~="termentry/termSource"]:before(10) {
     .beforeBlock();
     content: "\A ${i18n(doctales.terminology.css.termSource)}";
@@ -102,10 +132,47 @@
     .mainBlock();
 }
 
-*[class~="termentry/sourceReference"]:before {
-    content: "${i18n(doctales.terminology.css.sourceReference)}:" !important;
-    link: none;
-    -ah-link: none;
+*[class~="termentry/sourceName"]:before(8) {
+    content: "${i18n(doctales.terminology.css.sourceName)}: ";
+    .uiElementLabel();
+    padding-left: 0.5em;
+}
+
+*[class~="termentry/sourceName"]:before(7) {
+    content: 
+    oxy_textfield(
+        edit, '#text',
+        columns, 50
+    );
+    .uiElement();
+    padding-left: 0.5em;
+}
+
+*[class~="termentry/sourceReference"]:before(8) {
+    content: "${i18n(doctales.terminology.css.sourceReference)}: ";
+    .uiElementLabel();
+    padding-left: 0.5em;
+}
+
+*[class~="termentry/sourceReference"]:before(7) {
+    content: 
+    oxy_textfield(
+        edit, '@href',
+        columns, 50
+    )
+    oxy_combobox( 
+        edit, '@format',
+        columns, 8
+    )
+    oxy_combobox( 
+        edit, '@scope',
+        columns, 17
+    ) " x";
+    .uiElement();
+    padding-left: 0.5em;
+    link: attr(href);
+    -ah-link: attr(href);  
+
     pointer-events: none;
     cursor: default;
     text-decoration: none !important;
@@ -113,12 +180,35 @@
     color: @labelColor !important;
 }
 
-*[class~="termentry/sourceName"]:before(10) {
-    content: "${i18n(doctales.terminology.css.sourceName)}: ";
+/**[class~="termentry/sourceReference"]:before(6) {
+    content: "x" !important;
+    link: none;
+    -ah-link: none;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none !important;
+    text-decoration-style: none;
+    color: @labelColor !important;
+}*/
+
+*[class~="termentry/sourceReference"]:before {
+    display: none !important;
 }
 
+*[class~="termentry/sourceReference"] {
+    .hideContent();
+}
+
+
 *[class~="termentry/partOfSpeech"]:before(10) {
+    .beforeBlock();
+    content: "${i18n(doctales.terminology.css.partOfSpeech)} ";
+}
+
+*[class~="termentry/partOfSpeech"]:before(8) {
     content: "${i18n(doctales.terminology.css.partOfSpeech)}: ";
+    .uiElementLabel();
+    padding-left: 0.5em;
 }
 
 *[class~="termentry/partOfSpeech"]:before(7) {
@@ -126,9 +216,7 @@
     oxy_combobox( 
         edit, '@value',
         editable, false,
-        columns, 15,
-        values, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article',
-        labels, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article'
+        columns, 15
     );
     .uiElement();
     padding-left: 0.5em;
@@ -136,6 +224,10 @@
 
 *[class~="termentry/partOfSpeech"]:before {
     .hideContent();
+}
+
+*[class~="termentry/partOfSpeech"] {
+    .mainBlock();
 }
 
 *[class~="termentry/domains"]:before(10) {
@@ -284,8 +376,6 @@
         edit, '@language',
         editable, false,
         columns, 15,
-        values, 'af, ar-ae, ar-bh, ar-dz, ar-eg, ar-iq, ar-jo, ar-kw, ar-lb, ar-ly, ar-ma, ar-om, ar-qa, ar-sa, ar-sy, ar-tn, ar-ye, be, bg, ca, cs, da, de, de-at, de-ch, de-li, de-lu, el, en, en-au, en-bz, en-ca, en-gb, en-ie, en-jm, en-nz, en-tt, en-us, en-za, es, es-ar, es-bo, es-cl, es-co, es-cr, es-do, es-ec, es-gt, es-hn, es-mx, es-ni, es-pa, es-pe, es-pr, es-py, es-sv, es-uy, es-ve, et, eu, fa, fi, fo, fr, fr-be, fr-ca, fr-ch, fr-lu, ga, gd, he, hi, hr, hu, id, is, it, it-ch, ja, ji, ko, lt, lv, mk, ms, mt, nl, nl-be, no, pl, pt, pt-br, rm, ro, ro-mo, ru, ru-mo, sb, sk, sl, sq, sr, sv, sv-fi, sx, sz, th, tn, tr, ts, uk, ur, ve, vi, xh, zh-cn, zh-hk, zh-sg, zh-tw, zu',
-        labels, 'af, ar-ae, ar-bh, ar-dz, ar-eg, ar-iq, ar-jo, ar-kw, ar-lb, ar-ly, ar-ma, ar-om, ar-qa, ar-sa, ar-sy, ar-tn, ar-ye, be, bg, ca, cs, da, de, de-at, de-ch, de-li, de-lu, el, en, en-au, en-bz, en-ca, en-gb, en-ie, en-jm, en-nz, en-tt, en-us, en-za, es, es-ar, es-bo, es-cl, es-co, es-cr, es-do, es-ec, es-gt, es-hn, es-mx, es-ni, es-pa, es-pe, es-pr, es-py, es-sv, es-uy, es-ve, et, eu, fa, fi, fo, fr, fr-be, fr-ca, fr-ch, fr-lu, ga, gd, he, hi, hr, hu, id, is, it, it-ch, ja, ji, ko, lt, lv, mk, ms, mt, nl, nl-be, no, pl, pt, pt-br, rm, ro, ro-mo, ru, ru-mo, sb, sk, sl, sq, sr, sv, sv-fi, sx, sz, th, tn, tr, ts, uk, ur, ve, vi, xh, zh-cn, zh-hk, zh-sg, zh-tw, zu'
     );
     .uiElement();
     padding-left: 0.5em;
@@ -295,6 +385,18 @@
     -oxy-placeholder-content: "Definition";
     -oxy-show-placeholder: always;
 }
+
+*[class~="termentry/definitionSource"]:before(10) {
+    .beforeBlock();
+    content: "\A ${i18n(doctales.terminology.css.definitionSource)}";
+}
+
+*[class~="termentry/definitionSource"] {
+    .mainBlock();
+}
+
+
+
 
 *[class~="termentry/termNotation"] {
     .mainBlock();
@@ -345,9 +447,7 @@
     oxy_combobox( 
         edit, '@case',
         editable, false,
-        columns, 15,
-        values, 'nominative, dative, accusative, genitive',
-        labels, 'nominative, dative, accusative, genitive'
+        columns, 15
     );
     float: left;
     clear: left;
@@ -365,9 +465,7 @@
     oxy_combobox( 
         edit, '@number',
         editable, false,
-        columns, 15,
-        values, 'singular, plural',
-        labels, 'singular, plural'
+        columns, 15
     );
 }
 
