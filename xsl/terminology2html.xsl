@@ -100,12 +100,12 @@
             <xsl:element name="td">
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:choose>
-                    <xsl:when test="contains(@usage, 'allowed')">
+                    <xsl:when test="contains(@usage, 'preferred')">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Usage Allowed'"/>
                         </xsl:call-template>
                     </xsl:when>
-                    <xsl:when test="contains(@usage, 'deprecated')">
+                    <xsl:when test="contains(@usage, 'notRecommended')">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Usage Deprecated'"/>
                         </xsl:call-template>
