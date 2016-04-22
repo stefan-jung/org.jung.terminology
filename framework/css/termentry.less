@@ -112,6 +112,7 @@
         oxy_action_list(
             oxy_action(id, 'doctales.add.definition'),
             oxy_action(id, 'doctales.add.partOfSpeech'),
+            oxy_action(id, 'doctales.add.agreedWith'),
             oxy_action(id, 'doctales.add.equation-figure'),
             oxy_action(id, 'doctales.add.note'),
             oxy_action(id, 'doctales.add.fig'),
@@ -607,10 +608,7 @@
     .mainBlock();
 }
 
-
-
-*[class~="termentry/relatedTerm"]:before(8) {
-    content: "${i18n(doctales.terminology.label.related.term)}";
+*[class~="termentry/termRelation"]:before(8) {
     .uiElementLabel();
     padding-left: 0.5em;
     pointer-events: none;
@@ -620,56 +618,40 @@
     link: oxy_concat("", attr(keyref, keyref));
 }
 
-*[class~="termentry/relatedTerm"]:before(7) {
+*[class~="termentry/termRelation"]:before(7) {
     content:
     oxy_editor(type, combo, edit, "@keyref", columns, 50, fontInherit, false);
     .uiElement();
     padding-left: 0.5em;
 }
 
-*[class~="termentry/relatedTerm"] {
+*[class~="termentry/termRelation"]:before {
+    .hideContent();    
+}
+
+*[class~="termentry/termRelation"] {
+    .hideContent();   
     .mainBlock();
 }
 
-*[class~="termentry/relatedTerm"]:before {
-    display: none !important;
+*[class~="termentry/relatedTerm"]:before(8) {
+    content: "${i18n(doctales.terminology.label.related.term)}";
 }
 
-*[class~="termentry/relatedTerm"] {
-    .hideContent();
-}
-
-*[class~="termentry/antonym"]:before(10) {
+*[class~="termentry/antonym"]:before(8) {
     content: "${i18n(doctales.terminology.label.antonym)}";
-    .beforeBlock();
 }
 
-*[class~="termentry/antonym"] {
-    .mainBlock();
-}
-
-*[class~="termentry/hypernym"]:before(10) {
+*[class~="termentry/hypernym"]:before(8) {
     content: "${i18n(doctales.terminology.label.hypernym)}";
 }
 
-*[class~="termentry/hypernym"] {
-    .mainBlock();
-}
-
-*[class~="termentry/hyponym"]:before(10) {
+*[class~="termentry/hyponym"]:before(8) {
     content: "${i18n(doctales.terminology.label.hyponym)}";
 }
 
-*[class~="termentry/hyponym"] {
-    .mainBlock();
-}
-
-*[class~="termentry/isPartOf"]:before(10) {
+*[class~="termentry/isPartOf"]:before(8) {
     content: "${i18n(doctales.terminology.label.isPartOf)}";
-}
-
-*[class~="termentry/isPartOf"] {
-    .mainBlock();
 }
 
 *[class~="topic/abstract"]:before {

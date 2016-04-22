@@ -162,6 +162,32 @@
         <val lang="en_US">Delete Part of Speech (&lt;partOfSpeech&gt;)</val>
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) löschen</val>
     </key>
+    <!-- agreedWith -->
+    <key value="doctales.terminology.label.agreedWith">
+        <comment>Agreed With</comment>
+        <val lang="en_US">Agreed With</val>
+        <val lang="de_DE">Abgestimmt mit</val>
+    </key>
+    <key type="action" value="doctales.add.agreedWith">
+        <comment>Add an agreedWith element.</comment>
+        <val lang="en_US">Add agreements (&lt;agreedWith&gt;)</val>
+        <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.agreedWith_description">
+        <comment>Add an agreedWith element.</comment>
+        <val lang="en_US">Add agreements (&lt;agreedWith&gt;)</val>
+        <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.agreedWith">
+        <comment>Delete the current agreedWith element.</comment>
+        <val lang="en_US">Delete agreements (&lt;agreedWith&gt;)</val>
+        <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.agreedWith_description">
+        <comment>Delete the current agreedWith element.</comment>
+        <val lang="en_US">Delete agreements (&lt;agreedWith&gt;)</val>
+        <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) löschen</val>
+    </key>
     <!-- equation-figure -->
     <key value="doctales.terminology.label.equation-figure">
         <comment>equation-figure</comment>
@@ -612,11 +638,6 @@
         <comment>Domain</comment>
         <val lang="en_US">Domain</val>
         <val lang="de_DE">Domäne</val>
-    </key>
-    <key value="doctales.terminology.label.agreedWith">
-        <comment>Agreed With</comment>
-        <val lang="en_US">Agreed With</val>
-        <val lang="de_DE">Abgestimmt mit</val>
     </key>
     <key value="doctales.terminology.label.termCommitteeMember">
         <comment>Term Committee Member</comment>
