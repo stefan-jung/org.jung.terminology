@@ -607,12 +607,36 @@
     .mainBlock();
 }
 
-*[class~="termentry/relatedTerm"]:before(10) {
+
+
+*[class~="termentry/relatedTerm"]:before(8) {
     content: "${i18n(doctales.terminology.label.related.term)}";
+    .uiElementLabel();
+    padding-left: 0.5em;
+    pointer-events: none;
+    cursor: default;
+    text-decoration-style: dotted;
+    color: @labelColor !important;
+    link: oxy_concat("", attr(keyref, keyref));
+}
+
+*[class~="termentry/relatedTerm"]:before(7) {
+    content:
+    oxy_editor(type, combo, edit, "@keyref", columns, 50, fontInherit, false);
+    .uiElement();
+    padding-left: 0.5em;
 }
 
 *[class~="termentry/relatedTerm"] {
     .mainBlock();
+}
+
+*[class~="termentry/relatedTerm"]:before {
+    display: none !important;
+}
+
+*[class~="termentry/relatedTerm"] {
+    .hideContent();
 }
 
 *[class~="termentry/antonym"]:before(10) {
