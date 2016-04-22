@@ -382,7 +382,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="en" usage="preferred">
+																		<String>&lt;fullForm language="en-GB" usage="preferred">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -454,7 +454,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;abbreviation language="en" usage="preferred">
+																		<String>&lt;abbreviation language="en-GB" usage="preferred">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/abbreviation></String>
 																	</entry>
@@ -526,7 +526,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;acronym language="en" usage="preferred">
+																		<String>&lt;acronym language="en-GB" usage="preferred">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/acronym></String>
 																	</entry>
