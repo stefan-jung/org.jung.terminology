@@ -97,6 +97,7 @@
                             <xsl:value-of select="$notRecommendedTerm"/>
                             <xsl:text>')</xsl:text>
                         </xsl:attribute>
+                        <xsl:attribute name="role">warning</xsl:attribute>
                         <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
                         <xsl:text>The term '</xsl:text>
                         <xsl:value-of select="$notRecommendedTerm"/>
