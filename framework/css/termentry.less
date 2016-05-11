@@ -211,6 +211,50 @@
     .hideContent();
 }
 
+*[class~="termentry/annotation"]:before(10) {
+    .beforeBlock();
+    content: "\A ${i18n(doctales.terminology.label.annotation)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.annotation')
+        )
+    );
+}
+
+*[class~="termentry/annotation"] {
+    .mainBlock();
+}
+
+*[class~="termentry/termContext"]:before(10) {
+    .beforeBlock();
+    content: "\A ${i18n(doctales.terminology.label.termContext)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.termContext')
+        )
+    );
+}
+
+*[class~="termentry/termContext"] {
+    .mainBlock();
+}
+
+*[class~="termentry/termContextSource"]:before(10) {
+    .beforeBlock();
+    content: "\A ${i18n(doctales.terminology.label.termContextSource)}";
+}
+
+*[class~="termentry/termContextSource"] {
+    .mainBlock();
+}
 
 *[class~="termentry/partOfSpeech"]:before(10) {
     .beforeBlock();
