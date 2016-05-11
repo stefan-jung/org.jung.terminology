@@ -2177,7 +2177,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/definition ')][1])</String>
+																<String>self::*[contains(@class, ' termentry/definition ')] and not(child::*[contains(@class, ' termentry/definitionSource ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -2194,7 +2194,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -2606,6 +2606,68 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>104</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.definitionSource</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.definitionSource)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.definitionSource_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete-icon.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
