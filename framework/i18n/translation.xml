@@ -410,6 +410,16 @@
         <val lang="en_US">A termSource element contains the source of the term.</val>
         <val lang="de_DE">Ein termSource Element enthält die Quellenangabe eines Terms.</val>
     </key>
+    <key type="action" value="doctales.delete.termSource">
+        <comment>Delete termSource element.</comment>
+        <val lang="en_US">Delete term source (&lt;termSource&gt;)</val>
+        <val lang="de_DE">Termquelle (&lt;termSource&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.termSource_description">
+        <comment>Delete termSource element.</comment>
+        <val lang="en_US">Delete term source (&lt;termSource&gt;)</val>
+        <val lang="de_DE">Termquelle (&lt;termSource&gt;) löschen</val>
+    </key>
     <!-- annotation -->
     <key value="doctales.terminology.label.annotation">
         <comment>Annotation</comment>

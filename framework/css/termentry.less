@@ -146,7 +146,16 @@
 
 *[class~="termentry/termSource"]:before(10) {
     .beforeBlock();
-    content: "\A ${i18n(doctales.terminology.label.termSource)}";
+    content: "\A ${i18n(doctales.terminology.label.termSource)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.termSource')
+        )
+    );
 }
 
 *[class~="termentry/termSource"] {
@@ -478,6 +487,7 @@
 }
 
 *[class~="termentry/termVariant"] {
+    .mainBlock();
     visibility: -oxy-collapse-text;
 }
 
