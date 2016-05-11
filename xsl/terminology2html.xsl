@@ -4,6 +4,41 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="related-links xs">
     
+    <xsl:template match="*[contains(@class, ' termentry/definition ')]">
+        <xsl:element name="div">
+            <xsl:attribute name="class">section definition</xsl:attribute>
+            <xsl:element name="h2">
+                <xsl:attribute name="class">title sectiontitle</xsl:attribute>
+                <xsl:call-template name="getVariable">
+                    <xsl:with-param name="id" select="'Definition'"/>
+                </xsl:call-template>
+            </xsl:element>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/definitionText ')]">
+        <xsl:element name="p">
+            <xsl:attribute name="class">shortdesc definitionText</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
+        <xsl:element name="p">
+            <xsl:attribute name="class">definitionSource</xsl:attribute>
+            <xsl:element name="b">
+                <xsl:call-template name="getVariable">
+                    <xsl:with-param name="id" select="'Definition Source'"/>
+                </xsl:call-template>
+                <xsl:call-template name="getVariable">
+                    <xsl:with-param name="id" select="'Delimiter String'"/>
+                </xsl:call-template>
+            </xsl:element>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    
     <xsl:template match="*[contains(@class, ' termentry/termBody ')]">
         <!-- Does the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
@@ -144,7 +179,9 @@
                 </xsl:call-template>
             </xsl:element>
             <xsl:element name="br"/>
-            <xsl:apply-templates/>
+            <xsl:element name="ul">
+                <xsl:apply-templates/>    
+            </xsl:element>
         </xsl:element>
     </xsl:template>
     
@@ -155,6 +192,9 @@
                 <xsl:attribute name="class">termentryLabel</xsl:attribute>
                 <xsl:call-template name="getVariable">
                     <xsl:with-param name="id" select="'Term Committee Member'"/>
+                </xsl:call-template>
+                <xsl:call-template name="getVariable">
+                    <xsl:with-param name="id" select="'Delimiter String'"/>
                 </xsl:call-template>
             </xsl:element>
             <xsl:apply-templates/>
