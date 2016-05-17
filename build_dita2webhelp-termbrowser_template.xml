@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2tbx-basic">
+    
+    <target name="dita2webhelp-termbrowser"
+        depends="build-init,
+		check-license,
+		check-webhelp-feedback-parameters,
+		dita.map.webhelp.init,
+		preprocess,
+		xhtml.init,
+		xhtml.image-metadata,
+		dita.out.map.webhelp.toc,
+		dita.webhelp.sitemap.xml,
+		copy-webhelp-resources,
+		copy-css,
+		doctales.copy.css,
+		doctales.copy.hdf,
+		dita.topics.html.common,
+		dita.topics.xhtml,
+		doctales.hdf,
+		dita.inner.topics.webhelp,
+		dita.outer.topics.xhtml,
+		webhelp-indexterms,
+		create-main-files,
+		webhelp-index"/>
+	
+	<target name="doctales.copy.css">
+		<copy todir="${output.dir}/oxygen-webhelp/resources">
+			<fileset dir="${dita.dir}/plugins/org.doctales.terminology/flag-icon-css/"/>
+		</copy>
+	</target>
+	
+	<target name="doctales.hdf">
+		<property name="args.hdf" value="${output.dir}/oxygen-webhelp/resources/hdf/hdf.xml"/>
+	</target>
+	
+	<target name="doctales.copy.hdf">
+		<copy todir="${output.dir}/oxygen-webhelp/resources/hdf/">
+			<file file="${dita.dir}/plugins/org.doctales.terminology/hdf/hdf.xml"/>
+		</copy>
+	</target>
+</project>

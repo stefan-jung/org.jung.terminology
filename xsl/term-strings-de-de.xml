@@ -40,5 +40,6 @@
     <str name="Allowed">Zulässig</str>
     <str name="Deprecated">Verboten</str>
     
+    <str name="Separator"> </str>
     <str name="Delimiter String">: </str>
 </strings>

@@ -4,4 +4,5 @@
     <import file="build_dita2tbx-basic_template.xml"/>
     <import file="build_dita2termbrowser_template.xml"/>
     <import file="build_dita2termchecker_template.xml"/>
+    <import file="build_dita2webhelp-termbrowser_template.xml"/>
 </project>

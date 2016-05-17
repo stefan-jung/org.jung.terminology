@@ -4642,6 +4642,26 @@
 																</String-array>
 															</field>
 														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>webhelp-termbrowser</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
@@ -4669,7 +4689,7 @@
 													<null/>
 												</field>
 												<field name="name">
-													<String>Termbrowser</String>
+													<String>Termbrowser (based on &lt;oXygen/> XML Webhelp)</String>
 												</field>
 												<field name="baseURL">
 													<null/>

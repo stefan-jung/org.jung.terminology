@@ -36,7 +36,9 @@
       <val>bg</val> 
       <val>ca</val> 
       <val>cs</val> 
+      <val>cs-CZ</val> 
       <val>da</val> 
+      <val>da-DK</val> 
       <val>de</val> 
       <val>de-AT</val> 
       <val>de-CH</val>
@@ -44,11 +46,11 @@
       <val>de-LI</val> 
       <val>de-LU</val> 
       <val>el</val> 
-      <val>en</val>
+      <val>en</val> 
       <val>en-AU</val> 
       <val>en-BZ</val> 
       <val>en-CA</val> 
-      <val default="true">en-GB</val> 
+      <val>en-GB</val> 
       <val>en-IE</val> 
       <val>en-JM</val> 
       <val>en-NZ</val> 
@@ -106,6 +108,7 @@
       <val>nl-BE</val> 
       <val>no</val> 
       <val>pl</val> 
+      <val>pl-PL</val> 
       <val>pt</val> 
       <val>pt-BR</val> 
       <val>rm</val> 
@@ -159,7 +162,9 @@
       <val>bg</val> 
       <val>ca</val> 
       <val>cs</val> 
+      <val>cs-CZ</val> 
       <val>da</val> 
+      <val>da-DK</val> 
       <val>de</val> 
       <val>de-AT</val> 
       <val>de-CH</val>
@@ -167,11 +172,11 @@
       <val>de-LI</val> 
       <val>de-LU</val> 
       <val>el</val> 
-      <val>en</val>
+      <val>en</val> 
       <val>en-AU</val> 
       <val>en-BZ</val> 
       <val>en-CA</val> 
-      <val default="true">en-GB</val> 
+      <val>en-GB</val> 
       <val>en-IE</val> 
       <val>en-JM</val> 
       <val>en-NZ</val> 
@@ -229,6 +234,7 @@
       <val>nl-BE</val> 
       <val>no</val> 
       <val>pl</val> 
+      <val>pl-PL</val> 
       <val>pt</val> 
       <val>pt-BR</val> 
       <val>rm</val> 
@@ -287,7 +293,9 @@
       <val>bg</val> 
       <val>ca</val> 
       <val>cs</val> 
+      <val>cs-CZ</val> 
       <val>da</val> 
+      <val>da-DK</val> 
       <val>de</val> 
       <val>de-AT</val> 
       <val>de-CH</val>
@@ -295,11 +303,11 @@
       <val>de-LI</val> 
       <val>de-LU</val> 
       <val>el</val> 
-      <val>en</val>
+      <val>en</val> 
       <val>en-AU</val> 
       <val>en-BZ</val> 
       <val>en-CA</val> 
-      <val default="true">en-GB</val> 
+      <val>en-GB</val> 
       <val>en-IE</val> 
       <val>en-JM</val> 
       <val>en-NZ</val> 
@@ -357,6 +365,7 @@
       <val>nl-BE</val> 
       <val>no</val> 
       <val>pl</val> 
+      <val>pl-PL</val> 
       <val>pt</val> 
       <val>pt-BR</val> 
       <val>rm</val> 
@@ -393,6 +402,10 @@
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
   <feature extension="dita.conductor.transtype.check" value="tbx-basic"/>
   <transtype name="tbx-basic" extends="html5" desc="TBX-Basic"/>
+  
+  <!-- Termbrowser based on the <oXygen/> XML Webhelp transformation. -->
+  <feature extension="dita.conductor.transtype.check" value="webhelp-termbrowser"/>
+  <transtype name="webhelp-termbrowser" extends="webhelp" desc="TBX-Basic"/>
   
   <!-- Add new transtype to generate a termbrowser. -->
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
