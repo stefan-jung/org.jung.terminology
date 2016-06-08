@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2tbx-basic">
+<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2webhelp-termbrowser">
     
     <target name="dita2webhelp-termbrowser"
         depends="build-init,
