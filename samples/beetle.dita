@@ -21,7 +21,7 @@
   <fullForm usage="notRecommended" language="en">
    <termVariant>bug</termVariant>
   </fullForm>
-  <fullForm usage="preferred" language="en-us">
+  <fullForm usage="preferred" language="en-US">
    <annotation>The Name of the beetle in the USA is 'bug'</annotation>
    <termVariant>bug</termVariant>
   </fullForm>
