@@ -405,7 +405,7 @@
   
   <!-- Termbrowser based on the <oXygen/> XML Webhelp transformation. -->
   <feature extension="dita.conductor.transtype.check" value="webhelp-termbrowser"/>
-  <transtype name="webhelp-termbrowser" extends="webhelp" desc="TBX-Basic"/>
+  <transtype name="webhelp-termbrowser" extends="webhelp" desc="Termbrowser"/>
   
   <!-- Add new transtype to generate a termbrowser. -->
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
