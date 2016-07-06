@@ -8,7 +8,6 @@
         preprocess,
         html5.topic,
         html5.map,
-        html5.css,
         dita.topics.html.tbx-basic"/>
     
     <target name="tbx-basic.init">
