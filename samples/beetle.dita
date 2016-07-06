@@ -26,14 +26,7 @@
    <termVariant>bug</termVariant>
   </fullForm>
   <fullForm gender="masculine" usage="preferred" language="de">
-   <termVariant case="nominative" number="singular">Käfer</termVariant>
-   <termVariant case="dative" number="singular">Käfer</termVariant>
-   <termVariant case="accusative" number="singular">Käfer</termVariant>
-   <termVariant case="genitive" number="singular">Käfers</termVariant>
-   <termVariant case="nominative" number="plural">Käfer</termVariant>
-   <termVariant case="dative" number="plural">Käfern</termVariant>
-   <termVariant case="accusative" number="plural">Käfern</termVariant>
-   <termVariant case="genitive" number="plural">Käfer</termVariant>
+   <termVariant>Käfer</termVariant>
   </fullForm>
  </termBody>
  <related-terms>
