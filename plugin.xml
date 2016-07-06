@@ -405,11 +405,11 @@
   
   <!-- Termbrowser based on the <oXygen/> XML Webhelp transformation. -->
   <feature extension="dita.conductor.transtype.check" value="webhelp-termbrowser"/>
-  <transtype name="webhelp-termbrowser" extends="webhelp" desc="TBX-Basic"/>
+  <transtype name="webhelp-termbrowser" extends="webhelp" desc="Termbrowser based on the &lt;oXygen/&gt; XML Webhelp transformation."/>
   
   <!-- Add new transtype to generate a termbrowser. -->
-  <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
-  <transtype name="termbrowser" extends="html5" desc="Termbrowser"/>
+  <!--<feature extension="dita.conductor.transtype.check" value="termbrowser"/>
+  <transtype name="termbrowser" extends="html5" desc="Termbrowser"/>-->
 
   <!-- Overriding XSLT -->
   <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
