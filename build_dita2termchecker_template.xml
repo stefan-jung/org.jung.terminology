@@ -13,6 +13,11 @@
     
     <target name="terminology.init">
         <property name="root-chunk-override" value="to-content"/>
+        <condition property="args.language" value="en-GB">
+            <not>
+                <isset property="args.language"/>
+            </not>
+        </condition>
     </target>
     
     <target name="dita.topics.html.termchecker" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
@@ -25,6 +30,7 @@
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2schematron.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
+            <param name="language" expression="${args.language}" if="args.language"/>
             <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
             <xmlcatalog refid="dita.catalog"/>

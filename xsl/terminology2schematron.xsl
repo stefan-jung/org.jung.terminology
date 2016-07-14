@@ -16,6 +16,20 @@
         <xsl:text>
         </xsl:text>
     </xsl:variable>
+    
+    <!-- Language of the messages -->
+    <xsl:param name="language" required="yes"/>
+    
+    <xsl:function name="dtl:getString">
+        <xsl:param name="language"/>
+        <xsl:param name="name"/>
+        <xsl:variable name="file">
+            <xsl:text>termchecker-strings-</xsl:text>
+            <xsl:value-of select="$language"/>
+            <xsl:text>.xml</xsl:text>
+        </xsl:variable>
+        <xsl:sequence select="document($file)/descendant::str[@name = $name]"/>
+    </xsl:function>
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
     <xsl:template match="/">
@@ -23,7 +37,7 @@
             xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
             queryBinding="xslt2">
-            <sch:title>Terminology</sch:title>
+            <sch:title><xsl:value-of select="dtl:getString($language, 'Title')"/></sch:title>
             <xsl:apply-templates/>
         </sch:schema>
     </xsl:template>
@@ -99,9 +113,12 @@
                         </xsl:attribute>
                         <xsl:attribute name="role">warning</xsl:attribute>
                         <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
-                        <xsl:text>The term '</xsl:text>
+                        <xsl:value-of select="dtl:getString($language, 'TheTerm')"/>
+                        <xsl:text> '</xsl:text>
                         <xsl:value-of select="$notRecommendedTerm"/>
-                        <xsl:text>' is not allowed.</xsl:text>
+                        <xsl:text>' </xsl:text>
+                        <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
+                        <xsl:text>.</xsl:text>
                     </xsl:element>
 
                     <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
@@ -147,17 +164,20 @@
         <xsl:variable name="sqfTitle">
             <xsl:choose>
                 <xsl:when test="self::*[contains(@class, ' termentry/fullForm ')]">
-                    <xsl:text>Replace with an allowed term: '</xsl:text>
+                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedTerm')"/>
+                    <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
                 <xsl:when test="self::*[contains(@class, ' termentry/abbreviation ')]">
-                    <xsl:text>Replace with an allowed abbreviation: '</xsl:text>
+                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedAbbreviation')"/>
+                    <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
                 <xsl:when test="self::*[contains(@class, ' termentry/acronym ')]">
-                    <xsl:text>Replace with an allowed acronym: '</xsl:text>
+                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedAcronym')"/>
+                    <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
@@ -178,7 +198,8 @@
                 <xsl:choose>
                     <xsl:when test="$definition != ''">
                         <xsl:element name="sqf:p">
-                            <xsl:text>Definition: </xsl:text>
+                            <xsl:value-of select="dtl:getString($language, 'Definition')"/>
+                            <xsl:text>: </xsl:text>
                             <xsl:value-of select="$definition"/>
                         </xsl:element>
                     </xsl:when>

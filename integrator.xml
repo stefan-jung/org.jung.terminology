@@ -6,4 +6,7 @@
   <!-- Parameters for TBX-Min -->
   <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
   <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
+  
+  <!-- Parameters for termchecker -->
+  <param name="language" expression="${args.language}" if="args.language"/>
 </project>

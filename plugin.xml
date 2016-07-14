@@ -307,7 +307,7 @@
       <val>en-AU</val> 
       <val>en-BZ</val> 
       <val>en-CA</val> 
-      <val>en-GB</val> 
+      <val default="true">en-GB</val> 
       <val>en-IE</val> 
       <val>en-JM</val> 
       <val>en-NZ</val> 
