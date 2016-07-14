@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings xml:lang="de-de">
+    <str name="Title">Terminologie</str>
+    <str name="ReplaceWithAllowedTerm">Ersetze mit einem erlaubten Term</str>
+    <str name="ReplaceWithAllowedAbbreviation">Ersetze mit einer erlaubten Abkürzung</str>
+    <str name="ReplaceWithAllowedAcronym">Ersetze mit einem erlaubten Akronym</str>
+    <str name="Definition">Definition</str>
+    <str name="TheTerm">Der Term</str>
+    <str name="IsNotAllowed">ist nicht erlaubt</str>
+</strings>
