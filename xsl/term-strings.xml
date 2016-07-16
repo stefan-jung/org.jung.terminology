@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<langlist>
-    <lang xml:lang="de"     filename="term-strings-de-de.xml"/>
-    <lang xml:lang="de-de"  filename="term-strings-de-de.xml"/>
-    <lang xml:lang="de-DE"  filename="term-strings-de-de.xml"/>
-    <lang xml:lang="en"     filename="term-strings-en-us.xml"/>
-    <lang xml:lang="en-us"  filename="term-strings-en-us.xml"/>
-    <lang xml:lang="en-US"  filename="term-strings-en-us.xml"/>
-</langlist>

@@ -403,20 +403,6 @@
   <feature extension="dita.conductor.transtype.check" value="tbx-basic"/>
   <transtype name="tbx-basic" extends="html5" desc="TBX-Basic"/>
   
-  <!-- Termbrowser based on the <oXygen/> XML Webhelp transformation. -->
-  <feature extension="dita.conductor.transtype.check" value="webhelp-termbrowser"/>
-  <transtype name="webhelp-termbrowser" extends="webhelp" desc="Termbrowser based on the &lt;oXygen/&gt; XML Webhelp transformation."/>
-  
-  <!-- Add new transtype to generate a termbrowser. -->
-  <!--<feature extension="dita.conductor.transtype.check" value="termbrowser"/>
-  <transtype name="termbrowser" extends="html5" desc="Termbrowser"/>-->
-
-  <!-- Overriding XSLT -->
-  <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
-  
-  <!-- New strings -->
-  <feature extension="dita.xsl.strings" file="xsl/term-strings.xml"/>
-  
   <!--
     The contents of the 'build.xml' build file are added to the
     'dita.conductor.target.relative' extension point.
