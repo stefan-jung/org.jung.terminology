@@ -15,17 +15,17 @@
   <agreedWith>
    <termCommitteeMember>Winterkorn</termCommitteeMember>
   </agreedWith>
-  <fullForm usage="preferred" language="en">
+  <fullForm usage="preferred" language="en-GB">
    <termVariant>beetle</termVariant>
   </fullForm>
-  <fullForm usage="notRecommended" language="en">
+  <fullForm usage="notRecommended" language="en-GB">
    <termVariant>bug</termVariant>
   </fullForm>
   <fullForm usage="preferred" language="en-US">
    <annotation>The Name of the beetle in the USA is 'bug'</annotation>
    <termVariant>bug</termVariant>
   </fullForm>
-  <fullForm gender="masculine" usage="preferred" language="de">
+  <fullForm gender="masculine" usage="preferred" language="de-DE">
    <termVariant>Käfer</termVariant>
   </fullForm>
  </termBody>

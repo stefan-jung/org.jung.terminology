@@ -19,13 +19,13 @@
    <domain value="autos"/>
   </domains>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
+  <fullForm usage="preferred" language="en-GB">
    <termVariant>car</termVariant>
   </fullForm>
-  <fullForm usage="notRecommended" language="de">
+  <fullForm usage="notRecommended" language="de-DE">
    <termVariant>Automobil</termVariant>
   </fullForm>
-  <abbreviation usage="preferred" language="de">
+  <abbreviation usage="preferred" language="de-DE">
    <termVariant>Auto</termVariant>
   </abbreviation>
  </termBody>

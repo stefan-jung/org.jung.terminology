@@ -9,10 +9,10 @@
     </definitionSource>
   </definition>
   <termBody>
-    <fullForm usage="notRecommended" language="en">
+    <fullForm usage="notRecommended" language="en-GB">
       <termVariant>lorry</termVariant>
     </fullForm>
-    <fullForm usage="preferred" language="en">
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>truck</termVariant>
     </fullForm>
   </termBody>
