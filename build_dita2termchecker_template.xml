@@ -26,7 +26,7 @@
             includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
-            extension=".sch"
+            extension="-${args.language}.sch"
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2schematron.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
@@ -38,7 +38,7 @@
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >
-                <exclude name="**/${schematronFile}.sch"/>
+                <exclude name="**/${schematronFile}*.sch"/>
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
