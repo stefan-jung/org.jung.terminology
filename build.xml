@@ -2,5 +2,6 @@
 <project>
     <import file="build_dita2tbx-min_template.xml"/>
     <import file="build_dita2tbx-basic_template.xml"/>
-    <import file="build_dita2termchecker_template.xml"/>
+    <import file="build_dita2termchecker-dita_template.xml"/>
+    <import file="build_dita2termchecker-xliff_template.xml"/>
 </project>

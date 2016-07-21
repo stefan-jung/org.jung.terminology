@@ -269,8 +269,139 @@
   </transtype>
 
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
+  <feature extension="dita.conductor.transtype.check" value="termchecker-dita"/>
+  <transtype name="termchecker-dita" extends="html5" desc="Termchecker for DITA">
+    <param name="args.language" desc="Language of the terminology check rules" type="enum">
+      <val>af</val> 
+      <val>ar-AE</val> 
+      <val>ar-BH</val> 
+      <val>ar-DZ</val> 
+      <val>ar-EG</val> 
+      <val>ar-IQ</val> 
+      <val>ar-JO</val> 
+      <val>ar-KW</val> 
+      <val>ar-LB</val> 
+      <val>ar-LY</val> 
+      <val>ar-MA</val> 
+      <val>ar-OM</val> 
+      <val>ar-QA</val> 
+      <val>ar-SA</val> 
+      <val>ar-SY</val> 
+      <val>ar-TN</val> 
+      <val>ar-YE</val> 
+      <val>be</val> 
+      <val>bg</val> 
+      <val>ca</val> 
+      <val>cs</val> 
+      <val>cs-CZ</val> 
+      <val>da</val> 
+      <val>da-DK</val> 
+      <val>de</val> 
+      <val>de-AT</val> 
+      <val>de-CH</val>
+      <val>de-DE</val>
+      <val>de-LI</val> 
+      <val>de-LU</val> 
+      <val>el</val> 
+      <val>en</val> 
+      <val>en-AU</val> 
+      <val>en-BZ</val> 
+      <val>en-CA</val> 
+      <val default="true">en-GB</val> 
+      <val>en-IE</val> 
+      <val>en-JM</val> 
+      <val>en-NZ</val> 
+      <val>en-TT</val> 
+      <val>en-US</val> 
+      <val>en-ZA</val> 
+      <val>es</val> 
+      <val>es-AR</val> 
+      <val>es-BO</val> 
+      <val>es-CL</val> 
+      <val>es-CO</val> 
+      <val>es-CR</val> 
+      <val>es-DO</val> 
+      <val>es-EC</val> 
+      <val>es-GT</val> 
+      <val>es-HN</val> 
+      <val>es-MX</val> 
+      <val>es-NI</val> 
+      <val>es-PA</val> 
+      <val>es-PE</val> 
+      <val>es-PR</val> 
+      <val>es-PY</val> 
+      <val>es-SV</val> 
+      <val>es-UY</val> 
+      <val>es-VE</val> 
+      <val>et</val> 
+      <val>eu</val> 
+      <val>fa</val> 
+      <val>fi</val> 
+      <val>fo</val> 
+      <val>fr</val> 
+      <val>fr-BE</val> 
+      <val>fr-CA</val> 
+      <val>fr-CH</val> 
+      <val>fr-LU</val> 
+      <val>ga</val> 
+      <val>gd</val> 
+      <val>he</val> 
+      <val>hi</val> 
+      <val>hr</val> 
+      <val>hu</val> 
+      <val>id</val> 
+      <val>is</val> 
+      <val>it</val> 
+      <val>it-CH</val> 
+      <val>ja</val> 
+      <val>ji</val> 
+      <val>ko</val> 
+      <val>lt</val> 
+      <val>lv</val> 
+      <val>mk</val> 
+      <val>ms</val> 
+      <val>mt</val> 
+      <val>nl</val> 
+      <val>nl-BE</val> 
+      <val>no</val> 
+      <val>pl</val> 
+      <val>pl-PL</val> 
+      <val>pt</val> 
+      <val>pt-BR</val> 
+      <val>rm</val> 
+      <val>ro</val> 
+      <val>ro-MO</val> 
+      <val>ru</val> 
+      <val>ru-MO</val> 
+      <val>sb</val> 
+      <val>sk</val> 
+      <val>sl</val> 
+      <val>sq</val> 
+      <val>sr</val> 
+      <val>sv</val> 
+      <val>sv-FI</val> 
+      <val>sx</val> 
+      <val>sz</val> 
+      <val>th</val> 
+      <val>tn</val> 
+      <val>tr</val> 
+      <val>ts</val> 
+      <val>uk</val> 
+      <val>ur</val> 
+      <val>ve</val> 
+      <val>vi</val> 
+      <val>xh</val> 
+      <val>zh-CN</val> 
+      <val>zh-HK</val> 
+      <val>zh-SG</val> 
+      <val>zh-TW</val> 
+      <val>zu</val>
+    </param>
+  </transtype>
+  
+  <!-- Add new transtype to generate Schematron rules for terminology checks. -->
   <feature extension="dita.conductor.transtype.check" value="termchecker"/>
-  <transtype name="termchecker" extends="html5" desc="Termchecker Schematron rules">
+  <transtype name="termchecker-xliff" extends="html5" desc="Termchecker for XLIFF">
     <param name="args.language" desc="Language of the terminology check rules" type="enum">
       <val>af</val> 
       <val>ar-AE</val> 

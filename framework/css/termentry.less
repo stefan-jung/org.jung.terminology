@@ -153,6 +153,10 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
+            oxy_action(id, 'doctales.add.sourceName'),
+            oxy_action(id, 'doctales.add.sourceReference'),
+            oxy_action(id, 'doctales.delete.sourceName'),
+            oxy_action(id, 'doctales.delete.sourceReference'),
             oxy_action(id, 'doctales.delete.termSource')
         )
     );
@@ -354,7 +358,9 @@
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
             oxy_action(id, 'doctales.add.verb'),
-            oxy_action(id, 'doctales.delete.fullForm')
+            oxy_action(id, 'doctales.delete.fullForm'),
+            oxy_action(id, 'doctales.move.element.up'),
+            oxy_action(id, 'doctales.move.element.down')
         )
     );
 }
@@ -371,7 +377,9 @@
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
             oxy_action(id, 'doctales.add.verb'),
-            oxy_action(id, 'doctales.delete.abbreviation')
+            oxy_action(id, 'doctales.delete.abbreviation'),
+            oxy_action(id, 'doctales.move.element.up'),
+            oxy_action(id, 'doctales.move.element.down')
         )
     );
 }
@@ -388,7 +396,9 @@
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
             oxy_action(id, 'doctales.add.verb'),
-            oxy_action(id, 'doctales.delete.acronym')
+            oxy_action(id, 'doctales.delete.acronym'),
+            oxy_action(id, 'doctales.move.element.up'),
+            oxy_action(id, 'doctales.move.element.down')
         )
     );
 }
@@ -405,7 +415,9 @@
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
             oxy_action(id, 'doctales.add.verb'),
-            oxy_action(id, 'doctales.delete.verb')
+            oxy_action(id, 'doctales.delete.verb'),
+            oxy_action(id, 'doctales.move.element.up'),
+            oxy_action(id, 'doctales.move.element.down')
         )
     );
 }

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2termchecker">
+<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2termchecker-dita">
     
-    <target name="dita2termchecker"
-        depends="terminology.init,
+    <target name="dita2termchecker-dita"
+        depends="termchecker-dita.init,
         html5.init,
         build-init,
         preprocess,
         html5.topic,
         html5.map,
         html5.css,
-        dita.topics.html.termchecker"/>
+        dita.topics.html.termchecker-dita"/>
     
-    <target name="terminology.init">
+    <target name="termchecker-dita.init">
         <property name="root-chunk-override" value="to-content"/>
         <condition property="args.language" value="en-GB">
             <not>
@@ -20,14 +20,14 @@
         </condition>
     </target>
     
-    <target name="dita.topics.html.termchecker" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
+    <target name="dita.topics.html.termchecker-dita" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
             includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
-            extension="-${args.language}.sch"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2schematron.xsl"
+            extension="-DITA-${args.language}.sch"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termchecker-dita.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <param name="language" expression="${args.language}" if="args.language"/>
