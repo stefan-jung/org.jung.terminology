@@ -2404,7 +2404,31 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;sourceReference>&lt;/sourceReference></String>
+																		<String>&lt;sourceReference/></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termSource ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;sourceReference/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
