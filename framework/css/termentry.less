@@ -65,6 +65,14 @@
     content: "" !important;
 }
 
+.link {
+    pointer-events: none;
+    cursor: default;
+    text-decoration-style: dotted;
+    color: @labelColor !important;
+    text-decoration: none !important;    
+}
+
 .fontello {
     font-family: "fontello" !important;
     font-style: normal;
@@ -177,43 +185,92 @@
     oxy_textfield(
         edit, '#text',
         columns, 50
-    );
-    .uiElement();
-    padding-left: 0.5em;
+    )"\A";
+}
+
+*[class~="termentry/sourceName"]:before(1) {
+    display: none !important;
+}
+
+*[class~="termentry/sourceName"]:before {
+    display: none !important;
 }
 
 *[class~="termentry/sourceName"] {
     visibility: -oxy-collapse-text;
 }
 
-*[class~="termentry/sourceReference"]:before(8) {
+*[class~="termentry/sourceReference"]:before(10) {
     content: "${i18n(doctales.terminology.label.sourceReference)}: ";
     .uiElementLabel();
     padding-left: 0.5em;
-    link: attr(href);
-    -ah-link: attr(href);  
-    pointer-events: none;
-    cursor: default;
-    text-decoration-style: dotted;
-    color: @labelColor !important;
+    .link();
+}
+
+*[class~="termentry/sourceReference"]:before(9) {
+    content: "${i18n(doctales.terminology.label.sourceReference.text)}: ";
+    width: 5em;
+    .link();
+}
+
+*[class~="termentry/sourceReference"]:before(8) {
+    content:
+    oxy_textfield(
+          edit, '#text',
+          columns, 40
+    )"\A";
+    width: 10em;
 }
 
 *[class~="termentry/sourceReference"]:before(7) {
-    content: 
+    content: "${i18n(doctales.terminology.label.sourceReference.href)}: ";
+    width: 5em;
+    link: attr(href);
+    -ah-link: attr(href);  
+    .link();
+}
+
+*[class~="termentry/sourceReference"]:before(6) {
+    content:
     oxy_textfield(
         edit, '@href',
-        columns, 50
-    )"\A"
+        columns, 40
+    )"\A";
+    width: 10em;
+}
+
+*[class~="termentry/sourceReference"]:before(5) {
+    content: "${i18n(doctales.terminology.label.sourceReference.format)}: ";
+    width: 5em;
+    .link();
+}
+
+*[class~="termentry/sourceReference"]:before(4) {
+    content:
     oxy_combobox( 
         edit, '@format',
         columns, 8
-    )
+    );
+    width: 5em;
+}
+
+*[class~="termentry/sourceReference"]:before(3) {
+    content: "${i18n(doctales.terminology.label.sourceReference.scope)}: ";
+    width: 5em;
+    .link();
+}
+
+*[class~="termentry/sourceReference"]:before(2) {
+    content:
     oxy_combobox( 
         edit, '@scope',
-        columns, 17
+        columns, 20
     );
-    .uiElement();
-    padding-left: 0.5em;
+    width: 10em;
+}
+
+*[class~="termentry/sourceReference"]:before(1) {
+    .hideContent();
 }
 
 *[class~="termentry/sourceReference"]:before {
@@ -221,7 +278,8 @@
 }
 
 *[class~="termentry/sourceReference"] {
-    .hideContent();
+    visibility: -oxy-collapse-text;
+    display: inline;
 }
 
 *[class~="termentry/annotation"]:before(10) {

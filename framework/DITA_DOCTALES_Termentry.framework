@@ -1343,7 +1343,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>ancestor::*[contains(@class, ' termentry/termNotation ')][1]</String>
+																<String>self::*[contains(@class, 'termentry/termVariant ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1355,11 +1355,11 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termNotation ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as last child</String>
+																		<String>Before</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -2482,6 +2482,22 @@
 																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 															</field>
 														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termSource ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>child::*[contains(@class, ' termentry/sourceName ')][1]</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
 													</actionMode-array>
 												</field>
 												<field name="enabledInReadOnlyContext">
@@ -2531,6 +2547,22 @@
 														<actionMode>
 															<field name="xpathCondition">
 																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>descendant::*[contains(@class, ' termentry/sourceReference ')][1]</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termSource ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>

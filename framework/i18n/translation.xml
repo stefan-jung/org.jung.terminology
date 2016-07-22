@@ -136,6 +136,23 @@
         <val lang="en_US">Delete reference to source (&lt;sourceReference&gt;)</val>
         <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) löschen</val>
     </key>
+    <!-- sourceReference -->
+    <key value="doctales.terminology.label.sourceReference.text">
+        <val lang="en_US">Text</val>
+        <val lang="de_DE">Text</val>
+    </key>
+    <key value="doctales.terminology.label.sourceReference.href">
+        <val lang="en_US">href</val>
+        <val lang="de_DE">href</val>
+    </key>
+    <key value="doctales.terminology.label.sourceReference.format">
+        <val lang="en_US">format</val>
+        <val lang="de_DE">format</val>
+    </key>
+    <key value="doctales.terminology.label.sourceReference.scope">
+        <val lang="en_US">scope</val>
+        <val lang="de_DE">scope</val>
+    </key>
     <!-- partOfSpeech -->
     <key value="doctales.terminology.label.partOfSpeech">
         <comment>partOfSpeech</comment>
