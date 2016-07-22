@@ -6,6 +6,9 @@
 @placeholderColor: #BD4932;
 @focusedPlaceholderColor: #105B63;
 @borderColor: #3d3d3d;
+@preferredColor: #beffbe;
+@admittedColor: #feffbe;
+@notRecommendedColor: #ffbfbf;
 
 // Blocks
 
@@ -523,6 +526,18 @@
 
 *[class~="termentry/termNotation"] {
     .mainBlock();
+}
+
+*[class~="termentry/termNotation"][usage~="preferred"] {
+    background-color: @preferredColor !important;
+}
+
+*[class~="termentry/termNotation"][usage~="admitted"] {
+    background-color: @admittedColor !important;
+}
+
+*[class~="termentry/termNotation"][usage~="notRecommended"] {
+    background-color: @notRecommendedColor !important;
 }
 
 *[class~="termentry/termVariant"]:before(10) {
