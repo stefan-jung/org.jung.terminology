@@ -18,7 +18,11 @@
         <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]"/>
         <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended'][@language = $language]">
             <xsl:element name="sch:pattern">
-                <xsl:attribute name="id" select="$termentryId"/>
+                <xsl:attribute name="id">
+                    <xsl:value-of select="$termentryId"/>
+                    <xsl:text>-</xsl:text>
+                    <xsl:value-of select="generate-id()"/>
+                </xsl:attribute>
                 
                 <!-- The context text() matches the text content of all nodes. -->
                 <sch:rule context="text()">
