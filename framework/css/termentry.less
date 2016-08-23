@@ -56,6 +56,7 @@
     display: block;
     margin-top: -1.5em;
     margin-left: 10em;
+    padding-top: 0.1em;
 }
 
 .uiElementLabel {
@@ -633,20 +634,17 @@
 
 /* Antonyms */
 *[class~="termentry/antonyms"]:before(10) {
-    content: "${i18n(doctales.terminology.antonyms)}";
-    .beforeBlock();
-}
-
-*[class~="termentry/antonyms"]:before(9) {
-    content:
-    oxy_button(
-        action, oxy_action(
-            name, "${i18n(doctales.terminology.link.antonym)}", 
-            description, "${i18n(doctales.terminology.label.link.related.terms_description)}", 
-            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
-        ), 
-        showIcon, false
+    content: "${i18n(doctales.terminology.antonyms)} " 
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.antonym')
+        )
     );
+    .beforeBlock();
 }
 
 *[class~="termentry/antonyms"] {
@@ -655,20 +653,17 @@
 
 /* Are Part of */
 *[class~="termentry/arePartOf"]:before(10) {
-    content: "${i18n(doctales.terminology.arePartOf)}";
-    .beforeBlock();
-}
-
-*[class~="termentry/arePartOf"]:before(9) {
-    content:
-    oxy_button(
-        action, oxy_action(
-            name, "${i18n(doctales.terminology.link.isPartOf)}", 
-            description, "${i18n(doctales.terminology.label.link.related.terms_description)}", 
-            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
-        ), 
-        showIcon, false
+    content: "${i18n(doctales.terminology.arePartOf)} " 
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.partOf')
+        )
     );
+    .beforeBlock();
 }
 
 *[class~="termentry/arePartOf"] {
@@ -677,20 +672,17 @@
 
 /* Hypernyms */
 *[class~="termentry/hypernyms"]:before(10) {
-    content: "${i18n(doctales.terminology.hypernyms)}";
-    .beforeBlock();
-}
-
-*[class~="termentry/hypernyms"]:before(9) {
-    content:
-    oxy_button(
-        action, oxy_action(
-            name, "${i18n(doctales.terminology.link.hypernym)}", 
-            description, "${i18n(doctales.terminology.label.link.related.terms_description)}", 
-            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
-        ), 
-        showIcon, false
+    content: "${i18n(doctales.terminology.hypernyms)} " 
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.hypernym')
+        )
     );
+    .beforeBlock();
 }
 
 *[class~="termentry/hypernyms"] {
@@ -699,20 +691,17 @@
 
 /* Hyponyms */
 *[class~="termentry/hyponyms"]:before(10) {
-    content: "${i18n(doctales.terminology.hyponyms)}";
-    .beforeBlock();
-}
-
-*[class~="termentry/hyponyms"]:before(9) {
-    content:
-    oxy_button(
-        action, oxy_action(
-            name, "${i18n(doctales.terminology.link.hyponym)}", 
-            description, "${i18n(doctales.terminology.label.link.related.terms_description)}", 
-            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
-        ), 
-        showIcon, false
+    content: "${i18n(doctales.terminology.hyponyms)} " 
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.hyponym')
+        )
     );
+    .beforeBlock();
 }
 
 *[class~="termentry/hyponyms"] {
@@ -721,20 +710,17 @@
 
 /* Related Terms */
 *[class~="termentry/relatedTerms"]:before(10) {
-    content: "${i18n(doctales.terminology.label.related.terms)}";
-    .beforeBlock();
-}
-
-*[class~="termentry/relatedTerms"]:before(9) {
-    content:
-    oxy_button(
-        action, oxy_action(
-            name, "${i18n(doctales.terminology.link.relatedTerm)}", 
-            description, "${i18n(doctales.terminology.label.link.related.terms_description)}", 
-            operation, "ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation"
-        ), 
-        showIcon, false
+    content: "${i18n(doctales.terminology.relatedTerms)} " 
+    oxy_buttonGroup(
+        label, '',
+        icon, url('../icons/pencil-icon.png'),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.relatedTerm')
+        )
     );
+    .beforeBlock();
 }
 
 *[class~="termentry/relatedTerms"] {
@@ -764,7 +750,7 @@
 
 *[class~="termentry/termRelation"] {
     .hideContent();   
-    .mainBlock();
+    list-style: none;
 }
 
 *[class~="termentry/relatedTerm"]:before(8) {

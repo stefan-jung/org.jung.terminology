@@ -531,11 +531,11 @@
         <val lang="en_US">An antonyms element contains references to antonyms of the current term.</val>
         <val lang="de_DE">Ein antonyms Element enthält Referenzen zu Antonymen des aktuellen Begriffs.</val>
     </key>
-    <key value="doctales.terminology.link.antonym">
+    <key value="doctales.add.antonym">
         <val lang="en_US">Link an antonym</val>
         <val lang="de_DE">Antonym verlinken</val>
     </key>
-    <key value="doctales.terminology.link.antonym_description">
+    <key value="doctales.add.antonym_description">
         <val lang="en_US">Add link to an antonym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Antonym, um ein semantisches Netz zu bilden.</val>
     </key>
@@ -554,11 +554,11 @@
         <val lang="en_US">An arePartOf element contains references to parts of the current term.</val>
         <val lang="de_DE">Ein arePartOf Element enthält Referenzen zu Bestandteilen des aktuellen Begriffs.</val>
     </key>
-    <key value="doctales.terminology.link.isPartOf">
+    <key value="doctales.add.partOf">
         <val lang="en_US">Link an isPartOf</val>
         <val lang="de_DE">Bestandteil verlinken</val>
     </key>
-    <key value="doctales.terminology.link.isPartof_description">
+    <key value="doctales.add.partOf_description">
         <val lang="en_US">Add link to an isPartOf to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Bestandteil, um ein semantisches Netz zu bilden.</val>
     </key>
@@ -577,11 +577,11 @@
         <val lang="en_US">A hypernyms element contains references to hypernyms.</val>
         <val lang="de_DE">Ein hypernyms Element enthält Referenzen zu Hypernymen des aktuellen Begriffs.</val>
     </key>
-    <key value="doctales.terminology.link.hypernym">
+    <key value="doctales.add.hypernym">
         <val lang="en_US">Link a hypernym</val>
         <val lang="de_DE">Hypernym verlinken</val>
     </key>
-    <key value="doctales.terminology.link.hypernym_description">
+    <key value="doctales.add.hypernym_description">
         <val lang="en_US">Add link to a hypernym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Hypernym, um ein semantisches Netz zu bilden.</val>
     </key>
@@ -600,11 +600,11 @@
         <val lang="en_US">A hyponyms element contains references to hyponyms.</val>
         <val lang="de_DE">Ein hyponyms Element enthält Referenzen zu Hyponymen des aktuellen Begriffs.</val>
     </key>
-    <key value="doctales.terminology.link.hyponym">
+    <key value="doctales.add.hyponym">
         <val lang="en_US">Link a hyponym</val>
         <val lang="de_DE">Hyponym verlinken</val>
     </key>
-    <key value="doctales.terminology.link.hyponym_description">
+    <key value="doctales.add.hyponym_description">
         <val lang="en_US">Add link to a hyponym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Hyponym, um ein semantisches Netz zu bilden.</val>
     </key>
@@ -623,11 +623,11 @@
         <val lang="en_US">A relatedTerms element contains references to related terms.</val>
         <val lang="de_DE">Ein relatedTerms Element enthält Referenzen zu verwandten Begriffen.</val>
     </key>
-    <key value="doctales.terminology.link.relatedTerm">
+    <key value="doctales.add.relatedTerm">
         <val lang="en_US">Link a related term</val>
         <val lang="de_DE">Verwandten Begriff verlinken</val>
     </key>
-    <key value="doctales.terminology.link.relatedTerm_description">
+    <key value="doctales.add.relatedTerm_description">
         <val lang="en_US">Add link to a related term to model a semantic net</val>
         <val lang="de_DE">Verlinke einen verwandten Begriff, um ein semantisches Netz zu bilden.</val>
     </key>
