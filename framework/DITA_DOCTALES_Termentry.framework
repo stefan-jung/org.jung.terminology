@@ -388,11 +388,11 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as last child</String>
+																		<String>After</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -486,11 +486,11 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as last child</String>
+																		<String>After</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -584,11 +584,11 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as last child</String>
+																		<String>After</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -682,11 +682,11 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as last child</String>
+																		<String>After</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
