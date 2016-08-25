@@ -21,5 +21,17 @@
    <relatedTerm keyref="wheel"/>
    <relatedTerm keyref="car"/>
   </relatedTerms>
+  <antonyms>
+   <antonym/>
+  </antonyms>
+  <arePartOf>
+   <partOf/>
+  </arePartOf>
+  <hypernyms>
+   <hypernym/>
+  </hypernyms>
+  <hyponyms>
+   <hyponym/>
+  </hyponyms>
  </relations>
 </termentry>

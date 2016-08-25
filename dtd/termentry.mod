@@ -35,7 +35,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % hypernyms             "hypernyms"                                            >
 <!ENTITY % hyponym               "hyponym"                                              >
 <!ENTITY % hyponyms              "hyponyms"                                             >
-<!ENTITY % isPartOf              "isPartOf"                                             >
+<!ENTITY % partOf                "partOf"                                               >
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
 <!ENTITY % relations             "relations"                                            >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
@@ -468,7 +468,7 @@ Category: Termentry elements-->
                                      type
                                         CDATA
                                            'antonyms'">
-<!--doc:The <antonyms> element contains references to antonyms.
+<!--doc:The <antonyms> element contains references to <antonym> elements.
 Category: Termentry elements-->
 <!ELEMENT  antonyms %antonyms.content;>
 <!ATTLIST  antonyms %antonyms.attributes;>
@@ -479,7 +479,7 @@ Category: Termentry elements-->
                                      type
                                         CDATA
                                            'hypernyms'">
-<!--doc:The <hypernyms> element contains references to hypernyms.
+<!--doc:The <hypernyms> element contains references to <hypernym> elements.
 Category: Termentry elements-->
 <!ELEMENT  hypernyms %hypernyms.content;>
 <!ATTLIST  hypernyms %hypernyms.attributes;>
@@ -490,18 +490,18 @@ Category: Termentry elements-->
                                      type
                                         CDATA
                                            'hyponyms'">
-<!--doc:The <hyponyms> element contains references to hyponyms.
+<!--doc:The <hyponyms> element contains references to <hyponym> elements.
 Category: Termentry elements-->
 <!ELEMENT  hyponyms %hyponyms.content;>
 <!ATTLIST  hyponyms %hyponyms.attributes;>
 
 <!--                                 LONG NAME: Are Part Of                           -->
-<!ENTITY % arePartOf.content        "((%isPartOf;)+)">
+<!ENTITY % arePartOf.content        "((%partOf;)+)">
 <!ENTITY % arePartOf.attributes     "%termLinkGroup-atts;
                                      type
                                         CDATA
                                            'arePartOf'">
-<!--doc:The <arePartOf> element contains references to isPartOf elements.
+<!--doc:The <arePartOf> element contains references to <partOf> elements.
 Category: Termentry elements-->
 <!ELEMENT  arePartOf %arePartOf.content;>
 <!ATTLIST  arePartOf %arePartOf.attributes;>
@@ -512,7 +512,7 @@ Category: Termentry elements-->
                                      type
                                         CDATA
                                            'relatedTerms'">
-<!--doc:The <relatedTerms> element contains references to relatedTerm elements.
+<!--doc:The <relatedTerms> element contains references to <relatedTerm> elements.
 Category: Termentry elements-->
 <!ELEMENT  relatedTerms %relatedTerms.content;>
 <!ATTLIST  relatedTerms %relatedTerms.attributes;>
@@ -717,11 +717,11 @@ Category: Termentry elements-->
 <!ATTLIST hyponym         %hyponym.attributes;>
 
 <!--                                 LONG NAME: Is Part Of                            -->
-<!ENTITY % isPartOf.attributes      "%termLink-atts;">
-<!--doc:The <isPartOf> element indicates, that the current term is part ot the referenced term.
+<!ENTITY % partOf.attributes      "%termLink-atts;">
+<!--doc:The <partOf> element indicates, that the current term is part ot the referenced term.
 Category: Termentry elements-->
-<!ELEMENT isPartOf        %link.content;>
-<!ATTLIST isPartOf        %isPartOf.attributes;>
+<!ELEMENT partOf        %link.content;>
+<!ATTLIST partOf        %partOf.attributes;>
 
 <!--                                 LONG NAME: Related Term                          -->
 <!ENTITY % relatedTerm.attributes   "%termLink-atts;">
@@ -742,32 +742,32 @@ Category: Termentry elements-->
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
 <!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/antonyms ">
+<!ATTLIST arePartOf             %global-atts;   class CDATA "- topic/linklist termentry/arePartOf ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
 <!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termentry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
-<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/text termentry/sourceName ">
-<!ATTLIST sourceReference       %global-atts;   class CDATA "- topic/xref concept/xref termentry/sourceReference ">
-<!ATTLIST domains               %global-atts;   class CDATA "- topic/div termentry/domains ">
 <!ATTLIST domain                %global-atts;   class CDATA "- topic/data concept/data termentry/domain ">
+<!ATTLIST domains               %global-atts;   class CDATA "- topic/div termentry/domains ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
 <!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hypernym ">
 <!ATTLIST hypernyms             %global-atts;   class CDATA "- topic/linklist termentry/hypernyms ">
 <!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hyponym ">
 <!ATTLIST hyponyms              %global-atts;   class CDATA "- topic/linklist termentry/hyponyms ">
-<!ATTLIST isPartOf              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/isPartOf ">
-<!ATTLIST arePartOf             %global-atts;   class CDATA "- topic/linklist termentry/arePartOf ">
+<!ATTLIST partOf                %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/partOf ">
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
-<!ATTLIST relations             %global-atts;   class CDATA "- topic/related-links termentry/relations ">
 <!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/linklist termentry/relatedTerms ">
+<!ATTLIST relations             %global-atts;   class CDATA "- topic/related-links termentry/relations ">
+<!ATTLIST sourceName            %global-atts;   class CDATA "- topic/text termentry/sourceName ">
+<!ATTLIST sourceReference       %global-atts;   class CDATA "- topic/xref concept/xref termentry/sourceReference ">
+<!ATTLIST termBody              %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
+<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/li termentry/termCommitteeMember ">
 <!ATTLIST termContext           %global-atts;   class CDATA "- topic/div termentry/termContext ">
 <!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/div termentry/termContextSource ">
 <!ATTLIST termContextText       %global-atts;   class CDATA "- topic/text termentry/termContextText ">
 <!ATTLIST termSource            %global-atts;   class CDATA "- topic/text termentry/termSource ">
-<!ATTLIST termBody              %global-atts;   class CDATA "- topic/body concept/conbody termentry/termBody ">
 <!ATTLIST termVariant           %global-atts;   class CDATA "- topic/text termentry/termVariant ">
 <!ATTLIST termentry             %global-atts;   class CDATA "- topic/topic concept/concept termentry/termentry ">
-<!ATTLIST termCommitteeMember   %global-atts;   class CDATA "- topic/li termentry/termCommitteeMember ">
 <!ATTLIST verb                  %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/verb ">
 
 <!-- ================================= End of file ================================== -->

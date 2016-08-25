@@ -623,7 +623,8 @@
             oxy_action(id, 'doctales.add.arePartOf'),
             oxy_action(id, 'doctales.add.hypernyms'),
             oxy_action(id, 'doctales.add.hyponyms'),
-            oxy_action(id, 'doctales.add.relatedTerms')
+            oxy_action(id, 'doctales.add.relatedTerms'),
+            oxy_action(id, 'doctales.delete.relations')
         )
     );
 }
@@ -641,7 +642,8 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.antonym')
+            oxy_action(id, 'doctales.add.antonym'),
+            oxy_action(id, 'doctales.delete.antonyms')
         )
     );
     .beforeBlock();
@@ -660,7 +662,8 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.partOf')
+            oxy_action(id, 'doctales.add.partOf'),
+            oxy_action(id, 'doctales.delete.arePartOf')
         )
     );
     .beforeBlock();
@@ -679,7 +682,8 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.hypernym')
+            oxy_action(id, 'doctales.add.hypernym'),
+            oxy_action(id, 'doctales.delete.hypernyms')
         )
     );
     .beforeBlock();
@@ -698,7 +702,8 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.hyponym')
+            oxy_action(id, 'doctales.add.hyponym'),
+            oxy_action(id, 'doctales.delete.hyponyms')
         )
     );
     .beforeBlock();
@@ -717,7 +722,8 @@
         transparent, 'true',
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.relatedTerm')
+            oxy_action(id, 'doctales.add.relatedTerm'),
+            oxy_action(id, 'doctales.delete.relatedTerms')
         )
     );
     .beforeBlock();
@@ -769,8 +775,8 @@
     content: "${i18n(doctales.terminology.label.hyponym)}";
 }
 
-*[class~="termentry/isPartOf"]:before(8) {
-    content: "${i18n(doctales.terminology.label.isPartOf)}";
+*[class~="termentry/partOf"]:before(8) {
+    content: "${i18n(doctales.terminology.label.partOf)}";
 }
 
 *[class~="topic/abstract"]:before {

@@ -539,6 +539,22 @@
         <val lang="en_US">Add link to an antonym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Antonym, um ein semantisches Netz zu bilden.</val>
     </key>
+    <key value="doctales.delete.antonym">
+        <val lang="en_US">Delete link to antonym</val>
+        <val lang="de_DE">Link auf Antonym löschen</val>
+    </key>
+    <key value="doctales.delete.antonym_description">
+        <val lang="en_US">Delete link to antonym</val>
+        <val lang="de_DE">Link auf Antonym löschen</val>
+    </key>
+    <key value="doctales.delete.antonyms">
+        <val lang="en_US">Delete links to antonyms</val>
+        <val lang="de_DE">Links auf Antonyme löschen</val>
+    </key>
+    <key value="doctales.delete.antonyms_description">
+        <val lang="en_US">Delete links to antonyms</val>
+        <val lang="de_DE">Links auf Antonyme löschen</val>
+    </key>
     <!-- arePartOf -->
     <key value="doctales.terminology.arePartOf">
         <val lang="en_US">Are Part of</val>
@@ -555,12 +571,28 @@
         <val lang="de_DE">Ein arePartOf Element enthält Referenzen zu Bestandteilen des aktuellen Begriffs.</val>
     </key>
     <key value="doctales.add.partOf">
-        <val lang="en_US">Link an isPartOf</val>
+        <val lang="en_US">Link a partOf</val>
         <val lang="de_DE">Bestandteil verlinken</val>
     </key>
     <key value="doctales.add.partOf_description">
-        <val lang="en_US">Add link to an isPartOf to model a semantic net</val>
+        <val lang="en_US">Add link to a partOf to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Bestandteil, um ein semantisches Netz zu bilden.</val>
+    </key>
+    <key value="doctales.delete.partOf">
+        <val lang="en_US">Delete link to partOf</val>
+        <val lang="de_DE">Link auf Bestandteil löschen</val>
+    </key>
+    <key value="doctales.delete.partOf_description">
+        <val lang="en_US">Delete link to partOf</val>
+        <val lang="de_DE">Link auf Bestandteil löschen</val>
+    </key>
+    <key value="doctales.delete.arePartOf">
+        <val lang="en_US">Delete links to parts of the current term</val>
+        <val lang="de_DE">Links auf Bestandteile löschen</val>
+    </key>
+    <key value="doctales.delete.arePartOf_description">
+        <val lang="en_US">Delete links to parts of the current term</val>
+        <val lang="de_DE">Links auf Bestandteile löschen</val>
     </key>
     <!-- hypernyms -->
     <key value="doctales.terminology.hypernyms">
@@ -585,6 +617,22 @@
         <val lang="en_US">Add link to a hypernym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Hypernym, um ein semantisches Netz zu bilden.</val>
     </key>
+    <key value="doctales.delete.hypernym">
+        <val lang="en_US">Delete link to hypernym</val>
+        <val lang="de_DE">Link auf Hypernym löschen</val>
+    </key>
+    <key value="doctales.delete.hypernym_description">
+        <val lang="en_US">Delete link to hypernym</val>
+        <val lang="de_DE">Link auf Hypernym löschen</val>
+    </key>
+    <key value="doctales.delete.hypernyms">
+        <val lang="en_US">Delete links to hypernyms</val>
+        <val lang="de_DE">Links auf Hypernyme löschen</val>
+    </key>
+    <key value="doctales.delete.hypernyms_description">
+        <val lang="en_US">Delete links to hypernyms</val>
+        <val lang="de_DE">Links auf Hypernyme löschen</val>
+    </key>
     <!-- hyponyms -->
     <key value="doctales.terminology.hyponyms">
         <val lang="en_US">Hyponyms</val>
@@ -607,6 +655,22 @@
     <key value="doctales.add.hyponym_description">
         <val lang="en_US">Add link to a hyponym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Hyponym, um ein semantisches Netz zu bilden.</val>
+    </key>
+    <key value="doctales.delete.hyponym">
+        <val lang="en_US">Delete link to hyponym</val>
+        <val lang="de_DE">Link auf Hyponym löschen</val>
+    </key>
+    <key value="doctales.delete.hyponym_description">
+        <val lang="en_US">Delete link to hyponym</val>
+        <val lang="de_DE">Link auf Hyponym löschen</val>
+    </key>
+    <key value="doctales.delete.hyponyms">
+        <val lang="en_US">Delete links to hyponym</val>
+        <val lang="de_DE">Links auf Hyponyme löschen</val>
+    </key>
+    <key value="doctales.delete.hyponyms_description">
+        <val lang="en_US">Delete links to hyponyms</val>
+        <val lang="de_DE">Links auf Hyponyme löschen</val>
     </key>
     <!-- relatedTerms -->
     <key value="doctales.terminology.relatedTerms">
@@ -631,7 +695,23 @@
         <val lang="en_US">Add link to a related term to model a semantic net</val>
         <val lang="de_DE">Verlinke einen verwandten Begriff, um ein semantisches Netz zu bilden.</val>
     </key>
-    
+    <key value="doctales.delete.relatedTerm">
+        <val lang="en_US">Delete link to related term</val>
+        <val lang="de_DE">Link auf verwandten Begriff löschen</val>
+    </key>
+    <key value="doctales.delete.relatedTerm_description">
+        <val lang="en_US">Delete link to related term</val>
+        <val lang="de_DE">Link auf verwandten Begriff löschen</val>
+    </key>
+    <key value="doctales.delete.relatedTerms">
+        <val lang="en_US">Delete links to related terms</val>
+        <val lang="de_DE">Links auf verwandte Begriffe löschen</val>
+    </key>
+    <key value="doctales.delete.relatedTerms_description">
+        <val lang="en_US">Delete links to related terms</val>
+        <val lang="de_DE">Links auf verwandte Begriffe löschen</val>
+    </key>
+
     <!-- CSS Labels -->
     <key value="doctales.terminology.label.termVariant">
         <comment>termVariant</comment>
@@ -768,7 +848,7 @@
         <val lang="en_US">Hyponym</val>
         <val lang="de_DE">Hyponym</val>
     </key>
-    <key value="doctales.terminology.label.isPartOf">
+    <key value="doctales.terminology.label.partOf">
         <comment>Is Part Of</comment>
         <val lang="en_US">Is Part Of</val>
         <val lang="de_DE">Ist Teil von</val>
