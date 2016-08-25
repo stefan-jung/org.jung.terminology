@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<serialized version="17.1" xml:space="preserve"> 
+  <serializableOrderedMap> 
+    <entry> 
+      <String>document.types</String> 
+      <documentTypeDescriptor-array> 
+        <documentTypeDescriptor> 
+          <field name="extensionPatch"> 
+            <documentTypeDescriptorPatch> 
+              <field name="patchList"> 
+                <list> 
+                  <poPatch> 
+                    <field name="fieldPath"> 
+                      <String>name</String> 
+                    </field> 
+                    <field name="index"> 
+                      <Integer>-1</Integer> 
+                    </field> 
+                    <field name="value"> 
+                      <String>DITA DOCTALES Termentry</String> 
+                    </field> 
+                    <field name="patchHandling"> 
+                      <String>set</String> 
+                    </field> 
+                    <field name="anchor"> 
+                      <null/> 
+                    </field> 
+                  </poPatch> 
+                  <poPatch> 
+                    <field name="fieldPath"> 
+                      <String>classpath</String> 
+                    </field> 
+                    <field name="index"> 
+                      <Integer>5</Integer> 
+                    </field> 
+                    <field name="value"> 
+                      <String>${framework}/i18n/</String> 
+                    </field> 
+                    <field name="patchHandling"> 
+                      <String>addIndex</String> 
+                    </field> 
+                    <field name="anchor"> 
+                      <null/> 
+                    </field> 
+                  </poPatch> 
+                  <poPatch> 
+                    <field name="fieldPath"> 
+                      <String>authorExtensionDescriptor/cssDescriptors</String> 
+                    </field> 
+                    <field name="index"> 
+                      <Integer>17</Integer> 
+                    </field> 
+                    <field name="value"> 
+                      <cssFile> 
+                        <field name="href"> 
+                          <String>${framework}/css/termentry.less</String> 
+                        </field> 
+                        <field name="title"> 
+                          <String>DOCTALES Termentry</String> 
+                        </field> 
+                        <field name="alternate"> 
+                          <Boolean>true</Boolean> 
+                        </field> 
+                      </cssFile> 
+                    </field> 
+                    <field name="patchHandling"> 
+                      <String>addIndex</String> 
+                    </field> 
+                    <field name="anchor"> 
+                      <null/> 
+                    </field> 
+                  </poPatch> 
+                  <poPatch> 
+                    <field name="fieldPath"> 
+                      <field name="allowAutomaticValidation"> 
+                        <Boolean>false</Boolean> 
+                      </field> 
+                      <field name="extensions"> 
+                        <null/> 
+                      </field> 
+                      <field name="validationSchema"> 
+                        <validationUnitSchema> 
+                          <field name="dtdSchemaPublicID"> 
+                            <null/> 
+                          </field> 
+                          <field name="schematronPhase"> 
+                            <null/> 
+                          </field> 
+                          <field name="type"> 
+                            <Integer>7</Integer> 
+                          </field> 
+                          <field name="uri"> 
+                            <String>${framework}/styleguide/rules/styleguide.sch</String> 
+                          </field> 
+                        </validationUnitSchema> 
+                      </field> 
+                    </validationUnit> 
+                  </list> 
+                </field> 
+                <field name="type"> 
+                  <String>Validation_scenario</String> 
+                </field> 
+                <field name="name"> 
+                  <String>DITA</String> 
+                </field> 
+              </validationScenario> 
+            </validationScenario-array> 
+          </field> 
+          <field name="defaultValidationScenarios"> 
+            <list> 
+              <String>DITA</String> 
+            </list> 
+          </field> 
+          <field name="defaultTransformationScenarios"> 
+            <null/> 
+          </field> 
+          <field name="extensionsBundleClassName"> 
+            <String>ro.sync.ecss.extensions.dita.DITAExtensionsBundle</String> 
+          </field> 
+          <field name="useImposedInitialPage"> 
+            <Boolean>true</Boolean> 
+          </field> 
+          <field name="imposedInitialPage"> 
+            <String>Author</String> 
+          </field> 
+          <field name="elementLocatorExtension"> 
+            <null/> 
+          </field> 
+          <field name="schemaManagerFilterExtension"> 
+            <null/> 
+          </field> 
+          <field name="authorSWTDndExtension"> 
+            <null/> 
+          </field> 
+          <field name="textSWTDndExtension"> 
+            <null/> 
+          </field> 
+          <field name="authorSwingDndExtension"> 
+            <null/> 
+          </field> 
+          <field name="cssStylesFilterExtension"> 
+            <null/> 
+          </field> 
+          <field name="attributesValueEditor"> 
+            <null/> 
+          </field> 
+          <field name="priority"> 
+            <Integer>2</Integer> 
+          </field> 
+          <field name="xmlNodeCustomizerExtension"> 
+            <null/> 
+          </field> 
+          <field name="externalObjectInsertionHandler"> 
+            <null/> 
+          </field> 
+          <field name="customAttributeValueEditor"> 
+            <null/> 
+          </field> 
+        </documentTypeDescriptor> 
+      </documentTypeDescriptor-array> 
+    </entry> 
+  </serializableOrderedMap> 
+</serialized>
