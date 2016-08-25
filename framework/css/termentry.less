@@ -147,7 +147,7 @@
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
             oxy_action(id, 'doctales.add.verb'),
-            oxy_action(id, 'doctales.add.related-terms')
+            oxy_action(id, 'doctales.add.relations')
         )
     );
 }
@@ -609,10 +609,10 @@
     );
 }
 
-/* related-terms */
-*[class~="termentry/related-terms"]:before(10) {
+/* relations */
+*[class~="termentry/relations"]:before(10) {
     .beforeBlock();
-    content: "${i18n(doctales.terminology.label.related-terms)}"
+    content: "${i18n(doctales.terminology.label.relations)}"
     oxy_buttonGroup(
         label, '',
         icon, url('../icons/pencil-icon.png'),
@@ -628,7 +628,7 @@
     );
 }
 
-*[class~="termentry/related-terms"]:before(9) {
+*[class~="termentry/relations"]:before(9) {
     content: "";
 }
 

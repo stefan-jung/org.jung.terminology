@@ -16,9 +16,9 @@
       <termVariant>truck</termVariant>
     </fullForm>
   </termBody>
-  <related-terms>
+  <relations>
     <relatedTerms>
       <relatedTerm keyref="car"/>
     </relatedTerms>
-  </related-terms>
+  </relations>
 </termentry>

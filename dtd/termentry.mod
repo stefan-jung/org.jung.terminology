@@ -37,7 +37,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % hyponyms              "hyponyms"                                             >
 <!ENTITY % isPartOf              "isPartOf"                                             >
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
-<!ENTITY % related-terms         "related-terms"                                        >
+<!ENTITY % relations             "relations"                                            >
 <!ENTITY % relatedTerm           "relatedTerm"                                          >
 <!ENTITY % relatedTerms          "relatedTerms"                                         >
 <!ENTITY % sourceName            "sourceName"                                           >
@@ -258,7 +258,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % termentry.content        "((%title;),
                                       (%definition;)?,
                                       (%termBody;)?,
-                                      (%related-terms;)?,
+                                      (%relations;)?,
                                       (%termentry-info-types;)*)
                                     ">
 <!ENTITY % termentry.attributes     "%id-atts;
@@ -397,15 +397,15 @@ Category: Termentry elements-->
 <!ATTLIST termBody    %termBody.attributes;>
 
 <!--                                 LONG NAME: Related Terms Container               -->
-<!ENTITY % related-terms.content    "(((%antonyms;) |
+<!ENTITY % relations.content        "(((%antonyms;) |
                                        (%hypernyms;) |
                                        (%hyponyms;) |
                                        (%arePartOf;) |
                                        (%relatedTerms;))*)">
-<!--doc:The <related-terms> element contains groups of term relations.
+<!--doc:The <relations> element contains groups of term relations.
 Category: Termentry elements-->
-<!ELEMENT  related-terms %related-terms.content;>
-<!ATTLIST  related-terms %related-links.attributes;>
+<!ELEMENT  relations %relations.content;>
+<!ATTLIST  relations %related-links.attributes;>
 
 <!--                                 Generic attributes for related terms groups      -->
 <!ENTITY % termLinkGroup-atts       "collection-type
@@ -758,7 +758,7 @@ Category: Termentry elements-->
 <!ATTLIST arePartOf             %global-atts;   class CDATA "- topic/linklist termentry/arePartOf ">
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
-<!ATTLIST related-terms         %global-atts;   class CDATA "- topic/related-links termentry/related-terms ">
+<!ATTLIST relations             %global-atts;   class CDATA "- topic/related-links termentry/relations ">
 <!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/linklist termentry/relatedTerms ">
 <!ATTLIST termContext           %global-atts;   class CDATA "- topic/div termentry/termContext ">
 <!ATTLIST termContextSource     %global-atts;   class CDATA "- topic/div termentry/termContextSource ">

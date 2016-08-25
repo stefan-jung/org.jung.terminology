@@ -16,10 +16,10 @@
    <termVariant>wheel</termVariant>
   </fullForm>
  </termBody>
- <related-terms>
+ <relations>
   <relatedTerms>
    <relatedTerm keyref="wheel"/>
    <relatedTerm keyref="car"/>
   </relatedTerms>
- </related-terms>
+ </relations>
 </termentry>
