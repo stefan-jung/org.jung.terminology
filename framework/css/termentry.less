@@ -10,14 +10,13 @@
 @admittedColor: #feffbe;
 @notRecommendedColor: #ffbfbf;
 
-// Blocks
 
-@font-face {
-  font-family: 'fontello';
-  src: url('../icons/fontello/font/term.ttf?64916464') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+// Icons
+
+@pencilIcon: '../icons/pencil_12.png';
+@linkIcon: '../icons/link_12.png';
+
+// Blocks
 
 *[class~="topic/related-links"]:before {
     display: none;
@@ -77,20 +76,12 @@
     text-decoration: none !important;    
 }
 
-.fontello {
-    font-family: "fontello" !important;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-size: 0.8em !important;
-}
-
 *[class~="termentry/definition"]:before(10) {
     .beforeBlock();
-    content: "${i18n(doctales.terminology.label.definition)}"
+    content: "${i18n(doctales.terminology.label.definition)} "
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -109,7 +100,7 @@
     content: "\A ${i18n(doctales.terminology.label.definitionSource)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -131,7 +122,7 @@
     content: "\A ${i18n(doctales.terminology.label.termAdministration)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -161,7 +152,7 @@
     content: "\A ${i18n(doctales.terminology.label.termSource)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -291,7 +282,7 @@
     content: "\A ${i18n(doctales.terminology.label.annotation)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -309,7 +300,7 @@
     content: "\A ${i18n(doctales.terminology.label.termContext)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -412,7 +403,7 @@
     content: "${i18n(doctales.terminology.label.fullForm)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -431,7 +422,7 @@
     content: "${i18n(doctales.terminology.label.abbreviation)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -450,7 +441,7 @@
     content: "${i18n(doctales.terminology.label.acronym)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -469,7 +460,7 @@
     content: "${i18n(doctales.terminology.label.verb)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -545,7 +536,7 @@
     content: "Term "
         oxy_buttonGroup(
             label, '',
-            icon, url('../icons/pencil-icon.png'),
+            icon, url(@pencilIcon),
             transparent, 'true',
             actions, 
             oxy_action_list(
@@ -615,7 +606,7 @@
     content: "${i18n(doctales.terminology.label.relations)}"
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -638,7 +629,7 @@
     content: "${i18n(doctales.terminology.antonyms)} " 
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -658,7 +649,7 @@
     content: "${i18n(doctales.terminology.arePartOf)} " 
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -678,7 +669,7 @@
     content: "${i18n(doctales.terminology.hypernyms)} " 
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -698,7 +689,7 @@
     content: "${i18n(doctales.terminology.hyponyms)} " 
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -718,7 +709,7 @@
     content: "${i18n(doctales.terminology.relatedTerms)} " 
     oxy_buttonGroup(
         label, '',
-        icon, url('../icons/pencil-icon.png'),
+        icon, url(@pencilIcon),
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -733,21 +724,40 @@
     .mainBlock();
 }
 
-*[class~="termentry/termRelation"]:before(8) {
-    .uiElementLabel();
-    padding-left: 0.5em;
+*[class~="termentry/termRelation"]:before(10) {
+    padding-left: 10em;
     pointer-events: none;
     cursor: default;
-    text-decoration-style: dotted;
+    text-decoration-style: none;
     color: @labelColor !important;
+}
+
+*[class~="termentry/termRelation"]:before(9) {
+    content:
+    oxy_editor(type, combo, edit, "@keyref", columns, 50, fontInherit, false);
+    padding-left: 0.5em;
+}
+
+*[class~="termentry/termRelation"]:before(8) {
+    content: ' ';
+    color: transparent;
+    background-image: url(@linkIcon);
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 1.2em;
+    margin-left: 1.5em;
+    pointer-events: none;
+    cursor: default;
     link: oxy_concat("", attr(keyref, keyref));
 }
 
 *[class~="termentry/termRelation"]:before(7) {
-    content:
-    oxy_editor(type, combo, edit, "@keyref", columns, 50, fontInherit, false);
-    .uiElement();
-    padding-left: 0.5em;
+    content: 
+    oxy_button(
+        action, oxy_action(id, 'doctales.delete.termRelation'),
+        icon, url('../icons/delete_12.png'),
+        transparent, true
+    );
 }
 
 *[class~="termentry/termRelation"]:before {
@@ -757,26 +767,6 @@
 *[class~="termentry/termRelation"] {
     .hideContent();   
     list-style: none;
-}
-
-*[class~="termentry/relatedTerm"]:before(8) {
-    content: "${i18n(doctales.terminology.label.related.term)}";
-}
-
-*[class~="termentry/antonym"]:before(8) {
-    content: "${i18n(doctales.terminology.label.antonym)}";
-}
-
-*[class~="termentry/hypernym"]:before(8) {
-    content: "${i18n(doctales.terminology.label.hypernym)}";
-}
-
-*[class~="termentry/hyponym"]:before(8) {
-    content: "${i18n(doctales.terminology.label.hyponym)}";
-}
-
-*[class~="termentry/partOf"]:before(8) {
-    content: "${i18n(doctales.terminology.label.partOf)}";
 }
 
 *[class~="topic/abstract"]:before {
@@ -793,17 +783,19 @@
 }
 
 *[class~="termentry/termentry"]:after(10) {
-    content: '\e809';
+    content: ' ';
+    width: 5em;
+    background-image: url('../icons/doctales.png');
+    background-repeat: no-repeat;
     link: 'https://doctales.github.io';
-    .fontello();
-    padding-left: 0.1em;
-    padding-right: 0.1em;
+    font-size: 0.7em;
 }
 
 *[class~="termentry/termentry"]:after(11) {
-    content: '\e807';
+    content: ' ';
+    width: 1.2em;
+    background-image: url('../icons/git.png');
+    background-repeat: no-repeat;
     link : 'https://github.com/doctales';
-    .fontello();
-    padding-left: 0.1em;
-    padding-right: 0.1em;
+    font-size: 0.7em;
 }

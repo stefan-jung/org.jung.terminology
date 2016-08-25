@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4.5155554mm"
+   height="4.5147977mm"
+   viewBox="0 0 15.999999 15.997314"
+   id="svg3981"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="pencil.svg"
+   inkscape:export-filename="/home/stefan/workspace/org.doctales.terminology/framework/icons/pencil.png"
+   inkscape:export-xdpi="73.137283"
+   inkscape:export-ydpi="73.137283">
+  <defs
+     id="defs3983" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="3.6539479"
+     inkscape:cy="-42.14228"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3986">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-50.780962,-217.36702)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#1d1d1b"
+       d="m 66.423314,219.80986 -2.08538,-2.08588 c -0.477359,-0.47836 -1.251628,-0.47486 -1.728987,0.004 l -10.798791,10.79879 -1.029194,4.83756 4.840562,-1.02519 10.798791,-10.7988 c 0.479357,-0.47835 0.481357,-1.25162 0.003,-1.72998 z m -11.129693,11.60905 -3.343007,0.77427 0.780269,-3.33851 0.405879,-0.40588 1.280619,1.28062 1.28062,1.28062 -0.40438,0.40888 z"
+       id="path360" />
+  </g>
+</svg>

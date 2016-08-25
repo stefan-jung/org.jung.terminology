@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="17.1" xml:space="preserve">
+<serialized version="18.0" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -75,7 +75,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>67</Integer>
+											<Integer>72</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -89,10 +89,10 @@
 													<String>${i18n(doctales.move.element.up_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/up-icon.png</String>
+													<String>${framework}/icons/up_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/up-icon.png</String>
+													<String>${framework}/icons/up_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -145,7 +145,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>68</Integer>
+											<Integer>73</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -159,10 +159,10 @@
 													<String>${i18n(doctales.move.element.down_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/down-icon.png</String>
+													<String>${framework}/icons/down_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/down-icon.png</String>
+													<String>${framework}/icons/down_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -215,7 +215,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>69</Integer>
+											<Integer>74</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -229,10 +229,10 @@
 													<String>${i18n(doctales.delete.element_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -277,7 +277,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>70</Integer>
+											<Integer>75</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -291,10 +291,10 @@
 													<String>${i18n(doctales.add.termVariant_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -347,7 +347,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>71</Integer>
+											<Integer>76</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -361,10 +361,10 @@
 													<String>${i18n(doctales.add.fullForm_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -445,7 +445,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>72</Integer>
+											<Integer>77</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -459,10 +459,10 @@
 													<String>${i18n(doctales.add.abbreviation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -543,7 +543,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>73</Integer>
+											<Integer>78</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -557,10 +557,10 @@
 													<String>${i18n(doctales.add.acronym_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -641,7 +641,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>74</Integer>
+											<Integer>79</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -655,10 +655,10 @@
 													<String>${i18n(doctales.add.verb_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -713,7 +713,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>75</Integer>
+											<Integer>80</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -727,10 +727,10 @@
 													<String>${i18n(doctales.delete.fullForm_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -775,7 +775,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>76</Integer>
+											<Integer>81</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -789,10 +789,10 @@
 													<String>${i18n(doctales.delete.abbreviation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -837,7 +837,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>77</Integer>
+											<Integer>82</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -851,10 +851,10 @@
 													<String>${i18n(doctales.delete.acronym_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -899,7 +899,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>78</Integer>
+											<Integer>83</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -913,10 +913,10 @@
 													<String>${i18n(doctales.delete.verb_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -961,7 +961,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>79</Integer>
+											<Integer>84</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -975,10 +975,10 @@
 													<String>${i18n(doctales.add.attribute.number_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add-attribute-icon.png</String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add-attribute-icon.png</String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1035,7 +1035,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>80</Integer>
+											<Integer>85</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1049,10 +1049,10 @@
 													<String>${i18n(doctales.add.attribute.case_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add-attribute-icon.png</String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add-attribute-icon.png</String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1109,7 +1109,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>81</Integer>
+											<Integer>86</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1123,10 +1123,10 @@
 													<String>${i18n(doctales.delete.termVariant_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1171,7 +1171,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>82</Integer>
+											<Integer>87</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1185,10 +1185,10 @@
 													<String>${i18n(doctales.add.annotation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1241,7 +1241,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>83</Integer>
+											<Integer>88</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1255,10 +1255,10 @@
 													<String>${i18n(doctales.add.termContext_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1314,7 +1314,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>84</Integer>
+											<Integer>89</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1328,10 +1328,10 @@
 													<String>${i18n(doctales.add.termSource_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1386,7 +1386,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>85</Integer>
+											<Integer>90</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1400,10 +1400,10 @@
 													<String>${i18n(doctales.add.antonyms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1458,7 +1458,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>86</Integer>
+											<Integer>91</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1472,10 +1472,10 @@
 													<String>${i18n(doctales.add.arePartOf_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1530,7 +1530,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>87</Integer>
+											<Integer>92</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1544,10 +1544,10 @@
 													<String>${i18n(doctales.add.hypernyms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1602,7 +1602,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>88</Integer>
+											<Integer>93</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1616,10 +1616,10 @@
 													<String>${i18n(doctales.add.hyponyms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1674,7 +1674,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>89</Integer>
+											<Integer>94</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1688,10 +1688,10 @@
 													<String>${i18n(doctales.add.relatedTerms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1746,7 +1746,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>90</Integer>
+											<Integer>95</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1760,10 +1760,10 @@
 													<String>${i18n(doctales.add.definition_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1822,7 +1822,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>91</Integer>
+											<Integer>96</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1836,10 +1836,10 @@
 													<String>${i18n(doctales.delete.definition_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1884,7 +1884,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>92</Integer>
+											<Integer>97</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1898,10 +1898,10 @@
 													<String>${i18n(doctales.add.equation-figure_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1954,7 +1954,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>93</Integer>
+											<Integer>98</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1968,10 +1968,10 @@
 													<String>${i18n(doctales.add.note_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2024,7 +2024,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>94</Integer>
+											<Integer>99</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2038,10 +2038,10 @@
 													<String>${i18n(doctales.add.partOfSpeech_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2094,7 +2094,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>95</Integer>
+											<Integer>100</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2108,10 +2108,10 @@
 													<String>${i18n(doctales.add.fig_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2164,7 +2164,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>96</Integer>
+											<Integer>101</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2178,10 +2178,10 @@
 													<String>${i18n(doctales.add.domains_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2236,7 +2236,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>97</Integer>
+											<Integer>102</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2250,10 +2250,10 @@
 													<String>${i18n(doctales.add.definitionSource_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2309,7 +2309,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>98</Integer>
+											<Integer>103</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2323,10 +2323,10 @@
 													<String>${i18n(doctales.add.sourceName_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2379,7 +2379,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>99</Integer>
+											<Integer>104</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2393,10 +2393,10 @@
 													<String>${i18n(doctales.add.sourceReference_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2473,7 +2473,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>100</Integer>
+											<Integer>105</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2487,10 +2487,10 @@
 													<String>${i18n(doctales.delete.sourceName_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2551,7 +2551,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>101</Integer>
+											<Integer>106</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2565,10 +2565,10 @@
 													<String>${i18n(doctales.delete.sourceReference_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2629,7 +2629,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>102</Integer>
+											<Integer>107</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2643,10 +2643,10 @@
 													<String>${i18n(doctales.add.agreedWith_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2701,7 +2701,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>103</Integer>
+											<Integer>108</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2715,10 +2715,10 @@
 													<String>${i18n(doctales.add.relations_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2771,7 +2771,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>104</Integer>
+											<Integer>109</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2785,10 +2785,10 @@
 													<String>${i18n(doctales.delete.definitionSource_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2833,7 +2833,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>105</Integer>
+											<Integer>110</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2847,10 +2847,10 @@
 													<String>${i18n(doctales.delete.annotation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2895,7 +2895,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>106</Integer>
+											<Integer>111</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2909,10 +2909,10 @@
 													<String>${i18n(doctales.delete.termContext_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2957,7 +2957,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>107</Integer>
+											<Integer>112</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2971,10 +2971,10 @@
 													<String>${i18n(doctales.delete.termSource_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3019,7 +3019,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>108</Integer>
+											<Integer>113</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3033,10 +3033,10 @@
 													<String>${i18n(doctales.delete.relations_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3081,7 +3081,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>109</Integer>
+											<Integer>114</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3095,10 +3095,10 @@
 													<String>${i18n(doctales.delete.antonyms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3143,7 +3143,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>110</Integer>
+											<Integer>115</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3157,10 +3157,10 @@
 													<String>${i18n(doctales.delete.arePartOf_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3205,7 +3205,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>111</Integer>
+											<Integer>116</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3219,10 +3219,10 @@
 													<String>${i18n(doctales.delete.hypernyms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3267,7 +3267,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>112</Integer>
+											<Integer>117</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3281,10 +3281,10 @@
 													<String>${i18n(doctales.delete.hyponyms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3329,7 +3329,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>113</Integer>
+											<Integer>118</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3343,10 +3343,10 @@
 													<String>${i18n(doctales.delete.relatedTerms_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete-icon.png</String>
+													<String>${framework}/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3391,7 +3391,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>114</Integer>
+											<Integer>119</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3405,10 +3405,10 @@
 													<String>${i18n(doctales.add.antonym_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3461,7 +3461,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>115</Integer>
+											<Integer>120</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3475,10 +3475,10 @@
 													<String>${i18n(doctales.add.partOf_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3531,7 +3531,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>116</Integer>
+											<Integer>121</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3545,10 +3545,10 @@
 													<String>${i18n(doctales.add.hypernym_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3601,7 +3601,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>117</Integer>
+											<Integer>122</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3615,10 +3615,10 @@
 													<String>${i18n(doctales.add.hyponym_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3671,7 +3671,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>118</Integer>
+											<Integer>123</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3685,10 +3685,10 @@
 													<String>${i18n(doctales.add.relatedTerm_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3720,6 +3720,68 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>124</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.termRelation</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.termRelation)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.termRelation_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termRelation ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -4114,6 +4176,9 @@
 												<field name="menuEntriesDescriptorList">
 													<menuEntry-array/>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 										</field>
 										<field name="patchHandling">
@@ -4128,7 +4193,7 @@
 											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>0</Integer>
+											<Integer>1</Integer>
 										</field>
 										<field name="value">
 											<menu>
@@ -4210,6 +4275,9 @@
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 										</field>
 										<field name="patchHandling">
@@ -4241,41 +4309,7 @@
 											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>24</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
-										</field>
-										<field name="index">
 											<Integer>23</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>22</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -4310,23 +4344,6 @@
 										</field>
 										<field name="index">
 											<Integer>20</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>19</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -4513,23 +4530,6 @@
 											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>6</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/toolbarDescriptor/toolbarEntriesDescriptorList</String>
-										</field>
-										<field name="index">
 											<Integer>2</Integer>
 										</field>
 										<field name="value">
@@ -4581,7 +4581,7 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
-											<Integer>8</Integer>
+											<Integer>7</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -5150,7 +5150,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>0</Integer>
+											<Integer>2</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -5198,6 +5198,9 @@
 													<null/>
 												</field>
 												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
 													<null/>
 												</field>
 												<field name="additionalAntArgs">
@@ -5331,7 +5334,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>1</Integer>
+											<Integer>3</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -5379,6 +5382,9 @@
 													<null/>
 												</field>
 												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
 													<null/>
 												</field>
 												<field name="additionalAntArgs">
@@ -5512,7 +5518,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>2</Integer>
+											<Integer>4</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -5562,6 +5568,9 @@
 												<field name="lastCustomSkinCssPath">
 													<null/>
 												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
@@ -5592,6 +5601,9 @@
 															<field name="possibleValues">
 																<null/>
 															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
@@ -5612,6 +5624,9 @@
 															<field name="possibleValues">
 																<null/>
 															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
@@ -5630,6 +5645,9 @@
 																<Integer>2</Integer>
 															</field>
 															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
 														</ditaParameter>
@@ -5754,7 +5772,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>3</Integer>
+											<Integer>5</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -5804,6 +5822,9 @@
 												<field name="lastCustomSkinCssPath">
 													<null/>
 												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
@@ -5834,6 +5855,9 @@
 															<field name="possibleValues">
 																<null/>
 															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
@@ -5854,6 +5878,9 @@
 															<field name="possibleValues">
 																<null/>
 															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
@@ -5872,6 +5899,9 @@
 																<Integer>2</Integer>
 															</field>
 															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
 														</ditaParameter>
@@ -6468,7 +6498,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*[contains(@class," task/substep ")]</String>
+														<String>ancestor-or-self::*[contains(@class," task/substep ") or contains(@class," topic/ul ") or contains(@class," topic/ol ")][1][contains(@class," task/substep ")]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -6508,7 +6538,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*[contains(@class," task/step ")]</String>
+														<String>ancestor-or-self::*[contains(@class," task/step ") or contains(@class," topic/ul ") or contains(@class," topic/ol ")][1][contains(@class," task/step ")]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -6810,7 +6840,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*[contains(@class," topic/li ")]</String>
+														<String>ancestor-or-self::*[contains(@class," topic/li ") or contains(@class," topic/ul ") or contains(@class," topic/ul ")][1][contains(@class," topic/li ")]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -7040,7 +7070,7 @@
 											<String>/images/Section24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/Section16.gif</String>
+											<String>/images/Section16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -7157,7 +7187,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/TableRow24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/TableRow16.gif</String>
+											<String>/images/TableRow16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -7283,7 +7313,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/TableCell24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/TableCell16.gif</String>
+											<String>/images/TableCell16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -7466,7 +7496,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/InsertConcept24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/InsertConcept16.gif</String>
+											<String>/images/InsertConcept16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -7576,7 +7606,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/InsertTask24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/InsertTask16.gif</String>
+											<String>/images/InsertTask16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -7686,7 +7716,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/InsertTopic24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/InsertTopic16.gif</String>
+											<String>/images/InsertTopic16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -7796,7 +7826,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/InsertRef24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/InsertRef16.gif</String>
+											<String>/images/InsertRef16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -8223,7 +8253,7 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>/images/TableColumn24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/TableColumn16.gif</String>
+											<String>/images/TableColumn16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -8275,16 +8305,16 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>delete.table.column</String>
 										</field>
 										<field name="name">
-											<String>${i18n(delete.table.column)}</String>
+											<String>${i18n(delete.table.columns)}</String>
 										</field>
 										<field name="description">
-											<String>${i18n(delete.table.column_description)}</String>
+											<String>${i18n(delete.table.columns_description)}</String>
 										</field>
 										<field name="largeIconPath">
 											<String>/images/DeleteColumn24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/DeleteColumn16.gif</String>
+											<String>/images/DeleteColumn16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -8296,7 +8326,8 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::node()[self::*[contains(@class," topic/tbody ") or contains(@class," topic/thead ") or contains(@class," topic/entry ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/stentry ") or contains(@class," topic/row ")]][1][self::*[contains(@class," topic/entry ") or contains(@class," topic/row ")][not(ancestor-or-self::*[contains(@class, " task/choicetable ")])]]</String>
+														<String>ancestor-or-self::node()[self::*[contains(@class," topic/tbody ") or contains(@class," topic/thead ") or contains(@class," topic/entry ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/stentry ") or contains(@class," topic/row ")]][1][self::*[contains(@class," topic/entry ") or contains(@class," topic/row ")][not(ancestor-or-self::*[contains(@class, " task/choicetable ")])]]  or 
+oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or contains(@class," topic/thead ") or contains(@class," topic/entry ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/stentry ") or contains(@class," topic/row ")]][1][self::*[contains(@class," topic/entry ") or contains(@class," topic/row ")][not(ancestor-or-self::*[contains(@class, " task/choicetable ")])]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap/>
@@ -8307,7 +8338,8 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::node()[self::*[contains(@class," topic/tbody ") or contains(@class," topic/thead ") or contains(@class," topic/entry ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/stentry ")]][1][self::*[contains(@class," topic/stentry ") or contains(@class," topic/strow ")][not(ancestor-or-self::*[contains(@class, " task/choicetable ")])]]</String>
+														<String>ancestor-or-self::node()[self::*[contains(@class," topic/tbody ") or contains(@class," topic/thead ") or contains(@class," topic/entry ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/stentry ")]][1][self::*[contains(@class," topic/stentry ") or contains(@class," topic/strow ") or contains(@class," topic/sthead ")][not(ancestor-or-self::*[contains(@class, " task/choicetable ")])]] or
+oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or contains(@class," topic/thead ") or contains(@class," topic/entry ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/stentry ")]][1][self::*[contains(@class," topic/stentry ") or contains(@class," topic/strow ") or contains(@class," topic/sthead ")][not(ancestor-or-self::*[contains(@class, " task/choicetable ")])]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap/>
@@ -8327,16 +8359,16 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<String>delete.table.row</String>
 										</field>
 										<field name="name">
-											<String>${i18n(delete.table.row)}</String>
+											<String>${i18n(delete.table.rows)}</String>
 										</field>
 										<field name="description">
-											<String>${i18n(delete.table.row_description)}</String>
+											<String>${i18n(delete.table.rows_description)}</String>
 										</field>
 										<field name="largeIconPath">
 											<String>/images/DeleteRow24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/DeleteRow16.gif</String>
+											<String>/images/DeleteRow16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -9429,13 +9461,13 @@ oxy:allows-child-element("*", "class", " topic/simpletable ")</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::object</String>
+														<String>self::object[@data] or self::object[param[@name='src'][@value]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>resourcePath</String>
-																<String>@data</String>
+																<String>@data | param[@name='src']/@value</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -9875,7 +9907,7 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ")
 											<String></String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/Expanded16.gif</String>
+											<String>/images/Expanded16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -9925,7 +9957,7 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ")
 											<String></String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/Collapsed16.gif</String>
+											<String>/images/Collapsed16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -9975,7 +10007,7 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ")
 											<String>/images/TableRowAbove24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/TableRowAbove16.gif</String>
+											<String>/images/TableRowAbove16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -10101,7 +10133,7 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ")
 											<String>/images/TableColumnBefore24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/TableColumnBefore16.gif</String>
+											<String>/images/TableColumnBefore16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -10666,6 +10698,233 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>table.join</String>
+										</field>
+										<field name="name">
+											<String>${i18n(table.join)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(table.join_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/TableJoin24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/TableJoin16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[contains(@class," topic/table ")]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.topic.table.cals.JoinOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>table.split</String>
+										</field>
+										<field name="name">
+											<String>${i18n(table.split)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(table.split_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/TableSplitCell24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/TableSplitCell16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[self::*[contains(@class," topic/entry ") or 
+contains(@class," topic/stentry ")]][1][self::*[contains(@class," topic/entry ")]] or
+ancestor-or-self::node()[self::*[contains(@class," topic/entry ") or 
+contains(@class," topic/stentry ")]][1][self::*[contains(@class," topic/entry ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.topic.table.cals.SplitOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>edit.image.map</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Image_map_editor)}...</String>
+										</field>
+										<field name="description">
+											<String>${i18n(edit_image_map_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[contains(@class," ut-d/imagemap ")] or oxy:current-selected-element()[contains(@class," ut-d/imagemap ")] or
+self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::image][empty(parent::imagemap)]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.EditImageMapOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>imagemap.collapse.area</String>
+										</field>
+										<field name="name">
+											<String>${i18n(imagemap.toggle.area)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(imagemap.toggle.area_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/Expanded16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>1</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocation</String>
+																<String>..</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>-oxy-visible-imagemap-area</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.RemovePseudoClassOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>imagemap.expand.area</String>
+										</field>
+										<field name="name">
+											<String>${i18n(imagemap.toggle.area)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(imagemap.toggle.area_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/Collapsed16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>1</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>elementLocation</String>
+																<String>..</String>
+															</entry>
+															<entry>
+																<String>name</String>
+																<String>-oxy-visible-imagemap-area</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SetPseudoClassOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -10754,6 +11013,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menu>
 												<field name="label">
@@ -10809,6 +11071,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menu>
 												<field name="label">
@@ -10838,6 +11103,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 															</field>
 														</menuItem>
 													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
 												</field>
 											</menu>
 											<menu>
@@ -10885,6 +11153,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														<menuSeparator/>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menu>
 												<field name="label">
@@ -10915,6 +11186,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menu>
 												<field name="label">
@@ -10931,11 +11205,6 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														<menuItem>
 															<field name="actionID">
 																<String>insert.table</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>show.table.properties</String>
 															</field>
 														</menuItem>
 														<menuSeparator/>
@@ -10989,41 +11258,24 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
-																<String>table.join.row.cells</String>
+																<String>table.join</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>table.join.cell.above</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.join.cell.below</String>
+																<String>table.split</String>
 															</field>
 														</menuItem>
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
-																<String>table.split.left</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.right</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.above</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.below</String>
+																<String>show.table.properties</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
 												</field>
 											</menu>
 											<menuSeparator/>
@@ -11045,6 +11297,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 											</menuItem>
 										</menuEntry-array>
 									</field>
+									<field name="context">
+										<null/>
+									</field>
 								</menu>
 							</field>
 							<field name="popupMenuDescriptor">
@@ -11060,6 +11315,11 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 									</field>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>edit.image.map</String>
+												</field>
+											</menuItem>
 											<menu>
 												<field name="label">
 													<String>${i18n(paste.special)}</String>
@@ -11095,6 +11355,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menuSeparator/>
 											<menu>
@@ -11111,16 +11374,6 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 													<menuEntry-array>
 														<menuItem>
 															<field name="actionID">
-																<String>insert.table.row.above</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>insert.table.row.below</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
 																<String>insert.table.rows.custom</String>
 															</field>
 														</menuItem>
@@ -11130,16 +11383,6 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 															</field>
 														</menuItem>
 														<menuSeparator/>
-														<menuItem>
-															<field name="actionID">
-																<String>insert.table.column.before</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>insert.table.column.after</String>
-															</field>
-														</menuItem>
 														<menuItem>
 															<field name="actionID">
 																<String>insert.table.columns.custom</String>
@@ -11153,44 +11396,12 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
-																<String>insert.table.entry</String>
-															</field>
-														</menuItem>
-														<menuSeparator/>
-														<menuItem>
-															<field name="actionID">
-																<String>table.join.row.cells</String>
+																<String>table.join</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>table.join.cell.above</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.join.cell.below</String>
-															</field>
-														</menuItem>
-														<menuSeparator/>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.left</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.right</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.above</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>table.split.below</String>
+																<String>table.split</String>
 															</field>
 														</menuItem>
 														<menuSeparator/>
@@ -11206,6 +11417,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 															</field>
 														</menuItem>
 													</menuEntry-array>
+												</field>
+												<field name="context">
+													<String>table</String>
 												</field>
 											</menu>
 											<menu>
@@ -11268,6 +11482,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menu>
 												<field name="label">
@@ -11313,6 +11530,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 															</field>
 														</menuItem>
 													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
 												</field>
 											</menu>
 											<menuItem>
@@ -11377,6 +11597,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menuItem>
 												<field name="actionID">
@@ -11408,9 +11631,15 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 											<menuSeparator/>
 										</menuEntry-array>
+									</field>
+									<field name="context">
+										<null/>
 									</field>
 								</menu>
 							</field>
@@ -11511,7 +11740,7 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 													<String>/images/Section24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>/images/Section16.gif</String>
+													<String>/images/Section16.png</String>
 												</field>
 												<field name="toolbarEntriesDescriptorList">
 													<toolbarEntry-array>
@@ -11589,12 +11818,12 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
-													<String>insert.table.column.after</String>
+													<String>delete.table.row</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
 												<field name="actionID">
-													<String>insert.table.entry</String>
+													<String>insert.table.column.after</String>
 												</field>
 											</toolbarItem>
 											<toolbarItem>
@@ -11602,70 +11831,23 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 													<String>delete.table.column</String>
 												</field>
 											</toolbarItem>
-											<toolbarItem>
-												<field name="actionID">
-													<String>delete.table.row</String>
-												</field>
-											</toolbarItem>
+											<toolbarSeparator/>
 											<toolbarItem>
 												<field name="actionID">
 													<String>show.table.properties</String>
 												</field>
 											</toolbarItem>
-											<toolbar>
-												<field name="id">
-													<String>${i18n(table.join.split)}</String>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>table.join</String>
 												</field>
-												<field name="type">
-													<Integer>3</Integer>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>table.split</String>
 												</field>
-												<field name="largeIconPath">
-													<String>/images/TableJoinSplit24.png</String>
-												</field>
-												<field name="smallIconPath">
-													<String>/images/TableJoinSplit16.gif</String>
-												</field>
-												<field name="toolbarEntriesDescriptorList">
-													<toolbarEntry-array>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.join.row.cells</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.join.cell.above</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.join.cell.below</String>
-															</field>
-														</toolbarItem>
-														<toolbarSeparator/>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.split.left</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.split.right</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.split.above</String>
-															</field>
-														</toolbarItem>
-														<toolbarItem>
-															<field name="actionID">
-																<String>table.split.below</String>
-															</field>
-														</toolbarItem>
-													</toolbarEntry-array>
-												</field>
-											</toolbar>
+											</toolbarItem>
 										</toolbarEntry-array>
 									</field>
 								</toolbar>
@@ -11817,16 +11999,28 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 							<field name="tableSupportClassName">
 								<null/>
 							</field>
+							<field name="tableCellSeparatorSupportClassName">
+								<null/>
+							</field>
 							<field name="tableColWidthSupportClassName">
 								<null/>
 							</field>
 							<field name="customReferencesResolver">
 								<null/>
 							</field>
+							<field name="editPropertiesHandler">
+								<null/>
+							</field>
 							<field name="authorExtensionStateListener">
 								<null/>
 							</field>
 							<field name="attributesRecognizer">
+								<null/>
+							</field>
+							<field name="authorActionEventHandler">
+								<null/>
+							</field>
+							<field name="authorImageDecorator">
 								<null/>
 							</field>
 						</authorExtension>
@@ -11837,12 +12031,11 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 							<String>${frameworkDir}/templates/topic</String>
 							<String>${frameworkDir}/templates/topic-xsd</String>
 							<String>${frameworkDir}/templates/plugin</String>
-							<String>${configured.ditaot.dir}/plugins/org.dita-ng.doctypes/oxygen_templates/topic-rng</String>
+							<String>${configured.ditaot.dir}/org.dita-ng.doctypes_oxygen_templates/topic-rng</String>
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/topic (Dita 4 Publishers)</String>
-							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.dita13.doctypes/oxygen_templates/DITA 1.3 (experimental)</String>
-							<String>${configured.ditaot.dir}/oxygen_templates/DITA 1.3 (experimental)</String>
+							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/topic-rng</String>
 							<String>${configured.ditaot.dir}/plugins/mathml/oxygen_templates/MathML</String>
-							<String>${configured.ditaot.dir}/plugins/org.oasis.lwdita/oxygen_templates/LW (Lightweight) DITA</String>
+							<String>${configured.ditaot.dir}/plugins/org.oasis.lwdita/oxygen_templates/LW (Lightweight) DITA/topic</String>
 						</String-array>
 					</field>
 					<field name="xmlCatalogs">
@@ -12329,7 +12522,418 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 						</documentTypeRule-array>
 					</field>
 					<field name="scenarios">
-						<scenario-array/>
+						<scenario-array>
+							<ditaScenario>
+								<field name="useXEP">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useAntennaHouse">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="baseDir">
+									<String>${cfd}</String>
+								</field>
+								<field name="outputDir">
+									<String>${cfd}/out/topic-pdf</String>
+								</field>
+								<field name="tempDir">
+									<String>${cfd}/temp/topic-pdf</String>
+								</field>
+								<field name="transtype">
+									<String>pdf2</String>
+								</field>
+								<field name="filters">
+									<ditavalFilters>
+										<field name="useDitavalFilePath">
+											<Boolean>false</Boolean>
+										</field>
+										<field name="useAppliedConditionSet">
+											<Boolean>true</Boolean>
+										</field>
+										<field name="appliedConditionSet">
+											<null/>
+										</field>
+										<field name="ditavalFilePath">
+											<String></String>
+										</field>
+										<field name="simpleFiltersList">
+											<list/>
+										</field>
+									</ditavalFilters>
+								</field>
+								<field name="addOxygenJars">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="skinCssFile">
+									<null/>
+								</field>
+								<field name="lastCustomSkinCssPath">
+									<null/>
+								</field>
+								<field name="webhelpResponsiveTemplate">
+									<null/>
+								</field>
+								<field name="additionalAntArgs">
+									<String></String>
+								</field>
+								<field name="buildTarget">
+									<String></String>
+								</field>
+								<field name="buildFilePath">
+									<String></String>
+								</field>
+								<field name="ditaParams">
+									<list>
+										<ditaParameter>
+											<field name="name">
+												<String>dita.dir</String>
+											</field>
+											<field name="description">
+												<null/>
+											</field>
+											<field name="value">
+												<String>${configured.ditaot.dir}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>3</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</ditaParameter>
+										<ditaParameter>
+											<field name="name">
+												<String>xep.failOnError</String>
+											</field>
+											<field name="description">
+												<null/>
+											</field>
+											<field name="value">
+												<String>true</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>4</Integer>
+											</field>
+											<field name="possibleValues">
+												<String-array>
+													<null/>
+													<String>true</String>
+												</String-array>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</ditaParameter>
+									</list>
+								</field>
+								<field name="jvmArgs">
+									<String>-Xmx384m</String>
+								</field>
+								<field name="useCustomJavaHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customJavaHomeDir">
+									<String></String>
+								</field>
+								<field name="useCustomANTHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customANTHomeDir">
+									<String></String>
+								</field>
+								<field name="workingDir">
+									<null/>
+								</field>
+								<field name="showConsoleAlways">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>DITA PDF</String>
+								</field>
+								<field name="baseURL">
+									<null/>
+								</field>
+								<field name="footerURL">
+									<null/>
+								</field>
+								<field name="fOPMethod">
+									<null/>
+								</field>
+								<field name="fOProcessorName">
+									<null/>
+								</field>
+								<field name="headerURL">
+									<null/>
+								</field>
+								<field name="inputXSLURL">
+									<null/>
+								</field>
+								<field name="inputXMLURL">
+									<null/>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>DITAMAP</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputFile">
+									<null/>
+								</field>
+								<field name="outputResource">
+									<null/>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<String></String>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>DITA-OT</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</ditaScenario>
+							<ditaScenario>
+								<field name="useXEP">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useAntennaHouse">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="baseDir">
+									<String>${cfd}</String>
+								</field>
+								<field name="outputDir">
+									<String>${cfd}/out/topic-xhtml</String>
+								</field>
+								<field name="tempDir">
+									<String>${cfd}/temp/topic-xhtml</String>
+								</field>
+								<field name="transtype">
+									<String>xhtml</String>
+								</field>
+								<field name="filters">
+									<ditavalFilters>
+										<field name="useDitavalFilePath">
+											<Boolean>false</Boolean>
+										</field>
+										<field name="useAppliedConditionSet">
+											<Boolean>true</Boolean>
+										</field>
+										<field name="appliedConditionSet">
+											<null/>
+										</field>
+										<field name="ditavalFilePath">
+											<String></String>
+										</field>
+										<field name="simpleFiltersList">
+											<list/>
+										</field>
+									</ditavalFilters>
+								</field>
+								<field name="addOxygenJars">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="skinCssFile">
+									<null/>
+								</field>
+								<field name="lastCustomSkinCssPath">
+									<null/>
+								</field>
+								<field name="webhelpResponsiveTemplate">
+									<null/>
+								</field>
+								<field name="additionalAntArgs">
+									<String></String>
+								</field>
+								<field name="buildTarget">
+									<String></String>
+								</field>
+								<field name="buildFilePath">
+									<String></String>
+								</field>
+								<field name="ditaParams">
+									<list>
+										<ditaParameter>
+											<field name="name">
+												<String>dita.dir</String>
+											</field>
+											<field name="description">
+												<null/>
+											</field>
+											<field name="value">
+												<String>${configured.ditaot.dir}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>3</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</ditaParameter>
+									</list>
+								</field>
+								<field name="jvmArgs">
+									<String>-Xmx384m</String>
+								</field>
+								<field name="useCustomJavaHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customJavaHomeDir">
+									<String></String>
+								</field>
+								<field name="useCustomANTHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customANTHomeDir">
+									<String></String>
+								</field>
+								<field name="workingDir">
+									<null/>
+								</field>
+								<field name="showConsoleAlways">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>DITA XHTML</String>
+								</field>
+								<field name="baseURL">
+									<null/>
+								</field>
+								<field name="footerURL">
+									<null/>
+								</field>
+								<field name="fOPMethod">
+									<null/>
+								</field>
+								<field name="fOProcessorName">
+									<null/>
+								</field>
+								<field name="headerURL">
+									<null/>
+								</field>
+								<field name="inputXSLURL">
+									<null/>
+								</field>
+								<field name="inputXMLURL">
+									<null/>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>DITAMAP</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputFile">
+									<null/>
+								</field>
+								<field name="outputResource">
+									<null/>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<String></String>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>DITA-OT</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</ditaScenario>
+						</scenario-array>
 					</field>
 					<field name="validationScenarios">
 						<validationScenario-array>
