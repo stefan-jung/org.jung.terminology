@@ -555,20 +555,20 @@
         <val lang="en_US">Delete links to antonyms</val>
         <val lang="de_DE">Links auf Antonyme löschen</val>
     </key>
-    <!-- arePartOf -->
-    <key value="doctales.terminology.arePartOf">
+    <!-- partsOf -->
+    <key value="doctales.terminology.partsOf">
         <val lang="en_US">Are Part of</val>
         <val lang="de_DE">Sind Teil von</val>
     </key>
-    <key type="action" value="doctales.add.arePartOf">
-        <comment>Add a new arePartOf element.</comment>
-        <val lang="en_US">Add arePartOf (&lt;arePartOf&gt;)</val>
-        <val lang="de_DE">arePartOf (&lt;arePartOf&gt;) einfügen</val>
+    <key type="action" value="doctales.add.partsOf">
+        <comment>Add a new partsOf element.</comment>
+        <val lang="en_US">Add partsOf (&lt;partsOf&gt;)</val>
+        <val lang="de_DE">partsOf (&lt;partsOf&gt;) einfügen</val>
     </key>
-    <key value="doctales.add.arePartOf_description">
-        <comment>An arePartOf element contains references to parts of the current term.</comment>
-        <val lang="en_US">An arePartOf element contains references to parts of the current term.</val>
-        <val lang="de_DE">Ein arePartOf Element enthält Referenzen zu Bestandteilen des aktuellen Begriffs.</val>
+    <key value="doctales.add.partsOf_description">
+        <comment>An partsOf element contains references to parts of the current term.</comment>
+        <val lang="en_US">An partsOf element contains references to parts of the current term.</val>
+        <val lang="de_DE">Ein partsOf Element enthält Referenzen zu Bestandteilen des aktuellen Begriffs.</val>
     </key>
     <key value="doctales.add.partOf">
         <val lang="en_US">Link a partOf</val>
@@ -586,11 +586,11 @@
         <val lang="en_US">Delete link to partOf</val>
         <val lang="de_DE">Link auf Bestandteil löschen</val>
     </key>
-    <key value="doctales.delete.arePartOf">
+    <key value="doctales.delete.partsOf">
         <val lang="en_US">Delete links to parts of the current term</val>
         <val lang="de_DE">Links auf Bestandteile löschen</val>
     </key>
-    <key value="doctales.delete.arePartOf_description">
+    <key value="doctales.delete.partsOf_description">
         <val lang="en_US">Delete links to parts of the current term</val>
         <val lang="de_DE">Links auf Bestandteile löschen</val>
     </key>

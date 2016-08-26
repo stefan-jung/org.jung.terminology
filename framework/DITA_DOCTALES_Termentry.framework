@@ -1463,13 +1463,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.arePartOf</String>
+													<String>doctales.add.partsOf</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.arePartOf)}</String>
+													<String>${i18n(doctales.add.partsOf)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.arePartOf_description)}</String>
+													<String>${i18n(doctales.add.partsOf_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String></String>
@@ -1493,9 +1493,9 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;arePartOf>
+																		<String>&lt;partsOf>
   &lt;isPartOf/>
-&lt;/arePartOf></String>
+&lt;/partsOf></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -3148,13 +3148,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.arePartOf</String>
+													<String>doctales.delete.partsOf</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.arePartOf)}</String>
+													<String>${i18n(doctales.delete.partsOf)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.arePartOf_description)}</String>
+													<String>${i18n(doctales.delete.partsOf_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete-icon.png</String>
@@ -3172,7 +3172,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/arePartOf ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/partsOf ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -3500,7 +3500,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor-or-self::*[contains(@class, ' termentry/arePartOf ')][1]</String>
+																		<String>ancestor-or-self::*[contains(@class, ' termentry/partsOf ')][1]</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>

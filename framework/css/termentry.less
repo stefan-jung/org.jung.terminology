@@ -620,7 +620,7 @@
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.add.antonyms'),
-            oxy_action(id, 'doctales.add.arePartOf'),
+            oxy_action(id, 'doctales.add.partsOf'),
             oxy_action(id, 'doctales.add.hypernyms'),
             oxy_action(id, 'doctales.add.hyponyms'),
             oxy_action(id, 'doctales.add.relatedTerms'),
@@ -654,8 +654,8 @@
 }
 
 /* Are Part of */
-*[class~="termentry/arePartOf"]:before(10) {
-    content: "${i18n(doctales.terminology.arePartOf)} " 
+*[class~="termentry/partsOf"]:before(10) {
+    content: "${i18n(doctales.terminology.partsOf)} " 
     oxy_buttonGroup(
         label, '',
         icon, url('../icons/pencil-icon.png'),
@@ -663,13 +663,13 @@
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.add.partOf'),
-            oxy_action(id, 'doctales.delete.arePartOf')
+            oxy_action(id, 'doctales.delete.partsOf')
         )
     );
     .beforeBlock();
 }
 
-*[class~="termentry/arePartOf"] {
+*[class~="termentry/partsOf"] {
     .mainBlock();
 }
 

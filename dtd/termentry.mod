@@ -24,7 +24,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % annotation            "annotation"                                           >
 <!ENTITY % antonym               "antonym"                                              >
 <!ENTITY % antonyms              "antonyms"                                             >
-<!ENTITY % arePartOf             "arePartOf"                                            >
+<!ENTITY % partsOf               "partsOf"                                              >
 <!ENTITY % definition            "definition"                                           >
 <!ENTITY % definitionText        "definitionText"                                       >
 <!ENTITY % definitionSource      "definitionSource"                                     >
@@ -400,7 +400,7 @@ Category: Termentry elements-->
 <!ENTITY % relations.content        "(((%antonyms;) |
                                        (%hypernyms;) |
                                        (%hyponyms;) |
-                                       (%arePartOf;) |
+                                       (%partsOf;) |
                                        (%relatedTerms;))*)">
 <!--doc:The <relations> element contains groups of term relations.
 Category: Termentry elements-->
@@ -496,15 +496,15 @@ Category: Termentry elements-->
 <!ATTLIST  hyponyms %hyponyms.attributes;>
 
 <!--                                 LONG NAME: Are Part Of                           -->
-<!ENTITY % arePartOf.content        "((%partOf;)+)">
-<!ENTITY % arePartOf.attributes     "%termLinkGroup-atts;
+<!ENTITY % partsOf.content        "((%partOf;)+)">
+<!ENTITY % partsOf.attributes     "%termLinkGroup-atts;
                                      type
                                         CDATA
-                                           'arePartOf'">
-<!--doc:The <arePartOf> element contains references to <partOf> elements.
+                                           'partsOf'">
+<!--doc:The <partsOf> element contains references to <partOf> elements.
 Category: Termentry elements-->
-<!ELEMENT  arePartOf %arePartOf.content;>
-<!ATTLIST  arePartOf %arePartOf.attributes;>
+<!ELEMENT  partsOf %partsOf.content;>
+<!ATTLIST  partsOf %partsOf.attributes;>
 
 <!--                                 LONG NAME: Related Terms                         -->
 <!ENTITY % relatedTerms.content     "((%relatedTerm;)+)">
@@ -742,7 +742,6 @@ Category: Termentry elements-->
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
 <!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/antonyms ">
-<!ATTLIST arePartOf             %global-atts;   class CDATA "- topic/linklist termentry/arePartOf ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
 <!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termentry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
@@ -754,6 +753,7 @@ Category: Termentry elements-->
 <!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hyponym ">
 <!ATTLIST hyponyms              %global-atts;   class CDATA "- topic/linklist termentry/hyponyms ">
 <!ATTLIST partOf                %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/partOf ">
+<!ATTLIST partsOf               %global-atts;   class CDATA "- topic/linklist termentry/partsOf ">
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
 <!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/linklist termentry/relatedTerms ">
