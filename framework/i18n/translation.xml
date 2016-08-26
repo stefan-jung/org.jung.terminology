@@ -59,7 +59,7 @@
         <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
     </key>
     <!-- definitionSource -->
-    <key value="doctales.terminology.label.definitionSource">
+    <key value="doctales.definitionSource">
         <comment>Source of Definition</comment>
         <val lang="en_US">Source of Definition</val>
         <val lang="de_DE">Quelle der Definition</val>
@@ -85,7 +85,7 @@
         <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) löschen</val>
     </key>
     <!-- sourceName -->
-    <key value="doctales.terminology.label.sourceName">
+    <key value="doctales.sourceName">
         <comment>Name of Source</comment>
         <val lang="en_US">Name of Source</val>
         <val lang="de_DE">Name der Quelle</val>
@@ -111,7 +111,7 @@
         <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) löschen</val>
     </key>
      <!-- sourceReference -->
-    <key value="doctales.terminology.label.sourceReference">
+    <key value="doctales.sourceReference">
         <comment>Reference to Source</comment>
         <val lang="en_US">Reference to Source</val>
         <val lang="de_DE">Verweis auf Quelle</val>
@@ -137,24 +137,24 @@
         <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) löschen</val>
     </key>
     <!-- sourceReference -->
-    <key value="doctales.terminology.label.sourceReference.text">
+    <key value="doctales.sourceReference.text">
         <val lang="en_US">Text</val>
         <val lang="de_DE">Text</val>
     </key>
-    <key value="doctales.terminology.label.sourceReference.href">
+    <key value="doctales.sourceReference.href">
         <val lang="en_US">href</val>
         <val lang="de_DE">href</val>
     </key>
-    <key value="doctales.terminology.label.sourceReference.format">
+    <key value="doctales.sourceReference.format">
         <val lang="en_US">format</val>
         <val lang="de_DE">format</val>
     </key>
-    <key value="doctales.terminology.label.sourceReference.scope">
+    <key value="doctales.sourceReference.scope">
         <val lang="en_US">scope</val>
         <val lang="de_DE">scope</val>
     </key>
     <!-- partOfSpeech -->
-    <key value="doctales.terminology.label.partOfSpeech">
+    <key value="doctales.partOfSpeech">
         <comment>partOfSpeech</comment>
         <val lang="en_US">Part of Speech</val>
         <val lang="de_DE">Wortklasse</val>
@@ -180,7 +180,7 @@
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) löschen</val>
     </key>
     <!-- agreedWith -->
-    <key value="doctales.terminology.label.agreedWith">
+    <key value="doctales.agreedWith">
         <comment>Agreed With</comment>
         <val lang="en_US">Agreed With</val>
         <val lang="de_DE">Abgestimmt mit</val>
@@ -206,7 +206,7 @@
         <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) löschen</val>
     </key>
     <!-- equation-figure -->
-    <key value="doctales.terminology.label.equation-figure">
+    <key value="doctales.equation-figure">
         <comment>equation-figure</comment>
         <val lang="en_US">Equation</val>
         <val lang="de_DE">Formel</val>
@@ -232,7 +232,7 @@
         <val lang="de_DE">Formel (&lt;equation-figure&gt;) löschen</val>
     </key>
     <!-- note -->
-    <key value="doctales.terminology.label.note">
+    <key value="doctales.note">
         <comment>note</comment>
         <val lang="en_US">Note</val>
         <val lang="de_DE">Hinweis</val>
@@ -258,7 +258,7 @@
         <val lang="de_DE">Hinweis (&lt;note&gt;) löschen</val>
     </key>
     <!-- fig -->
-    <key value="doctales.terminology.label.fig">
+    <key value="doctales.fig">
         <comment>fig</comment>
         <val lang="en_US">Figure</val>
         <val lang="de_DE">Abbildung</val>
@@ -284,7 +284,7 @@
         <val lang="de_DE">Abbildung (&lt;fig&gt;) löschen</val>
     </key>
     <!-- fig -->
-    <key value="doctales.terminology.label.domains">
+    <key value="doctales.domains">
         <comment>domains</comment>
         <val lang="en_US">Domains</val>
         <val lang="de_DE">Domänen</val>
@@ -385,7 +385,7 @@
         <val lang="de_DE">Term (&lt;termVariant&gt;) löschen</val>
     </key>
     <!-- termContext -->
-    <key value="doctales.terminology.label.termContext">
+    <key value="doctales.termContext">
         <comment>Term Context</comment>
         <val lang="en_US">Term Context</val>
         <val lang="de_DE">Term-Kontext</val>
@@ -411,7 +411,7 @@
         <val lang="de_DE">Term-Kontext (&lt;termContext&gt;) löschen</val>
     </key>
     <!-- termContextSource -->
-    <key value="doctales.terminology.label.termContextSource">
+    <key value="doctales.termContextSource">
         <comment>Term Context Source</comment>
         <val lang="en_US">Source of Context</val>
         <val lang="de_DE">Quelle des Kontextes</val>
@@ -438,7 +438,7 @@
         <val lang="de_DE">Termquelle (&lt;termSource&gt;) löschen</val>
     </key>
     <!-- annotation -->
-    <key value="doctales.terminology.label.annotation">
+    <key value="doctales.annotation">
         <comment>Annotation</comment>
         <val lang="en_US">Annotation</val>
         <val lang="de_DE">Anmerkung</val>
@@ -491,7 +491,7 @@
         <val lang="de_DE">Lösche das Element an der Cursor-Position.</val>
     </key>
     <!-- Related Terms -->
-    <key value="doctales.terminology.label.relations">
+    <key value="doctales.relations">
         <comment>Relations</comment>
         <val lang="en_US">Term Relations</val>
         <val lang="de_DE">Termbeziehungen</val>
@@ -557,18 +557,16 @@
     </key>
     <!-- partsOf -->
     <key value="doctales.terminology.partsOf">
-        <val lang="en_US">Are Part of</val>
-        <val lang="de_DE">Sind Teil von</val>
+        <val lang="en_US">Is Part of</val>
+        <val lang="de_DE">Ist Teil von</val>
     </key>
     <key type="action" value="doctales.add.partsOf">
-        <comment>Add a new partsOf element.</comment>
-        <val lang="en_US">Add partsOf (&lt;partsOf&gt;)</val>
-        <val lang="de_DE">partsOf (&lt;partsOf&gt;) einfügen</val>
+        <val lang="en_US">Add part-of relations (&lt;partsOf&gt;)</val>
+        <val lang="de_DE">Ist-Teil-von Beziehungen (&lt;partsOf&gt;) einfügen</val>
     </key>
     <key value="doctales.add.partsOf_description">
-        <comment>An partsOf element contains references to parts of the current term.</comment>
-        <val lang="en_US">An partsOf element contains references to parts of the current term.</val>
-        <val lang="de_DE">Ein partsOf Element enthält Referenzen zu Bestandteilen des aktuellen Begriffs.</val>
+        <val lang="en_US">A &lt;partsOf&gt; element contains references to terms to whom the current term is a part of.</val>
+        <val lang="de_DE">Ein &lt;partsOf&gt; Element enthält Referenzen zu Termen, von denen der aktuelle Term ein Bestandteil ist.</val>
     </key>
     <key value="doctales.add.partOf">
         <val lang="en_US">Link a partOf</val>
@@ -713,147 +711,145 @@
     </key>
 
     <!-- CSS Labels -->
-    <key value="doctales.terminology.label.termVariant">
+    <key value="doctales.termVariant">
         <comment>termVariant</comment>
         <val lang="en_US">Term</val>
         <val lang="de_DE">Term</val>
     </key>
-    <key value="doctales.terminology.label.case">
+    <key value="doctales.case">
         <comment>Case</comment>
         <val lang="en_US">Case</val>
         <val lang="de_DE">Kasus</val>
     </key>
-    <key value="doctales.terminology.label.number">
+    <key value="doctales.number">
         <comment>Number</comment>
         <val lang="en_US">Number</val>
         <val lang="de_DE">Numerus</val>
     </key>
-    <key value="doctales.terminology.label.add.term">
+    <key value="doctales.add.term">
         <comment>Add a new term.</comment>
         <val lang="en_US">Add new term</val>
         <val lang="de_DE">Neuen Term einfügen</val>
     </key>
-    <key value="doctales.terminology.label.fullForm">
+    <key value="doctales.fullForm">
         <comment>Full Form</comment>
         <val lang="en_US">Full Form</val>
         <val lang="de_DE">Langform</val>
     </key>
-    <key value="doctales.terminology.label.fullForm_description">
+    <key value="doctales.fullForm_description">
         <comment>Insert a full form element.</comment>
         <val lang="en_US">Insert a term in standard notation (full form).</val>
         <val lang="de_DE">Term in Standardschreibweise (full form) einfügen.</val>
     </key>
-    <key value="doctales.terminology.label.abbreviation">
+    <key value="doctales.abbreviation">
         <comment>Abbreviation</comment>
         <val lang="en_US">Abbreviation</val>
         <val lang="de_DE">Abkürzung</val>
     </key>
-    <key value="doctales.terminology.label.abbreviation_description">
+    <key value="doctales.abbreviation_description">
         <comment>Insert an abbreviation element.</comment>
         <val lang="en_US">Insert an abbreviation of a term.</val>
         <val lang="de_DE">Abkürzung eines Terms einfügen.</val>
     </key>
-    <key value="doctales.terminology.label.acronym">
+    <key value="doctales.acronym">
         <comment>Acronym</comment>
         <val lang="en_US">Acronym</val>
         <val lang="de_DE">Akronym</val>
     </key>
-    <key value="doctales.terminology.label.verb">
+    <key value="doctales.verb">
         <comment>Verb</comment>
         <val lang="en_US">Verb</val>
         <val lang="de_DE">Verb</val>
     </key>
-    <key value="doctales.terminology.label.acronym_description">
+    <key value="doctales.acronym_description">
         <comment>Insert an acronym element.</comment>
         <val lang="en_US">Insert an acronym of a term.</val>
         <val lang="de_DE">Akronym eines Terms einfügen.</val>
     </key>
-    <key value="doctales.terminology.label.definition">
+    <key value="doctales.definition">
         <comment>Definition</comment>
         <val lang="en_US">Definition</val>
         <val lang="de_DE">Definition</val>
     </key>
-    <key value="doctales.terminology.label.termAdministration">
+    <key value="doctales.termAdministration">
         <comment>Term Administration</comment>
         <val lang="en_US">Term Administration</val>
         <val lang="de_DE">Term-Verwaltung</val>
     </key>
-    <key value="doctales.terminology.label.termSource">
+    <key value="doctales.termSource">
         <comment>Source of Term</comment>
         <val lang="en_US">Source of Term</val>
         <val lang="de_DE">Quelle des Terms</val>
     </key>
-    <key value="doctales.terminology.label.sourceReference">
+    <key value="doctales.sourceReference">
         <comment>Reference to Source</comment>
         <val lang="en_US">Reference to Source</val>
         <val lang="de_DE">Verweis auf Quelle</val>
     </key>
-    <key value="doctales.terminology.label.sourceName">
+    <key value="doctales.sourceName">
         <comment>Name of Source</comment>
         <val lang="en_US">Name of Source</val>
         <val lang="de_DE">Name der Quelle</val>
     </key>
-    <key value="doctales.terminology.label.domains">
+    <key value="doctales.domains">
         <comment>Domains</comment>
         <val lang="en_US">Domains</val>
         <val lang="de_DE">Domänen</val>
     </key>
-    <key value="doctales.terminology.label.domain">
+    <key value="doctales.domain">
         <comment>Domain</comment>
         <val lang="en_US">Domain</val>
         <val lang="de_DE">Domäne</val>
     </key>
-    <key value="doctales.terminology.label.termCommitteeMember">
-        <comment>Term Committee Member</comment>
+    <key value="doctales.termCommitteeMember">
         <val lang="en_US">Term Committee Member</val>
         <val lang="de_DE">Term-Komitee-Mitglied</val>
     </key>
-    <key value="doctales.terminology.label.usage">
+    <key value="doctales.add.termCommitteeMember">
+        <val lang="en_US">Add Term Committee Member (&lt;termCommitteeMember&gt;)</val>
+        <val lang="de_DE">Term-Komitee-Mitglied (&lt;termCommitteeMember&gt;) einfügen</val>
+    </key>
+    <key value="doctales.usage">
         <comment>Usage</comment>
         <val lang="en_US">Usage</val>
         <val lang="de_DE">Verwendung</val>
     </key>
-    <key value="doctales.terminology.label.usage">
-        <comment>Usage</comment>
-        <val lang="en_US">Usage</val>
-        <val lang="de_DE">Verwendung</val>
-    </key>
-    <key value="doctales.terminology.label.language">
+    <key value="doctales.language">
         <comment>Language</comment>
         <val lang="en_US">Language</val>
         <val lang="de_DE">Sprache</val>
     </key>
-    <key value="doctales.terminology.label.related.terms">
+    <key value="doctales.related.terms">
         <comment>Related Terms</comment>
         <val lang="en_US">Related Terms</val>
         <val lang="de_DE">Verwandte Begriffe</val>
     </key>
-    <key value="doctales.terminology.label.related.term">
+    <key value="doctales.related.term">
         <comment>Related Term</comment>
         <val lang="en_US">Related Term</val>
         <val lang="de_DE">Verwandter Begriff</val>
     </key>
-    <key value="doctales.terminology.label.antonym">
+    <key value="doctales.antonym">
         <comment>Antonym</comment>
         <val lang="en_US">Antonym</val>
         <val lang="de_DE">Antonym</val>
     </key>
-    <key value="doctales.terminology.label.hypernym">
+    <key value="doctales.hypernym">
         <comment>Hypernym</comment>
         <val lang="en_US">Hypernym</val>
         <val lang="de_DE">Hypernym</val>
     </key>
-    <key value="doctales.terminology.label.hyponym">
+    <key value="doctales.hyponym">
         <comment>Hyponym</comment>
         <val lang="en_US">Hyponym</val>
         <val lang="de_DE">Hyponym</val>
     </key>
-    <key value="doctales.terminology.label.partOf">
+    <key value="doctales.partOf">
         <comment>Is Part Of</comment>
         <val lang="en_US">Is Part Of</val>
         <val lang="de_DE">Ist Teil von</val>
     </key>
-    <key value="doctales.terminology.label.developedByDoctales">
+    <key value="doctales.developedByDoctales">
         <comment>Developed by Doctales</comment>
         <val lang="en_US">Developed by Doctales</val>
         <val lang="de_DE">Entwickelt von Doctales</val>

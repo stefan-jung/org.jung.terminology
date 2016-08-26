@@ -5,7 +5,8 @@
  <definition>
   <definitionText>A car is a wheeled, self-powered motor vehicle used for transportation.</definitionText>
   <definitionSource>
-   <sourceReference href="https://en.wikipedia.org/wiki/Car" format="html"/>
+   <sourceReference href="https://en.wikipedia.org/wiki/Car" format="html" scope="external"
+    >Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>

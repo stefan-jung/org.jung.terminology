@@ -19,8 +19,8 @@
   </fullForm>
  </termBody>
  <relations>
-  <relatedTerms>
-   <relatedTerm keyref="car"/>
-  </relatedTerms>
+  <partsOf>
+   <partOf keyref="car"/>
+  </partsOf>
  </relations>
 </termentry>
