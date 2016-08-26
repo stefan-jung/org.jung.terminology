@@ -379,7 +379,17 @@
 
 *[class~="termentry/domains"]:before(10) {
     .beforeBlock();
-    content: "${i18n(doctales.domains)}:";
+    content: "${i18n(doctales.domains)}:"
+    oxy_buttonGroup(
+        label, '',
+        icon, url(@pencilIcon),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.domain'),
+            oxy_action(id, 'doctales.delete.domains')
+        )
+    );
 }
 
 *[class~="termentry/domains"] {
@@ -424,10 +434,30 @@
 
 *[class~="termentry/termCommitteeMember"]:before(10) {
     content: "${i18n(doctales.termCommitteeMember)}: ";
+    color: black;
     .uiElementLabel();
 }
 
+*[class~="termentry/termCommitteeMember"]:before(8) {
+    content: oxy_textfield(
+        edit, '#text',
+        columns, 50
+    );
+}
+
+*[class~="termentry/termCommitteeMember"]:before(7) {
+    content: 
+    oxy_button(
+        action, oxy_action(
+            id, 'doctales.delete.termCommitteeMember'
+        ),
+        transparent, true
+    );
+}
+
 *[class~="termentry/termCommitteeMember"] {
+    list-style: none !important;
+    color: transparent;
 }
 
 *[class~="termentry/termNotation"]:before(10) {
@@ -568,7 +598,7 @@
 }
 
 *[class~="termentry/termVariant"]:before(10) {
-    content: "Term "
+    content: "${i18n(doctales.termVariant)} "
         oxy_buttonGroup(
             label, '',
             icon, url(@pencilIcon),
@@ -586,7 +616,7 @@
 }
 
 *[class~="termentry/termVariant"]:before(9) {
-    content: "Term:";
+    content: "${i18n(doctales.termVariant)} ";
 }
 
 *[class~="termentry/termVariant"]:before(8) {

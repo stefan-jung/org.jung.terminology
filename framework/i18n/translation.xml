@@ -7,135 +7,115 @@
     
     <!-- Menu entry -->
     <key type="action" value="doctales.terminology">
-        <comment>doctales.terminology</comment>
         <val lang="en_US">DOCTALES Terminology</val>
         <val lang="de_DE">DOCTALES Terminologie</val>
     </key>
-    
     <key type="action" value="doctales.move.element.up">
-        <comment>Move the current element up.</comment>
         <val lang="en_US">Move element up.</val>
         <val lang="de_DE">Element nach oben schieben.</val>
     </key>
     <key value="doctales.move.element.up_description">
-        <comment>You can order the elements without interfannotationerring the processing.</comment>
         <val lang="en_US">The element order does not interfer the processing.</val>
         <val lang="de_DE">Die Reihenfolge beeinflusst nicht die Verarbeitung.</val>
     </key>
     <key type="action" value="doctales.move.element.down">
-        <comment>Move the current element down.</comment>
         <val lang="en_US">Move element down.</val>
         <val lang="de_DE">Element nach unten schieben.</val>
     </key>
     <key value="doctales.move.element.down_description">
-        <comment>You can order the elements without interferring the processing.</comment>
         <val lang="en_US">The element order does not interfer the processing.</val>
         <val lang="de_DE">Die Reihenfolge beeinflusst nicht die Verarbeitung.</val>
     </key>
     <key value="doctales.delete.element">
-        <comment>Delete the current element.</comment>
         <val lang="en_US">Delete the current element.</val>
         <val lang="de_DE">Lösche das aktuelle Element.</val>
     </key>
+
     <!-- definition -->
     <key type="action" value="doctales.add.definition">
-        <comment>Add a definition element.</comment>
         <val lang="en_US">Add definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.definition_description">
-        <comment>Add a definition element.</comment>
         <val lang="en_US">Add definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.definition">
-        <comment>Delete the current definition element.</comment>
         <val lang="en_US">Delete definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
     </key>
     <key value="doctales.delete.definition_description">
-        <comment>Delete the current definition element.</comment>
+        
         <val lang="en_US">Delete definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
     </key>
+
     <!-- definitionSource -->
     <key value="doctales.definitionSource">
-        <comment>Source of Definition</comment>
         <val lang="en_US">Source of Definition</val>
         <val lang="de_DE">Quelle der Definition</val>
     </key>
     <key type="action" value="doctales.add.definitionSource">
-        <comment>Add a definitionSource element.</comment>
         <val lang="en_US">Add source of definition (&lt;definitionSource&gt;)</val>
         <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.definitionSource_description">
-        <comment>Add a definitionSource element.</comment>
         <val lang="en_US">Add source of definition (&lt;definitionSource&gt;)</val>
         <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.definitionSource">
-        <comment>Delete the current definitionSource element.</comment>
         <val lang="en_US">Delete source of definition (&lt;definitionSource&gt;)</val>
         <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) löschen</val>
     </key>
     <key value="doctales.delete.definitionSource_description">
-        <comment>Delete the current definitionSource element.</comment>
         <val lang="en_US">Delete source of definition (&lt;definitionSource&gt;)</val>
         <val lang="de_DE">Quelle der Definition (&lt;definitionSource&gt;) löschen</val>
     </key>
+
     <!-- sourceName -->
     <key value="doctales.sourceName">
-        <comment>Name of Source</comment>
         <val lang="en_US">Name of Source</val>
         <val lang="de_DE">Name der Quelle</val>
     </key>
     <key type="action" value="doctales.add.sourceName">
-        <comment>Add a sourceName element.</comment>
         <val lang="en_US">Add name of source (&lt;sourceName&gt;)</val>
         <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.sourceName_description">
-        <comment>Add a sourceName element.</comment>
         <val lang="en_US">Add name of source (&lt;sourceName&gt;)</val>
         <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.sourceName">
-        <comment>Delete the current definitionSource element.</comment>
         <val lang="en_US">Delete name of source (&lt;sourceName&gt;)</val>
         <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) löschen</val>
     </key>
     <key value="doctales.delete.sourceName_description">
-        <comment>Delete the current definitionSource element.</comment>
         <val lang="en_US">Delete name of source (&lt;sourceName&gt;)</val>
         <val lang="de_DE">Name der Quelle (&lt;sourceName&gt;) löschen</val>
     </key>
-     <!-- sourceReference -->
+
+    <!-- sourceReference -->
     <key value="doctales.sourceReference">
-        <comment>Reference to Source</comment>
         <val lang="en_US">Reference to Source</val>
         <val lang="de_DE">Verweis auf Quelle</val>
     </key>
     <key type="action" value="doctales.add.sourceReference">
-        <comment>Add a sourceReference element.</comment>
         <val lang="en_US">Add reference to source (&lt;sourceReference&gt;)</val>
         <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.sourceReference_description">
-        <comment>Add a sourceReference element.</comment>
         <val lang="en_US">Add reference to source (&lt;sourceReference&gt;)</val>
         <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.sourceReference">
-        <comment>Delete the current sourceReference element.</comment>
         <val lang="en_US">Delete reference to source (&lt;sourceReference&gt;)</val>
         <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) löschen</val>
     </key>
     <key value="doctales.delete.sourceReference_description">
-        <comment>Delete the current sourceReference element.</comment>
         <val lang="en_US">Delete reference to source (&lt;sourceReference&gt;)</val>
         <val lang="de_DE">Verweis auf Quelle (&lt;sourceReference&gt;) löschen</val>
     </key>
+
     <!-- sourceReference -->
     <key value="doctales.sourceReference.text">
         <val lang="en_US">Text</val>
@@ -153,381 +133,329 @@
         <val lang="en_US">scope</val>
         <val lang="de_DE">scope</val>
     </key>
+
     <!-- partOfSpeech -->
     <key value="doctales.partOfSpeech">
-        <comment>partOfSpeech</comment>
         <val lang="en_US">Part of Speech</val>
         <val lang="de_DE">Wortklasse</val>
     </key>
     <key type="action" value="doctales.add.partOfSpeech">
-        <comment>Add a partOfSpeech element.</comment>
         <val lang="en_US">Add Part of Speech (&lt;partOfSpeech&gt;)</val>
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.partOfSpeech_description">
-        <comment>Add a partOfSpeech element.</comment>
         <val lang="en_US">Add Part of Speech (&lt;partOfSpeech&gt;)</val>
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.partOfSpeech">
-        <comment>Delete the current partOfSpeech element.</comment>
         <val lang="en_US">Delete Part of Speech (&lt;partOfSpeech&gt;)</val>
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) löschen</val>
     </key>
     <key value="doctales.delete.partOfSpeech_description">
-        <comment>Delete the current partOfSpeech element.</comment>
         <val lang="en_US">Delete Part of Speech (&lt;partOfSpeech&gt;)</val>
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) löschen</val>
     </key>
+
     <!-- agreedWith -->
     <key value="doctales.agreedWith">
-        <comment>Agreed With</comment>
         <val lang="en_US">Agreed With</val>
         <val lang="de_DE">Abgestimmt mit</val>
     </key>
     <key type="action" value="doctales.add.agreedWith">
-        <comment>Add an agreedWith element.</comment>
         <val lang="en_US">Add agreements (&lt;agreedWith&gt;)</val>
         <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.agreedWith_description">
-        <comment>Add an agreedWith element.</comment>
         <val lang="en_US">Add agreements (&lt;agreedWith&gt;)</val>
         <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.agreedWith">
-        <comment>Delete the current agreedWith element.</comment>
         <val lang="en_US">Delete agreements (&lt;agreedWith&gt;)</val>
         <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) löschen</val>
     </key>
     <key value="doctales.delete.agreedWith_description">
-        <comment>Delete the current agreedWith element.</comment>
         <val lang="en_US">Delete agreements (&lt;agreedWith&gt;)</val>
         <val lang="de_DE">Abstimmungen (&lt;agreedWith&gt;) löschen</val>
     </key>
+
     <!-- equation-figure -->
     <key value="doctales.equation-figure">
-        <comment>equation-figure</comment>
         <val lang="en_US">Equation</val>
         <val lang="de_DE">Formel</val>
     </key>
     <key type="action" value="doctales.add.equation-figure">
-        <comment>Add anequation-figure element.</comment>
         <val lang="en_US">Add Equation (&lt;equation-figure&gt;)</val>
         <val lang="de_DE">Formel (&lt;equation-figure&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.equation-figure_description">
-        <comment>Add an equation-figure element.</comment>
         <val lang="en_US">Add Equation (&lt;equation-figure&gt;)</val>
         <val lang="de_DE">Formel (&lt;equation-figure&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.equation-figure">
-        <comment>Delete the current equation-figure element.</comment>
         <val lang="en_US">Delete Equation (&lt;equation-figure&gt;)</val>
         <val lang="de_DE">Formel (&lt;equation-figure&gt;) löschen</val>
     </key>
     <key value="doctales.delete.equation-figure_description">
-        <comment>Delete the current equation-figure element.</comment>
         <val lang="en_US">Delete Equation (&lt;equation-figure&gt;)</val>
         <val lang="de_DE">Formel (&lt;equation-figure&gt;) löschen</val>
     </key>
+
     <!-- note -->
     <key value="doctales.note">
-        <comment>note</comment>
         <val lang="en_US">Note</val>
         <val lang="de_DE">Hinweis</val>
     </key>
     <key type="action" value="doctales.add.note">
-        <comment>Add note element.</comment>
         <val lang="en_US">Add Note (&lt;note&gt;)</val>
         <val lang="de_DE">Hinweis (&lt;note&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.note_description">
-        <comment>Add note element.</comment>
         <val lang="en_US">Add Note (&lt;note&gt;)</val>
         <val lang="de_DE">Hinweis (&lt;note&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.note">
-        <comment>Delete the current note element.</comment>
         <val lang="en_US">Delete Note (&lt;note&gt;)</val>
         <val lang="de_DE">Hinweis (&lt;note&gt;) löschen</val>
     </key>
     <key value="doctales.delete.note_description">
-        <comment>Delete the current note element.</comment>
         <val lang="en_US">Delete Note (&lt;note&gt;)</val>
         <val lang="de_DE">Hinweis (&lt;note&gt;) löschen</val>
     </key>
+
     <!-- fig -->
     <key value="doctales.fig">
-        <comment>fig</comment>
         <val lang="en_US">Figure</val>
         <val lang="de_DE">Abbildung</val>
     </key>
     <key type="action" value="doctales.add.fig">
-        <comment>Add fig element.</comment>
         <val lang="en_US">Add Figure (&lt;fig&gt;)</val>
         <val lang="de_DE">Abbildung (&lt;fig&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.fig_description">
-        <comment>Add note element.</comment>
         <val lang="en_US">Add Figure (&lt;fig&gt;)</val>
         <val lang="de_DE">Abbildung (&lt;fig&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.fig">
-        <comment>Delete the current note element.</comment>
         <val lang="en_US">Delete Figure (&lt;fig&gt;)</val>
         <val lang="de_DE">Abbildung (&lt;fig&gt;) löschen</val>
     </key>
     <key value="doctales.delete.fig_description">
-        <comment>Delete the current note element.</comment>
         <val lang="en_US">Delete Figure (&lt;fig&gt;)</val>
         <val lang="de_DE">Abbildung (&lt;fig&gt;) löschen</val>
     </key>
+
     <!-- fig -->
     <key value="doctales.domains">
-        <comment>domains</comment>
         <val lang="en_US">Domains</val>
         <val lang="de_DE">Domänen</val>
     </key>
     <key type="action" value="doctales.add.domains">
-        <comment>Add domains element.</comment>
         <val lang="en_US">Add Domains (&lt;domains&gt;)</val>
         <val lang="de_DE">Domänen (&lt;domains&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.domains_description">
-        <comment>Add domains element.</comment>
         <val lang="en_US">Add Domains (&lt;domains&gt;)</val>
         <val lang="de_DE">Domänen (&lt;domains&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.domains">
-        <comment>Delete the current domains element.</comment>
         <val lang="en_US">Delete Domains (&lt;domains&gt;)</val>
         <val lang="de_DE">Domänen (&lt;domains&gt;) löschen</val>
     </key>
     <key value="doctales.delete.domains_description">
-        <comment>Delete the current domains element.</comment>
         <val lang="en_US">Delete Domains (&lt;domains&gt;)</val>
         <val lang="de_DE">Domänen (&lt;domains&gt;) löschen</val>
     </key>
+
     <!-- fullForm -->
     <key type="action" value="doctales.add.fullForm">
-        <comment>Add a new fullForm element.</comment>
         <val lang="en_US">Add full form (&lt;fullForm&gt;)</val>
         <val lang="de_DE">Langform (&lt;fullForm&gt;) einfügen</val>
     </key>
     <key value="doctales.add.fullForm_description">
-        <comment>A fullForm element contains the full notation of a term.</comment>
         <val lang="en_US">A fullForm element contains the full notation of a term.</val>
         <val lang="de_DE">Ein fullForm Element enthält die vollständige Schreibweise eines Terms.</val>
     </key>
     <key value="doctales.delete.fullForm">
-        <comment>Delete the current fullForm element.</comment>
         <val lang="en_US">Delete full form (&lt;fullForm&gt;)</val>
         <val lang="de_DE">Langform (&lt;fullForm&gt;) löschen</val>
     </key>
+
     <!-- abbreviation -->
     <key type="action" value="doctales.add.abbreviation">
-        <comment>Add a new abbreviation element.</comment>
         <val lang="en_US">Add abbreviation (&lt;abbreviation&gt;)</val>
         <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.abbreviation">
-        <comment>Delete the current abbreviation element.</comment>
         <val lang="en_US">Delete abbreviation (&lt;abbreviation&gt;)</val>
         <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) löschen</val>
     </key>
+
     <!-- acronym -->
     <key type="action" value="doctales.add.acronym">
-        <comment>Add a new acronym element.</comment>
         <val lang="en_US">Add acronym (&lt;acronym&gt;)</val>
         <val lang="de_DE">Akronym (&lt;acronym&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.acronym">
-        <comment>Delete the current acronym element.</comment>
         <val lang="en_US">Delete acronym (&lt;acronym&gt;)</val>
         <val lang="de_DE">Akronym (&lt;acronym&gt;) löschen</val>
     </key>
+
     <!-- verb -->
     <key type="action" value="doctales.add.verb">
-        <comment>Add a new verb element.</comment>
         <val lang="en_US">Add verb (&lt;verb&gt;)</val>
         <val lang="de_DE">Verb (&lt;verb&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.verb">
-        <comment>Delete the current verb element.</comment>
         <val lang="en_US">Delete verb (&lt;verb&gt;)</val>
         <val lang="de_DE">Verb (&lt;verb&gt;) löschen</val>
     </key>
+
     <!-- termVariant -->
     <key value="doctales.add.termVariant">
-        <comment>Add a new termVariant element.</comment>
         <val lang="en_US">Add a new termVariant element.</val>
         <val lang="de_DE">Neues termVariant Element einfügen.</val>
     </key>
     <key type="action" value="doctales.terminology.termVariant.placeholder">
-        <comment>Enter new term</comment>
         <val lang="en_US">Enter new term</val>
         <val lang="de_DE">Neuen Term eingeben</val>
     </key>
     <key value="doctales.add.termVariant_description">
-        <comment>A termVariant element contains a term in a specific case and number.</comment>
         <val lang="en_US">A termVariant element contains a term in a specific case and number.</val>
         <val lang="de_DE">Ein termVariant Element enthält einen Term in einem Kasus und Numerus.</val>
     </key>
     <key value="doctales.delete.termVariant">
-        <comment>Delete the current termVariant element.</comment>
         <val lang="en_US">Delete term variant (&lt;termVariant&gt;)</val>
         <val lang="de_DE">Term (&lt;termVariant&gt;) löschen</val>
     </key>
     <key value="doctales.delete.termVariant_description">
-        <comment>Delete the current termVariant element.</comment>
         <val lang="en_US">Delete term variant (&lt;termVariant&gt;)</val>
         <val lang="de_DE">Term (&lt;termVariant&gt;) löschen</val>
     </key>
+
     <!-- termContext -->
     <key value="doctales.termContext">
-        <comment>Term Context</comment>
         <val lang="en_US">Term Context</val>
         <val lang="de_DE">Term-Kontext</val>
     </key>
     <key type="action" value="doctales.add.termContext">
-        <comment>Add a new termContext element.</comment>
         <val lang="en_US">Add context (&lt;termContext&gt;)</val>
         <val lang="de_DE">Kontext (&lt;termContext&gt;) einfügen</val>
     </key>
     <key value="doctales.add.termContext_description">
-        <comment>A termContext contains a context example of the term.</comment>
         <val lang="en_US">A termContext element contains a context example of the term.</val>
         <val lang="de_DE">Ein termContext Element enthält ein Kontextbeispiels eines Terms.</val>
     </key>
     <key type="action" value="doctales.delete.termContext">
-        <comment>Delete termContext element.</comment>
         <val lang="en_US">Delete term context (&lt;termContext&gt;)</val>
         <val lang="de_DE">Term-Kontext (&lt;termContext&gt;) löschen</val>
     </key>
     <key value="doctales.delete.termContext_description">
-        <comment>Delete termContext element.</comment>
         <val lang="en_US">Delete term context (&lt;termContext&gt;)</val>
         <val lang="de_DE">Term-Kontext (&lt;termContext&gt;) löschen</val>
     </key>
+
     <!-- termContextSource -->
     <key value="doctales.termContextSource">
-        <comment>Term Context Source</comment>
         <val lang="en_US">Source of Context</val>
         <val lang="de_DE">Quelle des Kontextes</val>
     </key>
+
     <!-- termSource -->
     <key type="action" value="doctales.add.termSource">
-        <comment>Add a new termSource element.</comment>
         <val lang="en_US">Add term source (&lt;termSource&gt;)</val>
         <val lang="de_DE">Termquelle (&lt;termSource&gt;) einfügen</val>
     </key>
     <key value="doctales.add.termSource_description">
-        <comment>A termSource contains the source of the term.</comment>
         <val lang="en_US">A termSource element contains the source of the term.</val>
         <val lang="de_DE">Ein termSource Element enthält die Quellenangabe eines Terms.</val>
     </key>
     <key type="action" value="doctales.delete.termSource">
-        <comment>Delete termSource element.</comment>
         <val lang="en_US">Delete term source (&lt;termSource&gt;)</val>
         <val lang="de_DE">Termquelle (&lt;termSource&gt;) löschen</val>
     </key>
     <key value="doctales.delete.termSource_description">
-        <comment>Delete termSource element.</comment>
         <val lang="en_US">Delete term source (&lt;termSource&gt;)</val>
         <val lang="de_DE">Termquelle (&lt;termSource&gt;) löschen</val>
     </key>
+
     <!-- annotation -->
     <key value="doctales.annotation">
-        <comment>Annotation</comment>
         <val lang="en_US">Annotation</val>
         <val lang="de_DE">Anmerkung</val>
     </key>
     <key type="action" value="doctales.add.annotation">
-        <comment>Add a new annotation element.</comment>
         <val lang="en_US">Add annotation (&lt;annotation&gt;)</val>
         <val lang="de_DE">Anmerkung (&lt;annotation&gt;) einfügen</val>
     </key>
     <key value="doctales.add.annotation_description">
-        <comment>An annotation contains annotations to the term.</comment>
         <val lang="en_US">An annotation element contains annotations to the term.</val>
         <val lang="de_DE">Ein annotation Element enthält Anmerkungen zu einem Term.</val>
     </key>
     <key type="action" value="doctales.delete.annotation">
-        <comment>Delete annotation element.</comment>
         <val lang="en_US">Delete annotation (&lt;annotation&gt;)</val>
         <val lang="de_DE">Anmerkung (&lt;annotation&gt;) löschen</val>
     </key>
     <key value="doctales.delete.annotation_description">
-        <comment>Delete annotation element.</comment>
         <val lang="en_US">Delete annotation (&lt;annotation&gt;)</val>
         <val lang="de_DE">Anmerkung (&lt;annotation&gt;) löschen</val>
     </key>
+
     <!-- @number -->
     <key value="doctales.add.attribute.number">
-        <comment>Add attribute number</comment>
         <val lang="en_US">Add number (@number)</val>
         <val lang="de_DE">Numerus (@number) einfügen</val>
     </key>
     <key value="doctales.add.attribute.number_description">
-        <comment>Add a new attribute "number" to the current "termNotation" element.</comment>
         <val lang="en_US">Add number (@number)</val>
         <val lang="de_DE">Numerus (@number) einfügen</val>
     </key>
+
     <!-- @case -->
     <key value="doctales.add.attribute.case">
-        <comment>Add attribute case</comment>
         <val lang="en_US">Add case (@case)</val>
         <val lang="de_DE">Kasus (@case) einfügen</val>
     </key>
     <key value="doctales.add.attribute.case_description">
-        <comment>Add a new attribute "case" to the current "termNotation" element.</comment>
         <val lang="en_US">Add case (@case)</val>
         <val lang="de_DE">Kasus (@case) einfügen</val>
     </key>
     <key value="doctales.delete.element_description">
-        <comment>Delete the element at the cursor position.</comment>
         <val lang="en_US">Delete the element at the cursor position.</val>
         <val lang="de_DE">Lösche das Element an der Cursor-Position.</val>
     </key>
-    <!-- Related Terms -->
+
+    <!-- Relations -->
     <key value="doctales.relations">
-        <comment>Relations</comment>
         <val lang="en_US">Term Relations</val>
         <val lang="de_DE">Termbeziehungen</val>
     </key>
     <key type="action" value="doctales.add.relations">
-        <comment>Add a relations element.</comment>
         <val lang="en_US">Add Term Relations (&lt;relations&gt;)</val>
         <val lang="de_DE">Termbeziehungen (&lt;relations&gt;) einfügen</val>
     </key>
     <key type="action" value="doctales.add.relations_description">
-        <comment>Add a relations element.</comment>
         <val lang="en_US">Add Term Relations (&lt;relations&gt;)</val>
         <val lang="de_DE">Termbeziehungen (&lt;relations&gt;) einfügen</val>
     </key>
     <key value="doctales.delete.relations">
-        <comment>Delete the relations element.</comment>
         <val lang="en_US">Delete Term Relations (&lt;relations&gt;)</val>
         <val lang="de_DE">Termbeziehungen (&lt;relations&gt;) löschen</val>
     </key>
     <key value="doctales.delete.relations_description">
-        <comment>Delete the relations element.</comment>
         <val lang="en_US">Delete Term Relations (&lt;relations&gt;)</val>
         <val lang="de_DE">Termbeziehungen (&lt;relations&gt;) löschen</val>
     </key>
+
     <!-- antonyms -->
     <key value="doctales.terminology.antonyms">
         <val lang="en_US">Antonyms</val>
         <val lang="de_DE">Antonyme</val>
     </key>
     <key type="action" value="doctales.add.antonyms">
-        <comment>Add a new antonyms element.</comment>
         <val lang="en_US">Add antonyms (&lt;antonyms&gt;)</val>
         <val lang="de_DE">Antonyme (&lt;antonyms&gt;) einfügen</val>
     </key>
     <key value="doctales.add.antonyms_description">
-        <comment>An antonyms element contains references to antonyms of the current term.</comment>
         <val lang="en_US">An antonyms element contains references to antonyms of the current term.</val>
         <val lang="de_DE">Ein antonyms Element enthält Referenzen zu Antonymen des aktuellen Begriffs.</val>
     </key>
@@ -555,6 +483,7 @@
         <val lang="en_US">Delete links to antonyms</val>
         <val lang="de_DE">Links auf Antonyme löschen</val>
     </key>
+
     <!-- partsOf -->
     <key value="doctales.terminology.partsOf">
         <val lang="en_US">Is Part of</val>
@@ -592,18 +521,17 @@
         <val lang="en_US">Delete links to parts of the current term</val>
         <val lang="de_DE">Links auf Bestandteile löschen</val>
     </key>
+
     <!-- hypernyms -->
     <key value="doctales.terminology.hypernyms">
         <val lang="en_US">Hypernyms</val>
         <val lang="de_DE">Hypernyme</val>
     </key>
     <key type="action" value="doctales.add.hypernyms">
-        <comment>Add a new hypernyms element.</comment>
         <val lang="en_US">Add hypernyms (&lt;hypernyms&gt;)</val>
         <val lang="de_DE">Hypernyme (&lt;hypernyms&gt;) einfügen</val>
     </key>
     <key value="doctales.add.hypernyms_description">
-        <comment>A hypernyms element contains references to hypernyms.</comment>
         <val lang="en_US">A hypernyms element contains references to hypernyms.</val>
         <val lang="de_DE">Ein hypernyms Element enthält Referenzen zu Hypernymen des aktuellen Begriffs.</val>
     </key>
@@ -631,18 +559,17 @@
         <val lang="en_US">Delete links to hypernyms</val>
         <val lang="de_DE">Links auf Hypernyme löschen</val>
     </key>
+
     <!-- hyponyms -->
     <key value="doctales.terminology.hyponyms">
         <val lang="en_US">Hyponyms</val>
         <val lang="de_DE">Hyponyme</val>
     </key>
     <key type="action" value="doctales.add.hyponyms">
-        <comment>Add a new hyponyms element.</comment>
         <val lang="en_US">Add hyponyms (&lt;hyponyms&gt;)</val>
         <val lang="de_DE">Hyponyme (&lt;hyponyms&gt;) einfügen</val>
     </key>
     <key value="doctales.add.hyponyms_description">
-        <comment>A hyponyms element contains references to hyponyms.</comment>
         <val lang="en_US">A hyponyms element contains references to hyponyms.</val>
         <val lang="de_DE">Ein hyponyms Element enthält Referenzen zu Hyponymen des aktuellen Begriffs.</val>
     </key>
@@ -670,18 +597,17 @@
         <val lang="en_US">Delete links to hyponyms</val>
         <val lang="de_DE">Links auf Hyponyme löschen</val>
     </key>
+
     <!-- relatedTerms -->
     <key value="doctales.terminology.relatedTerms">
         <val lang="en_US">Related Terms</val>
         <val lang="de_DE">Verwandte Begriffe</val>
     </key>
     <key type="action" value="doctales.add.relatedTerms">
-        <comment>Add a new relatedTerms element.</comment>
         <val lang="en_US">Add relatedTerms (&lt;relatedTerms&gt;)</val>
         <val lang="de_DE">Verwandte Begriffe (&lt;relatedTerms&gt;) einfügen</val>
     </key>
     <key value="doctales.add.relatedTerms_description">
-        <comment>A relatedTerms element contains references to related terms.</comment>
         <val lang="en_US">A relatedTerms element contains references to related terms.</val>
         <val lang="de_DE">Ein relatedTerms Element enthält Referenzen zu verwandten Begriffen.</val>
     </key>
@@ -712,92 +638,74 @@
 
     <!-- CSS Labels -->
     <key value="doctales.termVariant">
-        <comment>termVariant</comment>
         <val lang="en_US">Term</val>
         <val lang="de_DE">Term</val>
     </key>
     <key value="doctales.case">
-        <comment>Case</comment>
         <val lang="en_US">Case</val>
         <val lang="de_DE">Kasus</val>
     </key>
     <key value="doctales.number">
-        <comment>Number</comment>
         <val lang="en_US">Number</val>
         <val lang="de_DE">Numerus</val>
     </key>
     <key value="doctales.add.term">
-        <comment>Add a new term.</comment>
         <val lang="en_US">Add new term</val>
         <val lang="de_DE">Neuen Term einfügen</val>
     </key>
     <key value="doctales.fullForm">
-        <comment>Full Form</comment>
         <val lang="en_US">Full Form</val>
         <val lang="de_DE">Langform</val>
     </key>
     <key value="doctales.fullForm_description">
-        <comment>Insert a full form element.</comment>
         <val lang="en_US">Insert a term in standard notation (full form).</val>
         <val lang="de_DE">Term in Standardschreibweise (full form) einfügen.</val>
     </key>
     <key value="doctales.abbreviation">
-        <comment>Abbreviation</comment>
         <val lang="en_US">Abbreviation</val>
         <val lang="de_DE">Abkürzung</val>
     </key>
     <key value="doctales.abbreviation_description">
-        <comment>Insert an abbreviation element.</comment>
         <val lang="en_US">Insert an abbreviation of a term.</val>
         <val lang="de_DE">Abkürzung eines Terms einfügen.</val>
     </key>
     <key value="doctales.acronym">
-        <comment>Acronym</comment>
         <val lang="en_US">Acronym</val>
         <val lang="de_DE">Akronym</val>
     </key>
     <key value="doctales.verb">
-        <comment>Verb</comment>
         <val lang="en_US">Verb</val>
         <val lang="de_DE">Verb</val>
     </key>
     <key value="doctales.acronym_description">
-        <comment>Insert an acronym element.</comment>
         <val lang="en_US">Insert an acronym of a term.</val>
         <val lang="de_DE">Akronym eines Terms einfügen.</val>
     </key>
     <key value="doctales.definition">
-        <comment>Definition</comment>
         <val lang="en_US">Definition</val>
         <val lang="de_DE">Definition</val>
     </key>
     <key value="doctales.termAdministration">
-        <comment>Term Administration</comment>
         <val lang="en_US">Term Administration</val>
         <val lang="de_DE">Term-Verwaltung</val>
     </key>
     <key value="doctales.termSource">
-        <comment>Source of Term</comment>
         <val lang="en_US">Source of Term</val>
         <val lang="de_DE">Quelle des Terms</val>
     </key>
     <key value="doctales.sourceReference">
-        <comment>Reference to Source</comment>
         <val lang="en_US">Reference to Source</val>
         <val lang="de_DE">Verweis auf Quelle</val>
     </key>
     <key value="doctales.sourceName">
-        <comment>Name of Source</comment>
         <val lang="en_US">Name of Source</val>
         <val lang="de_DE">Name der Quelle</val>
     </key>
     <key value="doctales.domains">
-        <comment>Domains</comment>
         <val lang="en_US">Domains</val>
         <val lang="de_DE">Domänen</val>
     </key>
     <key value="doctales.domain">
-        <comment>Domain</comment>
         <val lang="en_US">Domain</val>
         <val lang="de_DE">Domäne</val>
     </key>
@@ -810,47 +718,38 @@
         <val lang="de_DE">Term-Komitee-Mitglied (&lt;termCommitteeMember&gt;) einfügen</val>
     </key>
     <key value="doctales.usage">
-        <comment>Usage</comment>
         <val lang="en_US">Usage</val>
         <val lang="de_DE">Verwendung</val>
     </key>
     <key value="doctales.language">
-        <comment>Language</comment>
         <val lang="en_US">Language</val>
         <val lang="de_DE">Sprache</val>
     </key>
     <key value="doctales.related.terms">
-        <comment>Related Terms</comment>
         <val lang="en_US">Related Terms</val>
         <val lang="de_DE">Verwandte Begriffe</val>
     </key>
     <key value="doctales.related.term">
-        <comment>Related Term</comment>
         <val lang="en_US">Related Term</val>
         <val lang="de_DE">Verwandter Begriff</val>
     </key>
     <key value="doctales.antonym">
-        <comment>Antonym</comment>
         <val lang="en_US">Antonym</val>
         <val lang="de_DE">Antonym</val>
     </key>
     <key value="doctales.hypernym">
-        <comment>Hypernym</comment>
         <val lang="en_US">Hypernym</val>
         <val lang="de_DE">Hypernym</val>
     </key>
     <key value="doctales.hyponym">
-        <comment>Hyponym</comment>
         <val lang="en_US">Hyponym</val>
         <val lang="de_DE">Hyponym</val>
     </key>
     <key value="doctales.partOf">
-        <comment>Is Part Of</comment>
         <val lang="en_US">Is Part Of</val>
         <val lang="de_DE">Ist Teil von</val>
     </key>
     <key value="doctales.developedByDoctales">
-        <comment>Developed by Doctales</comment>
         <val lang="en_US">Developed by Doctales</val>
         <val lang="de_DE">Entwickelt von Doctales</val>
     </key>
