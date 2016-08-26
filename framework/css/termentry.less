@@ -179,8 +179,20 @@
     content: 
     oxy_textfield(
         edit, '#text',
-        columns, 50
-    )"\A";
+        columns, 49
+    );
+    display: inline-block;
+}
+
+*[class~="termentry/sourceName"]:before(6) {
+    content: 
+    oxy_button(
+        action, oxy_action(
+            id, 'doctales.delete.sourceName'
+        ),
+        transparent, true
+    );
+    display: inline-block;
 }
 
 *[class~="termentry/sourceName"]:before(1) {
@@ -192,29 +204,40 @@
 }
 
 *[class~="termentry/sourceName"] {
+    .mainBlock();
     visibility: -oxy-collapse-text;
 }
 
-*[class~="termentry/sourceReference"]:before(10) {
+*[class~="termentry/sourceReference"]:before(11) {
     content: "${i18n(doctales.terminology.label.sourceReference)}: ";
     .uiElementLabel();
     padding-left: 0.5em;
     .link();
 }
 
-*[class~="termentry/sourceReference"]:before(9) {
+*[class~="termentry/sourceReference"]:before(10) {
     content: "${i18n(doctales.terminology.label.sourceReference.text)}: ";
     width: 5em;
     .link();
 }
 
-*[class~="termentry/sourceReference"]:before(8) {
+*[class~="termentry/sourceReference"]:before(9) {
     content:
     oxy_textfield(
           edit, '#text',
           columns, 40
-    )"\A";
+    );
     width: 10em;
+}
+
+*[class~="termentry/sourceReference"]:before(8) {
+    content: 
+    oxy_button(
+        action, oxy_action(
+            id, 'doctales.delete.sourceReference'
+        ),
+        transparent, true
+    )"\A";
 }
 
 *[class~="termentry/sourceReference"]:before(7) {
@@ -223,6 +246,7 @@
     link: attr(href);
     -ah-link: attr(href);  
     .link();
+    margin-left: 10em;
 }
 
 *[class~="termentry/sourceReference"]:before(6) {
@@ -251,7 +275,8 @@
 
 *[class~="termentry/sourceReference"]:before(3) {
     content: "${i18n(doctales.terminology.label.sourceReference.scope)}: ";
-    width: 5em;
+    width: 3em;
+    margin-left: 2em;
     .link();
 }
 
@@ -259,22 +284,22 @@
     content:
     oxy_combobox( 
         edit, '@scope',
-        columns, 20
-    );
+        columns, 22
+    ) !important;
     width: 10em;
-}
-
-*[class~="termentry/sourceReference"]:before(1) {
-    .hideContent();
 }
 
 *[class~="termentry/sourceReference"]:before {
     display: none !important;
 }
 
+*[class~="termentry/sourceReference"][href][format='html']:empty {
+    .hideContent();
+}
+
 *[class~="termentry/sourceReference"] {
+    .mainBlock();
     visibility: -oxy-collapse-text;
-    display: inline;
 }
 
 *[class~="termentry/annotation"]:before(10) {
