@@ -1494,7 +1494,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;partsOf>
-  &lt;isPartOf/>
+  &lt;partOf/>
 &lt;/partsOf></String>
 																	</entry>
 																	<entry>
