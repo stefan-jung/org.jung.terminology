@@ -3,9 +3,11 @@
 <termentry id="wheel">
  <title>Wheel</title>
  <definition>
-  <definitionText>A wheel is a circular component that is intended to rotate on an axle bearing.</definitionText>
+  <definitionText>A wheel is a circular component that is intended to rotate on an axle
+   bearing.</definitionText>
   <definitionSource>
-   <sourceReference href="https://en.wikipedia.org/wiki/Wheel" format="html"/>
+   <sourceReference href="https://en.wikipedia.org/wiki/Wheel" format="html" scope="external"
+    >Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>
