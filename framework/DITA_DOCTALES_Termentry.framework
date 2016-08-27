@@ -2059,11 +2059,11 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;doctales.add.partOfSpeech/></String>
+																		<String>&lt;partOfSpeech/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -4129,6 +4129,192 @@
 														<actionMode>
 															<field name="xpathCondition">
 																<String>self::*[contains(@class, ' termentry/domains ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>130</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.domain</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.domain)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.domain_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/domain ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>131</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.partOfSpeech</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.partOfSpeech)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.partOfSpeech_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/partOfSpeech ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>132</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.termNotation</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.termNotation)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.termNotation_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
