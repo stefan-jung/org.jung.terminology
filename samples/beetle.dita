@@ -13,10 +13,10 @@
  </definition>
  <termBody>
   <domains>
-   <domain value="vw"/>
+   <domain value="VW"/>
   </domains>
   <agreedWith>
-   <termCommitteeMember>Winterkorn</termCommitteeMember>
+   <termCommitteeMember>Martin Winterkorn</termCommitteeMember>
   </agreedWith>
   <fullForm usage="preferred" language="en-GB">
    <termVariant>beetle</termVariant>
