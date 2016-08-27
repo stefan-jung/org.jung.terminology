@@ -265,6 +265,14 @@
         <val lang="en_US">Delete Domains (&lt;domains&gt;)</val>
         <val lang="de_DE">Domänen (&lt;domains&gt;) löschen</val>
     </key>
+    <key type="action" value="doctales.add.domain">
+        <val lang="en_US">Add a Domain (&lt;domain&gt;)</val>
+        <val lang="de_DE">Domäne (&lt;domain&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.domain_description">
+        <val lang="en_US">Add a Domain (&lt;domain&gt;)</val>
+        <val lang="de_DE">Domäne (&lt;domain&gt;) einfügen</val>
+    </key>
 
     <!-- fullForm -->
     <key type="action" value="doctales.add.fullForm">
