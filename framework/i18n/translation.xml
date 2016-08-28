@@ -156,6 +156,28 @@
         <val lang="de_DE">Wortklasse (&lt;partOfSpeech&gt;) löschen</val>
     </key>
 
+    <!-- note -->
+    <key value="doctales.note">
+        <val lang="en_US">Note</val>
+        <val lang="de_DE">Notiz</val>
+    </key>
+    <key type="action" value="doctales.add.note">
+        <val lang="en_US">Add Note (&lt;note&gt;)</val>
+        <val lang="de_DE">Notiz (&lt;note&gt;) einfügen</val>
+    </key>
+    <key type="action" value="doctales.add.note_description">
+        <val lang="en_US">Add Note (&lt;note&gt;)</val>
+        <val lang="de_DE">Notiz (&lt;note&gt;) einfügen</val>
+    </key>
+    <key value="doctales.delete.note">
+        <val lang="en_US">Delete Note (&lt;note&gt;)</val>
+        <val lang="de_DE">Notiz (&lt;note&gt;) löschen</val>
+    </key>
+    <key value="doctales.delete.note_description">
+        <val lang="en_US">Delete Note (&lt;note&gt;)</val>
+        <val lang="de_DE">Notiz (&lt;note&gt;) löschen</val>
+    </key>
+
     <!-- agreedWith -->
     <key value="doctales.agreedWith">
         <val lang="en_US">Agreed With</val>
@@ -243,8 +265,24 @@
         <val lang="en_US">Delete Figure (&lt;fig&gt;)</val>
         <val lang="de_DE">Abbildung (&lt;fig&gt;) löschen</val>
     </key>
+    <key value="doctales.fig.title">
+        <val lang="en_US">Figure Title</val>
+        <val lang="de_DE">Abbildungstitel</val>
+    </key>
 
-    <!-- fig -->
+    <!-- image -->
+    <key value="doctales.image">
+        <val lang="en_US">Image</val>
+        <val lang="de_DE">Bild</val>
+    </key>
+
+    <!-- alt -->
+    <key value="doctales.alt">
+        <val lang="en_US">Alternative Text</val>
+        <val lang="de_DE">Alternativer Text</val>
+    </key>
+
+    <!-- domains -->
     <key value="doctales.domains">
         <val lang="en_US">Domains</val>
         <val lang="de_DE">Domänen</val>

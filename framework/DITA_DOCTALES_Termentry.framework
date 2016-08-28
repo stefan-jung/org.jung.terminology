@@ -59,7 +59,7 @@
 													<String>DOCTALES Termentry</String>
 												</field>
 												<field name="alternate">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 											</cssFile>
 										</field>
@@ -1415,7 +1415,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/antonyms ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1427,7 +1427,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -1487,7 +1487,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/partsOf ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1559,7 +1559,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/hypernyms ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1571,7 +1571,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -1631,7 +1631,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/hyponyms ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1643,7 +1643,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -1703,7 +1703,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/relatedTerms ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1715,7 +1715,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -1775,7 +1775,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')][1] and not(preceding-sibling::*[contains(@class, ' termentry/definition ')][1])</String>
+																<String>not(/*/*[contains(@class, ' termentry/definition ')][1])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1791,7 +1791,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>.</String>
+																		<String>following-sibling::*[contains(@class, ' termentry/termBody ')][1]</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -1923,7 +1923,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -1993,7 +1993,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -2053,7 +2053,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')][1]</String>
+																<String>not(following-sibling::*[contains(@class, ' termentry/termBody ')][1]/*[contains(@class, ' termentry/partOfSpeech ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -2063,7 +2063,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>.</String>
+																		<String>/*/*[contains(@class, ' termentry/termBody ')][1]</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -2129,11 +2129,16 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fig/></String>
+																		<String>&lt;fig>
+  &lt;title>&lt;/title>
+  &lt;image>
+    &lt;alt>&lt;/alt>
+  &lt;/image>
+&lt;/fig></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor-or-self::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>following-sibling::*[contains(@class, ' termentry/termBody ')][1]</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -2193,7 +2198,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/termBody ')][1] and not(*[contains(@class, ' termentry/domains ')][1])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -2205,7 +2210,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>ancestor::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -2690,7 +2695,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')][1] and not(*[contains(@class, ' termentry/agreedWith ')])</String>
+																<String>not(following-sibling::*[contains(@class, ' termentry/termBody ')][1]/*[contains(@class, ' termentry/agreedWith ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -2702,7 +2707,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>self::*[contains(@class, ' termentry/termBody ')][1]</String>
+																		<String>following-sibling::*[contains(@class, ' termentry/termBody ')][1]</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -4315,6 +4320,130 @@
 														<actionMode>
 															<field name="xpathCondition">
 																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>133</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.fig</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.fig)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.fig_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' topic/fig ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>134</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.delete.note</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.delete.note)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.delete.note_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' topic/note ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>

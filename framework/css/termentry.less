@@ -13,8 +13,9 @@
 
 // Icons
 
-@pencilIcon: '../icons/pencil_12.png';
+@deleteIcon: '../icons/delete_12.png';
 @linkIcon: '../icons/link_12.png';
+@pencilIcon: '../icons/pencil_12.png';
 
 // Blocks
 
@@ -22,15 +23,26 @@
     display: none;
 }
 
-.beforeBlock {
-    font-size: 0.7em;
+* {
+    font-family: Arial;
+}
+
+.header {
+    font-size: 8pt;
     font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     display: block;
     border-bottom: 1pt solid #767676;
     width: inherit;
     font-style: normal;
+    font-weight: normal;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 0.3em;
+    padding-right: 0;
+    margin-top: 0;
     margin-bottom: 0.2em;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .mainBlock {
@@ -39,6 +51,9 @@
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
@@ -69,11 +84,37 @@
     content: ' ';
 }
 
-.deleteIcon {
+.delete {
+    content: 
+    oxy_button(
+        action, oxy_action(
+            id, 'doctales.delete.element'
+        ),
+        transparent, true
+    );
     display: block;
     text-align: right;
     float: left;    
     margin-top: -1.5em !important;
+    max-width:-moz-max-content;
+}
+
+.deleteContainer {
+    content:
+    oxy_button(
+        action, oxy_action(
+            name, 'Delete', 
+            description, 'Delete the current element', 
+            icon, url(@deleteIcon), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
+            arg-elementLocation, '.'
+        ),
+        transparent, true
+    );
+    display: block;
+    text-align: right;
+    float: left;    
+    margin-top: -1.7em !important;
     max-width:-moz-max-content;
 }
 
@@ -89,49 +130,37 @@
     text-decoration: none !important;    
 }
 
-*[class~="termentry/definition"]:before(10) {
-    .beforeBlock();
-    content: "${i18n(doctales.definition)} "
-    oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
-        transparent, 'true',
-        actions, 
-        oxy_action_list(
-            oxy_action(id, 'doctales.add.definitionSource'),
-            oxy_action(id, 'doctales.delete.definition')
-        )
-    );
+*[class~="termentry/termentry"] {
+    display: block; 
+    empty-cells: true; 
+    font-family: Serif; 
+    font-size: 16px; 
+    font-style: normal; 
+    font-weight: 400; 
+    line-height: 1.2; 
+    margin-bottom: 24px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 24px; 
+    min-height: 378px; 
+    outline-width: 0; 
+    padding-bottom: 80px; 
+    padding-left: 32px; 
+    padding-right: 16px; 
+    padding-top: 32px; 
+    text-decoration-color: rgba(0,0,0,1.0); 
+    text-decoration-line: none; 
+    text-decoration-style: solid; 
+    width: 816px;
 }
 
-*[class~="termentry/definition"] {
-    .mainBlock();
+*[class~="termentry/termentry"] > *[class~="topic/title"] {
+    font-weight: bold;
+    font-size: 2em;
 }
 
-*[class~="termentry/definitionSource"]:before(10) {
-    .beforeBlock();
-    content: "\A ${i18n(doctales.definitionSource)}"
-    oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
-        transparent, 'true',
-        actions, 
-        oxy_action_list(
-            oxy_action(id, 'doctales.add.sourceName'),
-            oxy_action(id, 'doctales.add.sourceReference'),
-            oxy_action(id, 'doctales.delete.sourceName'),
-            oxy_action(id, 'doctales.delete.sourceReference'),
-            oxy_action(id, 'doctales.delete.definitionSource')
-        )
-    );
-}
-
-*[class~="termentry/definitionSource"] {
-    .mainBlock();
-}
-
-*[class~="termentry/termBody"]:before(10) {
-    .beforeBlock();
+*[class~="termentry/termentry"] > *[class~="topic/title"]:after {
+    .header();
     content: "\A ${i18n(doctales.termAdministration)}"
     oxy_buttonGroup(
         label, '',
@@ -156,12 +185,112 @@
     );
 }
 
+
+*[class~="termentry/definition"]:before(10) {
+    .header();
+    content: "${i18n(doctales.definition)} "
+    oxy_buttonGroup(
+        label, '',
+        icon, url(@pencilIcon),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.definitionSource'),
+            oxy_action(id, 'doctales.delete.definition')
+        )
+    );
+}
+
+*[class~="termentry/definition"]:before(9) {
+    .deleteContainer();
+}
+
+*[class~="termentry/definition"] {
+    .mainBlock();
+}
+
+*[class~="termentry/definitionSource"]:before(10) {
+    .header();
+    content: "\A ${i18n(doctales.definitionSource)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url(@pencilIcon),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.sourceName'),
+            oxy_action(id, 'doctales.add.sourceReference'),
+            oxy_action(id, 'doctales.delete.sourceName'),
+            oxy_action(id, 'doctales.delete.sourceReference'),
+            oxy_action(id, 'doctales.delete.definitionSource')
+        )
+    );
+}
+
+*[class~="termentry/definitionSource"] {
+    .mainBlock();
+}
+
 *[class~="termentry/termBody"] {
     margin-top: 2em;
 }
 
+*[class~="topic/fig"]:before(10) {
+    .header();
+    content: "\A ${i18n(doctales.fig)}"
+    oxy_buttonGroup(
+        label, '',
+        icon, url(@pencilIcon),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.fig')
+        )
+    );
+}
+
+*[class~="topic/fig"]:before(9) {
+    .deleteContainer();
+}
+
+*[class~="topic/fig"] {
+    .mainBlock();
+}
+
+*[class~="topic/fig"] > *[class~="topic/title"]:before(10) {
+    content: "\A ${i18n(doctales.fig.title)}";
+    font-weight: normal;
+}
+
+*[class~="topic/fig"] > *[class~="topic/title"] {
+    font-weight: normal;
+    font-style: normal;
+}
+
+*[class~="topic/image"] {
+}
+
+*[class~="topic/image"]:before(10) {
+    .header();
+    content: "\A ${i18n(doctales.image)}";
+}
+
+*[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
+    .header();
+    content: "\A ${i18n(doctales.alt)}";
+    font-weight: normal;
+}
+
+*[class~="topic/image"] > *[class~="topic/alt"] {
+}
+
+*[class~="topic/image"] > *[class~="topic/alt"]:before,
+*[class~="topic/image"] > *[class~="topic/alt"]:after {
+    content: '';
+}
+
 *[class~="termentry/termSource"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "\A ${i18n(doctales.termSource)}"
     oxy_buttonGroup(
         label, '',
@@ -198,14 +327,7 @@
 }
 
 *[class~="termentry/sourceName"]:before(6) {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            id, 'doctales.delete.sourceName'
-        ),
-        transparent, true
-    );
-    .deleteIcon();
+    .delete();
 }
 
 *[class~="termentry/sourceName"]:before(1) {
@@ -243,14 +365,7 @@
 }
 
 *[class~="termentry/sourceReference"]:before(10) {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            id, 'doctales.delete.sourceReference'
-        ),
-        transparent, true
-    );
-    .deleteIcon();
+    .delete();
 }
 
 *[class~="termentry/sourceReference"]:before(9) {
@@ -324,7 +439,7 @@
 }
 
 *[class~="termentry/annotation"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "\A ${i18n(doctales.annotation)}"
     oxy_buttonGroup(
         label, '',
@@ -342,7 +457,7 @@
 }
 
 *[class~="termentry/termContext"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "\A ${i18n(doctales.termContext)}"
     oxy_buttonGroup(
         label, '',
@@ -353,7 +468,6 @@
             oxy_action(id, 'doctales.delete.termContext')
         )
     );
-    .deleteIcon();
 }
 
 *[class~="termentry/termContext"] {
@@ -361,7 +475,7 @@
 }
 
 *[class~="termentry/termContextSource"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "\A ${i18n(doctales.termContextSource)}";
 }
 
@@ -370,8 +484,21 @@
 }
 
 *[class~="termentry/partOfSpeech"]:before(10) {
-    .beforeBlock();
-    content: "${i18n(doctales.partOfSpeech)} ";
+    .header();
+    content: "${i18n(doctales.partOfSpeech)} "
+    oxy_buttonGroup(
+        label, '',
+        icon, url(@pencilIcon),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.partOfSpeech')
+        )
+    );
+}
+
+*[class~="termentry/partOfSpeech"]:before(9) {
+    .deleteContainer();
 }
 
 *[class~="termentry/partOfSpeech"]:before(8) {
@@ -399,8 +526,45 @@
     .mainBlock();
 }
 
+*[class~="topic/note"]:before(10) {
+    .header();
+    content: "${i18n(doctales.note)} "
+    oxy_buttonGroup(
+        label, '',
+        icon, url(@pencilIcon),
+        transparent, 'true',
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.delete.note')
+        )
+    );
+}
+
+*[class~="topic/note"]:before(9) {
+    .deleteContainer();
+}
+
+*[class~="topic/note"]:before(8) {
+    content: "${i18n(doctales.note)}: ";
+    .uiElementLabel();
+    padding-left: 0.5em;
+}
+
+*[class~="topic/note"]:before {
+    .hideContent();
+}
+
+*[class~="topic/note"] {
+    content:
+    oxy_textArea(
+        edit, '#content',
+        contentType, 'text/xml'
+    );
+    .mainBlock();
+}
+
 *[class~="termentry/domains"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "${i18n(doctales.domains)}:"
     oxy_buttonGroup(
         label, '',
@@ -433,18 +597,11 @@
 }
 
 *[class~="termentry/domain"]:after {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            id, 'doctales.delete.domain'
-        ),
-        transparent, true
-    );
-    .deleteIcon();
+    .delete();
 }
 
 *[class~="termentry/agreedWith"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "${i18n(doctales.agreedWith)}:"
     oxy_buttonGroup(
         label, '',
@@ -456,6 +613,10 @@
             oxy_action(id, 'doctales.delete.agreedWith')
         )
     );
+}
+
+*[class~="termentry/agreedWith"]:before(9) {
+    .deleteContainer();
 }
 
 *[class~="termentry/agreedWith"] {
@@ -476,14 +637,7 @@
 }
 
 *[class~="termentry/termCommitteeMember"]:before(8) {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            id, 'doctales.delete.termCommitteeMember'
-        ),
-        transparent, true
-    );
-    .deleteIcon();
+    .delete();
 }
 
 *[class~="termentry/termCommitteeMember"] {
@@ -494,7 +648,7 @@
 }
 
 *[class~="termentry/termNotation"]:before(10) {
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/fullForm"]:before(10) {
@@ -573,6 +727,10 @@
     );
 }
 
+*[class~="termentry/termNotation"]:before(9) {
+    .deleteContainer();
+}
+
 *[class~="termentry/termNotation"]:before(8) {
     content: "${i18n(doctales.usage)}: ";
     .uiElementLabel();
@@ -591,23 +749,12 @@
 }
 
 *[class~="termentry/termNotation"]:before(6) {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            id, 'doctales.delete.termNotation'
-        ),
-        transparent, true
-    );
-    .deleteIcon();
-}
-
-*[class~="termentry/termNotation"]:before(5) {
     content: "${i18n(doctales.language)}: ";
     .uiElementLabel();
     padding-left: 0.5em;
 }
 
-*[class~="termentry/termNotation"]:before(4) {
+*[class~="termentry/termNotation"]:before(5) {
     content:
     oxy_combobox( 
         edit, '@language',
@@ -621,6 +768,10 @@
 *[class~="termentry/definitionText"] {
     -oxy-placeholder-content: "Definition";
     -oxy-show-placeholder: always;
+}
+
+*[class~="termentry/definitionText"]:before {
+    .hideContent();
 }
 
 *[class~="termentry/termNotation"] {
@@ -654,14 +805,18 @@
                 oxy_action(id, 'doctales.delete.termVariant')
             )
         );
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/termVariant"]:before(9) {
-    content: "${i18n(doctales.termVariant)} ";
+    .deleteContainer();
 }
 
 *[class~="termentry/termVariant"]:before(8) {
+    content: "${i18n(doctales.termVariant)} ";
+}
+
+*[class~="termentry/termVariant"]:before(7) {
     content: oxy_textfield(
         edit, '#text',
         columns, 50
@@ -709,7 +864,7 @@
 
 /* relations */
 *[class~="termentry/relations"]:before(10) {
-    .beforeBlock();
+    .header();
     content: "${i18n(doctales.relations)}"
     oxy_buttonGroup(
         label, '',
@@ -744,7 +899,7 @@
             oxy_action(id, 'doctales.delete.antonyms')
         )
     );
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/antonyms"] {
@@ -764,7 +919,7 @@
             oxy_action(id, 'doctales.delete.partsOf')
         )
     );
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/partsOf"] {
@@ -784,7 +939,7 @@
             oxy_action(id, 'doctales.delete.hypernyms')
         )
     );
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/hypernyms"] {
@@ -804,7 +959,7 @@
             oxy_action(id, 'doctales.delete.hyponyms')
         )
     );
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/hyponyms"] {
@@ -824,11 +979,15 @@
             oxy_action(id, 'doctales.delete.relatedTerms')
         )
     );
-    .beforeBlock();
+    .header();
 }
 
 *[class~="termentry/relatedTerms"] {
     .mainBlock();
+}
+
+*[class~="termentry/relations-linklist"]:before(9) {
+    .deleteContainer();
 }
 
 *[class~="termentry/termRelation"]:before(10) {
@@ -842,7 +1001,8 @@
 *[class~="termentry/termRelation"]:before(9) {
     content:
     oxy_editor(type, combo, edit, "@keyref", columns, 50, fontInherit, false);
-    padding-left: 0.5em;
+    padding-top: 0.2em;
+    margin-left: 0.5em;
 }
 
 *[class~="termentry/termRelation"]:before(8) {
@@ -859,18 +1019,11 @@
 }
 
 *[class~="termentry/termRelation"]:before(7) {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            id, 'doctales.delete.termRelation'
-        ),
-        transparent, true
-    );
-    .deleteIcon();
+    .delete();
 }
 
 *[class~="termentry/termRelation"]:before {
-    .hideContent();    
+    .hideContent();
 }
 
 *[class~="termentry/termRelation"] {
@@ -905,6 +1058,6 @@
     width: 1.2em;
     background-image: url('../icons/git.png');
     background-repeat: no-repeat;
-    link : 'https://github.com/doctales';
+    link: 'https://github.com/doctales';
     font-size: 0.7em;
 }

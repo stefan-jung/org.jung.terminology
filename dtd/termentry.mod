@@ -741,7 +741,7 @@ Category: Termentry elements-->
 <!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termentry/agreedWith ">
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
-<!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/antonyms ">
+<!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/antonyms ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">
 <!ATTLIST definitionSource      %global-atts;   class CDATA "- topic/div termentry/definitionSource ">
 <!ATTLIST definitionText        %global-atts;   class CDATA "- topic/shortdesc termentry/definitionText ">
@@ -749,14 +749,14 @@ Category: Termentry elements-->
 <!ATTLIST domains               %global-atts;   class CDATA "- topic/div termentry/domains ">
 <!ATTLIST fullForm              %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/fullForm ">
 <!ATTLIST hypernym              %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hypernym ">
-<!ATTLIST hypernyms             %global-atts;   class CDATA "- topic/linklist termentry/hypernyms ">
+<!ATTLIST hypernyms             %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/hypernyms ">
 <!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hyponym ">
-<!ATTLIST hyponyms              %global-atts;   class CDATA "- topic/linklist termentry/hyponyms ">
+<!ATTLIST hyponyms              %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/hyponyms ">
 <!ATTLIST partOf                %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/partOf ">
-<!ATTLIST partsOf               %global-atts;   class CDATA "- topic/linklist termentry/partsOf ">
+<!ATTLIST partsOf               %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/partsOf ">
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">
 <!ATTLIST relatedTerm           %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/relatedTerm ">
-<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/linklist termentry/relatedTerms ">
+<!ATTLIST relatedTerms          %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/relatedTerms ">
 <!ATTLIST relations             %global-atts;   class CDATA "- topic/related-links termentry/relations ">
 <!ATTLIST sourceName            %global-atts;   class CDATA "- topic/text termentry/sourceName ">
 <!ATTLIST sourceReference       %global-atts;   class CDATA "- topic/xref concept/xref termentry/sourceReference ">
