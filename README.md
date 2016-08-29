@@ -6,16 +6,16 @@ org.doctales.terminology
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating DITA-based terminology.
 The plugin contains a new DITA `<termentry>` topic type. This topic type represents a single term.
-The plugin also contains an <oXygen/> XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
+The plugin also contains an oXygen XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
 
-Features:
+**Features**:
 
 - Specialized DITA `termentry` topic
 - Generates a terminology checker (Schematron based) to find and replace deprecated terms in your DITA files
 - Generates TBX-Min and TBX-Basic files to send your terminology to your Language Service Provider (LSP)
 
 
-h4. Installation
+### Installation
 
 You can install the plugin to the DITA-OT with the following command:
 
@@ -24,7 +24,7 @@ dita -install https://github.com/doctales/org.doctales.terminology/archive/maste
 ```
 
 
-h4. Add <oXygen/> XML framework (optional)
+### Add <oXygen/> XML framework (optional)
 
 To install the <oXygen/> XML framework, proceed as follows:
 
@@ -34,7 +34,7 @@ To install the <oXygen/> XML framework, proceed as follows:
    ![framework](media/images/framework.png)
 
 
-h4. Stylesheet
+### Stylesheet
 
 **org.doctales.terminology** ships an <oXygen/> XML framework that contains an <oXygen/> XML author mode stylesheet.
 The stylesheet simplifies authoring `<termentry>` topics. The stylesheet is available in the following languages:
@@ -43,7 +43,7 @@ The stylesheet simplifies authoring `<termentry>` topics. The stylesheet is avai
 - German
 
 
-h5. Example
+#### Example
 
 The following code snippet shows the sample file `truck.dita`.
 
@@ -55,19 +55,21 @@ The following code snippet shows the sample file `truck.dita`.
   <definition>
     <definitionText>A truck is a motor vehicle designed to transport cargo.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org/wiki/Truck" format="html" scope="external">
+      <sourceReference href="https://en.wikipedia.org/wiki/Truck"
+                       format="html"
+                       scope="external">
         Wikipedia
       </sourceReference>
     </definitionSource>
   </definition>
   <termBody>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_wg4_kws_cx">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Lastkraftwagen</termVariant>
     </fullForm>
-    <acronym language="de-DE" usage="preferred" id="acronym_gy1_nws_cx">
+    <acronym language="de-DE" usage="preferred">
       <termVariant>LKW</termVariant>
     </acronym>
-    <fullForm usage="preferred" language="en-US" id="fullForm_nhj_24y_bx">
+    <fullForm usage="preferred" language="en-US">
       <termVariant>truck</termVariant>
     </fullForm>
     <fullForm usage="notRecommended" language="en-GB">
@@ -87,7 +89,7 @@ The screenshot shows the same file rendered with the <oXygen/> XML author mode s
 ![author-mode](media/images/author-mode.png)
 
 
-h5. Activate the author mode stylesheet
+#### Activate the author mode stylesheet
 
 To use the author mode stylesheet, proceed as follows:
 
