@@ -24,7 +24,7 @@ dita -install https://github.com/doctales/org.doctales.terminology/archive/maste
 ```
 
 
-### Add <oXygen/> XML framework (optional)
+### Add &lt;oXygen/&gt; XML framework (optional)
 
 To install the <oXygen/> XML framework, proceed as follows:
 
