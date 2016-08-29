@@ -18,15 +18,16 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
 * [Installation](#installation)
 * [Install Framework](#install-framework)
 
-**Features**
+
+### Features
 
 - Specialized DITA `termentry` topic
 - &lt;oXygen/&gt; XML framework with author mode stylesheet
 - Transformation szenario for generating a terminology checker
+- Transformation szenario for generating a terminology browser
 - Transformation szenario for exporting the terminology to TBX-Min for your Language Service Provider (LSP)
 - Transformation szenario for exporting the terminology to TBX-Basic for your Language Service Provider (LSP)
 
-[TOC]
 
 ### Installation
 
@@ -47,7 +48,7 @@ This step is optional. To install the &lt;oXygen/&gt; XML framework, proceed as 
    ![framework](media/images/framework.png)
 
 
-### Stylesheet
+#### Activate &lt;oXygen/&gt; Author Mode Stylesheet
 
 **org.doctales.terminology** ships an &lt;oXygen/&gt; XML framework that contains an &lt;oXygen/&gt; XML author mode stylesheet.
 The stylesheet simplifies authoring `<termentry>` topics. The stylesheet is available in the following languages:
