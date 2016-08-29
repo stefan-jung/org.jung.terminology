@@ -73,8 +73,8 @@ The following code snippet shows the sample file `truck.dita`.
   <definition>
     <definitionText>A truck is a motor vehicle designed to transport cargo.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org/wiki/Truck"
-                       format="html"
+      <sourceReference href="https://en.wikipedia.org/wiki/Truck" 
+                       format="html" 
                        scope="external">
         Wikipedia
       </sourceReference>
@@ -90,7 +90,10 @@ The following code snippet shows the sample file `truck.dita`.
     <fullForm usage="preferred" language="en-US">
       <termVariant>truck</termVariant>
     </fullForm>
-    <fullForm usage="notRecommended" language="en-GB">
+    <fullForm language="en-GB" usage="notRecommended">
+      <termVariant>truck</termVariant>
+    </fullForm>
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>lorry</termVariant>
     </fullForm>
   </termBody>
