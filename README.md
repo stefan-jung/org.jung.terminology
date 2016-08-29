@@ -20,7 +20,7 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
   * [&lt;oXygen/&gt; Author Mode Stylesheet](#oxygen-author-mode-stylesheet)
     * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
 * [Usage](#usage)
-  *[DITA Termchecker](#dita-termchecker)
+  * [DITA Termchecker](#dita-termchecker)
 
 
 ### Features
@@ -128,8 +128,8 @@ The DITA Termchecker is technically a [Schematron](http://www.schematron.com) fi
 that searches for forbidden terms and replaces forbidden terms with allowed ones.
 
 1. Open the samples DITA map `~/org.doctales.terminology/samples/terminology.ditamap` in the &lt;oXygen/&gt; DITA Maps Manager.
-2. In the `Transformation Scenarios` view, double click the entry `Termchecker for DITA`.
-   ![Transformation Scenario Termchecker for DITA](media/images/termchecker-dita-transformation-scenario.png)
+2. In the `Transformation Scenarios` view, double click the entry `Termchecker for DITA`.<br/>
+   ![Transformation Scenario Termchecker for DITA](media/images/termchecker-dita-transformation-scenario.png)<br/>
    The terminology is transformed to the Schematron file `~/out/termchecker-dita/terminology-DITA-en-GB.sch`.
    By default, the terminology checker is generated for British English (`en-GB`).
    If you want to generate the terminology checker for another language, you have to change the parameter `args.language` of the transformation scenario.
@@ -137,10 +137,10 @@ that searches for forbidden terms and replaces forbidden terms with allowed ones
    1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
    2. In the `Document Type Association` menu, select the `DITA` document type association and click the button `Edit`.
    3. Open the `Validation` tab and click the **+** button, to create a new validation scenario.
-   4. Create a new validation scenario named `Terminology` and specify the Schematron schema.
-      ![Specify DITA Termchecker Schematron Schema](media/images/specify-schema-termchecker-dita.png)
-      ![Create new DITA validation scenario](media/images/termchecker-dita-new-scenario.png)
-      ![DITA Document Type Association](media/images/termchecker-dita-document-type.png)
+   4. Create a new validation scenario named `Terminology` and specify the Schematron schema.<br/>
+      ![Specify DITA Termchecker Schematron Schema](media/images/specify-schema-termchecker-dita.png)<br/>
+      ![Create new DITA validation scenario](media/images/termchecker-dita-new-scenario.png)<br/>
+      ![DITA Document Type Association](media/images/termchecker-dita-document-type.png)<br/>
 4. Create a new DITA topic.
 5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.
    ```xml
@@ -153,11 +153,14 @@ that searches for forbidden terms and replaces forbidden terms with allowed ones
      </body>
    </topic>
    ```
-   The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png).
-   This works both in text and in author mode.
-   ![DITA term violation indicated by Schematron](media/images/termchecker-dita-schematron-error.png)
+   <br/>
+   The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png).<br/>
+   <br/>
+   > This works both in text and in author mode.
+   <br/>
+   ![DITA term violation indicated by Schematron](media/images/termchecker-dita-schematron-error.png)<br/>
 6. Click on the lamp select the `Replace with an allowed term` action.
-   ![DITA term violation Schematron quickfix](media/images/termchecker-dita-schematron-quickfix.png)
+   ![DITA term violation Schematron quickfix](media/images/termchecker-dita-schematron-quickfix.png)<br/>
    The deprecated term has been replaced.
 
 **Explanation**
@@ -178,5 +181,5 @@ The deprecated and the allowed term notations are defined in the `truck.dita` fi
 > You can also generate the Schematron file using the `dita` command:
 > 
 > ```bash
-> dita -i terminology.ditamap -f termchecker -Dargs.language=de-DE -o termchecker
+> dita -i terminology.ditamap -f termchecker -Dargs.language=en-GB -o termchecker-dita
 > ```
