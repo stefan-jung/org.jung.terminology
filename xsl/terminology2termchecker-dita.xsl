@@ -15,7 +15,7 @@
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <xsl:variable name="termentryId" select="@id"/>
-        <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]"/>
+        <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
         <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended'][@language = $language]">
             <xsl:element name="sch:pattern">
                 <xsl:attribute name="id">
