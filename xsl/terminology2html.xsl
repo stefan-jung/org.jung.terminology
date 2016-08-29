@@ -67,8 +67,6 @@
         <!-- Does the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
             <xsl:element name="table">
-                <!-- Test, if Travis fails -->
-                <error/>
                 <xsl:attribute name="class">termTable table table-striped table-bordered table-hover table-condensed</xsl:attribute>
                 <xsl:element name="tr">
                     <xsl:element name="th">
