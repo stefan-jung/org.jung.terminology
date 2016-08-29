@@ -125,7 +125,7 @@ The screenshot shows the same file rendered with the &lt;oXygen/&gt; XML author 
 #### DITA Termchecker
 
 The DITA Termchecker is technically a [Schematron](http://www.schematron.com) file, 
-that searches for forbidden terms and replaces forbidden terms with allowed ones.
+that searches for deprecated terms and replaces deprecated terms with preferred ones.
 
 1. Open the samples DITA map `~/org.doctales.terminology/samples/terminology.ditamap` in the &lt;oXygen/&gt; DITA Maps Manager.
 2. In the `Transformation Scenarios` view, double click the entry `Termchecker for DITA`.<br/>
@@ -142,7 +142,7 @@ that searches for forbidden terms and replaces forbidden terms with allowed ones
       ![Create new DITA validation scenario](media/images/termchecker-dita-new-scenario.png)<br/>
       ![DITA Document Type Association](media/images/termchecker-dita-document-type.png)<br/>
 4. Create a new DITA topic.
-5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.
+5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.<br/>
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
