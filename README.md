@@ -1,4 +1,6 @@
-![DOCTALES Logo](https://doctales.github.io/images/doctales-logo.svg)
+![DOCTALES Logo](https://doctales.github.io/images/doctales-logo-without-subtitle.svg)
+
+- - - -
 
 org.doctales.terminology 
 ========================
@@ -6,16 +8,19 @@ org.doctales.terminology
 [![Build Status](https://travis-ci.org/doctales/org.doctales.terminology.svg?branch=master)](https://travis-ci.org/doctales/org.doctales.terminology)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-**org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating DITA-based terminology.
+**org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating DITA-based terminology database.
 The plugin contains a new DITA `<termentry>` topic type. This topic type represents a single term.
 The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
 
-**Features**:
+**Features**
 
 - Specialized DITA `termentry` topic
-- Generates a terminology checker (Schematron based) to find and replace deprecated terms in your DITA files
-- Generates TBX-Min and TBX-Basic files to send your terminology to your Language Service Provider (LSP)
+- &lt;oXygen/&gt; XML framework with author mode stylesheet
+- Transformation szenario for generating a terminology checker
+- Transformation szenario for exporting the terminology to TBX-Min for your Language Service Provider (LSP)
+- Transformation szenario for exporting the terminology to TBX-Basic for your Language Service Provider (LSP)
 
+[TOC]
 
 ### Installation
 
@@ -91,7 +96,7 @@ The screenshot shows the same file rendered with the &lt;oXygen/&gt; XML author 
 ![author-mode](media/images/author-mode.png)
 
 
-#### Activate the author mode stylesheet
+#### Activate the &lt;oXygen/&gt; XML author mode stylesheet
 
 To use the author mode stylesheet, proceed as follows:
 
