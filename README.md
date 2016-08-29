@@ -1,3 +1,5 @@
+![DOCTALES Logo](https://doctales.github.io/images/doctales-logo.svg)
+
 org.doctales.terminology 
 ========================
 
@@ -6,7 +8,7 @@ org.doctales.terminology
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating DITA-based terminology.
 The plugin contains a new DITA `<termentry>` topic type. This topic type represents a single term.
-The plugin also contains an oXygen XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
+The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
 
 **Features**:
 
@@ -26,9 +28,9 @@ dita -install https://github.com/doctales/org.doctales.terminology/archive/maste
 
 ### Add &lt;oXygen/&gt; XML framework (optional)
 
-To install the <oXygen/> XML framework, proceed as follows:
+To install the &lt;oXygen/&gt; XML framework, proceed as follows:
 
-1. In <oXygen/> open the menu `Options` > `Preferences`.
+1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
 3. Add the `frameworks` directory of the plugin.
    ![framework](media/images/framework.png)
@@ -36,7 +38,7 @@ To install the <oXygen/> XML framework, proceed as follows:
 
 ### Stylesheet
 
-**org.doctales.terminology** ships an <oXygen/> XML framework that contains an <oXygen/> XML author mode stylesheet.
+**org.doctales.terminology** ships an &lt;oXygen/&gt; XML framework that contains an &lt;oXygen/&gt; XML author mode stylesheet.
 The stylesheet simplifies authoring `<termentry>` topics. The stylesheet is available in the following languages:
 
 - English
@@ -84,7 +86,7 @@ The following code snippet shows the sample file `truck.dita`.
 </termentry>
 ```
 
-The screenshot shows the same file rendered with the <oXygen/> XML author mode stylesheet.
+The screenshot shows the same file rendered with the &lt;oXygen/&gt; XML author mode stylesheet.
 
 ![author-mode](media/images/author-mode.png)
 
