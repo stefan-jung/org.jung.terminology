@@ -8,9 +8,15 @@ org.doctales.terminology
 [![Build Status](https://travis-ci.org/doctales/org.doctales.terminology.svg?branch=master)](https://travis-ci.org/doctales/org.doctales.terminology)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-**org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating DITA-based terminology database.
+**org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
 The plugin contains a new DITA `<termentry>` topic type. This topic type represents a single term.
 The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
+
+**Table of Contents**
+
+* [Features](#features)
+* [Installation](#installation)
+* [Install Framework](#install-framework)
 
 **Features**
 
@@ -26,18 +32,18 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
 
 You can install the plugin to the DITA-OT with the following command:
 
-```Batchfile
+```bash
 dita -install https://github.com/doctales/org.doctales.terminology/archive/master.zip
 ```
 
 
-### Add &lt;oXygen/&gt; XML framework (optional)
+### Install Framework
 
-To install the &lt;oXygen/&gt; XML framework, proceed as follows:
+This step is optional. To install the &lt;oXygen/&gt; XML framework, proceed as follows:
 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
-3. Add the `frameworks` directory of the plugin.
+3. Add the directory of the plugin.
    ![framework](media/images/framework.png)
 
 
