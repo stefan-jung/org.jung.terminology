@@ -17,6 +17,7 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
 * [Features](#features)
 * [Installation](#installation)
 * [Install Framework](#install-framework)
+  * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
 
 
 ### Features
