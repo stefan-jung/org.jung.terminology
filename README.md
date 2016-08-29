@@ -143,21 +143,8 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
       ![DITA Document Type Association](media/images/termchecker-dita-document-type.png)<br/>
 4. Create a new DITA topic.
 5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.<br/>
-   ```xml
-   <?xml version="1.0" encoding="UTF-8"?>
-   <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-   <topic id="test" xml:lang="en-GB">
-     <title>Test</title>
-     <body>
-       <p>truck</p>
-     </body>
-   </topic>
-   ```
-   <br/>
-   The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png).<br/>
-   <br/>
-   > This works both in text and in author mode.
-   <br/>
+   The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png). 
+   This works both in text and in author mode.<br/>
    ![DITA term violation indicated by Schematron](media/images/termchecker-dita-schematron-error.png)<br/>
 6. Click on the lamp select the `Replace with an allowed term` action.
    ![DITA term violation Schematron quickfix](media/images/termchecker-dita-schematron-quickfix.png)<br/>
