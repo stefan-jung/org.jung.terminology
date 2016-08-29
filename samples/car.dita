@@ -10,9 +10,9 @@
   </definitionSource>
  </definition>
  <termBody>
-  <note/>
+  <note>This is a note</note>
   <fig id="carFigure">
-   <title>Drawing of a cars</title>
+   <title>Drawing of a car</title>
    <image href="images/car.png" id="image_cyv_vm3_t5">
     <alt>Drawing of a car</alt>
    </image>

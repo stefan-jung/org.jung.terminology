@@ -4,6 +4,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="related-links xs">
     
+    <!-- Definition -->
     <xsl:template match="*[contains(@class, ' termentry/definition ')]">
         <xsl:element name="div">
             <xsl:attribute name="class">panel panel-default definition</xsl:attribute>
@@ -16,22 +17,20 @@
                     </xsl:call-template>
                 </xsl:element>
             </xsl:element>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-body</xsl:attribute>
-                <xsl:apply-templates/>
-            </xsl:element>
+            <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/definitionText ')]">
-        <xsl:element name="p">
-            <xsl:attribute name="class">shortdesc definitionText</xsl:attribute>
+        <xsl:element name="div">
+            <xsl:attribute name="class">panel-body shortdesc definitionText</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
-        <xsl:element name="p">
+        <xsl:element name="div">
+            <xsl:attribute name="class">panel-footer</xsl:attribute>
             <xsl:element name="b">
                 <xsl:call-template name="getVariable">
                     <xsl:with-param name="id" select="'Definition Source'"/>
@@ -40,10 +39,11 @@
                     <xsl:with-param name="id" select="'Delimiter String'"/>
                 </xsl:call-template>
             </xsl:element>
+            <xsl:apply-templates/>
         </xsl:element>
-        <xsl:apply-templates/>
     </xsl:template>
     
+    <!-- Annotation -->
     <xsl:template match="*[contains(@class, ' termentry/annotation ')][ancestor::*[contains(@class, ' termentry/termBody ')]]">
         <xsl:element name="div">
             <xsl:attribute name="class">panel panel-default annotation</xsl:attribute>
@@ -67,7 +67,7 @@
         <!-- Does the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
             <xsl:element name="table">
-                <xsl:attribute name="class">termTable table table-hover</xsl:attribute>
+                <xsl:attribute name="class">termTable table table-striped table-bordered table-hover table-condensed</xsl:attribute>
                 <xsl:element name="tr">
                     <xsl:element name="th">
                         <xsl:attribute name="class">termTable</xsl:attribute>
@@ -1028,6 +1028,7 @@
         <xsl:value-of select="."/>
     </xsl:template>
     
+    <!-- Agreed With -->
     <xsl:template match="*[contains(@class, ' termentry/agreedWith ')]">
         <xsl:element name="div">
             <xsl:attribute name="class">panel panel-default agreedWith</xsl:attribute>
@@ -1043,25 +1044,54 @@
             <xsl:element name="div">
                 <xsl:attribute name="class">panel-body</xsl:attribute>
                 <xsl:element name="ul">
-                    <xsl:attribute name="class">list-group</xsl:attribute>
+                    <xsl:attribute name="class">list-unstyled</xsl:attribute>
                     <xsl:apply-templates/>    
                 </xsl:element>
             </xsl:element>
         </xsl:element>
     </xsl:template>
     
+    <!-- Figure -->
+    <xsl:template match="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' topic/fig ')]" name="topic.fig">
+        <xsl:apply-templates select="*[contains(@class, ' ditaot-d/ditaval-startprop ')]" mode="out-of-line"/>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <xsl:call-template name="place-fig-lbl"/>
+            </div>
+            <div class="panel-body">
+            <figure>
+                <xsl:call-template name="commonattributes"/>
+                <xsl:call-template name="setscale"/>
+                <xsl:call-template name="setidaname"/>
+                <xsl:apply-templates select="node() except *[contains(@class, ' topic/title ') or contains(@class, ' topic/desc ')]"/>
+            </figure>
+            </div>
+        </div>
+        <xsl:apply-templates select="*[contains(@class, ' ditaot-d/ditaval-endprop ')]" mode="out-of-line"/>
+    </xsl:template>
+    
+    <!-- Note -->
+    <xsl:template match="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' topic/note ')]">
+        <xsl:element name="div">
+            <xsl:attribute name="class">panel panel-primary</xsl:attribute>
+            <xsl:element name="div">
+                <xsl:attribute name="class">panel-heading</xsl:attribute>
+                <xsl:element name="h3">
+                    <xsl:attribute name="class">panel-title</xsl:attribute>
+                    <xsl:call-template name="getVariable">
+                        <xsl:with-param name="id" select="'Annotation'"/>
+                    </xsl:call-template>
+                </xsl:element>
+            </xsl:element>
+            <xsl:element name="div">
+                <xsl:attribute name="class">panel-body</xsl:attribute>
+                <xsl:apply-templates/>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
+
     <xsl:template match="*[contains(@class, ' termentry/termCommitteeMember ')]">
         <xsl:element name="li">
-            <xsl:attribute name="class">list-group-item termCommitteeMember</xsl:attribute>
-            <xsl:element name="strong">
-                <xsl:attribute name="class">termentryLabel</xsl:attribute>
-                <xsl:call-template name="getVariable">
-                    <xsl:with-param name="id" select="'Term Committee Member'"/>
-                </xsl:call-template>
-                <xsl:call-template name="getVariable">
-                    <xsl:with-param name="id" select="'Delimiter String'"/>
-                </xsl:call-template>
-            </xsl:element>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>

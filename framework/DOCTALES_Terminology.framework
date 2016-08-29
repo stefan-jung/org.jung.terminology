@@ -17,7 +17,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<String>DITA DOCTALES Termentry</String>
+											<String>DOCTALES Terminology</String>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
@@ -5531,7 +5531,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<String>Framework for DITA terminology management using the org.doctales.terminology plugin.</String>
+											<String>Framework for DITA terminology management</String>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
@@ -5893,7 +5893,41 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>2</Integer>
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>DITA XHTML</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>DITA PDF</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -6077,7 +6111,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>3</Integer>
+											<Integer>1</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -6261,7 +6295,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>4</Integer>
+											<Integer>2</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -6515,7 +6549,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>5</Integer>
+											<Integer>3</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -6769,7 +6803,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>6</Integer>
+											<Integer>4</Integer>
 										</field>
 										<field name="value">
 											<ditaScenario>
@@ -6835,13 +6869,40 @@
 													<list>
 														<ditaParameter>
 															<field name="name">
+																<String>args.default.language</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>en-GB</String>
+															</field>
+															<field name="defaultValue">
+																<String>en-us</String>
+															</field>
+															<field name="type">
+																<Integer>0</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>en-us</String>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String></String>
+																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
 																<String>args.hdf</String>
 															</field>
 															<field name="description">
 																<null/>
 															</field>
 															<field name="value">
-																<String>/home/stefan/workspace/org.doctales.termbrowser/hdf/hdf.xml</String>
+																<String>${frameworksDir}/hdf/hdf.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
