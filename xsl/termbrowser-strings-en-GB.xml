@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings xml:lang="en-us">
+    <str name="Abbreviation">Abbreviation</str>
+    <str name="Acronym">Acronym</str>
+    <str name="Agreed With">Agreed with</str>
+    <str name="Annotation">Annotation</str>
+    <str name="Antonym">Antonym</str>
+    <str name="Antonyms">Antonyms</str>
+    <str name="Term Context">Context</str>
+    <str name="Term Context Text">Example</str>
+    <str name="Term Context Source">Source of Context</str>
+    <str name="Definition">Definition</str>
+    <str name="Definition Source">Source of Definition</str>
+    <str name="Source Name">Name of Source</str>
+    <str name="Source Reference">Reference</str>
+    <str name="Domain">Domain</str>
+    <str name="Full Form">Full Form</str>
+    <str name="Hypernym">Superordinate Concept (Hypernym)</str>
+    <str name="Hypernyms">Superordinate Concepts (Hypernyms)</str>
+    <str name="Hyponym">Subordinate Concept (Hyponym)</str>
+    <str name="Hyponyms">Subordinate Concepts (Hyponyms)</str>
+    <str name="Parts Of">Is Part of</str>
+    <str name="Is Part Of">Is Part of</str>
+    <str name="Part Of Speech">Part of Speech</str>
+    <str name="Related Term">Related Term</str>
+    <str name="Related Terms">Related Terms</str>
+    <str name="Term Annotations">Annotations</str>
+    <str name="Term Context">Context of Term</str>
+    <str name="Term Source">Source of Term</str>
+    <str name="Term Committee Member">Term Committee Member</str>
+    <str name="Usage Allowed">allowed</str>
+    <str name="Usage Deprecated">deprecated</str>
+    <str name="Verb">Verb</str>
+    
+    <!-- Term Table -->
+    <str name="Term">Term</str>
+    <str name="Term Language">Language</str>
+    <str name="Term Type">Type</str>
+    <str name="Term Usage">Usage</str>
+    <str name="Allowed">Allowed</str>
+    <str name="Deprecated">Deprecated</str>
+    
+    <str name="Separator"> </str>
+    <str name="Delimiter String">: </str>
+</strings>

@@ -35,11 +35,11 @@
     width: inherit;
     font-style: normal;
     font-weight: normal;
-    padding-top: 0;
+    padding-top: 0.5em;
     padding-bottom: 0;
     padding-left: 0.3em;
     padding-right: 0;
-    margin-top: 0;
+    margin-top: 0.2em;
     margin-bottom: 0.2em;
     margin-left: 0;
     margin-right: 0;
@@ -56,6 +56,7 @@
     padding-bottom: 0;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    visibility: -oxy-collapse-text;
 }
 
 .afterBlock {
@@ -84,22 +85,34 @@
     content: ' ';
 }
 
-.delete {
+.deleteButton() {
     content: 
     oxy_button(
         action, oxy_action(
-            id, 'doctales.delete.element'
+            name, 'Delete', 
+            description, 'Delete the current element', 
+            icon, url(@deleteIcon), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
+            arg-elementLocation, '.'
         ),
         transparent, true
     );
-    display: block;
-    text-align: right;
-    float: left;    
-    margin-top: -1.5em !important;
-    max-width:-moz-max-content;
 }
 
-.deleteContainer {
+.keyrefButton() {
+    content: 
+    oxy_button(
+        action, oxy_action(
+            name, 'Keyref', 
+            description, 'Keyref a term relation', 
+            icon, url(@linkIcon), 
+            operation, 'ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation'
+        ),
+        transparent, true
+    );
+}
+
+.closeButton {
     content:
     oxy_button(
         action, oxy_action(
@@ -127,7 +140,9 @@
     cursor: default;
     text-decoration-style: dotted;
     color: @labelColor !important;
-    text-decoration: none !important;    
+    text-decoration: none !important;
+    link: attr(href);
+    -ah-link: attr(href);  
 }
 
 *[class~="termentry/termentry"] {
@@ -175,7 +190,6 @@
             oxy_action(id, 'doctales.add.note'),
             oxy_action(id, 'doctales.add.fig'),
             oxy_action(id, 'doctales.add.domains'),
-            oxy_action(id, 'doctales.add.annotation'),
             oxy_action(id, 'doctales.add.abbreviation'),
             oxy_action(id, 'doctales.add.acronym'),
             oxy_action(id, 'doctales.add.fullForm'),
@@ -188,7 +202,7 @@
 
 *[class~="termentry/definition"]:before(10) {
     .header();
-    content: "${i18n(doctales.definition)} "
+    content: "${i18n(doctales.definition)}"
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -202,7 +216,7 @@
 }
 
 *[class~="termentry/definition"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="termentry/definition"] {
@@ -250,7 +264,7 @@
 }
 
 *[class~="topic/fig"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="topic/fig"] {
@@ -311,47 +325,38 @@
     .mainBlock();
 }
 
-*[class~="termentry/sourceName"]:before(8) {
-    content: "${i18n(doctales.sourceName)}: ";
-    .uiElementLabel();
-    padding-left: 0.5em;
+*[class~="termentry/sourceName"]:before(10) {
+    content: "${i18n(doctales.sourceName)}";
+    .header();
 }
 
-*[class~="termentry/sourceName"]:before(7) {
+*[class~="termentry/sourceName"]:before(9) {
+    .closeButton();
+}
+
+*[class~="termentry/sourceName"]:before(8) {
     content: 
     oxy_textfield(
         edit, '#text',
         columns, 49
     );
-    display: inline-block;
-}
-
-*[class~="termentry/sourceName"]:before(6) {
-    .delete();
-}
-
-*[class~="termentry/sourceName"]:before(1) {
-    display: none !important;
-}
-
-*[class~="termentry/sourceName"]:before {
-    display: none !important;
 }
 
 *[class~="termentry/sourceName"] {
     .mainBlock();
-    visibility: -oxy-collapse-text;
 }
 
-*[class~="termentry/sourceReference"]:before(13) {
-    content: "${i18n(doctales.sourceReference)}: ";
-    .uiElementLabel();
-    .link();
-    width: 10em;
+*[class~="termentry/sourceReference"]:before(15) {
+    content: "${i18n(doctales.sourceReference)}";
+    .header();
+}
+
+*[class~="termentry/sourceReference"]:before(14) {
+    .closeButton();
 }
 
 *[class~="termentry/sourceReference"]:before(12) {
-    content: "${i18n(doctales.sourceReference.text)}: ";
+    content: "${i18n(doctales.sourceReference.text)}";
     .link();
     width: 5em;
 }
@@ -361,22 +366,12 @@
     oxy_textfield(
           edit, '#text',
           columns, 40
-    );
-}
-
-*[class~="termentry/sourceReference"]:before(10) {
-    .delete();
-}
-
-*[class~="termentry/sourceReference"]:before(9) {
-    .indent();
+    )"\A";
 }
 
 *[class~="termentry/sourceReference"]:before(8) {
-    content: "${i18n(doctales.sourceReference.href)}: ";
+    content: "${i18n(doctales.sourceReference.href)}";
     width: 5em;
-    link: attr(href);
-    -ah-link: attr(href);  
     .link();
 }
 
@@ -388,17 +383,10 @@
     )"\A";
 }
 
-*[class~="termentry/sourceReference"]:before(6) {
-    .indent();
-}
-
 *[class~="termentry/sourceReference"]:before(5) {
-    content: "${i18n(doctales.sourceReference.format)}: ";
+    content: "${i18n(doctales.sourceReference.format)}";
     width: 5em;
-    link: attr(href);
-    -ah-link: attr(href);  
     .link();
-
 }
 
 *[class~="termentry/sourceReference"]:before(4) {
@@ -406,15 +394,13 @@
     oxy_combobox( 
         edit, '@format',
         columns, 13
-    );
-    width: 5em;
+    )"\A";
 }
 
 *[class~="termentry/sourceReference"]:before(3) {
-    content: "${i18n(doctales.sourceReference.scope)}: ";
-    width: 8em;
+    content: "${i18n(doctales.sourceReference.scope)}";
+    width: 5em;
     .link();
-    padding-left: 3em;
 }
 
 *[class~="termentry/sourceReference"]:before(2) {
@@ -485,7 +471,7 @@
 
 *[class~="termentry/partOfSpeech"]:before(10) {
     .header();
-    content: "${i18n(doctales.partOfSpeech)} "
+    content: "${i18n(doctales.partOfSpeech)}"
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -498,11 +484,11 @@
 }
 
 *[class~="termentry/partOfSpeech"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="termentry/partOfSpeech"]:before(8) {
-    content: "${i18n(doctales.partOfSpeech)}: ";
+    content: "${i18n(doctales.partOfSpeech)}";
     .uiElementLabel();
     padding-left: 0.5em;
 }
@@ -528,7 +514,7 @@
 
 *[class~="topic/note"]:before(10) {
     .header();
-    content: "${i18n(doctales.note)} "
+    content: "${i18n(doctales.note)}"
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -541,11 +527,11 @@
 }
 
 *[class~="topic/note"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="topic/note"]:before(8) {
-    content: "${i18n(doctales.note)}: ";
+    content: "${i18n(doctales.note)}";
     .uiElementLabel();
     padding-left: 0.5em;
 }
@@ -565,7 +551,7 @@
 
 *[class~="termentry/domains"]:before(10) {
     .header();
-    content: "${i18n(doctales.domains)}:"
+    content: "${i18n(doctales.domains)}"
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -578,12 +564,16 @@
     );
 }
 
+*[class~="termentry/domains"]:before(9) {
+    .closeButton();
+}
+
 *[class~="termentry/domains"] {
     .mainBlock();
 }
 
 *[class~="termentry/domain"]:before(10) {
-    content: "${i18n(doctales.domain)}: ";
+    content: "${i18n(doctales.domain)}";
     .uiElementLabel();
 }
 
@@ -597,12 +587,12 @@
 }
 
 *[class~="termentry/domain"]:after {
-    .delete();
+    .deleteButton();
 }
 
 *[class~="termentry/agreedWith"]:before(10) {
     .header();
-    content: "${i18n(doctales.agreedWith)}:"
+    content: "${i18n(doctales.agreedWith)}"
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -616,7 +606,7 @@
 }
 
 *[class~="termentry/agreedWith"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="termentry/agreedWith"] {
@@ -624,7 +614,7 @@
 }
 
 *[class~="termentry/termCommitteeMember"]:before(10) {
-    content: "${i18n(doctales.termCommitteeMember)}: ";
+    content: "${i18n(doctales.termCommitteeMember)}";
     color: black;
     .uiElementLabel();
 }
@@ -637,7 +627,7 @@
 }
 
 *[class~="termentry/termCommitteeMember"]:before(8) {
-    .delete();
+    .deleteButton();
 }
 
 *[class~="termentry/termCommitteeMember"] {
@@ -728,11 +718,11 @@
 }
 
 *[class~="termentry/termNotation"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="termentry/termNotation"]:before(8) {
-    content: "${i18n(doctales.usage)}: ";
+    content: "${i18n(doctales.usage)}";
     .uiElementLabel();
     padding-left: 0.5em;
 }
@@ -749,7 +739,7 @@
 }
 
 *[class~="termentry/termNotation"]:before(6) {
-    content: "${i18n(doctales.language)}: ";
+    content: "${i18n(doctales.language)}";
     .uiElementLabel();
     padding-left: 0.5em;
 }
@@ -765,13 +755,21 @@
     padding-left: 0.5em;
 }
 
-*[class~="termentry/definitionText"] {
-    -oxy-placeholder-content: "Definition";
-    -oxy-show-placeholder: always;
+*[class~="termentry/definitionText"]:before(10) {
+    content: "${i18n(doctales.definitionText)}";
+    .header();
 }
 
-*[class~="termentry/definitionText"]:before {
-    .hideContent();
+*[class~="termentry/definitionText"]:before(1) {
+    content:
+    oxy_textArea(
+        edit, '#content',
+        contentType, 'text/xml'
+    )"\A";
+}
+
+*[class~="termentry/definitionText"] {
+    .mainBlock();
 }
 
 *[class~="termentry/termNotation"] {
@@ -791,7 +789,7 @@
 }
 
 *[class~="termentry/termVariant"]:before(10) {
-    content: "${i18n(doctales.termVariant)} "
+    content: "${i18n(doctales.termVariant)}"
         oxy_buttonGroup(
             label, '',
             icon, url(@pencilIcon),
@@ -809,11 +807,11 @@
 }
 
 *[class~="termentry/termVariant"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="termentry/termVariant"]:before(8) {
-    content: "${i18n(doctales.termVariant)} ";
+    content: "${i18n(doctales.termVariant)}";
 }
 
 *[class~="termentry/termVariant"]:before(7) {
@@ -831,7 +829,7 @@
 }
 
 *[class~="termentry/termVariant"][case]:after(2) {
-    content: "${i18n(doctales.case)}: ";
+    content: "${i18n(doctales.case)}";
     width: 10em;
 }
 
@@ -848,7 +846,7 @@
 }
 
 *[class~="termentry/termVariant"][number]:after(5) {
-    content: "\A ${i18n(doctales.number)}: ";
+    content: "\A ${i18n(doctales.number)}";
     display: inline-block;
     width: 10em;
 }
@@ -888,7 +886,7 @@
 
 /* Antonyms */
 *[class~="termentry/antonyms"]:before(10) {
-    content: "${i18n(doctales.terminology.antonyms)} " 
+    content: "${i18n(doctales.terminology.antonyms)}" 
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -908,7 +906,7 @@
 
 /* Are Part of */
 *[class~="termentry/partsOf"]:before(10) {
-    content: "${i18n(doctales.terminology.partsOf)} " 
+    content: "${i18n(doctales.terminology.partsOf)}" 
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -928,7 +926,7 @@
 
 /* Hypernyms */
 *[class~="termentry/hypernyms"]:before(10) {
-    content: "${i18n(doctales.terminology.hypernyms)} " 
+    content: "${i18n(doctales.terminology.hypernyms)}" 
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -948,7 +946,7 @@
 
 /* Hyponyms */
 *[class~="termentry/hyponyms"]:before(10) {
-    content: "${i18n(doctales.terminology.hyponyms)} " 
+    content: "${i18n(doctales.terminology.hyponyms)}" 
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -968,7 +966,7 @@
 
 /* Related Terms */
 *[class~="termentry/relatedTerms"]:before(10) {
-    content: "${i18n(doctales.terminology.relatedTerms)} " 
+    content: "${i18n(doctales.terminology.relatedTerms)}" 
     oxy_buttonGroup(
         label, '',
         icon, url(@pencilIcon),
@@ -987,7 +985,7 @@
 }
 
 *[class~="termentry/relations-linklist"]:before(9) {
-    .deleteContainer();
+    .closeButton();
 }
 
 *[class~="termentry/termRelation"]:before(10) {
@@ -1019,7 +1017,7 @@
 }
 
 *[class~="termentry/termRelation"]:before(7) {
-    .delete();
+    .deleteButton();
 }
 
 *[class~="termentry/termRelation"]:before {
@@ -1029,6 +1027,9 @@
 *[class~="termentry/termRelation"] {
     .hideContent();   
     list-style: none;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    visibility: -oxy-collapse-text;
 }
 
 *[class~="topic/abstract"]:before {

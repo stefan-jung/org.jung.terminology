@@ -32,6 +32,10 @@
     </key>
 
     <!-- definition -->
+    <key value="doctales.definition">
+        <val lang="en_US">Definition</val>
+        <val lang="de_DE">Definition</val>
+    </key>
     <key type="action" value="doctales.add.definition">
         <val lang="en_US">Add definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) einfügen</val>
@@ -45,9 +49,14 @@
         <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
     </key>
     <key value="doctales.delete.definition_description">
-        
         <val lang="en_US">Delete definition (&lt;definition&gt;)</val>
         <val lang="de_DE">Definition (&lt;definition&gt;) löschen</val>
+    </key>
+
+    <!-- definitionText -->
+    <key value="doctales.definitionText">
+        <val lang="en_US">Text</val>
+        <val lang="de_DE">Text</val>
     </key>
 
     <!-- definitionSource -->
@@ -726,10 +735,6 @@
     <key value="doctales.acronym_description">
         <val lang="en_US">Insert an acronym of a term.</val>
         <val lang="de_DE">Akronym eines Terms einfügen.</val>
-    </key>
-    <key value="doctales.definition">
-        <val lang="en_US">Definition</val>
-        <val lang="de_DE">Definition</val>
     </key>
     <key value="doctales.termAdministration">
         <val lang="en_US">Term Administration</val>

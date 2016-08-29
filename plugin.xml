@@ -541,5 +541,10 @@
     as a filename. It is also possible to use @file instead of @value.
   -->
   <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
+
+  <!-- Overriding XSLT -->
+  <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
   
+  <!-- New strings -->
+  <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>  
 </plugin>

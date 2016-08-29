@@ -10,7 +10,13 @@
     </definitionSource>
   </definition>
   <termBody>
-    <fullForm usage="preferred" language="en-GB" id="fullForm_nhj_24y_bx">
+    <fullForm language="de-DE" usage="preferred" id="fullForm_wg4_kws_cx">
+      <termVariant>Lastkraftwagen</termVariant>
+    </fullForm>
+    <acronym language="de-DE" usage="preferred" id="acronym_gy1_nws_cx">
+      <termVariant>LKW</termVariant>
+    </acronym>
+    <fullForm usage="preferred" language="en-US" id="fullForm_nhj_24y_bx">
       <termVariant>truck</termVariant>
     </fullForm>
     <fullForm usage="notRecommended" language="en-GB">

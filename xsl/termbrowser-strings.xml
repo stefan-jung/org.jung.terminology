@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<langlist>
+    <lang xml:lang="de"     filename="termbrowser-strings-de-DE.xml"/>
+    <lang xml:lang="de-de"  filename="termbrowser-strings-de-DE.xml"/>
+    <lang xml:lang="de-DE"  filename="termbrowser-strings-de-DE.xml"/>
+    <lang xml:lang="en"     filename="termbrowser-strings-en-GB.xml"/>
+    <lang xml:lang="en-gb"  filename="termbrowser-strings-en-GB.xml"/>
+    <lang xml:lang="en-GB"  filename="termbrowser-strings-en-GB.xml"/>
+</langlist>

@@ -397,11 +397,11 @@ Category: Termentry elements-->
 <!ATTLIST termBody    %termBody.attributes;>
 
 <!--                                 LONG NAME: Related Terms Container               -->
-<!ENTITY % relations.content        "(((%antonyms;) |
-                                       (%hypernyms;) |
-                                       (%hyponyms;) |
-                                       (%partsOf;) |
-                                       (%relatedTerms;))*)">
+<!ENTITY % relations.content        "((%antonyms;)?,
+                                      (%hypernyms;)?,
+                                      (%hyponyms;)?,
+                                      (%partsOf;)?,
+                                      (%relatedTerms;)?)">
 <!--doc:The <relations> element contains groups of term relations.
 Category: Termentry elements-->
 <!ELEMENT  relations %relations.content;>

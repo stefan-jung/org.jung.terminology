@@ -10,16 +10,17 @@
   </definitionSource>
  </definition>
  <termBody>
+  <note/>
   <fig id="carFigure">
-   <title>Drawing of a car</title>
+   <title>Drawing of a cars</title>
    <image href="images/car.png" id="image_cyv_vm3_t5">
     <alt>Drawing of a car</alt>
    </image>
   </fig>
   <domains>
-   <domain value="autos"/>
+   <domain value="Car"/>
   </domains>
-  <partOfSpeech value="noun"/>
+  <partOfSpeech/>
   <fullForm usage="preferred" language="en-GB">
    <termVariant>car</termVariant>
   </fullForm>
