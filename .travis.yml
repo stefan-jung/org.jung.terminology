@@ -1,6 +1,5 @@
 language: java
-install: ./travis.sh
-script: gradle travis
+script: bash travis.sh
 notifications:
   slack:
     rooms:
