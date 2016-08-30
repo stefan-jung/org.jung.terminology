@@ -17,8 +17,7 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
 * [Features](#features)
 * [Installation](#installation)
 * [Install Framework](#install-framework)
-  * [&lt;oXygen/&gt; Author Mode Stylesheet](#oxygen-author-mode-stylesheet)
-    * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
+  * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
 * [Usage](#usage)
   * [DITA Termchecker](#dita-termchecker)
 
@@ -51,8 +50,6 @@ This step is optional. To install the &lt;oXygen/&gt; XML framework, proceed as 
 3. Add the directory of the plugin.
    ![framework](media/images/framework.png)
 
-
-#### &lt;oXygen/&gt; Author Mode Stylesheet
 
 **org.doctales.terminology** ships an &lt;oXygen/&gt; XML framework that contains an &lt;oXygen/&gt; XML author mode stylesheet.
 The stylesheet simplifies authoring `<termentry>` topics. The stylesheet is available in the following languages:
@@ -147,11 +144,10 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
 4. Create a new DITA topic.
 5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.<br/>
    The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png). 
+   Click on the lamp select the `Replace with an allowed term` action.
    This works both in text and in author mode.<br/>
    ![DITA term replacement author view](media/animations/dita-term-replacement-author-view.gif)<br/>
    ![DITA term replacement text view](media/animations/dita-term-replacement-text-view.gif)<br/>
-6. Click on the lamp select the `Replace with an allowed term` action.
-   ![DITA term violation Schematron quickfix](media/images/termchecker-dita-schematron-quickfix.png)<br/>
    The deprecated term has been replaced.
 
 **Explanation**
