@@ -27,7 +27,8 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
 
 - Specialized DITA `termentry` topic
 - &lt;oXygen/&gt; XML framework with author mode stylesheet
-- Transformation scenario for generating a terminology checker
+- Transformation scenario for generating a terminology checker for DITA
+- Transformation scenario for generating a terminology checker for XLIFF
 - Transformation scenario for generating a terminology browser
 - Transformation scenario for exporting the terminology to TBX-Min for your Language Service Provider (LSP)
 - Transformation scenario for exporting the terminology to TBX-Basic for your Language Service Provider (LSP)
