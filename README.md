@@ -148,7 +148,8 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
 5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.<br/>
    The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png). 
    This works both in text and in author mode.<br/>
-   ![DITA term violation indicated by Schematron](media/images/termchecker-dita-schematron-error.png)<br/>
+   ![DITA term replacement author view](media/animations/dita-term-replacement-author-view.gif)<br/>
+   ![DITA term replacement text view](media/animations/dita-term-replacement-text-view.gif)<br/>
 6. Click on the lamp select the `Replace with an allowed term` action.
    ![DITA term violation Schematron quickfix](media/images/termchecker-dita-schematron-quickfix.png)<br/>
    The deprecated term has been replaced.
