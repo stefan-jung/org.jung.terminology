@@ -3,13 +3,6 @@ out/
 temp/
 *.xpr
 build_deploy.xml
-.gradle/
-dita-ot*
-dita-ot*/
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
 *.jar
 MANIFEST.MF
 *.orig
