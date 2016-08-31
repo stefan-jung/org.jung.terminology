@@ -42,6 +42,7 @@
     <xsl:function name="dtl:generateId" as="xs:string?">
         <xsl:param name="baseString" as="xs:string?"/>
         <xsl:param name="prefixString" as="xs:string?"/>
+        <xsl:param name="id" as="xs:string?"/>
         <xsl:variable name="idStage1"
             select="
                 lower-case(replace(replace(replace(replace(replace(replace(replace(replace($baseString, 'ä', 'ae')
@@ -82,7 +83,8 @@
                 , ' y', ' Y')
                 , ' z', ' Z')
                 , '[^0-9a-zA-Z]', '')"/>
-        <xsl:sequence select="concat(normalize-space($prefixString), $idStage3)"/>
+        <xsl:variable name="idStage4" select="concat(normalize-space($prefixString), $idStage3)"/>
+        <xsl:sequence select="concat($idStage4, $id)"/>
     </xsl:function>
 
     <xsl:template name="createSqfFix">
@@ -116,7 +118,7 @@
 
         <xsl:variable name="counter" select="position()"/>
         <xsl:variable name="quickFixId"
-            select="concat(dtl:generateId($notRecommendedTerm, 'term'), $counter)"/>
+            select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), $counter)"/>
 
         <!-- FIXME: This uses the first termVariant but should use all and respect the flection of the notRecommended term. -->
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>

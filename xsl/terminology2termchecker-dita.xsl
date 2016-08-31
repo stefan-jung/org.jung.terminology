@@ -28,7 +28,7 @@
                 <sch:rule context="text()">
                         <xsl:variable name="termLanguage" select="normalize-space(@language)"/>
                         <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-                        <xsl:variable name="sqfGroupName" select="dtl:generateId($notRecommendedTerm, 'sqfGroup')"/>
+                        <xsl:variable name="sqfGroupName" select="dtl:generateId($notRecommendedTerm, 'sqfGroup', generate-id())"/>
                         
                         <!-- 
                             Create a report that will be reported if the tested topic: 

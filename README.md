@@ -26,10 +26,11 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
 
 - Specialized DITA `termentry` topic
 - &lt;oXygen/&gt; XML framework with author mode stylesheet
-- Transformation scenario for generating a terminology checker
-- Transformation scenario for generating a terminology browser
-- Transformation scenario for exporting the terminology to TBX-Min for your Language Service Provider (LSP)
-- Transformation scenario for exporting the terminology to TBX-Basic for your Language Service Provider (LSP)
+- Transformation scenario based on `com.oxygenxml.webhelp` for generating a terminology browser
+- Transformation type `termchecker-dita` and transformation scenario for generating a DITA terminology checker
+- Transformation type `termchecker-xliff` and transformation scenario for generating an XLIFF terminology checker
+- Transformation type `tbx-min` and transformation scenario for exporting the terminology to TBX-Min for your Language Service Provider (LSP)
+- Transformation type `tbx-basic` and transformation scenario for exporting the terminology to TBX-Basic for your Language Service Provider (LSP)
 
 
 ### Installation
@@ -168,5 +169,5 @@ The deprecated and the allowed term notations are defined in the `truck.dita` fi
 > You can also generate the Schematron file using the `dita` command:
 > 
 > ```bash
-> dita -i terminology.ditamap -f termchecker -Dargs.language=en-GB -o termchecker-dita
+> dita -i terminology.ditamap -f termchecker-dita -Dargs.language=en-GB -o termchecker-dita
 > ```
