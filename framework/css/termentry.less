@@ -56,7 +56,6 @@
     padding-bottom: 0;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    visibility: -oxy-collapse-text;
 }
 
 .afterBlock {
@@ -176,10 +175,9 @@
 
 *[class~="termentry/termentry"] > *[class~="topic/title"]:after {
     .header();
-    content: "\A ${i18n(doctales.termAdministration)}"
+    content: "\A"
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.termAdministration)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -202,10 +200,9 @@
 
 *[class~="termentry/definition"]:before(10) {
     .header();
-    content: "${i18n(doctales.definition)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.definition)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -225,10 +222,9 @@
 
 *[class~="termentry/definitionSource"]:before(10) {
     .header();
-    content: "\A ${i18n(doctales.definitionSource)}"
+    content: "\A"
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.definitionSource)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -251,10 +247,9 @@
 
 *[class~="topic/fig"]:before(10) {
     .header();
-    content: "\A ${i18n(doctales.fig)}"
+    content: "\A"
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.fig)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -305,10 +300,9 @@
 
 *[class~="termentry/termSource"]:before(10) {
     .header();
-    content: "\A ${i18n(doctales.termSource)}"
+    content: "\A"
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.termSource)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -426,10 +420,9 @@
 
 *[class~="termentry/annotation"]:before(10) {
     .header();
-    content: "\A ${i18n(doctales.annotation)}"
+    content: "\A"
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.annotation)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -444,10 +437,9 @@
 
 *[class~="termentry/termContext"]:before(10) {
     .header();
-    content: "\A ${i18n(doctales.termContext)}"
+    content: "\A"
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.termContext)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -471,10 +463,9 @@
 
 *[class~="termentry/partOfSpeech"]:before(10) {
     .header();
-    content: "${i18n(doctales.partOfSpeech)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.partOfSpeech)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -513,17 +504,16 @@
 }
 
 *[class~="topic/note"]:before(10) {
-    .header();
-    content: "${i18n(doctales.note)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.note)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.delete.note')
         )
     );
+    .header();
 }
 
 *[class~="topic/note"]:before(9) {
@@ -550,11 +540,9 @@
 }
 
 *[class~="termentry/domains"]:before(10) {
-    .header();
-    content: "${i18n(doctales.domains)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.domains)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -562,6 +550,7 @@
             oxy_action(id, 'doctales.delete.domains')
         )
     );
+    .header();
 }
 
 *[class~="termentry/domains"]:before(9) {
@@ -592,10 +581,9 @@
 
 *[class~="termentry/agreedWith"]:before(10) {
     .header();
-    content: "${i18n(doctales.agreedWith)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.agreedWith)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -642,10 +630,9 @@
 }
 
 *[class~="termentry/fullForm"]:before(10) {
-    content: "${i18n(doctales.fullForm)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.fullForm)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -661,10 +648,9 @@
 }
 
 *[class~="termentry/abbreviation"]:before(10) {
-    content: "${i18n(doctales.abbreviation)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.abbreviation)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -680,10 +666,9 @@
 }
 
 *[class~="termentry/acronym"]:before(10) {
-    content: "${i18n(doctales.acronym)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.acronym)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -699,10 +684,9 @@
 }
 
 *[class~="termentry/verb"]:before(10) {
-    content: "${i18n(doctales.verb)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.verb)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -789,10 +773,9 @@
 }
 
 *[class~="termentry/termVariant"]:before(10) {
-    content: "${i18n(doctales.termVariant)}"
+    content:
         oxy_buttonGroup(
-            label, '',
-            icon, url(@pencilIcon),
+            label, '${i18n(doctales.termVariant)}',
             transparent, 'true',
             actions, 
             oxy_action_list(
@@ -863,10 +846,9 @@
 /* relations */
 *[class~="termentry/relations"]:before(10) {
     .header();
-    content: "${i18n(doctales.relations)}"
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.relations)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -886,10 +868,9 @@
 
 /* Antonyms */
 *[class~="termentry/antonyms"]:before(10) {
-    content: "${i18n(doctales.terminology.antonyms)}" 
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.terminology.antonyms)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -906,10 +887,9 @@
 
 /* Are Part of */
 *[class~="termentry/partsOf"]:before(10) {
-    content: "${i18n(doctales.terminology.partsOf)}" 
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.terminology.partsOf)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -926,10 +906,9 @@
 
 /* Hypernyms */
 *[class~="termentry/hypernyms"]:before(10) {
-    content: "${i18n(doctales.terminology.hypernyms)}" 
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.terminology.hypernyms)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -946,10 +925,9 @@
 
 /* Hyponyms */
 *[class~="termentry/hyponyms"]:before(10) {
-    content: "${i18n(doctales.terminology.hyponyms)}" 
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.terminology.hyponyms)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
@@ -966,10 +944,9 @@
 
 /* Related Terms */
 *[class~="termentry/relatedTerms"]:before(10) {
-    content: "${i18n(doctales.terminology.relatedTerms)}" 
+    content:
     oxy_buttonGroup(
-        label, '',
-        icon, url(@pencilIcon),
+        label, '${i18n(doctales.terminology.relatedTerms)}',
         transparent, 'true',
         actions, 
         oxy_action_list(
