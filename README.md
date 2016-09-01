@@ -156,7 +156,7 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
 The deprecated and the allowed term notations are defined in the `truck.dita` file.
 
 ```xml
-<fullForm language="en-GB" usage="notRecommended">
+<fullForm usage="notRecommended" language="en-GB">
   <termVariant>truck</termVariant>
 </fullForm>
 <fullForm usage="preferred" language="en-GB">
