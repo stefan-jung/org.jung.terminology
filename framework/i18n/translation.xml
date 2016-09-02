@@ -55,8 +55,8 @@
 
     <!-- definitionText -->
     <key value="doctales.definitionText">
-        <val lang="en_US">Text</val>
-        <val lang="de_DE">Text</val>
+        <val lang="en_US">Definition</val>
+        <val lang="de_DE">Definition</val>
     </key>
 
     <!-- definitionSource -->
