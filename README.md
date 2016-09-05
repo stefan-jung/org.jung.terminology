@@ -49,7 +49,7 @@ This step is optional. To install the &lt;oXygen/&gt; XML framework, proceed as 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
 3. Add the directory of the plugin.
-   ![framework](media/images/framework.png)
+   ![framework](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/framework.png)
 
 
 **org.doctales.terminology** ships an &lt;oXygen/&gt; XML framework that contains an &lt;oXygen/&gt; XML author mode stylesheet.
@@ -105,13 +105,13 @@ The following code snippet shows the sample file `truck.dita`.
 
 The screenshot shows the same file rendered with the &lt;oXygen/&gt; XML author mode stylesheet.
 
-![author-mode](media/images/author-mode.png)
+![author-mode](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/author-mode.png)
 
 
 #### Activate &lt;oXygen/&gt; Author Mode Stylesheet
 
 Choose the style **DOCTALES Termentry** in the **Styles** menu.<br/>
-![author-mode](media/images/styles-menu.png)
+![author-mode](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/styles-menu.png)
 
 
 ### Usage
@@ -128,7 +128,7 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
 
 1. Open the samples DITA map `~/org.doctales.terminology/samples/terminology.ditamap` in the &lt;oXygen/&gt; DITA Maps Manager.
 2. In the `Transformation Scenarios` view, double click the entry `Termchecker for DITA`.<br/>
-   ![Transformation Scenario Termchecker for DITA](media/images/termchecker-dita-transformation-scenario.png)<br/>
+   ![Transformation Scenario Termchecker for DITA](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/termchecker-dita-transformation-scenario.png)<br/>
    The terminology is transformed to the Schematron file `~/out/termchecker-dita/terminology-DITA-en-GB.sch`.
    By default, the terminology checker is generated for British English (`en-GB`).
    If you want to generate the terminology checker for another language, you have to change the parameter `args.language` of the transformation scenario.
@@ -137,16 +137,16 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
    2. In the `Document Type Association` menu, select the `DITA` document type association and click the button `Edit`.
    3. Open the `Validation` tab and click the **+** button, to create a new validation scenario.
    4. Create a new validation scenario named `Terminology` and specify the Schematron schema.<br/>
-      ![Specify DITA Termchecker Schematron Schema](media/images/specify-schema-termchecker-dita.png)<br/>
-      ![Create new DITA validation scenario](media/images/termchecker-dita-new-scenario.png)<br/>
-      ![DITA Document Type Association](media/images/termchecker-dita-document-type.png)<br/>
+      ![Specify DITA Termchecker Schematron Schema](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/specify-schema-termchecker-dita.png)<br/>
+      ![Create new DITA validation scenario](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/termchecker-dita-new-scenario.png)<br/>
+      ![DITA Document Type Association](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/termchecker-dita-document-type.png)<br/>
 4. Create a new DITA topic.
 5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.<br/>
-   The term violation is indicated with a small lamp icon ![Lamp icon](media/images/icon-lamp.png). 
+   The term violation is indicated with a small lamp icon ![Lamp icon](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/icon-lamp.png). 
    Click on the lamp select the `Replace with an allowed term` action.
    This works both in text and in author mode.<br/>
-   ![DITA term replacement author view](media/animations/dita-term-replacement-author-view.gif)<br/>
-   ![DITA term replacement text view](media/animations/dita-term-replacement-text-view.gif)<br/>
+   ![DITA term replacement author view](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/animations/dita-term-replacement-author-view.gif)<br/>
+   ![DITA term replacement text view](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/animations/dita-term-replacement-text-view.gif)<br/>
    The deprecated term has been replaced.
 
 **Explanation**
