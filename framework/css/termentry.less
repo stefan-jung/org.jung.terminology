@@ -252,7 +252,7 @@
 *[class~="termentry/termBody"] {
     margin-top: 2em;
 }
-
+/*
 *[class~="topic/fig"]:before(10) {
     .header();
     content: "\A"
@@ -270,9 +270,9 @@
     .closeButton();
 }
 
-*[class~="topic/fig"] {
+/\**[class~="topic/fig"] {
     .mainBlock();
-}
+}*\/
 
 *[class~="topic/fig"] > *[class~="topic/title"]:before(10) {
     content: "\A ${i18n(doctales.fig.title)}";
@@ -285,26 +285,27 @@
 }
 
 *[class~="topic/image"] {
+    -oxy-display-tags: true !important;
 }
 
-*[class~="topic/image"]:before(10) {
+/\**[class~="topic/image"]:before(10) {
     .header();
     content: "\A ${i18n(doctales.image)}";
-}
+}*\/
 
-*[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
+/\**[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
     .header();
     content: "\A ${i18n(doctales.alt)}";
     font-weight: normal;
-}
+}*\/
 
 *[class~="topic/image"] > *[class~="topic/alt"] {
 }
 
-*[class~="topic/image"] > *[class~="topic/alt"]:before,
+/\**[class~="topic/image"] > *[class~="topic/alt"]:before,
 *[class~="topic/image"] > *[class~="topic/alt"]:after {
     content: '';
-}
+}*\/*/
 
 *[class~="termentry/termSource"]:before(10) {
     .header();

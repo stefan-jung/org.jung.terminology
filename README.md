@@ -110,10 +110,8 @@ The screenshot shows the same file rendered with the &lt;oXygen/&gt; XML author 
 
 #### Activate &lt;oXygen/&gt; Author Mode Stylesheet
 
-1. Choose the style **DOCTALES Termentry** in the **Styles** menu.<br/>
-   ![author-mode](media/images/styles-menu.png)
-2. Turn of all tags in the **Tags** menu.<br/>
-   ![author-mode](media/images/tags-menu.png)
+Choose the style **DOCTALES Termentry** in the **Styles** menu.<br/>
+![author-mode](media/images/styles-menu.png)
 
 
 ### Usage
