@@ -17,14 +17,14 @@
     <acronym language="de-DE" usage="preferred">
       <termVariant>LKW</termVariant>
     </acronym>
-    <fullForm usage="preferred" language="en-US">
+    <fullForm language="en-US" usage="preferred">
       <termVariant>truck</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="preferred">
+      <termVariant>lorry</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
       <termVariant>truck</termVariant>
-    </fullForm>
-    <fullForm usage="preferred" language="en-GB">
-      <termVariant>lorry</termVariant>
     </fullForm>
   </termBody>
   <relations>
