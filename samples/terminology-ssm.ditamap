@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE subjectScheme PUBLIC "-//OASIS//DTD DITA Subject Scheme Map//EN" "subjectScheme.dtd"> 
+<subjectScheme>
+    <subjectHead>
+        <subjectHeadMeta>
+            <navtitle>
+                Terminology Domains
+            </navtitle>
+        </subjectHeadMeta>
+    </subjectHead>
+    <hasInstance>
+        <subjectdef keys="termdomainValues">
+            <subjectdef keys="manufacturer">
+                <topicmeta>
+                    <navtitle>Manufacturer</navtitle>
+                </topicmeta>
+                <subjectdef keys="ford">
+                    <topicmeta>
+                        <navtitle>Ford</navtitle>
+                    </topicmeta>
+                </subjectdef>
+                <subjectdef keys="vw">
+                    <topicmeta>
+                        <navtitle>Volkswagen</navtitle>
+                    </topicmeta>
+                </subjectdef>
+            </subjectdef>
+        </subjectdef>
+    </hasInstance>
+  <enumerationdef>
+    <attributedef name="termdomain"/>
+    <subjectdef keyref="termdomainValues"/>
+  </enumerationdef>
+</subjectScheme>

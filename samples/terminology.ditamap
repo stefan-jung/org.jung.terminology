@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map id="terminology">
- <title>Terminology</title>
- <topicref href="car.dita" keys="car"/>
- <topicref href="truck.dita" keys="truck"/>
- <topicref href="wheel.dita" keys="wheel"/>
- <topicref href="beetle.dita" keys="beetle"/>
-</map>
+<!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
+<termmap id="terminology">
+  <title>Terminology</title>
+  <topicref href="car.dita" keys="car"/>
+  <topicref href="truck.dita" keys="truck"/>
+  <topicref href="wheel.dita" keys="wheel"/>
+  <topicref href="beetle.dita" keys="beetle" termdomain="vw"/>
+  <topicref href="terminology-ssm.ditamap" format="ditamap"/> 
+</termmap>

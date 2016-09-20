@@ -1,0 +1,67 @@
+<!-- ================================================================================ -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
+      Delivered as file "termmap.dtd"  -->
+<!-- ================================================================================ -->
+
+<!-- ================================================================================ -->
+<!--                              MAP ENTITY DECLARATIONS                             -->
+<!-- ================================================================================ -->
+
+<!--<!ENTITY % termmap-dec     
+  PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" 
+         "termmap.ent"
+>%termmap-dec;-->
+
+<!-- ================================================================================ -->
+<!--                            DOMAIN ENTITY DECLARATIONS                            -->
+<!-- ================================================================================ -->
+
+<!ENTITY % termdomainAtt-d-dec
+  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
+         "termdomainAttDomain.ent">
+%termdomainAtt-d-dec;
+
+<!-- ================================================================================ -->
+<!--                                DOMAIN EXTENSIONS                                 -->
+<!-- ================================================================================ -->
+
+
+<!-- ================================================================================ -->
+<!--                           DOMAIN ATTRIBUTE EXTENSIONS                            -->
+<!-- ================================================================================ -->
+
+<!ENTITY % props-attribute-extensions
+                        "%termdomainAtt-d-attribute;
+                        ">
+<!ENTITY % base-attribute-extensions
+                        "
+                        ">
+<!-- ================================================================================ -->
+<!--                            DOMAINS ATTRIBUTE OVERRIDE                            -->
+<!-- ================================================================================ -->
+
+<!ENTITY included-domains
+                        "&termdomainAtt-d-att;
+                        ">
+
+<!-- ================================================================================ -->
+<!--                            TOPIC ELEMENT INTEGRATION                             -->
+<!-- ================================================================================ -->
+
+<!ENTITY % map-typemod
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Map//EN"
+         "map.mod">
+%map-typemod;
+
+<!ENTITY % termmap-typemod
+  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
+         "termmap.mod">
+%termmap-typemod;
+
+<!-- ================================================================================ -->
+<!--                            DOMAIN ELEMENT INTEGRATION                            -->
+<!-- ================================================================================ -->
+
+<!-- ================================= End of file ================================== -->

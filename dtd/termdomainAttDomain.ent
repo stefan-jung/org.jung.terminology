@@ -1,0 +1,23 @@
+<!-- ================================================================================ -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//aaaaaaa//ENTITIES DITA Termdomain Attribute Domain//EN"
+      Delivered as file "termdomainAttDomain.ent"  -->
+<!-- ================================================================================ -->
+
+
+<!-- ================================================================================ -->
+<!--                     ATTRIBUTE EXTENSION ENTITY DECLARATIONS                      -->
+<!-- ================================================================================ -->
+
+<!ENTITY % termdomainAtt-d-attribute
+                        "termdomain CDATA #IMPLIED">
+
+<!-- ================================================================================ -->
+<!--                            DOMAIN ENTITY DECLARATION                             -->
+<!-- ================================================================================ -->
+
+<!ENTITY termdomainAtt-d-att
+                        "a(props termdomain)">
+
+<!-- ================================= End of file ================================== -->
