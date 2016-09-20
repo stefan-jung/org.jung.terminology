@@ -31,4 +31,9 @@
    <termVariant>Auto</termVariant>
   </abbreviation>
  </termBody>
+ <relations>
+  <relatedTerms>
+   <relatedTerm keyref="truck"/>
+  </relatedTerms>
+ </relations>
 </termentry>

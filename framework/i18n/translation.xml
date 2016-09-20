@@ -284,6 +284,14 @@
         <val lang="en_US">Image</val>
         <val lang="de_DE">Bild</val>
     </key>
+    <key value="doctales.add.imageReference">
+        <val lang="en_US">Add image reference</val>
+        <val lang="de_DE">Bildreferenz einfügen</val>
+    </key>
+    <key value="doctales.delete.image">
+        <val lang="en_US">Delete Image (&lt;image&gt;)</val>
+        <val lang="de_DE">Bild (&lt;image&gt;) löschen</val>
+    </key>
 
     <!-- alt -->
     <key value="doctales.alt">
@@ -334,6 +342,10 @@
         <val lang="en_US">Delete full form (&lt;fullForm&gt;)</val>
         <val lang="de_DE">Langform (&lt;fullForm&gt;) löschen</val>
     </key>
+    <key value="doctales.rename.toFullForm">
+        <val lang="en_US">Change to full form (&lt;fullForm&gt;)</val>
+        <val lang="de_DE">In Langform (&lt;fullForm&gt;) umwandeln</val>
+    </key>
 
     <!-- abbreviation -->
     <key type="action" value="doctales.add.abbreviation">
@@ -343,6 +355,10 @@
     <key value="doctales.delete.abbreviation">
         <val lang="en_US">Delete abbreviation (&lt;abbreviation&gt;)</val>
         <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) löschen</val>
+    </key>
+    <key value="doctales.rename.toAbbreviation">
+        <val lang="en_US">Change to abbreviation (&lt;abbreviation&gt;)</val>
+        <val lang="de_DE">In Abkürzung (&lt;abbreviation&gt;) umwandeln</val>
     </key>
 
     <!-- acronym -->
@@ -354,6 +370,10 @@
         <val lang="en_US">Delete acronym (&lt;acronym&gt;)</val>
         <val lang="de_DE">Akronym (&lt;acronym&gt;) löschen</val>
     </key>
+    <key value="doctales.rename.toAcronym">
+        <val lang="en_US">Change to acronym (&lt;acronym&gt;)</val>
+        <val lang="de_DE">In Akronym (&lt;acronym&gt;) umwandeln</val>
+    </key>
 
     <!-- verb -->
     <key type="action" value="doctales.add.verb">
@@ -363,6 +383,10 @@
     <key value="doctales.delete.verb">
         <val lang="en_US">Delete verb (&lt;verb&gt;)</val>
         <val lang="de_DE">Verb (&lt;verb&gt;) löschen</val>
+    </key>
+    <key value="doctales.rename.toVerb">
+        <val lang="en_US">Change to verb (&lt;verb&gt;)</val>
+        <val lang="de_DE">In Verb (&lt;verb&gt;) umwandeln</val>
     </key>
 
     <!-- termVariant -->
