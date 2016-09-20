@@ -1,0 +1,69 @@
+@import url("elements.less");
+
+*[class~="termmap/termmap"] {
+    display: block; 
+    -oxy-display-tags: none;
+}
+
+*[class~="termmap/termmap"] > *[class~="topic/title"] {
+    font-weight: bold;
+    font-size: 2em;
+    -oxy-display-tags: none;
+}
+
+*[class~="map/topicref"] {
+    .mainBlock();
+}
+
+*[class~="map/topicref"][format] {
+    display: none;
+}
+
+*[class~="map/topicref"]:before(10) {
+    .header();
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.map.topicref)}',
+        transparent, @buttonTransparency,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.topicref')
+        )
+    );
+}
+
+*[class~="map/topicref"]:before(9) {
+    .closeButton();
+}
+
+*[class~="map/topicref"]:before(8) {
+    content: "@href";
+    .uiElementLabel();
+    padding-left: 0.5em;
+}
+
+*[class~="map/topicref"]:before(7) {
+    content:
+    oxy_textfield(
+          edit, '@href',
+          columns, 40
+    );
+    .uiElement();
+    padding-left: 0.5em;
+}
+
+*[class~="map/topicref"]:before(6) {
+    content: "@keys";
+    .uiElementLabel();
+    padding-left: 0.5em;
+}
+
+*[class~="map/topicref"]:before(5) {
+    content:
+    oxy_textfield(
+          edit, '@keys',
+          columns, 40
+    );
+    .uiElement();
+    padding-left: 0.5em;
+}

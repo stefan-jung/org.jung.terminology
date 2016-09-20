@@ -714,8 +714,12 @@
         <val lang="en_US">Delete links to related terms</val>
         <val lang="de_DE">Links auf verwandte Begriffe löschen</val>
     </key>
+    
+    <key value="doctales.map.topicref">
+        <val lang="en_US">Topic Reference</val>
+        <val lang="de_DE">Topic-Referenz</val>
+    </key>
 
-    <!-- CSS Labels -->
     <key value="doctales.termVariant">
         <val lang="en_US">Term</val>
         <val lang="de_DE">Term</val>
