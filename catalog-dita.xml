@@ -24,8 +24,8 @@
   <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
   <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
   <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termDomainAttDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termDomainAttDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termDomainAttDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termDomainAttDomain.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
+  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
 </catalog>
