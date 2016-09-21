@@ -5231,7 +5231,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/doctales.add.instancesOf ')])</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/instancesOf ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -5243,7 +5243,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
-																		<String>self::*[contains(@class, ' termentry/relations ')][1]</String>
+																		<String>.</String>
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
@@ -5253,125 +5253,6 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-															</field>
-														</actionMode>
-													</actionMode-array>
-												</field>
-												<field name="enabledInReadOnlyContext">
-													<Boolean>false</Boolean>
-												</field>
-											</action>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/actionDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>143</Integer>
-										</field>
-										<field name="value">
-											<action>
-												<field name="id">
-													<String>doctales.add.instanceOf</String>
-												</field>
-												<field name="name">
-													<String>${i18n(doctales.add.instanceOf)}</String>
-												</field>
-												<field name="description">
-													<String>${i18n(doctales.add.instanceOf_description)}</String>
-												</field>
-												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
-												</field>
-												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
-												</field>
-												<field name="accessKey">
-													<String></String>
-												</field>
-												<field name="accelerator">
-													<null/>
-												</field>
-												<field name="actionModes">
-													<actionMode-array>
-														<actionMode>
-															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/instancesOf ')]</String>
-															</field>
-															<field name="argValues">
-																<serializableOrderedMap/>
-															</field>
-															<field name="operationID">
-																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
-															</field>
-														</actionMode>
-													</actionMode-array>
-												</field>
-												<field name="enabledInReadOnlyContext">
-													<Boolean>false</Boolean>
-												</field>
-											</action>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/actionDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>144</Integer>
-										</field>
-										<field name="value">
-											<action>
-												<field name="id">
-													<String>doctales.delete.instancesOf</String>
-												</field>
-												<field name="name">
-													<String>${i18n(doctales.delete.instancesOf)}</String>
-												</field>
-												<field name="description">
-													<String>${i18n(doctales.delete.instancesOf_description)}</String>
-												</field>
-												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
-												</field>
-												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
-												</field>
-												<field name="accessKey">
-													<String></String>
-												</field>
-												<field name="accelerator">
-													<null/>
-												</field>
-												<field name="actionModes">
-													<actionMode-array>
-														<actionMode>
-															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/instancesOf ')][1]</String>
-															</field>
-															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>elementLocation</String>
-																		<String>.</String>
-																	</entry>
-																</serializableOrderedMap>
-															</field>
-															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -7911,6 +7792,40 @@
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>validationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>Terminology</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>defaultValidationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
 											<null/>
@@ -15038,11 +14953,68 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									<String>DITA</String>
 								</field>
 							</validationScenario>
+							<validationScenario>
+								<field name="pairs">
+									<list>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/xml</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>&lt;Default engine></String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<validationUnitSchema>
+													<field name="dtdSchemaPublicID">
+														<null/>
+													</field>
+													<field name="schematronPhase">
+														<null/>
+													</field>
+													<field name="type">
+														<Integer>7</Integer>
+													</field>
+													<field name="uri">
+														<String>file:/home/stefan/workspace/org.doctales.terminology/samples/out/termchecker-dita/terminology-DITA-en-GB.sch</String>
+													</field>
+												</validationUnitSchema>
+											</field>
+										</validationUnit>
+									</list>
+								</field>
+								<field name="type">
+									<String>Validation_scenario</String>
+								</field>
+								<field name="name">
+									<String>Terminology</String>
+								</field>
+							</validationScenario>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
 						<list>
 							<String>DITA</String>
+							<String>Terminology</String>
 						</list>
 					</field>
 					<field name="defaultTransformationScenarios">
