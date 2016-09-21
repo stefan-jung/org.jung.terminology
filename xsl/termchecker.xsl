@@ -131,8 +131,6 @@
                 <xsl:choose>
                     <xsl:when test="$definition != ''">
                         <xsl:element name="sqf:p">
-                            <xsl:value-of select="dtl:getString($language, 'Definition')"/>
-                            <xsl:text>: </xsl:text>
                             <xsl:value-of select="$definition"/>
                         </xsl:element>
                     </xsl:when>
