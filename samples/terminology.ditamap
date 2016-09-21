@@ -5,6 +5,7 @@
   <topicref href="car.dita" keys="car"/>
   <topicref href="truck.dita" keys="truck"/>
   <topicref href="wheel.dita" keys="wheel"/>
+  <topicref href="motor.dita" keys="motor"/>
   <topicref href="beetle.dita" keys="beetle" termdomain="vw"/>
   <topicref href="terminology-ssm.ditamap" format="ditamap"/> 
 </termmap>

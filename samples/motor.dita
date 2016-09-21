@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="ui_mrt_fd1_jx">
+ <title>Motor</title>
+ <definition>
+  <definitionText>A motor is a machine designed to convert one form of energy into mechanical
+      energy.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Engine" format="html" scope="external"
+        >Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+    <fig>
+      <title>Motor of 2007 Volkswagen Golf R32</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/6/67/2007_Volkswagen_Golf_R32_-_Flickr_-_The_Car_Spy_%2826%29.jpg" width="600px">
+        <alt>By The Car Spy (2007 Volkswagen Golf R32) [CC BY 2.0
+          (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>motor</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="notRecommended" id="fullForm_olp_jcg_jx">
+      <termVariant>engine</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="truck"/>
+      <partOf keyref="car"/>
+    </partsOf>
+  </relations>
+</termentry>
