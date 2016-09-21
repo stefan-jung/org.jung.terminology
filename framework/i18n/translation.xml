@@ -562,6 +562,44 @@
         <val lang="en_US">Delete links to antonyms</val>
         <val lang="de_DE">Links auf Antonyme löschen</val>
     </key>
+  
+    <!-- instancesOf -->
+    <key value="doctales.terminology.instancesOf">
+        <val lang="en_US">Is Instance of</val>
+        <val lang="de_DE">Ist Instanz von</val>
+    </key>
+    <key type="action" value="doctales.add.instancesOf">
+        <val lang="en_US">Add instance-of relations (&lt;instancesOf&gt;)</val>
+        <val lang="de_DE">Ist-Instanz-von Beziehungen (&lt;instancesOf&gt;) einfügen</val>
+    </key>
+    <key value="doctales.add.instancesOf_description">
+        <val lang="en_US">An &lt;instancesOf&gt; element contains references to terms to whom the current term is an instance of.</val>
+        <val lang="de_DE">Ein &lt;instancesOf&gt; Element enthält Referenzen zu Termen, von denen der aktuelle Term eine Instanz ist.</val>
+    </key>
+    <key value="doctales.add.instanceOf">
+        <val lang="en_US">Link a class object</val>
+        <val lang="de_DE">Klassenobjekt verlinken</val>
+    </key>
+    <key value="doctales.add.instanceOf_description">
+        <val lang="en_US">Add link to a class object to model a semantic net</val>
+        <val lang="de_DE">Verlinke ein Klassenobjekt, um ein semantisches Netz zu bilden.</val>
+    </key>
+    <key value="doctales.delete.instanceOf">
+        <val lang="en_US">Delete link to class object</val>
+        <val lang="de_DE">Link auf Klassenobjekt löschen</val>
+    </key>
+    <key value="doctales.delete.instanceOf_description">
+        <val lang="en_US">Delete link to class object</val>
+        <val lang="de_DE">Link auf Klassenobjekt löschen</val>
+    </key>
+    <key value="doctales.delete.instancesOf">
+        <val lang="en_US">Delete links to class objects of the current term</val>
+        <val lang="de_DE">Links auf Klassenobjekte löschen</val>
+    </key>
+    <key value="doctales.delete.instancesOf_description">
+        <val lang="en_US">Delete links to class objects of the current term</val>
+        <val lang="de_DE">Links auf Klassenobjekte löschen</val>
+    </key>
 
     <!-- partsOf -->
     <key value="doctales.terminology.partsOf">

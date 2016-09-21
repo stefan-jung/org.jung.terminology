@@ -19,6 +19,8 @@
     <str name="Hypernyms">Oberbegriffe (Hypernyme)</str>
     <str name="Hyponym">Unterbegriff (Hyponym)</str>
     <str name="Hyponyms">Unterbegriffe (Hyponyme)</str>
+    <str name="Instance Of">Instanze von</str>
+    <str name="Instances Of">Instanzen von</str>
     <str name="Parts Of">Ist Teil von</str>
     <str name="Is Part Of">Ist Teil von</str>
     <str name="Part Of Speech">Wortart</str>

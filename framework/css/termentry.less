@@ -803,6 +803,7 @@
         oxy_action_list(
             oxy_action(id, 'doctales.add.antonyms'),
             oxy_action(id, 'doctales.add.partsOf'),
+            oxy_action(id, 'doctales.add.instancesOf'),
             oxy_action(id, 'doctales.add.hypernyms'),
             oxy_action(id, 'doctales.add.hyponyms'),
             oxy_action(id, 'doctales.add.relatedTerms'),
@@ -831,6 +832,25 @@
 }
 
 *[class~="termentry/antonyms"] {
+    .mainBlock();
+}
+
+/* Instances of */
+*[class~="termentry/instancesOf"]:before(10) {
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.terminology.instancesOf)}',
+        transparent, @buttonTransparency,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.instanceOf'),
+            oxy_action(id, 'doctales.delete.instancesOf')
+        )
+    );
+    .header();
+}
+
+*[class~="termentry/instancesOf"] {
     .mainBlock();
 }
 

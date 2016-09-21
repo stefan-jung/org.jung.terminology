@@ -19,6 +19,8 @@
     <str name="Hypernyms">Superordinate Concepts (Hypernyms)</str>
     <str name="Hyponym">Subordinate Concept (Hyponym)</str>
     <str name="Hyponyms">Subordinate Concepts (Hyponyms)</str>
+    <str name="Instance Of">Instance of</str>
+    <str name="Instances Of">Instances of</str>
     <str name="Parts Of">Is Part of</str>
     <str name="Is Part Of">Is Part of</str>
     <str name="Part Of Speech">Part of Speech</str>

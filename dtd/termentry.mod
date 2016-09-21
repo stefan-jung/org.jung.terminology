@@ -35,6 +35,8 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % hypernyms             "hypernyms"                                            >
 <!ENTITY % hyponym               "hyponym"                                              >
 <!ENTITY % hyponyms              "hyponyms"                                             >
+<!ENTITY % instanceOf            "instanceOf"                                           >
+<!ENTITY % instancesOf           "instancesOf"                                          >
 <!ENTITY % partOf                "partOf"                                               >
 <!ENTITY % partOfSpeech          "partOfSpeech"                                         >
 <!ENTITY % relations             "relations"                                            >
@@ -400,6 +402,7 @@ Category: Termentry elements-->
 <!ENTITY % relations.content        "((%antonyms;)?,
                                       (%hypernyms;)?,
                                       (%hyponyms;)?,
+                                      (%instancesOf;)?,
                                       (%partsOf;)?,
                                       (%relatedTerms;)?)">
 <!--doc:The <relations> element contains groups of term relations.
@@ -495,7 +498,18 @@ Category: Termentry elements-->
 <!ELEMENT  hyponyms %hyponyms.content;>
 <!ATTLIST  hyponyms %hyponyms.attributes;>
 
-<!--                                 LONG NAME: Are Part Of                           -->
+<!--                                 LONG NAME: Instances Of                       -->
+<!ENTITY % instancesOf.content    "((%instanceOf;)+)">
+<!ENTITY % instancesOf.attributes "%termLinkGroup-atts;
+                                     type
+                                        CDATA
+                                           'instancesOf'">
+<!--doc:The <instancesOf> element contains references to <instanceOf> elements.
+Category: Termentry elements-->
+<!ELEMENT  instancesOf %instancesOf.content;>
+<!ATTLIST  instancesOf %instancesOf.attributes;>
+
+<!--                                 LONG NAME: Parts Of                           -->
 <!ENTITY % partsOf.content        "((%partOf;)+)">
 <!ENTITY % partsOf.attributes     "%termLinkGroup-atts;
                                      type
@@ -716,7 +730,14 @@ Category: Termentry elements-->
 <!ELEMENT hyponym         %link.content;>
 <!ATTLIST hyponym         %hyponym.attributes;>
 
-<!--                                 LONG NAME: Is Part Of                            -->
+<!--                                 LONG NAME: Instance Of                           -->
+<!ENTITY % instanceOf.attributes  "%termLink-atts;">
+<!--doc:The <instanceOf> element indicates, that the current term is an instance ot the referenced term.
+Category: Termentry elements-->
+<!ELEMENT instanceOf    %link.content;>
+<!ATTLIST instanceOf    %instanceOf.attributes;>
+
+<!--                                 LONG NAME: Part Of                               -->
 <!ENTITY % partOf.attributes      "%termLink-atts;">
 <!--doc:The <partOf> element indicates, that the current term is part ot the referenced term.
 Category: Termentry elements-->
@@ -752,6 +773,8 @@ Category: Termentry elements-->
 <!ATTLIST hypernyms             %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/hypernyms ">
 <!ATTLIST hyponym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/hyponym ">
 <!ATTLIST hyponyms              %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/hyponyms ">
+<!ATTLIST instanceOf            %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/instanceOf ">
+<!ATTLIST instancesOf           %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/instancesOf ">
 <!ATTLIST partOf                %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/partOf ">
 <!ATTLIST partsOf               %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/partsOf ">
 <!ATTLIST partOfSpeech          %global-atts;   class CDATA "- topic/data concept/data termentry/partOfSpeech ">

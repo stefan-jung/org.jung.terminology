@@ -1183,6 +1183,21 @@
         </div>
     </xsl:template>
     
+    <xsl:template match="*[contains(@class, ' termentry/instancesOf ')]">
+        <div class="linklist linklist relinfo">
+            <div class="relatedTermsHeader">
+                <strong>
+                    <xsl:call-template name="getVariable">
+                        <xsl:with-param name="id" select="'Instances Of'"/>
+                    </xsl:call-template>
+                </strong>
+            </div>
+            <div class="linklist">
+                <xsl:apply-templates select="." mode="processlinklist"/>
+            </div>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="*[contains(@class, ' termentry/partsOf ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
