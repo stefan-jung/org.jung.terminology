@@ -3,6 +3,7 @@
 <termmap id="terminology">
   <title>Terminology</title>
   <topicref href="car.dita" keys="car"/>
+  <topicref href="exhaust-system.dita" keys="exhaust-system"/>
   <topicref href="truck.dita" keys="truck"/>
   <topicref href="wheel.dita" keys="wheel"/>
   <topicref href="motor.dita" keys="motor"/>

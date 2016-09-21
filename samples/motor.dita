@@ -25,6 +25,9 @@
     <fullForm language="en-GB" usage="notRecommended" id="fullForm_olp_jcg_jx">
       <termVariant>engine</termVariant>
     </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_kzw_ycg_jx">
+      <termVariant>Motor</termVariant>
+    </fullForm>
  </termBody>
   <relations>
     <partsOf>

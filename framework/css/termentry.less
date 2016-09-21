@@ -177,12 +177,39 @@
     );
 }
 
+*[class~="topic/image"]:before(9) {
+    .closeButton();
+}
+
 *[class~="topic/image"]:before(8) {
     .separator();
 }
 
-*[class~="topic/image"]:before(9) {
-    .closeButton();
+*[class~="topic/image"]:before(7) {
+    content: "href";
+    width: 5em;
+    .link();
+}
+
+*[class~="topic/image"]:before(6) {
+    content:
+    oxy_textfield(
+          edit, '@href',
+          columns, 60
+    )"\A";
+}
+
+*[class~="topic/image"]:before(5) {
+    content: "width";
+    width: 5em;
+}
+
+*[class~="topic/image"]:before(4) {
+    content:
+    oxy_textfield(
+          edit, '@width',
+          columns, 10
+    );
 }
 
 *[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
@@ -291,7 +318,7 @@
     content:
     oxy_textfield(
         edit, '@href',
-        columns, 40
+        columns, 60
     )"\A";
 }
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="ui_l21_1jg_jx">
+ <title>Exhaust System</title>
+ <definition>
+  <definitionText>An exhaust system is usually piping used to guide reaction exhaust gases away from
+      a controlled combustion inside an engine or stove. The entire system conveys burnt gases from
+      the engine and includes one or more exhaust pipes.</definitionText>
+  <definitionSource>
+    <sourceReference format="html" scope="external"
+        href="https://en.wikipedia.org/wiki/Exhaust_system">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+    <fig id="fig_tz3_yjg_jx">
+      <title>Exhaust System</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG"
+        width="600px">
+        <alt>By Mchelge at German Wikipedia (Own work (Original caption: “selbst fotografiert”))
+          [Public domain], via Wikimedia Commons</alt>
+      </image>
+    </fig>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termSource>
+        <sourceReference href="http://www.my-cardictionary.com/exhaust-system.html" format="html"
+          scope="external">my-cardictionary.com</sourceReference>
+      </termSource>
+      <termVariant>exhaust system</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_m3m_cjg_jx">
+      <termSource>
+        <sourceReference href="http://www.mein-autolexikon.de/abgasanlage.html" format="html"
+          scope="external">mein-autolexikon.de</sourceReference>
+      </termSource>
+      <termVariant>Abgasanlage</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="car"/>
+    </partsOf>
+  </relations>
+</termentry>
