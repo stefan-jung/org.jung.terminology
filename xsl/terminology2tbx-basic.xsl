@@ -32,7 +32,7 @@
         <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]"/>
         <xsl:variable name="definitionText" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
         <xsl:variable name="definitionSourceName" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionSource ')]/*[contains(@class, ' termentry/sourceName ')]"/>
-        <xsl:variable name="definitionSourceReference" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionSource ')]/*[contains(@class, ' termentry/sourceReference ')]"/>
+        <xsl:variable name="definitionSourceReference" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionSource ')]/*[contains(@class, ' termentry/sourceReference ')]/@href"/>
         <xsl:variable name="partOfSpeech" select="*[contains(@class, ' termentry/partOfSpeech ')]/@value"/>
         <xsl:variable name="domain" select="*[contains(@class, ' termentry/domains ')]/*[contains(@class, ' termentry/domain ')]/@value[1]"/>
         <xsl:variable name="annotation" select="*[contains(@class, ' termentry/annotation ')]"/>
@@ -79,7 +79,7 @@
                 <xsl:when test="$definitionSourceReference">
                     <xsl:element name="xref">
                         <xsl:attribute name="type">externalCrossReference</xsl:attribute>
-                        <xsl:attribute name="target"><xsl:value-of select="$definitionSourceReference"/></xsl:attribute>
+                        <xsl:attribute name="target"><xsl:value-of select="normalize-space($definitionSourceReference)"/></xsl:attribute>
                     </xsl:element>
                 </xsl:when>
             </xsl:choose>
