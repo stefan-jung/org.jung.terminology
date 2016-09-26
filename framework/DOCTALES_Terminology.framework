@@ -7615,10 +7615,10 @@
 													<String>${cfd}</String>
 												</field>
 												<field name="outputDir">
-													<String>${cfd}/out/tbx-min</String>
+													<String>${cfd}/out/tbx-basic</String>
 												</field>
 												<field name="tempDir">
-													<String>${cfd}/temp/tbx-min</String>
+													<String>${cfd}/temp/tbx-basic</String>
 												</field>
 												<field name="transtype">
 													<String>common-html</String>
@@ -7797,7 +7797,7 @@
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
@@ -8051,7 +8051,7 @@
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
