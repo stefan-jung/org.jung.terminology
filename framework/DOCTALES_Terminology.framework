@@ -8151,7 +8151,7 @@
 													</ditavalFilters>
 												</field>
 												<field name="addOxygenJars">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="skinCssFile">
 													<String>${framework}/webhelp-skin/doctales/skin.css</String>
@@ -8198,6 +8198,29 @@
 																<String-array>
 																	<String></String>
 																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.dita.locale</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>en</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>0</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 														<ditaParameter>
@@ -8251,6 +8274,52 @@
 																	<String></String>
 																	<String></String>
 																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>document.locale</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>en</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>webhelp.language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>en</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 													</list>
@@ -8358,7 +8427,13 @@
 													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array/>
+													<String-array>
+														<String>${dita.dir.url}/lib/*.jar</String>
+														<String>${dita.dir.url}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
+														<String>${dita.dir.url}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
+														<String>${dita.dir.url}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
+														<String>${oxygenHome}/lib/*.jar</String>
+													</String-array>
 												</field>
 											</ditaScenario>
 										</field>
