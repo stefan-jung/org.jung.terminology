@@ -28,7 +28,10 @@
                 <sch:rule context="text()">
                     <xsl:variable name="termLanguage" select="normalize-space(@language)"/>
                     <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
+                    <xsl:variable name="notRecommendedTermUppercased"><xsl:value-of select="concat(upper-case(substring($notRecommendedTerm,1,1)), substring($notRecommendedTerm, 2), ' '[not(last())])"/></xsl:variable>
                     <xsl:variable name="sqfGroupName" select="dtl:generateId($notRecommendedTerm, 'sqfGroup', generate-id())"/>
+                    <xsl:variable name="sqfGroupName_up" select="concat($sqfGroupName, '_up')"/>
+                    <xsl:variable name="sqfGroupName_up_sentence" select="concat($sqfGroupName, '_up_sentence')"/>
                     
                     <!-- 
                         Create a report that will be reported if the tested topic: 
@@ -52,7 +55,45 @@
                         <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
                         <xsl:text>.</xsl:text>
                     </xsl:element>
-                    
+
+                    <!-- Report for term with a capitalized initial letter at the beginning of an element -->
+                    <xsl:element name="sch:report">
+                        <xsl:attribute name="test">
+                            <xsl:text>contains(/*/@xml:lang, '</xsl:text>
+                            <xsl:value-of select="$termLanguage"/>
+                            <xsl:text>') and contains(., '</xsl:text>
+                            <xsl:value-of select="concat('. ', $notRecommendedTermUppercased)"/>
+                            <xsl:text>')</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="role">warning</xsl:attribute>
+                        <xsl:attribute name="sqf:fix" select="$sqfGroupName_up_sentence"/>
+                        <xsl:value-of select="dtl:getString($language, 'TheTerm')"/>
+                        <xsl:text> '</xsl:text>
+                        <xsl:value-of select="$notRecommendedTermUppercased"/>
+                        <xsl:text>' </xsl:text>
+                        <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
+                        <xsl:text>.</xsl:text>
+                    </xsl:element>
+
+                    <!-- Report for term with a capitalized initial letter at the beginning of a sentence -->
+                    <xsl:element name="sch:report">
+                        <xsl:attribute name="test">
+                            <xsl:text>contains(/*/@xml:lang, '</xsl:text>
+                            <xsl:value-of select="$termLanguage"/>
+                            <xsl:text>') and starts-with(., '</xsl:text>
+                            <xsl:value-of select="$notRecommendedTermUppercased"/>
+                            <xsl:text>')</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="role">warning</xsl:attribute>
+                        <xsl:attribute name="sqf:fix" select="$sqfGroupName_up"/>
+                        <xsl:value-of select="dtl:getString($language, 'TheTerm')"/>
+                        <xsl:text> '</xsl:text>
+                        <xsl:value-of select="$notRecommendedTermUppercased"/>
+                        <xsl:text>' </xsl:text>
+                        <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
+                        <xsl:text>.</xsl:text>
+                    </xsl:element>
+
                     <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
                     <xsl:element name="sqf:group">
                         <xsl:attribute name="id" select="$sqfGroupName"/>
@@ -63,6 +104,8 @@
                                 <xsl:when test="@language = $termLanguage">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
+                                        <xsl:with-param name="uppercase" select="'false'"/>
+                                        <xsl:with-param name="beginning" select="'false'"/>
                                         <xsl:with-param name="termLanguage" select="$termLanguage"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
@@ -76,6 +119,78 @@
                                 <xsl:when test="@language = $termLanguage">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
+                                        <xsl:with-param name="uppercase" select="'false'"/>
+                                        <xsl:with-param name="beginning" select="'false'"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="definition" select="$definition"/>
+                                    </xsl:call-template>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                    </xsl:element>
+                    
+                    <!-- Schematron Quick Fix Group for terms with uppercased initial letter at the beginning of an element-->
+                    <xsl:element name="sqf:group">
+                        <xsl:attribute name="id" select="$sqfGroupName_up"/>
+                        
+                        <!-- Process all preceding-sibling term notations -->
+                        <xsl:for-each select="preceding-sibling::*">
+                            <xsl:choose>
+                                <xsl:when test="@language = $termLanguage">
+                                    <xsl:call-template name="createSqfFix">
+                                        <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
+                                        <xsl:with-param name="uppercase" select="'true'"/>
+                                        <xsl:with-param name="beginning" select="'false'"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="definition" select="$definition"/>
+                                    </xsl:call-template>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        
+                        <!-- Process all following-sibling term notations -->
+                        <xsl:for-each select="following-sibling::*">
+                            <xsl:choose>
+                                <xsl:when test="@language = $termLanguage">
+                                    <xsl:call-template name="createSqfFix">
+                                        <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
+                                        <xsl:with-param name="uppercase" select="'true'"/>
+                                        <xsl:with-param name="beginning" select="'false'"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="definition" select="$definition"/>
+                                    </xsl:call-template>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                    </xsl:element>
+                    
+                    <!-- Schematron Quick Fix Group for terms with uppercased initial letter at the beginning of a sentence -->
+                    <xsl:element name="sqf:group">
+                        <xsl:attribute name="id" select="$sqfGroupName_up_sentence"/>
+                        
+                        <!-- Process all preceding-sibling term notations -->
+                        <xsl:for-each select="preceding-sibling::*">
+                            <xsl:choose>
+                                <xsl:when test="@language = $termLanguage">
+                                    <xsl:call-template name="createSqfFix">
+                                        <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
+                                        <xsl:with-param name="uppercase" select="'true'"/>
+                                        <xsl:with-param name="beginning" select="'true'"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="definition" select="$definition"/>
+                                    </xsl:call-template>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        
+                        <!-- Process all following-sibling term notations -->
+                        <xsl:for-each select="following-sibling::*">
+                            <xsl:choose>
+                                <xsl:when test="@language = $termLanguage">
+                                    <xsl:call-template name="createSqfFix">
+                                        <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
+                                        <xsl:with-param name="uppercase" select="'true'"/>
+                                        <xsl:with-param name="beginning" select="'true'"/>
                                         <xsl:with-param name="termLanguage" select="$termLanguage"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>

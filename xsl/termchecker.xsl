@@ -91,7 +91,35 @@
         <xsl:param name="notRecommendedTerm"/>
         <xsl:param name="termLanguage"/>
         <xsl:param name="definition"/>
-        <xsl:variable name="allowedTerm" select="termVariant[1]"/>
+        <xsl:param name="uppercase"/>
+        <xsl:param name="beginning"/>
+        <xsl:variable name="allowedTerm">
+            <xsl:value-of select="termVariant[1]" />
+        </xsl:variable>
+        <xsl:variable name="allowedTermReplace">
+            <xsl:choose>
+                <xsl:when test="$uppercase eq 'true' and $beginning eq 'false'">
+                    <xsl:value-of select="concat(upper-case(substring(termVariant[1], 1, 1)), substring(termVariant[1], 2), ' '[not(last())])"/>
+                </xsl:when>
+                <xsl:when test="$uppercase eq 'true' and $beginning eq 'true'">
+                    <xsl:value-of select="concat('. ', concat(upper-case(substring(termVariant[1], 1, 1)), substring(termVariant[1], 2), ' '[not(last())]))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="termVariant[1]" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="notRecommendedReplace">
+            <xsl:choose>
+                <xsl:when test="$uppercase eq 'true' and $beginning eq 'true'">
+                    <xsl:value-of select="concat('\. ', $notRecommendedTerm)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$notRecommendedTerm" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        
         <xsl:variable name="sqfTitle">
             <xsl:choose>
                 <xsl:when test="self::*[contains(@class, ' termentry/fullForm ')]">
@@ -117,8 +145,21 @@
         </xsl:variable>
 
         <xsl:variable name="counter" select="position()"/>
-        <xsl:variable name="quickFixId"
-            select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), $counter)"/>
+        <xsl:variable name="quickFixId">
+            <xsl:choose>
+                <xsl:when test="$uppercase eq 'true' and $beginning eq 'false'">
+                    <xsl:value-of select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), concat($counter, '_up'))"/>
+                </xsl:when>
+                <xsl:when test="$uppercase eq 'true' and $beginning eq 'true'">
+                    <xsl:value-of select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), concat($counter, '_up_sentence'))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), $counter)" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <!--<xsl:variable name="quickFixId"
+            select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), $counter)"/>-->
 
         <!-- FIXME: This uses the first termVariant but should use all and respect the flection of the notRecommended term. -->
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
@@ -138,9 +179,9 @@
             </xsl:element>
             <xsl:element name="sqf:stringReplace">
                 <xsl:attribute name="regex">
-                    <xsl:value-of select="$notRecommendedTerm"/>
+                    <xsl:value-of select="$notRecommendedReplace"/>
                 </xsl:attribute>
-                <xsl:value-of select="$allowedTerm"/>
+                <xsl:value-of select="$allowedTermReplace"/>
             </xsl:element>
         </xsl:element>
     </xsl:template>
