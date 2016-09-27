@@ -20,6 +20,7 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
   * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
 * [Usage](#usage)
   * [DITA Termchecker](#dita-termchecker)
+* [Contributors](#contributors)
 
 
 ### Features
@@ -169,3 +170,9 @@ The deprecated and the allowed term notations are defined in the `truck.dita` fi
 > ```bash
 > dita -i terminology.ditamap -f termchecker-dita -Dargs.language=en-GB -o termchecker-dita
 > ```
+
+### Contributors
+
+* [Stefan Eike](https://de.linkedin.com/in/stefan-eike-a02a9939) - Development, DITA Specialization, Content Design
+* [Sascha Nothofer](https://de.linkedin.com/in/sascha-nothofer-32563811a) - Content Design
+* [Prof. Dr. Claudia Villiger](https://de.linkedin.com/in/claudia-villiger-6989b526) - Content Design
