@@ -32,6 +32,8 @@
     <str name="Term Committee Member">Term Committee Member</str>
     <str name="Usage Allowed">allowed</str>
     <str name="Usage Deprecated">deprecated</str>
+    <str name="Usage Admitted">admitted</str>
+    <str name="Usage Obsolete">obsolete</str>
     <str name="Verb">Verb</str>
     
     <!-- Term Table -->
