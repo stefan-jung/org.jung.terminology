@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="ui_yzt_4l1_hx">
+ <title>Chassis</title>
+ <definition>
+  <definitionText>A chassis consists of an internal vehicle frame that supports a manmade object in
+      its construction and use.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Chassis" format="html" scope="external"
+        >Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>motor vehicle chassis</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="admitted" id="fullForm_ckf_pmv_3x">
+      <termVariant>chassis</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="notRecommended" id="fullForm_sj3_cm1_hx">
+      <termVariant>vehicle frame</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_njd_bm1_hx">
+      <termVariant>Fahrgestell</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_tq5_dm1_hx">
+      <termVariant>Rahmen</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="notRecommended" id="fullForm_h5n_xmv_3x">
+      <termVariant>Farhwerk</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="bus"/>
+      <partOf keyref="car"/>
+    </partsOf>
+    <relatedTerms>
+      <relatedTerm keyref="coachwork"/>
+    </relatedTerms>
+  </relations>
+</termentry>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="motorVehicle">
+ <title>Motor Vehicle</title>
+ <definition>
+  <definitionText>A motor vehicle is a self-propelled road vehicle and off-road vehicle , commonly
+      wheeled, that does not operate on rails, such as trains or trams and used for commercial
+      purposes on the highways in the transportation of passengers, or passengers and
+      property.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Motor_vehicle" format="html"
+        scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant/>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_vlt_14z_3x">
+      <termVariant>Kraftfahrzeug</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_rz5_c4z_3x">
+      <termVariant>Motorfahrzeug</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="vehicle"/>
+    </hypernyms>
+    <hyponyms>
+      <hyponym keyref="truck"/>
+      <hyponym keyref="bus"/>
+      <hyponym keyref="car"/>
+    </hyponyms>
+  </relations>
+</termentry>

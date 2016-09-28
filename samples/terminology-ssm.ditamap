@@ -24,8 +24,54 @@
                         <navtitle>Volkswagen</navtitle>
                     </topicmeta>
                 </subjectdef>
+                <subjectdef keys="setra">
+                    <topicmeta>
+                        <navtitle>Setra</navtitle>
+                    </topicmeta>
+                </subjectdef>
+            </subjectdef>
+            <subjectdef keys="TransportationCategory">
+                <topicmeta>
+                    <navtitle>Transportation Category</navtitle>
+                </topicmeta>
+                <subjectdef keys="cargo">
+                    <topicmeta>
+                        <navtitle>Cargo</navtitle>
+                    </topicmeta>
+                </subjectdef>
+                <subjectdef keys="persons">
+                    <topicmeta>
+                        <navtitle>Persons</navtitle>
+                    </topicmeta>
+                    <subjectdef keys="private">
+                        <topicmeta>
+                            <navtitle>Private</navtitle>
+                        </topicmeta>
+                    </subjectdef>
+                    <subjectdef keys="public">
+                        <topicmeta>
+                            <navtitle>public</navtitle>
+                        </topicmeta>
+                    </subjectdef>
+                </subjectdef>
+                <subjectdef keys="Fun">
+                    <topicmeta>
+                        <navtitle>Sport</navtitle>
+                    </topicmeta>
+                    <subjectdef keys="sport">
+                        <topicmeta>
+                            <navtitle>Sport</navtitle>
+                        </topicmeta>
+                    </subjectdef>
+                    <subjectdef keys="vacation">
+                        <topicmeta>
+                            <navtitle>Vacation</navtitle>
+                        </topicmeta>
+                    </subjectdef>
+                </subjectdef>
             </subjectdef>
         </subjectdef>
+        
     </hasInstance>
   <enumerationdef>
     <attributedef name="termdomain"/>
