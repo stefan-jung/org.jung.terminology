@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="vehicle">
+ <title>Vehicle</title>
+ <definition>
+  <definitionText>A vehicle is a mobile machine that transports people or cargo.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Vehicle" format="html" scope="external"
+        >Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>vehicle</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="notRecommended" id="fullForm_qj4_ynz_3x">
+      <termVariant>car</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_nnn_znz_3x">
+      <termVariant>Fahrzeug</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hyponyms>
+      <hyponym keyref="motorVehicle"/>
+    </hyponyms>
+  </relations>
+</termentry>

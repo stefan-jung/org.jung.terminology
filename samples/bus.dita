@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="ui_cy5_j41_hx">
+ <title>Bus</title>
+ <definition>
+  <definitionText>Coachwork is the body of a motor vehicle (automobile, van, bus or truck)A bus
+      (archaically also omnibus, multibus, motorbus) is a road vehicle designed to carry many
+      passengers.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org" format="html">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en">
+   <termVariant>Bus</termVariant>
+  </fullForm>
+    <fullForm language="de" usage="preferred" id="fullForm_osv_h4v_3x">
+      <termVariant>Omnibus</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="motorVehicle"/>
+    </hypernyms>
+    <relatedTerms>
+      <relatedTerm keyref="bus"/>
+      <relatedTerm keyref="truck"/>
+      <relatedTerm keyref="car"/>
+    </relatedTerms>
+  </relations>
+</termentry>

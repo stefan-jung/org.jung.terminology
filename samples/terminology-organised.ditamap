@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
+<termmap id="terminology">
+ <title>Terminology (organised)</title>
+ <topicref keyref="vehicle">
+  <topicref keyref="motorVehicle">
+   <topicref keyref="bus" termdomain="persons public">
+    <topicref keyref="kaessbohrerSetraS110H" termdomain="setra"/>
+   </topicref>
+   <topicref keyref="car" termdomain="persons private">
+    <topicref keyref="beetle" termdomain="vw"/>
+   </topicref>
+   <topicref keyref="truck" termdomain="cargo"/>
+  </topicref>
+ </topicref>
+ <topicref keyref="chassis" keys="ST-Chassis">
+   <topicref keyref="groundPropulsion">
+    <topicref keyref="axle"/>
+    <topicref keyref="internalCombustionEngine">
+     <topicref keyref="dieselEngine"/>
+     <topicref keyref="petrolEngine"/>
+    </topicref>
+    <topicref keyref="wheel"/>
+   </topicref>
+  </topicref>
+ <topicref keyref="coachwork"/>
+ <topicref href="terminology-ssm.ditamap" format="ditamap"/>
+ <topicref href="terminology.ditamap" format="ditamap" processing-role="resource-only"
+  type="termmap"/>
+</termmap>

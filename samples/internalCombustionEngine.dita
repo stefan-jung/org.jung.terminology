@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="untitled3">
+ <title>Internal Combustion Engine</title>
+ <definition>
+  <definitionText>An internal combustion engine is a heat engine where the combustion of a fuel
+      occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the
+      working fluid flow circuit.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Internal_combustion_engine" format="html"
+        scope="external">wikipedia description and definition</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>internal combustion engine</termVariant>
+    </fullForm>
+    <acronym language="de-DE" usage="preferred" id="acronym_hq1_4sv_3x">
+      <termVariant>Verbrennungsmotor</termVariant>
+    </acronym>
+ </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="groundPropulsion"/>
+    </hypernyms>
+    <hyponyms>
+      <hyponym keyref="dieselEngine"/>
+      <hyponym keyref="petrolEngine"/>
+    </hyponyms>
+  </relations>
+</termentry>

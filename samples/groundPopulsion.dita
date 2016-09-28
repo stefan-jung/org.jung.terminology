@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="untitled1">
+ <title>Ground Propulsion</title>
+ <definition>
+  <definitionText>Ground propulsion is any mechanism for propelling solid bodies along the ground,
+      usually for the purposes of transportation.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Ground_propulsion" format="html"
+        scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>ground propulsion</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="admitted" id="fullForm_lms_bhz_3x">
+      <termVariant>propulsion</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_s4j_1hz_3x">
+      <termVariant>Antrieb</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hyponyms>
+      <hyponym keyref="internalCombustionEngine"/>
+      <hyponym keyref="wheel"/>
+    </hyponyms>
+  </relations>
+</termentry>

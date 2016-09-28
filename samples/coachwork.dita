@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="untitled1">
+ <title>Coachwork (vehicle body)</title>
+ <definition>
+  <definitionText>Coachwork is the body of a motor vehicle (automobile, van, bus or truck), a
+      horse-drawn coach or carriage (whence the term originated, derived from the Hungarian town of
+      Kocs),[1] or, by extension, a railroad car or railway carriage.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Coachbuilder" format="html"
+        scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en">
+   <termVariant>coachwork</termVariant>
+  </fullForm>
+    <fullForm language="en-GB" usage="admitted" id="fullForm_ypr_jmv_3x">
+      <termVariant>vehicle body</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="truck"/>
+    </partsOf>
+    <relatedTerms>
+      <relatedTerm keyref="chassis"/>
+    </relatedTerms>
+  </relations>
+</termentry>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="untitled5">
+ <title>Petrol Engine (spark-ignition)</title>
+ <definition>
+  <definitionText>A petrol engine (known as a gasoline engine in American English) is an internal
+      combustion engine with spark-ignition, designed to run on petrol (gasoline) and similar
+      volatile fuels.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Petrol_engine" format="html"
+        scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>petrol engine</termVariant>
+    </fullForm>
+    <abbreviation language="de-DE" usage="preferred" id="abbreviation_b4j_s5v_3x">
+      <termVariant>Ottomotor</termVariant>
+    </abbreviation>
+    <fullForm language="en-GB" usage="notRecommended" id="fullForm_kp1_p5v_3x">
+      <termVariant>Otto engine</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="admitted" id="fullForm_g5j_scr_kx">
+      <termVariant>Motor</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_ut4_tcr_kx">
+      <termVariant>Motor</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="internalCombustionEngine"/>
+    </hypernyms>
+    <partsOf>
+      <partOf keyref="car"/>
+    </partsOf>
+    <relatedTerms>
+      <relatedTerm keyref="dieselEngine"/>
+    </relatedTerms>
+  </relations>
+</termentry>

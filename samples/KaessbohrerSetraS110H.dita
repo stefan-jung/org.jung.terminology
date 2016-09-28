@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="untitled2">
+  <title>Kässbohrer Setra S 110 H</title>
+ <definition>
+  <definitionText>The Kässbohrer Setra S 110 H is a bus, 43 passenger, rear-engine person
+      transportation vehicle (bus) manufactured and marketed by German automaker Kässboher
+      Wagenfabrik Kässbohrer in Ulm, Germany in 1959 until 2003.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://de.wikipedia.org/wiki/Setra" format="html" scope="external"
+        >Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>Golden Eagle</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="preferred" id="fullForm_xlv_zpv_3x">
+      <termVariant>Silver Eagle</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hyponyms>
+      <hyponym keyref="bus"/>
+    </hyponyms>
+  </relations>
+</termentry>
