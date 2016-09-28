@@ -234,6 +234,15 @@
                             </xsl:call-template>
                             <xsl:text>da-DK</xsl:text>
                         </xsl:when>
+                      <xsl:when test="@language = 'de-AT'">
+                            <xsl:element name="span">
+                                <xsl:attribute name="class">flag-icon flag-icon-at</xsl:attribute>
+                            </xsl:element>
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Separator'"/>
+                            </xsl:call-template>
+                            <xsl:text>de-AT</xsl:text>
+                        </xsl:when>
                         <xsl:when test="@language = 'de'
                                         or @language = 'de-DE'">
                             <xsl:element name="span">
@@ -995,14 +1004,36 @@
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:choose>
                     <xsl:when test="contains(@usage, 'preferred')">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Usage Allowed'"/>
-                        </xsl:call-template>
+                        <xsl:element name="div">
+                            <xsl:attribute name="class">alert alert-success</xsl:attribute>
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Usage Allowed'"/>
+                            </xsl:call-template>
+                        </xsl:element>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'notRecommended')">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Usage Deprecated'"/>
-                        </xsl:call-template>
+                        <xsl:element name="div">
+                            <xsl:attribute name="class">alert alert-danger</xsl:attribute>
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Usage Deprecated'"/>
+                            </xsl:call-template>
+                        </xsl:element>
+                    </xsl:when>
+                    <xsl:when test="contains(@usage, 'admitted')">
+                        <xsl:element name="div">
+                            <xsl:attribute name="class">alert alert-warning</xsl:attribute>
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Usage Admitted'"/>
+                            </xsl:call-template>
+                        </xsl:element>
+                    </xsl:when>
+                    <xsl:when test="contains(@usage, 'obsolete')">
+                        <xsl:element name="div">
+                            <xsl:attribute name="class">alert alert-info</xsl:attribute>
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Usage Obsolete'"/>
+                            </xsl:call-template>
+                        </xsl:element>
                     </xsl:when>
                 </xsl:choose>
             </xsl:element>
