@@ -141,6 +141,12 @@
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
+              <xsl:when test="self::*[contains(@class, ' termentry/verb ')]">
+                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedVerb')"/>
+                    <xsl:text>: '</xsl:text>
+                    <xsl:value-of select="$allowedTerm"/>
+                    <xsl:text>'</xsl:text>
+                </xsl:when>
             </xsl:choose>
         </xsl:variable>
 
