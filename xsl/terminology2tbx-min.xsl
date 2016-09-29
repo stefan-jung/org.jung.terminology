@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-    xmlns:doctales="http://doctales.github.io"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs" version="2.0">
 
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
@@ -26,6 +25,11 @@
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
     <xsl:template match="/">
+        <xsl:processing-instruction name="xml-model">
+            <xsl:attribute name="href">TBX-Min.rng</xsl:attribute>
+            <xsl:attribute name="type">application/xml</xsl:attribute>
+            <xsl:attribute name="schematypens">http://relaxng.org/ns/structure/1.0</xsl:attribute>
+        </xsl:processing-instruction>
         <TBX dialect="TBX-Min">
             <header>
                 <id></id>

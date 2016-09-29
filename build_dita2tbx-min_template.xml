@@ -37,6 +37,7 @@
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
+        <copy file="${dita.plugin.org.doctales.terminology.dir}${file.separator}dtd${file.separator}TBX-Min.rng" todir="${output.dir}"/>
     </target>
     
 </project>
