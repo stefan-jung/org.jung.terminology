@@ -53,7 +53,7 @@
         <xsl:variable name="partOfSpeech" select="*[contains(@class, ' termentry/partOfSpeech ')]/@value"/>
         <xsl:variable name="domain" select="*[contains(@class, ' termentry/domains ')]/*[contains(@class, ' termentry/domain ')]/@value[1]"/>
         <xsl:element name="termEntry">
-            <xsl:attribute name="id" select="@id"/>
+            <xsl:attribute name="id" select="generate-id()"/>
             <xsl:choose>
                 <xsl:when test="$domain">
                     <xsl:element name="subjectField">

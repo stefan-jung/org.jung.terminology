@@ -37,7 +37,7 @@
         <!-- Use only images with @scope='external', otherwise they would not be available. -->
         <xsl:variable name="figure" select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' topic/fig ')]/*[contains(@class, ' topic/image ')][@scope = 'external']/@href"/>
         <xsl:element name="termEntry">
-            <xsl:attribute name="id" select="@id"/>
+            <xsl:attribute name="id" select="generate-id()"/>
             <xsl:choose>
                 <xsl:when test="$domain">
                     <xsl:element name="descrip">
