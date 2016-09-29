@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-    xmlns:doctales="http://doctales.github.io"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     exclude-result-prefixes="xs" version="2.0">
 
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
 
-    <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no" doctype-system="" doctype-public=""/>
+    <xsl:output encoding="UTF-8" indent="yes" doctype-system="TBXBasiccoreStructV02.dtd"/>
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
     <xsl:template match="/">
@@ -25,6 +24,10 @@
                 </body>
             </text>
         </martif>
+    </xsl:template>
+  
+    <xsl:template name="add-doctype">
+        <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE martif SYSTEM "TBXBasiccoreStructV02.dtd"&gt;</xsl:text>
     </xsl:template>
 
     <!-- Create rules for all termentry topics -->
