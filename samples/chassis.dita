@@ -15,20 +15,20 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>motor vehicle chassis</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="admitted" id="fullForm_ckf_pmv_3x">
+    <fullForm language="en-GB" usage="admitted">
       <termVariant>chassis</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_sj3_cm1_hx">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>vehicle frame</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_njd_bm1_hx">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Fahrgestell</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="notRecommended" id="fullForm_tq5_dm1_hx">
+    <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Rahmen</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_h5n_xmv_3x">
-      <termVariant>Farhwerk</termVariant>
+    <fullForm language="de-DE" usage="notRecommended">
+      <termVariant>Fahrwerk</termVariant>
     </fullForm>
  </termBody>
   <relations>
