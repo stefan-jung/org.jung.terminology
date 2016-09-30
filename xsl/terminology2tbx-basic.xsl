@@ -5,7 +5,6 @@
 
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
-
     <xsl:output encoding="UTF-8" indent="yes" doctype-system="TBXBasiccoreStructV02.dtd"/>
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
@@ -42,7 +41,7 @@
         <!-- Use only images with @scope='external', otherwise they would not be available. -->
         <xsl:variable name="figure" select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' topic/fig ')]/*[contains(@class, ' topic/image ')][@scope = 'external']/@href"/>
         <xsl:element name="termEntry">
-            <xsl:attribute name="id" select="@id"/>
+            <xsl:attribute name="id" select="generate-id()"/>
             <xsl:choose>
                 <xsl:when test="$domain">
                     <xsl:element name="descrip">
