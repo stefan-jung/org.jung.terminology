@@ -38,10 +38,6 @@
             <dirset dir="${output.dir}"/>
         </delete>
         <copy file="${dita.plugin.org.doctales.terminology.dir}${file.separator}dtd${file.separator}TBXBasiccoreStructV02.dtd" todir="${output.dir}"/>
-        <!-- BEFORE -->
-        <!-- PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" -->
-        <!-- AFTER -->
-        <!-- SYSTEM -->
         <replaceregexp file="${output.dir}${file.separator}${tbx-basic}.tbx" match="PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;" replace="SYSTEM"></replaceregexp>
     </target>
     
