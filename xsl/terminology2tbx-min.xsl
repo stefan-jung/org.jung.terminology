@@ -5,13 +5,7 @@
 
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
-
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no" doctype-system="" doctype-public=""/>
-    <!--<xsl:output method="xml"
-        encoding="UTF-8"
-        indent="yes"
-        doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
-        doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"/>-->
 
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
@@ -24,6 +18,7 @@
     <xsl:param name="targetLanguage"/>
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
+  
     <xsl:template match="/">
         <xsl:processing-instruction name="xml-model">
             <xsl:attribute name="href">TBX-Min.rng</xsl:attribute>
