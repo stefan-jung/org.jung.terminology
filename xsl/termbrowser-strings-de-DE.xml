@@ -28,6 +28,7 @@
     <str name="Related Terms">Verwandte Begriffe</str>
     <str name="Term Annotations">Anmerkungen</str>
     <str name="Term Context">Kontext des Begriffs</str>
+    <str name="Term Domain">Term-Domäne</str>
     <str name="Term Source">Quelle des Begriffs</str>
     <str name="Term Committee Member">Terminologe</str>
     <str name="Usage Allowed">erlaubt</str>

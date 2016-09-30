@@ -28,6 +28,7 @@
     <str name="Related Terms">Related Terms</str>
     <str name="Term Annotations">Annotations</str>
     <str name="Term Context">Context of Term</str>
+    <str name="Term Domain">Term Domain</str>
     <str name="Term Source">Source of Term</str>
     <str name="Term Committee Member">Term Committee Member</str>
     <str name="Usage Allowed">allowed</str>

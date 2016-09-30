@@ -96,6 +96,12 @@
                     <xsl:element name="th">
                         <xsl:attribute name="class">termTable</xsl:attribute>
                         <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Term Domain'"/>
+                        </xsl:call-template>
+                    </xsl:element>
+                    <xsl:element name="th">
+                        <xsl:attribute name="class">termTable</xsl:attribute>
+                        <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Source'"/>
                         </xsl:call-template>
                     </xsl:element>
@@ -1036,6 +1042,11 @@
                         </xsl:element>
                     </xsl:when>
                 </xsl:choose>
+            </xsl:element>
+            <!-- Domain -->
+            <xsl:element name="td">
+                <xsl:attribute name="class">termTable</xsl:attribute>
+                <xsl:value-of select="@termdomain"/>
             </xsl:element>
             <!-- Source -->
             <xsl:element name="td">

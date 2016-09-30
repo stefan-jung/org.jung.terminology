@@ -71,7 +71,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                         obsolete |
                                         preferred)
                                            'preferred'
-                                     domain
+                                     termdomain
                                         CDATA
                                            #IMPLIED   
                                     ">

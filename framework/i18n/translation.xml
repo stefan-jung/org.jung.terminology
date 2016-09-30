@@ -870,4 +870,8 @@
         <val lang="en_US">Developed by Doctales</val>
         <val lang="de_DE">Entwickelt von Doctales</val>
     </key>
+    <key value="doctales.termdomain">
+        <val lang="en_US">Term Domain</val>
+        <val lang="de_DE">Term Domain</val>
+    </key>
 </translation>

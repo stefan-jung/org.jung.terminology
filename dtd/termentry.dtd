@@ -83,6 +83,10 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
          "uiDomain.ent"                                                       
 >%ui-d-dec;
 
+<!ENTITY % termdomainAtt-d-dec
+  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
+         "termdomainAttDomain.ent">
+%termdomainAtt-d-dec;
 
 <!-- ================================================================================ -->
 <!--                           DOMAIN ATTRIBUTE DECLARATIONS                          -->
