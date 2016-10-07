@@ -15,137 +15,138 @@
 @linkIcon: '../icons/link_12.png';
 
 *[class~="topic/related-links"]:before {
-display: none;
+    display: none;
 }
 
 * {
-font-family: Arial;
+    font-family: Arial;
 }
 
 .header {
-border-bottom: 1pt solid #767676;
-display: block;
-font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-font-size: 8pt;
-font-style: normal;
-font-weight: normal;
-padding-top: 0.5em  !important;
-padding-bottom: 0.0em;
-padding-left: 0.3em;
-padding-right: 0.0em;
-margin-top: 0.0em !important;
-margin-bottom: 0.2em;
-margin-left: 0;
-margin-right: 0;
-width: inherit;
-height: 111px !important;
+    border-bottom: 1pt solid #767676;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 8pt;
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 0.5em  !important;
+    padding-bottom: 0.0em;
+    padding-left: 0.3em;
+    padding-right: 0.0em;
+    margin-top: 0.0em !important;
+    margin-bottom: 0.2em;
+    margin-left: 0;
+    margin-right: 0;
+    width: inherit;
+    height: 111px !important;
 }
 
 .mainBlock {
-border: 1pt solid @borderColor;
-display: block;
-margin-top: 0.5em;
-margin-bottom: 0.5em;
-margin-right: 0.5em;
-margin-left: 0.5em;
-padding-top: 0;
-padding-bottom: 0;
-padding-left: 0.5em;
-padding-right: 0.5em;
--oxy-display-tags: none;
-visibility: -oxy-collapse-text;
+    border: 1pt solid @borderColor;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.0em;
+    padding-right: 0.0em;
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
 }
 
 .afterBlock {
-font-size: 0.7em;
-display: block;
-color: #005544;
-border: 1pt solid @borderColor;
-padding: 0.1em;
+    font-size: 0.7em;
+    display: block;
+    color: #005544;
+    border: 1pt solid @borderColor;
+    padding: 0.1em;
 }
 
 .uiElement {
-display: block;
-margin-top: -1.5em;
-margin-left: 10em;
-padding-top: 0.1em;
--oxy-display-tags: none;
+    display: block;
+    margin-top: -1.5em;
+    margin-left: 10em;
+    padding-top: 0.1em;
+    -oxy-display-tags: none;
 }
 
 .uiElementLabel {
-width: 25% !important;
-padding-top: 0.1em;
-font-weight: normal;
+    width: 25% !important;
+    padding-top: 0.1em;
+    padding-left: 1.0em;
+    font-weight: normal;
 }
 
 .indent {
-width: 25%;
-content: ' ';
+    width: 25%;
+    content: ' ';
 }
 
 .deleteButton() {
-content: 
-oxy_button(
-action, oxy_action(
-name, 'Delete', 
-description, 'Delete the current element', 
-icon, url(@deleteIcon), 
-operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
-arg-elementLocation, '.'
-),
-transparent, true
-);
+    content: 
+    oxy_button(
+        action, oxy_action(
+            name, 'Delete', 
+            description, 'Delete the current element', 
+            icon, url(@deleteIcon), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
+            arg-elementLocation, '.'
+        ),
+        transparent, true
+    );
 }
 
 .keyrefButton() {
-content: 
-oxy_button(
-action, oxy_action(
-name, 'Keyref', 
-description, 'Keyref a term relation', 
-icon, url(@linkIcon), 
-operation, 'ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation'
-),
-transparent, true
-);
+    content: 
+    oxy_button(
+        action, oxy_action(
+            name, 'Keyref', 
+            description, 'Keyref a term relation', 
+            icon, url(@linkIcon), 
+            operation, 'ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation'
+        ),
+        transparent, true
+    );
 }
 
 .closeButton {
 content:
-oxy_button(
-action, oxy_action(
-name, 'Delete', 
-description, 'Delete the current element', 
-icon, url(@deleteIcon), 
-operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
-arg-elementLocation, '.'
-),
-transparent, @buttonTransparency
-);
-display: block;
-text-align: right;
-float: left;    
-margin-top: -1.8em !important;
-max-width:-moz-max-content;
+    oxy_button(
+        action, oxy_action(
+            name, 'Delete', 
+            description, 'Delete the current element', 
+            icon, url(@deleteIcon), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
+            arg-elementLocation, '.'
+        ),
+        transparent, @buttonTransparency
+    );
+    display: block;
+    text-align: right;
+    float: left;    
+    margin-top: -1.8em !important;
+    max-width:-moz-max-content;
 }
 
 .hideContent {
-content: "" !important;
+    content: "" !important;
 }
 
 .link {
-pointer-events: none;
-cursor: default;
-text-decoration-style: dotted;
-color: @labelColor !important;
-text-decoration: none !important;
-link: attr(href);
--ah-link: attr(href);  
+    pointer-events: none;
+    cursor: default;
+    text-decoration-style: dotted;
+    color: @labelColor !important;
+    text-decoration: none !important;
+    link: attr(href);
+    -ah-link: attr(href);
 }
 
 .separator {
-content: " ";
-font-size: 3pt;
-display: block;
-width: 100%;
+    content: " ";
+    font-size: 3pt;
+    display: block;
+    width: 100%;
 }
