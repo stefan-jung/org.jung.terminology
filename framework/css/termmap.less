@@ -11,6 +11,19 @@
     -oxy-display-tags: none;
 }
 
+*[class~="termmap/termmap"] > *[class~="topic/title"]:after {
+    .header();
+    content: "\A"
+    oxy_buttonGroup(
+        label, '${i18n(doctales.termAdministration)}',
+        transparent, @buttonTransparency,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.add.topicref')
+        )
+    );
+}
+
 *[class~="map/topicref"] {
     .mainBlock();
 }
@@ -37,12 +50,16 @@
 }
 
 *[class~="map/topicref"]:before(8) {
+    .separator();
+}
+
+*[class~="map/topicref"]:before(7) {
     content: "@href";
     .uiElementLabel();
     .link();
 }
 
-*[class~="map/topicref"]:before(7) {
+*[class~="map/topicref"]:before(6) {
     content:
     oxy_textfield(
           edit, '@href',
@@ -52,13 +69,12 @@
     padding-left: 0.5em;
 }
 
-*[class~="map/topicref"]:before(6) {
+*[class~="map/topicref"]:before(5) {
     content: "@keys";
     .uiElementLabel();
-    padding-left: 0.5em;
 }
 
-*[class~="map/topicref"]:before(5) {
+*[class~="map/topicref"]:before(4) {
     content:
     oxy_textfield(
           edit, '@keys',
@@ -66,4 +82,8 @@
     );
     .uiElement();
     padding-left: 0.5em;
+}
+
+*[class~="map/topicref"]:before(3) {
+    .separator();
 }
