@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="classBMotorhome">
+  <title>Class B motorhome</title>
+  <definition>
+    <definitionText>Built using a conventional van, to which either a raised roof has been added or the back replaced by a low-profile body (aka coach-built).</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/List_of_recreational_vehicles#Class_B.2B_motorhome" format="html" scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <fig id="fig_eyx_ykw_4x">
+      <title>An Autosleeper Harmony Campervan on a Talbot Express base vehicle, 1991</title>
+      <image id="image_fyx_ykw_4x" href="https://upload.wikimedia.org/wikipedia/commons/8/8c/TalbotAutoSleeper1991.jpg" width="600px">
+        <alt> I, the copyright holder of this work, release this work into the public domain. This applies worldwide.</alt>
+      </image>
+    </fig>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en-GB">
+      <termVariant>coachbuilt motorhome</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="preferred" id="fullForm_lrh_skw_4x">
+      <termVariant>Class B motorhome</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_jcn_23w_4x">
+      <termVariant>Kastenwagen-Wohnmobil</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_bsl_2lw_4x">
+      <termVariant>Alkovenwohnmobil</termVariant>
+    </fullForm>
+  </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="motorHome"/>
+    </hypernyms>
+    <relatedTerms>
+      <relatedTerm keyref="ClassBPlusMotorHome"/>
+      <relatedTerm keyref="ClassC-MotorHome"/>
+    </relatedTerms>
+  </relations>
+</termentry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="recreationalvehicle">
+ <title>Motorhome</title>
+ <definition>
+  <definitionText>A motorhome (or motor coach) is a type of self-propelled recreational vehicle or RV which offers living accommodation combined with a vehicle engine.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Motorhome" format="html" scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>motorhome</termVariant>
+    </fullForm>
+    <abbreviation language="en-GB" usage="preferred" id="abbreviation_nwp_lfw_4x">
+      <termVariant>camper</termVariant>
+    </abbreviation>
+    <fullForm language="en-US" usage="preferred" id="fullForm_pvs_3fw_4x">
+      <termVariant>recreational vehicle</termVariant>
+    </fullForm>
+    <acronym language="en-US" usage="preferred" id="acronym_nzm_kfw_4x">
+      <termVariant>RV</termVariant>
+    </acronym>
+ </termBody>
+  <relations>
+    <hyponyms>
+      <hyponym keyref="ClassC-MotorHome"/>
+      <hyponym keyref="ClassBPlusMotorHome"/>
+      <hyponym keyref="ClassB-motorHome"/>
+    </hyponyms>
+  </relations>
+</termentry>

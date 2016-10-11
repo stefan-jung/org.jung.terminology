@@ -15,6 +15,9 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>motor vehicle chassis</termVariant>
     </fullForm>
+    <fullForm language="en-GB" usage="preferred" id="fullForm_e4j_pvv_4x">
+      <termVariant>vehicle frame</termVariant>
+    </fullForm>
     <fullForm language="en-GB" usage="admitted">
       <termVariant>chassis</termVariant>
     </fullForm>
@@ -23,6 +26,9 @@
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
       <termVariant>Fahrgestell</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="admitted" id="fullForm_v5l_zyv_4x">
+      <termVariant>Karosserie</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Rahmen</termVariant>

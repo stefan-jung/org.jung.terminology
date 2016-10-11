@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="powertrain">
- <title>powerTrain</title>
+ <title>Powertrain</title>
  <definition>
   <definitionText>n a motor vehicle, the term powertrain or powerplant describes the main components
       that generate power and deliver it to the road surface, water, or air. This includes the
@@ -21,7 +21,10 @@
       <termVariant>drivetrain</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred" id="fullForm_hc2_5qp_4x">
-      <termVariant/>
+      <termVariant>Antriebsstrang</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_hmq_yxv_4x">
+      <termVariant>Fahrwerk</termVariant>
     </fullForm>
  </termBody>
   <relations>
