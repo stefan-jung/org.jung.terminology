@@ -20,7 +20,7 @@
  </termBody>
   <relations>
     <hypernyms>
-      <hypernym keyref="groundPropulsion"/>
+      <hypernym keyref="chassis"/>
     </hypernyms>
   </relations>
 </termentry>

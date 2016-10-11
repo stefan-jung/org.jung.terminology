@@ -8,11 +8,18 @@
   <topicref href="chassis.dita" keys="chassis"/>
   <topicref href="coachwork.dita" keys="coachwork"/>
   <topicref href="dieselEngine.dita" keys="dieselEngine"/>
-  <topicref href="groundPopulsion.dita" keys="groundPropulsion"/>
+  <topicref href="drivetrain.dita" format="dita" type="termentry" keys="driveTrain"/>
+  <topicref href="engine.dita" format="dita" type="termentry" keys="engine"/>
+  <topicref href="exhaust-system.dita" format="dita" type="termentry" keys="exhaustSystem"/>
+  <topicref href="gasengine.dita" format="dita" type="termentry" keys="gasEngine"/>
   <topicref href="internalCombustionEngine.dita" keys="internalCombustionEngine"/>
   <topicref href="KaessbohrerSetraS110H.dita" keys="kaessbohrerSetraS110H" termdomain="setra"/>
+  <topicref href="motorCycle.dita" format="dita" type="termentry" keys="motorCycle"
+    termdomain="private sport"/>
   <topicref href="motorVehicle.dita" keys="motorVehicle"/>
   <topicref href="petrolEngine.dita" keys="petrolEngine"/>
+  <topicref href="powertrain.dita" format="dita" type="termentry" keys="powerTrain"/>
+  <topicref href="transmission.dita" format="dita" type="termentry" keys="transmission"/>
   <topicref href="truck.dita" keys="truck" format="dita" type="termentry" termdomain="cargo"/>
   <topicref href="vehicle.dita" keys="vehicle"/>
   <topicref href="beetle.dita" keys="beetle" termdomain="vw"/>

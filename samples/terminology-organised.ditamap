@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
-<termmap id="terminology">
+<termmap id="terminology" xml:lang="en-gb">
  <title>Terminology (organised)</title>
  <topicref keyref="vehicle">
   <topicref keyref="motorVehicle">
@@ -11,20 +11,28 @@
     <topicref keyref="beetle" termdomain="vw"/>
    </topicref>
    <topicref keyref="truck" termdomain="cargo"/>
+   <topicref format="dita" type="termentry" keyref="motorCycle" termdomain="private sport"/>
   </topicref>
  </topicref>
  <topicref keyref="chassis" keys="ST-Chassis">
-   <topicref keyref="groundPropulsion">
-    <topicref keyref="axle"/>
-    <topicref keyref="internalCombustionEngine">
-     <topicref keyref="dieselEngine"/>
-     <topicref keyref="petrolEngine"/>
-    </topicref>
+  <topicref format="dita" type="termentry" keyref="powerTrain">
+   <topicref format="dita" type="termentry" keyref="driveTrain">
     <topicref keyref="wheel"/>
    </topicref>
+   <topicref type="termentry" format="dita" keyref="engine">
+    <topicref keyref="internalCombustionEngine">
+     <topicref keyref="dieselEngine"/>
+     <topicref format="dita" type="termentry" keyref="exhaustSystem"/>
+     <topicref format="dita" type="termentry" keyref="gasEngine"/>
+     <topicref keyref="petrolEngine"/>
+    </topicref>
+   </topicref>
+   <topicref format="dita" type="termentry" keyref="transmission"/>
   </topicref>
+  </topicref>
+ <topicref keyref="axle"/>
  <topicref keyref="coachwork"/>
- <topicref href="terminology-ssm.ditamap" format="ditamap"/>
  <topicref href="terminology.ditamap" format="ditamap" processing-role="resource-only"
   type="termmap"/>
+ <topicref href="terminology-ssm.ditamap" format="ditamap"/>
 </termmap>

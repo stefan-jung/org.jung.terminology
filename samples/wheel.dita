@@ -21,7 +21,7 @@
  </termBody>
  <relations>
   <partsOf>
-   <partOf keyref="groundPropulsion"/>
+   <partOf keyref="driveTrain"/>
   </partsOf>
  </relations>
 </termentry>

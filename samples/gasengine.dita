@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="gasengine">
+ <title>Gas engine</title>
+ <definition>
+  <definitionText>A gas engine is an internal combustion engine which runs on a gas fuel, such as
+      coal gas, producer gas, biogas, landfill gas or natural gas.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org" format="html"/>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en">
+   <termVariant>gas engine</termVariant>
+  </fullForm>
+ </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="internalCombustionEngine"/>
+    </hypernyms>
+  </relations>
+</termentry>

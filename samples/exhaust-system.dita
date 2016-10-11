@@ -39,7 +39,7 @@
  </termBody>
   <relations>
     <partsOf>
-      <partOf keyref="car"/>
+      <partOf keyref="internalCombustionEngine"/>
     </partsOf>
   </relations>
 </termentry>

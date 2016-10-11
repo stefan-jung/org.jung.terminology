@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="ui_mrt_fd1_jx">
- <title>Motor</title>
+ <title>Engine</title>
  <definition>
-  <definitionText>A motor is a machine designed to convert one form of energy into mechanical
+  <definitionText>A engine is a machine designed to convert one form of energy into mechanical
       energy.</definitionText>
   <definitionSource>
     <sourceReference href="https://en.wikipedia.org/wiki/Engine" format="html" scope="external"
@@ -12,24 +12,28 @@
  </definition>
  <termBody>
     <fig>
-      <title>Motor of 2007 Volkswagen Golf R32</title>
-      <image href="https://upload.wikimedia.org/wikipedia/commons/6/67/2007_Volkswagen_Golf_R32_-_Flickr_-_The_Car_Spy_%2826%29.jpg" width="600px">
-        <alt>By The Car Spy (2007 Volkswagen Golf R32) [CC BY 2.0
-          (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</alt>
+      <title> Animated scheme of a four stroke internal combustion engine</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/d/dc/4StrokeEngine_Ortho_3D_Small.gif"
+        width="200px">
+        <alt>https://creativecommons.org/licenses/by-sa/3.0/deed.en</alt>
       </image>
     </fig>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en-GB">
-      <termVariant>motor</termVariant>
+    <fullForm language="en-GB" usage="preferred" id="fullForm_olp_jcg_jx">
+      <termVariant>engine </termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_olp_jcg_jx">
-      <termVariant>engine</termVariant>
+  <fullForm usage="notRecommended" language="en-GB">
+      <termVariant>motor</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred" id="fullForm_kzw_ycg_jx">
       <termVariant>Motor</termVariant>
     </fullForm>
  </termBody>
   <relations>
+    <hyponyms>
+      <hyponym keyref="internalCombustionEngine"/>
+    </hyponyms>
     <partsOf>
       <partOf keyref="truck"/>
       <partOf keyref="car"/>

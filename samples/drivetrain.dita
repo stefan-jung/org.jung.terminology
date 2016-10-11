@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="drivetrain">
+ <title>Drivetrain</title>
+ <definition>
+  <definitionText/>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org" format="html"/>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en">
+   <termVariant>drivetrain</termVariant>
+  </fullForm>
+    <fullForm language="en-GB" usage="notRecommended" id="fullForm_ccb_qmp_4x">
+      <termVariant>powertrain</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_oft_bnp_4x">
+      <termVariant>Antriebsstrang</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <hypernyms>
+      <hypernym keyref="powerTrain"/>
+    </hypernyms>
+  </relations>
+</termentry>
