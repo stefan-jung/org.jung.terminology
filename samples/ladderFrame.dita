@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="ladderbody">
+ <title>Ladder frame</title>
+ <definition>
+  <definitionText>So named for its resemblance to a ladder, the ladder frame is one of the simplest and oldest of all vehicle frame designs.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Vehicle_frame#Ladder_frame" format="html" scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en">
+   <termVariant>ladder frame</termVariant>
+  </fullForm>
+ </termBody>
+  <relations>
+    <antonyms>
+      <antonym keyref="unitizedBody"/>
+    </antonyms>
+    <hyponyms>
+      <hyponym keyref="chassis"/>
+    </hyponyms>
+  </relations>
+</termentry>

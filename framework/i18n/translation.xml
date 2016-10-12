@@ -358,6 +358,10 @@
         <val lang="en_US">Add abbreviation (&lt;abbreviation&gt;)</val>
         <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) einfügen</val>
     </key>
+    <key value="doctales.add.abbreviation_description">
+        <val lang="en_US">A abbreviation element contains the shortened form of a term.</val>
+        <val lang="de_DE">Ein abbreviation Element enthält die verkürzte Form einer Benennung.</val>
+    </key>
     <key value="doctales.delete.abbreviation">
         <val lang="en_US">Delete abbreviation (&lt;abbreviation&gt;)</val>
         <val lang="de_DE">Abkürzung (&lt;abbreviation&gt;) löschen</val>
@@ -372,6 +376,10 @@
         <val lang="en_US">Add acronym (&lt;acronym&gt;)</val>
         <val lang="de_DE">Akronym (&lt;acronym&gt;) einfügen</val>
     </key>
+    <key value="doctales.add.acronym_description">
+        <val lang="en_US">A acronym element contains a abbreviation formed by the initial letters of the words or word elements.</val>
+        <val lang="de_DE">Ein acronym Element enthält die verkürzte Form einer Benennung gebildet aus den Anfangsbuchstaben der enthaltenen Wörter/Wortbestandteile.</val>
+    </key>
     <key value="doctales.delete.acronym">
         <val lang="en_US">Delete acronym (&lt;acronym&gt;)</val>
         <val lang="de_DE">Akronym (&lt;acronym&gt;) löschen</val>
@@ -385,6 +393,10 @@
     <key type="action" value="doctales.add.verb">
         <val lang="en_US">Add verb (&lt;verb&gt;)</val>
         <val lang="de_DE">Verb (&lt;verb&gt;) einfügen</val>
+    </key>
+    <key value="doctales.add.verb_description">
+        <val lang="en_US">A verb element contains the verb form of the term.</val>
+        <val lang="de_DE">Ein verb Element enthält die Verbform der Benennung.</val>
     </key>
     <key value="doctales.delete.verb">
         <val lang="en_US">Delete verb (&lt;verb&gt;)</val>

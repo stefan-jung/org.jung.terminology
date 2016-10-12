@@ -12,19 +12,33 @@
   </definitionSource>
  </definition>
  <termBody>
+   <fig>
+     <title>Engine of 2007 Volkswagen Golf R32</title>
+     <image href="https://upload.wikimedia.org/wikipedia/commons/6/67/2007_Volkswagen_Golf_R32_-_Flickr_-_The_Car_Spy_%2826%29.jpg" width="600px">
+       <alt>By The Car Spy (2007 Volkswagen Golf R32) [CC BY 2.0
+         (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</alt>
+     </image>
+   </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
       <termVariant>internal combustion engine</termVariant>
     </fullForm>
-    <acronym language="de-DE" usage="preferred" id="acronym_hq1_4sv_3x">
+    <fullForm language="en-GB" usage="admitted" id="fullForm_t53_dr4_4x">
+      <termVariant>motor</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_hq1_4sv_3x">
       <termVariant>Verbrennungsmotor</termVariant>
-    </acronym>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_pwd_hr4_4x">
+      <termVariant>Motor</termVariant>
+    </fullForm>
  </termBody>
   <relations>
     <hypernyms>
-      <hypernym keyref="groundPropulsion"/>
+      <hypernym keyref="engine"/>
     </hypernyms>
     <hyponyms>
+      <hyponym keyref="gasEngine"/>
       <hyponym keyref="dieselEngine"/>
       <hyponym keyref="petrolEngine"/>
     </hyponyms>

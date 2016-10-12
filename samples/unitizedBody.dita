@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="unifiedbody">
+ <title>Unitized body</title>
+ <definition>
+  <definitionText>he term unibody or unit body is short for unitized body, or alternatively unitary construction design. This engineering approach of a vehicle describes "of a vehicle, a one-piece frame and body structure" A "type of body/frame construction in which the body of the vehicle, its floor plan and chassis form a single structure.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Vehicle_frame#Unibody" format="html" scope="external">Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>unitized body</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="admitted" id="fullForm_ikj_xcw_4x">
+      <termVariant>unibody</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_imc_fdw_4x">
+      <termVariant>Untergestell</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="notRecommended" id="fullForm_i5d_hdw_4x">
+      <termVariant>Fahrgestelll</termVariant>
+    </fullForm>
+ </termBody>
+  <relations>
+    <antonyms>
+      <antonym keyref="ladderFrame"/>
+    </antonyms>
+    <hypernyms>
+      <hypernym keyref="chassis"/>
+    </hypernyms>
+  </relations>
+</termentry>
