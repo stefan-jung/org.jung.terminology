@@ -2,12 +2,6 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="drivetrain">
  <title>Drivetrain</title>
- <definition>
-  <definitionText/>
-  <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html"/>
-  </definitionSource>
- </definition>
  <termBody>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en">
