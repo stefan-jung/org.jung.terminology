@@ -9089,6 +9089,163 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>validationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>Terminology</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>validationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>DITA</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>validationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<validationScenario>
+												<field name="pairs">
+													<list>
+														<validationUnit>
+															<field name="validationType">
+																<validationUnitType>
+																	<field name="validationInputType">
+																		<String>text/xml</String>
+																	</field>
+																</validationUnitType>
+															</field>
+															<field name="url">
+																<String>${currentFileURL}</String>
+															</field>
+															<field name="validationEngine">
+																<validationEngine>
+																	<field name="engineType">
+																		<String>&lt;Default engine></String>
+																	</field>
+																	<field name="allowsAutomaticValidation">
+																		<Boolean>true</Boolean>
+																	</field>
+																</validationEngine>
+															</field>
+															<field name="allowAutomaticValidation">
+																<Boolean>true</Boolean>
+															</field>
+															<field name="extensions">
+																<null/>
+															</field>
+															<field name="validationSchema">
+																<validationUnitSchema>
+																	<field name="dtdSchemaPublicID">
+																		<null/>
+																	</field>
+																	<field name="schematronPhase">
+																		<null/>
+																	</field>
+																	<field name="type">
+																		<Integer>7</Integer>
+																	</field>
+																	<field name="uri">
+																		<String>${framework}/rules/termentry.sch</String>
+																	</field>
+																</validationUnitSchema>
+															</field>
+														</validationUnit>
+													</list>
+												</field>
+												<field name="type">
+													<String>Validation_scenario</String>
+												</field>
+												<field name="name">
+													<String>DOCTALES Termentry</String>
+												</field>
+											</validationScenario>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>defaultValidationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>defaultValidationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>defaultValidationScenarios</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<String>DOCTALES Termentry</String>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>priority</String>
 										</field>
 										<field name="index">
