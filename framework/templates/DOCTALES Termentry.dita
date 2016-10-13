@@ -5,7 +5,7 @@
  <definition>
   <definitionText></definitionText>
   <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html"/>
+    <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
   </definitionSource>
  </definition>
  <termBody>
