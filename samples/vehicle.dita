@@ -14,10 +14,10 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>vehicle</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_qj4_ynz_3x">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>car</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_nnn_znz_3x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Fahrzeug</termVariant>
     </fullForm>
  </termBody>

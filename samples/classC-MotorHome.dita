@@ -9,9 +9,9 @@
   </definitionSource>
  </definition>
  <termBody>
-    <fig id="fig_spt_1kw_4x">
+    <fig>
       <title/>
-      <image id="image_tpt_1kw_4x" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Class-C.jpg/800px-Class-C.jpg" width="600px">
+      <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Class-C.jpg/800px-Class-C.jpg" width="600px">
         <alt>This work has been released into the public domain by its author, Bill W Ca at English Wikipedia. This applies worldwide.</alt>
       </image>
     </fig>
@@ -19,10 +19,10 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>camper van</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="preferred" id="fullForm_bjd_tkw_4x">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>motorhome</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_jcn_23w_4x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>teilintegriertes Wohnmobil</termVariant>
     </fullForm>
  </termBody>

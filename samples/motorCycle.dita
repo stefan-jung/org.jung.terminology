@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="motorcicle">
+<termentry id="motorcycle">
  <title>Motorcycle</title>
   <definition>
     <definitionText>A motorcycle is a two- or three-wheeled motor vehicle. Motorcycle design varies
@@ -12,11 +12,9 @@
     </definitionSource>
   </definition>
  <termBody>
-    <fig id="fig_ebw_ngh_px">
+    <fig>
       <title>2014 Triumph Street Triple R, matte graphite</title>
-      <image id="image_fbw_ngh_px"
-        href="https://upload.wikimedia.org/wikipedia/commons/4/49/2014_Triumph_Street_Triple_R_matte_graphite_right_2.JPG"
-        width="600px">
+      <image href="https://upload.wikimedia.org/wikipedia/commons/4/49/2014_Triumph_Street_Triple_R_matte_graphite_right_2.JPG" width="600px">
         <alt>By Dennis Bratland (Own work) [CC BY-SA 4.0
           (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons</alt>
       </image>
@@ -25,10 +23,10 @@
   <fullForm usage="preferred" language="en">
    <termVariant>motorcycle</termVariant>
   </fullForm>
-    <fullForm language="en-GB" usage="preferred" id="fullForm_jds_3gh_px">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>motor-bike</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="preferred" id="fullForm_vjl_jgh_px">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>motorbike</termVariant>
     </fullForm>
  </termBody>

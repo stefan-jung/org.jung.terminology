@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="untitled2">
+<termentry id="kaessbohrer-setra-s110h">
   <title>Kässbohrer Setra S 110 H</title>
  <definition>
   <definitionText>The Kässbohrer Setra S 110 H is a bus, 43 passenger, rear-engine person
@@ -16,7 +16,7 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>Golden Eagle</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="preferred" id="fullForm_xlv_zpv_3x">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>Silver Eagle</termVariant>
     </fullForm>
  </termBody>

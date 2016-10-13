@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="motorVehicle">
+<termentry id="motor-vehicle">
  <title>Motor vehicle</title>
  <definition>
   <definitionText>A motor vehicle is a self-propelled road vehicle and off-road vehicle , commonly
@@ -17,10 +17,10 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>motor vehicle</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_vlt_14z_3x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Kraftfahrzeug</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="notRecommended" id="fullForm_rz5_c4z_3x">
+    <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Motorfahrzeug</termVariant>
     </fullForm>
  </termBody>

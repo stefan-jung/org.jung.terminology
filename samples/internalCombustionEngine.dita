@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="untitled3">
+<termentry id="internal-combustion-engine">
  <title>Internal combustion engine</title>
  <definition>
   <definitionText>An internal combustion engine is a heat engine where the combustion of a fuel
@@ -23,13 +23,13 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>internal combustion engine</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="admitted" id="fullForm_t53_dr4_4x">
+    <fullForm language="en-GB" usage="admitted">
       <termVariant>motor</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_hq1_4sv_3x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Verbrennungsmotor</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="notRecommended" id="fullForm_pwd_hr4_4x">
+    <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Motor</termVariant>
     </fullForm>
  </termBody>

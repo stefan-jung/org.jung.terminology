@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="ui_mrt_fd1_jx">
- <title>Engine</title>
- <definition>
-  <definitionText>An engine is a machine designed to convert one form of energy into mechanical
+<termentry id="engine">
+  <title>Engine</title>
+  <definition>
+    <definitionText>An engine is a machine designed to convert one form of energy into mechanical
       energy.</definitionText>
-  <definitionSource>
-    <sourceReference href="https://en.wikipedia.org/wiki/Engine" format="html" scope="external"
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Engine" format="html" scope="external"
         >Wikipedia</sourceReference>
-  </definitionSource>
- </definition>
- <termBody>
+    </definitionSource>
+  </definition>
+  <termBody>
     <fig>
       <title> Animated scheme of a four stroke internal combustion engine</title>
       <image
@@ -19,17 +19,17 @@
         <alt>https://creativecommons.org/licenses/by-sa/3.0/deed.en</alt>
       </image>
     </fig>
-  <partOfSpeech value="noun"/>
-    <fullForm language="en-GB" usage="preferred" id="fullForm_olp_jcg_jx">
+    <partOfSpeech value="noun"/>
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>engine </termVariant>
     </fullForm>
-  <fullForm usage="notRecommended" language="en-GB">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>motor</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_kzw_ycg_jx">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Motor</termVariant>
     </fullForm>
- </termBody>
+  </termBody>
   <relations>
     <hyponyms>
       <hyponym keyref="internalCombustionEngine"/>

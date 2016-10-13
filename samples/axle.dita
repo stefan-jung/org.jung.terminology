@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="untitled2">
+<termentry id="axle">
  <title>Axle</title>
  <definition>
   <definitionText>An axle is a central shaft for a rotating wheel or gear.</definitionText>
@@ -14,7 +14,7 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>axle</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_qvs_cjz_3x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Achse</termVariant>
     </fullForm>
  </termBody>

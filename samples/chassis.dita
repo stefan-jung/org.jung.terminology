@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="ui_yzt_4l1_hx">
+<termentry id="chassis">
  <title>Chassis</title>
  <definition>
   <definitionText>A chassis consists of an internal vehicle frame that supports a manmade object in
@@ -15,7 +15,7 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>motor vehicle chassis</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="preferred" id="fullForm_e4j_pvv_4x">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>vehicle frame</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
@@ -27,7 +27,7 @@
     <fullForm language="de-DE" usage="preferred">
       <termVariant>Fahrgestell</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="admitted" id="fullForm_v5l_zyv_4x">
+    <fullForm language="de-DE" usage="admitted">
       <termVariant>Karosserie</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">

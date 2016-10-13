@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="untitled4">
+<termentry id="diesel-engine">
  <title>Diesel engine</title>
  <definition>
   <definitionText>The diesel engine (also known as a compression-ignition or CI engine) is an
@@ -17,7 +17,7 @@
   <fullForm usage="preferred" language="en">
    <termVariant>diesel enginge</termVariant>
   </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_rhx_btv_3x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Dieselmotor</termVariant>
     </fullForm>
  </termBody>

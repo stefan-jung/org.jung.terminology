@@ -7,10 +7,10 @@
   <fullForm usage="preferred" language="en">
    <termVariant>drivetrain</termVariant>
   </fullForm>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_ccb_qmp_4x">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>powertrain</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="notRecommended" id="fullForm_oft_bnp_4x">
+    <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Antriebsstrang</termVariant>
     </fullForm>
  </termBody>

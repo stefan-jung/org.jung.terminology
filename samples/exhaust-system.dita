@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="ui_l21_1jg_jx">
+<termentry id="exhaust-system">
  <title>Exhaust System</title>
  <definition>
   <definitionText>An exhaust system is usually piping used to guide reaction exhaust gases away from
@@ -12,7 +12,7 @@
   </definitionSource>
  </definition>
  <termBody>
-    <fig id="fig_tz3_yjg_jx">
+    <fig>
       <title>Exhaust system of the Opel Corsa B 1.2 petrol</title>
       <image href="https://upload.wikimedia.org/wikipedia/commons/3/3a/Impianto_di_scarico.jpg" width="600px">
         <alt>https://creativecommons.org/publicdomain/zero/1.0/deed.en</alt>
@@ -26,7 +26,7 @@
       </termSource>
       <termVariant>exhaust system</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_m3m_cjg_jx">
+    <fullForm language="de-DE" usage="preferred">
       <termSource>
         <sourceReference href="http://www.mein-autolexikon.de/abgasanlage.html" format="html"
           scope="external">mein-autolexikon.de</sourceReference>

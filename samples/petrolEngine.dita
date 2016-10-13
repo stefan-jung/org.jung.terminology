@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="untitled5">
+<termentry id="petrol-engine">
  <title>Petrol engine (spark-ignition)</title>
  <definition>
   <definitionText>A petrol engine (known as a gasoline engine in American English) is an internal
@@ -16,16 +16,16 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>petrol engine</termVariant>
     </fullForm>
-    <abbreviation language="de-DE" usage="preferred" id="abbreviation_b4j_s5v_3x">
+    <abbreviation language="de-DE" usage="preferred">
       <termVariant>Ottomotor</termVariant>
     </abbreviation>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_kp1_p5v_3x">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>Otto engine</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="admitted" id="fullForm_g5j_scr_kx">
+    <fullForm language="en-GB" usage="admitted">
       <termVariant>motor</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_ut4_tcr_kx">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Motor</termVariant>
     </fullForm>
  </termBody>

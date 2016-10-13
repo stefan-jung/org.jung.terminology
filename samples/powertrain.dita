@@ -14,9 +14,9 @@
   </definitionSource>
  </definition>
  <termBody>
-    <fig id="fig_own_4qw_4x">
+    <fig>
       <title>Antriebsstrang einer Baumaschine aufgenommen auf bauma 2010 in München</title>
-      <image id="image_pwn_4qw_4x" href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG" width="600px">
+      <image href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG" width="600px">
         <alt>This work has been released into the public domain by its author, Mchelge at German Wikipedia. This applies worldwide.</alt>
       </image>
     </fig>
@@ -24,13 +24,13 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>powertrain</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="notRecommended" id="fullForm_bsj_rmp_4x">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>drivetrain</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred" id="fullForm_hc2_5qp_4x">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Antriebsstrang</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="notRecommended" id="fullForm_hmq_yxv_4x">
+    <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Fahrwerk</termVariant>
     </fullForm>
  </termBody>

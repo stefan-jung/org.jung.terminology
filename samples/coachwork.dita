@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="untitled1">
+<termentry id="coachwork">
  <title>Coachwork (vehicle body)</title>
  <definition>
   <definitionText>Coachwork is the body of a motor vehicle (automobile, van, bus or truck), a
@@ -16,10 +16,10 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>coachwork</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="admitted" id="fullForm_ypr_jmv_3x">
+    <fullForm language="en-GB" usage="admitted">
       <termVariant>vehicle body</termVariant>
     </fullForm>
-    <fullForm language="en-US" usage="preferred" id="fullForm_vh3_15v_4x">
+    <fullForm language="en-US" usage="preferred">
       <termVariant>auto body</termVariant>
     </fullForm>
  </termBody>
