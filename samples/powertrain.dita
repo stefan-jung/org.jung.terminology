@@ -9,7 +9,8 @@
       continuous track as in military tanks or caterpillar tractors, propeller,
       etc.).</definitionText>
   <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html"/>
+    <sourceReference href="https://en.wikipedia.org" format="html" scope="external"
+        >Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>
