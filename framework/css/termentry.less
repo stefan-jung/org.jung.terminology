@@ -198,6 +198,7 @@
     content: "href";
     width: 5em;
     .link();
+    .uiElementLabel();
 }
 
 *[class~="topic/image"]:before(6) {
@@ -205,12 +206,13 @@
     oxy_textfield(
           edit, '@href',
           columns, 60
-    )"\A";
+    ) "\A";
 }
 
 *[class~="topic/image"]:before(5) {
     content: "width";
     width: 5em;
+    .uiElementLabel();
 }
 
 *[class~="topic/image"]:before(4) {
@@ -218,7 +220,7 @@
     oxy_textfield(
           edit, '@width',
           columns, 10
-    );
+    ) "\A";
 }
 
 *[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
