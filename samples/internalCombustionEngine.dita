@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="internal-combustion-engine">
- <title>Internal combustion engine</title>
- <definition>
-  <definitionText>An internal combustion engine is a heat engine where the combustion of a fuel
+<termentry id="internalCombustionEngine">
+  <title>Internal combustion engine</title>
+  <definition>
+    <definitionText>An internal combustion engine is a heat engine where the combustion of a fuel
       occurs with an oxidizer (usually air) in a combustion chamber that is an integral part of the
       working fluid flow circuit.</definitionText>
-  <definitionSource>
-    <sourceReference href="https://en.wikipedia.org/wiki/Internal_combustion_engine" format="html"
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Internal_combustion_engine" format="html"
         scope="external">wikipedia description and definition</sourceReference>
-  </definitionSource>
- </definition>
- <termBody>
-   <fig>
-     <title>Engine of 2007 Volkswagen Golf R32</title>
-     <image href="https://upload.wikimedia.org/wikipedia/commons/6/67/2007_Volkswagen_Golf_R32_-_Flickr_-_The_Car_Spy_%2826%29.jpg" width="600px">
-       <alt>By The Car Spy (2007 Volkswagen Golf R32) [CC BY 2.0
-         (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</alt>
-     </image>
-   </fig>
-  <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en-GB">
+    </definitionSource>
+  </definition>
+  <termBody>
+    <fig>
+      <title>Engine of 2007 Volkswagen Golf R32</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/6/67/2007_Volkswagen_Golf_R32_-_Flickr_-_The_Car_Spy_%2826%29.jpg"
+        width="600px">
+        <alt>By The Car Spy (2007 Volkswagen Golf R32) [CC BY 2.0
+          (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>internal combustion engine</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
@@ -32,7 +34,7 @@
     <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Motor</termVariant>
     </fullForm>
- </termBody>
+  </termBody>
   <relations>
     <hypernyms>
       <hypernym keyref="engine"/>

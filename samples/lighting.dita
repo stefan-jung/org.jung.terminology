@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="lighting">
+ <title>Lighting</title>
+ <definition>
+  <definitionText>Lighting or illumination is the deliberate use of light to achieve a practical or
+      aesthetic effect. Lighting includes the use of both artificial light sources like lamps and
+      light fixtures, as well as natural illumination by capturing daylight.</definitionText>
+  <definitionSource>
+    <sourceReference href="https://en.wikipedia.org/wiki/Lighting" format="html" scope="external"
+        >Wikipedia</sourceReference>
+  </definitionSource>
+ </definition>
+ <termBody>
+  <partOfSpeech value="noun"/>
+  <fullForm usage="preferred" language="en">
+   <termVariant>lighting</termVariant>
+  </fullForm>
+    <fullForm language="de" usage="preferred">
+      <termVariant>Beleuchtung</termVariant>
+    </fullForm>
+ </termBody>
+</termentry>

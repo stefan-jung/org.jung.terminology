@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="classBMotorhome">
+<termentry id="classBMotorHome">
   <title>Class B motorhome</title>
   <definition>
-    <definitionText>Built using a conventional van, to which either a raised roof has been added or the back replaced by a low-profile body (aka coach-built).</definitionText>
+    <definitionText>Built using a conventional van, to which either a raised roof has been added or
+      the back replaced by a low-profile body (aka coach-built).</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org/wiki/List_of_recreational_vehicles#Class_B.2B_motorhome" format="html" scope="external">Wikipedia</sourceReference>
+      <sourceReference
+        href="https://en.wikipedia.org/wiki/List_of_recreational_vehicles#Class_B.2B_motorhome"
+        format="html" scope="external">Wikipedia</sourceReference>
     </definitionSource>
   </definition>
   <termBody>
     <fig>
       <title>An Autosleeper Harmony Campervan on a Talbot Express base vehicle, 1991</title>
-      <image href="https://upload.wikimedia.org/wikipedia/commons/8/8c/TalbotAutoSleeper1991.jpg" width="600px">
-        <alt> I, the copyright holder of this work, release this work into the public domain. This applies worldwide.</alt>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/8/8c/TalbotAutoSleeper1991.jpg"
+        width="600px">
+        <alt> I, the copyright holder of this work, release this work into the public domain. This
+          applies worldwide.</alt>
       </image>
     </fig>
     <partOfSpeech value="noun"/>
@@ -34,8 +39,7 @@
       <hypernym keyref="motorHome"/>
     </hypernyms>
     <relatedTerms>
-      <relatedTerm keyref="ClassBPlusMotorHome"/>
-      <relatedTerm keyref="ClassC-MotorHome"/>
+      <relatedTerm keyref="classBPlusMotorHome"/>
     </relatedTerms>
   </relations>
 </termentry>

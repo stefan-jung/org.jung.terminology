@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="electronicStabilityControl">
+  <title>Electronic Stability Control</title>
+  <definition>
+    <definitionText>Electronic stability control is a computerized technology that improves a
+      vehicle's stability by detecting and reducing loss of traction (skidding).</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Electronic_stability_control"
+        format="html" scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en-AU">
+      <termVariant>electronic stability control</termVariant>
+    </fullForm>
+    <acronym>
+      <termVariant>ESC</termVariant>
+    </acronym>
+    <fullForm language="en-GB" usage="notRecommended">
+      <termVariant>electronic stability program</termVariant>
+    </fullForm>
+    <acronym language="en-GB" usage="notRecommended">
+      <termVariant>ESP</termVariant>
+    </acronym>
+    <fullForm language="en-GB" usage="notRecommended">
+      <termVariant>dynamic stability control</termVariant>
+    </fullForm>
+    <acronym language="en-GB" usage="notRecommended">
+      <termVariant>DSC</termVariant>
+    </acronym>
+    <fullForm language="de-DE" usage="preferred">
+      <termVariant>elektronische Stabilitätskontrolle</termVariant>
+    </fullForm>
+    <acronym language="de-DE" usage="preferred">
+      <termVariant>ESP</termVariant>
+    </acronym>
+    <fullForm language="de-DE" usage="notRecommended">
+      <termVariant>Fahrdynamikregelung</termVariant>
+    </fullForm>
+  </termBody>
+  <relations>
+    <instancesOf>
+      <instanceOf keyref="advancedDriverAssistanceSystem"/>
+    </instancesOf>
+  </relations>
+</termentry>

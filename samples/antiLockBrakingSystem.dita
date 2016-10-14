@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="antiLockBrakingSystem">
+  <title>Anti-Lock Breaking System</title>
+  <definition>
+    <definitionText>An anti-lock braking system is an automobile safety system that allows the
+      wheels on a motor vehicle to maintain tractive contact with the road surface according to
+      driver inputs while braking, preventing the wheels from locking up (ceasing rotation) and
+      avoiding uncontrolled skidding.</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Anti-lock_braking_system" format="html"
+        scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en-GB">
+      <termVariant>anti-lock braking system</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="notRecommended">
+      <termVariant>anti-skid braking system</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred">
+      <termVariant>Antiblockiersystem</termVariant>
+    </fullForm>
+    <acronym language="en-GB" usage="preferred">
+      <termVariant>ABS</termVariant>
+    </acronym>
+    <acronym language="de-DE" usage="preferred">
+      <termVariant>ABS</termVariant>
+    </acronym>
+  </termBody>
+  <relations>
+    <instancesOf>
+      <instanceOf keyref="advancedDriverAssistanceSystem"/>
+    </instancesOf>
+  </relations>
+</termentry>

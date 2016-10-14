@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="rearPositionLamp">
+  <title>Rear Position Lamp</title>
+  <definition>
+    <definitionText>Conspicuity for the rear of a vehicle is provided by rear position lamps. These
+      are required to produce only red light and to be wired such that they are lit whenever the
+      front position lamps are lit, including when the headlamps are on. Rear position lamps may be
+      combined with the vehicle's stop lamps or separate from them.</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Automotive_lighting#Rear" format="html"
+        scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en">
+      <termVariant>rear position lamp</termVariant>
+    </fullForm>
+    <fullForm language="en" usage="notRecommended">
+      <termVariant>taillight</termVariant>
+    </fullForm>
+    <fullForm language="en" usage="notRecommended">
+      <termVariant>tail light</termVariant>
+    </fullForm>
+    <fullForm language="en" usage="notRecommended">
+      <termVariant>taillamp</termVariant>
+    </fullForm>
+    <fullForm language="en" usage="notRecommended">
+      <termVariant>tail lamp</termVariant>
+    </fullForm>
+    <fullForm language="de" usage="preferred">
+      <termVariant>Rücklicht</termVariant>
+    </fullForm>
+  </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="rearLight"/>
+    </partsOf>
+  </relations>
+</termentry>

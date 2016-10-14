@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="frontLight">
+  <title>Front Light</title>
+  <definition>
+    <definitionText/>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en">
+      <termVariant/>
+    </fullForm>
+  </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="lighting"/>
+    </partsOf>
+  </relations>
+</termentry>

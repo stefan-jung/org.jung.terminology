@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
-<termentry id="campervan">
- <title>Class C motorhome</title>
- <definition>
-  <definitionText>A Class C motorhome is built upon a minimal truck platform with a forward engine and transmission connected by driveshaft to a rear axle that propels dual-mounted rear wheels.</definitionText>
-  <definitionSource>
-    <sourceReference href="https://en.wikipedia.org/wiki/List_of_recreational_vehicles#Class_B.2B_motorhome" format="html" scope="external">Wikipedia</sourceReference>
-  </definitionSource>
- </definition>
- <termBody>
+<termentry id="classC-MotorHome">
+  <title>Class C motorhome</title>
+  <definition>
+    <definitionText>A Class C motorhome is built upon a minimal truck platform with a forward engine
+      and transmission connected by driveshaft to a rear axle that propels dual-mounted rear
+      wheels.</definitionText>
+    <definitionSource>
+      <sourceReference
+        href="https://en.wikipedia.org/wiki/List_of_recreational_vehicles#Class_B.2B_motorhome"
+        format="html" scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
     <fig>
       <title/>
-      <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Class-C.jpg/800px-Class-C.jpg" width="600px">
-        <alt>This work has been released into the public domain by its author, Bill W Ca at English Wikipedia. This applies worldwide.</alt>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Class-C.jpg/800px-Class-C.jpg"
+        width="600px">
+        <alt>This work has been released into the public domain by its author, Bill W Ca at English
+          Wikipedia. This applies worldwide.</alt>
       </image>
     </fig>
-  <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en-GB">
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>camper van</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="preferred">
@@ -25,13 +32,13 @@
     <fullForm language="de-DE" usage="preferred">
       <termVariant>teilintegriertes Wohnmobil</termVariant>
     </fullForm>
- </termBody>
+  </termBody>
   <relations>
     <hypernyms>
       <hypernym keyref="motorHome"/>
     </hypernyms>
     <relatedTerms>
-      <relatedTerm keyref="ClassBPlusMotorHome"/>
+      <relatedTerm keyref="classBPlusMotorHome"/>
     </relatedTerms>
   </relations>
 </termentry>
