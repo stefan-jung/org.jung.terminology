@@ -8,7 +8,7 @@
   <topicref href="bus.dita" keys="bus" termdomain="persons public"/>
   <topicref href="classBMotorHome.dita" keys="classBMotorHome" termdomain="private vacation"/>
   <topicref href="classBPlusMotorHome.dita" keys="classBPlusMotorHome" termdomain="private vacation"/>
-  <topicref href="classC-MotorHome.dita" keys="classC-MotorHome" termdomain="private vacation"/>
+  <topicref href="classCMotorHome.dita" keys="classCMotorHome" termdomain="private vacation"/>
   <topicref href="car.dita" keys="car" termdomain="persons private"/>
   <topicref href="chassis.dita" keys="chassis" type="termentry" />
   <topicref href="coachwork.dita" keys="coachwork" type="termentry" />

@@ -21,7 +21,7 @@
  </termBody>
  <relations>
   <partsOf>
-   <partOf keyref="driveTrain"/>
+   <partOf keyref="drivetrain"/>
   </partsOf>
  </relations>
 </termentry>

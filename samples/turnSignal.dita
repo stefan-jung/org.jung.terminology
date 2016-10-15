@@ -19,7 +19,7 @@
   </termBody>
   <relations>
     <partsOf>
-      <partOf keyref="rear-light"/>
+      <partOf keyref="rearLight"/>
     </partsOf>
   </relations>
 </termentry>

@@ -38,7 +38,7 @@
       <hypernym keyref="motorHome"/>
     </hypernyms>
     <relatedTerms>
-      <relatedTerm keyref="ClassC-MotorHome"/>
+      <relatedTerm keyref="classCMotorHome"/>
     </relatedTerms>
   </relations>
 </termentry>

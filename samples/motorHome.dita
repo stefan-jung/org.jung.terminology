@@ -25,9 +25,9 @@
  </termBody>
   <relations>
     <hyponyms>
-      <hyponym keyref="ClassC-MotorHome"/>
-      <hyponym keyref="ClassBPlusMotorHome"/>
-      <hyponym keyref="ClassB-motorHome"/>
+      <hyponym keyref="classBMotorHome"/>
+      <hyponym keyref="classBPlusMotorHome"/>
+      <hyponym keyref="classBMotorHome"/>
     </hyponyms>
   </relations>
 </termentry>

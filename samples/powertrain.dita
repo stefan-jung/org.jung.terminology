@@ -36,7 +36,7 @@
  </termBody>
   <relations>
     <hyponyms>
-      <hyponym keyref="driveTrain"/>
+      <hyponym keyref="drivetrain"/>
     </hyponyms>
   </relations>
 </termentry>

@@ -40,7 +40,7 @@
       <hypernym keyref="engine"/>
     </hypernyms>
     <hyponyms>
-      <hyponym keyref="gasEngine"/>
+      <hyponym keyref="gasengine"/>
       <hyponym keyref="dieselEngine"/>
       <hyponym keyref="petrolEngine"/>
     </hyponyms>
