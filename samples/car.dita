@@ -10,11 +10,12 @@
   </definitionSource>
  </definition>
  <termBody>
-  <note>This is a note</note>
   <fig>
-   <title>Drawing of a car</title>
-   <image href="images/car.png">
-    <alt>Drawing of a car</alt>
+   <title>2015 Volkswagen Passat (3G MY16) 132TSI</title>
+   <image
+    href="https://upload.wikimedia.org/wikipedia/commons/7/78/2015_Volkswagen_Passat_%283G_MY16%29_132TSI_station_wagon_%282015-11-11%29_01.jpg"
+    width="600px">
+    <alt>By OSX (Own work) [Public domain], via Wikimedia Commons</alt>
    </image>
   </fig>
   <domains>

@@ -2,7 +2,24 @@
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="drivetrain">
  <title>Drivetrain</title>
+  <definition>
+    <definitionText>The drivetrain of a motor vehicle is the group of components that deliver power
+      to the driving wheels. This excludes the engine or motor that generates the
+      power.</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Drivetrain" format="html"
+        scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
  <termBody>
+    <fig>
+      <title>Engine and drivetrain of a transverse-engined front-wheel drive car</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/5/5d/Transverse_engine_layout.png"
+        width="600px">
+        <alt>By Hoikka1 (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0)],
+          via Wikimedia Commons</alt>
+      </image>
+    </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en">
    <termVariant>drivetrain</termVariant>
