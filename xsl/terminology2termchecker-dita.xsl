@@ -3,7 +3,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:math="http://exslt.org/math" extension-element-prefixes="math"
-    xmlns:dtl="http://doctales.github.io"
+    xmlns:doctales="http://doctales.github.io"
     exclude-result-prefixes="xs" version="2.0">
     
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
@@ -29,7 +29,7 @@
                     <xsl:variable name="termLanguage" select="normalize-space(@language)"/>
                     <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
                     <xsl:variable name="notRecommendedTermUppercased"><xsl:value-of select="concat(upper-case(substring($notRecommendedTerm,1,1)), substring($notRecommendedTerm, 2), ' '[not(last())])"/></xsl:variable>
-                    <xsl:variable name="sqfGroupName" select="dtl:generateId($notRecommendedTerm, 'sqfGroup', generate-id())"/>
+                    <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, 'sqfGroup', generate-id())"/>
                     <xsl:variable name="sqfGroupName_up" select="concat($sqfGroupName, '_up')"/>
                     <xsl:variable name="sqfGroupName_up_sentence" select="concat($sqfGroupName, '_up_sentence')"/>
                     
@@ -48,11 +48,11 @@
                         </xsl:attribute>
                         <xsl:attribute name="role">warning</xsl:attribute>
                         <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
-                        <xsl:value-of select="dtl:getString($language, 'TheTerm')"/>
+                        <xsl:value-of select="doctales:getString($language, 'TheTerm')"/>
                         <xsl:text> '</xsl:text>
                         <xsl:value-of select="$notRecommendedTerm"/>
                         <xsl:text>' </xsl:text>
-                        <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
+                        <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
                         <xsl:text>.</xsl:text>
                     </xsl:element>
 
@@ -67,11 +67,11 @@
                         </xsl:attribute>
                         <xsl:attribute name="role">warning</xsl:attribute>
                         <xsl:attribute name="sqf:fix" select="$sqfGroupName_up_sentence"/>
-                        <xsl:value-of select="dtl:getString($language, 'TheTerm')"/>
+                        <xsl:value-of select="doctales:getString($language, 'TheTerm')"/>
                         <xsl:text> '</xsl:text>
                         <xsl:value-of select="$notRecommendedTermUppercased"/>
                         <xsl:text>' </xsl:text>
-                        <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
+                        <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
                         <xsl:text>.</xsl:text>
                     </xsl:element>
 
@@ -86,11 +86,11 @@
                         </xsl:attribute>
                         <xsl:attribute name="role">warning</xsl:attribute>
                         <xsl:attribute name="sqf:fix" select="$sqfGroupName_up"/>
-                        <xsl:value-of select="dtl:getString($language, 'TheTerm')"/>
+                        <xsl:value-of select="doctales:getString($language, 'TheTerm')"/>
                         <xsl:text> '</xsl:text>
                         <xsl:value-of select="$notRecommendedTermUppercased"/>
                         <xsl:text>' </xsl:text>
-                        <xsl:value-of select="dtl:getString($language, 'IsNotAllowed')"/>
+                        <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
                         <xsl:text>.</xsl:text>
                     </xsl:element>
 

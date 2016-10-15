@@ -3,7 +3,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-    xmlns:dtl="http://doctales.github.io"
+    xmlns:doctales="http://doctales.github.io"
     exclude-result-prefixes="xs xd" version="2.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no"/>
@@ -17,7 +17,7 @@
     <!-- Language of the messages -->
     <xsl:param name="language" required="yes"/>
 
-    <xsl:function name="dtl:getString">
+    <xsl:function name="doctales:getString">
         <xsl:param name="language"/>
         <xsl:param name="name"/>
         <xsl:variable name="file">
@@ -33,13 +33,13 @@
         <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             xmlns:sqf="http://www.schematron-quickfix.com/validator/process" queryBinding="xslt2">
             <sch:title>
-                <xsl:value-of select="dtl:getString($language, 'Title')"/>
+                <xsl:value-of select="doctales:getString($language, 'Title')"/>
             </sch:title>
             <xsl:apply-templates/>
         </sch:schema>
     </xsl:template>
 
-    <xsl:function name="dtl:generateId" as="xs:string?">
+    <xsl:function name="doctales:generateId" as="xs:string?">
         <xsl:param name="baseString" as="xs:string?"/>
         <xsl:param name="prefixString" as="xs:string?"/>
         <xsl:param name="id" as="xs:string?"/>
@@ -123,26 +123,26 @@
         <xsl:variable name="sqfTitle">
             <xsl:choose>
                 <xsl:when test="self::*[contains(@class, ' termentry/fullForm ')]">
-                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedTerm')"/>
+                    <xsl:value-of select="doctales:getString($language, 'ReplaceWithAllowedTerm')"/>
                     <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
                 <xsl:when test="self::*[contains(@class, ' termentry/abbreviation ')]">
                     <xsl:value-of
-                        select="dtl:getString($language, 'ReplaceWithAllowedAbbreviation')"/>
+                        select="doctales:getString($language, 'ReplaceWithAllowedAbbreviation')"/>
                     <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
                 <xsl:when test="self::*[contains(@class, ' termentry/acronym ')]">
-                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedAcronym')"/>
+                    <xsl:value-of select="doctales:getString($language, 'ReplaceWithAllowedAcronym')"/>
                     <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
                 </xsl:when>
               <xsl:when test="self::*[contains(@class, ' termentry/verb ')]">
-                    <xsl:value-of select="dtl:getString($language, 'ReplaceWithAllowedVerb')"/>
+                    <xsl:value-of select="doctales:getString($language, 'ReplaceWithAllowedVerb')"/>
                     <xsl:text>: '</xsl:text>
                     <xsl:value-of select="$allowedTerm"/>
                     <xsl:text>'</xsl:text>
@@ -154,18 +154,18 @@
         <xsl:variable name="quickFixId">
             <xsl:choose>
                 <xsl:when test="$uppercase eq 'true' and $beginning eq 'false'">
-                    <xsl:value-of select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), concat($counter, '_up'))"/>
+                    <xsl:value-of select="concat(doctales:generateId($notRecommendedTerm, 'term', generate-id()), concat($counter, '_up'))"/>
                 </xsl:when>
                 <xsl:when test="$uppercase eq 'true' and $beginning eq 'true'">
-                    <xsl:value-of select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), concat($counter, '_up_sentence'))"/>
+                    <xsl:value-of select="concat(doctales:generateId($notRecommendedTerm, 'term', generate-id()), concat($counter, '_up_sentence'))"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), $counter)" />
+                    <xsl:value-of select="concat(doctales:generateId($notRecommendedTerm, 'term', generate-id()), $counter)" />
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
         <!--<xsl:variable name="quickFixId"
-            select="concat(dtl:generateId($notRecommendedTerm, 'term', generate-id()), $counter)"/>-->
+            select="concat(doctales:generateId($notRecommendedTerm, 'term', generate-id()), $counter)"/>-->
 
         <!-- FIXME: This uses the first termVariant but should use all and respect the flection of the notRecommended term. -->
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
