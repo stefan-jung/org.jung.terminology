@@ -15,8 +15,9 @@
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <xsl:variable name="termentryId" select="@id"/>
+        <xsl:variable name="languageCode" select="doctales:getLanguageCodeFromLanguageRegionCode($language)"/>
         <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
-        <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended'][@language = $language]">
+        <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended'][@language = $languageCode or @language = $language]">
             <xsl:element name="sch:pattern">
                 <xsl:attribute name="id">
                     <xsl:value-of select="$termentryId"/>
@@ -26,7 +27,8 @@
                 
                 <!-- The context text() matches the text content of all nodes. -->
                 <sch:rule context="text()">
-                    <xsl:variable name="termLanguage" select="normalize-space(@language)"/>
+                    <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
+                    <xsl:variable name="termLanguageCode" select="doctales:getLanguageCodeFromLanguageRegionCode($termLanguageRegionCode)"/>
                     <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
                     <xsl:variable name="notRecommendedTermUppercased"><xsl:value-of select="concat(upper-case(substring($notRecommendedTerm,1,1)), substring($notRecommendedTerm, 2), ' '[not(last())])"/></xsl:variable>
                     <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, 'sqfGroup', generate-id())"/>
@@ -41,7 +43,7 @@
                     <xsl:element name="sch:report">
                         <xsl:attribute name="test">
                             <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                            <xsl:value-of select="$termLanguage"/>
+                            <xsl:value-of select="$termLanguageRegionCode"/>
                             <xsl:text>') and contains(., '</xsl:text>
                             <xsl:value-of select="$notRecommendedTerm"/>
                             <xsl:text>')</xsl:text>
@@ -60,7 +62,7 @@
                     <xsl:element name="sch:report">
                         <xsl:attribute name="test">
                             <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                            <xsl:value-of select="$termLanguage"/>
+                            <xsl:value-of select="$termLanguageRegionCode"/>
                             <xsl:text>') and contains(., '</xsl:text>
                             <xsl:value-of select="concat('. ', $notRecommendedTermUppercased)"/>
                             <xsl:text>')</xsl:text>
@@ -79,7 +81,7 @@
                     <xsl:element name="sch:report">
                         <xsl:attribute name="test">
                             <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                            <xsl:value-of select="$termLanguage"/>
+                            <xsl:value-of select="$termLanguageRegionCode"/>
                             <xsl:text>') and starts-with(., '</xsl:text>
                             <xsl:value-of select="$notRecommendedTermUppercased"/>
                             <xsl:text>')</xsl:text>
@@ -101,12 +103,12 @@
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $termLanguage">
+                                <xsl:when test="@language = $languageCode or @language = $language">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
                                         <xsl:with-param name="uppercase" select="'false'"/>
                                         <xsl:with-param name="beginning" select="'false'"/>
-                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
                                 </xsl:when>
@@ -116,12 +118,12 @@
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $termLanguage">
+                                <xsl:when test="@language = $languageCode or @language = $language">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
                                         <xsl:with-param name="uppercase" select="'false'"/>
                                         <xsl:with-param name="beginning" select="'false'"/>
-                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
                                 </xsl:when>
@@ -136,12 +138,12 @@
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $termLanguage">
+                                <xsl:when test="@language = $languageCode or @language = $language">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
                                         <xsl:with-param name="beginning" select="'false'"/>
-                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
                                 </xsl:when>
@@ -151,12 +153,12 @@
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $termLanguage">
+                                <xsl:when test="@language = $languageCode or @language = $language">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
                                         <xsl:with-param name="beginning" select="'false'"/>
-                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
                                 </xsl:when>
@@ -171,12 +173,12 @@
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $termLanguage">
+                                <xsl:when test="@language = $languageCode or @language = $language">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
                                         <xsl:with-param name="beginning" select="'true'"/>
-                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
                                 </xsl:when>
@@ -186,12 +188,12 @@
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $termLanguage">
+                                <xsl:when test="@language = $languageCode or @language = $language">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
                                         <xsl:with-param name="beginning" select="'true'"/>
-                                        <xsl:with-param name="termLanguage" select="$termLanguage"/>
+                                        <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
                                         <xsl:with-param name="definition" select="$definition"/>
                                     </xsl:call-template>
                                 </xsl:when>

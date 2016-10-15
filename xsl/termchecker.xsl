@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:doctales="http://doctales.github.io"
@@ -17,7 +17,7 @@
     <!-- Language of the messages -->
     <xsl:param name="language" required="yes"/>
 
-    <xsl:function name="doctales:getString">
+    <xsl:function name="doctales:getString" as="xs:string">
         <xsl:param name="language"/>
         <xsl:param name="name"/>
         <xsl:variable name="file">
@@ -26,6 +26,49 @@
             <xsl:text>.xml</xsl:text>
         </xsl:variable>
         <xsl:sequence select="document($file)/descendant::str[@name = $name]"/>
+    </xsl:function>
+    
+    <!-- If the language code contains both language and region code, e.g. 'en-GB', return the language code, e.g. 'en', otherwise 'null' -->
+    <xsl:function name="doctales:getLanguageCodeFromLanguageRegionCode" as="xs:string">
+        <xsl:param name="languageRegionCode"/>
+        <xsl:variable name="languageCode">
+            <xsl:choose>
+                <xsl:when test="contains($languageRegionCode, '-')">
+                    <xsl:value-of select="substring-before($languageRegionCode, '-')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    null
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:sequence select="$languageCode"/>
+    </xsl:function>
+    
+    <!--
+        Generate language match rule. If the language parameter contains both language and region code, 
+        return "@language = 'en' or @language = 'en-GB'",
+        otherwise return "@language = 'en'"
+    --> 
+    <xsl:function name="doctales:getLanguageMatchRule" as="xs:string">
+        <xsl:param name="languageRegionCode"/>
+        <xsl:variable name="languageCode" select="doctales:getLanguageCodeFromLanguageRegionCode($languageRegionCode)"/>
+        <xsl:variable name="languageMatchRule">
+            <xsl:choose>
+                <xsl:when test="contains($languageCode, 'null')">
+                    <xsl:text>@language = '</xsl:text>
+                    <xsl:value-of select="$languageRegionCode"/>
+                    <xsl:text>'</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>@language = '</xsl:text>
+                    <xsl:value-of select="$languageCode"/>
+                    <xsl:text>' or @language = '</xsl:text>
+                    <xsl:value-of select="$languageRegionCode"/>
+                    <xsl:text>'</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:sequence select="$languageMatchRule"/>
     </xsl:function>
 
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
