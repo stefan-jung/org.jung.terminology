@@ -2568,6 +2568,37 @@
 													<list>
 														<ditaParameter>
 															<field name="name">
+																<String>args.check.elements</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${ask('Termchecker for XLIFF - Choose for which elements termchecker rules should be applied', combobox, ('source':'&lt;source> elements';'target':'&lt;target> elements';'both':'&lt;source> and &lt;target> elements';)}</String>
+															</field>
+															<field name="defaultValue">
+																<String>source</String>
+															</field>
+															<field name="type">
+																<Integer>0</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>source</String>
+																	<String>target</String>
+																	<String>both</String>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
 																<String>args.language</String>
 															</field>
 															<field name="description">

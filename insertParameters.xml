@@ -5,6 +5,9 @@
     <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
     <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
     
-    <!-- Parameters for termchecker and termchecker-xliff -->
+    <!-- Parameters for Termchecker-DITA and Termchecker-XLIFF -->
     <param name="language" expression="${args.language}" if="args.language"/>
+    
+    <!-- Parameters for Termchecker-XLIFF -->
+    <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
 </dummy>

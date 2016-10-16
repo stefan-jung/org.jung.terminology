@@ -31,6 +31,7 @@
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <param name="language" expression="${args.language}" if="args.language"/>
+            <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
             <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
             <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
             <xmlcatalog refid="dita.catalog"/>
