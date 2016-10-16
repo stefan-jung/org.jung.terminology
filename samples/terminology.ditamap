@@ -18,7 +18,7 @@
   <topicref href="engine.dita" keys="engine"/>
   <topicref href="electronicStabilityControl.dita" keys="electronicStabilityControl"/>
   <topicref href="exhaustSystem.dita" keys="exhaustSystem"/>
-  <topicref href="frontLight.dita" keys="front-light frontLight"/>
+  <topicref href="headlamp.dita" keys="headlamp"/>
   <topicref href="gasengine.dita" keys="gasengine"/>
   <topicref href="internalCombustionEngine.dita" keys="internalCombustionEngine"/>
   <topicref href="KaessbohrerSetraS110H.dita" termdomain="setra" keys="KaessbohrerSetraS110H"/>
@@ -30,7 +30,6 @@
   <topicref href="petrolEngine.dita" keys="petrolEngine" type="termentry" />
   <topicref href="powertrain.dita" format="dita" type="termentry" keys="powertrain"/>
   <topicref href="rearFogLamp.dita" keys="rearFogLamp"/>
-  <topicref href="rearLight.dita" keys="rearLight"/>
   <topicref href="rearPositionLamp.dita" keys="rearPositionLamp"/>
   <topicref href="reversingLamp.dita" keys="reversingLamp"/>
   <topicref href="transmission.dita" keys="transmission"/>

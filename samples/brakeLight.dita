@@ -3,15 +3,32 @@
 <termentry id="brakeLight">
   <title>Brake Light</title>
   <definition>
-    <definitionText/>
+    <definitionText>Red steady-burning rear lights, brighter than the rear position lamps, are
+      activated when the driver applies the vehicle's brakes. They are required to be fitted in
+      multiples of two, symmetrically at the left and right edges of the rear of every
+      vehicle.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
+      <sourceReference
+        href="https://en.wikipedia.org/wiki/Automotive_lighting#Stop_lamps_.28brake_lights.29"
+        format="html" scope="external">Wikipedia</sourceReference>
     </definitionSource>
   </definition>
   <termBody>
+    <fig>
+      <title>Brake lights on a Porsche 997 GT3 RS</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/0/0c/Orange_997_GT3_RS_rear_view.jpg"
+        width="600px">
+        <alt>By Fernando Cordova from Santiago, chile (Flickr) [CC BY 2.0
+          (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en">
       <termVariant>brake light</termVariant>
+    </fullForm>
+    <fullForm language="en-GB" usage="notRecommended">
+      <termVariant>stop lamp</termVariant>
     </fullForm>
     <fullForm language="de" usage="preferred">
       <termVariant>Rücklicht</termVariant>
@@ -19,7 +36,7 @@
   </termBody>
   <relations>
     <partsOf>
-      <partOf keyref="rearLight"/>
+      <partOf keyref="lighting"/>
     </partsOf>
   </relations>
 </termentry>

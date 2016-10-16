@@ -13,6 +13,14 @@
     </definitionSource>
   </definition>
   <termBody>
+    <fig>
+      <title>Rear position lamp with LEDs of an Audi A6 Avant</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/b/b0/A6_avant_c6_led.jpg"
+        width="600px">
+        <alt>By WikiPimpi at German Wikipedia (Original text: WikiPimpi) (Self-photographed) [Public
+          domain], via Wikimedia Commons</alt>
+      </image>
+    </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en">
       <termVariant>rear position lamp</termVariant>
@@ -35,7 +43,7 @@
   </termBody>
   <relations>
     <partsOf>
-      <partOf keyref="rearLight"/>
+      <partOf keyref="lighting"/>
     </partsOf>
   </relations>
 </termentry>

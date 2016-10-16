@@ -13,17 +13,28 @@
     </definitionSource>
   </definition>
   <termBody>
+    <fig>
+      <title>Reversing lamps lit on a Mercedes-Benz SLR McLaren</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/b/b4/Mercedes_Benz_SLR_McLaren2.jpg"
+        width="600px">
+        <alt>Photo: Harry Wad [CC BY 2.5 (http://creativecommons.org/licenses/by/2.5), GFDL
+          (http://www.gnu.org/copyleft/fdl.html), CC-BY-SA-3.0
+          (http://creativecommons.org/licenses/by-sa/3.0/) or CC BY 2.5
+          (http://creativecommons.org/licenses/by/2.5)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en">
       <termVariant>reversing lamp</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="preferred">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Rückfahrlicht</termVariant>
     </fullForm>
   </termBody>
   <relations>
     <partsOf>
-      <partOf keyref="rearLight"/>
+      <partOf keyref="lighting"/>
     </partsOf>
   </relations>
 </termentry>

@@ -24,9 +24,6 @@
   <fullForm usage="preferred" language="en-GB">
       <termVariant>motor vehicle chassis</termVariant>
     </fullForm>
-    <fullForm language="en-GB" usage="preferred">
-      <termVariant>vehicle frame</termVariant>
-    </fullForm>
     <fullForm language="en-GB" usage="admitted">
       <termVariant>chassis</termVariant>
     </fullForm>

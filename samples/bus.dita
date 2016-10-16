@@ -3,14 +3,20 @@
 <termentry id="bus">
   <title>Bus</title>
   <definition>
-    <definitionText>Coachwork is the body of a motor vehicle (automobile, van, bus or truck)A bus
-      (archaically also omnibus, multibus, motorbus) is a road vehicle designed to carry many
-      passengers.</definitionText>
+    <definitionText>A bus is a road vehicle designed to carry many passengers.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org" format="html">Wikipedia</sourceReference>
+      <sourceReference href="https://en.wikipedia.org/wiki/Bus" format="html" scope="external"
+        >Wikipedia</sourceReference>
     </definitionSource>
   </definition>
   <termBody>
+    <fig>
+      <title>Arriva London's Enviro 400</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/a/ac/Arriva_T6_nearside.JPG"
+        width="600px">
+        <alt>By Arriva436 (Own work) [Public domain], via Wikimedia Commons</alt>
+      </image>
+    </fig>
     <partOfSpeech value="noun"/>
     <fullForm language="en-GB" usage="preferred">
       <termVariant>Bus</termVariant>

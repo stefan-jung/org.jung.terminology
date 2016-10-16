@@ -6,11 +6,18 @@
   <definitionText>A gas engine is an internal combustion engine which runs on a gas fuel, such as
       coal gas, producer gas, biogas, landfill gas or natural gas.</definitionText>
   <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html" scope="external"
+    <sourceReference href="https://en.wikipedia.org/wiki/Gas_engine" format="html" scope="external"
         >Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>
+    <fig>
+      <title>Model of an S type Hartop Gas Engine</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/2/2b/HartopGasEngineModel.JPG"
+        width="600px">
+        <alt>By Simon Speed (Own work) [Public domain], via Wikimedia Commons</alt>
+      </image>
+    </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en">
    <termVariant>gas engine</termVariant>

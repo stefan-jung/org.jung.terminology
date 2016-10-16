@@ -3,12 +3,25 @@
 <termentry id="turnSignal">
   <title>Turn Signal</title>
   <definition>
-    <definitionText/>
+    <definitionText>Turn signals are blinking lamps mounted near the left and right front and rear
+      corners of a vehicle, and sometimes on the sides, activated by the driver on one side of the
+      vehicle at a time to advertise intent to turn or change lanes towards that side. </definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
+      <sourceReference href="https://en.wikipedia.org/wiki/Automotive_lighting#Turn_signals"
+        format="html" scope="external">Wikipedia</sourceReference>
     </definitionSource>
   </definition>
   <termBody>
+    <fig>
+      <title>Vehicle with its left directional signal activated. Front and side turn signals are
+        visibly illuminated.</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/9/91/Turnsignals_On.jpg"
+        width="250px">
+        <alt>By The original uploader was Scheinwerfermann at English Wikipedia (Transferred from
+          en.wikipedia to Commons.) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0
+          (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en">
       <termVariant>turn signal</termVariant>
@@ -19,7 +32,7 @@
   </termBody>
   <relations>
     <partsOf>
-      <partOf keyref="rearLight"/>
+      <partOf keyref="lighting"/>
     </partsOf>
   </relations>
 </termentry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<termentry id="headlamp">
+  <title>Headlamp</title>
+  <definition>
+    <definitionText>A headlamp is a lamp attached to the front of a vehicle to light the road
+      ahead.</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Headlamp" format="html" scope="external"
+        >Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <fig>
+      <title>European (top) and US (bottom) headlamp configurations on a Citroën DS</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/4/44/Citroen_Headlamps_-_Euro_vs_US.jpg"
+        width="300px">
+        <alt>By 1974_Citroen_DS23_Pallas.jpg: PLawrence99cx 1969_Citroen_ID_19.jpg: PLawrence99cx
+          derivative work: Oosh [Public domain], via Wikimedia Commons</alt>
+      </image>
+    </fig>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en">
+      <termVariant>headlamp</termVariant>
+    </fullForm>
+  </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="lighting"/>
+    </partsOf>
+  </relations>
+</termentry>
