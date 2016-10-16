@@ -28,7 +28,6 @@
                 <!-- The context text() matches the text content of all nodes. -->
                 <sch:rule context="text()">
                     <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
-                    <xsl:variable name="termLanguageCode" select="doctales:getLanguageCodeFromLanguageRegionCode($termLanguageRegionCode)"/>
                     <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
                     <xsl:variable name="notRecommendedTermUppercased"><xsl:value-of select="concat(upper-case(substring($notRecommendedTerm,1,1)), substring($notRecommendedTerm, 2), ' '[not(last())])"/></xsl:variable>
                     <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, 'sqfGroup', generate-id())"/>
