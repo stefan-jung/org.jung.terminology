@@ -3959,6 +3959,445 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>5</Integer>
+										</field>
+										<field name="value">
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/webhelp-responsive</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/webhelp-responsive</String>
+												</field>
+												<field name="transtype">
+													<String>webhelp</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<String></String>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<String>file:/home/stefan/workspace/org.doctales.terminology/framework/webhelp-skin/doctales/skin-responsive.css</String>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<String>file:/home/stefan/workspace/org.doctales.terminology/framework/webhelp-skin/doctales/skin-responsive.css</String>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
+												<field name="additionalAntArgs">
+													<String></String>
+												</field>
+												<field name="buildTarget">
+													<String></String>
+												</field>
+												<field name="buildFilePath">
+													<String></String>
+												</field>
+												<field name="ditaParams">
+													<list>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>webhelp-responsive</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.copycss</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>yes</String>
+															</field>
+															<field name="defaultValue">
+																<String>no</String>
+															</field>
+															<field name="type">
+																<Integer>4</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.css</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${frameworkDir(DOCTALES Terminology Map)}/webhelp-skin/doctales/skin-responsive.css</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.dita.locale</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>en</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>0</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.hdf</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>/home/stefan/workspace/org.doctales.terminology/hdf/hdf.xml</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.xhtml.classattr</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>yes</String>
+															</field>
+															<field name="defaultValue">
+																<String>yes</String>
+															</field>
+															<field name="type">
+																<Integer>4</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.default.language</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${ask('Termbrowser - Choose language of labels', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
+															</field>
+															<field name="defaultValue">
+																<String>en-us</String>
+															</field>
+															<field name="type">
+																<Integer>0</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>en-us</String>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String></String>
+																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>document.locale</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>en</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>webhelp.language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>en</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>webhelp.show.top.menu</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>no</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+													</list>
+												</field>
+												<field name="jvmArgs">
+													<String>-Xmx384m</String>
+												</field>
+												<field name="useCustomJavaHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customJavaHomeDir">
+													<String></String>
+												</field>
+												<field name="useCustomANTHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customANTHomeDir">
+													<String></String>
+												</field>
+												<field name="workingDir">
+													<null/>
+												</field>
+												<field name="showConsoleAlways">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="advancedOptionsMap">
+													<null/>
+												</field>
+												<field name="name">
+													<String>Termbrowser Responsive</String>
+												</field>
+												<field name="baseURL">
+													<null/>
+												</field>
+												<field name="footerURL">
+													<null/>
+												</field>
+												<field name="fOPMethod">
+													<null/>
+												</field>
+												<field name="fOProcessorName">
+													<null/>
+												</field>
+												<field name="headerURL">
+													<null/>
+												</field>
+												<field name="inputXSLURL">
+													<null/>
+												</field>
+												<field name="inputXMLURL">
+													<null/>
+												</field>
+												<field name="defaultScenario">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="isFOPPerforming">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="type">
+													<String>DITAMAP</String>
+												</field>
+												<field name="saveAs">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="openInBrowser">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="outputFile">
+													<null/>
+												</field>
+												<field name="outputResource">
+													<null/>
+												</field>
+												<field name="openOtherLocationInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="locationToOpenInBrowserURL">
+													<String></String>
+												</field>
+												<field name="openInEditor">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInHTMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInXMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInSVGPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInResultSetPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useXSLTInput">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="xsltParams">
+													<list/>
+												</field>
+												<field name="cascadingStylesheets">
+													<String-array/>
+												</field>
+												<field name="xslTransformer">
+													<String>DITA-OT</String>
+												</field>
+												<field name="extensionURLs">
+													<String-array>
+														<String>${dita.dir.url}/lib/*.jar</String>
+														<String>${dita.dir.url}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
+														<String>${dita.dir.url}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
+														<String>${dita.dir.url}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
+														<String>${oxygenHome}/lib/*.jar</String>
+													</String-array>
+												</field>
+											</ditaScenario>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>validationScenarios</String>
 										</field>
 										<field name="index">
