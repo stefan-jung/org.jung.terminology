@@ -20,32 +20,30 @@ The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authori
   * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
 * [Usage](#usage)
   * [DITA Termchecker](#dita-termchecker)
-* [Contributors](#contributors)
+* [Contribution](#contribution)
 
 
 ### Features
 
-- Specialized DITA `termentry` topic
-- &lt;oXygen/&gt; XML framework with author mode stylesheet
-- Transformation scenario based on `com.oxygenxml.webhelp` for generating a terminology browser
-- Transformation type `termchecker-dita` and transformation scenario for generating a DITA terminology checker
-- Transformation type `termchecker-xliff` and transformation scenario for generating an XLIFF terminology checker
-- Transformation type `tbx-min` and transformation scenario for exporting the terminology to TBX-Min for your Language Service Provider (LSP)
-- Transformation type `tbx-basic` and transformation scenario for exporting the terminology to TBX-Basic for your Language Service Provider (LSP)
+- Create and change terms easily using the specialized DITA `termentry` topic
+- Enhanced authoring experience thanks to an &lt;oXygen/&gt; XML framework with author mode stylesheet
+- Navigate through the terminology database with a classic or responsive terminology browser
+- Check DITA or XLIFF files with a Schematron based terminology checker
+- Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP)
 
 
 ### Installation
 
 You can install the plugin to the DITA-OT with the following command:
 
-```bash
+```shell
 dita -install https://github.com/doctales/org.doctales.terminology/archive/master.zip
 ```
 
 
-### Install Framework
+### Install &lt;oXygen/&gt; Framework
 
-This step is optional. To install the &lt;oXygen/&gt; XML framework, proceed as follows:
+If you use the &lt;oXygen/&gt; XML editor, you should install the framework. The framework helps you editing and publishing the terminology.
 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
@@ -53,8 +51,7 @@ This step is optional. To install the &lt;oXygen/&gt; XML framework, proceed as 
    ![framework](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/framework.png)
 
 
-**org.doctales.terminology** ships an &lt;oXygen/&gt; XML framework that contains an &lt;oXygen/&gt; XML author mode stylesheet.
-The stylesheet simplifies authoring `<termentry>` topics. The stylesheet is available in the following languages:
+The framework contains &lt;oXygen/&gt; XML author mode stylesheets that simplify authoring `<termentry>` topics. The stylesheet is available in the following languages:
 
 - English
 - German
@@ -171,7 +168,17 @@ The deprecated and the allowed term notations are defined in the `truck.dita` fi
 > dita -i terminology.ditamap -f termchecker-dita -Dargs.language=en-GB -o termchecker-dita
 > ```
 
-### Contributors
+### Contribution
+
+If you want to support **org.doctales.terminology**, you can:
+
+* Use the plugin
+* Give feedback and submit bug reports
+* Translate frameworks and term samples
+* Send pull requests
+* Ask for professional support and training
+
+People that contribute to **org.doctales.terminology**:
 
 * [Stefan Eike](https://de.linkedin.com/in/stefan-eike-a02a9939) - Development, DITA Specialization, Content Design
 * [Sascha Nothofer](https://de.linkedin.com/in/sascha-nothofer-32563811a) - Content Design
