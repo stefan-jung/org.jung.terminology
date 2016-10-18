@@ -22,14 +22,14 @@
   <topicref href="headlamp.dita" keys="headlamp" type="termentry"/>
   <topicref href="internalCombustionEngine.dita" keys="internalCombustionEngine" type="termentry"/>
   <topicref href="kaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H"
-    format="dita" type="termentry"/>
+    type="termentry"/>
   <topicref href="ladderFrame.dita" keys="ladderFrame" type="termentry"/>
   <topicref href="lighting.dita" keys="lighting" type="termentry"/>
   <topicref href="motorCycle.dita" termdomain="private sport" keys="motorCycle" type="termentry"/>
-  <topicref href="motorHome.dita" format="dita" type="termentry" keys="motorHome"/>
+  <topicref href="motorHome.dita" type="termentry" keys="motorHome"/>
   <topicref href="motorVehicle.dita" keys="motorVehicle" type="termentry" />
   <topicref href="petrolEngine.dita" keys="petrolEngine" type="termentry" />
-  <topicref href="powertrain.dita" format="dita" type="termentry" keys="powertrain"/>
+  <topicref href="powertrain.dita" type="termentry" keys="powertrain"/>
   <topicref href="rearFogLamp.dita" keys="rearFogLamp" type="termentry"/>
   <topicref href="rearPositionLamp.dita" keys="rearPositionLamp" type="termentry"/>
   <topicref href="reversingLamp.dita" keys="reversingLamp" type="termentry"/>
@@ -38,8 +38,6 @@
   <topicref href="turnSignal.dita" keys="turnSignal" type="termentry"/>
   <topicref href="unitizedBody.dita" keys="unitizedBody" type="termentry"/>
   <topicref href="vehicle.dita" keys="vehicle" type="termentry"/>
-  <topicref href="vehicleDynamicsControl.dita" format="dita" type="termentry"
-    keys="vehicleDynamicsControl"/>
   <topicref href="beetle.dita" keys="beetle" termdomain="vw"/>
   <topicref href="wheel.dita" keys="wheel"/>
   <topicref href="terminology-ssm.ditamap" format="ditamap" type="subjectScheme"/>
