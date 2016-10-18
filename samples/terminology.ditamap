@@ -21,7 +21,7 @@
   <topicref href="gasengine.dita" keys="gasengine"/>
   <topicref href="headlamp.dita" keys="headlamp"/>
   <topicref href="internalCombustionEngine.dita" keys="internalCombustionEngine"/>
-  <topicref href="KaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H"
+  <topicref href="kaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H"
     format="dita" type="termentry"/>
   <topicref href="ladderFrame.dita" keys="ladderFrame"/>
   <topicref href="lighting.dita" keys="lighting"/>
