@@ -85,5 +85,20 @@
 }
 
 *[class~="map/topicref"]:before(3) {
+    content: "@termdomain";
+    .uiElementLabel();
+}
+
+*[class~="map/topicref"]:before(2) {
+    content:
+    oxy_textfield(
+        edit, "@termdomain", 
+        columns, 40
+    );
+    .uiElement();
+    padding-left: 0.5em;
+}
+
+*[class~="map/topicref"]:before(1) {
     .separator();
 }
