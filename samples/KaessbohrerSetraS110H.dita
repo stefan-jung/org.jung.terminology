@@ -21,8 +21,8 @@
     </fullForm>
  </termBody>
   <relations>
-    <hyponyms>
-      <hyponym keyref="bus"/>
-    </hyponyms>
+    <instancesOf>
+      <instanceOf keyref="bus"/>
+    </instancesOf>
   </relations>
 </termentry>
