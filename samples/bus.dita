@@ -30,7 +30,6 @@
       <hypernym keyref="motorVehicle"/>
     </hypernyms>
     <relatedTerms>
-      <relatedTerm keyref="bus"/>
       <relatedTerm keyref="truck"/>
       <relatedTerm keyref="car"/>
     </relatedTerms>
