@@ -2,26 +2,27 @@
 <!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
 <termmap id="terminology">
   <title>Terminology</title>
-  <topicref href="axle.dita" keys="axle"/>
+  <topicref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
   <topicref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem"/>
+  <topicref href="axle.dita" keys="axle"/>
   <topicref href="brakeLight.dita" keys="brakeLight"/>
   <topicref href="bus.dita" keys="bus" termdomain="persons public"/>
+  <topicref href="car.dita" keys="car" termdomain="persons private"/>
   <topicref href="classBMotorHome.dita" keys="classBMotorHome" termdomain="private vacation"/>
   <topicref href="classBPlusMotorHome.dita" keys="classBPlusMotorHome" termdomain="private vacation"/>
   <topicref href="classCMotorHome.dita" keys="classCMotorHome" termdomain="private vacation"/>
-  <topicref href="car.dita" keys="car" termdomain="persons private"/>
   <topicref href="chassis.dita" keys="chassis" type="termentry" />
   <topicref href="coachwork.dita" keys="coachwork" type="termentry" />
   <topicref href="dieselEngine.dita" keys="dieselEngine" type="termentry" />
-  <topicref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
   <topicref href="drivetrain.dita" keys="drivetrain"/>
   <topicref href="engine.dita" keys="engine"/>
   <topicref href="electronicStabilityControl.dita" keys="electronicStabilityControl"/>
   <topicref href="exhaustSystem.dita" keys="exhaustSystem"/>
-  <topicref href="headlamp.dita" keys="headlamp"/>
   <topicref href="gasengine.dita" keys="gasengine"/>
+  <topicref href="headlamp.dita" keys="headlamp"/>
   <topicref href="internalCombustionEngine.dita" keys="internalCombustionEngine"/>
-  <topicref href="KaessbohrerSetraS110H.dita" termdomain="setra" keys="KaessbohrerSetraS110H"/>
+  <topicref href="KaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H"
+    format="dita" type="termentry"/>
   <topicref href="ladderFrame.dita" keys="ladderFrame"/>
   <topicref href="lighting.dita" keys="lighting"/>
   <topicref href="motorCycle.dita" termdomain="private sport" keys="motorCycle"/>
@@ -37,6 +38,8 @@
   <topicref href="turnSignal.dita" keys="turnSignal"/>
   <topicref href="unitizedBody.dita" keys="unitizedBody"/>
   <topicref href="vehicle.dita" keys="vehicle"/>
+  <topicref href="vehicleDynamicsControl.dita" format="dita" type="termentry"
+    keys="vehicleDynamicsControl"/>
   <topicref href="beetle.dita" keys="beetle" termdomain="vw"/>
   <topicref href="wheel.dita" keys="wheel"/>
   <topicref href="terminology-ssm.ditamap" format="ditamap" type="termentry"/>

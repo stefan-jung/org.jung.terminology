@@ -5,19 +5,34 @@
  <definition>
   <definitionText>Lighting or illumination is the deliberate use of light to achieve a practical or
       aesthetic effect. Lighting includes the use of both artificial light sources like lamps and
-      light fixtures, as well as natural illumination by capturing daylight.</definitionText>
+      light fixtures, as well as natural illumination by capturing daylight. The term lightning
+      system include all necessary parts to provide the vehicle lightning. </definitionText>
   <definitionSource>
     <sourceReference href="https://en.wikipedia.org/wiki/Lighting" format="html" scope="external"
         >Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>
+    <fig>
+      <title>Circuit diagram for a europan lightning system</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/4/48/Automotive_illumination_shematics_eu.svg"
+        width="600px">
+        <alt>https://creativecommons.org/licenses/by-sa/3.0/deed.de</alt>
+      </image>
+    </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en">
    <termVariant>lighting</termVariant>
   </fullForm>
+    <fullForm language="en-GB" usage="preferred">
+      <termVariant>lightning system</termVariant>
+    </fullForm>
     <fullForm language="de" usage="preferred">
       <termVariant>Beleuchtung</termVariant>
+    </fullForm>
+    <fullForm language="de-DE" usage="preferred">
+      <termVariant>Beleuchtungssystem</termVariant>
     </fullForm>
  </termBody>
 </termentry>
