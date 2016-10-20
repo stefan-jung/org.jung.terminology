@@ -9,6 +9,7 @@
 @admittedColor: #feffbe;
 @notRecommendedColor: #ffbfbf;
 @buttonTransparency: 'true';
+@highlightBackgroundColor: #dbefff;
 
 // Icons
 @deleteIcon: '../icons/delete_12.png';
@@ -175,24 +176,24 @@
     width: 100%;
 }
 
-*[class~="topic/link"][href]:before,
-*[class~="topic/xref"][href]:before {
-    link: attr(href);
-    -ah-link: attr(href);  
+*[class~="topic/xref"][keyref]:before(3) {
+    content: " [";
 }
 
-*[class~="topic/link"][href]:before,
-*[class~="topic/xref"][href]:before {
-    content:url("../../img/link.png");
-}
-
-*[keyref]:before,
-*[keyref][href]:before{
+*[class~="topic/xref"][keyref]:before(2) {
     link: oxy_concat("", attr(keyref, keyref));
-    content:url("../../img/link.png") "[" attr(keyref) "]";
-    text-decoration:underline;
+    content: url("../icons/link_12.png") " " attr(keyref);
+    background-color: @highlightBackgroundColor;
+    font-size: 0.9em;
 }
 
-*[keyref]:empty {
-    content: oxy_label(text, oxy_getSomeText(oxy_link-text(), 150, true), background-color, rgb(240, 240, 240));
+*[class~="topic/xref"][keyref]:before(1) {
+    content: " ";
+}
+
+*[class~="topic/xref"][keyref] {
+}
+
+*[class~="topic/xref"][keyref]:after {
+    content: "] ";
 }

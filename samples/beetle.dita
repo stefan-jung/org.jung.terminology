@@ -3,14 +3,12 @@
 <termentry id="beetle">
  <title>Volkswagen Beetle</title>
  <definition>
-  <definitionText>The Volkswagen Beetle is a two-door, four passenger, rear-engine economy car
-   manufactured and marketed by German automaker Volkswagen (VW) from 1938 until
-   2003.</definitionText>
-  <definitionSource>
-   <sourceReference href="https://en.wikipedia.org/wiki/Volkswagen_Beetle" format="html"
-    scope="external">Wikipedia</sourceReference>
-  </definitionSource>
- </definition>
+    <definitionText>The Volkswagen Beetle is a two-door, four passenger, rear-engine economy car manufactured and marketed by German automaker Volkswagen (VW) from 1938 until 2003.</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Volkswagen_Beetle" format="html"
+        scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
  <termBody>
   <domains>
    <domain value="VW"/>
