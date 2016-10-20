@@ -16,7 +16,7 @@
   
   <xsl:template match="*[contains(@class, ' termmap/termmap ')]">
     <xsl:copy>
-      <xsl:apply-templates select="*[contains(@class, ' map/topicref ')]">
+      <xsl:apply-templates select="*[contains(@class, ' termmap/termref ')]">
         <xsl:sort select="@keys"/>
       </xsl:apply-templates>
     </xsl:copy>

@@ -886,7 +886,7 @@
 																	</entry>
 																	<entry>
 																		<String>script</String>
-																		<String>/xsl/sortTopicrefs.xsl</String>
+																		<String>/xsl/sortTermrefs.xsl</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
