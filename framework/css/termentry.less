@@ -728,10 +728,9 @@
 
 *[class~="termentry/termNotation"]:before(2) {
     content:
-    oxy_combobox( 
-        edit, '@termdomain',
-        editable, false,
-        columns, 20,
+    oxy_textfield(
+        edit, "@termdomain", 
+        columns, 50
     );
     .uiElement();
     padding-left: 1.0em;
