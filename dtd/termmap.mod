@@ -18,6 +18,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % termmap               "termmap"                                              >
+<!ENTITY % termref               "termref"                                              >
 
 
 
@@ -37,7 +38,16 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
 
 <!--doc:The <termmap> element is the root element of a terminology map. A term map connects the termentry elements and forms a terminology database.
 Category: Termmap elements-->
-<!ELEMENT termmap                    %map.content;>
+<!ENTITY % termmap.content
+                                    "((%title;)?,
+                                      (%topicmeta;)?,
+                                      (%anchor; |
+                                       %data.elements.incl; |
+                                       %navref; |
+                                       %reltable; |
+                                       %termref;)*)
+                                    ">
+<!ELEMENT termmap                    %termmap.content;>
 <!ATTLIST termmap                    %map.attributes;
                                      %arch-atts;
                                      domains
@@ -45,9 +55,19 @@ Category: Termmap elements-->
                                            "&included-domains;">
 
 
+<!--                                 LONG NAME: Term Reference                        -->
+
+<!--doc:The <termref> element is a reference to a term topic.
+Category: Termmap elements-->
+<!ELEMENT  termref %topicref.content;>
+<!ATTLIST  termref %topicref.attributes;>
+
+
+
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
 <!-- ================================================================================ -->
-<!ATTLIST termmap               %global-atts;   class CDATA "- map/map termmap/termmap ">
+<!ATTLIST termmap          %global-atts;   class CDATA "- map/map termmap/termmap ">
+<!ATTLIST termref          %global-atts;   class CDATA "- map/topicref termmap/termref ">
 
 <!-- ================================= End of file ================================== -->
