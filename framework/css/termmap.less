@@ -19,55 +19,55 @@
         transparent, @buttonTransparency,
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.topicref')
+            oxy_action(id, 'doctales.add.termref')
         )
     );
 }
 
-*[class~="map/topicref"] {
+*[class~="termmap/termref"] {
     .mainBlock();
 }
 
-*[class~="map/topicref"][format] {
+*[class~="termmap/termref"][format] {
     display: none;
 }
 
-*[class~="map/topicref"]:before(12) {
+*[class~="termmap/termref"]:before(12) {
     .header();
     content:
     oxy_buttonGroup(
-        label, '${i18n(doctales.map.topicref)}',
+        label, '${i18n(doctales.map.termref)}',
         transparent, @buttonTransparency,
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.topicref')
+            oxy_action(id, 'doctales.add.termref')
         )
     );
 }
 
-*[class~="map/topicref"]:before(11) {
+*[class~="termmap/termref"]:before(11) {
     .separator();
 }
 
-*[class~="map/topicref"]:before(10) {
+*[class~="termmap/termref"]:before(10) {
     .closeButton();
 }
 
-*[class~="map/topicref"]:before(9) {
+*[class~="termmap/termref"]:before(9) {
     .separator();
 }
 
-*[class~="map/topicref"]:before(8) {
+*[class~="termmap/termref"]:before(8) {
     .separator();
 }
 
-*[class~="map/topicref"]:before(7) {
+*[class~="termmap/termref"]:before(7) {
     content: "href";
     .uiElementLabel();
     .link();
 }
 
-*[class~="map/topicref"]:before(6) {
+*[class~="termmap/termref"]:before(6) {
     content:
     oxy_textfield(
           edit, '@href',
@@ -77,12 +77,12 @@
     padding-left: 0.5em;
 }
 
-*[class~="map/topicref"]:before(5) {
+*[class~="termmap/termref"]:before(5) {
     content: "keys";
     .uiElementLabel();
 }
 
-*[class~="map/topicref"]:before(4) {
+*[class~="termmap/termref"]:before(4) {
     content:
     oxy_textfield(
           edit, '@keys',
@@ -92,12 +92,12 @@
     padding-left: 0.5em;
 }
 
-*[class~="map/topicref"]:before(3) {
+*[class~="termmap/termref"]:before(3) {
     content: "termdomain";
     .uiElementLabel();
 }
 
-*[class~="map/topicref"]:before(2) {
+*[class~="termmap/termref"]:before(2) {
     content:
     oxy_textfield(
         edit, "@termdomain", 
@@ -107,6 +107,6 @@
     padding-left: 0.5em;
 }
 
-*[class~="map/topicref"]:before(1) {
+*[class~="termmap/termref"]:before(1) {
     .separator();
 }

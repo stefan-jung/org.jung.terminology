@@ -31,14 +31,14 @@
         <val lang="de_DE">Lösche das aktuelle Element.</val>
     </key>
     
-    <!-- topicref -->
-    <key value="doctales.add.topicref">
-        <val lang="en_US">Add topic reference (&lt;topicref&gt;)</val>
-        <val lang="de_DE">Topic-Referenz (&lt;topicref&gt;) einfügen</val>
+    <!-- termref -->
+    <key value="doctales.add.termref">
+        <val lang="en_US">Add term reference (&lt;termref&gt;)</val>
+        <val lang="de_DE">Term-Referenz (&lt;termref&gt;) einfügen</val>
     </key>
-    <key value="doctales.sort.topicrefs">
-        <val lang="en_US">Sort topic references</val>
-        <val lang="de_DE">Topic-Referenzen sortieren</val>
+    <key value="doctales.sort.termrefs">
+        <val lang="en_US">Sort term references</val>
+        <val lang="de_DE">Term-Referenzen sortieren</val>
     </key>
 
     <!-- definition -->
@@ -792,9 +792,9 @@
         <val lang="de_DE">Links auf verwandte Begriffe löschen</val>
     </key>
     
-    <key value="doctales.map.topicref">
-        <val lang="en_US">Topic Reference</val>
-        <val lang="de_DE">Topic-Referenz</val>
+    <key value="doctales.map.termref">
+        <val lang="en_US">Term Reference</val>
+        <val lang="de_DE">Term-Referenz</val>
     </key>
 
     <key value="doctales.termVariant">

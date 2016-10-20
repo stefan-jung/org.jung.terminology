@@ -19,8 +19,7 @@
   <termref href="coachwork.dita" keys="coachwork" type="termentry"/>
   <termref href="dieselEngine.dita" keys="dieselEngine" type="termentry"/>
   <termref href="drivetrain.dita" keys="drivetrain" type="termentry"/>
-  <termref href="electronicStabilityControl.dita" keys="electronicStabilityControl"
-    type="termentry"/>
+  <termref href="electronicStabilityControl.dita" keys="electronicStabilityControl" type="termentry"/>
   <termref href="engine.dita" keys="engine" type="termentry"/>
   <termref href="exhaustSystem.dita" keys="exhaustSystem" type="termentry"/>
   <termref href="gasengine.dita" keys="gasengine" type="termentry"/>
@@ -44,5 +43,4 @@
   <termref href="unitizedBody.dita" keys="unitizedBody" type="termentry"/>
   <termref href="vehicle.dita" keys="vehicle" type="termentry"/>
   <termref href="wheel.dita" keys="wheel"/>
-  <topicref href="terminology-ssm.ditamap" format="ditamap" type="subjectScheme"/>
 </termmap>
