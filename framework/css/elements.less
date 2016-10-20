@@ -174,3 +174,25 @@
     display: block;
     width: 100%;
 }
+
+*[class~="topic/link"][href]:before,
+*[class~="topic/xref"][href]:before {
+    link: attr(href);
+    -ah-link: attr(href);  
+}
+
+*[class~="topic/link"][href]:before,
+*[class~="topic/xref"][href]:before {
+    content:url("../../img/link.png");
+}
+
+*[keyref]:before,
+*[keyref][href]:before{
+    link: oxy_concat("", attr(keyref, keyref));
+    content:url("../../img/link.png") "[" attr(keyref) "]";
+    text-decoration:underline;
+}
+
+*[keyref]:empty {
+    content: oxy_label(text, oxy_getSomeText(oxy_link-text(), 150, true), background-color, rgb(240, 240, 240));
+}

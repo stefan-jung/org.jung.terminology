@@ -733,23 +733,10 @@
     padding-left: 1.0em;
 }
 
-*[class~="termentry/definitionText"]:before(10) {
-    content: "${i18n(doctales.definitionText)}";
-    .header();
-}
-
-*[class~="termentry/definitionText"]:before(1) {
-    content:
-    oxy_textArea(
-        edit, '#content',
-        contentType, 'text/xml',
-        rows, 5,
-        columns, 65
-    );
-}
-
 *[class~="termentry/definitionText"] {
-    .mainBlock();
+    visibility: visible;
+    padding: 0.3em;
+    font-size: 0.9em;
 }
 
 *[class~="termentry/termNotation"] {
