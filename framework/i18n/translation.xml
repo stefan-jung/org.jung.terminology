@@ -546,6 +546,23 @@
         <val lang="en_US">Delete Term Relations (&lt;relations&gt;)</val>
         <val lang="de_DE">Termbeziehungen (&lt;relations&gt;) löschen</val>
     </key>
+    <key value="doctales.add.termRelation">
+        <val lang="en_US">Add Term Relation</val>
+        <val lang="de_DE">Termbeziehung einfügen</val>
+    </key>
+    <key value="doctales.add.termRelation_description">
+        <val lang="en_US">Add Term Relation</val>
+        <val lang="de_DE">Termbeziehung einfügen</val>
+    </key>
+    <key value="doctales.open.termRelation">
+        <val lang="en_US">Open Term Relation</val>
+        <val lang="de_DE">Termbeziehung öffnen</val>
+    </key>
+    <key value="doctales.open.termRelation_description">
+        <val lang="en_US">Open Term Relation</val>
+        <val lang="de_DE">Termbeziehung öffnen</val>
+    </key>
+    
 
     <!-- antonyms -->
     <key value="doctales.terminology.antonyms">

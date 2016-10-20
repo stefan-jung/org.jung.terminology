@@ -32,7 +32,7 @@
     display: none;
 }
 
-*[class~="map/topicref"]:before(10) {
+*[class~="map/topicref"]:before(12) {
     .header();
     content:
     oxy_buttonGroup(
@@ -45,8 +45,16 @@
     );
 }
 
-*[class~="map/topicref"]:before(9) {
+*[class~="map/topicref"]:before(11) {
+    .separator();
+}
+
+*[class~="map/topicref"]:before(10) {
     .closeButton();
+}
+
+*[class~="map/topicref"]:before(9) {
+    .separator();
 }
 
 *[class~="map/topicref"]:before(8) {
@@ -54,7 +62,7 @@
 }
 
 *[class~="map/topicref"]:before(7) {
-    content: "@href";
+    content: "href";
     .uiElementLabel();
     .link();
 }
@@ -70,7 +78,7 @@
 }
 
 *[class~="map/topicref"]:before(5) {
-    content: "@keys";
+    content: "keys";
     .uiElementLabel();
 }
 
@@ -85,7 +93,7 @@
 }
 
 *[class~="map/topicref"]:before(3) {
-    content: "@termdomain";
+    content: "termdomain";
     .uiElementLabel();
 }
 

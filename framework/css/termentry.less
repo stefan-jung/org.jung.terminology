@@ -157,7 +157,7 @@
     content:
     oxy_textfield(
         edit, '#text',
-        columns, 40
+        columns, 60
     );
 }
 
@@ -233,7 +233,7 @@
     content:
     oxy_textfield(
         edit, '#text',
-        columns, 40
+        columns, 60
     );
 }
 
@@ -315,7 +315,7 @@
     content:
     oxy_textfield(
           edit, '#text',
-          columns, 40
+          columns, 60
     )"\A";
 }
 
@@ -804,7 +804,6 @@
         edit, '#text',
         columns, 50
     );
-    .uiElement();
 }
 
 *[class~="termentry/termVariant"] {
@@ -813,7 +812,7 @@
 }
 
 *[class~="termentry/termVariant"][case]:after(2) {
-    content: "${i18n(doctales.case)}";
+    content: "\A${i18n(doctales.case)}";
     .uiElementLabel();
 }
 
@@ -991,6 +990,10 @@
 }
 
 *[class~="termentry/termRelation"]:before(9) {
+    .separator();
+}
+
+*[class~="termentry/termRelation"]:before(8) {
     content:
     oxy_editor(
         type, combo,
@@ -1002,20 +1005,11 @@
     margin-left: 0.5em;
 }
 
-*[class~="termentry/termRelation"]:before(8) {
-    content: ' ';
-    color: transparent;
-    background-image: url(@linkIcon);
-    background-repeat: no-repeat;
-    background-position: center; 
-    width: 1.2em;
-    margin-left: 1.5em;
-    pointer-events: none;
-    cursor: default;
-    link: oxy_concat("", attr(keyref, keyref));
+*[class~="termentry/termRelation"][keyref]:before(7) {
+    .openKeyrefButton();
 }
 
-*[class~="termentry/termRelation"]:before(7) {
+*[class~="termentry/termRelation"]:before(6) {
     .deleteButton();
 }
 

@@ -1770,9 +1770,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;antonyms>
-  &lt;antonym/>
-&lt;/antonyms></String>
+																		<String>&lt;antonyms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -1797,9 +1795,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;antonyms>
-    &lt;antonym/>
-  &lt;/antonyms>
+  &lt;antonyms/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -1896,9 +1892,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;partsOf>
-  &lt;partOf/>
-&lt;/partsOf></String>
+																		<String>&lt;partsOf/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -1923,9 +1917,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;partsOf>
-    &lt;partOf/>
-  &lt;/partsOf>
+  &lt;partsOf/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -1950,9 +1942,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;partsOf>
-  &lt;partOf/>
-&lt;/partsOf></String>
+																		<String>&lt;partsOf/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2022,9 +2012,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hypernyms>
-  &lt;hypernym/>
-&lt;/hypernyms></String>
+																		<String>&lt;hypernyms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2049,9 +2037,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;hypernyms>
-    &lt;hypernym/>
-  &lt;/hypernyms>
+  &lt;hypernyms/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -2076,9 +2062,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hypernyms>
-  &lt;hypernym/>
-&lt;/hypernyms></String>
+																		<String>&lt;hypernyms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2148,9 +2132,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hyponyms>
-  &lt;hyponym/>
-&lt;/hyponyms></String>
+																		<String>&lt;hyponyms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2175,9 +2157,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;hyponyms>
-    &lt;hyponym/>
-  &lt;/hyponyms>
+  &lt;hyponyms/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -2202,9 +2182,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hyponyms>
-  &lt;hyponym/>
-&lt;/hyponyms></String>
+																		<String>&lt;hyponyms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2274,9 +2252,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;relatedTerms>
-  &lt;relatedTerm/>
-&lt;/relatedTerms></String>
+																		<String>&lt;relatedTerms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2301,9 +2277,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;relatedTerms>
-    &lt;relatedTerm/>
-  &lt;/relatedTerms>
+  &lt;relatedTerms/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -2328,9 +2302,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;relatedTerms>
-  &lt;relatedTerm/>
-&lt;/relatedTerms></String>
+																		<String>&lt;relatedTerms/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -4095,23 +4067,10 @@
 																<String></String>
 															</field>
 															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>fragment</String>
-																		<String>&lt;antonym/></String>
-																	</entry>
-																	<entry>
-																		<String>insertLocation</String>
-																		<String>ancestor-or-self::*[contains(@class, ' termentry/antonyms ')][1]</String>
-																	</entry>
-																	<entry>
-																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
-																	</entry>
-																</serializableOrderedMap>
+																<serializableOrderedMap/>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -4222,23 +4181,10 @@
 																<String></String>
 															</field>
 															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>fragment</String>
-																		<String>&lt;hypernym/></String>
-																	</entry>
-																	<entry>
-																		<String>insertLocation</String>
-																		<String>ancestor-or-self::*[contains(@class, ' termentry/hypernyms ')][1]</String>
-																	</entry>
-																	<entry>
-																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
-																	</entry>
-																</serializableOrderedMap>
+																<serializableOrderedMap/>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -4292,23 +4238,10 @@
 																<String></String>
 															</field>
 															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>fragment</String>
-																		<String>&lt;hyponym/></String>
-																	</entry>
-																	<entry>
-																		<String>insertLocation</String>
-																		<String>ancestor-or-self::*[contains(@class, ' termentry/hyponyms ')][1]</String>
-																	</entry>
-																	<entry>
-																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
-																	</entry>
-																</serializableOrderedMap>
+																<serializableOrderedMap/>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -4362,23 +4295,10 @@
 																<String></String>
 															</field>
 															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>fragment</String>
-																		<String>&lt;relatedTerm/></String>
-																	</entry>
-																	<entry>
-																		<String>insertLocation</String>
-																		<String>ancestor-or-self::*[contains(@class, ' termentry/relatedTerms ')][1]</String>
-																	</entry>
-																	<entry>
-																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
-																	</entry>
-																</serializableOrderedMap>
+																<serializableOrderedMap/>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -5557,9 +5477,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;instancesOf>
-  &lt;instanceOf/>
-&lt;/instancesOf></String>
+																		<String>&lt;instancesOf/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -5584,9 +5502,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;instancesOf>
-    &lt;instanceOf/>
-  &lt;/instancesOf>
+  &lt;instancesOf/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -5611,9 +5527,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;instancesOf>
-  &lt;instanceOf/>
-&lt;/instancesOf></String>
+																		<String>&lt;instancesOf/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -5677,7 +5591,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/partsOf ')]</String>
+																<String></String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap/>
@@ -5746,6 +5660,129 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>145</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.add.termRelation</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.add.termRelation)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.add.termRelation_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/link_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/link_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap/>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>146</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.open.termRelation</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.open.termRelation)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.open.termRelation_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/link_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/link_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termRelation ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>script</String>
+																		<String>oxy_concat('function doOperation(){ var url = Packages.ro.sync.ecss.dita.DITAAccess.resolveKeyRef(new java.net.URL("',
+       oxy_base-uri(),
+       '"),"',
+       attr(keyref)
+       '", false); Packages.ro.sync.exml.workspace.api.PluginWorkspaceProvider.getPluginWorkspace().open(url); }')</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.JSOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -7205,23 +7242,6 @@
 											<String>validationScenarios</String>
 										</field>
 										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>Terminology</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>validationScenarios</String>
-										</field>
-										<field name="index">
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
@@ -7301,23 +7321,6 @@
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>defaultValidationScenarios</String>
-										</field>
-										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
 											<null/>
@@ -14479,68 +14482,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									<String>DITA</String>
 								</field>
 							</validationScenario>
-							<validationScenario>
-								<field name="pairs">
-									<list>
-										<validationUnit>
-											<field name="validationType">
-												<validationUnitType>
-													<field name="validationInputType">
-														<String>text/xml</String>
-													</field>
-												</validationUnitType>
-											</field>
-											<field name="url">
-												<String>${currentFileURL}</String>
-											</field>
-											<field name="validationEngine">
-												<validationEngine>
-													<field name="engineType">
-														<String>&lt;Default engine></String>
-													</field>
-													<field name="allowsAutomaticValidation">
-														<Boolean>true</Boolean>
-													</field>
-												</validationEngine>
-											</field>
-											<field name="allowAutomaticValidation">
-												<Boolean>true</Boolean>
-											</field>
-											<field name="extensions">
-												<null/>
-											</field>
-											<field name="validationSchema">
-												<validationUnitSchema>
-													<field name="dtdSchemaPublicID">
-														<null/>
-													</field>
-													<field name="schematronPhase">
-														<null/>
-													</field>
-													<field name="type">
-														<Integer>7</Integer>
-													</field>
-													<field name="uri">
-														<String>file:/home/stefan/workspace/org.doctales.terminology/samples/out/termchecker-dita/terminology-DITA-en-GB.sch</String>
-													</field>
-												</validationUnitSchema>
-											</field>
-										</validationUnit>
-									</list>
-								</field>
-								<field name="type">
-									<String>Validation_scenario</String>
-								</field>
-								<field name="name">
-									<String>Terminology</String>
-								</field>
-							</validationScenario>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
 						<list>
 							<String>DITA</String>
-							<String>Terminology</String>
 						</list>
 					</field>
 					<field name="defaultTransformationScenarios">

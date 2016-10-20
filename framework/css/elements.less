@@ -14,6 +14,9 @@
 @deleteIcon: '../icons/delete_12.png';
 @linkIcon: '../icons/link_12.png';
 
+// Font Families
+@font: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
 *[class~="topic/related-links"]:before {
     display: none;
 }
@@ -25,7 +28,7 @@
 .header {
     border-bottom: 1pt solid #767676;
     display: block;
-    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: @font;
     font-size: 8pt;
     font-style: normal;
     font-weight: normal;
@@ -36,7 +39,7 @@
     margin-top: 0.0em !important;
     margin-bottom: 0.2em;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 0.0em !important;
     width: inherit;
     height: 111px !important;
 }
@@ -49,7 +52,7 @@
     margin-right: 0.5em;
     margin-left: 0.5em;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0.2em;
     padding-left: 0.0em;
     padding-right: 0.0em;
     -oxy-display-tags: none;
@@ -77,6 +80,8 @@
     padding-top: 0.1em;
     padding-left: 1.0em;
     font-weight: normal;
+    font-size: 0.8em;
+    font-family: @font;
 }
 
 .indent {
@@ -112,7 +117,7 @@
 }
 
 .closeButton {
-content:
+    content:
     oxy_button(
         action, oxy_action(
             name, 'Delete', 
@@ -128,6 +133,25 @@ content:
     float: left;    
     margin-top: -1.8em !important;
     max-width:-moz-max-content;
+    padding-right: 0.7em;
+}
+
+.openKeyrefButton {
+    content:
+    oxy_button(
+        action, oxy_action(
+        icon, url(@linkIcon), 
+        name, attr(keyref),
+        operation, 'ro.sync.ecss.extensions.commons.operations.JSOperation',
+        arg-script, oxy_concat(
+            'function doOperation(){ var url = Packages.ro.sync.ecss.dita.DITAAccess.resolveKeyRef(new java.net.URL("',
+            oxy_base-uri(),
+            '"),"',
+            attr(keyref)
+            '", false); Packages.ro.sync.exml.workspace.api.PluginWorkspaceProvider.getPluginWorkspace().open(url); }'
+        )
+    ),
+    transparent, true);
 }
 
 .hideContent {
