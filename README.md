@@ -2,37 +2,38 @@
 
 - - - -
 
-org.doctales.terminology 
+org.doctales.terminology
 ========================
 
 [![Build Status](https://travis-ci.org/doctales/org.doctales.terminology.svg?branch=master)](https://travis-ci.org/doctales/org.doctales.terminology)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
-The plugin contains a new DITA `<termentry>` topic type. This topic type represents a single term.
-The plugin also contains an &lt;oXygen/&gt; XML authoring framework. The authoring framework simplifies editing `<termentry>` topics.
 
-**Table of Contents**
-
-* [Features](#features)
-* [Installation](#installation)
-* [Install Framework](#install-framework)
-  * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
-* [Usage](#usage)
-  * [DITA Termchecker](#dita-termchecker)
-* [Contribution](#contribution)
-
-
-### Features
-
-- Create and change terms easily using the specialized DITA `termentry` topic
-- Enhanced authoring experience thanks to an &lt;oXygen/&gt; XML framework with author mode stylesheet
-- Navigate through the terminology database with a classic or responsive terminology browser
+- Create and change terms easily using specialized DITA topics. The new DITA `<termentry>` topic represents a single term, which are linked together to a terminology database using the `<termmap>` map.
+- Author terms easily using an &lt;oXygen/&gt; XML framework with author mode stylesheets, that simplify the editing of `<termentry>` and `<termmap>` topics.
+- Navigate through the terminology database with a classic or responsive terminology browser based on the &lt;oXygen/&gt; webhelp transformation.
 - Check DITA or XLIFF files with a Schematron based terminology checker
 - Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP)
 
+> **Table of Contents**
+>
+> * [Features](#features)
+> * [Installation](#installation)
+> * [Install Framework](#install-framework)
+>   * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
+> * [Usage](#usage)
+>   * [DITA Termbrowser](#dita-termbrowser)
+>   * [DITA Termchecker](#dita-termchecker)
+>   * [TBX](#tbx)
+> * [Contribution](#contribution)
 
 ### Installation
+
+**Prerequisites**
+
+- DITA-OT 2.3 or higher
+- &lt;oXygen/&gt; XML 18 or higher (optional)
 
 You can install the plugin to the DITA-OT with the following command:
 
@@ -43,15 +44,12 @@ dita -install https://github.com/doctales/org.doctales.terminology/archive/maste
 
 ### Install &lt;oXygen/&gt; Framework
 
-If you use the &lt;oXygen/&gt; XML editor, you should install the framework. The framework helps you editing and publishing the terminology.
-
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
 3. Add the directory of the plugin.
    ![framework](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/framework.png)
 
-
-The framework contains &lt;oXygen/&gt; XML author mode stylesheets that simplify authoring `<termentry>` topics. The stylesheet is available in the following languages:
+The framework contains &lt;oXygen/&gt; XML author mode stylesheets that simplify the editing of `<termentry>` and `<termmap>` topics. The stylesheet is available in the following languages:
 
 - English
 - German
@@ -69,8 +67,8 @@ The following code snippet shows the sample file `truck.dita`.
   <definition>
     <definitionText>A truck is a motor vehicle designed to transport cargo.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org/wiki/Truck" 
-                       format="html" 
+      <sourceReference href="https://en.wikipedia.org/wiki/Truck"
+                       format="html"
                        scope="external">
         Wikipedia
       </sourceReference>
@@ -114,14 +112,18 @@ Choose the style **DOCTALES Termentry** in the **Styles** menu.<br/>
 
 ### Usage
 
-**org.doctales.terminology** ships a few sample files, that show you how to create terms and create the various outputs.
+**org.doctales.terminology** ships a few sample files, that show you how to create terms and create the various outputs. To test the transformations, just open the `terminology.ditamap` in the &lt;oXygen/&gt; DITA Maps Manager and run a transformation scenario.
 
-* [DITA Termchecker]
 
+#### DITA Termbrowser
+
+The DITA Termbrowser is based on the &lt;oXygen/&gt; plugin **com.oxygenxml.webhelp** and is used to browse through the terminology database.
+
+![DITA Termbrowser](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/termbrowser.png)
 
 #### DITA Termchecker
 
-The DITA Termchecker is technically a [Schematron](http://www.schematron.com) file, 
+The DITA Termchecker is technically a [Schematron](http://www.schematron.com) file,
 that searches for deprecated terms and replaces deprecated terms with preferred ones.
 
 1. Open the samples DITA map `~/org.doctales.terminology/samples/terminology.ditamap` in the &lt;oXygen/&gt; DITA Maps Manager.
@@ -140,7 +142,7 @@ that searches for deprecated terms and replaces deprecated terms with preferred 
       ![DITA Document Type Association](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/termchecker-dita-document-type.png)<br/>
 4. Create a new DITA topic.
 5. Set the `xml:lang` attribute of the topic to `en-GB` and write the word `truck` somewhere in the topic.<br/>
-   The term violation is indicated with a small lamp icon ![Lamp icon](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/icon-lamp.png). 
+   The term violation is indicated with a small lamp icon ![Lamp icon](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/icon-lamp.png).
    Click on the lamp select the `Replace with an allowed term` action.
    This works both in text and in author mode.<br/>
    ![DITA term replacement author view](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/animations/dita-term-replacement-author-view.gif)<br/>
@@ -161,12 +163,18 @@ The deprecated and the allowed term notations are defined in the `truck.dita` fi
 ```
 
 > **Note**
-> 
+>
 > You can also generate the Schematron file using the `dita` command:
-> 
+>
 > ```bash
 > dita -i terminology.ditamap -f termchecker-dita -Dargs.language=en-GB -o termchecker-dita
 > ```
+
+
+#### TBX
+
+The transformation scenarios `TBX-Basic` and `TBX-Min` transform the terminology to a TBX-Basic/TBX-Min file. A TBX (TermBase eXchange) file is a file format for exchanging terminology. You can send this file to a language service provider to make sure, that the translator uses the correct terminology during translation.
+
 
 ### Contribution
 
