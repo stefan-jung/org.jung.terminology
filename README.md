@@ -10,15 +10,14 @@ org.doctales.terminology
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
 
-- Create and change terms easily using specialized DITA topics. The new DITA `<termentry>` topic represents a single term, which are linked together to a terminology database using the `<termmap>` map.
+- Create and change terms easily using specialized DITA topics. The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
 - Author terms easily using an &lt;oXygen/&gt; XML framework with author mode stylesheets, that simplify the editing of `<termentry>` and `<termmap>` topics.
 - Navigate through the terminology database with a classic or responsive terminology browser based on the &lt;oXygen/&gt; webhelp transformation.
-- Check DITA or XLIFF files with a Schematron based terminology checker
-- Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP)
+- Check DITA or XLIFF files with a Schematron based terminology checker.
+- Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP).
 
 > **Table of Contents**
 >
-> * [Features](#features)
 > * [Installation](#installation)
 > * [Install Framework](#install-framework)
 >   * [Activate &lt;oXygen/&gt; Author Mode Stylesheet](#activate-oxygen-author-mode-stylesheet)
@@ -123,8 +122,7 @@ The DITA Termbrowser is based on the &lt;oXygen/&gt; plugin **com.oxygenxml.webh
 
 #### DITA Termchecker
 
-The DITA Termchecker is technically a [Schematron](http://www.schematron.com) file,
-that searches for deprecated terms and replaces deprecated terms with preferred ones.
+The DITA Termchecker is technically a [Schematron](http://www.schematron.com) file, that searches for not recommended terms and replaces them with preferred synonyms..
 
 1. Open the samples DITA map `~/org.doctales.terminology/samples/terminology.ditamap` in the &lt;oXygen/&gt; DITA Maps Manager.
 2. In the `Transformation Scenarios` view, double click the entry `Termchecker for DITA`.<br/>
