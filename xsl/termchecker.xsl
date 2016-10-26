@@ -153,12 +153,15 @@
             </xsl:choose>
         </xsl:variable>
         <xsl:variable name="notRecommendedReplace">
+            <xsl:variable name="normalizedNotRecommendedTerm">
+              <xsl:value-of select="replace($notRecommendedTerm, '/', '\\/')"/>
+            </xsl:variable>
             <xsl:choose>
                 <xsl:when test="$uppercase eq 'true' and $beginning eq 'true'">
-                    <xsl:value-of select="concat('\. ', $notRecommendedTerm)"/>
+                    <xsl:value-of select="concat('\. ', $normalizedNotRecommendedTerm)"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="$notRecommendedTerm" />
+                    <xsl:value-of select="$normalizedNotRecommendedTerm" />
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
