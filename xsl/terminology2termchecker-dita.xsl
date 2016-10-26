@@ -102,7 +102,7 @@
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $languageCode or @language = $language">
+                                <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
                                         <xsl:with-param name="uppercase" select="'false'"/>
@@ -117,7 +117,7 @@
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $languageCode or @language = $language">
+                                <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
                                         <xsl:with-param name="uppercase" select="'false'"/>
@@ -137,7 +137,7 @@
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $languageCode or @language = $language">
+                                <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
@@ -152,7 +152,7 @@
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $languageCode or @language = $language">
+                                <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
@@ -172,7 +172,7 @@
                         <!-- Process all preceding-sibling term notations -->
                         <xsl:for-each select="preceding-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $languageCode or @language = $language">
+                                <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
@@ -187,7 +187,7 @@
                         <!-- Process all following-sibling term notations -->
                         <xsl:for-each select="following-sibling::*">
                             <xsl:choose>
-                                <xsl:when test="@language = $languageCode or @language = $language">
+                                <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                                     <xsl:call-template name="createSqfFix">
                                         <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTermUppercased"/>
                                         <xsl:with-param name="uppercase" select="'true'"/>
