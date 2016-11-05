@@ -4,12 +4,19 @@
 @hintsColor: #105b63;
 @placeholderColor: #bd4932;
 @focusedPlaceholderColor: #105b63;
+@headerBorderColor: #767676;
 @borderColor: #3d3d3d;
 @preferredColor: #beffbe;
 @admittedColor: #feffbe;
 @notRecommendedColor: #ffbfbf;
-@buttonTransparency: 'true';
 @highlightBackgroundColor: #dbefff;
+
+// oxy_buttonGroup
+@oxy_buttonGroup_fontInherit: 'true';
+@oxy_buttonGroup_transparent: 'false';
+
+// Dark Theme Colors
+@borderColorDark: #767676;
 
 // Icons
 @deleteIcon: '../icons/delete_12.png';
@@ -27,7 +34,7 @@
 }
 
 .header {
-    border-bottom: 1pt solid #767676;
+    border-bottom: 1pt solid @headerBorderColor;
     display: block;
     font-family: @font;
     font-size: 8pt;
@@ -48,6 +55,9 @@
 
 .mainBlock {
     border: 1pt solid @borderColor;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        border: 1pt solid @borderColorDark;
+    }
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -129,7 +139,7 @@
             operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
             arg-elementLocation, '.'
         ),
-        transparent, @buttonTransparency
+        transparent, @oxy_buttonGroup_transparent
     );
     display: block;
     text-align: right;
@@ -166,6 +176,9 @@
     cursor: default;
     text-decoration-style: dotted;
     color: @labelColor !important;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        color: inherit !important;
+    }
     text-decoration: none !important;
     link: attr(href);
     -ah-link: attr(href);
@@ -198,4 +211,43 @@
 
 *[class~="topic/xref"][keyref]:after {
     content: "] ";
+}
+
+/* Footer */
+*[class~="termentry/termentry"]:after(9),
+*[class~="termmap/termmap"]:after(9) {
+    content: '${i18n(doctales.developedByDoctales)} ';
+    link: 'https://doctales.github.io';
+    color: #767676;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        color: inherit !important;
+    }
+    font-size: 0.7em;
+    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+*[class~="termentry/termentry"]:after(10),
+*[class~="termmap/termmap"]:after(10) {
+    content: ' ';
+    width: 5em;
+    background-image: url('../icons/doctales.png');
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        background-image: url('../icons/doctales_dark.png') !important;
+    }
+    background-repeat: no-repeat;
+    link: 'https://doctales.github.io';
+    font-size: 0.7em;
+}
+
+*[class~="termentry/termentry"]:after(11),
+*[class~="termmap/termmap"]:after(11) {
+    content: ' ';
+    width: 1.2em;
+    background-image: url('../icons/git.png');
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        background-image: url('../icons/git_dark.png') !important;
+    }
+    background-repeat: no-repeat;
+    link: 'https://github.com/doctales';
+    font-size: 0.7em;
 }

@@ -16,7 +16,8 @@
     content: "\A"
     oxy_buttonGroup(
         label, '${i18n(doctales.termAdministration)}',
-        transparent, @buttonTransparency,
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.add.termref')
@@ -37,7 +38,8 @@
     content:
     oxy_buttonGroup(
         label, '${i18n(doctales.map.termref)}',
-        transparent, @buttonTransparency,
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.add.termref')
