@@ -56,7 +56,7 @@
                     </xsl:element>
                 </xsl:when>
             </xsl:choose>
-            <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted' or 'preferred'][@language = $sourceLanguage or $targetLanguage]">
+            <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted' or 'preferred'][@language = $sourceLanguage or @language = $targetLanguage]">
                 <xsl:element name="langSet">
                     <xsl:attribute name="xml:lang" select="@language"/>
                     <xsl:element name="tig">
