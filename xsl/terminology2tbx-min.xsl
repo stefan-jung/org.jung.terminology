@@ -27,7 +27,7 @@
         </xsl:processing-instruction>
         <TBX dialect="TBX-Min">
             <header>
-                <id></id>
+                <id>Terminology</id>
                 <xsl:element name="languages">
                     <xsl:attribute name="source">
                         <xsl:value-of select="$sourceLanguage"/>
