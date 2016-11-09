@@ -45,38 +45,43 @@
 
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termEntry">
-        <xsl:variable name="partOfSpeech" select="*[contains(@class, ' termentry/partOfSpeech ')]/@value"/>
-        <xsl:variable name="domain" select="*[contains(@class, ' termentry/domains ')]/*[contains(@class, ' termentry/domain ')]/@value[1]"/>
-        <xsl:element name="termEntry">
-            <xsl:attribute name="id" select="generate-id()"/>
-            <xsl:choose>
-                <xsl:when test="$domain">
-                    <xsl:element name="subjectField">
-                        <xsl:value-of select="$domain"/>
-                    </xsl:element>
-                </xsl:when>
-            </xsl:choose>
-            <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted' or 'preferred'][@language = $sourceLanguage or @language = $targetLanguage]">
-                <xsl:element name="langSet">
-                    <xsl:attribute name="xml:lang" select="@language"/>
-                    <xsl:element name="tig">
-                        <xsl:element name="term">
-                            <xsl:value-of select="*[contains(@class, ' termentry/termVariant ')][@case = 'nominative'][@number = 'singular']"/>
+        <xsl:choose>
+            <xsl:when test="descendant::*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted' or 'preferred'][@language = $sourceLanguage]
+                and descendant::*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted' or 'preferred'][@language = $targetLanguage]">
+                <xsl:variable name="partOfSpeech" select="*[contains(@class, ' termentry/partOfSpeech ')]/@value"/>
+                <xsl:variable name="domain" select="*[contains(@class, ' termentry/domains ')]/*[contains(@class, ' termentry/domain ')]/@value[1]"/>
+                <xsl:element name="termEntry">
+                    <xsl:attribute name="id" select="generate-id()"/>
+                    <xsl:choose>
+                        <xsl:when test="$domain">
+                            <xsl:element name="subjectField">
+                                <xsl:value-of select="$domain"/>
+                            </xsl:element>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted' or 'preferred'][@language = $sourceLanguage or @language = $targetLanguage]">
+                        <xsl:element name="langSet">
+                            <xsl:attribute name="xml:lang" select="@language"/>
+                            <xsl:element name="tig">
+                                <xsl:element name="term">
+                                    <xsl:value-of select="*[contains(@class, ' termentry/termVariant ')][@case = 'nominative'][@number = 'singular']"/>
+                                </xsl:element>
+                                <xsl:element name="termStatus">
+                                    <xsl:value-of select="@usage"/>
+                                </xsl:element>
+                                <xsl:choose>
+                                    <xsl:when test="$partOfSpeech">
+                                        <xsl:element name="partOfSpeech">
+                                            <xsl:value-of select="$partOfSpeech"/>
+                                        </xsl:element>        
+                                    </xsl:when>
+                                </xsl:choose>
+                            </xsl:element>
                         </xsl:element>
-                        <xsl:element name="termStatus">
-                            <xsl:value-of select="@usage"/>
-                        </xsl:element>
-                        <xsl:choose>
-                            <xsl:when test="$partOfSpeech">
-                                <xsl:element name="partOfSpeech">
-                                    <xsl:value-of select="$partOfSpeech"/>
-                                </xsl:element>        
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:element>
+                    </xsl:for-each>
                 </xsl:element>
-            </xsl:for-each>
-        </xsl:element>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 
 </xsl:stylesheet>
