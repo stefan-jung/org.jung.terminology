@@ -5,7 +5,7 @@
 
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
-    <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no" doctype-system="" doctype-public=""/>
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">

@@ -38,6 +38,7 @@
             <dirset dir="${output.dir}"/>
         </delete>
         <copy file="${dita.plugin.org.doctales.terminology.dir}${file.separator}dtd${file.separator}TBX-Min.rng" todir="${output.dir}"/>
+        <replaceregexp file="${output.dir}${file.separator}${tbx-min}.tbxm" match="&lt;!DOCTYPE TBX\s+PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" replace=""/>
     </target>
     
 </project>
