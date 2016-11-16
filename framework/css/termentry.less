@@ -103,9 +103,12 @@
 }
 
 *[class~="termentry/definition"] {
-    -oxy-display-tags: none;
-    visibility: -oxy-collapse-text;
     .mainBlock();
+}
+
+*[class~="termentry/definitionText"] {
+    border: none !important;
+    .mainEditableBlock();
 }
 
 *[class~="termentry/definitionSource"]:before(10) {
@@ -419,11 +422,11 @@
 }
 
 *[class~="termentry/annotation"] {
-    .mainBlock();
+    -oxy-placeholder-content: "<annotation>";
+    .mainEditableBlock();
 }
 
 *[class~="termentry/termContext"]:before(10) {
-    .header();
     content:
     oxy_buttonGroup(
         label, '${i18n(doctales.termContext)}',
@@ -434,6 +437,7 @@
             oxy_action(id, 'doctales.delete.termContext')
         )
     );
+    .header();
 }
 
 *[class~="termentry/termContext"] {
@@ -1021,6 +1025,10 @@
     .closeButton();
 }
 
+*[class~="termentry/relations-linklist"]:before(8) {
+    .separator();
+}
+
 *[class~="termentry/termRelation"]:before(10) {
     padding-left: 10em;
     pointer-events: none;
@@ -1035,6 +1043,10 @@
 
 *[class~="termentry/termRelation"]:before(8) {
     content:
+    oxy_label(
+        text, oxy_getSomeText(oxy_link-text(), 150, true), 
+        background-color , rgb(240 , 240 , 240)
+    )
     oxy_editor(
         type, combo,
         edit, "@keyref",
