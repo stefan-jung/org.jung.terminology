@@ -26,6 +26,7 @@
 }
 
 *[class~="termentry/termentry"] > *[class~="topic/title"] {
+    font-family: @font;
     font-weight: bold;
     font-size: 2em;
     -oxy-display-tags: none;
@@ -579,10 +580,16 @@
     content:
     oxy_textfield(
         edit, '@value',
-        columns, 40
+        columns, 50
     ) !important;
     float: right;
     display: inline-block;
+}
+
+*[class~="termentry/domain"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
+    .mainBlock();
 }
 
 *[class~="termentry/domain"]:after {
@@ -616,7 +623,6 @@
 
 *[class~="termentry/termCommitteeMember"]:before(10) {
     content: "${i18n(doctales.termCommitteeMember)}";
-    color: black;
     .uiElementLabel();
 }
 
@@ -634,9 +640,9 @@
 
 *[class~="termentry/termCommitteeMember"] {
     list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: transparent;
+    visibility: -oxy-collapse-text;
+    -oxy-display-tags: none;
+    .mainBlock();
 }
 
 *[class~="termentry/termNotation"]:before(10) {
@@ -1045,16 +1051,16 @@
     content:
     oxy_label(
         text, oxy_getSomeText(oxy_link-text(), 150, true), 
-        background-color , rgb(240 , 240 , 240)
-    )
+    ) " "
     oxy_editor(
         type, combo,
         edit, "@keyref",
-        columns, 50,
+        columns, 30,
         fontInherit, false
     );
     padding-top: 0.2em;
     margin-left: 0.5em;
+    font-family: @font;
 }
 
 *[class~="termentry/termRelation"][keyref]:before(7) {
