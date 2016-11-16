@@ -21,18 +21,18 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
+      <termVariant>exhaust system</termVariant>
       <termSource>
         <sourceReference href="http://www.my-cardictionary.com/exhaust-system.html" format="html"
           scope="external">my-cardictionary.com</sourceReference>
       </termSource>
-      <termVariant>exhaust system</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
+      <termVariant>Abgasanlage</termVariant>
       <termSource>
         <sourceReference href="http://www.mein-autolexikon.de/abgasanlage.html" format="html"
           scope="external">mein-autolexikon.de</sourceReference>
       </termSource>
-      <termVariant>Abgasanlage</termVariant>
     </fullForm>
   </termBody>
   <relations>
