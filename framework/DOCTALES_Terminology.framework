@@ -1549,7 +1549,31 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>ancestor::*[contains(@class, ' termentry/termNotation ')][1]</String>
+																<String>not(self::*[contains(@class, ' termentry/termNotation ')]) and following-sibling::*[contains(@class, ' termentry/termBody ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;annotation/></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>following-sibling::*[contains(@class, ' termentry/termBody ')][1]</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as first child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termVariant ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1563,7 +1587,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Inside as first child</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
