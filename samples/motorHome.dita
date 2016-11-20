@@ -36,7 +36,6 @@
     <hyponyms>
       <hyponym keyref="classBMotorHome"/>
       <hyponym keyref="classBPlusMotorHome"/>
-      <hyponym keyref="classBMotorHome"/>
     </hyponyms>
   </relations>
 </termentry>
