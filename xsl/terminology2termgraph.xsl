@@ -57,17 +57,20 @@
                     TODO: http://visjs.org/docs/data/dataset.html
                 -->  
             
+                <!--
+                    edges = [
+                    {id: 'edge_1', from: 'truck', to: 'car', style: 'arrow', label: 'is related to'},
+                    {id: 'edge_2', from: 'wheel', to: 'car', style: 'arrow', label: 'is part of'},
+                    {id: 'edge_3', from: 'car', to: 2, style: 'arrow-center'}
+                    ];
+                -->
                 <script type="text/javascript">
                     var nodes = null;
                     var edges = null;
                     var network = null;
                     function draw() {
                         nodes = [<xsl:apply-templates mode="nodes"/>];
-                        edges = [
-                            {id: 'edge_1', from: 'truck', to: 'car', style: 'arrow', label: 'is related to'},
-                            {id: 'edge_2', from: 'wheel', to: 'car', style: 'arrow', label: 'is part of'},
-                            {id: 'edge_3', from: 'car', to: 2, style: 'arrow-center'}
-                        ];
+                        edges = [<xsl:apply-templates mode="edges"/>];
                         var mainId = 5;
                         // create a network
                         var container = document.getElementById('mynetwork');
@@ -165,23 +168,84 @@
         </xsl:choose>
     </xsl:template>
     
+    <!-- {id: 'edge_2', from: 'wheel', to: 'car', style: 'arrow', label: 'is part of'}, -->
+    <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="edges">
+        <xsl:variable name="key" select="@keys"/>
+        <xsl:variable name="filename" select="@href"/>
+        <xsl:if test="document(./$filename)/descendant::*[contains(@class, ' termentry/termRelation ')]">
+            <!-- hypernym -->
+            <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hypernym ')]">
+                <xsl:text>{id: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>2</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', from: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', style: 'arrow', label: 'is hypernym of'},</xsl:text>
+            </xsl:for-each>
+            <!-- hyponym -->
+            <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hyponym ')]">
+                <xsl:text>{id: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>2</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', from: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', style: 'arrow', label: 'is hyponym of'},</xsl:text>
+            </xsl:for-each>
+            <!-- instanceOf -->
+            <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/instanceOf ')]">
+                <xsl:text>{id: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>2</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', from: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', style: 'arrow', label: 'is instanceOf of'},</xsl:text>
+            </xsl:for-each>
+            <!-- partOf -->
+            <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/partOf ')]">
+                <xsl:text>{id: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>2</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', from: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', style: 'arrow', label: 'is part of'},</xsl:text>
+            </xsl:for-each>
+            <!-- relatedTerm -->
+            <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
+                <xsl:text>{id: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>2</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', from: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', style: 'arrow', label: 'is related to'},</xsl:text>
+            </xsl:for-each>
+        </xsl:if>
+        
+        <!--<xsl:if test="doc-available(./$filename)">
+            FOUND DOCUMENT
+            <xsl:value-of select="document(./$filename)"/>
+        </xsl:if>-->
+    </xsl:template>
+    
+    <!--<xsl:template match="*[contains(@class, ' termentry/termRelation ')]" mode="termrelation">
+        TERMRELATION: <xsl:value-of select="@keyref"/>
+    </xsl:template>-->
+    
     <!-- Fall Through Templates -->
-    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes"/>
-
-    <!--<!-\- Empty template to avoid the processing of the termentry topics -\->
-    <xsl:template match="*[contains(@class, ' termentry/termentry ')]"/>
-
-    
-    <!-\- Remove HTML clutter -\->
-    <xsl:template name="chapter-setup">
-        <xsl:call-template name="chapterBody"/>
-    </xsl:template>
-    
-    <xsl:template name="chapterBody">
-        <xsl:apply-templates select="." mode="chapterBody"/>
-        <xsl:apply-templates/>
-    </xsl:template>
-    
-    <xsl:template match="*" mode="chapterBody"/>-->
+    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges"/>
     
 </xsl:stylesheet>
