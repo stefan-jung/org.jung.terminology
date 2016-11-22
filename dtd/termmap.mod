@@ -45,7 +45,6 @@ Category: Termmap elements-->
                                        %data.elements.incl; |
                                        %navref; |
                                        %reltable; |
-                                       %topicref; |
                                        %termref;)*)
                                     ">
 <!ELEMENT termmap                    %termmap.content;>
