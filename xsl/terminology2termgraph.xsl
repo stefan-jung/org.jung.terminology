@@ -36,11 +36,6 @@
                     }
                 </style>
                 <xsl:value-of select="$newline"/>
-                <!-- DEFAULT -->
-                <!--
-                    <script type="text/javascript" src="./Network _ Shapes_files/vis.js"></script>
-                    <link href="./Network _ Shapes_files/vis.css" rel="stylesheet" type="text/css"/>
-                -->
                 
                 <!-- CDN Normal -->
                 <!--
@@ -148,13 +143,15 @@
                         <canvas width="1894" height="600" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
                     </div>
                 </div>
-                <div id="info"/>
+                <div id="info">
+                    <div>Term: </div>
+                    <div>Definition: </div>
+                </div>
             </body>
         </html>
     </xsl:template>
 
-    <!-- termref -->
-    <!--{id: 'car', label: 'car_label', shape: 'box', group: 'term'},-->
+    <!-- Generate nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="nodes">
         <xsl:text>{id: '</xsl:text>
         <xsl:value-of select="@keys"/>
@@ -168,7 +165,7 @@
         </xsl:choose>
     </xsl:template>
     
-    <!-- {id: 'edge_2', from: 'wheel', to: 'car', style: 'arrow', label: 'is part of'}, -->
+    <!-- Generate edges between nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="edges">
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="filename" select="@href"/>
