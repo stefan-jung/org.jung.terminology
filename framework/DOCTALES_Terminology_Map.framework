@@ -3675,7 +3675,7 @@
 															<null/>
 														</field>
 														<field name="ditavalFilePath">
-															<String></String>
+															<null/>
 														</field>
 														<field name="simpleFiltersList">
 															<list/>
@@ -3766,7 +3766,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}/css/doctales.css</String>
+																<String>${frameworkDir}/webhelp-skin/doctales/skin.css</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -3789,7 +3789,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}/css</String>
+																<String>${frameworkDir}/webhelp-skin/doctales</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4750,10 +4750,10 @@
 													<Boolean>true</Boolean>
 												</field>
 												<field name="skinCssFile">
-													<null/>
+													<String>${framework}/webhelp-skin/doctales/skin.css</String>
 												</field>
 												<field name="lastCustomSkinCssPath">
-													<null/>
+													<String>${framework}/webhelp-skin/doctales/skin.css</String>
 												</field>
 												<field name="webhelpResponsiveTemplate">
 													<null/>
@@ -4807,7 +4807,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>dita-ot-doc.css</String>
+																<String>html5.css</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4830,7 +4830,30 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${configured.ditaot.dir}/docsrc/resources</String>
+																<String>${frameworkDir}/webhelp-skin/doctales</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.hdf</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${frameworksDir}/hdf/hdf.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
