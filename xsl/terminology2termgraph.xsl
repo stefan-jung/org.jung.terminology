@@ -9,7 +9,7 @@
     
     <xsl:output method="html"
         encoding="UTF-8"
-        indent="yes"
+        indent="no"
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     
@@ -30,8 +30,8 @@
                         font: 10pt arial;
                     }
                     #mynetwork {
-                        width: 100%;
-                        height: 1000px;
+                        width: 1280px;
+                        height: 720px;
                         border: 1px solid lightgray;
                     }
                 </style>
@@ -117,9 +117,17 @@
                         network = new vis.Network(container, data, options);
                         network.on( 'click', function(params) {
                             if (!(params.nodes == 0)) {
-                                alert('clicked node ' + params.nodes + ', ' + params.edges);
+                                loadTerm(params.nodes);
                             }
                         });
+                    }
+                    var terms = [<xsl:apply-templates mode="termmeta"/>];
+                    function loadTerm(term) {
+                    var result = terms.filter(function(obj) {
+                    return obj.term == term;
+                    });
+                    document.getElementById("t_term").textContent = result[0].term;
+                    document.getElementById("t_definition").textContent = result[0].definition;
                     }
                 </script>
             <!--<script type="text/javascript">
@@ -143,9 +151,17 @@
                         <canvas width="1894" height="600" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
                     </div>
                 </div>
-                <div id="info">
-                    <div>Term: </div>
-                    <div>Definition: </div>
+                <div id="info" style="border: 1pt solid green; width: 600px; height:400px;">
+                    <table>
+                        <tr>
+                            <td>Term</td>
+                            <td><div id="t_term"/></td>
+                        </tr>
+                        <tr>
+                            <td>Definition</td>
+                            <td><div id="t_definition"/></td>
+                        </tr>
+                    </table>
                 </div>
             </body>
         </html>
@@ -231,16 +247,22 @@
                 <xsl:text>', style: 'arrow', label: 'is related to'},</xsl:text>
             </xsl:for-each>
         </xsl:if>
-        
-        <!--<xsl:if test="doc-available(./$filename)">
-            FOUND DOCUMENT
-            <xsl:value-of select="document(./$filename)"/>
-        </xsl:if>-->
     </xsl:template>
     
-    <!--<xsl:template match="*[contains(@class, ' termentry/termRelation ')]" mode="termrelation">
-        TERMRELATION: <xsl:value-of select="@keyref"/>
-    </xsl:template>-->
+    <!-- Load term metadata for the info box -->
+    <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
+        <!-- {term: 'car', definition: 'a car is'},  -->
+        <xsl:variable name="key" select="@keys"/> 
+        <xsl:variable name="filename" select="@href"/>
+        <xsl:text>{term: '</xsl:text>
+        <xsl:value-of select="$key"/>
+        <xsl:text>', definition: '</xsl:text>
+        <xsl:variable name="definitionText">
+            <xsl:value-of select="document(./$filename)/descendant::*[contains(@class, ' termentry/definitionText ')]"/>
+        </xsl:variable>
+        <xsl:value-of select="normalize-unicode($definitionText)"/>
+        <xsl:text>'},</xsl:text>
+    </xsl:template>
     
     <!-- Fall Through Templates -->
     <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges"/>
