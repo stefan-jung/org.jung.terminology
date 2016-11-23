@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="18.0" xml:space="preserve">
+<serialized version="18.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -1348,7 +1348,7 @@
 											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>3</Integer>
+											<Integer>5</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1579,23 +1579,6 @@
 										</field>
 										<field name="anchor">
 											<String>insert.table</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
-											<Integer>7</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -4719,6 +4702,299 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>6</Integer>
+										</field>
+										<field name="value">
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/html5</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/html5</String>
+												</field>
+												<field name="transtype">
+													<String>html5</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
+												<field name="additionalAntArgs">
+													<String></String>
+												</field>
+												<field name="buildTarget">
+													<String></String>
+												</field>
+												<field name="buildFilePath">
+													<String></String>
+												</field>
+												<field name="ditaParams">
+													<list>
+														<ditaParameter>
+															<field name="name">
+																<String>args.copycss</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>yes</String>
+															</field>
+															<field name="defaultValue">
+																<String>no</String>
+															</field>
+															<field name="type">
+																<Integer>4</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.css</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>dita-ot-doc.css</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.cssroot</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${configured.ditaot.dir}/docsrc/resources</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>nav-toc</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>full</String>
+															</field>
+															<field name="defaultValue">
+																<String>none</String>
+															</field>
+															<field name="type">
+																<Integer>4</Integer>
+															</field>
+															<field name="possibleValues">
+																<String-array>
+																	<String>none</String>
+																	<String>partial</String>
+																	<String>full</String>
+																	<null/>
+																</String-array>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<String-array>
+																	<String>No TOC</String>
+																	<String>Partial TOC that shows the current topic</String>
+																	<String>Full TOC</String>
+																</String-array>
+															</field>
+														</ditaParameter>
+													</list>
+												</field>
+												<field name="jvmArgs">
+													<String>-Xmx384m</String>
+												</field>
+												<field name="useCustomJavaHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customJavaHomeDir">
+													<String></String>
+												</field>
+												<field name="useCustomANTHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customANTHomeDir">
+													<String></String>
+												</field>
+												<field name="workingDir">
+													<null/>
+												</field>
+												<field name="showConsoleAlways">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="advancedOptionsMap">
+													<null/>
+												</field>
+												<field name="name">
+													<String>Termbrowser HTML5</String>
+												</field>
+												<field name="baseURL">
+													<null/>
+												</field>
+												<field name="footerURL">
+													<null/>
+												</field>
+												<field name="fOPMethod">
+													<null/>
+												</field>
+												<field name="fOProcessorName">
+													<null/>
+												</field>
+												<field name="headerURL">
+													<null/>
+												</field>
+												<field name="inputXSLURL">
+													<null/>
+												</field>
+												<field name="inputXMLURL">
+													<null/>
+												</field>
+												<field name="defaultScenario">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="isFOPPerforming">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="type">
+													<String>DITAMAP</String>
+												</field>
+												<field name="saveAs">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="openInBrowser">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="outputFile">
+													<null/>
+												</field>
+												<field name="outputResource">
+													<null/>
+												</field>
+												<field name="openOtherLocationInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="locationToOpenInBrowserURL">
+													<String></String>
+												</field>
+												<field name="openInEditor">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInHTMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInXMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInSVGPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInResultSetPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useXSLTInput">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="xsltParams">
+													<list/>
+												</field>
+												<field name="cascadingStylesheets">
+													<String-array/>
+												</field>
+												<field name="xslTransformer">
+													<String>DITA-OT</String>
+												</field>
+												<field name="extensionURLs">
+													<String-array/>
+												</field>
+											</ditaScenario>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>validationScenarios</String>
 										</field>
 										<field name="index">
@@ -6094,6 +6370,425 @@ self::*[contains(@class," map/reltable ")]][1]
 											<Boolean>true</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>show.key.definition</String>
+										</field>
+										<field name="name">
+											<String>${i18n(show.key.definition)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(show.key.definition_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[@conkeyref] | ancestor-or-self::*[@keyref] | oxy:current-selected-element()[ancestor-or-self::*][@conkeyref] | oxy:current-selected-element()[ancestor-or-self::*][@keyref]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.search.ShowKeyDefinitionOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>generate.ids</String>
+										</field>
+										<field name="name">
+											<String>${i18n(generate.ids)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(generate.ids_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>true()</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.id.GenerateIDsDITAOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>id.options</String>
+										</field>
+										<field name="name">
+											<String>${i18n(id.options)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(id.options_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>true()</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.id.DITAConfigureAutoIDElementsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>up</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Move_up)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Move_up)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/NodeUp24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/NodeUp16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[contains(@class, " map/topicref ")][preceding-sibling::*[1][contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>oxy:current-selected-element()/preceding-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(oxy:current-selected-element()) and self::*[contains(@class, " map/topicref ")][preceding-sibling::*[1][contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>preceding-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>down</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Move_down)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Move_down)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/NodeDown24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/NodeDown16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[contains(@class, " map/topicref")][following-sibling::*[1][contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>oxy:current-selected-element()/following-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(oxy:current-selected-element()) and self::*[contains(@class, " map/topicref ")][following-sibling::*[1][contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>following-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>demote</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Demote)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Demote)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/NodeDemote24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/NodeDemote16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[contains(@class, " map/topicref ")][preceding-sibling::*[1][contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>oxy:current-selected-element()/preceding-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(oxy:current-selected-element()) and self::*[contains(@class, " map/topicref ")][preceding-sibling::*[1][contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>preceding-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>promote</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Promote)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Promote)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/NodePromote24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/NodePromote16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[contains(@class, " map/topicref ")][parent::*[contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>oxy:current-selected-element()/parent::*</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>not(oxy:current-selected-element()) and self::*[contains(@class, " map/topicref ")][parent::*[contains(@class, " map/topicref ")]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>parent::*</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -6202,6 +6897,17 @@ self::*[contains(@class," map/reltable ")]][1]
 													<null/>
 												</field>
 											</menu>
+											<menuSeparator/>
+											<menuItem>
+												<field name="actionID">
+													<String>id.options</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>generate.ids</String>
+												</field>
+											</menuItem>
 										</menuEntry-array>
 									</field>
 									<field name="context">
@@ -6318,7 +7024,18 @@ self::*[contains(@class," map/reltable ")]][1]
 											<menuSeparator/>
 											<menuItem>
 												<field name="actionID">
+													<String>generate.ids</String>
+												</field>
+											</menuItem>
+											<menuSeparator/>
+											<menuItem>
+												<field name="actionID">
 													<String>search.references</String>
+												</field>
+											</menuItem>
+											<menuItem>
+												<field name="actionID">
+													<String>show.key.definition</String>
 												</field>
 											</menuItem>
 										</menuEntry-array>
@@ -6400,6 +7117,27 @@ self::*[contains(@class," map/reltable ")]][1]
 													<String>show.table.properties</String>
 												</field>
 											</toolbarItem>
+											<toolbarSeparator/>
+											<toolbarItem>
+												<field name="actionID">
+													<String>up</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>down</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>promote</String>
+												</field>
+											</toolbarItem>
+											<toolbarItem>
+												<field name="actionID">
+													<String>demote</String>
+												</field>
+											</toolbarItem>
 										</toolbarEntry-array>
 									</field>
 								</toolbar>
@@ -6478,7 +7216,6 @@ self::*[contains(@class," map/reltable ")]][1]
 							<String>${frameworkDir}/templates/map</String>
 							<String>${frameworkDir}/templates/map-xsd</String>
 							<String>${configured.ditaot.dir}/org.dita-ng.doctypes_oxygen_templates/map-rng</String>
-							<String>${frameworkDir}/templates/d4p/map (Dita 4 Publishers)</String>
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/map-rng</String>
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/map</String>
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/map (Dita 4 Publishers)</String>
@@ -8312,7 +9049,7 @@ self::*[contains(@class," map/reltable ")]][1]
 												<String>yes</String>
 											</field>
 											<field name="defaultValue">
-												<String>yes</String>
+												<String>no</String>
 											</field>
 											<field name="type">
 												<Integer>4</Integer>
@@ -8325,7 +9062,10 @@ self::*[contains(@class," map/reltable ")]][1]
 												</String-array>
 											</field>
 											<field name="possibleValuesDescriptions">
-												<null/>
+												<String-array>
+													<String></String>
+													<String></String>
+												</String-array>
 											</field>
 										</ditaParameter>
 										<ditaParameter>
@@ -8377,30 +9117,12 @@ self::*[contains(@class," map/reltable ")]][1]
 												</String-array>
 											</field>
 											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-										<ditaParameter>
-											<field name="name">
-												<String>dita.dir</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>${frameworkDir}/DITA-OT</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>3</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
+												<String-array>
+													<String>No links are included.</String>
+													<String>All links are included.</String>
+													<String>Parent links are not included.</String>
+													<String>Parent, child, next, and previous links are not included.</String>
+												</String-array>
 											</field>
 										</ditaParameter>
 									</list>
@@ -8844,7 +9566,7 @@ self::*[contains(@class," map/reltable ")]][1]
 								</field>
 								<field name="extensionURLs">
 									<String-array>
-										<String>${configured.ditaot.dir.url}/lib/commons-io*.jar</String>
+										<String>${configured.ditaot.dir.url}/lib/*.jar</String>
 									</String-array>
 								</field>
 							</antScenario>
@@ -9599,31 +10321,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									<String></String>
 								</field>
 								<field name="ditaParams">
-									<list>
-										<ditaParameter>
-											<field name="name">
-												<String>dita.dir</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>${frameworkDir}/DITA-OT</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>3</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-									</list>
+									<list/>
 								</field>
 								<field name="jvmArgs">
 									<String>-Xmx384m</String>
