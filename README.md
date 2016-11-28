@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/doctales/org.doctales.terminology.png?label=ready&title=Ready)](https://waffle.io/doctales/org.doctales.terminology)
 ![DOCTALES Logo](https://doctales.github.io/images/doctales-logo-without-subtitle.svg)
 
 - - - -
