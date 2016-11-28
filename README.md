@@ -7,6 +7,7 @@ org.doctales.terminology
 
 [![Build Status](https://travis-ci.org/doctales/org.doctales.terminology.svg?branch=master)](https://travis-ci.org/doctales/org.doctales.terminology)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![Stories in Ready](https://badge.waffle.io/doctales/org.doctales.terminology.png?label=ready&title=Ready)](https://waffle.io/doctales/org.doctales.terminology)
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
 
