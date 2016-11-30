@@ -20,6 +20,11 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
          "termentry.ent"
 >%termentry-dec;
 
+
+<!-- ================================================================================ -->
+<!--                           DOMAIN ENTITY DECLARATIONS                             -->
+<!-- ================================================================================ -->
+
 <!-- To use equations to explain terms -->
 <!ENTITY % equation-d-dec
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 Equation Domain//EN"
@@ -37,11 +42,6 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
   PUBLIC "-//OASIS//ENTITIES DITA 1.3 SVG Domain//EN"
          "svgDomain.ent"
 >%svg-d-dec;
-
-
-<!-- ================================================================================ -->
-<!--                           DOMAIN ENTITY DECLARATIONS                             -->
-<!-- ================================================================================ -->
 
 <!ENTITY % hi-d-dec     
   PUBLIC "-//OASIS//ENTITIES DITA Highlight Domain//EN" 
@@ -83,10 +83,6 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
          "uiDomain.ent"                                                       
 >%ui-d-dec;
 
-<!ENTITY % termdomainAtt-d-dec
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
-         "termdomainAttDomain.ent">
-%termdomainAtt-d-dec;
 
 <!-- ================================================================================ -->
 <!--                           DOMAIN ATTRIBUTE DECLARATIONS                          -->

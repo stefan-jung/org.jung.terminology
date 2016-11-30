@@ -61,8 +61,8 @@ Category: Termmap elements-->
 
 <!--doc:The <termref> element is a reference to a term topic.
 Category: Termmap elements-->
-<!ELEMENT  termref %topicref.content;>
-<!ATTLIST  termref %topicref.attributes;>
+<!ELEMENT termref                    %topicref.content;>
+<!ATTLIST termref                    %topicref.attributes;>
 
 
 <!--                                 LONG NAME: Term Group                            -->
@@ -70,10 +70,16 @@ Category: Termmap elements-->
 <!ENTITY % termgroup.content
                                     "((%termref;)+)
                                     ">
+<!ENTITY % termgroup.attributes
+                                    "outputclass
+                                       CDATA
+                                          #IMPLIED
+                                     %topicref-atts;
+                                     %univ-atts;">
 <!--doc:The <termgroup> element is a wrapper for <termref> elements.
 Category: Termmap elements-->
 <!ELEMENT termgroup                  %termgroup.content;>
-<!ATTLIST termgroup                  %topicgroup.attributes;>
+<!ATTLIST termgroup                  %termgroup.attributes;>
 
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
