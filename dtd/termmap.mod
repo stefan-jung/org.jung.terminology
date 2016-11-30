@@ -67,17 +67,13 @@ Category: Termmap elements-->
 
 <!--                                 LONG NAME: Term Group                            -->
 
-<!--doc:The <termgroup> element is a wrapper for <termref> elements.
-Category: Termmap elements-->
 <!ENTITY % termgroup.content
                                     "((%termref;)+)
                                     ">
+<!--doc:The <termgroup> element is a wrapper for <termref> elements.
+Category: Termmap elements-->
 <!ELEMENT termgroup                  %termgroup.content;>
-<!ATTLIST termgroup                  %topicgroup.attributes;
-                                     %arch-atts;
-                                     domains
-                                        CDATA
-                                           "&included-domains;">
+<!ATTLIST termgroup                  %topicgroup.attributes;>
 
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
