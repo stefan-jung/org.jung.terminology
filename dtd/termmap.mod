@@ -19,6 +19,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
 
 <!ENTITY % termmap               "termmap"                                              >
 <!ENTITY % termref               "termref"                                              >
+<!ENTITY % termgroup             "termgroup"                                            >
 
 
 
@@ -46,7 +47,7 @@ Category: Termmap elements-->
                                        %navref; |
                                        %reltable; |
                                        %topicref; |
-                                       %termref;)*)
+                                       %termgroup;+)*)
                                     ">
 <!ELEMENT termmap                    %termmap.content;>
 <!ATTLIST termmap                    %map.attributes;
@@ -64,11 +65,25 @@ Category: Termmap elements-->
 <!ATTLIST  termref %topicref.attributes;>
 
 
+<!--                                 LONG NAME: Term Group                            -->
+
+<!--doc:The <termgroup> element is a wrapper for <termref> elements.
+Category: Termmap elements-->
+<!ENTITY % termgroup.content
+                                    "((%termref;)+)
+                                    ">
+<!ELEMENT termgroup                  %termgroup.content;>
+<!ATTLIST termgroup                  %topicgroup.attributes;
+                                     %arch-atts;
+                                     domains
+                                        CDATA
+                                           "&included-domains;">
 
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
 <!-- ================================================================================ -->
-<!ATTLIST termmap          %global-atts;   class CDATA "- map/map termmap/termmap ">
-<!ATTLIST termref          %global-atts;   class CDATA "- map/topicref termmap/termref ">
+<!ATTLIST termmap   %global-atts; class CDATA "- map/map termmap/termmap ">
+<!ATTLIST termref   %global-atts; class CDATA "- map/topicref termmap/termref ">
+<!ATTLIST termgroup %global-atts; class CDATA "- map/topicref mapgroup-d/topicgroup termmap/termgroup ">
 
 <!-- ================================= End of file ================================== -->
