@@ -19,6 +19,14 @@
         </xsl:text>
     </xsl:variable>
     
+    <xsl:function name="doctales:normalize">
+        <xsl:param name="string"/>
+        <xsl:variable name="dq">"</xsl:variable>
+        <xsl:variable name="sq">'</xsl:variable>
+        <xsl:variable name="return" select="normalize-space(replace(replace($string, $dq, ''), $sq, ''))"/>
+        <xsl:sequence select="$return"/>
+    </xsl:function>
+    
     <xsl:template match="/">
         <html>
             <head>
@@ -258,7 +266,7 @@
         <xsl:value-of select="$key"/>
         <xsl:text>', definition: '</xsl:text>
         <xsl:variable name="definitionText">
-            <xsl:value-of select="document(./$filename)/descendant::*[contains(@class, ' termentry/definitionText ')]"/>
+            <xsl:value-of select="doctales:normalize(document(./$filename)/descendant::*[contains(@class, ' termentry/definitionText ')])"/>
         </xsl:variable>
         <xsl:value-of select="normalize-unicode($definitionText)"/>
         <xsl:text>'},</xsl:text>
