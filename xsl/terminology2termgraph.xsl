@@ -273,6 +273,6 @@
     </xsl:template>
     
     <!-- Fall Through Templates -->
-    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges"/>
-    
+    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta"/>
+
 </xsl:stylesheet>
