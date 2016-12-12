@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="ui_${id}">
- <title>Term</title>
- <definition>
-  <definitionText></definitionText>
-  <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
-  </definitionSource>
- </definition>
- <termBody>
-  <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
-   <termVariant></termVariant>
-  </fullForm>
- </termBody>
+  <title>Term</title>
+  <definition>
+    <definitionText></definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <partOfSpeech value="noun"/>
+    <fullForm language="en-GB" usage="preferred">
+      <termVariant></termVariant>
+    </fullForm>
+  </termBody>
 </termentry>

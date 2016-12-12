@@ -11,7 +11,7 @@
     -oxy-display-tags: none;
 }
 
-*[class~="termmap/termmap"] > *[class~="topic/title"]:after {
+*[class~="termmap/termgroup"]:before {
     .header();
     content: "\A"
     oxy_buttonGroup(
@@ -42,7 +42,8 @@
         fontInherit, @oxy_buttonGroup_fontInherit,
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.termref')
+            oxy_action(id, 'doctales.add.termref'),
+            oxy_action(id, 'doctales.delete.termref')
         )
     );
 }
