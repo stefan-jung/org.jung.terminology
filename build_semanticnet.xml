@@ -15,5 +15,6 @@
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
+        <loadfile srcfile="${dita.temp.dir}${file.separator}${semantic-net}_net.html" property="semantic-net.file"/>
     </target>
 </project>
