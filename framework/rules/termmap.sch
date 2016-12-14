@@ -8,7 +8,7 @@
     <sch:title>Style Guide for Termentry Maps</sch:title>
     
     <sch:pattern id="validate-topicref">
-        <sch:rule context="*[contains(@class, ' map/topicref ')][not(contains(@format, 'ditamap'))]">
+        <sch:rule context="*[contains(@class, ' termmap/termref ')]">
             <sch:let name="key" value="doctales:getIdFromPath(@href)"/>
             <sch:assert test="contains(@keys, $key)" sqf:fix="fix-id" role="warning"
                 diagnostics="validate-topicref-en validate-topicref-de">
