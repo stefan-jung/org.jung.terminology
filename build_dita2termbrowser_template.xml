@@ -12,7 +12,4 @@
     <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available">
         <antcall target="dita2webhelp"/>
     </target>
-    <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available">
-        <antcall target="dita2webhelp-responsive"/>
-    </target>
 </project>

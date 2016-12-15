@@ -602,8 +602,5 @@
   <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
-  <transtype name="termbrowser" extends="html5" desc="Termbrowser"/>
-  
-  <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
-  <transtype name="termbrowser-responsive" extends="html5" desc="Termbrowser Responsive"/>
+  <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
 </plugin>
