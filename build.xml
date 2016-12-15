@@ -5,4 +5,5 @@
     <import file="build_dita2termchecker-dita_template.xml"/>
     <import file="build_dita2termchecker-xliff_template.xml"/>
     <import file="build_semanticnet.xml"/>
+    <import file="build_dita2termbrowser_template.xml"/>
 </project>

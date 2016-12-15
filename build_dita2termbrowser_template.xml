@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:dita="http://dita-ot.sourceforge.net">
+    <target name="is.com.oxygen.webhelp.available">
+        <fail message="The plugin com.oxygen.webhelp is not available">
+            <condition>
+                <not>
+                    <isset property="dita.plugin.com.oxygenxml.dita-ot.plugin.webhelp.dir"/>
+                </not>
+            </condition>
+        </fail>
+    </target>
+    <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available">
+        <antcall target="dita2webhelp"/>
+    </target>
+</project>

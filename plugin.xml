@@ -601,5 +601,8 @@
   <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
   
   <!-- New strings -->
-  <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>  
+  <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
+  <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
 </plugin>
