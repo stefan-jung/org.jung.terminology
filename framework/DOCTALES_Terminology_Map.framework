@@ -812,6 +812,30 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termmap/termref ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;termref keys="" href=""/></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
 																<String>self::*[contains(@class, ' termmap/termgroup ')]</String>
 															</field>
 															<field name="argValues">
@@ -827,30 +851,6 @@
 																	<entry>
 																		<String>insertPosition</String>
 																		<String>Inside as last child</String>
-																	</entry>
-																</serializableOrderedMap>
-															</field>
-															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-															</field>
-														</actionMode>
-														<actionMode>
-															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' map/topicref ')]</String>
-															</field>
-															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>fragment</String>
-																		<String>&lt;termref keys="" href=""/></String>
-																	</entry>
-																	<entry>
-																		<String>insertLocation</String>
-																		<String>.</String>
-																	</entry>
-																	<entry>
-																		<String>insertPosition</String>
-																		<String>After</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
