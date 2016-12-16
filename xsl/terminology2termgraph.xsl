@@ -134,7 +134,13 @@
                     var result = terms.filter(function(obj) {
                     return obj.term == term;
                     });
-                    document.getElementById("t_term").textContent = result[0].term;
+                    
+                    var node = document.createElement("a");
+                    var textnode = document.createTextNode(result[0].term);
+                    node['href'] = result[0].href;
+                    node.appendChild(textnode);
+                    
+                    document.getElementById("t_term").appendChild(node);
                     document.getElementById("t_definition").textContent = result[0].definition;
                     }
                 </script>
@@ -276,16 +282,18 @@
     
     <!-- Load term metadata for the info box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
-        <!-- {term: 'car', definition: 'a car is'},  -->
-        <xsl:variable name="key" select="@keys"/> 
-        <xsl:variable name="filename" select="@href"/>
+        <!-- {term: 'car', definition: 'a car is', href: 'link'},  -->
+        <xsl:variable name="key" select="@keys"/>
+        <xsl:variable name="href" select="@href"/>
         <xsl:text>{term: '</xsl:text>
         <xsl:value-of select="$key"/>
         <xsl:text>', definition: '</xsl:text>
         <xsl:variable name="definitionText">
-            <xsl:value-of select="doctales:normalize(document(./$filename)/descendant::*[contains(@class, ' termentry/definitionText ')])"/>
+            <xsl:value-of select="doctales:normalize(document(./$href)/descendant::*[contains(@class, ' termentry/definitionText ')])"/>
         </xsl:variable>
         <xsl:value-of select="normalize-unicode($definitionText)"/>
+        <xsl:text>', href: '</xsl:text>
+        <xsl:value-of select="replace(normalize-unicode($href), '.dita', '.html')"/>
         <xsl:text>'},</xsl:text>
     </xsl:template>
     
