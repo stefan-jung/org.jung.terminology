@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." name="">
     <target name="semantic-net">
-        <!-- includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" -->
+        <!-\- includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}" -\->
         <basename property="semantic-net" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
@@ -17,4 +17,4 @@
         </xslt>
         <loadfile srcfile="${dita.temp.dir}${file.separator}${semantic-net}_net.html" property="semantic-net.file"/>
     </target>
-</project>
+</project>-->

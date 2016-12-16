@@ -7,8 +7,7 @@
   <require plugin="org.dita.xhtml"/>
 
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
-  
-  <feature extension="depend.preprocess.post" value="semantic-net"/>
+  <!--<feature extension="depend.preprocess.post" value="semantic-net"/>-->
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <!--<feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>-->

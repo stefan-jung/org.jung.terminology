@@ -194,6 +194,18 @@
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="filename" select="@href"/>
         <xsl:if test="document(./$filename)/descendant::*[contains(@class, ' termentry/termRelation ')]">
+            <!-- antonym -->
+            <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/antonym ')]">
+                <xsl:text>{id: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>2</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', from: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="$key"/>
+                <xsl:text>', style: 'arrow', label: 'is antonym of'},</xsl:text>
+            </xsl:for-each>
             <!-- hypernym -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hypernym ')]">
                 <xsl:text>{id: '</xsl:text>
@@ -255,6 +267,11 @@
                 <xsl:text>', style: 'arrow', label: 'is related to'},</xsl:text>
             </xsl:for-each>
         </xsl:if>
+<!--        <xsl:choose>
+            <xsl:when test="preceding-sibling::*[contains(@class, ' termmap/termref ')]">
+                <xsl:text>,</xsl:text>
+            </xsl:when>
+        </xsl:choose>-->
     </xsl:template>
     
     <!-- Load term metadata for the info box -->
@@ -274,5 +291,6 @@
     
     <!-- Fall Through Templates -->
     <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta"/>
+    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta"/>
 
 </xsl:stylesheet>

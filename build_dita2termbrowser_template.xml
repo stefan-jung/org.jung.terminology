@@ -10,6 +10,27 @@
         </fail>
     </target>
     <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available">
+        <delete dir="${dita.temp.dir}"/>
+        <delete dir="${output.dir}"/>
         <antcall target="dita2webhelp"/>
+        <basename property="semantic-net" file="${args.input}" suffix=".ditamap"/>
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            in="${dita.temp.dir}${file.separator}${semantic-net}.ditamap"
+            out="${dita.temp.dir}${file.separator}${semantic-net}_net.html"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension=".html"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termgraph.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        <!--<loadfile srcfile="${dita.temp.dir}${file.separator}${semantic-net}_net.html" property="semantic-net.file"/>-->
+        <!--},]-->
+        <replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
+        <replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
+        <!--<replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\s+" replace=" " flags="g" byline="true"/>-->
+        <copy file="${dita.temp.dir}${file.separator}${semantic-net}_net.html" todir="${output.dir}"/>
     </target>
 </project>
