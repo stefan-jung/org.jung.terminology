@@ -55,9 +55,7 @@ Category: SemanticNet elements-->
                                      domains CDATA "&included-domains;">
 
 <!--                                 LONG NAME: Semantic Body                         -->
-<!ENTITY % semanticBody.content     "(((%conbody.content;)*),
-                                      (%net;),
-                                      ((%conbody.content;*)))">
+<!ENTITY % semanticBody.content     "(%net;)">
 <!ENTITY % semanticBody.attributes  "%id-atts;
                                      %localization-atts;
                                      base
@@ -77,7 +75,7 @@ Category: SemanticNet elements-->
 <!ENTITY % net.attributes           "%univ-atts;
                                      value
                                         CDATA
-                                           #REQUIRED
+                                           'semanticnet'
                                      outputclass
                                         CDATA
                                            #IMPLIED">
