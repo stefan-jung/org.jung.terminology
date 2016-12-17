@@ -26,11 +26,31 @@
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
-        <!--<loadfile srcfile="${dita.temp.dir}${file.separator}${semantic-net}_net.html" property="semantic-net.file"/>-->
-        <!--},]-->
         <replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
         <replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
-        <!--<replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\s+" replace=" " flags="g" byline="true"/>-->
+        <loadfile srcFile="${dita.temp.dir}\${semantic-net}_net.html" property="semantic-net.head">
+            <filterchain>
+                <replaceregex pattern="\s\s+" replace=" "/>
+                <trim/>
+                <ignoreblank/>
+                <striplinebreaks/>
+                <replaceregex pattern="&lt;!DOCTYPE(.*)&lt;\/title&gt;" replace=""/>
+                <replaceregex pattern="&lt;\/head&gt;(.*)&lt;\/html&gt;" replace=""/>
+            </filterchain>
+        </loadfile>
+        <echo>semantic-net.head=${semantic-net.head}</echo>
+        <loadfile srcFile="${dita.temp.dir}\${semantic-net}_net.html" property="semantic-net.body">
+            <filterchain>
+                <replaceregex pattern="\s\s+" replace=" "/>
+                <ignoreblank/>
+                <striplinebreaks/>
+                <replaceregex pattern="&lt;!DOCTYPE(.*)draw\(\)&quot;&gt;" replace=""/>
+                <replaceregex pattern="&lt;\/body&gt;&lt;\/html&gt;" replace=""/>
+            </filterchain>
+        </loadfile>
+        <echo>semantic-net.body=${semantic-net.body}</echo>
+        <!-- Muss nachträglich noch eingebunden werdem weil ich das rausgeschnitten habe: <body onload="draw()"> -->
+        
         <copy file="${dita.temp.dir}${file.separator}${semantic-net}_net.html" todir="${output.dir}"/>
     </target>
 </project>

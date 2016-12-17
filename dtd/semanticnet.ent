@@ -3,6 +3,6 @@
 <!--                              TERM ENTITIES                                       -->
 <!-- ================================================================================ -->
 
-<!ENTITY termentry-att     
-  "(topic concept termentry)"
+<!ENTITY semanticnet-att     
+  "(topic concept semanticnet)"
 >
