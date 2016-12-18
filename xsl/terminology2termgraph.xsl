@@ -205,15 +205,17 @@
                             }
                         });
                     }
+                    
                     var terms = [<xsl:apply-templates mode="termmeta"/>];
-                        function loadTerm(term) {
+                        function loadTerm(key) {
                         var result = terms.filter(function(obj) {
-                        return obj.term == term;
+                        return obj.key == key;
                     });
                     
                     var node = document.createElement("a");
                     var textnode = document.createTextNode(result[0].term);
                     node['href'] = result[0].href;
+                    node['target'] = 'self';
                     node.appendChild(textnode);
                     
                     var termContainer = document.getElementById("t_term");
@@ -221,7 +223,7 @@
                         termContainer.removeChild(termContainer.firstChild);
                     }
                     termContainer.appendChild(node);
-                    document.getElementById("t_definition").textContent = result[0].definition;
+                        document.getElementById("t_definition").textContent = result[0].definition;
                     }
                 </script>
             <!--<script type="text/javascript">
@@ -369,9 +371,12 @@
         <!-- {term: 'car', definition: 'a car is', href: 'link'},  -->
         <!-- {key: 'rearFogLamp', term: 'Rear fog lamp', definition: 'definition', href: 'link'},  -->
         <xsl:variable name="key" select="@keys"/>
+        <xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>
         <xsl:variable name="href" select="@href"/>
-        <xsl:text>{term: '</xsl:text>
+        <xsl:text>{key: '</xsl:text>
         <xsl:value-of select="$key"/>
+        <xsl:text>', term: '</xsl:text>
+        <xsl:value-of select="$term"/>
         <xsl:text>', definition: '</xsl:text>
         <xsl:variable name="definitionText">
             <xsl:value-of select="doctales:normalize(document(./$href)/descendant::*[contains(@class, ' termentry/definitionText ')])"/>
