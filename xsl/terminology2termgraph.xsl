@@ -117,9 +117,9 @@
                 </style>
                 <xsl:value-of select="$newline"/>
                 
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!----></script>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!-- --></script>
                 <xsl:value-of select="$newline"/>
-                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!----></link>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!-- --></link>
                 
                 <script type="text/javascript">
                     var nodes = null;
@@ -197,7 +197,6 @@
                             document.getElementById('text').innerHTML = '100%';
                             document.getElementById('bar').style.width = '496px';
                             document.getElementById('loadingBar').style.opacity = 0;
-                            // really clean the dom element
                             setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
                         });
                         network.on( 'click', function(params) {
@@ -217,7 +216,7 @@
                     node['href'] = result[0].href;
                     node.appendChild(textnode);
                     
-                    var termContainer = document.getElementById("t_term")
+                    var termContainer = document.getElementById("t_term");
                     while (termContainer.firstChild) {
                         termContainer.removeChild(termContainer.firstChild);
                     }

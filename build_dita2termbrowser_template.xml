@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net">
+    
+    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="dost.class.path"/> 
+    
     <target name="is.com.oxygen.webhelp.available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
@@ -13,11 +16,11 @@
         <delete dir="${dita.temp.dir}"/>
         <delete dir="${output.dir}"/>
         <antcall target="dita2webhelp"/>
-        <basename property="semantic-net" file="${args.input}" suffix=".ditamap"/>
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
-            in="${dita.temp.dir}${file.separator}${semantic-net}.ditamap"
-            out="${dita.temp.dir}${file.separator}${semantic-net}_net.html"
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${dita.temp.dir}${file.separator}${basename}_net.html"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
             extension=".html"
@@ -26,9 +29,10 @@
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
-        <replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
-        <replaceregexp file="${dita.temp.dir}\${semantic-net}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
-        <loadfile srcFile="${dita.temp.dir}\${semantic-net}_net.html" property="semantic-net.head">
+        <replaceregexp file="${dita.temp.dir}\${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
+        <replaceregexp file="${dita.temp.dir}\${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
+        <!-- Read HTML Header from semantic net -->
+        <loadfile srcFile="${dita.temp.dir}\${basename}_net.html" property="semantic-net.head">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
@@ -39,7 +43,8 @@
             </filterchain>
         </loadfile>
         <echo>semantic-net.head=${semantic-net.head}</echo>
-        <loadfile srcFile="${dita.temp.dir}\${semantic-net}_net.html" property="semantic-net.body">
+        <!-- Read HTML body from semantic net -->
+        <loadfile srcFile="${dita.temp.dir}\${basename}_net.html" property="semantic-net.body">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <ignoreblank/>
@@ -51,6 +56,17 @@
         <echo>semantic-net.body=${semantic-net.body}</echo>
         <!-- Muss nachträglich noch eingebunden werdem weil ich das rausgeschnitten habe: <body onload="draw()"> -->
         
-        <copy file="${dita.temp.dir}${file.separator}${semantic-net}_net.html" todir="${output.dir}"/>
+        <!-- Get filename of semantic-net topic -->
+        <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
+            <copy path="//*[contains(@type, 'semanticnet')]/@href" property="semantic-net-file" attrValue="yes"/>
+        </xmltask>
+        <echo>semantic-net-file=${semantic-net-file}</echo>
+        <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
+        <echo>semantic-net.base=${semantic-net.base}</echo>
+
+        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;body(.+?)&lt;\/body&gt;" replace="&lt;body onload=&quot;draw\(\)&quot;&gt;${semantic-net.body}&lt;\/body&gt;" flags="gis" byline="false"/>
+                
+        <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>
 </project>
