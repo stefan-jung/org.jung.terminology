@@ -16,6 +16,17 @@
         <delete dir="${dita.temp.dir}"/>
         <delete dir="${output.dir}"/>
         <antcall target="dita2webhelp"/>
+        <antcall target="semanticnet"/>
+        <delete dir="${dita.temp.dir}"/>
+    </target>
+    <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available">
+        <delete dir="${dita.temp.dir}"/>
+        <delete dir="${output.dir}"/>
+        <antcall target="dita2webhelp-responsive"/>
+        <antcall target="semanticnet"/>
+        <delete dir="${dita.temp.dir}"/>
+    </target>
+    <target name="semanticnet">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
@@ -63,10 +74,11 @@
         <echo>semantic-net-file=${semantic-net-file}</echo>
         <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
         <echo>semantic-net.base=${semantic-net.base}</echo>
-
+        
         <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
         <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;body(.+?)&lt;\/body&gt;" replace="&lt;body onload=&quot;draw\(\)&quot;&gt;${semantic-net.body}&lt;\/body&gt;" flags="gis" byline="false"/>
-                
+        
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>
+    
 </project>

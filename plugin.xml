@@ -606,4 +606,7 @@
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
   <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
+  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive"/>
 </plugin>
