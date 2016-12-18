@@ -111,25 +111,16 @@
                         background: rgb(0, 173, 246); /* Old browsers */
                         box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
                     }
+                    #legend {
+                        margin-top: 1.2em;
+                    }
                 </style>
                 <xsl:value-of select="$newline"/>
                 
-                <!-- CDN Minimized -->
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!----></script>
                 <xsl:value-of select="$newline"/>
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!----></link>
                 
-                <!--
-                    TODO: http://visjs.org/docs/data/dataset.html
-                -->  
-            
-                <!--
-                    edges = [
-                    {id: 'edge_1', from: 'truck', to: 'car', style: 'arrow', label: 'is related to'},
-                    {id: 'edge_2', from: 'wheel', to: 'car', style: 'arrow', label: 'is part of'},
-                    {id: 'edge_3', from: 'car', to: 2, style: 'arrow-center'}
-                    ];
-                -->
                 <script type="text/javascript">
                     var nodes = null;
                     var edges = null;
@@ -251,8 +242,7 @@
             <body onload="draw()">
                 <div id="wrapper">
                     <div id="mynetwork">
-                        <div class="vis network-frame" 
-                            style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
+                        <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
                             <canvas width="1280" height="720" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
                         </div>
                     </div>
@@ -260,12 +250,12 @@
                         <div class="outerBorder">
                             <div id="text">0%</div>
                             <div id="border">
-                                <div id="bar"></div>
+                                <div id="bar"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="legend" style="border: 1pt solid green; width: 600px; height:400px;">
+                <div id="legend">
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
                             <td>Term</td>
@@ -378,6 +368,7 @@
     <!-- Load term metadata for the legend box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
         <!-- {term: 'car', definition: 'a car is', href: 'link'},  -->
+        <!-- {key: 'rearFogLamp', term: 'Rear fog lamp', definition: 'definition', href: 'link'},  -->
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="href" select="@href"/>
         <xsl:text>{term: '</xsl:text>
