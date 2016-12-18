@@ -8,7 +8,7 @@
 
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
-  <feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>
+  <!--<feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>-->
   <!--<feature extension="depend.preprocess.post" value="semantic-net"/>-->
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net">
     
-    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="dost.class.path"/> 
-    
+    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpath="${dita.plugin.org.doctales.terminology.dir}/lib/xmltask.jar"/>
+
     <target name="is.com.oxygen.webhelp.available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
