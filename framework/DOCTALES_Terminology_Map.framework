@@ -3822,29 +3822,6 @@
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
-																<String>args.csspath</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/doctales/skin.css</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>2</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
 																<String>args.cssroot</String>
 															</field>
 															<field name="description">
