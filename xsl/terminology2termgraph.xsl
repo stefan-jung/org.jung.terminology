@@ -42,14 +42,77 @@
                         height: 720px;
                         border: 1px solid lightgray;
                     }
+                    #loadingBar {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 1280px;
+                        height: 720px;
+                        background-color: rgba(200,200,200,0.8);
+                        -webkit-transition: all 0.5s ease;
+                        -moz-transition: all 0.5s ease;
+                        -ms-transition: all 0.5s ease;
+                        -o-transition: all 0.5s ease;
+                        transition: all 0.5s ease;
+                        opacity: 1;
+                    }
+                    #wrapper {
+                        position: relative;
+                        width: 1280px;
+                        height: 720px;
+                    }
+                    #text {
+                        position: absolute;
+                        top: 8px;
+                        left: 530px;
+                        width: 30px;
+                        height: 50px;
+                        margin: auto auto auto auto;
+                        font-size: 22px;
+                        color: #000000;
+                    }
+                    div.outerBorder {
+                        position: relative;
+                        top: 400px;
+                        width: 600px;
+                        height: 44px;
+                        margin: auto auto auto auto;
+                        border: 8px solid rgba(0,0,0,0.1);
+                        background: rgb(252,252,252); /* Old browsers */
+                        background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                        background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                        background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                        background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                        background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                        border-radius: 72px;
+                        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+                    }
+                    #border {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        width: 500px;
+                        height: 23px;
+                        margin: auto auto auto auto;
+                        box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                        border-radius: 10px;
+                    }
+                    #bar {
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 20px;
+                        height: 20px;
+                        margin: auto auto auto auto;
+                        border-radius: 11px;
+                        border: 2px solid rgba(30,30,30,0.05);
+                        background: rgb(0, 173, 246); /* Old browsers */
+                        box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+                    }
                 </style>
                 <xsl:value-of select="$newline"/>
-                
-                <!-- CDN Normal -->
-                <!--
-                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.js"></script>
-                    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.css"/>
-                -->
                 
                 <!-- CDN Minimized -->
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!----></script>
@@ -75,13 +138,11 @@
                         nodes = [<xsl:apply-templates mode="nodes"/>];
                         edges = [<xsl:apply-templates mode="edges"/>];
                         var mainId = 5;
-                        // create a network
                         var container = document.getElementById('mynetwork');
                         var data = {
                             nodes: nodes,
                             edges: edges
                         };
-                        // specify options
                         var options = {
                             stabilize: false,
                             interaction: {
@@ -93,9 +154,19 @@
                                 color: 'gray'
                             },
                             physics: {
-                                barnesHut: {
-                                    // this is the correct way to set the length of the springs
-                                    springLength:200
+                                forceAtlas2Based: {
+                                    gravitationalConstant: -26,
+                                    centralGravity: 0.005,
+                                    springLength: 230,
+                                    springConstant: 0.18
+                                },
+                                maxVelocity: 146,
+                                solver: 'forceAtlas2Based',
+                                timestep: 0.35,
+                                stabilization: {
+                                    enabled: true,
+                                    iterations: 2000,
+                                    updateInterval: 25
                                 }
                             },
                             groups: {
@@ -106,13 +177,13 @@
                                         background: '#5fbcd3',
                                         fontColor: '#ffffff',
                                         hover: {
-                                            background: '#a5ecfd',
                                             border: '#004455',
+                                            background: '#beebee',
                                             fontColor: '#ffffff'
                                         },
                                         highlight: {
-                                            border: '#4d4d4d',
-                                            background: '#4d4d4d',
+                                            border: '#a5ecfd',
+                                            background: '#beeec0',
                                             fontColor: '#ffffff'
                                         }
                                     },
@@ -123,6 +194,21 @@
                             }
                         };
                         network = new vis.Network(container, data, options);
+                        network.on("stabilizationProgress", function(params) {
+                            var maxWidth = 496;
+                            var minWidth = 20;
+                            var widthFactor = params.iterations/params.total;
+                            var width = Math.max(minWidth,maxWidth * widthFactor);
+                            document.getElementById('bar').style.width = width + 'px';
+                            document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                        });
+                        network.once("stabilizationIterationsDone", function() {
+                            document.getElementById('text').innerHTML = '100%';
+                            document.getElementById('bar').style.width = '496px';
+                            document.getElementById('loadingBar').style.opacity = 0;
+                            // really clean the dom element
+                            setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                        });
                         network.on( 'click', function(params) {
                             if (!(params.nodes == 0)) {
                                 loadTerm(params.nodes);
@@ -130,9 +216,9 @@
                         });
                     }
                     var terms = [<xsl:apply-templates mode="termmeta"/>];
-                    function loadTerm(term) {
-                    var result = terms.filter(function(obj) {
-                    return obj.term == term;
+                        function loadTerm(term) {
+                        var result = terms.filter(function(obj) {
+                        return obj.term == term;
                     });
                     
                     var node = document.createElement("a");
@@ -140,7 +226,11 @@
                     node['href'] = result[0].href;
                     node.appendChild(textnode);
                     
-                    document.getElementById("t_term").appendChild(node);
+                    var termContainer = document.getElementById("t_term")
+                    while (termContainer.firstChild) {
+                        termContainer.removeChild(termContainer.firstChild);
+                    }
+                    termContainer.appendChild(node);
                     document.getElementById("t_definition").textContent = result[0].definition;
                     }
                 </script>
@@ -159,17 +249,27 @@
                </script>-->
             </head>
             <body onload="draw()">
-                <div id="mynetwork">
-                    <div class="vis network-frame" 
-                        style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
-                        <canvas width="1894" height="600" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
+                <div id="wrapper">
+                    <div id="mynetwork">
+                        <div class="vis network-frame" 
+                            style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
+                            <canvas width="1280" height="720" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
+                        </div>
+                    </div>
+                    <div id="loadingBar">
+                        <div class="outerBorder">
+                            <div id="text">0%</div>
+                            <div id="border">
+                                <div id="bar"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="info" style="border: 1pt solid green; width: 600px; height:400px;">
-                    <table>
+                <div id="legend" style="border: 1pt solid green; width: 600px; height:400px;">
+                    <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
                             <td>Term</td>
-                            <td><div id="t_term"/></td>
+                            <td><div id="t_term"><a id=""/></div></td>
                         </tr>
                         <tr>
                             <td>Definition</td>
@@ -273,14 +373,9 @@
                 <xsl:text>', arrows: 'to', label: 'is related to'},</xsl:text>
             </xsl:for-each>
         </xsl:if>
-<!--        <xsl:choose>
-            <xsl:when test="preceding-sibling::*[contains(@class, ' termmap/termref ')]">
-                <xsl:text>,</xsl:text>
-            </xsl:when>
-        </xsl:choose>-->
     </xsl:template>
     
-    <!-- Load term metadata for the info box -->
+    <!-- Load term metadata for the legend box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
         <!-- {term: 'car', definition: 'a car is', href: 'link'},  -->
         <xsl:variable name="key" select="@keys"/>
