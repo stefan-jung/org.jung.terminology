@@ -4087,10 +4087,10 @@
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String></String>
+													<String>${cfd}/out/webhelp/index.html</String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
@@ -4176,7 +4176,7 @@
 															<null/>
 														</field>
 														<field name="ditavalFilePath">
-															<String></String>
+															<null/>
 														</field>
 														<field name="simpleFiltersList">
 															<list/>
@@ -4268,29 +4268,6 @@
 															</field>
 															<field name="value">
 																<String>css/skin-responsive.css</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>2</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>args.cssroot</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>${frameworksDir}/webhelp-skin/doctales</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4533,7 +4510,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>webhelp-responsive</String>
+																<String>termbrowser-responsive</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4712,10 +4689,10 @@
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String></String>
+													<String>${cfd}/out/webhelp-responsive/index.html</String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
