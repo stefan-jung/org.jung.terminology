@@ -26,6 +26,13 @@
         <antcall target="semanticnet"/>
         <delete dir="${dita.temp.dir}"/>
     </target>
+    <target name="dita2termbrowser-html5">
+        <delete dir="${dita.temp.dir}"/>
+        <delete dir="${output.dir}"/>
+        <antcall target="dita2html5"/>
+        <antcall target="semanticnet"/>
+        <delete dir="${dita.temp.dir}"/>
+    </target>
     <target name="semanticnet">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
