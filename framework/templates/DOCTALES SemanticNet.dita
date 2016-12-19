@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE semanticnet PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
+<semanticnet id="ui_${id}">
+  <title>Semantic Net</title>
+  <semanticBody>
+    <p>Enter text here ...</p>
+    <net/>
+    <p>Enter text here ...</p>
+  </semanticBody>
+</semanticnet>
