@@ -3895,29 +3895,6 @@
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
-																<String>args.hdf</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>${frameworksDir}/hdf/hdf.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>2</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
 																<String>args.xhtml.classattr</String>
 															</field>
 															<field name="description">
@@ -3978,6 +3955,29 @@
 															</field>
 															<field name="value">
 																<String>termbrowser</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>webhelp.head.script</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${frameworkDir}/webhelp-skin/header/header.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4334,29 +4334,6 @@
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
-																<String>args.hdf</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>${frameworksDir}/hdf/hdf.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>2</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
 																<String>args.rellinks</String>
 															</field>
 															<field name="description">
@@ -4517,6 +4494,29 @@
 															</field>
 															<field name="type">
 																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>webhelp.fragment.head</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${frameworkDir}/webhelp-skin/header/header.xml</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
