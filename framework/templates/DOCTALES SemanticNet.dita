@@ -3,8 +3,6 @@
 <semanticnet id="ui_${id}">
   <title>Semantic Net</title>
   <semanticBody>
-    <p>Enter text here ...</p>
     <net/>
-    <p>Enter text here ...</p>
   </semanticBody>
 </semanticnet>
