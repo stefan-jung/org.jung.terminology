@@ -8,6 +8,9 @@
 
   <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
   
+  <!--<feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>-->
+  <!--<feature extension="depend.preprocess.post" value="semantic-net"/>-->
+  
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <!--<feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>-->
   
@@ -603,4 +606,7 @@
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
   <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
+  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive"/>
 </plugin>

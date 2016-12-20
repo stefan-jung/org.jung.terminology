@@ -26,9 +26,6 @@
     </fullForm>
   </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="motorVehicle"/>
-    </hypernyms>
     <relatedTerms>
       <relatedTerm keyref="truck"/>
       <relatedTerm keyref="car"/>
