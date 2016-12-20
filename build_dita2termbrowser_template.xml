@@ -13,25 +13,16 @@
         </fail>
     </target>
     <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available">
-        <delete dir="${dita.temp.dir}"/>
-        <delete dir="${output.dir}"/>
         <antcall target="dita2webhelp"/>
         <antcall target="semanticnet"/>
-        <delete dir="${dita.temp.dir}"/>
     </target>
     <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available">
-        <delete dir="${dita.temp.dir}"/>
-        <delete dir="${output.dir}"/>
         <antcall target="dita2webhelp-responsive"/>
         <antcall target="semanticnet"/>
-        <delete dir="${dita.temp.dir}"/>
     </target>
     <target name="dita2termbrowser-html5">
-        <delete dir="${dita.temp.dir}"/>
-        <delete dir="${output.dir}"/>
         <antcall target="dita2html5"/>
         <antcall target="semanticnet"/>
-        <delete dir="${dita.temp.dir}"/>
     </target>
     <target name="semanticnet">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
