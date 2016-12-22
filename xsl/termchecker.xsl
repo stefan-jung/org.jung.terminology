@@ -78,7 +78,11 @@
             <sch:title>
                 <xsl:value-of select="doctales:getString($language, 'Title')"/>
             </sch:title>
-            <xsl:apply-templates/>
+            <sch:pattern>
+                <sch:rule context="*/text()"> 
+                    <xsl:apply-templates/>
+                </sch:rule>
+            </sch:pattern>
         </sch:schema>
     </xsl:template>
 
@@ -249,5 +253,11 @@
     </xsl:template>
 
     <xsl:template match="*" mode="chapterBody"/>
+    
+    <!-- Check if the not recommended term is uppercased -->
+    <xsl:function name="doctales:isLowercased" as="xs:boolean">
+        <xsl:param name="term"/>
+        <xsl:sequence select="contains('abcdefghijklmnopqrstuvwxyz', substring($term, 1, 1))"/>
+    </xsl:function>
 
 </xsl:stylesheet>
