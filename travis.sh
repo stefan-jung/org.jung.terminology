@@ -9,3 +9,4 @@ dita-ot/bin/dita -input dita-ot/plugins/org.doctales.terminology/samples/termino
 dita-ot/bin/dita -input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap -format termchecker-xliff -verbose -Dprocessing-mode=strict -Dargs.language=en-GB -o out/termchecker-xliff
 dita-ot/bin/dita -input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap -format tbx-basic -verbose -Dprocessing-mode=strict -o out/tbx-basic
 dita-ot/bin/dita -input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap -format tbx-min -verbose -Dprocessing-mode=strict -Dargs.source.language=en-GB -Dargs.target.language=de-DE -o out/tbx-min
+dita-ot/bin/dita -input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap -format termbrowser-html5 -verbose -Dargs.default.language=en-GB -o out/termbrowser-html5
