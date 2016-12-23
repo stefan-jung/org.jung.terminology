@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net">
     
-    <!--<path id="org.doctales.terminology.path">    
+    <path id="org.doctales.terminology.path">    
+        <pathelement path="dost.class.path"/>
         <pathelement location="${dita.plugin.org.doctales.terminology.dir}/lib/xmltask.jar"/>
         <pathelement location="lib/xmltask.jar"/>
-    </path>-->
+        <pathelement location="${dita.dir}/plugins/org.doctales.terminology/lib/xmltask.jar"/>
+    </path>
     
-    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="dost.class.path"/>
+    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="org.doctales.terminology.path"/>
 
     <target name="is.com.oxygen.webhelp.available">
         <fail message="The plugin com.oxygen.webhelp is not available">
@@ -56,7 +58,6 @@
                 <replaceregex pattern="&lt;\/head&gt;(.*)&lt;\/html&gt;" replace=""/>
             </filterchain>
         </loadfile>
-        <!--<echo>semantic-net.head=${semantic-net.head}</echo>-->
         <!-- Read HTML body from semantic net -->
         <loadfile srcFile="${dita.temp.dir}\${basename}_net.html" property="semantic-net.body">
             <filterchain>
@@ -67,16 +68,14 @@
                 <replaceregex pattern="&lt;\/body&gt;&lt;\/html&gt;" replace=""/>
             </filterchain>
         </loadfile>
-        <!--<echo>semantic-net.body=${semantic-net.body}</echo>-->
         <!-- Muss nachträglich noch eingebunden werdem weil ich das rausgeschnitten habe: <body onload="draw()"> -->
         
         <!-- Get filename of semantic-net topic -->
         <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
             <copy path="//*[contains(@type, 'semanticnet')]/@href" property="semantic-net-file" attrValue="yes"/>
         </xmltask>
-        <!--<echo>semantic-net-file=${semantic-net-file}</echo>-->
+        
         <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
-        <!--<echo>semantic-net.base=${semantic-net.base}</echo>-->
         
         <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
         <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;body(.+?)&lt;\/body&gt;" replace="&lt;body onload=&quot;draw\(\)&quot;&gt;${semantic-net.body}&lt;\/body&gt;" flags="gis" byline="false"/>
