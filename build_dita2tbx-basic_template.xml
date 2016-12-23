@@ -33,7 +33,7 @@
         <basename property="tbx-basic" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >
-                <exclude name="**/${tbx-basic}.tbx"/>
+                <exclude name="**/*.tbx"/>
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
