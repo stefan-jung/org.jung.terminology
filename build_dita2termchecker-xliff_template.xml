@@ -39,7 +39,7 @@
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >
-                <exclude name="**/*.sch"/>
+                <exclude name="**/${schematronFile}*.sch"/>
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
