@@ -240,7 +240,7 @@
                  }
                </script>-->
             </head>
-            <body onload="draw()">
+            <body>
                 <div id="wrapper">
                     <div id="mynetwork">
                         <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
@@ -256,6 +256,11 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    $(function() {
+                        draw();
+                    });
+                </script>
                 <div id="legend">
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>

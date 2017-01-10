@@ -64,7 +64,7 @@
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <ignoreblank/>
                 <striplinebreaks/>
-                <replaceregex pattern="&lt;!DOCTYPE(.*)draw\(\)&quot;&gt;" replace=""/>
+                <replaceregex pattern="&lt;!DOCTYPE(.*)&lt;body&gt;" replace=""/>
                 <replaceregex pattern="&lt;\/body&gt;&lt;\/html&gt;" replace=""/>
             </filterchain>
         </loadfile>
@@ -77,8 +77,9 @@
         
         <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
         
+        <!-- Replace certain parts of the topic with the semantic net data -->
         <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
-        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;body(.+?)&lt;\/body&gt;" replace="&lt;body onload=&quot;draw\(\)&quot;&gt;${semantic-net.body}&lt;\/body&gt;" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;div class=&quot;semanticnet&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
         
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>

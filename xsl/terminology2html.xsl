@@ -1270,4 +1270,9 @@
         </div>
     </xsl:template>
     
+    <!-- Generate a placeholder that is replaced with the semantic net later -->
+    <xsl:template match="*[contains(@class, ' semanticnet/net ')]">
+        <div class="semanticnet"/>
+    </xsl:template>
+    
 </xsl:stylesheet>
