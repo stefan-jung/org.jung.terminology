@@ -3,6 +3,6 @@ out/
 temp/
 *.xpr
 build_deploy.xml
-*.jar
 MANIFEST.MF
 *.orig
+*.tmp

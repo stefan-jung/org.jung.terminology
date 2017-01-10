@@ -6,7 +6,8 @@
   <require plugin="org.dita.base"/>
   <require plugin="org.dita.xhtml"/>
 
-  <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml" />
+  <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml"/>
+  <feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <!--<feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>-->
@@ -599,5 +600,14 @@
   <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
   
   <!-- New strings -->
-  <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>  
+  <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
+  <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
+  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive"/>
+  
+  <feature extension="dita.conductor.transtype.check" value="termbrowser-html5"/>
+  <transtype name="termbrowser-html5" extends="html5" desc="Termbrowser HTML5"/>
 </plugin>

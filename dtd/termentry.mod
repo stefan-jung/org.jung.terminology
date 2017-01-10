@@ -362,15 +362,13 @@ Category: Termentry elements-->
 <!ATTLIST partOfSpeech   %partOfSpeech.attributes;>
 
 <!--                                 LONG NAME: Annotation                            -->
-<!ENTITY % annotation.content       "(#PCDATA |
-                                      %text;)*">
 <!ENTITY % annotation.attributes    "%univ-atts;
                                      outputclass
                                         CDATA
                                            #IMPLIED">
 <!--doc:The <annotation> element contains annotations of the term.
 Category: Termentry elements-->
-<!ELEMENT annotation   %annotation.content;>
+<!ELEMENT annotation   %div.content;>
 <!ATTLIST annotation   %annotation.attributes;>
 
 <!--                                 LONG NAME: Term Body                             -->
@@ -629,10 +627,10 @@ Category: Termentry elements-->
 <!ATTLIST termSource   %termSource.attributes;>
 
 <!--                                 LONG NAME: Generic Term                          -->
-<!ENTITY % genericTerm.content      "(((%annotation;)?),
+<!ENTITY % genericTerm.content      "(((%termVariant;)+),
+                                      ((%annotation;)?),
                                       ((%termContext;)?),
-                                      ((%termSource;)?),
-                                      ((%termVariant;)+))">
+                                      ((%termSource;)?))">
 <!ENTITY % genericTerm.attributes   "%term-atts;
                                      %languageSelection-atts;
                                      %genderSelection-atts;">
@@ -760,7 +758,7 @@ Category: Termentry elements-->
 <!ATTLIST abbreviation          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/abbreviation ">
 <!ATTLIST acronym               %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
 <!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termentry/agreedWith ">
-<!ATTLIST annotation            %global-atts;   class CDATA "- topic/text termentry/annotation ">
+<!ATTLIST annotation            %global-atts;   class CDATA "- topic/div termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
 <!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/antonyms ">
 <!ATTLIST definition            %global-atts;   class CDATA "- topic/abstract termentry/definition ">

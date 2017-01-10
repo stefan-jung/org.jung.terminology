@@ -5,17 +5,19 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
       Delivered as file "termmap.dtd"  -->
 <!-- ================================================================================ -->
 
-<!-- ================================================================================ -->
-<!--                              MAP ENTITY DECLARATIONS                             -->
-<!-- ================================================================================ -->
-
-<!--<!ENTITY % termmap-dec     
-  PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" 
-         "termmap.ent"
->%termmap-dec;-->
 
 <!-- ================================================================================ -->
 <!--                            DOMAIN ENTITY DECLARATIONS                            -->
+<!-- ================================================================================ -->
+
+<!ENTITY % mapgroup-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Map Group Domain//EN"
+         "mapGroup.ent"
+>%mapgroup-d-dec;
+
+
+<!-- ================================================================================ -->
+<!--                          DOMAIN ATTRIBUTES DECLARATIONS                          -->
 <!-- ================================================================================ -->
 
 <!ENTITY % termdomainAtt-d-dec
@@ -43,15 +45,16 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY included-domains
-                        "&termdomainAtt-d-att;
+                        "&mapgroup-d-att;
+                         &termdomainAtt-d-att;
                         ">
 
 <!-- ================================================================================ -->
-<!--                            TOPIC ELEMENT INTEGRATION                             -->
+<!--                             MAP ELEMENT INTEGRATION                              -->
 <!-- ================================================================================ -->
 
 <!ENTITY % map-typemod
-  PUBLIC "-//OASIS//ELEMENTS DITA 1.2 Map//EN"
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map//EN"
          "map.mod">
 %map-typemod;
 
@@ -63,5 +66,10 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
 <!-- ================================================================================ -->
 <!--                            DOMAIN ELEMENT INTEGRATION                            -->
 <!-- ================================================================================ -->
+
+<!ENTITY % mapgroup-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Map Group Domain//EN"
+         "mapGroup.mod"
+>%mapgroup-d-def;
 
 <!-- ================================= End of file ================================== -->

@@ -26,6 +26,7 @@
 }
 
 *[class~="termentry/termentry"] > *[class~="topic/title"] {
+    font-family: @font;
     font-weight: bold;
     font-size: 2em;
     -oxy-display-tags: none;
@@ -47,6 +48,7 @@
             oxy_action(id, 'doctales.add.equation-figure'),
             oxy_action(id, 'doctales.add.note'),
             oxy_action(id, 'doctales.add.fig'),
+            oxy_action(id, 'doctales.add.annotation'),
             oxy_action(id, 'doctales.add.domains'),
             oxy_action(id, 'doctales.add.abbreviation'),
             oxy_action(id, 'doctales.add.acronym'),
@@ -105,6 +107,11 @@
     .mainBlock();
 }
 
+*[class~="termentry/definitionText"] {
+    border: none !important;
+    .mainEditableBlock();
+}
+
 *[class~="termentry/definitionSource"]:before(10) {
     .header();
     content:
@@ -124,6 +131,8 @@
 }
 
 *[class~="termentry/definitionSource"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -151,6 +160,8 @@
 }
 
 *[class~="topic/fig"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -174,9 +185,9 @@
 }
 
 *[class~="topic/image"] {
-    .mainBlock();
     content: attr(href , url);
-    -oxy-display-tags: true !important;
+    visibility: -oxy-collapse-text;
+    .mainBlock();
 }
 
 *[class~="topic/image"]:before(10) {
@@ -269,6 +280,8 @@
 }
 
 *[class~="termentry/termSource"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -290,6 +303,8 @@
 }
 
 *[class~="termentry/sourceName"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -380,13 +395,13 @@
 }
 
 *[class~="termentry/sourceReference"] {
-    .mainBlock();
+    -oxy-display-tags: none;
     visibility: -oxy-collapse-text;
+    .mainBlock();
 }
 
 *[class~="termentry/annotation"]:before(10) {
-    .header();
-    content: "\A"
+    content:
     oxy_buttonGroup(
         label, '${i18n(doctales.annotation)}',
         transparent, @oxy_buttonGroup_transparent,
@@ -396,18 +411,23 @@
             oxy_action(id, 'doctales.delete.annotation')
         )
     );
+    .header();
 }
 
-// TODO: Merge rules with definitionText
+*[class~="termentry/annotation"]:before(9) {
+    .closeButton();
+}
+
+*[class~="termentry/annotation"]:before(8) {
+    .separator();
+}
+
 *[class~="termentry/annotation"] {
-    visibility: visible !important;
-    padding: 0.3em !important;
-    font-size: 0.9em !important;
-    .mainBlock();
+    -oxy-placeholder-content: "<annotation>";
+    .mainEditableBlock();
 }
 
 *[class~="termentry/termContext"]:before(10) {
-    .header();
     content:
     oxy_buttonGroup(
         label, '${i18n(doctales.termContext)}',
@@ -418,10 +438,12 @@
             oxy_action(id, 'doctales.delete.termContext')
         )
     );
+    .header();
 }
 
 *[class~="termentry/termContext"] {
-    .mainBlock();
+    -oxy-placeholder-content: "<termContext>";
+    .mainEditableBlock();
 }
 
 *[class~="termentry/termContextSource"]:before(10) {
@@ -430,6 +452,8 @@
 }
 
 *[class~="termentry/termContextSource"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -473,6 +497,8 @@
 }
 
 *[class~="termentry/partOfSpeech"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -510,6 +536,8 @@
         edit, '#content',
         contentType, 'text/xml'
     );
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -537,6 +565,8 @@
 }
 
 *[class~="termentry/domains"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -549,10 +579,16 @@
     content:
     oxy_textfield(
         edit, '@value',
-        columns, 40
+        columns, 50
     ) !important;
     float: right;
     display: inline-block;
+}
+
+*[class~="termentry/domain"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
+    .mainBlock();
 }
 
 *[class~="termentry/domain"]:after {
@@ -579,12 +615,13 @@
 }
 
 *[class~="termentry/agreedWith"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
 *[class~="termentry/termCommitteeMember"]:before(10) {
     content: "${i18n(doctales.termCommitteeMember)}";
-    color: black;
     .uiElementLabel();
 }
 
@@ -602,9 +639,9 @@
 
 *[class~="termentry/termCommitteeMember"] {
     list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: transparent;
+    visibility: -oxy-collapse-text;
+    -oxy-display-tags: none;
+    .mainBlock();
 }
 
 *[class~="termentry/termNotation"]:before(10) {
@@ -756,13 +793,9 @@
     padding-left: 1.0em;
 }
 
-*[class~="termentry/definitionText"] {
-    visibility: visible;
-    padding: 0.3em;
-    font-size: 0.9em;
-}
-
 *[class~="termentry/termNotation"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -824,8 +857,9 @@
 }
 
 *[class~="termentry/termVariant"] {
-    .mainBlock();
+    -oxy-display-tags: none;
     visibility: -oxy-collapse-text;
+    .mainBlock();
 }
 
 *[class~="termentry/termVariant"][case]:after(2) {
@@ -877,6 +911,8 @@
 }
 
 *[class~="termentry/antonyms"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -897,6 +933,8 @@
 }
 
 *[class~="termentry/instancesOf"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -917,6 +955,8 @@
 }
 
 *[class~="termentry/partsOf"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -937,6 +977,8 @@
 }
 
 *[class~="termentry/hypernyms"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -957,6 +999,8 @@
 }
 
 *[class~="termentry/hyponyms"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
@@ -977,11 +1021,17 @@
 }
 
 *[class~="termentry/relatedTerms"] {
+    -oxy-display-tags: none;
+    visibility: -oxy-collapse-text;
     .mainBlock();
 }
 
 *[class~="termentry/relations-linklist"]:before(9) {
     .closeButton();
+}
+
+*[class~="termentry/relations-linklist"]:before(8) {
+    .separator();
 }
 
 *[class~="termentry/termRelation"]:before(10) {
@@ -998,14 +1048,18 @@
 
 *[class~="termentry/termRelation"]:before(8) {
     content:
+    oxy_label(
+        text, oxy_getSomeText(oxy_link-text(), 150, true), 
+    ) " "
     oxy_editor(
         type, combo,
         edit, "@keyref",
-        columns, 50,
+        columns, 30,
         fontInherit, false
     );
     padding-top: 0.2em;
     margin-left: 0.5em;
+    font-family: @font;
 }
 
 *[class~="termentry/termRelation"][keyref]:before(7) {

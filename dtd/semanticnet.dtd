@@ -1,8 +1,8 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
-      Delivered as file "termentry.dtd"  -->
+PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
+      Delivered as file "semanticnet.dtd"  -->
 <!-- ================================================================================ -->
 
 
@@ -15,10 +15,10 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
          "concept.ent"
 >%concept-dec;
 
-<!ENTITY % termentry-dec     
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" 
-         "termentry.ent"
->%termentry-dec;
+<!ENTITY % semanticnet-dec     
+  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES SemanticNet//EN" 
+         "semanticnet.ent"
+>%semanticnet-dec;
 
 
 <!-- ================================================================================ -->
@@ -83,15 +83,15 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
          "uiDomain.ent"                                                       
 >%ui-d-dec;
 
+<!ENTITY % semanticnet-d-dec     
+  PUBLIC "-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" 
+         "semanticnetDomain.ent"                                                       
+>%semanticnet-d-dec;
+
 
 <!-- ================================================================================ -->
 <!--                           DOMAIN ATTRIBUTE DECLARATIONS                          -->
 <!-- ================================================================================ -->
-
-<!ENTITY % termdomainAtt-d-dec
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
-         "termdomainAttDomain.ent">
-%termdomainAtt-d-dec;
 
 
 <!-- ================================================================================ -->
@@ -142,7 +142,8 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
                                 %mathml-d-foreign;
                                ">
 <!ENTITY % div                 "div |
-                                %equation-d-div;
+                                %equation-d-div; |
+                                %semanticnet-d-div;
                                ">
 
 
@@ -151,7 +152,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % props-attribute-extensions
-                              "%termdomainAtt-d-attribute;
+                              "
                               ">
 <!ENTITY % base-attribute-extensions
                               "
@@ -161,7 +162,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 <!--                              TOPIC NESTING OVERRIDE                              -->
 <!-- ================================================================================ -->
 
-<!ENTITY % termentry-info-types
+<!ENTITY % semanticnet-info-types
                         "no-topic-nesting">
 
 <!-- ================================================================================ -->
@@ -174,7 +175,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
                          &equation-d-att;
                          &mathml-d-att;
                          &svg-d-att;
-                         &termdomainAtt-d-att;
+                         &semanticnet-d-att;
                         ">
 
 <!-- ================================================================================ -->
@@ -186,14 +187,19 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % topic-type
-  PUBLIC "-//OASIS//ELEMENTS DITA Topic//EN"
-         "topic.mod">
-%topic-type;
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Topic//EN"
+         "topic.mod"
+>%topic-type;
 
-<!ENTITY % termentry-typemod
-  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
-         "termentry.mod">
-%termentry-typemod;
+<!ENTITY % concept-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Concept//EN"
+         "concept.mod"
+>%concept-type;
+
+<!ENTITY % semanticnet-typemod
+  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN"
+         "semanticnet.mod">
+%semanticnet-typemod;
 
 <!-- ============================================================= -->
 <!--                    DOMAIN ELEMENT INTEGRATION                 -->
@@ -213,5 +219,10 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 SVG Domain//EN"
          "svgDomain.mod"
 >%svg-d-def;
+
+<!ENTITY % semanticnet-d-def
+  PUBLIC "-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN"
+         "semanticnetDomain.mod"
+>%semanticnet-d-def;
 
 <!-- ================================= End of file ================================== -->

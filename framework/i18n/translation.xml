@@ -36,6 +36,10 @@
         <val lang="en_US">Add term reference (&lt;termref&gt;)</val>
         <val lang="de_DE">Term-Referenz (&lt;termref&gt;) einfügen</val>
     </key>
+    <key value="doctales.delete.termref">
+        <val lang="en_US">Delete term reference (&lt;termref&gt;)</val>
+        <val lang="de_DE">Term-Referenz (&lt;termref&gt;) löschen</val>
+    </key>
     <key value="doctales.sort.termrefs">
         <val lang="en_US">Sort term references</val>
         <val lang="de_DE">Term-Referenzen sortieren</val>

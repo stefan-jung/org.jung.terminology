@@ -19,6 +19,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
 
 <!ENTITY % termmap               "termmap"                                              >
 <!ENTITY % termref               "termref"                                              >
+<!ENTITY % termgroup             "termgroup"                                            >
 
 
 
@@ -46,7 +47,7 @@ Category: Termmap elements-->
                                        %navref; |
                                        %reltable; |
                                        %topicref; |
-                                       %termref;)*)
+                                       %termgroup;+)*)
                                     ">
 <!ELEMENT termmap                    %termmap.content;>
 <!ATTLIST termmap                    %map.attributes;
@@ -60,15 +61,31 @@ Category: Termmap elements-->
 
 <!--doc:The <termref> element is a reference to a term topic.
 Category: Termmap elements-->
-<!ELEMENT  termref %topicref.content;>
-<!ATTLIST  termref %topicref.attributes;>
+<!ELEMENT termref                    %topicref.content;>
+<!ATTLIST termref                    %topicref.attributes;>
 
 
+<!--                                 LONG NAME: Term Group                            -->
+
+<!ENTITY % termgroup.content
+                                    "((%termref;)+)
+                                    ">
+<!ENTITY % termgroup.attributes
+                                    "outputclass
+                                       CDATA
+                                          #IMPLIED
+                                     %topicref-atts;
+                                     %univ-atts;">
+<!--doc:The <termgroup> element is a wrapper for <termref> elements.
+Category: Termmap elements-->
+<!ELEMENT termgroup                  %termgroup.content;>
+<!ATTLIST termgroup                  %termgroup.attributes;>
 
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
 <!-- ================================================================================ -->
-<!ATTLIST termmap          %global-atts;   class CDATA "- map/map termmap/termmap ">
-<!ATTLIST termref          %global-atts;   class CDATA "- map/topicref termmap/termref ">
+<!ATTLIST termmap   %global-atts; class CDATA "- map/map termmap/termmap ">
+<!ATTLIST termref   %global-atts; class CDATA "- map/topicref termmap/termref ">
+<!ATTLIST termgroup %global-atts; class CDATA "- map/topicref mapgroup-d/topicgroup termmap/termgroup ">
 
 <!-- ================================= End of file ================================== -->
