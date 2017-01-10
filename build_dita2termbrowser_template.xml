@@ -79,8 +79,7 @@
         
         <!-- Replace certain parts of the topic with the semantic net data -->
         <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
-        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;div class=&quot;semanticnet&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
-        
+        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>
     

@@ -2,8 +2,9 @@
 <!DOCTYPE semanticnet PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
 <semanticnet id="ui_qlt_xb4_hy">
   <title>Semantic Net</title>
-  <semanticBody>
+  <shortdesc>Semantic net of the terminology database.</shortdesc>
+  <conbody>
     <p>This is a semantic net. You can navigate and zoom with your mouse.</p>
     <net/>
-  </semanticBody>
+  </conbody>
 </semanticnet>

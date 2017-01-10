@@ -83,6 +83,11 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
          "uiDomain.ent"                                                       
 >%ui-d-dec;
 
+<!ENTITY % semanticnet-d-dec     
+  PUBLIC "-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" 
+         "semanticnetDomain.ent"                                                       
+>%semanticnet-d-dec;
+
 
 <!-- ================================================================================ -->
 <!--                           DOMAIN ATTRIBUTE DECLARATIONS                          -->
@@ -137,7 +142,8 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
                                 %mathml-d-foreign;
                                ">
 <!ENTITY % div                 "div |
-                                %equation-d-div;
+                                %equation-d-div; |
+                                %semanticnet-d-div;
                                ">
 
 
@@ -169,6 +175,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
                          &equation-d-att;
                          &mathml-d-att;
                          &svg-d-att;
+                         &semanticnet-d-att;
                         ">
 
 <!-- ================================================================================ -->
@@ -180,9 +187,14 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % topic-type
-  PUBLIC "-//OASIS//ELEMENTS DITA Topic//EN"
-         "topic.mod">
-%topic-type;
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Topic//EN"
+         "topic.mod"
+>%topic-type;
+
+<!ENTITY % concept-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Concept//EN"
+         "concept.mod"
+>%concept-type;
 
 <!ENTITY % semanticnet-typemod
   PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN"
@@ -207,5 +219,10 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
   PUBLIC "-//OASIS//ELEMENTS DITA 1.3 SVG Domain//EN"
          "svgDomain.mod"
 >%svg-d-def;
+
+<!ENTITY % semanticnet-d-def
+  PUBLIC "-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN"
+         "semanticnetDomain.mod"
+>%semanticnet-d-def;
 
 <!-- ================================= End of file ================================== -->

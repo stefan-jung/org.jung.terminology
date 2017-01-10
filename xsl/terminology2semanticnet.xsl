@@ -38,16 +38,16 @@
                         font: 10pt arial;
                     }
                     #mynetwork {
-                        width: 1280px;
-                        height: 720px;
+                        width: 960px;
+                        height: 540px;
                         border: 1px solid lightgray;
                     }
                     #loadingBar {
                         position: absolute;
                         top: 0px;
                         left: 0px;
-                        width: 1280px;
-                        height: 720px;
+                        width: 960px;
+                        height: 540px;
                         background-color: rgba(200,200,200,0.8);
                         -webkit-transition: all 0.5s ease;
                         -moz-transition: all 0.5s ease;
@@ -58,8 +58,8 @@
                     }
                     #wrapper {
                         position: relative;
-                        width: 1280px;
-                        height: 720px;
+                        width: 960px;
+                        height: 540px;
                     }
                     #text {
                         position: absolute;
@@ -215,7 +215,7 @@
                     var node = document.createElement("a");
                     var textnode = document.createTextNode(result[0].term);
                     node['href'] = result[0].href;
-                    node['target'] = 'self';
+                    node['target'] = '_self';
                     node.appendChild(textnode);
                     
                     var termContainer = document.getElementById("t_term");
@@ -244,7 +244,7 @@
                 <div id="wrapper">
                     <div id="mynetwork">
                         <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
-                            <canvas width="1280" height="720" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
+                            <canvas width="960" height="540" style="position: relative; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"/>
                         </div>
                     </div>
                     <div id="loadingBar">
@@ -373,8 +373,6 @@
     
     <!-- Load term metadata for the legend box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
-        <!-- {term: 'car', definition: 'a car is', href: 'link'},  -->
-        <!-- {key: 'rearFogLamp', term: 'Rear fog lamp', definition: 'definition', href: 'link'},  -->
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>
         <xsl:variable name="href" select="@href"/>
