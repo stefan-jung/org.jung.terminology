@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div>
-    Welcome to the DOCTALES termbrowser.
+  <p><b>Welcome to the DOCTALES termbrowser</b></p>
+  <ul>
+    <li>Use the termbrowser to naviate within the termbase.</li>
+    <li>Use the <a href="semantic-net.html">Semantic Net</a> to visualize the relations between your terms.</li>
+  </ul>   
 </div>

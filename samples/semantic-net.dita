@@ -2,9 +2,13 @@
 <!DOCTYPE semanticnet PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
 <semanticnet id="ui_qlt_xb4_hy">
   <title>Semantic Net</title>
-  <shortdesc>Semantic net of the terminology database.</shortdesc>
+  <shortdesc>The semantic net visualizes the relations between the terms.</shortdesc>
   <semanticbody>
-    <p>This is a semantic net. You can navigate and zoom with your mouse.</p>
+    <ul>
+      <li>Use the mouse wheel to zoom in or out.</li>
+      <li>Keep the left mouse button pressed and move the mouse to shift the semantic net.</li>
+      <li>Click a term node to select it. Its definition is displayed in the legend below the semantic net.</li>
+    </ul>
     <net/>
   </semanticbody>
 </semanticnet>

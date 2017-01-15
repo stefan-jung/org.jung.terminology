@@ -399,10 +399,15 @@ table.tool td{
     background-color: #5fbcd3;
 }
 
+/* Title */
 .page_title {
     font-size: 2.4em !important;
     margin-left: 0.8em;
     padding-bottom: 0.2em !important;
+}
+/* Heading */
+.title.topictitle1 {
+    font-size: 1.8em !important;
 }
 
 /* Legend */
@@ -452,6 +457,9 @@ a:hover, a:focus {
 
 /* Related Links */
 /* Hide duplicate related links */
-.relinfo > div:last-child {
+div.related_link {
     display: none;
+}
+.linklist:not(.relations-linklist) > div.related_link {
+    display: block;
 }
