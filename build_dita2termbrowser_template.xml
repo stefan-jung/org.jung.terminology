@@ -68,7 +68,6 @@
                 <replaceregex pattern="&lt;\/body&gt;&lt;\/html&gt;" replace=""/>
             </filterchain>
         </loadfile>
-        <!-- Muss nachträglich noch eingebunden werdem weil ich das rausgeschnitten habe: <body onload="draw()"> -->
         
         <!-- Get filename of semantic-net topic -->
         <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">

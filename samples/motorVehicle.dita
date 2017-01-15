@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <termentry id="motorVehicle">
  <title>Motor vehicle</title>
  <definition>
@@ -15,14 +16,14 @@
  <termBody>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>motor vehicle</termVariant>
-    </fullForm>
-    <fullForm language="de-DE" usage="preferred">
-      <termVariant>Kraftfahrzeug</termVariant>
-    </fullForm>
-    <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Motorfahrzeug</termVariant>
-    </fullForm>
+    <termVariant>motor vehicle</termVariant>
+  </fullForm>
+  <fullForm language="de-DE" usage="preferred">
+    <termVariant>Kraftfahrzeug</termVariant>
+  </fullForm>
+  <fullForm language="de-DE" usage="notRecommended">
+    <termVariant>Motorfahrzeug</termVariant>
+  </fullForm>
  </termBody>
   <relations>
     <hypernyms>

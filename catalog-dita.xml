@@ -1,56 +1,102 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES Termentry//EN" uri="dtd/termentry.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.x Termentry//EN" uri="dtd/termentry.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.2 Termentry//EN" uri="dtd/termentry.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termentry//EN" uri="dtd/termentry.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.x SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.2 SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES Termmap//EN" uri="dtd/termmap.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.x Termmap//EN" uri="dtd/termmap.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.2 Termmap//EN" uri="dtd/termmap.dtd"/>
-  <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termmap//EN" uri="dtd/termmap.dtd"/>
   
-  <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.x DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.2 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.x DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.2 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.x DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.2 DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
+  <group id="dtd-public-id"> 
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES Termentry//EN" uri="dtd/termentry.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termentry//EN" uri="dtd/termentry.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES Termmap//EN" uri="dtd/termmap.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termmap//EN" uri="dtd/termmap.dtd"/>
+    
+    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
+    
+    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
+    
+    <public publicId="-//DOCTALES//ELEMENTS DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
+    
+    <public publicId="-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
+    
+    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
+  </group>
   
-  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
+  <group id="rng-public-id">
+    <public publicId="urn:doctales:dita:rng:semanticnet.rng:1.3" uri="rng/semanticnet.rng"/>
+    <public publicId="urn:doctales:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
+    <public publicId="urn:doctales:dita:rng:semanticnetMod.rng:1.3" uri="rng/semanticnetMod.rng"/>
+    <public publicId="urn:doctales:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
+    <public publicId="urn:doctales:dita:rng:semanticnetDomain.rng:1.3" uri="rng/semanticnetDomain.rng"/>
+    <public publicId="urn:doctales:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    
+    <public publicId="urn:doctales:dita:rng:termentry.rng:1.3" uri="rng/termentry.rng"/>
+    <public publicId="urn:doctales:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
+    <public publicId="urn:doctales:dita:rng:termentryMod.rng:1.3" uri="rng/termentryMod.rng"/>
+    <public publicId="urn:doctales:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    
+    <public publicId="urn:doctales:dita:rng:termmap.rng:1.3" uri="rng/termmap.rng"/>
+    <public publicId="urn:doctales:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
+    <public publicId="urn:doctales:dita:rng:termmapMod.rng:1.3" uri="rng/termmapMod.rng"/>
+    <public publicId="urn:doctales:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    
+    <public publicId="urn:doctales:dita:rng:termdomainAttDomain.rng:1.3" uri="rng/termdomainAttDomain.rng"/>
+    <public publicId="urn:doctales:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+  </group>
   
-  <public publicId="-//DOCTALES//ELEMENTS DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.x Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.2 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
-  <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
+  <group id="rng-system-id">
+    <system systemId="urn:doctales:dita:rng:semanticnet.rng:1.3" uri="rng/semanticnet.rng"/>
+    <system systemId="urn:doctales:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
+    <system systemId="urn:doctales:dita:rng:semanticnetMod.rng:1.3" uri="rng/semanticnetMod.rng"/>
+    <system systemId="urn:doctales:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
+    <system systemId="urn:doctales:dita:rng:semanticnetDomain.rng:1.3" uri="rng/semanticnetDomain.rng"/>
+    <system systemId="urn:doctales:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    
+    <system systemId="urn:doctales:dita:rng:termentry.rng:1.3" uri="rng/termentry.rng"/>
+    <system systemId="urn:doctales:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
+    <system systemId="urn:doctales:dita:rng:termentryMod.rng:1.3" uri="rng/termentryMod.rng"/>
+    <system systemId="urn:doctales:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    
+    <system systemId="urn:doctales:dita:rng:termmap.rng:1.3" uri="rng/termmap.rng"/>
+    <system systemId="urn:doctales:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
+    <system systemId="urn:doctales:dita:rng:termmapMod.rng:1.3" uri="rng/termmapMod.rng"/>
+    <system systemId="urn:doctales:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    
+    <system systemId="urn:doctales:dita:rng:termdomainAttDomain.rng:1.3" uri="rng/termdomainAttDomain.rng"/>
+    <system systemId="urn:doctales:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+  </group>
   
-  <public publicId="-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.x Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
+  <group id="rng-uri">
+    <uri name="urn:doctales:dita:rng:semanticnet.rng:1.3" uri="rng/semanticnet.rng"/>
+    <uri name="urn:doctales:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
+    <uri name="urn:doctales:dita:rng:semanticnetMod.rng:1.3" uri="rng/semanticnetMod.rng"/>
+    <uri name="urn:doctales:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
+    <uri name="urn:doctales:dita:rng:semanticnetDomain.rng:1.3" uri="rng/semanticnetDomain.rng"/>
+    <uri name="urn:doctales:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    
+    <uri name="urn:doctales:dita:rng:termentry.rng:1.3" uri="rng/termentry.rng"/>
+    <uri name="urn:doctales:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
+    <uri name="urn:doctales:dita:rng:termentryMod.rng:1.3" uri="rng/termentryMod.rng"/>
+    <uri name="urn:doctales:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    
+    <uri name="urn:doctales:dita:rng:termmap.rng:1.3" uri="rng/termmap.rng"/>
+    <uri name="urn:doctales:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
+    <uri name="urn:doctales:dita:rng:termmapMod.rng:1.3" uri="rng/termmapMod.rng"/>
+    <uri name="urn:doctales:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    
+    <uri name="urn:doctales:dita:rng:termdomainAttDomain.rng:1.3" uri="rng/termdomainAttDomain.rng"/>
+    <uri name="urn:doctales:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+  </group>
   
-  <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.x DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.2 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
-  <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
 </catalog>

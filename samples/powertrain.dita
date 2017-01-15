@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <termentry id="powertrain">
  <title>Powertrain</title>
  <definition>
@@ -9,17 +10,16 @@
       continuous track as in military tanks or caterpillar tractors, propeller,
       etc.).</definitionText>
   <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html" scope="external"
-        >Wikipedia</sourceReference>
+    <sourceReference href="https://en.wikipedia.org" format="html" scope="external">Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>
-    <fig>
-      <title>Antriebsstrang einer Baumaschine aufgenommen auf bauma 2010 in München</title>
-      <image href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG" width="600px">
-        <alt>This work has been released into the public domain by its author, Mchelge at German Wikipedia. This applies worldwide.</alt>
-      </image>
-    </fig>
+  <fig>
+    <title>Antriebsstrang einer Baumaschine aufgenommen auf bauma 2010 in München</title>
+    <image href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG" width="600px">
+      <alt>This work has been released into the public domain by its author, Mchelge at German Wikipedia. This applies worldwide.</alt>
+    </image>
+  </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
       <termVariant>powertrain</termVariant>

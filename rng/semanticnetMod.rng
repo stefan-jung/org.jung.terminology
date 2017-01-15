@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Semantic Net</moduleTitle>
+    <headerComment xml:space="preserve">
+========================================================================================================================
+                                                         HEADER
+========================================================================================================================
+          MODULE:   DITA Semantic Net
+          VERSION:  1.3
+          DATE:     January 2017
+
+========================================================================================================================
+          PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
+
+          Refer to this file by the following public identifier or an appropriate system identifier
+          PUBLIC "-//DOCTALES//ELEMENTS DITA Semantic Net//EN"
+
+          Delivered as file "semanticnetMod.rng"
+
+========================================================================================================================
+
+          SYSTEM:   Darwin Information Typing Architecture (DITA)
+
+          PURPOSE:  Define elements and specialization atttributes for Semantic Nets
+
+          ORIGINAL CREATION DATE:
+                    March 2017
+
+                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    All Rights Reserved.
+                                                   
+          UPDATES:
+                    2017-01-11 SE: Initial Relax NG release
+
+========================================================================================================================
+    </headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>semanticnet</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//DOCTALES//ELEMENTS DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdMod>
+        <dtdEnt>-//DOCTALES//ENTITIES DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdEnt>
+        <xsdMod>urn:doctales:dita:xsd:semanticnetMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:doctales:dita:xsd:semanticnetGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:doctales:dita:rnc:semanticnetMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:doctales:dita:rng:semanticnetMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic concept semanticnet)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+    <define name="semanticnet-info-types">
+      <ref name="info-types"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="semanticnet">
+      <ref name="semanticnet.element"/>
+    </define>
+    <define name="semanticbody">
+      <ref name="semanticbody.element"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+
+    <div>
+      <a:documentation> LONG NAME: Semantic Net </a:documentation>
+      <define name="semanticnet.content">
+        <ref name="title"/>
+        <optional>
+          <ref name="titlealts"/>
+        </optional>
+        <optional>
+          <choice>
+            <ref name="abstract"/>
+            <ref name="shortdesc"/>
+          </choice>
+        </optional>
+        <optional>
+          <ref name="prolog"/>
+        </optional>
+        <optional>
+          <ref name="semanticbody"/>
+        </optional>
+        <optional>
+          <ref name="related-links"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="semanticnet-info-types"/>
+        </zeroOrMore>
+      </define>
+      <define name="semanticnet.attributes">
+        <attribute name="id">
+          <data type="ID"/>
+        </attribute>
+        <ref name="conref-atts"/>
+        <ref name="select-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="semanticnet.element">
+        <element name="semanticnet" dita:longName="Semantic Net">
+          <a:documentation>The &lt;semanticnet> element is the root element of a semanticnet topic.
+            Category: SemanticNet elements</a:documentation>
+          <ref name="semanticnet.attlist"/>
+          <ref name="semanticnet.content"/>
+        </element>
+      </define>
+      <define name="semanticnet.attlist" combine="interleave">
+        <ref name="semanticnet.attributes"/>
+        <ref name="arch-atts"/>
+        <ref name="domains-att"/>
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="semanticnet.element"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Semantic Net Body </a:documentation>
+      <define name="semanticbody.content">
+        <zeroOrMore>
+          <ref name="body.cnt"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <choice>
+            <ref name="section"/>
+            <ref name="example"/>
+            <ref name="conbodydiv"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="semanticbody.attributes">
+        <ref name="id-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="base"/>
+        </optional>
+        <ref name="base-attribute-extensions"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="semanticbody.element">
+        <element name="semanticbody" dita:longName="Semantic Body">
+          <a:documentation>The &lt;semanticnet> element is the main body-level element for a semantic net. Like the &lt;body> element of a general &lt;topic>, &lt;conbody> allows paragraphs, lists, and other
+            elements as well as sections and examples. But &lt;semanticnet> has a constraint that a section or an example can be followed only by other sections or examples. Category: Semantic Net
+            elements</a:documentation>
+          <ref name="conbody.attlist"/>
+          <ref name="conbody.content"/>
+        </element>
+      </define>
+      <define name="semanticbody.attlist" combine="interleave">
+        <ref name="semanticbody.attributes"/>
+      </define>
+    </div>
+  </div>
+
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="semanticnet.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic concept/concept semanticnet/semanticnet "/>
+      </optional>
+    </define>
+    <define name="semanticbody.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body concept/conbody semanticnet/semanticbody "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

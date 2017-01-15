@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Semantic Net Domain</moduleTitle>
+    <headerComment>
+========================================================================================================================
+                                                         HEADER
+========================================================================================================================
+          MODULE:   DITA Semantic Net Domain
+          VERSION:  1.3
+          DATE:     January 2017
+
+========================================================================================================================
+          PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
+
+          Refer to this file by the following public identifier or an appropriate system identifier
+          PUBLIC "-//DOCTALES//ELEMENTS DITA Semantic Net//EN"
+
+          Delivered as file "semanticnetMod.rng"
+
+========================================================================================================================
+
+          SYSTEM:   Darwin Information Typing Architecture (DITA)
+
+          PURPOSE:  Define elements and specialization atttributes for Semantic Net Domain
+
+          ORIGINAL CREATION DATE:
+                    January 2017
+
+                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    All Rights Reserved.
+
+          UPDATES:
+                    2017-01-11 SE: Initial Relax NG release
+
+========================================================================================================================
+      </headerComment>
+    <moduleMetadata>
+      <moduleType>elementdomain</moduleType>
+      <moduleShortName>semanticnet-d</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//DOCTALES//ELEMENTS DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdMod>
+        <dtdEnt>-//DOCTALES//ENTITIES DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdEnt>
+        <xsdMod>urn:doctales:dita:xsd:semanticnetDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:doctales:dita:rnc:semanticnetDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:doctales:dita:rng:semanticnetDomain.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic semanticnet-d)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+
+  <div>
+    <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
+
+    <define name="semanticnet-d-div">
+      <choice>
+        <ref name="net.element"/>
+      </choice>
+    </define>
+    <define name="div" combine="choice">
+      <ref name="semanticnet-d-div"/>
+    </define>
+
+  </div>
+
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="net">
+      <ref name="net.element"/>
+    </define>
+  </div>
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+    <div>
+      <a:documentation>LONG NAME: Net</a:documentation>
+      <define name="net.content">
+        <empty/>
+      </define>
+      <define name="net.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="net.element">
+        <element name="net" dita:longName="Net">
+          <a:documentation>The Net (&lt;net>) element is used as a placeholder for semantic nets. This element is part of the DITA semantic net domain. Category: Terminology elements</a:documentation>
+          <ref name="net.attlist"/>
+          <ref name="net.content"/>
+        </element>
+      </define>
+      <define name="net.attlist" combine="interleave">
+        <ref name="net.attributes"/>
+      </define>
+    </div>
+  </div>
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+    <define name="net.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="+ topic/div semanticnet-d/net "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

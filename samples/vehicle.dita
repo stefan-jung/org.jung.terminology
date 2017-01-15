@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
+<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <termentry id="vehicle">
   <title>Vehicle</title>
   <definition>
     <definitionText>A vehicle is a mobile machine that transports people or cargo.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org/wiki/Vehicle" format="html" scope="external"
-        >Wikipedia</sourceReference>
+      <sourceReference href="https://en.wikipedia.org/wiki/Vehicle" format="html" scope="external">Wikipedia</sourceReference>
     </definitionSource>
   </definition>
   <termBody>
