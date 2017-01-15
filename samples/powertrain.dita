@@ -3,23 +3,22 @@
 <termentry id="powertrain">
  <title>Powertrain</title>
  <definition>
-  <definitionText>n a motor vehicle, the term powertrain or powerplant describes the main components
+  <definitionText>In a motor vehicle, the term powertrain or powerplant describes the main components
       that generate power and deliver it to the road surface, water, or air. This includes the
       engine, transmission, drive shafts, differentials, and the final drive (drive wheels,
       continuous track as in military tanks or caterpillar tractors, propeller,
       etc.).</definitionText>
   <definitionSource>
-    <sourceReference href="https://en.wikipedia.org" format="html" scope="external"
-        >Wikipedia</sourceReference>
+    <sourceReference href="https://en.wikipedia.org/wiki/Powertrain" format="html" scope="external">Wikipedia</sourceReference>
   </definitionSource>
  </definition>
  <termBody>
-    <fig>
-      <title>Antriebsstrang einer Baumaschine aufgenommen auf bauma 2010 in München</title>
-      <image href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG" width="600px">
-        <alt>This work has been released into the public domain by its author, Mchelge at German Wikipedia. This applies worldwide.</alt>
-      </image>
-    </fig>
+  <fig>
+    <title>Antriebsstrang einer Baumaschine aufgenommen auf bauma 2010 in München</title>
+    <image href="https://upload.wikimedia.org/wikipedia/commons/0/06/Antriebsstrang_Baumaschine.JPG" width="600px">
+      <alt>This work has been released into the public domain by its author, Mchelge at German Wikipedia. This applies worldwide.</alt>
+    </image>
+  </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
       <termVariant>powertrain</termVariant>

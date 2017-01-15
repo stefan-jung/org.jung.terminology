@@ -15,14 +15,14 @@
  <termBody>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>motor vehicle</termVariant>
-    </fullForm>
-    <fullForm language="de-DE" usage="preferred">
-      <termVariant>Kraftfahrzeug</termVariant>
-    </fullForm>
-    <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Motorfahrzeug</termVariant>
-    </fullForm>
+    <termVariant>motor vehicle</termVariant>
+  </fullForm>
+  <fullForm language="de-DE" usage="preferred">
+    <termVariant>Kraftfahrzeug</termVariant>
+  </fullForm>
+  <fullForm language="de-DE" usage="notRecommended">
+    <termVariant>Motorfahrzeug</termVariant>
+  </fullForm>
  </termBody>
   <relations>
     <hypernyms>

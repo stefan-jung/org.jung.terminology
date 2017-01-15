@@ -264,12 +264,12 @@
                 <div id="legend">
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
-                            <td>Term</td>
-                            <td><div id="t_term"><a id=""/></div></td>
+                            <td class="legend_col1">Term</td>
+                            <td class="legend_col2"><div id="t_term"><a id=""/></div></td>
                         </tr>
                         <tr>
-                            <td>Definition</td>
-                            <td><div id="t_definition"/></td>
+                            <td class="legend_col1">Definition</td>
+                            <td class="legend_col2"><div id="t_definition"/></td>
                         </tr>
                     </table>
                 </div>

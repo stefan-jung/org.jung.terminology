@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="rearFogLamp">
-    <title>Rear fog lamp</title>
-    <definition>
-        <definitionText>In Europe and other countries adhering to UN Regulation 48, vehicles must be
-            equipped with one or two bright red "rear fog lamps", which serve as high-intensity rear
-            position lamps to be turned on by the driver in conditions of poor visibility to make
-            the vehicle more visible from the rear.</definitionText>
-        <definitionSource>
-            <sourceReference href="https://en.wikipedia.org/wiki/Automotive_lighting#Rear_fog_lamps"
-                format="html" scope="external">Wikipedia</sourceReference>
-        </definitionSource>
-    </definition>
-    <termBody>
-        <fig>
-            <title>Single rear fog lamp on a Mercedes M Class</title>
-            <image
-                href="https://upload.wikimedia.org/wikipedia/commons/8/80/RearFogLightMercedes.png"
-                width="600px">
-                <alt>By HyperbolicSheet (Own work) [CC BY-SA 3.0
-                    (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</alt>
-            </image>
-        </fig>
-        <partOfSpeech value="noun"/>
-        <fullForm usage="preferred" language="en">
-            <termVariant>rear fog lamp</termVariant>
-        </fullForm>
-        <fullForm language="de" usage="preferred">
-            <termVariant>Nebelschlussleuchte</termVariant>
-        </fullForm>
-    </termBody>
-    <relations>
-        <partsOf>
-            <partOf keyref="lighting"/>
-        </partsOf>
-    </relations>
+  <title>Rear fog lamp</title>
+  <definition>
+    <definitionText>In Europe and other countries adhering to UN Regulation 48, vehicles must be
+      equipped with one or two bright red "rear fog lamps", which serve as high-intensity rear
+      position lamps to be turned on by the driver in conditions of poor visibility to make
+      the vehicle more visible from the rear.</definitionText>
+    <definitionSource>
+      <sourceReference href="https://en.wikipedia.org/wiki/Automotive_lighting#Rear_fog_lamps"
+        format="html" scope="external">Wikipedia</sourceReference>
+    </definitionSource>
+  </definition>
+  <termBody>
+    <fig>
+      <title>Single rear fog lamp on a Mercedes M Class</title>
+      <image
+        href="https://upload.wikimedia.org/wikipedia/commons/8/80/RearFogLightMercedes.png"
+        width="600px">
+        <alt>By HyperbolicSheet (Own work) [CC BY-SA 3.0
+          (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en">
+      <termVariant>rear fog lamp</termVariant>
+    </fullForm>
+    <fullForm language="de" usage="preferred">
+      <termVariant>Nebelschlussleuchte</termVariant>
+    </fullForm>
+  </termBody>
+  <relations>
+    <partsOf>
+      <partOf keyref="lighting"/>
+    </partsOf>
+  </relations>
 </termentry>

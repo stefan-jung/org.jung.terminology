@@ -18,6 +18,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % semanticnet           "semanticnet"                                          >
+<!ENTITY % semanticbody          "semanticbody"                                         >
 
 
 
@@ -38,7 +39,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN"
 <!ENTITY % semanticnet.content      "((%title;),
                                       (%shortdesc;),
                                       (%prolog;)?,
-                                      (%conbody;)?,
+                                      (%semanticbody;)?,
                                       (%semanticnet-info-types;)*)
                                     ">
 <!ENTITY % semanticnet.attributes   "%id-atts;
@@ -54,6 +55,27 @@ Category: SemanticNet elements-->
                                      %arch-atts;
                                      domains CDATA "&included-domains;">
 
+<!--                                 LONG NAME: Semantic Body                         -->
+
+<!ENTITY % semanticbody.content     "((%body.cnt;)*,
+                                      (%section; |
+                                       %example; |
+                                       %conbodydiv;)*)
+                                    ">
+<!ENTITY % semanticbody.attributes  "%id-atts;
+                                     %localization-atts;
+                                     base   CDATA   #IMPLIED
+                                     %base-attribute-extensions;
+                                     outputclass   CDATA   #IMPLIED
+                                    ">
+<!--doc:The <semanticbody> element is the main body-level element for a semantic net. Like the <body> element of a general <topic>, <semanticbody> allows paragraphs, lists, and other
+elements as well as sections and examples. But <semanticnet> has a constraint that a section or an example can be followed only by other sections or examples.
+Category: SemanticNet elements-->
+<!ELEMENT semanticbody               %semanticbody.content;>
+<!ATTLIST semanticbody               %semanticbody.attributes;
+                                     %arch-atts;
+                                     domains CDATA "&included-domains;">
+
 
 
 <!-- ================================================================================ -->
@@ -61,5 +83,6 @@ Category: SemanticNet elements-->
 <!-- ================================================================================ -->
 
 <!ATTLIST semanticnet           %global-atts;   class CDATA "- topic/topic concept/concept semanticnet/semanticnet ">
+<!ATTLIST semanticbody          %global-atts;   class CDATA "- topic/body concept/conbody semanticnet/semanticbody ">
 
 <!-- ================================= End of file ================================== -->

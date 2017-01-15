@@ -5,8 +5,7 @@
   <definition>
     <definitionText>A vehicle is a mobile machine that transports people or cargo.</definitionText>
     <definitionSource>
-      <sourceReference href="https://en.wikipedia.org/wiki/Vehicle" format="html" scope="external"
-        >Wikipedia</sourceReference>
+      <sourceReference href="https://en.wikipedia.org/wiki/Vehicle" format="html" scope="external">Wikipedia</sourceReference>
     </definitionSource>
   </definition>
   <termBody>

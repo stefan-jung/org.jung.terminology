@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Termentry</moduleTitle>
+    <headerComment xml:space="preserve">
+========================================================================================================================
+                                                         HEADER
+========================================================================================================================
+          MODULE:   DITA Termentry
+          VERSION:  1.3
+          DATE:     January 2017
+
+========================================================================================================================
+          PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
+
+          Refer to this file by the following public identifier or an appropriate system identifier
+          PUBLIC "-//DOCTALES//ELEMENTS DITA Termentry//EN"
+
+          Delivered as file "termentryMod.rng"
+
+========================================================================================================================
+
+          SYSTEM:   Darwin Information Typing Architecture (DITA)
+
+          PURPOSE:  Define elements and specialization atttributes for Termentries
+
+          ORIGINAL CREATION DATE:
+                    March 2017
+
+                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    All Rights Reserved.
+                                                   
+          UPDATES:
+                    2017-01-11 SE: Initial Relax NG release
+
+========================================================================================================================
+    </headerComment>
+    <moduleMetadata>
+      <moduleType>topic</moduleType>
+      <moduleShortName>termentry</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//DOCTALES//ELEMENTS DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdMod>
+        <dtdEnt>-//DOCTALES//ENTITIES DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdEnt>
+        <xsdMod>urn:doctales:dita:xsd:termentryMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:doctales:dita:xsd:termentryGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:doctales:dita:rnc:termentryMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:doctales:dita:rng:termentryMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(topic concept termentry)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+  
+  <div>
+    <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
+    <define name="termentry-info-types">
+      <ref name="info-types"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="termentry">
+      <ref name="termentry.element"/>
+    </define>
+    <define name="termBody">
+      <ref name="termBody.element"/>
+    </define>
+    <define name="definition">
+      <ref name="definition.element"/>
+    </define>
+    <define name="definitionText">
+      <ref name="definitionText.element"/>
+    </define>
+    <define name="agreedWith">
+      <ref name="agreedWith.element"/>
+    </define>
+    <define name="termCommitteeMember">
+      <ref name="termCommitteeMember.element"/>
+    </define>
+    <define name="domains">
+      <ref name="domains.element"/>
+    </define>
+    <define name="domain">
+      <ref name="domain.element"/>
+    </define>
+    <define name="partOfSpeech">
+      <ref name="partOfSpeech.element"/>
+    </define>
+    <define name="annotation">
+      <ref name="annotation.element"/>
+    </define>
+    <define name="relations">
+      <ref name="relations.element"/>
+    </define>
+    <define name="antonyms">
+      <ref name="antonyms.element"/>
+    </define>
+    <define name="hypernyms">
+      <ref name="hypernyms.element"/>
+    </define>
+    <define name="hyponyms">
+      <ref name="hyponyms.element"/>
+    </define>
+    <define name="instancesOf">
+      <ref name="instancesOf.element"/>
+    </define>
+    <define name="partsOf">
+      <ref name="partsOf.element"/>
+    </define>
+    <define name="relatedTerms">
+      <ref name="relatedTerms.element"/>
+    </define>
+    <define name="definitionSource">
+      <ref name="definitionSource.element"/>
+    </define>
+    <define name="sourceName">
+      <ref name="sourceName.element"/>
+    </define>
+    <define name="sourceReference">
+      <ref name="sourceReference.element"/>
+    </define>
+    <define name="termVariant">
+      <ref name="termVariant.element"/>
+    </define>
+    <define name="termContext">
+      <ref name="termContext.element"/>
+    </define>
+    <define name="termContextText">
+      <ref name="termContextText.element"/>
+    </define>
+    <define name="termContextSource">
+      <ref name="termContextSource.element"/>
+    </define>
+    <define name="termSource">
+      <ref name="termSource.element"/>
+    </define>
+    <define name="fullForm">
+      <ref name="fullForm.element"/>
+    </define>
+    <define name="abbreviation">
+      <ref name="abbreviation.element"/>
+    </define>
+    <define name="acronym">
+      <ref name="acronym.element"/>
+    </define>
+    <define name="verb">
+      <ref name="verb.element"/>
+    </define>
+    <define name="antonym">
+      <ref name="antonym.element"/>
+    </define>
+    <define name="hypernym">
+      <ref name="hypernym.element"/>
+    </define>
+    <define name="hyponym">
+      <ref name="hyponym.element"/>
+    </define>
+    <define name="instanceOf">
+      <ref name="instanceOf.element"/>
+    </define>
+    <define name="partOf">
+      <ref name="partOf.element"/>
+    </define>
+    <define name="relatedTerm">
+      <ref name="relatedTerm.element"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>COMMON ATTRIBUTE SETS</a:documentation>
+    <define name="term-atts">
+      <!-- Does not work -->
+      <!--<optional>
+        <attribute name="base"/>
+        <attribute name="outputclass"/>
+        <attribute name="termdomain"/>
+      </optional>-->
+      <attribute name="usage" a:defaultValue="preferred">
+        <a:documentation>Should the term be used or not?</a:documentation>
+        <choice>
+          <value>admitted</value>
+          <a:documentation>The term may be used.</a:documentation>
+          <value>notRecommended</value>
+          <a:documentation>The term must not be used.</a:documentation>
+          <value>obsolete</value>
+          <a:documentation>The term is obsolete.</a:documentation>
+          <value>preferred</value>
+          <a:documentation>The term is preferred.</a:documentation>
+        </choice>
+      </attribute>
+    </define>
+    <define name="languageSelection-atts">
+      <attribute name="language" a:defaultValue="en-GB">
+        <a:documentation>The language of the term</a:documentation>
+        <choice>
+          <value>ar-AE</value> 
+          <value>ar-BH</value> 
+          <value>ar-DZ</value> 
+          <value>ar-EG</value> 
+          <value>ar-IQ</value> 
+          <value>ar-JO</value> 
+          <value>ar-KW</value> 
+          <value>ar-LB</value> 
+          <value>ar-LY</value> 
+          <value>ar-MA</value> 
+          <value>ar-OM</value> 
+          <value>ar-QA</value> 
+          <value>ar-SA</value> 
+          <value>ar-SY</value> 
+          <value>ar-TN</value> 
+          <value>ar-YE</value> 
+          <value>be</value>
+          <value>bg</value>
+          <value>ca</value>
+          <value>cs</value>
+          <value>cs-CZ</value> 
+          <value>da</value>
+          <value>da-DK</value> 
+          <value>de</value>
+          <value>de-AT</value> 
+          <value>de-CH</value>
+          <value>de-DE</value>
+          <a:documentation>German - Germany</a:documentation>
+          <value>de-LI</value> 
+          <value>de-LU</value> 
+          <value>el</value>
+          <value>en</value>
+          <value>en-AU</value> 
+          <value>en-BZ</value> 
+          <value>en-CA</value> 
+          <value>en-GB</value>
+          <a:documentation>English - Great Britain</a:documentation>
+          <value>en-IE</value> 
+          <value>en-JM</value> 
+          <value>en-NZ</value> 
+          <value>en-TT</value> 
+          <value>en-US</value> 
+          <value>en-ZA</value> 
+          <value>es</value>
+          <value>es-AR</value> 
+          <value>es-BO</value> 
+          <value>es-CL</value> 
+          <value>es-CO</value> 
+          <value>es-CR</value> 
+          <value>es-DO</value> 
+          <value>es-EC</value> 
+          <value>es-GT</value> 
+          <value>es-HN</value> 
+          <value>es-MX</value> 
+          <value>es-NI</value> 
+          <value>es-PA</value> 
+          <value>es-PE</value> 
+          <value>es-PR</value> 
+          <value>es-PY</value> 
+          <value>es-SV</value> 
+          <value>es-UY</value> 
+          <value>es-VE</value> 
+          <value>et</value>
+          <value>eu</value>
+          <value>fa</value>
+          <value>fi</value>
+          <value>fo</value>
+          <value>fr</value>
+          <value>fr-BE</value> 
+          <value>fr-CA</value> 
+          <value>fr-CH</value> 
+          <value>fr-LU</value> 
+          <value>ga</value>
+          <value>gd</value>
+          <value>he</value>
+          <value>hi</value>
+          <value>hr</value>
+          <value>hu</value>
+          <value>id</value>
+          <value>is</value>
+          <value>it</value>
+          <value>it-CH</value> 
+          <value>ja</value>
+          <value>ji</value>
+          <value>ko</value>
+          <value>lt</value>
+          <value>lv</value>
+          <value>mk</value>
+          <value>ms</value>
+          <value>mt</value>
+          <value>nl</value>
+          <value>nl-BE</value> 
+          <value>no</value>
+          <value>pl</value>
+          <value>pl-PL</value> 
+          <value>pt</value>
+          <value>pt-BR</value> 
+          <value>rm</value>
+          <value>ro</value>
+          <value>ro-MO</value> 
+          <value>ru</value>
+          <value>ru-MO</value> 
+          <value>sb</value>
+          <value>sk</value>
+          <value>sl</value>
+          <value>sq</value>
+          <value>sr</value>
+          <value>sv</value>
+          <value>sv-FI</value> 
+          <value>sx</value>
+          <value>sz</value>
+          <value>th</value>
+          <value>tn</value>
+          <value>tr</value>
+          <value>ts</value>
+          <value>uk</value>
+          <value>ur</value>
+          <value>ve</value>
+          <value>vi</value>
+          <value>xh</value>
+          <value>zh-CN</value> 
+          <value>zh-HK</value> 
+          <value>zh-SG</value> 
+          <value>zh-TW</value> 
+          <value>zu</value>
+        </choice>
+      </attribute>
+    </define>
+    <define name="genderSelection-atts">
+      <optional>
+        <attribute name="gender">
+          <choice>
+            <value>neuter</value>
+            <value>masculine</value>
+            <value>feminine</value>
+          </choice>
+        </attribute>
+      </optional>
+    </define>
+    <define name="caseSelection-atts">
+      <attribute name="case" a:defaultValue="nominative">
+        <choice>
+          <value>nominative</value>
+          <value>accusative</value>
+          <value>dative</value>
+          <value>genitive</value>
+        </choice>
+      </attribute>
+    </define>
+    <define name="numberSelection-atts">
+      <attribute name="number" a:defaultValue="singular">
+        <choice>
+          <value>singular</value>
+          <value>plural</value>
+        </choice>
+      </attribute>
+    </define>
+    <define name="partOfSpeech-atts">
+      <attribute name="value" a:defaultValue="noun">
+        <a:documentation>The part of speech of the term.</a:documentation>
+        <choice>
+          <value>noun</value>
+          <a:documentation>Noun</a:documentation>
+          <value>pronoun</value>
+          <a:documentation>pronoun</a:documentation>
+          <value>adjective</value>
+          <a:documentation>Adjective</a:documentation>
+          <value>verb</value>
+          <a:documentation>Verb</a:documentation>
+          <value>adverb</value>
+          <a:documentation>Adverb</a:documentation>
+          <value>preposition</value>
+          <a:documentation>Preposition</a:documentation>
+          <value>conjunction</value>
+          <a:documentation>Conjunction</a:documentation>
+          <value>interjection</value>
+          <a:documentation>Interjection</a:documentation>
+          <value>article</value>
+          <a:documentation>Article</a:documentation>
+        </choice>
+      </attribute>
+    </define>
+    <define name="termLink-atts">
+      <optional>
+        <attribute name="href"/>
+      </optional>
+      <attribute name="keyref"/>
+      <optional>
+        <attribute name="type"/>
+      </optional>
+      <optional>
+        <attribute name="query"/>
+      </optional>
+      <optional>
+        <attribute name="cascade"/>
+      </optional>
+      <optional>
+        <attribute name="format"/>
+      </optional>
+      <optional>
+        <attribute name="scope">
+          <choice>
+            <value>external</value>
+            <value>local</value>
+            <value>peer</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="role">
+          <choice>
+            <value>ancestor</value>
+            <value>child</value>
+            <value>cousin</value>
+            <value>descendant</value>
+            <value>external</value>
+            <value>friend</value>
+            <value>next</value>
+            <value>other</value>
+            <value>parent</value>
+            <value>previous</value>
+            <value>sample</value>
+            <value>sibling</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="otherrole"/>
+      </optional>
+    </define>
+    <define name="termLinkGroup-atts">
+      <optional>
+        <attribute name="collection-type">
+          <choice>
+            <value>choice</value>
+            <value>family</value>
+            <value>sequence</value>
+            <value>unordered</value>
+            <value>-dita-use-conref-target</value>
+            <value>tree</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="duplicated">
+          <choice>
+            <value>no</value>
+            <value>yes</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="mapkeyref"/>
+      </optional>
+      <optional>
+        <attribute name="cascade"/>
+      </optional>
+      <optional>
+        <attribute name="format"/>
+      </optional>
+      <optional>
+        <attribute name="scope">
+          <choice>
+            <value>external</value>
+            <value>local</value>
+            <value>peer</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="role">
+          <choice>
+            <value>ancestor</value>
+            <value>child</value>
+            <value>cousin</value>
+            <value>descendant</value>
+            <value>external</value>
+            <value>friend</value>
+            <value>next</value>
+            <value>other</value>
+            <value>parent</value>
+            <value>previous</value>
+            <value>sample</value>
+            <value>sibling</value>
+            <value>-dita-use-conref-target</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="otherrole"/>
+      </optional>
+      <optional>
+        <attribute name="spectitle"/>
+      </optional>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
+
+    <div>
+      <a:documentation> LONG NAME: Termentry </a:documentation>
+      <define name="termentry.content">
+        <ref name="title"/>
+<!--        <optional>
+          <ref name="titlealts"/>
+        </optional>-->
+        <optional>
+          <choice>
+            <ref name="definition"/>
+          </choice>
+        </optional>
+        <ref name="termBody"/>
+        <optional>
+          <ref name="relations"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="termentry-info-types"/>
+        </zeroOrMore>
+      </define>
+      <define name="termentry.attributes">
+        <attribute name="id">
+          <data type="ID"/>
+        </attribute>
+        <ref name="conref-atts"/>
+        <ref name="select-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="termentry.element">
+        <element name="termentry" dita:longName="Termentry">
+          <a:documentation>The &lt;termentry> element is the root element of a termentry topic. A term entry represents a terminology concept and includes one or multiple term words and defines their usage.
+            Category: Termentry elements</a:documentation>
+          <ref name="termentry.attlist"/>
+          <ref name="termentry.content"/>
+        </element>
+      </define>
+      <define name="termentry.attlist" combine="interleave">
+        <ref name="termentry.attributes"/>
+        <ref name="arch-atts"/>
+        <ref name="domains-att"/>
+      </define>
+      <define name="idElements" combine="choice">
+        <ref name="termentry.element"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Body </a:documentation>
+      <define name="termBody.content">
+        <zeroOrMore>
+          <choice>
+            <ref name="fig"/>
+            <ref name="note"/>
+            <ref name="annotation"/>
+          </choice>
+        </zeroOrMore>
+        <optional>
+          <ref name="domains"/>
+        </optional>
+        <optional>
+          <ref name="agreedWith"/>
+        </optional>
+        <optional>
+          <ref name="partOfSpeech"/>
+        </optional>
+        <zeroOrMore>
+          <choice>
+            <ref name="fullForm"/>
+            <ref name="abbreviation"/>
+            <ref name="acronym"/>
+            <ref name="verb"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="termBody.attributes">
+        <ref name="id-atts"/>
+        <ref name="localization-atts"/>
+        <optional>
+          <attribute name="base"/>
+        </optional>
+        <ref name="base-attribute-extensions"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="termBody.element">
+        <element name="termBody" dita:longName="Term Body">
+          <a:documentation>The &lt;termBody> element contains the body of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="termBody.attlist"/>
+          <ref name="termBody.content"/>
+        </element>
+      </define>
+      <define name="termBody.attlist" combine="interleave">
+        <ref name="termBody.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Definition </a:documentation>
+      <define name="definition.content">
+        <ref name="definitionText"/>
+        <optional>
+          <ref name="definitionSource"/>
+        </optional>
+      </define>
+      <define name="definition.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="definition.element">
+        <element name="definition" dita:longName="Definition">
+          <a:documentation>The &lt;definition> element contains the definition of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="definition.attlist"/>
+          <ref name="definition.content"/>
+        </element>
+      </define>
+      <define name="definition.attlist" combine="interleave">
+        <ref name="definition.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Definition Text </a:documentation>
+      <define name="definitionText.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="definitionText.element">
+        <element name="definitionText" dita:longName="Definition Text">
+          <a:documentation>The &lt;definitionText> element contains the textual content of the definition.
+            Category: Termentry elements</a:documentation>
+          <ref name="definitionText.attlist"/>
+          <ref name="shortdesc.content"/>
+        </element>
+      </define>
+      <define name="definitionText.attlist" combine="interleave">
+        <ref name="definitionText.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Agreed With </a:documentation>
+      <define name="agreedWith.content">
+        <oneOrMore>
+          <ref name="termCommitteeMember"/>
+        </oneOrMore>
+      </define>
+      <define name="agreedWith.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="agreedWith.element">
+        <element name="agreedWith" dita:longName="Agreed With">
+          <a:documentation>The &lt;agreedWith> element contains multiple Terminology Committee Members who accepted a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="agreedWith.attlist"/>
+          <ref name="agreedWith.content"/>
+        </element>
+      </define>
+      <define name="agreedWith.attlist" combine="interleave">
+        <ref name="agreedWith.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Terminology Committee Member </a:documentation>
+      <define name="termCommitteeMember.content">
+        <text/>
+      </define>
+      <define name="termCommitteeMember.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="termCommitteeMember.element">
+        <element name="termCommitteeMember" dita:longName="Terminology Committee Member">
+          <a:documentation>The &lt;termCommitteeMember> element contains the name of a person who has voted for a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="termCommitteeMember.attlist"/>
+          <ref name="termCommitteeMember.content"/>
+        </element>
+      </define>
+      <define name="termCommitteeMember.attlist" combine="interleave">
+        <ref name="termCommitteeMember.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Domains </a:documentation>
+      <define name="domains.content">
+        <oneOrMore>
+          <ref name="domain"/>
+        </oneOrMore>
+      </define>
+      <define name="domains.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="domains.element">
+        <element name="domains" dita:longName="Domains">
+          <a:documentation>The &lt;domains> element contains at least one domain of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="domains.attlist"/>
+          <ref name="domains.content"/>
+        </element>
+      </define>
+      <define name="domains.attlist" combine="interleave">
+        <ref name="domains.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Domain </a:documentation>
+      <define name="domain.content">
+        <empty/>
+      </define>
+      <define name="domain.attributes">
+        <attribute name="value"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="domain.element">
+        <element name="domain" dita:longName="Domain">
+          <a:documentation>The &lt;domain> element contains the domain of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="domain.attlist"/>
+          <ref name="domain.content"/>
+        </element>
+      </define>
+      <define name="domain.attlist" combine="interleave">
+        <ref name="domain.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Part of Speech </a:documentation>
+      <define name="partOfSpeech.content">
+        <empty/>
+      </define>
+      <define name="partOfSpeech.attributes">
+        <ref name="univ-atts"/>
+        <ref name="partOfSpeech-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="partOfSpeech.element">
+        <element name="partOfSpeech" dita:longName="Part of Speech">
+          <a:documentation>The &lt;partOfSpeech> element contains the part of speech of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="partOfSpeech.attlist"/>
+          <ref name="partOfSpeech.content"/>
+        </element>
+      </define>
+      <define name="partOfSpeech.attlist" combine="interleave">
+        <ref name="partOfSpeech.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Annotation </a:documentation>
+      <define name="annotation.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="annotation.element">
+        <element name="annotation" dita:longName="Annotation">
+          <a:documentation>The &lt;annotation> element contains annotations of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="annotation.attlist"/>
+          <ref name="div.content"/>
+        </element>
+      </define>
+      <define name="annotation.attlist" combine="interleave">
+        <ref name="annotation.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Relations </a:documentation>
+      <define name="relations.content">
+        <optional>
+          <ref name="antonyms"/>
+        </optional>
+        <optional>
+          <ref name="hypernyms"/>
+        </optional>
+        <optional>
+          <ref name="hyponyms"/>
+        </optional>
+        <optional>
+          <ref name="instancesOf"/>
+        </optional>
+        <optional>
+          <ref name="partsOf"/>
+        </optional>
+        <optional>
+          <ref name="relatedTerms"/>
+        </optional>
+      </define>
+      <define name="relations.element">
+        <element name="relations" dita:longName="Relations">
+          <a:documentation>The &lt;relations> element contains groups of term relations.
+            Category: Termentry elements</a:documentation>
+          <ref name="relations.attlist"/>
+          <ref name="relations.content"/>
+        </element>
+      </define>
+      <define name="relations.attlist" combine="interleave">
+        <ref name="related-links.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Antonyms </a:documentation>
+      <define name="antonyms.content">
+        <oneOrMore>
+          <ref name="antonym"/>
+        </oneOrMore>
+      </define>
+      <define name="antonyms.attributes">
+        <ref name="termLinkGroup-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="type" a:defaultValue="antonyms">
+            <value>antonyms</value>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="antonyms.element">
+        <element name="antonyms" dita:longName="Antonyms">
+          <a:documentation>The &lt;antonyms> element contains references to &lt;antonym> elements.
+            Category: Termentry elements</a:documentation>
+          <ref name="antonyms.attlist"/>
+          <ref name="antonyms.content"/>
+        </element>
+      </define>
+      <define name="antonyms.attlist" combine="interleave">
+        <ref name="antonyms.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Hypernyms </a:documentation>
+      <define name="hypernyms.content">
+        <oneOrMore>
+          <ref name="hypernym"/>
+        </oneOrMore>
+      </define>
+      <define name="hypernyms.attributes">
+        <ref name="termLinkGroup-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="type" a:defaultValue="hypernyms">
+            <value>hypernyms</value>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="hypernyms.element">
+        <element name="hypernyms" dita:longName="Hypernyms">
+          <a:documentation>The &lt;hypernyms> element contains references to &lt;hypernym> elements.
+            Category: Termentry elements</a:documentation>
+          <ref name="hypernyms.attlist"/>
+          <ref name="hypernyms.content"/>
+        </element>
+      </define>
+      <define name="hypernyms.attlist" combine="interleave">
+        <ref name="hypernyms.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Hyponyms </a:documentation>
+      <define name="hyponyms.content">
+        <oneOrMore>
+          <ref name="hyponym"/>
+        </oneOrMore>
+      </define>
+      <define name="hyponyms.attributes">
+        <ref name="termLinkGroup-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="type" a:defaultValue="hyponyms">
+            <value>hyponyms</value>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="hyponyms.element">
+        <element name="hyponyms" dita:longName="Hyponyms">
+          <a:documentation>The &lt;hyponyms> element contains references to &lt;hyponym> elements.
+            Category: Termentry elements</a:documentation>
+          <ref name="hyponyms.attlist"/>
+          <ref name="hyponyms.content"/>
+        </element>
+      </define>
+      <define name="hyponyms.attlist" combine="interleave">
+        <ref name="hyponyms.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Instances Of </a:documentation>
+      <define name="instancesOf.content">
+        <oneOrMore>
+          <ref name="instanceOf"/>
+        </oneOrMore>
+      </define>
+      <define name="instancesOf.attributes">
+        <ref name="termLinkGroup-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="type" a:defaultValue="instancesOf">
+            <value>instancesOf</value>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="instancesOf.element">
+        <element name="instancesOf" dita:longName="Instances Of">
+          <a:documentation>The &lt;instancesOf> element contains references to &lt;instanceOf> elements.
+            Category: Termentry elements</a:documentation>
+          <ref name="instancesOf.attlist"/>
+          <ref name="instancesOf.content"/>
+        </element>
+      </define>
+      <define name="instancesOf.attlist" combine="interleave">
+        <ref name="instancesOf.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Parts Of </a:documentation>
+      <define name="partsOf.content">
+        <oneOrMore>
+          <ref name="partOf"/>
+        </oneOrMore>
+      </define>
+      <define name="partsOf.attributes">
+        <ref name="termLinkGroup-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="type" a:defaultValue="partsOf">
+            <value>partsOf</value>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="partsOf.element">
+        <element name="partsOf" dita:longName="Parts Of">
+          <a:documentation>The &lt;partsOf> element contains references to &lt;partOf> elements.
+            Category: Termentry elements</a:documentation>
+          <ref name="partsOf.attlist"/>
+          <ref name="partsOf.content"/>
+        </element>
+      </define>
+      <define name="partsOf.attlist" combine="interleave">
+        <ref name="partsOf.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Related Terms </a:documentation>
+      <define name="relatedTerms.content">
+        <oneOrMore>
+          <ref name="relatedTerm"/>
+        </oneOrMore>
+      </define>
+      <define name="relatedTerms.attributes">
+        <ref name="termLinkGroup-atts"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="type" a:defaultValue="relatedTerms">
+            <value>relatedTerms</value>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="relatedTerms.element">
+        <element name="relatedTerms" dita:longName="Related Terms">
+          <a:documentation>The &lt;relatedTerms> element contains references to &lt;relatedTerm> elements.
+            Category: Termentry elements</a:documentation>
+          <ref name="relatedTerms.attlist"/>
+          <ref name="relatedTerms.content"/>
+        </element>
+      </define>
+      <define name="relatedTerms.attlist" combine="interleave">
+        <ref name="relatedTerms.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Definition Source </a:documentation>
+      <define name="definitionSource.content">
+        <optional>
+          <ref name="sourceName"/>
+        </optional>
+        <optional>
+          <ref name="sourceReference"/>
+        </optional>
+      </define>
+      <define name="definitionSource.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="definitionSource.element">
+        <element name="definitionSource" dita:longName="Definition Source">
+          <a:documentation>The &lt;definitionSource> element refers to the source of a definition, e.g. a link to Wikipedia.
+            Category: Termentry elements</a:documentation>
+          <ref name="definitionSource.attlist"/>
+          <ref name="definitionSource.content"/>
+        </element>
+      </define>
+      <define name="definitionSource.attlist" combine="interleave">
+        <ref name="definitionSource.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Source Name </a:documentation>
+      <define name="sourceName.content">
+        <text/>
+      </define>
+      <define name="sourceName.attributes">
+        <ref name="data-element-atts"/>
+      </define>
+      <define name="sourceName.element">
+        <element name="sourceName" dita:longName="Source Name">
+          <a:documentation>The &lt;sourceName> element refers to a document and contains its name.
+            Category: Termentry elements</a:documentation>
+          <ref name="sourceName.attlist"/>
+          <ref name="sourceName.content"/>
+        </element>
+      </define>
+      <define name="sourceName.attlist" combine="interleave">
+        <ref name="sourceName.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Source Reference </a:documentation>
+      <define name="sourceReference.attributes">
+        <optional>
+          <attribute name="href"/>
+        </optional>
+        <optional>
+          <attribute name="keyref"/>
+        </optional>
+        <optional>
+          <attribute name="type"/>
+        </optional>
+        <optional>
+          <attribute name="format" a:defaultValue="html"/>
+        </optional>
+        <optional>
+          <attribute name="scope" a:defaultValue="external">
+            <choice>
+              <value>external</value>
+              <value>local</value>
+              <value>peer</value>
+              <value>-dita-use-conref-target</value>
+            </choice>
+          </attribute>
+        </optional>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="sourceReference.element">
+        <element name="sourceReference" dita:longName="Source Reference">
+          <a:documentation>The &lt;sourceReference> element refers to the source of a definition, e.g. to a file or website.
+            Category: Termentry elements</a:documentation>
+          <ref name="sourceReference.attlist"/>
+          <ref name="xref.content"/>
+        </element>
+      </define>
+      <define name="sourceReference.attlist" combine="interleave">
+        <ref name="sourceReference.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Variant </a:documentation>
+      <define name="termVariant.content">
+        <choice>
+          <text/>
+          <ref name="keyword"/>
+          <ref name="term"/>
+          <ref name="tm"/>
+        </choice>
+      </define>
+      <define name="termVariant.attributes">
+        <ref name="id-atts"/>
+        <ref name="localization-atts"/>
+        <ref name="base-attribute-extensions"/>
+        <ref name="caseSelection-atts"/>
+        <ref name="numberSelection-atts"/>
+        <optional>
+          <attribute name="base"/>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="termVariant.element">
+        <element name="termVariant" dita:longName="Term Variant">
+          <a:documentation>The &lt;termVariant> element contains the written form of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="termVariant.attlist"/>
+          <ref name="termVariant.content"/>
+        </element>
+      </define>
+      <define name="termVariant.attlist" combine="interleave">
+        <ref name="termVariant.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Context </a:documentation>
+      <define name="termContext.content">
+        <ref name="termContextText"/>
+        <optional>
+          <ref name="termContextSource"/>
+        </optional>
+      </define>
+      <define name="termContext.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="termContext.element">
+        <element name="termContext" dita:longName="Term Context">
+          <a:documentation>The &lt;termContext> element contain a context example of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="termContext.attlist"/>
+          <ref name="termContext.content"/>
+        </element>
+      </define>
+      <define name="termContext.attlist" combine="interleave">
+        <ref name="termContext.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Context Text </a:documentation>
+      <define name="termContextText.content">
+        <text/>
+      </define>
+      <define name="termContextText.attributes">
+        <ref name="univ-atts"/>
+        <attribute name="outputclass"/>
+      </define>
+      <define name="termContextText.element">
+        <element name="termContextText" dita:longName="Term Context Text">
+          <a:documentation>The &lt;termContextText> element contain a context example of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="termContextText.attlist"/>
+          <ref name="termContextText.content"/>
+        </element>
+      </define>
+      <define name="termContextText.attlist" combine="interleave">
+        <ref name="termContextText.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Context Source </a:documentation>
+      <define name="termContextSource.content">
+        <optional>
+          <ref name="sourceName"/>
+          <ref name="sourceReference"/>
+        </optional>
+      </define>
+      <define name="termContextSource.attributes">
+        <ref name="univ-atts"/>
+        <attribute name="outputclass"/>
+      </define>
+      <define name="termContextSource.element">
+        <element name="termContextSource" dita:longName="Term Context Source">
+          <a:documentation>The &lt;termContextSource> element contains the source of the context example.
+            Category: Termentry elements</a:documentation>
+          <ref name="termContextSource.attlist"/>
+          <ref name="termContextSource.content"/>
+        </element>
+      </define>
+      <define name="termContextSource.attlist" combine="interleave">
+        <ref name="termContextSource.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Source </a:documentation>
+      <define name="termSource.content">
+        <optional>
+          <ref name="sourceName"/>
+        </optional>
+        <optional>
+          <ref name="sourceReference"/>
+        </optional>
+      </define>
+      <define name="termSource.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="termSource.element">
+        <element name="termSource" dita:longName="Term Source">
+          <a:documentation>The &lt;termSource> element contains the source of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="termSource.attlist"/>
+          <ref name="termSource.content"/>
+        </element>
+      </define>
+      <define name="termSource.attlist" combine="interleave">
+        <ref name="termSource.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Generic Term </a:documentation>
+      <define name="genericTerm.content">
+        <zeroOrMore>
+          <ref name="termVariant"/>
+        </zeroOrMore>
+        <optional>
+          <choice>
+            <ref name="annotation"/>
+            <ref name="termContext"/>
+            <ref name="termSource"/>
+          </choice>
+        </optional>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Full Form </a:documentation>
+      <define name="fullForm.attributes">
+        <ref name="term-atts"/>
+        <ref name="languageSelection-atts"/>
+        <ref name="univ-atts"/>
+        <ref name="genderSelection-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="fullForm.element">
+        <element name="fullForm" dita:longName="Full Form">
+          <a:documentation>The &lt;fullForm> element contains the full written form of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="fullForm.attlist"/>
+          <ref name="genericTerm.content"/>
+        </element>
+      </define>
+      <define name="fullForm.attlist" combine="interleave">
+        <ref name="fullForm.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Abbreviation </a:documentation>
+      <define name="abbreviation.attributes">
+        <ref name="term-atts"/>
+        <ref name="languageSelection-atts"/>
+        <ref name="univ-atts"/>
+        <ref name="genderSelection-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="abbreviation.element">
+        <element name="abbreviation" dita:longName="Abbreviation">
+          <a:documentation>The &lt;abbreviation> element contains the abbreviated form of a term.
+            Category: Termentry element</a:documentation>
+          <ref name="abbreviation.attlist"/>
+          <ref name="genericTerm.content"/>
+        </element>
+      </define>
+      <define name="abbreviation.attlist" combine="interleave">
+        <ref name="abbreviation.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Acronym </a:documentation>
+      <define name="acronym.attributes">
+        <ref name="term-atts"/>
+        <ref name="languageSelection-atts"/>
+        <ref name="univ-atts"/>
+        <ref name="genderSelection-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="acronym.element">
+        <element name="acronym" dita:longName="Abbreviation">
+          <a:documentation>The &lt;acronym> element contains the acronym of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="acronym.attlist"/>
+          <ref name="genericTerm.content"/>
+        </element>
+      </define>
+      <define name="acronym.attlist" combine="interleave">
+        <ref name="acronym.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Verb </a:documentation>
+      <define name="verb.attributes">
+        <ref name="term-atts"/>
+        <ref name="languageSelection-atts"/>
+        <ref name="univ-atts"/>
+        <ref name="genderSelection-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="verb.element">
+        <element name="verb" dita:longName="Verb">
+          <a:documentation>The &lt;verb> element contains a verb.
+            Category: Termentry elements</a:documentation>
+          <ref name="verb.attlist"/>
+          <ref name="genericTerm.content"/>
+        </element>
+      </define>
+      <define name="verb.attlist" combine="interleave">
+        <ref name="verb.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Antonym </a:documentation>
+      <define name="antonym.content">
+        <empty/>
+      </define>
+      <define name="antonym.attributes">
+        <ref name="termLink-atts"/>
+      </define>
+      <define name="antonym.element">
+        <element name="antonym" dita:longName="Antonym">
+          <a:documentation>The &lt;antonym> element refers to an antonym of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="antonym.attlist"/>
+          <ref name="antonym.content"/>
+        </element>
+      </define>
+      <define name="antonym.attlist" combine="interleave">
+        <ref name="antonym.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Hypernym </a:documentation>
+      <define name="hypernym.content">
+        <empty/>
+      </define>
+      <define name="hypernym.attributes">
+        <ref name="termLink-atts"/>
+      </define>
+      <define name="hypernym.element">
+        <element name="hypernym" dita:longName="Hypernym">
+          <a:documentation>The &lt;hypernym> element refers to the hypernym of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="hypernym.attlist"/>
+          <ref name="hypernym.content"/>
+        </element>
+      </define>
+      <define name="hypernym.attlist" combine="interleave">
+        <ref name="hypernym.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Hyponym </a:documentation>
+      <define name="hyponym.content">
+        <empty/>
+      </define>
+      <define name="hyponym.attributes">
+        <ref name="termLink-atts"/>
+      </define>
+      <define name="hyponym.element">
+        <element name="hyponym" dita:longName="Hyponym">
+          <a:documentation>The &lt;hyponym> element refers to the hyponym of a term.
+            Category: Termentry elements</a:documentation>
+          <ref name="hyponym.attlist"/>
+          <ref name="hyponym.content"/>
+        </element>
+      </define>
+      <define name="hyponym.attlist" combine="interleave">
+        <ref name="hyponym.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Instance Of </a:documentation>
+      <define name="instanceOf.content">
+        <empty/>
+      </define>
+      <define name="instanceOf.attributes">
+        <ref name="termLink-atts"/>
+      </define>
+      <define name="instanceOf.element">
+        <element name="instanceOf" dita:longName="Instance Of">
+          <a:documentation>The &lt;instanceOf> element indicates, that the current term is an instance ot the referenced term.
+            Category: Termentry elements</a:documentation>
+          <ref name="instanceOf.attlist"/>
+          <ref name="instanceOf.content"/>
+        </element>
+      </define>
+      <define name="instanceOf.attlist" combine="interleave">
+        <ref name="instanceOf.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Part Of </a:documentation>
+      <define name="partOf.content">
+        <empty/>
+      </define>
+      <define name="partOf.attributes">
+        <ref name="termLink-atts"/>
+      </define>
+      <define name="partOf.element">
+        <element name="partOf" dita:longName="Part Of">
+          <a:documentation>The &lt;partOf> element indicates, that the current term is part ot the referenced term.
+            Category: Termentry elements</a:documentation>
+          <ref name="partOf.attlist"/>
+          <ref name="partOf.content"/>
+        </element>
+      </define>
+      <define name="partOf.attlist" combine="interleave">
+        <ref name="partOf.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Related Term </a:documentation>
+      <define name="relatedTerm.content">
+        <empty/>
+      </define>
+      <define name="relatedTerm.attributes">
+        <ref name="termLink-atts"/>
+      </define>
+      <define name="relatedTerm.element">
+        <element name="relatedTerm" dita:longName="Related Term">
+          <a:documentation>The &lt;relatedTerm> element refers to a related term.
+            Category: Termentry elements</a:documentation>
+          <ref name="relatedTerm.attlist"/>
+          <ref name="relatedTerm.content"/>
+        </element>
+      </define>
+      <define name="relatedTerm.attlist" combine="interleave">
+        <ref name="relatedTerm.attributes"/>
+      </define>
+    </div>
+  </div>
+
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
+
+    <define name="abbreviation.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section concept/section termentry/termNotation termentry/abbreviation "/>
+      </optional>
+    </define>
+    <define name="acronym.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section concept/section termentry/termNotation termentry/acronym "/>
+      </optional>
+    </define>
+    <define name="agreedWith.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/ul termentry/agreedWith "/>
+      </optional>
+    </define>
+    <define name="annotation.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/annotation "/>
+      </optional>
+    </define>
+    <define name="antonym.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/antonym "/>
+      </optional>
+    </define>
+    <define name="antonyms.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/antonyms "/>
+      </optional>
+    </define>
+    <define name="definition.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/abstract termentry/definition "/>
+      </optional>
+    </define>
+    <define name="definitionSource.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/definitionSource "/>
+      </optional>
+    </define>
+    <define name="definitionText.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/shortdesc termentry/definitionText "/>
+      </optional>
+    </define>
+    <define name="domain.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/domain "/>
+      </optional>
+    </define>
+    <define name="domains.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/domains "/>
+      </optional>
+    </define>
+    <define name="fullForm.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section concept/section termentry/termNotation termentry/fullForm "/>
+      </optional>
+    </define>
+    <define name="hypernym.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/hypernym "/>
+      </optional>
+    </define>
+    <define name="hypernyms.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/hypernyms "/>
+      </optional>
+    </define>
+    <define name="hyponym.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/hyponym "/>
+      </optional>
+    </define>
+    <define name="hyponyms.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/hyponyms "/>
+      </optional>
+    </define>
+    <define name="instanceOf.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/instanceOf "/>
+      </optional>
+    </define>
+    <define name="instancesOf.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/instancesOf "/>
+      </optional>
+    </define>
+    <define name="partOf.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/partOf "/>
+      </optional>
+    </define>
+    <define name="partsOf.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/partsOf "/>
+      </optional>
+    </define>
+    <define name="partOfSpeech.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/partOfSpeech "/>
+      </optional>
+    </define>
+    <define name="relatedTerm.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/relatedTerm "/>
+      </optional>
+    </define>
+    <define name="relatedTerms.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/relatedTerms "/>
+      </optional>
+    </define>
+    <define name="relations.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/related-links termentry/relations "/>
+      </optional>
+    </define>
+    <define name="sourceName.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/text termentry/sourceName "/>
+      </optional>
+    </define>
+    <define name="sourceReference.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/xref concept/xref termentry/sourceReference "/>
+      </optional>
+    </define>
+    <define name="termBody.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/body concept/conbody termentry/termBody "/>
+      </optional>
+    </define>
+    <define name="termCommitteeMember.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/li termentry/termCommitteeMember "/>
+      </optional>
+    </define>
+    <define name="termContext.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/termContext "/>
+      </optional>
+    </define>
+    <define name="termContextSource.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/termContextSource "/>
+      </optional>
+    </define>
+    <define name="termContextText.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/text termentry/termContextText "/>
+      </optional>
+    </define>
+    <define name="termSource.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/text termentry/termSource "/>
+      </optional>
+    </define>
+    <define name="termVariant.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/text termentry/termVariant "/>
+      </optional>
+    </define>
+    <define name="termentry.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/topic concept/concept termentry/termentry "/>
+      </optional>
+    </define>
+    <define name="verb.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/section concept/section termentry/termNotation termentry/verb "/>
+      </optional>
+    </define>
+
+  </div>
+</grammar>

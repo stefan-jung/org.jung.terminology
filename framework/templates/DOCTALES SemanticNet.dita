@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE semanticnet PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
+<?xml-model href="urn:doctales:dita:rng:semanticnet.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:doctales:dita:rng:semanticnet.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <semanticnet id="ui_${id}">
   <title>Semantic Net</title>
-  <semanticBody>
+  <semanticbody>
     <net/>
-  </semanticBody>
+  </semanticbody>
 </semanticnet>
