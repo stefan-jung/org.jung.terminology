@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE termentry PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN" "termentry.dtd">
 <termentry id="beetle">
  <title>Volkswagen Beetle</title>
  <definition>

@@ -152,9 +152,9 @@
       </define>
       <define name="semanticbody.element">
         <element name="semanticbody" dita:longName="Semantic Body">
-          <a:documentation>The &lt;semanticnet> element is the main body-level element for a semantic net. Like the &lt;body> element of a general &lt;topic>, &lt;conbody> allows paragraphs, lists, and other
-            elements as well as sections and examples. But &lt;semanticnet> has a constraint that a section or an example can be followed only by other sections or examples. Category: Semantic Net
-            elements</a:documentation>
+          <a:documentation>The &lt;semanticbody> element is the main body-level element for a semantic net. Like the &lt;body> element of a general &lt;topic>, &lt;semanticbody> allows paragraphs, lists, and other
+            elements as well as sections and examples. But &lt;semanticnet> has a constraint that a section or an example can be followed only by other sections or examples.
+            Category: Semantic Net elements</a:documentation>
           <ref name="conbody.attlist"/>
           <ref name="conbody.content"/>
         </element>
