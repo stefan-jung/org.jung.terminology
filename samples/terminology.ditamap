@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
+<?xml-model href="urn:doctales:dita:rng:termmap.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:doctales:dita:rng:termmap.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <termmap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
   <termgroup>
     <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem" type="termentry"/>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
+    <moduleTitle>DITA Bookmap</moduleTitle>
+      <headerComment xml:space="preserve">
+========================================================================================================================
+                                                         HEADER
+========================================================================================================================
+          Darwin Information Typing Architecture (DITA) Version 1.3
+          DOCTALES Specialization
+          11.01.2017
+          Copyright (c) DOCTALES 2017. All rights reserved.
+          Source: https://doctales.atlassian.net/wiki
+
+========================================================================================================================
+          MODULE:   DITA Term Map Shell
+          VERSION:  1.3
+          DATE:     January 2017
+
+========================================================================================================================
+                                   PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
+
+          Refer to this file by the following public identifier or an appropriate system identifier
+
+          PUBLIC "-//DOCTALES//DTD DITA Termmap//EN"
+          
+          The public ID above refers to the latest version of this DTD.
+          To refer to this specific version, you may use this value:
+
+          PUBLIC "-//DOCTALES//DTD DITA 1.3 Termmap//EN"
+
+========================================================================================================================
+
+          SYSTEM:   Darwin Information Typing Architecture (DITA)
+
+          PURPOSE:  Define elements and specialization attributes for Term Maps
+
+          ORIGINAL CREATION DATE:
+                    January 2017                                       
+
+                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    All Rights Reserved.
+                                                   
+          UPDATES:
+                    2017-01-11 SE: Initial Relax NG release
+
+========================================================================================================================
+    </headerComment>
+    <moduleMetadata>
+      <moduleType>map</moduleType>
+      <moduleShortName>termmap</moduleShortName>
+      <modulePublicIds>
+        <dtdMod>-//OASIS//ELEMENTS DITA<var presep=" " name="ditaver"/> Termmap//EN</dtdMod>
+        <dtdEnt>-//OASIS//ENTITIES DITA<var presep=" " name="ditaver"/> Termmap//EN</dtdEnt>
+        <xsdGrp>urn:doctales:dita:rnc:termmapGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <xsdMod>urn:doctales:dita:rnc:termmapMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:doctales:dita:rnc:termmapMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:doctales:dita:rnc:termmapMod.rng<var presep=":" name="ditaver"/></rngMod>
+      </modulePublicIds>
+      <domainsContribution>(map termmap)</domainsContribution>
+    </moduleMetadata>
+  </moduleDesc>
+
+  <div>
+    <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
+    <define name="termmap">
+      <ref name="termmap.element"/>
+    </define>
+    <define name="termref">
+      <ref name="termref.element"/>
+    </define>
+    <define name="termgroup">
+      <ref name="termgroup.element"/>
+    </define>
+  </div>
+  
+  <div>
+    <a:documentation>COMMON ATTRIBUTE SETS</a:documentation>
+  </div>
+
+  <div>
+    <a:documentation>ELEMENT TYPE PATTERNS</a:documentation>
+    <div>
+      <a:documentation>LONG NAME: Term Map</a:documentation>
+      <define name="termmap.content">
+        <empty/>
+        <optional>
+          <ref name="title"/>
+        </optional>
+        <optional>
+          <ref name="topicmeta"/>
+        </optional>
+        <zeroOrMore>
+          <choice>
+            <ref name="anchor"/>
+            <ref name="data.elements.incl"/>
+            <ref name="navref"/>
+            <ref name="reltable"/>
+            <ref name="topicref"/>
+            <ref name="termgroup"/>
+          </choice>
+        </zeroOrMore>
+      </define>
+      <define name="termmap.attributes">
+        <optional>
+          <attribute name="id">
+            <data type="ID"/>
+          </attribute>
+        </optional>
+        <ref name="conref-atts"/>
+        <optional>
+          <attribute name="anchorref"/>
+        </optional>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+        <ref name="localization-atts"/>
+        <ref name="topicref-atts"/>
+        <ref name="select-atts"/>
+      </define>
+      <define name="termmap.element">
+        <element name="termmap" dita:longName="Term Map">
+          <a:documentation>The &lt;termmap> element is a map file used to organize DITA terminology
+            Category: Term Map elements</a:documentation>
+          <ref name="termmap.attlist"/>
+          <ref name="termmap.content"/>
+        </element>
+      </define>
+      <define name="termmap.attlist" combine="interleave">
+        <ref name="termmap.attributes"/>
+        <ref name="arch-atts"/>
+        <ref name="domains-att"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation>LONG NAME: Term Reference</a:documentation>
+      <define name="termref.element">
+        <element name="termref" dita:longName="Term Reference">
+          <a:documentation>The &lt;termref> element is a reference to a term topic.
+            Category: Term Map elements</a:documentation>
+          <ref name="termref.attlist"/>
+          <ref name="topicref.content"/>
+        </element>
+      </define>
+      <define name="termref.attlist" combine="interleave">
+        <ref name="topicref.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation>LONG NAME: Term Group</a:documentation>
+      <define name="termgroup.content">
+        <oneOrMore>
+          <ref name="termref"/>
+        </oneOrMore>
+      </define>
+      <define name="termgroup.attributes">
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+        <ref name="topicref-atts"/>
+        <ref name="univ-atts"/>
+      </define>
+      <define name="termgroup.element">
+        <element name="termgroup" dita:longName="Term Group">
+          <a:documentation>The &lt;termgroup> element is a wrapper for &lt;termref> elements.
+            Category: Term Map elements</a:documentation>
+          <ref name="termgroup.attlist"/>
+          <ref name="termgroup.content"/>
+        </element>
+      </define>
+      <define name="termgroup.attlist" combine="interleave">
+        <ref name="termgroup.attributes"/>
+      </define>
+    </div>
+  </div>
+
+  <div>
+    <a:documentation>SPECIALIZATION ATTRIBUTES</a:documentation>
+
+    <define name="termmap.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- map/map termmap/termmap "/>
+      </optional>
+    </define>
+    <define name="termref.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- map/topicref termmap/termref "/>
+      </optional>
+    </define>
+    <define name="termgroup.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- map/topicref mapgroup-d/topicgroup termmap/termgroup "/>
+      </optional>
+    </define>
+  </div>
+</grammar>

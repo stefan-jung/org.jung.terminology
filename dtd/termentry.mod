@@ -542,13 +542,13 @@ Category: Termentry elements-->
 <!ELEMENT definitionSource    %definitionSource.content;>
 <!ATTLIST definitionSource    %definitionSource.attributes;>
 
-<!--                                 LONG NAME: Document Reference                    -->
+<!--                                 LONG NAME: Source Reference                      -->
 <!--doc:The <sourceReference> refers to the source of a definition, e.g. to a file or website.
 Category: Termentry elements-->
 <!ELEMENT sourceReference    %xref.content;>
 <!ATTLIST sourceReference    %xref.attributes;>
 
-<!--                                 LONG NAME: Document Name                         -->
+<!--                                 LONG NAME: Source Name                           -->
 <!ENTITY % sourceName.content     "(#PCDATA)*">
 <!ENTITY % sourceName.attributes  "%data-element-atts;">
 <!--doc:The <sourceName> refers to a document and contains its name.
@@ -577,7 +577,7 @@ Category: Termentry elements-->
 <!ELEMENT termVariant    %termVariant.content;>
 <!ATTLIST termVariant    %termVariant.attributes;>
 
-<!--                                 LONG NAME: Term Context Text                     -->
+<!--                                 LONG NAME: Term Context                          -->
 <!ENTITY % termContext.content      "((%termContextText;),
                                       (%termContextSource;)?)">
 <!ENTITY % termContext.attributes "%univ-atts;
