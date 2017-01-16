@@ -3561,7 +3561,7 @@ By default, the output is written to dita.dir/out.</String>
 The contents of the header file will be inserted in the &lt;head> element of the generated HTML files.</String>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/header/header.xml</String>
+																<String>${frameworkDir}/webhelp-skin/header/termbrowser-classic.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4032,7 +4032,7 @@ By default, the output is written to dita.dir/out.</String>
 																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as the header in the output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/header/header.xml</String>
+																<String>${frameworkDir}/webhelp-skin/header/termbrowser-reponsive.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4408,7 +4408,7 @@ The value of this parameter should be only the file name (or an absolute path to
 For example, the &lt;prereq> element (which is specialized from &lt;section>) would generate class="section prereq". Corresponds to the XSLT parameter PRESERVE-DITA-CLASS.</String>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/header/hdf.xml</String>
+																<String>${frameworkDir}/webhelp-skin/header/termbrowser-html5.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -4527,6 +4527,32 @@ The temporary directory is where the DITA-OT writes temporary files that are gen
 															</field>
 															<field name="value">
 																<String>${cfd}/temp/termbrowser-html5</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+														<antParameter>
+															<field name="name">
+																<String>nav-toc</String>
+															</field>
+															<field name="description">
+																<String>Specifies whether to generate a navigation TOC in topic pages. The following values are supported:
+none (default) – No TOC
+partial – Partial TOC that shows the current topic
+full – Full TOC</String>
+															</field>
+															<field name="value">
+																<String>full</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
