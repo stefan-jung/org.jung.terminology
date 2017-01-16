@@ -13,7 +13,7 @@ org.doctales.terminology
 
 - Create and change terms easily using specialized DITA topics. The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
 - Author terms easily using an &lt;oXygen/&gt; XML framework with author mode stylesheets, that simplify the editing of `<termentry>` and `<termmap>` topics.
-- Navigate through the terminology database with a classic or responsive terminology browser based on the &lt;oXygen/&gt; webhelp transformation.
+- Navigate through the terminology database with a classic or responsive terminology browser ([DEMO](https://doctales.github.io/samples/termbrowser-responsive/index.html)) based on the &lt;oXygen/&gt; webhelp transformation.
 - Check DITA or XLIFF files with a Schematron based terminology checker.
 - Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP).
 
@@ -24,7 +24,7 @@ org.doctales.terminology
 > * [Using the Plugin](#install-framework)
 > * [Contribution](#contribution)
 
-# Installation
+## Installation
 
 **Prerequisites**
 
@@ -38,7 +38,7 @@ dita -install https://github.com/doctales/org.doctales.terminology/archive/maste
 ```
 
 
-# Install &lt;oXygen/&gt; Framework
+## Install &lt;oXygen/&gt; Framework
 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
@@ -46,12 +46,12 @@ dita -install https://github.com/doctales/org.doctales.terminology/archive/maste
    ![framework](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/framework.png)
 
 
-# Using the Plugin
+## Using the Plugin
 
 Please refer to the [documentation](https://doctales.atlassian.net/wiki/display/TERM/org.doctales.terminology).
 
 
-# Contribution
+## Contribution
 
 People that contribute to **org.doctales.terminology**:
 
