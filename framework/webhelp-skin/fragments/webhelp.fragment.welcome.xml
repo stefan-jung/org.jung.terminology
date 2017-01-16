@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div>
   <p><b>Welcome to the DOCTALES termbrowser</b></p>
+  <p>The termbrowser contains sample terminology data from the subject area "car".</p>
   <ul>
-    <li>Use the termbrowser to naviate within the termbase.</li>
+    <li>Use the termbrowser to navigate within the termbase.</li>
     <li>Use the <a href="semantic-net.html">Semantic Net</a> to visualize the relations between your terms.</li>
   </ul>   
 </div>
