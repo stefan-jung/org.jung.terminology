@@ -12,10 +12,10 @@
   </definition>
   <termBody>
     <partOfSpeech value="noun"/>
-    <fullForm usage="preferred" language="en-AU">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>electronic stability control</termVariant>
     </fullForm>
-    <acronym>
+    <acronym language="en-GB" usage="preferred">
       <termVariant>ESC</termVariant>
     </acronym>
     <fullForm language="en-GB" usage="notRecommended">
