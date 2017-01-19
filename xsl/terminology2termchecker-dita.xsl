@@ -111,4 +111,7 @@
         </xsl:for-each>
     </xsl:template>
     
+    <!-- Empty fall-through template for non-termentry topics -->
+    <xsl:template match="*[contains(@class, ' topic/topic ')][not(contains(@class, ' termentry/termentry '))]"/>
+    
 </xsl:stylesheet>
