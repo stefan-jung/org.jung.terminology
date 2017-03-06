@@ -9,6 +9,7 @@
         indent="yes"
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
+    <xsl:param name="temp.dir"/>
     <xsl:param name="ditamap"/>
 
     <!-- The parameter $newline defines a line break. -->
@@ -19,9 +20,8 @@
     
     <xsl:template match="/" priority="1">
         <termstats>
-            <termconflicts>
-                <xsl:apply-templates mode="termconflict"/>
-            </termconflicts>
+            <termconflicts><xsl:apply-templates mode="termconflict"/></termconflicts>
+            <reports><xsl:call-template name="report"/></reports>
         </termstats>
     </xsl:template>
     
@@ -30,7 +30,6 @@
         <xsl:variable name="preferredTermFile" select="@href" as="xs:string"/>
         <xsl:for-each select="document($preferredTermFile,.)/descendant::*[contains(@class, ' termentry/termNotation ')][contains(@usage, 'preferred')]">
             <xsl:variable name="preferredTerm" select="normalize-space(.)"/>
-            
             <xsl:for-each select="document($ditamap,.)/descendant::*[contains(@class, 'termmap/termref')]">
                 <xsl:variable name="notRecommendedTermFile" select="@href" as="xs:string"/>
                 <xsl:for-each select="document($notRecommendedTermFile,.)/descendant::*[contains(@class, ' termentry/termNotation ')][contains(@usage, 'notRecommended')]">
@@ -42,14 +41,42 @@
                                 <xsl:element name="preferredTermFile"><xsl:value-of select="$preferredTermFile"/></xsl:element>
                                 <xsl:element name="notRecommendedTermFile"><xsl:value-of select="$notRecommendedTermFile"/></xsl:element>
                             </xsl:element>
-                            <!--<xsl:value-of select="$preferredTerm"/><xsl:text>(</xsl:text><xsl:value-of select="$preferredTermFile"/><xsl:text>) == </xsl:text><xsl:value-of select="$notRecommendedTerm"/><xsl:text>(</xsl:text><xsl:value-of select="$notRecommendedTermFile"/><xsl:text>) = </xsl:text><xsl:text>true</xsl:text><xsl:value-of select="$newline"/>-->
                         </xsl:if>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:for-each>
-            
         </xsl:for-each>
-        
     </xsl:template>
+    
+    <xsl:template name="report">
+        <xsl:element name="report">
+            <xsl:attribute name="date" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
+            <xsl:variable name="termCollection" select="concat($temp.dir, '/?select=*.dita')"/>
+            <xsl:element name="numberOfTermTopics">
+                <xsl:value-of select="count(collection($termCollection)//*[contains(@class, 'termentry/termentry')])"/>
+            </xsl:element>
+            <xsl:element name="numberOfLanguages">
+                <xsl:value-of select="count(distinct-values(collection($termCollection)//*[contains(@class, 'termentry/termNotation')][@language]/@language))"/>
+            </xsl:element>
+            <xsl:element name="numberOfPreferredTermNotations">
+                <xsl:value-of select="count(collection($termCollection)//*[contains(@class, 'termentry/termNotation')][@usage='preferred'])"/>
+            </xsl:element>
+            <xsl:element name="numberOfAdmittedTermNotations">
+                <xsl:value-of select="count(collection($termCollection)//*[contains(@class, 'termentry/termNotation')][@usage='admitted'])"/>
+            </xsl:element>
+            <xsl:element name="numberOfNotRecommendedTermNotations">
+                <xsl:value-of select="count(collection($termCollection)//*[contains(@class, 'termentry/termNotation')][@usage='notRecommended'])"/>
+            </xsl:element>
+            <xsl:element name="numberOfObsoleteTermNotations">
+                <xsl:value-of select="count(collection($termCollection)//*[contains(@class, 'termentry/termNotation')][@usage='obsolete'])"/>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
+    
+    <!-- Fall Through Templates -->
+    <xsl:template match="*[contains(@class, ' topic/navtitle ')]"/>
+    <xsl:template match="*[contains(@class, ' map/topicmeta ')]"/>
+    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]"/>
+    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]"/>
 
 </xsl:stylesheet>

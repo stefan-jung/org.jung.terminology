@@ -47,6 +47,7 @@
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <param name="ditamap" expression="${basename}.ditamap"/>
+            <param name="temp.dir" expression="${dita.temp.dir}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         <copy file="${dita.temp.dir}${file.separator}terminology_stats.xml" todir="${output.dir}"/>
