@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dummy>
     
+    <!-- DITA-Map -->
+    <param name="ditamap" expression="${args.input}" if="args.input"/>
+    
     <!-- Parameters for TBX-Min -->
     <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
     <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>

@@ -6,7 +6,7 @@
         html5.init,
         build-init,
         preprocess,
-        dita.topics.html.termchecker-dita"/>
+        termchecker-dita.create-schematron"/>
     
     <target name="termchecker-dita.init">
         <property name="root-chunk-override" value="to-content"/>
@@ -17,7 +17,7 @@
         </condition>
     </target>
     
-    <target name="dita.topics.html.termchecker-dita" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
+    <target name="termchecker-dita.create-schematron" description="Create a Schematron termchecker for XLIFF">
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
             includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
