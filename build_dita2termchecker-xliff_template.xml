@@ -6,9 +6,6 @@
         html5.init,
         build-init,
         preprocess,
-        html5.topic,
-        html5.map,
-        html5.css,
         dita.topics.html.termchecker-xliff"/>
     
     <target name="termchecker-xliff.init">
