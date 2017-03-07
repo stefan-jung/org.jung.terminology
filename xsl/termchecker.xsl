@@ -146,7 +146,7 @@
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
         <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="concat(concat($notRecommendedTerm, '_fix_'), generate-id())"/>
+            <xsl:attribute name="id" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_fix_'), generate-id())"/>
             <xsl:element name="sqf:description">
                 <xsl:element name="sqf:title">
                     <xsl:value-of select="normalize-space($sqfTitle)"/>
