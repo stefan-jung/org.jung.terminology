@@ -34,11 +34,7 @@
             -->
             <xsl:element name="sch:report">
                 <xsl:attribute name="test">
-                    <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                    <xsl:value-of select="$termLanguageRegionCode"/>
-                    <xsl:text>') and contains(., '</xsl:text>
-                    <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>')</xsl:text>
+                    <xsl:text>contains(/*/@xml:lang, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') and matches(., '[\W+](</xsl:text><xsl:value-of select="$notRecommendedTerm"/><xsl:text>[\W+])|([\W+]</xsl:text><xsl:value-of select="$notRecommendedTerm"/><xsl:text>$)|(^</xsl:text><xsl:value-of select="$notRecommendedTerm"/><xsl:text>$)|(^</xsl:text><xsl:value-of select="$notRecommendedTerm"/><xsl:text>[\W+])', 'i')</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="role">warning</xsl:attribute>
                 <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
@@ -49,27 +45,6 @@
                 <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
                 <xsl:text>.</xsl:text>
             </xsl:element>
-
-            <!-- If the not recommended term is lowercased, create a report with a capitalized initial letter -->
-            <xsl:if test="doctales:isLowercased($notRecommendedTerm)">
-                <xsl:element name="sch:report">
-                    <xsl:attribute name="test">
-                        <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                        <xsl:value-of select="$termLanguageRegionCode"/>
-                        <xsl:text>') and contains(., '</xsl:text>
-                        <xsl:value-of select="$uppercased"/>
-                        <xsl:text>')</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="role">warning</xsl:attribute>
-                    <xsl:attribute name="sqf:fix" select="$sqfGroupName_up"/>
-                    <xsl:value-of select="doctales:getString($language, 'TheTerm')"/>
-                    <xsl:text> '</xsl:text>
-                    <xsl:value-of select="$uppercased"/>
-                    <xsl:text>' </xsl:text>
-                    <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
-                    <xsl:text>.</xsl:text>
-                </xsl:element>
-            </xsl:if>
 
             <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
             <xsl:element name="sqf:group">
@@ -88,26 +63,6 @@
                     </xsl:choose>
                 </xsl:for-each>
             </xsl:element>
-            
-            <!-- Schematron Quick Fix Group for capizalized terms -->
-            <xsl:if test="doctales:isLowercased($notRecommendedTerm)">
-                <xsl:element name="sqf:group">
-                    <xsl:attribute name="id" select="$sqfGroupName_up"/>
-                    <xsl:for-each select="preceding-sibling::* | following-sibling::*">
-                        <xsl:choose>
-                            <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                                <xsl:call-template name="createSqfFix">
-                                    <xsl:with-param name="notRecommendedTerm" select="$uppercased"/>
-                                    <xsl:with-param name="uppercase" select="'true'"/>
-                                    <xsl:with-param name="beginning" select="'false'"/>
-                                    <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
-                                    <xsl:with-param name="definition" select="$definition"/>
-                                </xsl:call-template>
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:for-each>
-                </xsl:element>
-            </xsl:if>
         </xsl:for-each>
     </xsl:template>
     

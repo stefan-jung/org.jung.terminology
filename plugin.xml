@@ -10,7 +10,7 @@
   <feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
-  <!--<feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>-->
+  <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
   <feature extension="dita.conductor.transtype.check" value="tbx-min"/>

@@ -21,15 +21,36 @@
     </target>
     <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available">
         <antcall target="dita2webhelp"/>
+        <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
     <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available">
         <antcall target="dita2webhelp-responsive"/>
+        <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
     <target name="dita2termbrowser-html5">
         <antcall target="dita2html5"/>
+        <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
+    </target>
+    <target name="termbrowser-termstats" description="Check for terminological conflicts, e.g. term x has a preferred termnotation b, which is a not recommended termnotation of term y.">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${dita.temp.dir}${file.separator}terminology_stats.xml"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension="_check.xml"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <param name="ditamap" expression="${basename}.ditamap"/>
+            <param name="temp.dir" expression="${dita.temp.dir}"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        <copy file="${dita.temp.dir}${file.separator}terminology_stats.xml" todir="${output.dir}"/>
     </target>
     <target name="semanticnet">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
