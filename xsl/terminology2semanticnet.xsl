@@ -119,7 +119,7 @@
                 
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!-- --></script>
                 <xsl:value-of select="$newline"/>
-                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"/>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!----></link>
                 
                 <script type="text/javascript">
                     var nodes = null;

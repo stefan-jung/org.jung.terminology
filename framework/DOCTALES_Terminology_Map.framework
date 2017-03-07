@@ -2998,7 +2998,6 @@
 												</field>
 												<field name="extensionURLs">
 													<String-array>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
@@ -3035,6 +3034,29 @@
 												</field>
 												<field name="ditaParams">
 													<list>
+														<antParameter>
+															<field name="name">
+																<String>args.grammar.cache</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>no</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
 														<antParameter>
 															<field name="name">
 																<String>args.input</String>
@@ -3279,8 +3301,8 @@
 												</field>
 												<field name="extensionURLs">
 													<String-array>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/lib/*.jar</String>
+														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
 														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
