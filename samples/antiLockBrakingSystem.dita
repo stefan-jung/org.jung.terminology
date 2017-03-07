@@ -13,8 +13,12 @@
     </definitionSource>
   </definition>
   <termBody>
+    <agreedWith>
+      <termCommitteeMember>Bruce Wayne</termCommitteeMember>
+      <termCommitteeMember>Peter Parker</termCommitteeMember>
+    </agreedWith>
     <partOfSpeech value="noun"/>
-    <fullForm usage="preferred" language="en-GB">
+    <fullForm language="en-GB" usage="preferred">
       <termVariant>anti-lock braking system</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
