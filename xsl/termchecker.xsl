@@ -4,7 +4,8 @@
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:doctales="http://doctales.github.io"
-    exclude-result-prefixes="xs xd" version="2.0">
+    xmlns:uuid="java.util.UUID"
+    exclude-result-prefixes="xs xd uuid" version="2.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no"/>
 
@@ -146,7 +147,7 @@
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
         <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_fix_'), generate-id())"/>
+            <xsl:attribute name="id" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_fix_'), doctales:generateId())"/>
             <xsl:element name="sqf:description">
                 <xsl:element name="sqf:title">
                     <xsl:value-of select="normalize-space($sqfTitle)"/>
@@ -161,169 +162,26 @@
             </xsl:element>
             
             <!-- Lowercased -->
-            
-            <!-- <sqf:stringReplace regex="(\sfoo$)" select="' bar'"/> -->
             <xsl:element name="sqf:stringReplace">
                 <xsl:attribute name="regex">
-                    <xsl:text>(\s</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>$)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>' </xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>'</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-            
-            <!-- <sqf:stringReplace regex="(^foo\s)" select="'bar '"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(^</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\s)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>'</xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text> '</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-            
-            <!-- <sqf:stringReplace regex="(^foo$)" select="'bar'"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(^</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>$)</xsl:text>
+                    <xsl:text>(\b(</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>)\b)</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="select">
                     <xsl:text>'</xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>'</xsl:text>
                 </xsl:attribute>
             </xsl:element>
             
-            <!-- <sqf:stringReplace regex="(\sfoo\s)" select="' bar '"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(\s</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\s)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>' </xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text> '</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-            
-            <!-- <sqf:stringReplace regex="(\sfoo\.)|(^foo\.)" select="'bar.'"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(\s</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\.)|(^</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\.)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>' </xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>.'</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-            
-            <!-- <sqf:stringReplace regex="(\sfoo\?)|(^foo\?)" select="'bar?'"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(\s</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\?)|(^</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\?)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>' </xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>?'</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-            
-            <!-- <sqf:stringReplace regex="(\sfoo\!)|(^foo\!)" select="'bar!'"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(\s</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\!)|(^</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\!)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>' </xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>!'</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-            
-            <!-- <sqf:stringReplace regex="(\sfoo\;)|(^foo\;)" select="'bar;'"/> -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(\s</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\;)|(^</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>\;)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>' </xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>;'</xsl:text>
-                </xsl:attribute>
-            </xsl:element>
-
             <!-- Uppercased -->            
             <xsl:if test="not(doctales:isUppercased($notRecommendedTerm))">
                 <xsl:variable name="uppercasedNotRecommendedTerm" select="concat(upper-case(substring($notRecommendedTermNormalized,1,1)), substring($notRecommendedTermNormalized, 2), ' '[not(last())])"/>
                 <xsl:variable name="uppercasedPreferredTerm" select="concat(upper-case(substring($preferredTerm,1,1)), substring($preferredTerm, 2), ' '[not(last())])"/>
                 
-                <!-- <sqf:stringReplace regex="(\sfoo$)" select="' bar'"/> -->
                 <xsl:element name="sqf:stringReplace">
                     <xsl:attribute name="regex">
-                        <xsl:text>(\s</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>$)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>' </xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>'</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(^foo\s)" select="'bar '"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(^</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\s)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>'</xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text> '</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(^foo$)" select="'bar'"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(^</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>$)</xsl:text>
+                        <xsl:text>(\b(</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>)\b)</xsl:text>
                     </xsl:attribute>
                     <xsl:attribute name="select">
                         <xsl:text>'</xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>'</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(\sfoo\s)" select="' bar '"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(\s</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\s)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>' </xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text> '</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(\sfoo\.)|(^foo\.)" select="'bar.'"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(\s</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\.)|(^</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\.)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>' </xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>.'</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(\sfoo\?)|(^foo\?)" select="'bar?'"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(\s</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\?)|(^</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\?)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>' </xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>?'</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(\sfoo\!)|(^foo\!)" select="'bar!'"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(\s</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\!)|(^</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\!)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>' </xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>!'</xsl:text>
-                    </xsl:attribute>
-                </xsl:element>
-                
-                <!-- <sqf:stringReplace regex="(\sfoo\;)|(^foo\;)" select="'bar;'"/> -->
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(\s</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\;)|(^</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>\;)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>' </xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>;'</xsl:text>
                     </xsl:attribute>
                 </xsl:element>
             </xsl:if>
@@ -361,6 +219,14 @@
     <xsl:function name="doctales:normalizeString" as="xs:string">
         <xsl:param name="string"/>
         <xsl:sequence select="replace($string, '/', '\\/')"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc><xd:p>Generate a random UUID. The XSLT generate-id() does not generate a unique ID, when called on the same node.</xd:p></xd:desc>
+        <xd:return><xd:p>Return a unique UUID.</xd:p></xd:return>
+    </xd:doc>
+    <xsl:function name="doctales:generateId">
+        <xsl:sequence select="uuid:randomUUID()"/>
     </xsl:function>
 
 </xsl:stylesheet>

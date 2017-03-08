@@ -23,12 +23,12 @@
             
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_group_'), generate-id())"/>
+            <xsl:variable name="sqfGroupName" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_group_'), doctales:generateId())"/>
             <xsl:variable name="parent">
                 <xsl:choose>
-                    <xsl:when test="$checkElements = 'source'"><xsl:text>parent::*[name() = 'source']</xsl:text></xsl:when>
-                    <xsl:when test="$checkElements = 'target'"><xsl:text>parent::*[name() = 'target']</xsl:text></xsl:when>
-                    <xsl:when test="$checkElements = 'both'"><xsl:text>parent::*[name() = 'target' or 'source']</xsl:text></xsl:when>
+                    <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
+                    <xsl:when test="$checkElements = 'target'"><xsl:text>ancestor-or-self::*[name() = 'target']</xsl:text></xsl:when>
+                    <xsl:when test="$checkElements = 'both'"><xsl:text>ancestor-or-self::*[name() = 'target' or 'source']</xsl:text></xsl:when>
                 </xsl:choose>
             </xsl:variable>
 
@@ -39,20 +39,22 @@
             -->
             <xsl:element name="sch:report">
                 <xsl:attribute name="test">
-                    <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                    <xsl:value-of select="$termLanguageRegionCode"/>
-                    <xsl:text>') and matches(., '[\W+](</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="$checkElements = 'source'">
+                            <xsl:text>contains(ancestor::*/@source-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') </xsl:text>
+                        </xsl:when>
+                        <xsl:when test="$checkElements = 'target'">
+                            <xsl:text>contains(ancestor::*/@target-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') </xsl:text>
+                        </xsl:when>
+                        <xsl:when test="$checkElements = 'both'">
+                            <xsl:text>(contains(ancestor::*/@source-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') or contains(ancestor::*/@target-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>')) </xsl:text>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:text>and matches(., '(((\W|^))</xsl:text>
                     <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>[\W+])|([\W+]</xsl:text>
-                    <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>$)|(^</xsl:text>
-                    <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>$)|(^</xsl:text>
-                    <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>[\W+])', 'i') and </xsl:text>
+                    <xsl:text>((\W|$)))', 'i') and </xsl:text>
                     <xsl:value-of select="$parent"/>
                 </xsl:attribute>
-                
                 <xsl:attribute name="role">warning</xsl:attribute>
                 <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
                 <xsl:value-of select="doctales:getString($language, 'TheTerm')"/>
