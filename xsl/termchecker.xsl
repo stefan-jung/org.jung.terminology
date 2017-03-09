@@ -4,8 +4,8 @@
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:doctales="http://doctales.github.io"
-    xmlns:uuid="java.util.UUID"
-    exclude-result-prefixes="xs xd uuid" version="2.0">
+    xmlns:math="java.lang.Math"
+    exclude-result-prefixes="xs xd math" version="2.0">
 
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no"/>
 
@@ -147,7 +147,7 @@
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
         <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_fix_'), doctales:generateId())"/>
+            <xsl:attribute name="id" select="doctales:generateId()"/>
             <xsl:element name="sqf:description">
                 <xsl:element name="sqf:title">
                     <xsl:value-of select="normalize-space($sqfTitle)"/>
@@ -226,7 +226,8 @@
         <xd:return><xd:p>Return a unique UUID.</xd:p></xd:return>
     </xd:doc>
     <xsl:function name="doctales:generateId">
-        <xsl:sequence select="uuid:randomUUID()"/>
+        <xsl:variable name="randomNumber" select="(current-dateTime() - xs:dateTime('1970-01-01T00:00:00')) div xs:dayTimeDuration('PT1S') * 100000 * math:random()"/>
+        <xsl:sequence select="concat('sqf', $randomNumber)"/>
     </xsl:function>
 
 </xsl:stylesheet>

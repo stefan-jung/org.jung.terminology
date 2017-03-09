@@ -36,9 +36,10 @@
     </target>
     <target name="termbrowser-termstats" description="Check for terminological conflicts, e.g. term x has a preferred termnotation b, which is a not recommended termnotation of term y.">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <property name="ditamap.absolute.path" location="${dita.temp.dir}${file.separator}${basename}.ditamap"/>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
-            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            in="${dita.temp.dir}${file.separator}${ditamap.absolute.path}"
             out="${dita.temp.dir}${file.separator}terminology_stats.xml"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
@@ -46,7 +47,7 @@
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
-            <param name="ditamap" expression="${basename}.ditamap"/>
+            <param name="ditamap" expression="${args.input}"/>
             <param name="temp.dir" expression="${dita.temp.dir}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>

@@ -2,7 +2,7 @@
 out/
 temp/
 *.xpr
-build_deploy.xml
+build_install.xml
 MANIFEST.MF
 *.orig
 *.tmp

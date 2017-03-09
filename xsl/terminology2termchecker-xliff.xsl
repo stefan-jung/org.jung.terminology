@@ -18,12 +18,19 @@
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <xsl:variable name="termentryId" select="@id"/>
         <xsl:variable name="languageCode" select="doctales:getLanguageCodeFromLanguageRegionCode($language)"/>
-        <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
+        <xsl:variable name="definition">
+            <xsl:choose>
+                <xsl:when test="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]">
+                    <xsl:value-of select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
+                </xsl:when>
+                <xsl:otherwise><xsl:text/></xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended'][@language = $languageCode or @language = $language]">
             
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="concat(concat(replace($notRecommendedTerm, ' ', ''), '_group_'), doctales:generateId())"/>
+            <xsl:variable name="sqfGroupName" select="doctales:generateId()"/>
             <xsl:variable name="parent">
                 <xsl:choose>
                     <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
