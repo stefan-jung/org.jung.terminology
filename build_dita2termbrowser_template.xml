@@ -36,10 +36,11 @@
     </target>
     <target name="termbrowser-termstats" description="Check for terminological conflicts, e.g. term x has a preferred termnotation b, which is a not recommended termnotation of term y.">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <property name="ditamap.absolute.path" location="${dita.temp.dir}${file.separator}${basename}.ditamap"/>
+        <property name="dita.temp.dir.rel" value="${dita.temp.dir}" relative="yes"/>
+        <property name="dita.map.rel" value="${dita.temp.dir}${file.separator}${basename}.ditamap" relative="no"/>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
-            in="${dita.temp.dir}${file.separator}${ditamap.absolute.path}"
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
             out="${dita.temp.dir}${file.separator}terminology_stats.xml"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
@@ -47,8 +48,10 @@
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
-            <param name="ditamap" expression="${args.input}"/>
-            <param name="temp.dir" expression="${dita.temp.dir}"/>
+            <!--<param name="ditamap" expression="${dita.temp.dir}${file.separator}${basename}.ditamap"/>-->
+            <param name="ditamap" expression="${dita.map.rel}"/>
+            <param name="ditamap.filename" expression="${basename}.ditamap"/>
+            <param name="temp.dir" expression="${dita.temp.dir.rel}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         <copy file="${dita.temp.dir}${file.separator}terminology_stats.xml" todir="${output.dir}"/>
