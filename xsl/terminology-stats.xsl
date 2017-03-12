@@ -10,7 +10,7 @@
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     <xsl:param name="temp.dir"/>
-    <xsl:param name="ditamap"/>
+    <xsl:param name="termMap"/>
     <xsl:param name="ditamap.filename"/>
 
     <!-- The parameter $newline defines a line break. -->
@@ -27,26 +27,21 @@
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="termconflict">
+        <xsl:variable name="currentTermrefNode" select="."/>
         <xsl:variable name="key" select="@keys"/>
-        <xsl:variable name="preferredTermFile" select="@href" as="xs:string"/>
-        <xsl:for-each select="document($preferredTermFile, .)/descendant::*[contains(@class, ' termentry/termNotation ')][contains(@usage, 'preferred')]">
+        <xsl:variable name="termEntryTopic" select="@href" as="xs:string"/>
+        <xsl:for-each select="document($termEntryTopic, .)/descendant::*[contains(@class, ' termentry/termNotation ')][contains(@usage, 'preferred')]">
             <xsl:variable name="preferredTerm" select="normalize-space(.)"/>
-            <!--<xsl:for-each select="document($ditamap,.)/descendant::*[contains(@class, 'termmap/termref')]">-->
-            <xsl:for-each select="document(doctales:getRelativePath($preferredTermFile, $ditamap), .)/descendant::*[contains(@class, 'termmap/termref')]">
-                <xsl:message>/---------------------------------\</xsl:message>
-                <xsl:message><xsl:text>$preferredTermFile:</xsl:text><xsl:value-of select="$preferredTermFile"/></xsl:message>
-                <xsl:message><xsl:text>$ditamap:</xsl:text><xsl:value-of select="$ditamap"/></xsl:message>
-                <xsl:message><xsl:text>doctales:getRelativePath($preferredTermFile, $ditamap):</xsl:text><xsl:value-of select="doctales:getRelativePath($preferredTermFile, $ditamap)"/></xsl:message>
-                <xsl:message>\---------------------------------/</xsl:message>
-                <xsl:variable name="notRecommendedTermFile" select="@href" as="xs:string"/>
-                <xsl:for-each select="document($notRecommendedTermFile,.)/descendant::*[contains(@class, ' termentry/termNotation ')][contains(@usage, 'notRecommended')]">
+            <xsl:for-each select="($currentTermrefNode/preceding-sibling::*[contains(@class, 'termmap/termref')]) | ($currentTermrefNode/following-sibling::*[contains(@class, 'termmap/termref')])">
+                <xsl:variable name="comparedTermEntryTopic" select="@href" as="xs:string"/>
+                <xsl:for-each select="document($comparedTermEntryTopic,.)/descendant::*[contains(@class, ' termentry/termNotation ')][contains(@usage, 'notRecommended')]">
                     <xsl:variable name="notRecommendedTerm" select="normalize-space(.)"/>
-                    <xsl:if test="$preferredTermFile != $notRecommendedTermFile">
+                    <xsl:if test="$termEntryTopic != $comparedTermEntryTopic">
                         <xsl:if test="not($preferredTerm != $notRecommendedTerm)">
                             <xsl:element name="termconflict">
                                 <xsl:element name="termnotation"><xsl:value-of select="$preferredTerm"/></xsl:element>
-                                <xsl:element name="preferredTermFile"><xsl:value-of select="$preferredTermFile"/></xsl:element>
-                                <xsl:element name="notRecommendedTermFile"><xsl:value-of select="$notRecommendedTermFile"/></xsl:element>
+                                <xsl:element name="preferredTermFile"><xsl:value-of select="$termEntryTopic"/></xsl:element>
+                                <xsl:element name="notRecommendedTermFile"><xsl:value-of select="$comparedTermEntryTopic"/></xsl:element>
                             </xsl:element>
                         </xsl:if>
                     </xsl:if>
@@ -54,7 +49,11 @@
             </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
-    
+    <!-- Empty fall through templates -->
+    <xsl:template match="*[contains(@class, ' map/topicref ') and contains(@type, 'semanticnet')]" mode="termconflict"/>
+    <xsl:template match="*[contains(@class, ' subjectScheme/subjectHead ')]" mode="termconflict"/>
+    <xsl:template match="*[contains(@class, ' subjectScheme/hasInstance ')]" mode="termconflict"/>
+
     <xsl:template name="report">
         <xsl:element name="report">
             <xsl:attribute name="date" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
