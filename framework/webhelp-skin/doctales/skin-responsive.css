@@ -455,6 +455,28 @@ a:hover, a:focus {
 	vertical-align: 18px;
 }
 
+/* Termstats */
+
+/* Term Conflicts */
+
+.termconflicts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.termconflicts-table, .termconflicts-th, .termconflicts-td {
+    border: 1px solid black;
+}
+
+.termconflicts-th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.termconflicts-tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 /* Related Links */
 /* Hide duplicate related links */
 div.related_link {

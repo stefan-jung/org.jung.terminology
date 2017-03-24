@@ -37,7 +37,10 @@
     <target name="termbrowser-termstats" description="Check for terminological conflicts, e.g. term x has a preferred termnotation b, which is a not recommended termnotation of term y.">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <property name="dita.temp.dir.rel" value="${dita.temp.dir}" relative="yes"/>
+        <property name="dita.temp.dir.abs" location="${dita.temp.dir}"/>
         <property name="dita.map.rel" value="${dita.temp.dir}${file.separator}${basename}.ditamap" relative="no"/>
+        
+        <!-- Convert terminology statistics to termstats XML -->
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
@@ -48,14 +51,98 @@
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
-            <!--<param name="ditamap" expression="${dita.temp.dir}${file.separator}${basename}.ditamap"/>-->
             <param name="ditamap" expression="${dita.map.rel}"/>
             <param name="ditamap.filename" expression="${basename}.ditamap"/>
             <param name="temp.dir" expression="${dita.temp.dir.rel}"/>
+            <param name="temp.dir.abs" expression="${dita.temp.dir.abs}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
-        <copy file="${dita.temp.dir}${file.separator}terminology_stats.xml" todir="${output.dir}"/>
+        
+        <antcall target="termstats-merge"/>
+        
+        <!--
+            Convert the XML data to XHTML.
+            The content of the <head> element and the <body> element
+            will later be injected into the termstats topic.
+        -->
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            in="${dita.temp.dir}/termstats_merged.xml"
+            out="${dita.temp.dir}${file.separator}terminology_stats.html"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension=".html"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats-xml.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        
+        <!-- Copy the XML file to the output dir. It has to be shipped with the webhelp to be used as an input parameter for the next publication. -->
+        <copy file="${dita.temp.dir}/termstats_merged.xml" tofile="${output.dir}/termstats.xml"/>
+        
+        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.head">
+            <filterchain>
+                <replaceregex pattern="\s\s+" replace=" "/>
+                <trim/>
+                <ignoreblank/>
+                <striplinebreaks/>
+                <replaceregex pattern="(.*)&lt;!--HEAD BEGINNING--&gt;" replace=""/>
+                <replaceregex pattern="&lt;!--HEAD END--&gt;(.*)" replace=""/>
+            </filterchain>
+        </loadfile>
+        <!--<echo>terminology_stats.head=${terminology_stats.head}</echo>-->
+        
+        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
+            <filterchain>
+                <replaceregex pattern="\s\s+" replace=" "/>
+                <trim/>
+                <ignoreblank/>
+                <striplinebreaks/>
+                <replaceregex pattern="(.*)&lt;!--BODY BEGINNING--&gt;" replace=""/>
+                <replaceregex pattern="&lt;!--BODY END--&gt;(.*)" replace=""/>
+            </filterchain>
+        </loadfile>
+        <!--<echo>terminology_stats.body=${terminology_stats.body}</echo>-->
+        
+        <!-- Get filename of termstats topic -->
+        <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
+            <copy path="//*[contains(@type, 'termstats')]/@href" property="termstats-file" attrValue="yes"/>
+        </xmltask>
+        <basename property="termstats.base" file="${termstats-file}" suffix=".dita"/>
+        
+        <echo>Try to replace &lt;head&gt; and &lt;body&gt; of: ${output.dir}\${termstats.base}.html</echo>
+        
+        <!-- Replace certain parts of the topic with the termstats data -->
+        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;\/head&gt;" replace="${terminology_stats.head}&lt;\/head&gt;" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
     </target>
+    
+    <target name="termstats-merge"
+        description="If a previous termstats file is passed into the build, merge previous and new file"
+        depends="termstats-merge-old-and-new,termstats-move-new"/>
+    
+    <target name="termstats-merge-old-and-new"
+        description="If a previous termstats file is passed into the build, merge previous and new file"
+        if="args.termstats">
+        <echo level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${dita.temp.dir}"
+            in="${args.termstats}"
+            out="${dita.temp.dir}/termstats_merged.xml"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats-merge.xsl">
+            <param name="old.termstats" expression="${args.termstats}"/>
+            <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>
+        </xslt>
+    </target>
+    
+    <target name="termstats-move-new"
+        description="If a previous termstats file is passed into the build, merge previous and new file"
+        unless="args.termstats">
+        <echo level="info">No previous termstats file found</echo>
+        <move file="${dita.temp.dir}${file.separator}terminology_stats.xml" tofile="${dita.temp.dir}${file.separator}terminology_stats_merged.xml"/>
+    </target>
+    
     <target name="semanticnet">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
@@ -70,10 +157,11 @@
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
-        <replaceregexp file="${dita.temp.dir}\${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
-        <replaceregexp file="${dita.temp.dir}\${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
-        <!-- Read HTML Header from semantic net -->
-        <loadfile srcFile="${dita.temp.dir}\${basename}_net.html" property="semantic-net.head">
+        <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
+        <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
+        
+        <!-- Read <head> from semantic net -->
+        <loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.head">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
@@ -83,8 +171,9 @@
                 <replaceregex pattern="&lt;\/head&gt;(.*)&lt;\/html&gt;" replace=""/>
             </filterchain>
         </loadfile>
-        <!-- Read HTML body from semantic net -->
-        <loadfile srcFile="${dita.temp.dir}\${basename}_net.html" property="semantic-net.body">
+        
+        <!-- Read <body> from semantic net -->
+        <loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.body">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <ignoreblank/>
@@ -102,8 +191,8 @@
         <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
         
         <!-- Replace certain parts of the topic with the semantic net data -->
-        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
-        <replaceregexp file="${output.dir}\${semantic-net.base}.html" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>
     

@@ -603,11 +603,17 @@
   <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
-  <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
+  <transtype name="termbrowser" extends="base-html" desc="Termbrowser">
+    <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+  </transtype>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
-  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive"/>
+  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive">
+    <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+  </transtype>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-html5"/>
-  <transtype name="termbrowser-html5" extends="html5" desc="Termbrowser HTML5"/>
+  <transtype name="termbrowser-html5" extends="html5" desc="Termbrowser HTML5">
+    <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+  </transtype>
 </plugin>

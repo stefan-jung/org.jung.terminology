@@ -9,4 +9,7 @@
   
   <!-- Parameters for termchecker and termchecker-xliff -->
   <param name="language" expression="${args.language}" if="args.language"/>
+  
+  <!-- Parameters for html based transformations -->
+  <param name="termstats" expression="${args.termstats}" if="args.termstats"/>
 </project>

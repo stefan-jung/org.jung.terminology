@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE termstats PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN" "termstats.dtd">
+<termstats id="concept_ht4_pgk_fz">
+ <title>Terminology statistics</title>
+ <shortdesc>This topic shows automatically calculated statistics of your terminology
+  database.</shortdesc>
+ <termstatsbody>
+  <p>In this topic you'll find terminology statistics. The statistics will be updated with each
+   publication, if you specify the args.termstats property pointing to the URL for the terminology
+   statistics XML file of your previous build.</p>
+  <stats/>
+ </termstatsbody>
+</termstats>
