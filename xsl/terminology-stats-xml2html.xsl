@@ -6,6 +6,9 @@
    <!-- <xsl:output method="xml"
         encoding="UTF-8"
         indent="yes"/>-->
+    
+    <xsl:import href="flagicon.xsl"/>
+    
     <xsl:strip-space elements="*"/>
     <xsl:param name="temp.dir"/>
     <xsl:param name="termMap"/>
@@ -38,7 +41,7 @@
     
     <xsl:template name="head">
         <xsl:comment>HEAD BEGINNING</xsl:comment>
-        <xsl:apply-templates mode="head"/>
+        <!--<xsl:apply-templates mode="head"/>-->
         <xsl:comment>HEAD END</xsl:comment>
     </xsl:template>
     
@@ -83,6 +86,63 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="languages" mode="body">
+        <ul>
+            <xsl:for-each select="language">
+                <li>
+                    <xsl:call-template name="getFlag">
+                        <xsl:with-param name="language" select="."/>
+                    </xsl:call-template>
+                    <xsl:text> </xsl:text>
+                    <xsl:value-of select="."/>
+                </li>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
+    
+    <xsl:function name="doctales:getColorCode">
+        <xsl:param name="index"/>
+        <xsl:value-of select="('#d50000', '#304ffe', '#00bfa5', '#ffab00', '#c51162', '#aa00ff', '#6200ea', '#2962ff', '#0091ea', '#00b8d4', '#00c853', '#64dd17', '#aeea00', '#ffd600', '#ff6d00', '#dd2c00', '#3e2723', '#212121', '#263238')[$index]"/>
+    </xsl:function>
+    
+    <xsl:function name="doctales:getHoverColorCode">
+        <xsl:param name="index"/>
+        <xsl:value-of select="('#ff5252', '#536dfe', '#64ffda', '#ffd740', '#ff4081', '#e040fb', '#7c4dff', '#448aff', '#40c4ff', '#18ffff', '#69f0ae', '#b2ff59', '#eeff41', '#ffff00', '#ffab40', '#ff6e40', '#5d4037', '#616161', '#455a64')[$index]"/>
+    </xsl:function>
+    
+    <xsl:template match="termNotationsPerLanguage" mode="body">
+        <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
+            <div class="termNotations">
+                <xsl:value-of select="$newline"/>
+                <script>
+                    function displayTermNotationsPerLanguageCharts() {
+                        var termNotationsPerLanguageData = {
+                        labels: [<xsl:for-each select="language"><xsl:text>"</xsl:text><xsl:value-of select="@lang"/><xsl:text>",</xsl:text></xsl:for-each>],
+                            datasets: [{
+                                data: [<xsl:for-each select="language"><xsl:value-of select="."/><xsl:text>,</xsl:text></xsl:for-each>],
+                                backgroundColor: [<xsl:for-each select="language"><xsl:text>"</xsl:text><xsl:value-of select="doctales:getColorCode(position())"/><xsl:text>",</xsl:text></xsl:for-each>],
+                                hoverBackgroundColor: [<xsl:for-each select="language"><xsl:text>"</xsl:text><xsl:value-of select="doctales:getHoverColorCode(position())"/><xsl:text>",</xsl:text></xsl:for-each>]
+                            }]
+                        };
+                        var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
+                        var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
+                            type: 'pie',
+                            data: termNotationsPerLanguageData,
+                            options: {}
+                        });
+                    }
+                </script>
+                <xsl:value-of select="$newline"/>
+                <canvas id="termNotationsPerLanguage" width="400" height="400"/>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    displayTermNotationsPerLanguageCharts();
+                });
+            </script>
+        </div>
+    </xsl:template>
+    
     <xsl:template match="termconflict" mode="body">
         <tr class="termconflicts-tr">
             <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
@@ -91,8 +151,8 @@
         </tr>
     </xsl:template>
     
-    <xsl:template match="reports" mode="body">
-        <div class="termNotations">
+    <xsl:template match="chronologicalSequence" mode="body">
+        <div class="termNotations" style="width:900px; height:900px;">
             <xsl:value-of select="$newline"/>
             <script>
                 function displayLineCharts() {
@@ -187,8 +247,8 @@
                             spanGaps: false,
                         }]
                         };
-                        var ctx = document.getElementById("termNotations");
-                        var myLineChart = new Chart(ctx, {
+                        var termNotationsChart = document.getElementById("termNotations");
+                        var myLineChart = new Chart(termNotationsChart, {
                         type: 'line',
                         data: data,
                         options: {
@@ -220,10 +280,10 @@
                 }   
             </script>
             <xsl:value-of select="$newline"/>
-            <canvas id="termNotations" width="400" height="400"/>
+            <canvas id="termNotations"/>
         </div>
         <script>
-            $( document ).ready(function() {
+            $(document).ready(function() {
                 displayLineCharts();
             });
         </script>

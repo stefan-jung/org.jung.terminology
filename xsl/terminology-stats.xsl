@@ -20,10 +20,49 @@
     </xsl:variable>
     
     <xsl:template match="/" priority="1">
+        <xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita'))"/>
         <termstats>
-            <termconflicts><xsl:apply-templates mode="termconflict"/></termconflicts>
-            <reports><xsl:call-template name="report"/></reports>
+            <currentStatistics>
+                <languages>
+                    <xsl:call-template name="languages">
+                        <xsl:with-param name="termCollection" select="$termCollection"/>
+                    </xsl:call-template>
+                </languages>
+                <termNotationsPerLanguage>
+                    <xsl:call-template name="termNotationsPerLanguage">
+                        <xsl:with-param name="termCollection" select="$termCollection"/>
+                    </xsl:call-template>
+                </termNotationsPerLanguage>
+                <termconflicts>
+                    <xsl:apply-templates mode="termconflict"/>
+                </termconflicts>
+            </currentStatistics>
+            <chronologicalStatistics>
+                <xsl:call-template name="report">
+                    <xsl:with-param name="termCollection" select="$termCollection"/>
+                </xsl:call-template>
+            </chronologicalStatistics>
         </termstats>
+    </xsl:template>
+    
+    <xsl:template name="languages">
+        <xsl:param name="termCollection"/>
+        <xsl:for-each select="distinct-values($termCollection//*[contains(@class, 'termentry/termNotation')][@language]/@language)">
+            <xsl:element name="language">
+                <xsl:value-of select="."/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="termNotationsPerLanguage">
+        <xsl:param name="termCollection"/>
+        <xsl:for-each select="distinct-values($termCollection//*[contains(@class, 'termentry/termNotation')][@language]/@language)">
+            <xsl:variable name="language" select="."/>
+            <xsl:element name="language">
+                <xsl:attribute name="lang" select="$language"/>
+                <xsl:value-of select="count($termCollection//*[contains(@class, 'termentry/termNotation')][@language=$language])"/>
+            </xsl:element>
+        </xsl:for-each>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="termconflict">
@@ -55,11 +94,10 @@
     <xsl:template match="*[contains(@class, ' subjectScheme/hasInstance ')]" mode="termconflict"/>
 
     <xsl:template name="report">
+        <xsl:param name="termCollection"/>
         <xsl:element name="report">
             <xsl:attribute name="date" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
-            <!--<xsl:variable name="termCollection" select="collection(concat($temp.dir, '/?select=*.dita'))"/>-->
-            <!--<xsl:variable name="termCollection" select="collection('temp/termbrowser/?select=*.dita')"/>-->
-            <xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita'))"/>
+            <!--<xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita'))"/>-->
             <xsl:element name="numberOfTermTopics">
                 <xsl:value-of select="count($termCollection//*[contains(@class, 'termentry/termentry')])"/>
             </xsl:element>

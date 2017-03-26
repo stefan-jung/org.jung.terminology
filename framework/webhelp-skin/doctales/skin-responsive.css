@@ -466,10 +466,11 @@ a:hover, a:focus {
 
 .termconflicts-table, .termconflicts-th, .termconflicts-td {
     border: 1px solid black;
+    padding: 2pt;
 }
 
 .termconflicts-th {
-    background-color: #4CAF50;
+    background-color: #ecf2f9;
     color: white;
 }
 
