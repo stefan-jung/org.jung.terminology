@@ -34,7 +34,8 @@
         <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
-    <target name="termbrowser-termstats" description="Check for terminological conflicts, e.g. term x has a preferred termnotation b, which is a not recommended termnotation of term y.">
+    <target name="termbrowser-termstats"
+        description="Generate terminology statistics.">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <property name="dita.temp.dir.rel" value="${dita.temp.dir}" relative="yes"/>
         <property name="dita.temp.dir.abs" location="${dita.temp.dir}"/>
@@ -103,7 +104,6 @@
                 <replaceregex pattern="&lt;!--BODY END--&gt;(.*)" replace=""/>
             </filterchain>
         </loadfile>
-        <!--<echo>terminology_stats.body=${terminology_stats.body}</echo>-->
         
         <!-- Get filename of termstats topic -->
         <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
@@ -111,19 +111,16 @@
         </xmltask>
         <basename property="termstats.base" file="${termstats-file}" suffix=".dita"/>
         
-        <echo>Try to replace &lt;div class="div stats"&gt; of: ${output.dir}\${termstats.base}.html</echo>
-        
-        <!-- Replace certain parts of the topic with the termstats data -->
-        <!--<replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;\/head&gt;" replace="${terminology_stats.head}&lt;\/head&gt;" flags="gis" byline="false"/>-->
+        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}\${termstats.base}.html</echo>
         <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
     </target>
     
     <target name="termstats-merge"
         description="If a previous termstats file is passed into the build, merge previous and new file"
-        depends="termstats-merge-old-and-new,termstats-move-new"/>
+        depends="termstats-merge-previous-statistics,termstats-move-new"/>
     
-    <target name="termstats-merge-old-and-new"
-        description="If a previous termstats file is passed into the build, merge previous and new file"
+    <target name="termstats-merge-previous-statistics"
+        description="Merge a previous statistics file"
         if="args.termstats">
         <echo level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
         <xslt basedir="${dita.temp.dir}"
@@ -137,10 +134,10 @@
     </target>
     
     <target name="termstats-move-new"
-        description="If a previous termstats file is passed into the build, merge previous and new file"
+        description="If no previous statistics file was passed into the build, simply move the new statistics file"
         unless="args.termstats">
         <echo level="info">No previous termstats file found</echo>
-        <move file="${dita.temp.dir}${file.separator}terminology_stats.xml" tofile="${dita.temp.dir}${file.separator}terminology_stats_merged.xml"/>
+        <move file="${dita.temp.dir}${file.separator}terminology_stats.xml" tofile="${dita.temp.dir}/termstats_merged.xml"/>
     </target>
     
     <target name="semanticnet">
