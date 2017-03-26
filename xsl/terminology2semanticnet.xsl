@@ -261,6 +261,51 @@
                         draw();
                     });
                 </script>
+                <div id="search">
+                    <input type="text" class="autocomplete" name="textfield"><!----></input>
+                    <button>
+                        <xsl:attribute name="type">button</xsl:attribute>
+                        <xsl:attribute name="onclick">termFocus($('.autocomplete').val());</xsl:attribute>
+                        <xsl:text>Search</xsl:text>
+                    </button>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        var data = [<xsl:apply-templates mode="search"/>];
+                        $(".autocomplete").autocomplete({
+                            source: data
+                        });
+                    });
+                    
+                    function termFocus(term) {
+                    
+                        var fitOptions = {
+                            offset: {
+                                x:50,
+                                y:50
+                            },
+                            duration: 20,
+                            easingFunction: 'easeInQuad'
+                        };
+                        network.fit({
+                            animation: fitOptions
+                        });
+                    
+                        var focusOptions = {
+                            scale: 0.7,
+                            offset: {
+                                x: 0,
+                                y: 0
+                            },
+                            animation: {
+                                duration: 10,
+                                easingFunction: 'easeInQuad'
+                            }
+                        };
+                        network.focus(term, focusOptions);
+                        network.setSelection(term);
+                    }
+                </script>
                 <div id="legend">
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
@@ -275,6 +320,18 @@
                 </div>
             </body>
         </html>
+    </xsl:template>
+    
+    <!-- Generate data set for autocomplete search box -->
+    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="search">
+        <xsl:text>'</xsl:text>
+        <xsl:value-of select="@keys"/>
+        <xsl:text>'</xsl:text>
+        <xsl:choose>
+            <xsl:when test="following-sibling::*[contains(@class, ' termmap/termref ')]">
+                <xsl:text>,</xsl:text>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 
     <!-- Generate nodes -->
@@ -391,9 +448,9 @@
     </xsl:template>
     
     <!-- Fall Through Templates -->
-    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta"/>
-    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta"/>
-    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta"/>
-    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="nodes edges termmeta"/>
+    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="nodes edges termmeta search"/>
 
 </xsl:stylesheet>

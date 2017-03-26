@@ -2,6 +2,7 @@
 <strings xml:lang="de-de">
     <str name="Abbreviation">Abkürzung</str>
     <str name="Acronym">Akronym</str>
+    <str name="Admitted Term Notations">Zulässige Bezeichnungen</str>
     <str name="Agreed With">Abgestimmt mit</str>
     <str name="Annotation">Anmerkung</str>
     <str name="Antonym">Antonym</str>
@@ -21,14 +22,21 @@
     <str name="Hyponyms">Unterbegriffe (Hyponyme)</str>
     <str name="Instance Of">Instanze von</str>
     <str name="Instances Of">Instanzen von</str>
-    <str name="Parts Of">Ist Teil von</str>
+    <str name="Is Not Recommended In">ist nicht empfohlen in</str>
+    <str name="Is Preferred In">ist bevorzugt in</str>
     <str name="Is Part Of">Ist Teil von</str>
+    <str name="Not Recommended Term Notations">Nicht empfohlene Bezeichnungen</str>
+    <str name="Obsolete Term Notations">überflüssige Bezeichnungen</str>
+    <str name="Parts Of">Ist Teil von</str>
     <str name="Part Of Speech">Wortart</str>
+    <str name="Preferred Term Notations">Bevorzugte Bezeichnungen</str>
     <str name="Related Term">Verwandter Begriff</str>
     <str name="Related Terms">Verwandte Begriffe</str>
     <str name="Term Annotations">Anmerkungen</str>
     <str name="Term Context">Kontext des Begriffs</str>
     <str name="Term Domain">Term-Domäne</str>
+    <str name="Term Notation">Bezeichnung</str>
+    <str name="Term Notations">Bezeichnungen</str>
     <str name="Term Source">Quelle des Begriffs</str>
     <str name="Term Committee Member">Terminologe</str>
     <str name="Usage Allowed">erlaubt</str>
@@ -38,7 +46,7 @@
     <str name="Verb">Verb</str>
     
     <!-- Term Table -->
-    <str name="Term">Begriff</str>
+    <str name="Term">Bezeichnung</str>
     <str name="Term Language">Sprache</str>
     <str name="Term Type">Typ</str>
     <str name="Term Usage">Verwendung</str>

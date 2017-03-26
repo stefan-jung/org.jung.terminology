@@ -2,8 +2,9 @@
 <strings xml:lang="en-us">
     <str name="Abbreviation">Abbreviation</str>
     <str name="Acronym">Acronym</str>
+    <str name="Admitted Term Notations">Admitted Term Notations</str>
     <str name="Agreed With">Agreed with</str>
-    <str name="Annotation">Annotation</str>
+    <str name="Annotation">Annotation</str>    <str name="Preferred Term Notations">Preferred Term Notations</str>
     <str name="Antonym">Antonym</str>
     <str name="Antonyms">Antonyms</str>
     <str name="Term Context">Context</str>
@@ -21,14 +22,20 @@
     <str name="Hyponyms">Subordinate Concepts (Hyponyms)</str>
     <str name="Instance Of">Instance of</str>
     <str name="Instances Of">Instances of</str>
-    <str name="Parts Of">Is Part of</str>
+    <str name="Is Not Recommended In">is not recommended in</str>
     <str name="Is Part Of">Is Part of</str>
+    <str name="Is Preferred In">is preferred in</str>
+    <str name="Not Recommended Term Notations">Not Recommended Term Notations</str>
+    <str name="Obsolete Term Notations">Obsolete Term Notations</str>
+    <str name="Parts Of">Is Part of</str>
     <str name="Part Of Speech">Part of Speech</str>
     <str name="Related Term">Related Term</str>
     <str name="Related Terms">Related Terms</str>
     <str name="Term Annotations">Annotations</str>
     <str name="Term Context">Context of Term</str>
     <str name="Term Domain">Term Domain</str>
+    <str name="Term Notation">Term Notation</str>
+    <str name="Term Notations">Term Notations</str>
     <str name="Term Source">Source of Term</str>
     <str name="Term Committee Member">Term Committee Member</str>
     <str name="Usage Allowed">allowed</str>

@@ -7,6 +7,7 @@
         encoding="UTF-8"
         indent="yes"/>-->
     
+    <xsl:import href="plugin:org.dita.html5:xsl/dita2html5.xsl"/>
     <xsl:import href="flagicon.xsl"/>
     
     <xsl:strip-space elements="*"/>
@@ -14,53 +15,48 @@
     <xsl:param name="termMap"/>
     <xsl:param name="temp.dir.abs"/>
     <xsl:param name="ditamap.filename"/>
+    <xsl:param name="outext"/>
 
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
         <xsl:text>
         </xsl:text>
     </xsl:variable>
+
+
+
+    <!-- ****************************************************************************** -->
+    <!--                                   FUNCTIONS                                    -->
+    <!-- ****************************************************************************** -->
+    
+    <xsl:function name="doctales:getColorCode">
+        <xsl:param name="index"/>
+        <xsl:value-of select="('#d50000', '#304ffe', '#00bfa5', '#ffab00', '#c51162', '#aa00ff', '#6200ea', '#2962ff', '#0091ea', '#00b8d4', '#00c853', '#64dd17', '#aeea00', '#ffd600', '#ff6d00', '#dd2c00', '#3e2723', '#212121', '#263238')[$index]"/>
+    </xsl:function>
+    
+    <xsl:function name="doctales:getHoverColorCode">
+        <xsl:param name="index"/>
+        <xsl:value-of select="('#ff5252', '#536dfe', '#64ffda', '#ffd740', '#ff4081', '#e040fb', '#7c4dff', '#448aff', '#40c4ff', '#18ffff', '#69f0ae', '#b2ff59', '#eeff41', '#ffff00', '#ffab40', '#ff6e40', '#5d4037', '#616161', '#455a64')[$index]"/>
+    </xsl:function>
+    
+    
+    
+    <!-- ****************************************************************************** -->
+    <!--                                   TEMPLATES                                    -->
+    <!-- ****************************************************************************** -->
     
     <xsl:template match="/" priority="1">
         <html>
-            <head>
-                <xsl:call-template name="head"/>
-            </head>
-            <body onload="displayCharts();">
-                <!--<xsl:attribute name="onload">displayCharts();</xsl:attribute>-->
+            <head><!----></head>
+            <body>
                 <xsl:call-template name="body"/>
             </body>
         </html>
     </xsl:template>
-    
-    
-    
-    <!-- ****************************************************************************** -->
-    <!--                                      HEAD                                      -->
-    <!-- ****************************************************************************** -->
-    
-    <xsl:template name="head">
-        <xsl:comment>HEAD BEGINNING</xsl:comment>
-        <!--<xsl:apply-templates mode="head"/>-->
-        <xsl:comment>HEAD END</xsl:comment>
-    </xsl:template>
-    
-    <!-- Empty fall-through templates -->
-    <xsl:template match="termconflicts" mode="head"/>
-    <xsl:template match="termconflict" mode="head"/>
-    <xsl:template match="reports" mode="head"/>
-    
-    
-    
-    <!-- ****************************************************************************** -->
-    <!--                                      BODY                                      -->
-    <!-- ****************************************************************************** -->
-    
+        
     <xsl:template name="body">
         <xsl:comment>BODY BEGINNING</xsl:comment>
-        <!--<xsl:call-template name="termNotations"/>-->
         <xsl:apply-templates mode="body"/>
-        <!--<xsl:apply-templates mode="reports"/>-->
         <xsl:comment>BODY END</xsl:comment>
     </xsl:template>
     
@@ -71,9 +67,21 @@
                     <table class="termconflicts-table">
                         <thead class="termconflicts-thead">
                             <tr>
-                                <th class="termconflicts-th">Term Notation</th>
-                                <th class="termconflicts-th">is preferred in</th>
-                                <th class="termconflicts-th">is not recommended in</th>
+                                <th class="termconflicts-th">
+                                    <xsl:call-template name="getVariable">
+                                        <xsl:with-param name="id" select="'Term Notation'"/>
+                                    </xsl:call-template>
+                                </th>
+                                <th class="termconflicts-th">
+                                    <xsl:call-template name="getVariable">
+                                        <xsl:with-param name="id" select="'Is Preferred In'"/>
+                                    </xsl:call-template>
+                                </th>
+                                <th class="termconflicts-th">
+                                    <xsl:call-template name="getVariable">
+                                        <xsl:with-param name="id" select="'Is Not Recommended In'"/>
+                                    </xsl:call-template>
+                                </th>
                             </tr>
                         </thead>
                         <xsl:apply-templates mode="body"/>
@@ -92,23 +100,12 @@
                 <li>
                     <xsl:call-template name="getFlag">
                         <xsl:with-param name="language" select="."/>
+                        <xsl:with-param name="languageCode" select="true()"/>
                     </xsl:call-template>
-                    <xsl:text> </xsl:text>
-                    <xsl:value-of select="."/>
                 </li>
             </xsl:for-each>
         </ul>
     </xsl:template>
-    
-    <xsl:function name="doctales:getColorCode">
-        <xsl:param name="index"/>
-        <xsl:value-of select="('#d50000', '#304ffe', '#00bfa5', '#ffab00', '#c51162', '#aa00ff', '#6200ea', '#2962ff', '#0091ea', '#00b8d4', '#00c853', '#64dd17', '#aeea00', '#ffd600', '#ff6d00', '#dd2c00', '#3e2723', '#212121', '#263238')[$index]"/>
-    </xsl:function>
-    
-    <xsl:function name="doctales:getHoverColorCode">
-        <xsl:param name="index"/>
-        <xsl:value-of select="('#ff5252', '#536dfe', '#64ffda', '#ffd740', '#ff4081', '#e040fb', '#7c4dff', '#448aff', '#40c4ff', '#18ffff', '#69f0ae', '#b2ff59', '#eeff41', '#ffff00', '#ffab40', '#ff6e40', '#5d4037', '#616161', '#455a64')[$index]"/>
-    </xsl:function>
     
     <xsl:template match="termNotationsPerLanguage" mode="body">
         <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
@@ -144,10 +141,24 @@
     </xsl:template>
     
     <xsl:template match="termconflict" mode="body">
+        <xsl:variable name="preferredTermFile" select="preferredTermFile"/>
+        <xsl:variable name="notRecommendedTermFile" select="notRecommendedTermFile"/>
         <tr class="termconflicts-tr">
             <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
-            <td class="termconflicts-td"><xsl:value-of select="preferredTermFile"/></td>
-            <td class="termconflicts-td"><xsl:value-of select="notRecommendedTermFile"/></td>
+            <td class="termconflicts-td">
+                <a>
+                    <xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', $outext)"/></xsl:attribute>
+                    <xsl:attribute name="target">_self</xsl:attribute>
+                    <xsl:value-of select="$preferredTermFile"/>
+                </a>
+            </td>
+            <td class="termconflicts-td">
+                <a>
+                    <xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', $outext)"/></xsl:attribute>
+                    <xsl:attribute name="target">_self</xsl:attribute>
+                    <xsl:value-of select="$notRecommendedTermFile"/>
+                </a>
+            </td>
         </tr>
     </xsl:template>
     
@@ -159,7 +170,7 @@
                     var data = {
                         labels: [<xsl:for-each select="report"><xsl:text>"</xsl:text><xsl:value-of select="@date"/><xsl:text>",</xsl:text></xsl:for-each>],
                         datasets: [{
-                            label: "Preferred Term Notations",
+                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Preferred Term Notations'"/></xsl:call-template>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(90,130,80,0.9)",
@@ -181,7 +192,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "Admitted Term Notations",
+                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Admitted Term Notations'"/></xsl:call-template>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(75,192,192,0.1)",
@@ -203,7 +214,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "Not Recommended Term Notations",
+                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Not Recommended Term Notations'"/></xsl:call-template>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(255,163,98,1.0)",
@@ -225,7 +236,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "Obsolete Term Notations",
+                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Obsolete Term Notations'"/></xsl:call-template>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(232,204,78,1)",
@@ -254,7 +265,7 @@
                         options: {
                             title: {
                                 display: true,
-                                text: 'Term Notations'
+                                text: '<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Term Notations'"/></xsl:call-template>'
                             },
                             scales: {
                                 xAxes: [{

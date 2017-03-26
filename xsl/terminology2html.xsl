@@ -164,6 +164,7 @@
                 <xsl:attribute name="class">termTable</xsl:attribute>
                 <xsl:call-template name="getFlag">
                     <xsl:with-param name="language" select="@language"/>
+                    <xsl:with-param name="languageCode" select="true()"/>
                 </xsl:call-template>
             </xsl:element>
             <!-- Usage -->

@@ -76,6 +76,7 @@
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats-xml2html.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
+            <param name="outext" expression="${args.outext}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         
