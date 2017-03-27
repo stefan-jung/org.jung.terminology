@@ -141,8 +141,8 @@
     </xsl:template>
     
     <xsl:template match="termconflict" mode="body">
-        <xsl:variable name="preferredTermFile" select="preferredTermFile"/>
-        <xsl:variable name="notRecommendedTermFile" select="notRecommendedTermFile"/>
+        <xsl:variable name="preferredTermFile" select="preferredTermFile/text()" as="xs:string"/>
+        <xsl:variable name="notRecommendedTermFile" select="notRecommendedTermFile/text()" as="xs:string"/>
         <tr class="termconflicts-tr">
             <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
             <td class="termconflicts-td">
@@ -188,7 +188,16 @@
                             pointHoverBorderWidth: 2,
                             pointRadius: 1,
                             pointHitRadius: 10,
-                            data: [<xsl:for-each select="report"><xsl:value-of select="numberOfPreferredTermNotations"/><xsl:text>,</xsl:text></xsl:for-each>],
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfPreferredTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
                             spanGaps: false,
                         }, 
                         {
@@ -210,7 +219,16 @@
                             pointHoverBorderWidth: 2,
                             pointRadius: 1,
                             pointHitRadius: 10,
-                            data: [<xsl:for-each select="report"><xsl:value-of select="numberOfAdmittedTermNotations"/><xsl:text>,</xsl:text></xsl:for-each>],
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfAdmittedTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
                             spanGaps: false,
                         }, 
                         {
@@ -232,7 +250,16 @@
                             pointHoverBorderWidth: 2,
                             pointRadius: 1,
                             pointHitRadius: 10,
-                            data: [<xsl:for-each select="report"><xsl:value-of select="numberOfNotRecommendedTermNotations"/><xsl:text>,</xsl:text></xsl:for-each>],
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfNotRecommendedTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
                             spanGaps: false,
                         }, 
                         {
@@ -254,7 +281,16 @@
                             pointHoverBorderWidth: 2,
                             pointRadius: 1,
                             pointHitRadius: 10,
-                            data: [<xsl:for-each select="report"><xsl:value-of select="numberOfObsoleteTermNotations"/><xsl:text>,</xsl:text></xsl:for-each>],
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfObsoleteTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
                             spanGaps: false,
                         }]
                         };
