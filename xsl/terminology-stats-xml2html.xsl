@@ -222,7 +222,9 @@
                     var data = {
                         labels: [
                             <xsl:for-each select="report">
+                                <xsl:text>"</xsl:text>
                                 <xsl:value-of select="@date"/>
+                                <xsl:text>"</xsl:text>
                                 <xsl:choose>
                                     <xsl:when test="following-sibling::report">
                                         <xsl:text>,</xsl:text>
