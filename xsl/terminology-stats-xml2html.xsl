@@ -99,20 +99,25 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="languages" mode="body">
-        <ul>
-            <xsl:for-each select="language">
-                <li>
-                    <xsl:call-template name="getFlag">
-                        <xsl:with-param name="language" select="."/>
-                        <xsl:with-param name="languageCode" select="true()"/>
-                    </xsl:call-template>
-                </li>
-            </xsl:for-each>
-        </ul>
-    </xsl:template>
-    
     <xsl:template match="termNotationsPerLanguage" mode="body">
+        <div class="termNotationsPerLanguageList">
+            <ul>
+                <xsl:for-each select="language">
+                    <li>
+                        <xsl:call-template name="getFlag">
+                            <xsl:with-param name="language" select="@lang"/>
+                            <xsl:with-param name="languageCode" select="true()"/>
+                        </xsl:call-template>
+                        <xsl:text>: </xsl:text>
+                        <xsl:value-of select="."/>
+                        <xsl:text> </xsl:text>
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Term Notations'"/>
+                        </xsl:call-template>
+                    </li>
+                </xsl:for-each>
+            </ul>
+        </div>
         <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
             <div class="termNotations">
                 <xsl:value-of select="$newline"/>
@@ -391,5 +396,8 @@
             });
         </script>
     </xsl:template>
+
+    <!-- Fall Through Templates -->
+    <xsl:template match="languages" mode="body"/>
 
 </xsl:stylesheet>
