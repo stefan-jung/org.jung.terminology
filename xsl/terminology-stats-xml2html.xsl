@@ -61,9 +61,9 @@
     </xsl:template>
     
     <xsl:template match="termconflicts" mode="body">
-        <xsl:choose>
-            <xsl:when test="termconflict">
-                <div class="termconflicts">
+        <div class="termconflicts">
+           <xsl:choose>
+                <xsl:when test="termconflict">
                     <table class="termconflicts-table">
                         <thead class="termconflicts-thead">
                             <tr>
@@ -86,12 +86,16 @@
                         </thead>
                         <xsl:apply-templates mode="body"/>
                     </table>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:comment>no termconflicts found</xsl:comment>
-            </xsl:otherwise>
-        </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <p>
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'No Termconflicts Found'"/>
+                        </xsl:call-template>
+                    </p>
+                </xsl:otherwise>
+            </xsl:choose>
+        </div>
     </xsl:template>
     
     <xsl:template match="languages" mode="body">
@@ -114,11 +118,51 @@
                 <script>
                     function displayTermNotationsPerLanguageCharts() {
                         var termNotationsPerLanguageData = {
-                        labels: [<xsl:for-each select="language"><xsl:text>"</xsl:text><xsl:value-of select="@lang"/><xsl:text>",</xsl:text></xsl:for-each>],
+                            labels: [
+                                <xsl:for-each select="language">
+                                    <xsl:value-of select="@lang"/> 
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::language">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
                             datasets: [{
-                                data: [<xsl:for-each select="language"><xsl:value-of select="."/><xsl:text>,</xsl:text></xsl:for-each>],
-                                backgroundColor: [<xsl:for-each select="language"><xsl:text>"</xsl:text><xsl:value-of select="doctales:getColorCode(position())"/><xsl:text>",</xsl:text></xsl:for-each>],
-                                hoverBackgroundColor: [<xsl:for-each select="language"><xsl:text>"</xsl:text><xsl:value-of select="doctales:getHoverColorCode(position())"/><xsl:text>",</xsl:text></xsl:for-each>]
+                                data: [
+                                   <xsl:for-each select="language">
+                                       <xsl:value-of select="."/> 
+                                       <xsl:choose>
+                                           <xsl:when test="following-sibling::language">
+                                               <xsl:text>,</xsl:text>
+                                           </xsl:when>
+                                       </xsl:choose>
+                                   </xsl:for-each>
+                                ],
+                                backgroundColor: [
+                                    <xsl:for-each select="language">
+                                        <xsl:text>"</xsl:text>
+                                        <xsl:value-of select="doctales:getColorCode(position())"/>
+                                        <xsl:text>"</xsl:text>
+                                        <xsl:choose>
+                                            <xsl:when test="following-sibling::language">
+                                                <xsl:text>,</xsl:text>
+                                            </xsl:when>
+                                        </xsl:choose>
+                                    </xsl:for-each>
+                                ],
+                                hoverBackgroundColor: [
+                                    <xsl:for-each select="language">
+                                        <xsl:text>"</xsl:text>
+                                        <xsl:value-of select="doctales:getHoverColorCode(position())"/>
+                                        <xsl:text>"</xsl:text>
+                                        <xsl:choose>
+                                            <xsl:when test="following-sibling::language">
+                                                <xsl:text>,</xsl:text>
+                                            </xsl:when>
+                                        </xsl:choose>
+                                    </xsl:for-each>
+                                ]
                             }]
                         };
                         var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
@@ -168,7 +212,16 @@
             <script>
                 function displayLineCharts() {
                     var data = {
-                        labels: [<xsl:for-each select="report"><xsl:text>"</xsl:text><xsl:value-of select="@date"/><xsl:text>",</xsl:text></xsl:for-each>],
+                        labels: [
+                            <xsl:for-each select="report">
+                                <xsl:value-of select="@date"/>
+                                <xsl:choose>
+                                    <xsl:when test="following-sibling::report">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:when>
+                                </xsl:choose>
+                            </xsl:for-each>
+                        ],
                         datasets: [{
                             label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Preferred Term Notations'"/></xsl:call-template>",
                             fill: false,

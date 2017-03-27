@@ -241,6 +241,28 @@
                </script>-->
             </head>
             <body>
+                <div id="search">
+                    <div class="form">
+                        <div class="form-group row">
+                            <label for="search-input" class="col-2 col-form-label">
+                                <xsl:call-template name="getVariable">
+                                    <xsl:with-param name="id" select="'Term Notation'"/>
+                                </xsl:call-template>
+                            </label>
+                            <div class="col-10">
+                                <input id="search-input" class="form-control autocomplete" type="text"><!----></input>
+                            </div>
+                        </div>
+                    </div>
+                    <button>
+                        <xsl:attribute name="type">button</xsl:attribute>
+                        <xsl:attribute name="class">btn btn-default</xsl:attribute>
+                        <xsl:attribute name="onclick">termFocus($('.autocomplete').val());</xsl:attribute>
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Search'"/>
+                        </xsl:call-template>
+                    </button>
+                </div>
                 <div id="wrapper">
                     <div id="mynetwork">
                         <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
@@ -261,14 +283,6 @@
                         draw();
                     });
                 </script>
-                <div id="search">
-                    <input type="text" class="autocomplete" name="textfield"><!----></input>
-                    <button>
-                        <xsl:attribute name="type">button</xsl:attribute>
-                        <xsl:attribute name="onclick">termFocus($('.autocomplete').val());</xsl:attribute>
-                        <xsl:text>Search</xsl:text>
-                    </button>
-                </div>
                 <script>
                     $(document).ready(function() {
                         var data = [<xsl:apply-templates mode="search"/>];
@@ -303,7 +317,8 @@
                             }
                         };
                         network.focus(term, focusOptions);
-                        network.setSelection(term);
+                        
+                        network.selectNodes([term])
                     }
                 </script>
                 <div id="legend">

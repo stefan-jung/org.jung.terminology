@@ -25,6 +25,7 @@
     <str name="Is Not Recommended In">ist nicht empfohlen in</str>
     <str name="Is Preferred In">ist bevorzugt in</str>
     <str name="Is Part Of">Ist Teil von</str>
+    <str name="No Termconflicts found">Keine Termkonflikte gefunden</str>
     <str name="Not Recommended Term Notations">Nicht empfohlene Bezeichnungen</str>
     <str name="Obsolete Term Notations">überflüssige Bezeichnungen</str>
     <str name="Parts Of">Ist Teil von</str>
@@ -32,6 +33,7 @@
     <str name="Preferred Term Notations">Bevorzugte Bezeichnungen</str>
     <str name="Related Term">Verwandter Begriff</str>
     <str name="Related Terms">Verwandte Begriffe</str>
+    <str name="Search">Suchen</str>
     <str name="Term Annotations">Anmerkungen</str>
     <str name="Term Context">Kontext des Begriffs</str>
     <str name="Term Domain">Term-Domäne</str>

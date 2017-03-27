@@ -25,12 +25,14 @@
     <str name="Is Not Recommended In">is not recommended in</str>
     <str name="Is Part Of">Is Part of</str>
     <str name="Is Preferred In">is preferred in</str>
+    <str name="No Termconflicts found">No termconflicts found</str>
     <str name="Not Recommended Term Notations">Not Recommended Term Notations</str>
     <str name="Obsolete Term Notations">Obsolete Term Notations</str>
     <str name="Parts Of">Is Part of</str>
     <str name="Part Of Speech">Part of Speech</str>
     <str name="Related Term">Related Term</str>
     <str name="Related Terms">Related Terms</str>
+    <str name="Search">Search</str>
     <str name="Term Annotations">Annotations</str>
     <str name="Term Context">Context of Term</str>
     <str name="Term Domain">Term Domain</str>

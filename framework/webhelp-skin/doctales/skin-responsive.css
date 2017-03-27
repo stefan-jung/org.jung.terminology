@@ -455,6 +455,19 @@ a:hover, a:focus {
 	vertical-align: 18px;
 }
 
+/* Semantic Net Search */
+.ui-menu.ui-autocomplete {
+    background: #ffffff;
+    border: 1pt solid gray;
+    padding: 3pt;
+    width: 50% !important;
+}
+
+.ui-menu.ui-autocomplete .ui-menu-item {
+    list-style: none;
+    cursor: pointer;
+}
+
 /* Termstats */
 
 /* Term Conflicts */
