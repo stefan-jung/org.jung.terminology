@@ -51,7 +51,23 @@
                 <xsl:value-of select="$notRecommendedTerm"/>
                 <xsl:text>' </xsl:text>
                 <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
-                <xsl:text>.</xsl:text>
+                <xsl:text>. </xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'ReplaceWithAllowedTerm')"/>
+                <xsl:text>: </xsl:text>
+                <xsl:for-each select="preceding-sibling::* | following-sibling::*">
+                    <xsl:choose>
+                        <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
+                            <xsl:text>'</xsl:text>
+                            <xsl:value-of select="*[contains(@class, 'termentry/termVariant')]"/>
+                            <xsl:text>'</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')]">
+                                    <xsl:text>, </xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:for-each>
             </xsl:element>
 
             <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
