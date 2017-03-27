@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div>
-    <p><a class="semantic-net-header-link" href="semantic-net.html"><div class="semantic-net-logo"/> Semantic Net</a></p>
+<div class="logos">
+    <div class="logo">
+        <a class="semantic-net-header-link" href="semantic-net.html"><div class="semantic-net-logo"/> Semantic Net</a>
+    </div>
+    <div class="logo">
+        <a class="termstats-header-link" href="termstats.html"><div class="termstats-logo"/> Terminology Statistics</a>
+    </div>
 </div>

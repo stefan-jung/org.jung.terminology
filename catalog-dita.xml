@@ -6,6 +6,8 @@
     <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termentry//EN" uri="dtd/termentry.dtd"/>
     <public publicId="-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
     <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES TermStats//EN" uri="dtd/termstats.dtd"/>
+    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 TermStats//EN" uri="dtd/termstats.dtd"/>
     <public publicId="-//DOCTALES//DTD DITA DOCTALES Termmap//EN" uri="dtd/termmap.dtd"/>
     <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termmap//EN" uri="dtd/termmap.dtd"/>
     
@@ -13,6 +15,8 @@
     <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
     <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
     <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES TermStats//EN" uri="dtd/termstats.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES TermStats//EN" uri="dtd/termstats.mod"/>
     <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
     <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
     
@@ -20,14 +24,20 @@
     <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
     <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
     <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES TermStats//EN" uri="dtd/termstats.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES TermStats//EN" uri="dtd/termstats.ent"/>
     <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
     <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
     
     <public publicId="-//DOCTALES//ELEMENTS DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
     <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA TermStats Domain//EN" uri="dtd/termstatsDomain.mod"/>
+    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 TermStats Domain//EN" uri="dtd/termstatsDomain.mod"/>
     
     <public publicId="-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
     <public publicId="-//DOCTALES//ENTITIES DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA TermStats Domain//EN" uri="dtd/termstatsDomain.ent"/>
+    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 TermStats Domain//EN" uri="dtd/termstatsDomain.ent"/>
     
     <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
     <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>

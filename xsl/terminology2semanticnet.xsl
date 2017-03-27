@@ -119,7 +119,7 @@
                 
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!-- --></script>
                 <xsl:value-of select="$newline"/>
-                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"/>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!-- --></link>
                 
                 <script type="text/javascript">
                     var nodes = null;
@@ -135,13 +135,12 @@
                             edges: edges
                         };
                         var options = {
-                            stabilize: false,
                             interaction: {
                                 hover: true
                             },
                             edges: {
                                 width: 2,
-                                style: 'arrow',
+                                arrows: 'to',
                                 color: 'gray'
                             },
                             physics: {
@@ -241,6 +240,28 @@
                </script>-->
             </head>
             <body>
+                <div id="search">
+                    <div class="form">
+                        <div class="form-group row">
+                            <label for="search-input" class="col-2 col-form-label">
+                                <xsl:call-template name="getVariable">
+                                    <xsl:with-param name="id" select="'Term Notation'"/>
+                                </xsl:call-template>
+                            </label>
+                            <div class="col-10">
+                                <input id="search-input" class="form-control autocomplete" type="text"><!----></input>
+                            </div>
+                        </div>
+                    </div>
+                    <button>
+                        <xsl:attribute name="type">button</xsl:attribute>
+                        <xsl:attribute name="class">btn btn-default</xsl:attribute>
+                        <xsl:attribute name="onclick">termFocus($('.autocomplete').val());</xsl:attribute>
+                        <xsl:call-template name="getVariable">
+                            <xsl:with-param name="id" select="'Search'"/>
+                        </xsl:call-template>
+                    </button>
+                </div>
                 <div id="wrapper">
                     <div id="mynetwork">
                         <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
@@ -261,6 +282,28 @@
                         draw();
                     });
                 </script>
+                <script>
+                    $(document).ready(function() {
+                        var data = [<xsl:apply-templates mode="search"/>];
+                        $(".autocomplete").autocomplete({
+                            source: data
+                        });
+                    });
+                    
+                    function termFocus(term) {
+                        network.fit();
+                        var focusOptions = {
+                            scale: 0.7,
+                            locked: 'false',
+                            animation: {
+                                duration: 10,
+                                easingFunction: 'easeInQuad'
+                            }
+                        };
+                        network.focus(term, focusOptions);
+                        network.selectNodes([term])
+                    }
+                </script>
                 <div id="legend">
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
@@ -275,6 +318,18 @@
                 </div>
             </body>
         </html>
+    </xsl:template>
+    
+    <!-- Generate data set for autocomplete search box -->
+    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="search">
+        <xsl:text>'</xsl:text>
+        <xsl:value-of select="@keys"/>
+        <xsl:text>'</xsl:text>
+        <xsl:choose>
+            <xsl:when test="following-sibling::*[contains(@class, ' termmap/termref ')]">
+                <xsl:text>,</xsl:text>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 
     <!-- Generate nodes -->
@@ -391,9 +446,9 @@
     </xsl:template>
     
     <!-- Fall Through Templates -->
-    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta"/>
-    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta"/>
-    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta"/>
-    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="nodes edges termmeta"/>
+    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="nodes edges termmeta search"/>
 
 </xsl:stylesheet>

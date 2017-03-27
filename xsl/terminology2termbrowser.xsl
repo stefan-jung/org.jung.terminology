@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
@@ -6,7 +6,7 @@
     xmlns:doctales="http://doctales.github.io"
     exclude-result-prefixes="xs" version="2.0">
     
-    <!-- Import the DITA2XHTML stylesheet to use its templates -->
+    <!-\- Import the DITA2XHTML stylesheet to use its templates -\->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
     
     <xsl:output method="html"
@@ -23,21 +23,21 @@
     <xsl:variable name="verb" select="//*[contains (@class, ' termentry/verb ')]"/>
     <xsl:variable name="termLanguages" select="//*[contains (@class, ' termentry/termNotation ')]/@language"/>
     
-    <!--<xsl:key name="fullForm" use="@usage" match="//*[contains(@class, ' termentry/fullForm ')][@usage]"/>-->
-    <!--<xsl:key name="fullFormEnglish" use="@usage" match="//*[contains(@class, ' termentry/fullForm ')][contains(@language, 'en')][@usage]"/>-->
+    <!-\-<xsl:key name="fullForm" use="@usage" match="//*[contains(@class, ' termentry/fullForm ')][@usage]"/>-\->
+    <!-\-<xsl:key name="fullFormEnglish" use="@usage" match="//*[contains(@class, ' termentry/fullForm ')][contains(@language, 'en')][@usage]"/>-\->
     
     <xsl:function name="doctales:countTermsOfLanguage">
         <xsl:param name="language" as="xs:string"/>
         <xsl:value-of select="count($doc//*[contains (@class, ' termentry/termNotation ')][@language = $language])"/>
     </xsl:function>
     
-    <!-- The parameter $newline defines a line break. -->
+    <!-\- The parameter $newline defines a line break. -\->
     <xsl:variable name="newline">
         <xsl:text>
         </xsl:text>
     </xsl:variable>
     
-    <!-- Match the root node of the DITA Map and create a Schematron root node -->
+    <!-\- Match the root node of the DITA Map and create a Schematron root node -\->
     <xsl:template match="/">
         <html>
             <head>
@@ -277,11 +277,11 @@
         <xsl:sequence select="concat(normalize-space($prefixString), $idStage3)"/> 
     </xsl:function>
     
-    <!-- Empty template to avoid the processing of the termentry topics -->
+    <!-\- Empty template to avoid the processing of the termentry topics -\->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]"/>
 
     
-    <!-- Remove HTML clutter -->
+    <!-\- Remove HTML clutter -\->
     <xsl:template name="chapter-setup">
         <xsl:call-template name="chapterBody"/>
     </xsl:template>
@@ -294,3 +294,4 @@
     <xsl:template match="*" mode="chapterBody"/>
     
 </xsl:stylesheet>
+-->

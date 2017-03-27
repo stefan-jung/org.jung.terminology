@@ -19,10 +19,10 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>Bus</termVariant>
+      <termVariant>bus</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
-      <termVariant>Omnibus</termVariant>
+      <termVariant>omnibus</termVariant>
     </fullForm>
   </termBody>
   <relations>

@@ -10,7 +10,7 @@
   <feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
-  <!--<feature extension="dita.conductor.xhtml.param" file="insertParameters.xml"/>-->
+  <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
   <feature extension="dita.conductor.transtype.check" value="tbx-min"/>
@@ -603,11 +603,17 @@
   <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser"/>
-  <transtype name="termbrowser" extends="base-html" desc="Termbrowser"/>
+  <transtype name="termbrowser" extends="base-html" desc="Termbrowser">
+    <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+  </transtype>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
-  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive"/>
+  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive">
+    <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+  </transtype>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-html5"/>
-  <transtype name="termbrowser-html5" extends="html5" desc="Termbrowser HTML5"/>
+  <transtype name="termbrowser-html5" extends="html5" desc="Termbrowser HTML5">
+    <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+  </transtype>
 </plugin>
