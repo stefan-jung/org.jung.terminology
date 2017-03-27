@@ -15,7 +15,7 @@
     <xsl:param name="termMap"/>
     <xsl:param name="temp.dir.abs"/>
     <xsl:param name="ditamap.filename"/>
-    <xsl:param name="outext"/>
+    <xsl:param name="outext">html</xsl:param>
 
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
