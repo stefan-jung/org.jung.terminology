@@ -15,6 +15,7 @@
     <xsl:param name="termMap"/>
     <xsl:param name="temp.dir.abs"/>
     <xsl:param name="ditamap.filename"/>
+    <!-- FIXME: replace with outext fails on Travis CI -->
     <xsl:param name="outext">html</xsl:param>
 
     <!-- The parameter $newline defines a line break. -->
@@ -193,14 +194,14 @@
             <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
             <td class="termconflicts-td">
                 <a>
-                    <xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', $outext)"/></xsl:attribute>
+                    <xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', 'html')"/></xsl:attribute>
                     <xsl:attribute name="target">_self</xsl:attribute>
                     <xsl:value-of select="$preferredTermFile"/>
                 </a>
             </td>
             <td class="termconflicts-td">
                 <a>
-                    <xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', $outext)"/></xsl:attribute>
+                    <xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', 'html')"/></xsl:attribute>
                     <xsl:attribute name="target">_self</xsl:attribute>
                     <xsl:value-of select="$notRecommendedTermFile"/>
                 </a>
