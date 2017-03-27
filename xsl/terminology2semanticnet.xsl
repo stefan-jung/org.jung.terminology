@@ -119,7 +119,7 @@
                 
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!-- --></script>
                 <xsl:value-of select="$newline"/>
-                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!----></link>
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!-- --></link>
                 
                 <script type="text/javascript">
                     var nodes = null;
@@ -135,13 +135,12 @@
                             edges: edges
                         };
                         var options = {
-                            stabilize: false,
                             interaction: {
                                 hover: true
                             },
                             edges: {
                                 width: 2,
-                                style: 'arrow',
+                                arrows: 'to',
                                 color: 'gray'
                             },
                             physics: {
@@ -292,32 +291,16 @@
                     });
                     
                     function termFocus(term) {
-                    
-                        var fitOptions = {
-                            offset: {
-                                x:50,
-                                y:50
-                            },
-                            duration: 20,
-                            easingFunction: 'easeInQuad'
-                        };
-                        network.fit({
-                            animation: fitOptions
-                        });
-                    
+                        network.fit();
                         var focusOptions = {
                             scale: 0.7,
-                            offset: {
-                                x: 0,
-                                y: 0
-                            },
+                            locked: 'false',
                             animation: {
                                 duration: 10,
                                 easingFunction: 'easeInQuad'
                             }
                         };
                         network.focus(term, focusOptions);
-                        
                         network.selectNodes([term])
                     }
                 </script>

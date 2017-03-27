@@ -120,7 +120,9 @@
                         var termNotationsPerLanguageData = {
                             labels: [
                                 <xsl:for-each select="language">
+                                    <xsl:text>"</xsl:text>
                                     <xsl:value-of select="@lang"/> 
+                                    <xsl:text>"</xsl:text>
                                     <xsl:choose>
                                         <xsl:when test="following-sibling::language">
                                             <xsl:text>,</xsl:text>
