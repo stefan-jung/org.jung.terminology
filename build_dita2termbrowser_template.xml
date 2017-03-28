@@ -36,15 +36,32 @@
     </target>
     <target name="termbrowser-termstats"
         description="Generate terminology statistics.">
+        
+        <condition property="termmap" value="${args.term.containermap}">
+            <isset property="args.term.containermap"/>
+        </condition>
+        
+        <condition property="termmap" value="${args.input}">
+            <not>
+                <isset property="args.term.containermap"/>
+            </not>
+        </condition>
+        
+        <echo level="info">termmap=${termmap}</echo>
+        
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <property name="dita.temp.dir.rel" value="${dita.temp.dir}" relative="yes"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        
+        
+        <!--<property name="dita.temp.dir.rel" value="${dita.temp.dir}" relative="yes"/>-->
         <property name="dita.temp.dir.abs" location="${dita.temp.dir}"/>
-        <property name="dita.map.rel" value="${dita.temp.dir}${file.separator}${basename}.ditamap" relative="no"/>
+        <makeurl file="${dita.temp.dir.abs}" property="dita.temp.dir.abs.url"/>
+        <property name="dita.map.rel" value="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap" relative="no"/>
         
         <!-- Convert terminology statistics to termstats XML -->
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
-            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            in="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap"
             out="${dita.temp.dir}${file.separator}terminology_stats.xml"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
@@ -54,8 +71,9 @@
             filedirparameter="FILEDIR">
             <param name="ditamap" expression="${dita.map.rel}"/>
             <param name="ditamap.filename" expression="${basename}.ditamap"/>
-            <param name="temp.dir" expression="${dita.temp.dir.rel}"/>
-            <param name="temp.dir.abs" expression="${dita.temp.dir.abs}"/>
+            <param name="temp.dir" expression="${dita.temp.dir}"/>
+            <!--<param name="temp.dir.abs" expression="${dita.temp.dir.abs}"/>-->
+            <param name="temp.dir.abs" expression="${dita.temp.dir.abs.url}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         
@@ -124,13 +142,19 @@
         description="Merge a previous statistics file"
         if="args.termstats">
         <echo level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
+        
+        <makeurl file="${args.termstats}" property="old.termstats.url"/>
+        <makeurl file="${dita.temp.dir}${file.separator}terminology_stats.xml" property="new.termstats.url"/>
+        
         <xslt basedir="${dita.temp.dir}"
             destdir="${dita.temp.dir}"
             in="${args.termstats}"
             out="${dita.temp.dir}/termstats_merged.xml"
             style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats-merge-xml.xsl">
-            <param name="old.termstats" expression="${args.termstats}"/>
-            <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>
+            <!--<param name="old.termstats" expression="${args.termstats}"/>
+            <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>-->
+            <param name="old.termstats" expression="${old.termstats.url}"/>
+            <param name="new.termstats" expression="${new.termstats.url}"/>
         </xslt>
     </target>
     

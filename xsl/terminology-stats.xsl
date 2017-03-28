@@ -20,7 +20,8 @@
     </xsl:variable>
     
     <xsl:template match="/" priority="1">
-        <xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita'))"/>
+        <!--<xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita'))"/>-->
+        <xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita;recurse=yes'))"/>
         <termstats>
             <currentStatistics>
                 <languages>
@@ -89,9 +90,10 @@
         </xsl:for-each>
     </xsl:template>
     <!-- Empty fall through templates -->
-    <xsl:template match="*[contains(@class, ' map/topicref ') and (contains(@type, 'termstats') or contains(@type, 'semanticnet'))]" mode="termconflict"/>
+    <!--<xsl:template match="*[contains(@class, ' map/topicref ') and (contains(@type, 'termstats') or contains(@type, 'semanticnet'))]" mode="termconflict"/>
     <xsl:template match="*[contains(@class, ' subjectScheme/subjectHead ')]" mode="termconflict"/>
-    <xsl:template match="*[contains(@class, ' subjectScheme/hasInstance ')]" mode="termconflict"/>
+    <xsl:template match="*[contains(@class, ' subjectScheme/hasInstance ')]" mode="termconflict"/>-->
+    <xsl:template match="*" mode="termconflict"/>
 
     <xsl:template name="report">
         <xsl:param name="termCollection"/>
