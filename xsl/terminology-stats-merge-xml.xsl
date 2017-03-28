@@ -18,13 +18,13 @@
             <xsl:copy>
                 <xsl:copy-of select="document($new.termstats)/termstats/currentStatistics"/>
             </xsl:copy>
-            <chronologicalSequence>
+            <chronologicalStatistics>
                 <xsl:value-of select="$newline"/>
-                <xsl:for-each select="document($old.termstats)/termstats/reports/report">
+                <xsl:for-each select="document($old.termstats)/termstats/chronologicalStatistics/report">
                     <xsl:copy-of select="."/>
                 </xsl:for-each>
-                <xsl:copy-of select="document($new.termstats)/termstats/reports/report"/>
-            </chronologicalSequence>
+                <xsl:copy-of select="document($new.termstats)/termstats/chronologicalStatistics/report"/>
+            </chronologicalStatistics>
         </termstats>
     </xsl:template>
 

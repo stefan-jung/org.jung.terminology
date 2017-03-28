@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="urn:doctales:dita:rng:termmap.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="urn:doctales:dita:rng:termmap.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
 <termmap id="ui_${id}">
   <title>Terminology</title>
   <termgroup>

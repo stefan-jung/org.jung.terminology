@@ -214,7 +214,7 @@
         </tr>
     </xsl:template>
     
-    <xsl:template match="chronologicalSequence" mode="body">
+    <xsl:template match="chronologicalStatistics" mode="body">
         <div class="termNotations" style="width:900px; height:900px;">
             <xsl:value-of select="$newline"/>
             <script>
