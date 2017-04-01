@@ -176,7 +176,7 @@
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
             extension=".html"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2semanticnet.xsl"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
