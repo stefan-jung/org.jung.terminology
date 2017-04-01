@@ -6,12 +6,15 @@
     
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
+    <xsl:import href="termbrowser-utility.xsl"/>
     
     <xsl:output method="html"
         encoding="UTF-8"
         indent="no"
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
+    
+    <xsl:param name="language"/>
     
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
@@ -243,24 +246,15 @@
                 <div id="search">
                     <div class="form">
                         <div class="form-group row">
-                            <label for="search-input" class="col-2 col-form-label">
-                                <xsl:call-template name="getVariable">
-                                    <xsl:with-param name="id" select="'Term Notation'"/>
-                                </xsl:call-template>
+                            <label for="search-input" class="col-form-label">
+                                <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
                             </label>
-                            <div class="col-10">
-                                <input id="search-input" class="form-control autocomplete" type="text"><!----></input>
-                            </div>
+                            <input id="search-input" class="form-control autocomplete" type="text"><!----></input>
+                            <button type="button" class="btn btn-default" onclick="termFocus($('.autocomplete').val());">
+                                <xsl:value-of select="doctales:getString($language, 'Search')"/>
+                            </button>
                         </div>
                     </div>
-                    <button>
-                        <xsl:attribute name="type">button</xsl:attribute>
-                        <xsl:attribute name="class">btn btn-default</xsl:attribute>
-                        <xsl:attribute name="onclick">termFocus($('.autocomplete').val());</xsl:attribute>
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Search'"/>
-                        </xsl:call-template>
-                    </button>
                 </div>
                 <div id="wrapper">
                     <div id="mynetwork">
@@ -307,11 +301,15 @@
                 <div id="legend">
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
-                            <td class="legend_col1">Term</td>
+                            <td class="legend_col1">
+                                <xsl:value-of select="doctales:getString($language, 'Term')"/>
+                            </td>
                             <td class="legend_col2"><div id="t_term"><a id=""/></div></td>
                         </tr>
                         <tr>
-                            <td class="legend_col1">Definition</td>
+                            <td class="legend_col1">
+                                <xsl:value-of select="doctales:getString($language, 'Definition')"/>
+                            </td>
                             <td class="legend_col2"><div id="t_definition"/></td>
                         </tr>
                     </table>
@@ -361,7 +359,9 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: 'is antonym of'},</xsl:text>
+                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'Is Antonym Of')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- hypernym -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hypernym ')]">
@@ -373,7 +373,9 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: 'is hypernym of'},</xsl:text>
+                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'Is Hypernym Of')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- hyponym -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hyponym ')]">
@@ -385,7 +387,9 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: 'is hyponym of'},</xsl:text>
+                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'Is Hyponym Of')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- instanceOf -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/instanceOf ')]">
@@ -397,7 +401,9 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: 'is instanceOf of'},</xsl:text>
+                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'Is Instance Of')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- partOf -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/partOf ')]">
@@ -409,7 +415,9 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: 'is part of'},</xsl:text>
+                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'Is Part Of')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- relatedTerm -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
@@ -421,7 +429,9 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: 'is related to'},</xsl:text>
+                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:value-of select="doctales:getString($language, 'Is Related To')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
         </xsl:if>
     </xsl:template>

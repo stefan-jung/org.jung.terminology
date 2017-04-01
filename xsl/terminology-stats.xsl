@@ -3,13 +3,16 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:doctales="http://doctales.github.io"
     exclude-result-prefixes="xs doctales" version="2.0">
+    
     <xsl:output method="xml"
         encoding="UTF-8"
         indent="yes"
         omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
+    
     <xsl:param name="temp.dir"/>
     <xsl:param name="termMap"/>
+    <xsl:param name="language"/>
     <xsl:param name="temp.dir.abs"/>
     <xsl:param name="ditamap.filename"/>
 
