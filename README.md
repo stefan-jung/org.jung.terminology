@@ -53,7 +53,7 @@ Please refer to the [documentation](https://doctales.atlassian.net/wiki/display/
 
 ## Contribution
 
-People that contribute to **org.doctales.terminology**:
+People who contribute to **org.doctales.terminology**:
 
 * [Stefan Eike](https://de.linkedin.com/in/stefan-eike-a02a9939) - Development, DITA Specialization, Content Design
 * [Sascha Nothofer](https://de.linkedin.com/in/sascha-nothofer-32563811a) - Content Design
