@@ -417,6 +417,7 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', arrows: 'to', label: '</xsl:text>
                 <xsl:value-of select="doctales:getString($language, 'Is Part Of')"/>
+                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- relatedTerm -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
