@@ -486,6 +486,13 @@ a:hover, a:focus {
     width: 50% !important;
 }
 
+.ui-autocomplete-input {
+    width: 50%;
+    display: inline-block;
+    margin-left: 10pt;
+    margin-right: 10pt;
+}
+
 .ui-menu.ui-autocomplete .ui-menu-item {
     list-style: none;
     cursor: pointer;

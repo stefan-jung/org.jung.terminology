@@ -3,20 +3,16 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:doctales="http://doctales.github.io"
     exclude-result-prefixes="xs doctales" version="2.0">
-   <!-- <xsl:output method="xml"
-        encoding="UTF-8"
-        indent="yes"/>-->
     
+    <xsl:import href="termbrowser-utility.xsl"/>
     <xsl:import href="plugin:org.dita.html5:xsl/dita2html5.xsl"/>
     <xsl:import href="flagicon.xsl"/>
     
     <xsl:strip-space elements="*"/>
-    <xsl:param name="temp.dir"/>
-    <xsl:param name="termMap"/>
-    <xsl:param name="temp.dir.abs"/>
-    <xsl:param name="ditamap.filename"/>
+    
     <!-- FIXME: replace with outext fails on Travis CI -->
     <xsl:param name="outext">html</xsl:param>
+    <xsl:param name="language"/>
 
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
@@ -24,22 +20,6 @@
         </xsl:text>
     </xsl:variable>
 
-
-
-    <!-- ****************************************************************************** -->
-    <!--                                   FUNCTIONS                                    -->
-    <!-- ****************************************************************************** -->
-    
-    <xsl:function name="doctales:getColorCode">
-        <xsl:param name="index"/>
-        <xsl:value-of select="('#d50000', '#304ffe', '#00bfa5', '#ffab00', '#c51162', '#aa00ff', '#6200ea', '#2962ff', '#0091ea', '#00b8d4', '#00c853', '#64dd17', '#aeea00', '#ffd600', '#ff6d00', '#dd2c00', '#3e2723', '#212121', '#263238')[$index]"/>
-    </xsl:function>
-    
-    <xsl:function name="doctales:getHoverColorCode">
-        <xsl:param name="index"/>
-        <xsl:value-of select="('#ff5252', '#536dfe', '#64ffda', '#ffd740', '#ff4081', '#e040fb', '#7c4dff', '#448aff', '#40c4ff', '#18ffff', '#69f0ae', '#b2ff59', '#eeff41', '#ffff00', '#ffab40', '#ff6e40', '#5d4037', '#616161', '#455a64')[$index]"/>
-    </xsl:function>
-    
     
     
     <!-- ****************************************************************************** -->
@@ -69,19 +49,13 @@
                         <thead class="termconflicts-thead">
                             <tr>
                                 <th class="termconflicts-th">
-                                    <xsl:call-template name="getVariable">
-                                        <xsl:with-param name="id" select="'Term Notation'"/>
-                                    </xsl:call-template>
+                                    <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:call-template name="getVariable">
-                                        <xsl:with-param name="id" select="'Is Preferred In'"/>
-                                    </xsl:call-template>
+                                    <xsl:value-of select="doctales:getString($language, 'Is Preferred In')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:call-template name="getVariable">
-                                        <xsl:with-param name="id" select="'Is Not Recommended In'"/>
-                                    </xsl:call-template>
+                                    <xsl:value-of select="doctales:getString($language, 'Is Not Recommended In')"/>
                                 </th>
                             </tr>
                         </thead>
@@ -90,9 +64,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <p>
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'No Termconflicts Found'"/>
-                        </xsl:call-template>
+                        <xsl:value-of select="doctales:getString($language, 'No Termconflicts Found')"/>
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
@@ -111,9 +83,7 @@
                         <xsl:text>: </xsl:text>
                         <xsl:value-of select="."/>
                         <xsl:text> </xsl:text>
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Notations'"/>
-                        </xsl:call-template>
+                        <xsl:value-of select="doctales:getString($language, 'Term Notations')"/>
                     </li>
                 </xsl:for-each>
             </ul>
@@ -233,7 +203,7 @@
                             </xsl:for-each>
                         ],
                         datasets: [{
-                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Preferred Term Notations'"/></xsl:call-template>",
+                            label: "<xsl:value-of select="doctales:getString($language, 'Preferred Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(90,130,80,0.9)",
@@ -264,7 +234,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Admitted Term Notations'"/></xsl:call-template>",
+                            label: "<xsl:value-of select="doctales:getString($language, 'Admitted Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(75,192,192,0.1)",
@@ -295,7 +265,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Not Recommended Term Notations'"/></xsl:call-template>",
+                            label: "<xsl:value-of select="doctales:getString($language, 'Not Recommended Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(255,163,98,1.0)",
@@ -326,7 +296,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Obsolete Term Notations'"/></xsl:call-template>",
+                            label: "<xsl:value-of select="doctales:getString($language, 'Obsolete Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(232,204,78,1)",
@@ -364,7 +334,7 @@
                         options: {
                             title: {
                                 display: true,
-                                text: '<xsl:call-template name="getVariable"><xsl:with-param name="id" select="'Term Notations'"/></xsl:call-template>'
+                                text: '<xsl:value-of select="doctales:getString($language, 'Term Notations')"/>'
                             },
                             scales: {
                                 xAxes: [{

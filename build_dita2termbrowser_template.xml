@@ -72,7 +72,6 @@
             <param name="ditamap" expression="${dita.map.rel}"/>
             <param name="ditamap.filename" expression="${basename}.ditamap"/>
             <param name="temp.dir" expression="${dita.temp.dir}"/>
-            <!--<param name="temp.dir.abs" expression="${dita.temp.dir.abs}"/>-->
             <param name="temp.dir.abs" expression="${dita.temp.dir.abs.url}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
@@ -84,6 +83,7 @@
             The content of the <head> element and the <body> element
             will later be injected into the termstats topic.
         -->
+        <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
             in="${dita.temp.dir}/termstats_merged.xml"
@@ -95,6 +95,7 @@
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <param name="outext" expression="${args.outext}"/>
+            <param name="language" expression="${args.default.language}"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         
@@ -166,6 +167,7 @@
     </target>
     
     <target name="semanticnet">
+        <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
@@ -174,10 +176,11 @@
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
             extension=".html"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2semanticnet.xsl"
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
+            <param name="language" expression="${args.default.language}"/>
         </xslt>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
