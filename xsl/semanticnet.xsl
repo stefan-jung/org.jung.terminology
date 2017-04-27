@@ -408,16 +408,15 @@
             <!-- partOf -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/partOf ')]">
                 <xsl:text>{id: '</xsl:text>
-                <xsl:value-of select="@keyref"/>
+                <xsl:value-of select="$key"/>
                 <xsl:text>2</xsl:text>
-                <xsl:value-of select="$key"/>
-                <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>', to: '</xsl:text>
+                <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="$key"/>
+                <xsl:text>', to: '</xsl:text>
+                <xsl:value-of select="@keyref"/>
                 <xsl:text>', arrows: 'to', label: '</xsl:text>
                 <xsl:value-of select="doctales:getString($language, 'Is Part Of')"/>
-                <xsl:text>'},</xsl:text>
             </xsl:for-each>
             <!-- relatedTerm -->
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
