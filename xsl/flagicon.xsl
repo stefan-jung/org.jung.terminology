@@ -130,7 +130,8 @@
                         <xsl:attribute name="class">flag-icon flag-icon-za</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
-                <xsl:when test="$language = 'es'">
+                <xsl:when test="$language = 'es'
+                    or $language = 'es-ES'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-es</xsl:attribute>
                     </xsl:element>
@@ -337,7 +338,7 @@
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'it'
-                                or $language = 'it-CH'">
+                    or $language = 'it-CH' or $language = 'it-IT'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-it</xsl:attribute>
                     </xsl:element>

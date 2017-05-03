@@ -128,6 +128,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          es-CR | 
                                          es-DO | 
                                          es-EC | 
+                                         es-ES | 
                                          es-GT | 
                                          es-HN | 
                                          es-MX | 
@@ -148,6 +149,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          fr-BE | 
                                          fr-CA | 
                                          fr-CH | 
+                                         fr-FR | 
                                          fr-LU | 
                                          ga | 
                                          gd | 
@@ -159,6 +161,7 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          is | 
                                          it | 
                                          it-CH | 
+                                         it-IT | 
                                          ja | 
                                          ji | 
                                          ko | 
