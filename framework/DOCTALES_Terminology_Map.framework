@@ -2764,49 +2764,103 @@
 											<Integer>1</Integer>
 										</field>
 										<field name="value">
-											<antScenario>
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/termbrowser</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/termbrowser</String>
+												</field>
+												<field name="transtype">
+													<String>termbrowser</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>dita2termbrowser</String>
+													<String></String>
 												</field>
 												<field name="buildFilePath">
-													<String>${configured.ditaot.dir}/build.xml</String>
+													<String></String>
 												</field>
 												<field name="ditaParams">
 													<list>
-														<antParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.copycss</String>
 															</field>
 															<field name="description">
-																<String>Specifies whether to copy the custom .css file to the output directory. The allowed values are yes and no; the default value is no.
-If an external process will copy your custom .css file to the output directory, leave this parameter unset (or set it to no). If DITA-OT should copy the file when generating output, set it to yes.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>yes</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>no</String>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>4</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.css</String>
 															</field>
 															<field name="description">
-																<String>Specifies the name of a custom .css file.
-The value of this parameter should be only the file name (or an absolute path to the file). A relative path can be specified with args.cssroot.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${frameworkDir}/webhelp-skin/doctales/skin.css</String>
@@ -2815,7 +2869,7 @@ The value of this parameter should be only the file name (or an absolute path to
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>2</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -2823,8 +2877,8 @@ The value of this parameter should be only the file name (or an absolute path to
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.default.language</String>
 															</field>
@@ -2846,13 +2900,13 @@ The value of this parameter should be only the file name (or an absolute path to
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.dita.locale</String>
 															</field>
 															<field name="description">
-																<String>Specifies the language locale file to use for sorting index entries. This parameter is not available for the XHTML transformation.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>en</String>
@@ -2861,7 +2915,7 @@ The value of this parameter should be only the file name (or an absolute path to
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -2869,177 +2923,41 @@ The value of this parameter should be only the file name (or an absolute path to
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>args.input</String>
-															</field>
-															<field name="description">
-																<String>Specifies the master file for your documentation project.
-Typically this is a DITA map, however it also can be a DITA topic if you want to transform a single DITA file. The path can be absolute, relative to args.input.dir, or relative to the directory where your project's ant build script resides if args.input.dir is not defined.</String>
-															</field>
-															<field name="value">
-																<String>${cf}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.xhtml.classattr</String>
 															</field>
 															<field name="description">
-																<String>Specifies whether to include the DITA class ancestry inside the XHTML elements. The allowed values are yes and no; the default value is yes.
-For example, the &lt;prereq> element (which is specialized from &lt;section>) would generate class="section prereq". Corresponds to the XSLT parameter PRESERVE-DITA-CLASS.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>yes</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>yes</String>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>4</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.dir</String>
-															</field>
-															<field name="description">
-																<String>Specifies where the DITA-OT is installed.</String>
-															</field>
-															<field name="value">
-																<String>${configured.ditaot.dir}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.input.valfile</String>
-															</field>
-															<field name="description">
-																<String>Specifies a filter file to be used to include, exclude, or flag content.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/resources/ditaval/termbrowser-classic.ditaval</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.temp.dir</String>
-															</field>
-															<field name="description">
-																<String>Specifies the location of the temporary directory.
-The temporary directory is where the DITA-OT writes temporary files that are generated during the transformation process.</String>
-															</field>
-															<field name="value">
-																<String>${cfd}/temp/termbrowser</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>output.dir</String>
-															</field>
-															<field name="description">
-																<String>Specifies the name and location of the output directory.
-By default, the output is written to dita.dir/out.</String>
-															</field>
-															<field name="value">
-																<String>${cfd}/out/termbrowser</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>webhelp.head.script</String>
-															</field>
-															<field name="description">
-																<String>Specifies an XML file that contains content to be placed in the document head.
-The contents of the header file will be inserted in the &lt;head> element of the generated HTML files.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/header/termbrowser-classic.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -3054,10 +2972,10 @@ The contents of the header file will be inserted in the &lt;head> element of the
 													<String></String>
 												</field>
 												<field name="workingDir">
-													<String>${cfd}</String>
+													<null/>
 												</field>
 												<field name="showConsoleAlways">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="advancedOptionsMap">
 													<null/>
@@ -3093,7 +3011,7 @@ The contents of the header file will be inserted in the &lt;head> element of the
 													<Boolean>false</Boolean>
 												</field>
 												<field name="type">
-													<String>ANT</String>
+													<String>DITAMAP</String>
 												</field>
 												<field name="saveAs">
 													<Boolean>true</Boolean>
@@ -3138,19 +3056,12 @@ The contents of the header file will be inserted in the &lt;head> element of the
 													<String-array/>
 												</field>
 												<field name="xslTransformer">
-													<String>ANT</String>
+													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
-														<String>${oxygenHome}/lib/*.jar</String>
-													</String-array>
+													<String-array/>
 												</field>
-											</antScenario>
+											</ditaScenario>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -3167,49 +3078,103 @@ The contents of the header file will be inserted in the &lt;head> element of the
 											<Integer>2</Integer>
 										</field>
 										<field name="value">
-											<antScenario>
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/termbrowser-html5</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/termbrowser-html5</String>
+												</field>
+												<field name="transtype">
+													<String>termbrowser-html5</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>dita2termbrowser-html5</String>
+													<String></String>
 												</field>
 												<field name="buildFilePath">
-													<String>${configured.ditaot.dir}/build.xml</String>
+													<String></String>
 												</field>
 												<field name="ditaParams">
 													<list>
-														<antParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.copycss</String>
 															</field>
 															<field name="description">
-																<String>Specifies whether to copy the custom .css file to the output directory. The allowed values are yes and no; the default value is no.
-If an external process will copy your custom .css file to the output directory, leave this parameter unset (or set it to no). If DITA-OT should copy the file when generating output, set it to yes.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>yes</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>no</String>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>4</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.css</String>
 															</field>
 															<field name="description">
-																<String>Specifies the name of a custom .css file.
-The value of this parameter should be only the file name (or an absolute path to the file). A relative path can be specified with args.cssroot.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${frameworkDir}/webhelp-skin/doctales/html5.css</String>
@@ -3218,7 +3183,7 @@ The value of this parameter should be only the file name (or an absolute path to
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>2</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -3226,13 +3191,13 @@ The value of this parameter should be only the file name (or an absolute path to
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.default.language</String>
 															</field>
 															<field name="description">
-																<String>Specifies the language used for the termbrowser labels.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${ask('Termbrowser - Choose language of labels', combobox, ('en-GB':'English - United Kingdom';'de-DE':'German - Germany';)}</String>
@@ -3241,7 +3206,7 @@ The value of this parameter should be only the file name (or an absolute path to
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -3249,13 +3214,13 @@ The value of this parameter should be only the file name (or an absolute path to
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.dita.locale</String>
 															</field>
 															<field name="description">
-																<String>Specifies the language locale file to use for sorting index entries. This parameter is not available for the XHTML transformation.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>en</String>
@@ -3264,7 +3229,7 @@ The value of this parameter should be only the file name (or an absolute path to
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -3272,14 +3237,13 @@ The value of this parameter should be only the file name (or an absolute path to
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.hdf</String>
 															</field>
 															<field name="description">
-																<String>Specifies whether to include the DITA class ancestry inside the XHTML elements. The allowed values are yes and no; the default value is yes.
-For example, the &lt;prereq> element (which is specialized from &lt;section>) would generate class="section prereq". Corresponds to the XSLT parameter PRESERVE-DITA-CLASS.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${frameworkDir}/webhelp-skin/header/termbrowser-html5.xml</String>
@@ -3288,7 +3252,7 @@ For example, the &lt;prereq> element (which is specialized from &lt;section>) wo
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>2</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -3296,179 +3260,73 @@ For example, the &lt;prereq> element (which is specialized from &lt;section>) wo
 															<field name="possibleValuesDescriptions">
 																<null/>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
-																<String>args.input</String>
+																<String>args.html5.classattr</String>
 															</field>
 															<field name="description">
-																<String>Specifies the master file for your documentation project.
-Typically this is a DITA map, however it also can be a DITA topic if you want to transform a single DITA file. The path can be absolute, relative to args.input.dir, or relative to the directory where your project's ant build script resides if args.input.dir is not defined.</String>
-															</field>
-															<field name="value">
-																<String>${cf}</String>
-															</field>
-															<field name="defaultValue">
 																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>args.xhtml.classattr</String>
-															</field>
-															<field name="description">
-																<String>Specifies whether to include the DITA class ancestry inside the XHTML elements. The allowed values are yes and no; the default value is yes.
-For example, the &lt;prereq> element (which is specialized from &lt;section>) would generate class="section prereq". Corresponds to the XSLT parameter PRESERVE-DITA-CLASS.</String>
 															</field>
 															<field name="value">
 																<String>yes</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>yes</String>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>4</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>yes</String>
+																	<String>no</String>
+																	<null/>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.dir</String>
-															</field>
-															<field name="description">
-																<String>Specifies where the DITA-OT is installed.</String>
-															</field>
-															<field name="value">
-																<String>${configured.ditaot.dir}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.input.valfile</String>
-															</field>
-															<field name="description">
-																<String>Specifies a filter file to be used to include, exclude, or flag content.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/resources/ditaval/termbrowser-html5.ditaval</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.temp.dir</String>
-															</field>
-															<field name="description">
-																<String>Specifies the location of the temporary directory.
-The temporary directory is where the DITA-OT writes temporary files that are generated during the transformation process.</String>
-															</field>
-															<field name="value">
-																<String>${cfd}/temp/termbrowser-html5</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>nav-toc</String>
 															</field>
 															<field name="description">
-																<String>Specifies whether to generate a navigation TOC in topic pages. The following values are supported:
-none (default) – No TOC
-partial – Partial TOC that shows the current topic
-full – Full TOC</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>full</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>none</String>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>4</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>none</String>
+																	<String>partial</String>
+																	<String>full</String>
+																	<null/>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String>No TOC</String>
+																	<String>Partial TOC that shows the current topic</String>
+																	<String>Full TOC</String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>output.dir</String>
-															</field>
-															<field name="description">
-																<String>Specifies the name and location of the output directory.
-By default, the output is written to dta.dir/out.</String>
-															</field>
-															<field name="value">
-																<String>${cfd}/out/termbrowser-html5</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -3483,10 +3341,10 @@ By default, the output is written to dta.dir/out.</String>
 													<String></String>
 												</field>
 												<field name="workingDir">
-													<String>${cfd}</String>
+													<null/>
 												</field>
 												<field name="showConsoleAlways">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="advancedOptionsMap">
 													<null/>
@@ -3522,7 +3380,7 @@ By default, the output is written to dta.dir/out.</String>
 													<Boolean>false</Boolean>
 												</field>
 												<field name="type">
-													<String>ANT</String>
+													<String>DITAMAP</String>
 												</field>
 												<field name="saveAs">
 													<Boolean>true</Boolean>
@@ -3567,19 +3425,12 @@ By default, the output is written to dta.dir/out.</String>
 													<String-array/>
 												</field>
 												<field name="xslTransformer">
-													<String>ANT</String>
+													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
-														<String>${oxygenHome}/lib/*.jar</String>
-													</String-array>
+													<String-array/>
 												</field>
-											</antScenario>
+											</ditaScenario>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -3596,47 +3447,73 @@ By default, the output is written to dta.dir/out.</String>
 											<Integer>3</Integer>
 										</field>
 										<field name="value">
-											<antScenario>
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/termchecker-dita</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/termchecker-dita</String>
+												</field>
+												<field name="transtype">
+													<String>termchecker-dita</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>dita2termchecker-dita</String>
+													<String></String>
 												</field>
 												<field name="buildFilePath">
-													<String>${configured.ditaot.dir}/build.xml</String>
+													<String></String>
 												</field>
 												<field name="ditaParams">
 													<list>
-														<antParameter>
-															<field name="name">
-																<String>args.input</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cf}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.language</String>
 															</field>
 															<field name="description">
-																<String>Language of the terminology check rules</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${ask('Termchecker for DITA - Choose language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -3645,88 +3522,293 @@ By default, the output is written to dta.dir/out.</String>
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>af-ZA</String>
+																	<String>ar-AE</String>
+																	<String>ar-BH</String>
+																	<String>ar-DZ</String>
+																	<String>ar-EG</String>
+																	<String>ar-IQ</String>
+																	<String>ar-JO</String>
+																	<String>ar-KW</String>
+																	<String>ar-LB</String>
+																	<String>ar-LY</String>
+																	<String>ar-MA</String>
+																	<String>ar-OM</String>
+																	<String>ar-QA</String>
+																	<String>ar-SA</String>
+																	<String>ar-SY</String>
+																	<String>ar-TN</String>
+																	<String>ar-YE</String>
+																	<String>be-BY</String>
+																	<String>bg-BG</String>
+																	<String>ca-ES</String>
+																	<String>cs-CZ</String>
+																	<String>Cy-az-AZ</String>
+																	<String>Cy-sr-SP</String>
+																	<String>Cy-uz-UZ</String>
+																	<String>da-DK</String>
+																	<String>de-AT</String>
+																	<String>de-CH</String>
+																	<String>de-DE</String>
+																	<String>de-LI</String>
+																	<String>de-LU</String>
+																	<String>div-MV</String>
+																	<String>el-GR</String>
+																	<String>en-AU</String>
+																	<String>en-BZ</String>
+																	<String>en-CA</String>
+																	<String>en-CB</String>
+																	<String>en-GB</String>
+																	<String>en-IE</String>
+																	<String>en-JM</String>
+																	<String>en-NZ</String>
+																	<String>en-PH</String>
+																	<String>en-TT</String>
+																	<String>en-US</String>
+																	<String>en-ZA</String>
+																	<String>en-ZW</String>
+																	<String>es-AR</String>
+																	<String>es-BO</String>
+																	<String>es-CL</String>
+																	<String>es-CO</String>
+																	<String>es-CR</String>
+																	<String>es-DO</String>
+																	<String>es-EC</String>
+																	<String>es-ES</String>
+																	<String>es-GT</String>
+																	<String>es-HN</String>
+																	<String>es-MX</String>
+																	<String>es-NI</String>
+																	<String>es-PA</String>
+																	<String>es-PE</String>
+																	<String>es-PR</String>
+																	<String>es-PY</String>
+																	<String>es-SV</String>
+																	<String>es-UY</String>
+																	<String>es-VE</String>
+																	<String>et-EE</String>
+																	<String>eu-ES</String>
+																	<String>fa-IR</String>
+																	<String>fi-FI</String>
+																	<String>fo-FO</String>
+																	<String>fr-BE</String>
+																	<String>fr-CA</String>
+																	<String>fr-CH</String>
+																	<String>fr-FR</String>
+																	<String>fr-LU</String>
+																	<String>fr-MC</String>
+																	<String>gl-ES</String>
+																	<String>gu-IN</String>
+																	<String>he-IL</String>
+																	<String>hi-IN</String>
+																	<String>hr-HR</String>
+																	<String>hu-HU</String>
+																	<String>hy-AM</String>
+																	<String>id-ID</String>
+																	<String>is-IS</String>
+																	<String>it-CH</String>
+																	<String>it-IT</String>
+																	<String>ja-JP</String>
+																	<String>ka-GE</String>
+																	<String>kk-KZ</String>
+																	<String>kn-IN</String>
+																	<String>ko-KR</String>
+																	<String>kok-IN</String>
+																	<String>ky-KZ</String>
+																	<String>Lt-az-AZ</String>
+																	<String>lt-LT</String>
+																	<String>Lt-sr-SP</String>
+																	<String>Lt-uz-UZ</String>
+																	<String>lv-LV</String>
+																	<String>mk-MK</String>
+																	<String>mn-MN</String>
+																	<String>mr-IN</String>
+																	<String>ms-BN</String>
+																	<String>ms-MY</String>
+																	<String>nb-NO</String>
+																	<String>nl-BE</String>
+																	<String>nl-NL</String>
+																	<String>nn-NO</String>
+																	<String>pa-IN</String>
+																	<String>pl-PL</String>
+																	<String>pt-BR</String>
+																	<String>pt-PT</String>
+																	<String>ro-RO</String>
+																	<String>ru-RU</String>
+																	<String>sa-IN</String>
+																	<String>sk-SK</String>
+																	<String>sl-SI</String>
+																	<String>sq-AL</String>
+																	<String>sv-FI</String>
+																	<String>sv-SE</String>
+																	<String>sw-KE</String>
+																	<String>syr-SY</String>
+																	<String>ta-IN</String>
+																	<String>te-IN</String>
+																	<String>th-TH</String>
+																	<String>tr-TR</String>
+																	<String>tt-RU</String>
+																	<String>uk-UA</String>
+																	<String>ur-PK</String>
+																	<String>vi-VN</String>
+																	<String>zh-CHS</String>
+																	<String>zh-CHT</String>
+																	<String>zh-CN</String>
+																	<String>zh-HK</String>
+																	<String>zh-MO</String>
+																	<String>zh-SG</String>
+																	<String>zh-TW</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${configured.ditaot.dir}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>output.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/out/termchecker-dita</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>temp.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/temp/termchecker-dita</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -3741,10 +3823,10 @@ By default, the output is written to dta.dir/out.</String>
 													<String></String>
 												</field>
 												<field name="workingDir">
-													<String>${cfd}</String>
+													<null/>
 												</field>
 												<field name="showConsoleAlways">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="advancedOptionsMap">
 													<null/>
@@ -3780,13 +3862,13 @@ By default, the output is written to dta.dir/out.</String>
 													<Boolean>false</Boolean>
 												</field>
 												<field name="type">
-													<String>ANT</String>
+													<String>DITAMAP</String>
 												</field>
 												<field name="saveAs">
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
@@ -3798,7 +3880,7 @@ By default, the output is written to dta.dir/out.</String>
 													<Boolean>true</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String></String>
+													<String>${cfd}/out/termchecker-dita/${cfn}-DITA-${args.language}.sch</String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
@@ -3825,19 +3907,12 @@ By default, the output is written to dta.dir/out.</String>
 													<String-array/>
 												</field>
 												<field name="xslTransformer">
-													<String>ANT</String>
+													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
-														<String>${oxygenHome}/lib/*.jar</String>
-													</String-array>
+													<String-array/>
 												</field>
-											</antScenario>
+											</ditaScenario>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -3854,70 +3929,104 @@ By default, the output is written to dta.dir/out.</String>
 											<Integer>4</Integer>
 										</field>
 										<field name="value">
-											<antScenario>
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/termchecker-xliff</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/termchecker-xliff</String>
+												</field>
+												<field name="transtype">
+													<String>termchecker-xliff</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>dita2termchecker-xliff</String>
+													<String></String>
 												</field>
 												<field name="buildFilePath">
-													<String>${configured.ditaot.dir}/build.xml</String>
+													<String></String>
 												</field>
 												<field name="ditaParams">
 													<list>
-														<antParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.check.elements</String>
 															</field>
 															<field name="description">
-																<String>Choose whether terms should be checked only in source elements or target elements or in both of them.</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${ask('Termchecker for XLIFF - Choose for which elements termchecker rules should be applied', combobox, ('source':'&lt;source> elements';'target':'&lt;target> elements';'both':'&lt;source> and &lt;target> elements';)}</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>source</String>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>source</String>
+																	<String>target</String>
+																	<String>both</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>args.input</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cf}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.language</String>
 															</field>
 															<field name="description">
-																<String>Language of the terminology check rules</String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${ask('Termchecker for XLIFF - Choose language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -3926,88 +4035,293 @@ By default, the output is written to dta.dir/out.</String>
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>af-ZA</String>
+																	<String>ar-AE</String>
+																	<String>ar-BH</String>
+																	<String>ar-DZ</String>
+																	<String>ar-EG</String>
+																	<String>ar-IQ</String>
+																	<String>ar-JO</String>
+																	<String>ar-KW</String>
+																	<String>ar-LB</String>
+																	<String>ar-LY</String>
+																	<String>ar-MA</String>
+																	<String>ar-OM</String>
+																	<String>ar-QA</String>
+																	<String>ar-SA</String>
+																	<String>ar-SY</String>
+																	<String>ar-TN</String>
+																	<String>ar-YE</String>
+																	<String>be-BY</String>
+																	<String>bg-BG</String>
+																	<String>ca-ES</String>
+																	<String>cs-CZ</String>
+																	<String>Cy-az-AZ</String>
+																	<String>Cy-sr-SP</String>
+																	<String>Cy-uz-UZ</String>
+																	<String>da-DK</String>
+																	<String>de-AT</String>
+																	<String>de-CH</String>
+																	<String>de-DE</String>
+																	<String>de-LI</String>
+																	<String>de-LU</String>
+																	<String>div-MV</String>
+																	<String>el-GR</String>
+																	<String>en-AU</String>
+																	<String>en-BZ</String>
+																	<String>en-CA</String>
+																	<String>en-CB</String>
+																	<String>en-GB</String>
+																	<String>en-IE</String>
+																	<String>en-JM</String>
+																	<String>en-NZ</String>
+																	<String>en-PH</String>
+																	<String>en-TT</String>
+																	<String>en-US</String>
+																	<String>en-ZA</String>
+																	<String>en-ZW</String>
+																	<String>es-AR</String>
+																	<String>es-BO</String>
+																	<String>es-CL</String>
+																	<String>es-CO</String>
+																	<String>es-CR</String>
+																	<String>es-DO</String>
+																	<String>es-EC</String>
+																	<String>es-ES</String>
+																	<String>es-GT</String>
+																	<String>es-HN</String>
+																	<String>es-MX</String>
+																	<String>es-NI</String>
+																	<String>es-PA</String>
+																	<String>es-PE</String>
+																	<String>es-PR</String>
+																	<String>es-PY</String>
+																	<String>es-SV</String>
+																	<String>es-UY</String>
+																	<String>es-VE</String>
+																	<String>et-EE</String>
+																	<String>eu-ES</String>
+																	<String>fa-IR</String>
+																	<String>fi-FI</String>
+																	<String>fo-FO</String>
+																	<String>fr-BE</String>
+																	<String>fr-CA</String>
+																	<String>fr-CH</String>
+																	<String>fr-FR</String>
+																	<String>fr-LU</String>
+																	<String>fr-MC</String>
+																	<String>gl-ES</String>
+																	<String>gu-IN</String>
+																	<String>he-IL</String>
+																	<String>hi-IN</String>
+																	<String>hr-HR</String>
+																	<String>hu-HU</String>
+																	<String>hy-AM</String>
+																	<String>id-ID</String>
+																	<String>is-IS</String>
+																	<String>it-CH</String>
+																	<String>it-IT</String>
+																	<String>ja-JP</String>
+																	<String>ka-GE</String>
+																	<String>kk-KZ</String>
+																	<String>kn-IN</String>
+																	<String>ko-KR</String>
+																	<String>kok-IN</String>
+																	<String>ky-KZ</String>
+																	<String>Lt-az-AZ</String>
+																	<String>lt-LT</String>
+																	<String>Lt-sr-SP</String>
+																	<String>Lt-uz-UZ</String>
+																	<String>lv-LV</String>
+																	<String>mk-MK</String>
+																	<String>mn-MN</String>
+																	<String>mr-IN</String>
+																	<String>ms-BN</String>
+																	<String>ms-MY</String>
+																	<String>nb-NO</String>
+																	<String>nl-BE</String>
+																	<String>nl-NL</String>
+																	<String>nn-NO</String>
+																	<String>pa-IN</String>
+																	<String>pl-PL</String>
+																	<String>pt-BR</String>
+																	<String>pt-PT</String>
+																	<String>ro-RO</String>
+																	<String>ru-RU</String>
+																	<String>sa-IN</String>
+																	<String>sk-SK</String>
+																	<String>sl-SI</String>
+																	<String>sq-AL</String>
+																	<String>sv-FI</String>
+																	<String>sv-SE</String>
+																	<String>sw-KE</String>
+																	<String>syr-SY</String>
+																	<String>ta-IN</String>
+																	<String>te-IN</String>
+																	<String>th-TH</String>
+																	<String>tr-TR</String>
+																	<String>tt-RU</String>
+																	<String>uk-UA</String>
+																	<String>ur-PK</String>
+																	<String>vi-VN</String>
+																	<String>zh-CHS</String>
+																	<String>zh-CHT</String>
+																	<String>zh-CN</String>
+																	<String>zh-HK</String>
+																	<String>zh-MO</String>
+																	<String>zh-SG</String>
+																	<String>zh-TW</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${configured.ditaot.dir}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>output.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/out/termchecker-xliff</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>temp.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/temp/termchecker-xliff</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -4022,10 +4336,10 @@ By default, the output is written to dta.dir/out.</String>
 													<String></String>
 												</field>
 												<field name="workingDir">
-													<String>${cfd}</String>
+													<null/>
 												</field>
 												<field name="showConsoleAlways">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="advancedOptionsMap">
 													<null/>
@@ -4061,13 +4375,13 @@ By default, the output is written to dta.dir/out.</String>
 													<Boolean>false</Boolean>
 												</field>
 												<field name="type">
-													<String>ANT</String>
+													<String>DITAMAP</String>
 												</field>
 												<field name="saveAs">
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
@@ -4076,7 +4390,7 @@ By default, the output is written to dta.dir/out.</String>
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
 													<String></String>
@@ -4106,19 +4420,12 @@ By default, the output is written to dta.dir/out.</String>
 													<String-array/>
 												</field>
 												<field name="xslTransformer">
-													<String>ANT</String>
+													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
-														<String>${oxygenHome}/lib/*.jar</String>
-													</String-array>
+													<String-array/>
 												</field>
-											</antScenario>
+											</ditaScenario>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -4135,47 +4442,73 @@ By default, the output is written to dta.dir/out.</String>
 											<Integer>5</Integer>
 										</field>
 										<field name="value">
-											<antScenario>
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/tbx-min</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/tbx-min</String>
+												</field>
+												<field name="transtype">
+													<String>tbx-min</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>dita2tbx-basic</String>
+													<String></String>
 												</field>
 												<field name="buildFilePath">
-													<String>${configured.ditaot.dir}/build.xml</String>
+													<String></String>
 												</field>
 												<field name="ditaParams">
 													<list>
-														<antParameter>
-															<field name="name">
-																<String>args.input</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cf}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.source.language</String>
 															</field>
 															<field name="description">
-																<String></String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${ask('TBX-Basic - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -4184,21 +4517,295 @@ By default, the output is written to dta.dir/out.</String>
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>af-ZA</String>
+																	<String>ar-AE</String>
+																	<String>ar-BH</String>
+																	<String>ar-DZ</String>
+																	<String>ar-EG</String>
+																	<String>ar-IQ</String>
+																	<String>ar-JO</String>
+																	<String>ar-KW</String>
+																	<String>ar-LB</String>
+																	<String>ar-LY</String>
+																	<String>ar-MA</String>
+																	<String>ar-OM</String>
+																	<String>ar-QA</String>
+																	<String>ar-SA</String>
+																	<String>ar-SY</String>
+																	<String>ar-TN</String>
+																	<String>ar-YE</String>
+																	<String>be-BY</String>
+																	<String>bg-BG</String>
+																	<String>ca-ES</String>
+																	<String>cs-CZ</String>
+																	<String>Cy-az-AZ</String>
+																	<String>Cy-sr-SP</String>
+																	<String>Cy-uz-UZ</String>
+																	<String>da-DK</String>
+																	<String>de-AT</String>
+																	<String>de-CH</String>
+																	<String>de-DE</String>
+																	<String>de-LI</String>
+																	<String>de-LU</String>
+																	<String>div-MV</String>
+																	<String>el-GR</String>
+																	<String>en-AU</String>
+																	<String>en-BZ</String>
+																	<String>en-CA</String>
+																	<String>en-CB</String>
+																	<String>en-GB</String>
+																	<String>en-IE</String>
+																	<String>en-JM</String>
+																	<String>en-NZ</String>
+																	<String>en-PH</String>
+																	<String>en-TT</String>
+																	<String>en-US</String>
+																	<String>en-ZA</String>
+																	<String>en-ZW</String>
+																	<String>es-AR</String>
+																	<String>es-BO</String>
+																	<String>es-CL</String>
+																	<String>es-CO</String>
+																	<String>es-CR</String>
+																	<String>es-DO</String>
+																	<String>es-EC</String>
+																	<String>es-ES</String>
+																	<String>es-GT</String>
+																	<String>es-HN</String>
+																	<String>es-MX</String>
+																	<String>es-NI</String>
+																	<String>es-PA</String>
+																	<String>es-PE</String>
+																	<String>es-PR</String>
+																	<String>es-PY</String>
+																	<String>es-SV</String>
+																	<String>es-UY</String>
+																	<String>es-VE</String>
+																	<String>et-EE</String>
+																	<String>eu-ES</String>
+																	<String>fa-IR</String>
+																	<String>fi-FI</String>
+																	<String>fo-FO</String>
+																	<String>fr-BE</String>
+																	<String>fr-CA</String>
+																	<String>fr-CH</String>
+																	<String>fr-FR</String>
+																	<String>fr-LU</String>
+																	<String>fr-MC</String>
+																	<String>gl-ES</String>
+																	<String>gu-IN</String>
+																	<String>he-IL</String>
+																	<String>hi-IN</String>
+																	<String>hr-HR</String>
+																	<String>hu-HU</String>
+																	<String>hy-AM</String>
+																	<String>id-ID</String>
+																	<String>is-IS</String>
+																	<String>it-CH</String>
+																	<String>it-IT</String>
+																	<String>ja-JP</String>
+																	<String>ka-GE</String>
+																	<String>kk-KZ</String>
+																	<String>kn-IN</String>
+																	<String>ko-KR</String>
+																	<String>kok-IN</String>
+																	<String>ky-KZ</String>
+																	<String>Lt-az-AZ</String>
+																	<String>lt-LT</String>
+																	<String>Lt-sr-SP</String>
+																	<String>Lt-uz-UZ</String>
+																	<String>lv-LV</String>
+																	<String>mk-MK</String>
+																	<String>mn-MN</String>
+																	<String>mr-IN</String>
+																	<String>ms-BN</String>
+																	<String>ms-MY</String>
+																	<String>nb-NO</String>
+																	<String>nl-BE</String>
+																	<String>nl-NL</String>
+																	<String>nn-NO</String>
+																	<String>pa-IN</String>
+																	<String>pl-PL</String>
+																	<String>pt-BR</String>
+																	<String>pt-PT</String>
+																	<String>ro-RO</String>
+																	<String>ru-RU</String>
+																	<String>sa-IN</String>
+																	<String>sk-SK</String>
+																	<String>sl-SI</String>
+																	<String>sq-AL</String>
+																	<String>sv-FI</String>
+																	<String>sv-SE</String>
+																	<String>sw-KE</String>
+																	<String>syr-SY</String>
+																	<String>ta-IN</String>
+																	<String>te-IN</String>
+																	<String>th-TH</String>
+																	<String>tr-TR</String>
+																	<String>tt-RU</String>
+																	<String>uk-UA</String>
+																	<String>ur-PK</String>
+																	<String>vi-VN</String>
+																	<String>zh-CHS</String>
+																	<String>zh-CHT</String>
+																	<String>zh-CN</String>
+																	<String>zh-HK</String>
+																	<String>zh-MO</String>
+																	<String>zh-SG</String>
+																	<String>zh-TW</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.target.language</String>
 															</field>
 															<field name="description">
-																<String></String>
+																<null/>
 															</field>
 															<field name="value">
 																<String>${ask('TBX-Basic - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -4207,88 +4814,293 @@ By default, the output is written to dta.dir/out.</String>
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>af-ZA</String>
+																	<String>ar-AE</String>
+																	<String>ar-BH</String>
+																	<String>ar-DZ</String>
+																	<String>ar-EG</String>
+																	<String>ar-IQ</String>
+																	<String>ar-JO</String>
+																	<String>ar-KW</String>
+																	<String>ar-LB</String>
+																	<String>ar-LY</String>
+																	<String>ar-MA</String>
+																	<String>ar-OM</String>
+																	<String>ar-QA</String>
+																	<String>ar-SA</String>
+																	<String>ar-SY</String>
+																	<String>ar-TN</String>
+																	<String>ar-YE</String>
+																	<String>be-BY</String>
+																	<String>bg-BG</String>
+																	<String>ca-ES</String>
+																	<String>cs-CZ</String>
+																	<String>Cy-az-AZ</String>
+																	<String>Cy-sr-SP</String>
+																	<String>Cy-uz-UZ</String>
+																	<String>da-DK</String>
+																	<String>de-AT</String>
+																	<String>de-CH</String>
+																	<String>de-DE</String>
+																	<String>de-LI</String>
+																	<String>de-LU</String>
+																	<String>div-MV</String>
+																	<String>el-GR</String>
+																	<String>en-AU</String>
+																	<String>en-BZ</String>
+																	<String>en-CA</String>
+																	<String>en-CB</String>
+																	<String>en-GB</String>
+																	<String>en-IE</String>
+																	<String>en-JM</String>
+																	<String>en-NZ</String>
+																	<String>en-PH</String>
+																	<String>en-TT</String>
+																	<String>en-US</String>
+																	<String>en-ZA</String>
+																	<String>en-ZW</String>
+																	<String>es-AR</String>
+																	<String>es-BO</String>
+																	<String>es-CL</String>
+																	<String>es-CO</String>
+																	<String>es-CR</String>
+																	<String>es-DO</String>
+																	<String>es-EC</String>
+																	<String>es-ES</String>
+																	<String>es-GT</String>
+																	<String>es-HN</String>
+																	<String>es-MX</String>
+																	<String>es-NI</String>
+																	<String>es-PA</String>
+																	<String>es-PE</String>
+																	<String>es-PR</String>
+																	<String>es-PY</String>
+																	<String>es-SV</String>
+																	<String>es-UY</String>
+																	<String>es-VE</String>
+																	<String>et-EE</String>
+																	<String>eu-ES</String>
+																	<String>fa-IR</String>
+																	<String>fi-FI</String>
+																	<String>fo-FO</String>
+																	<String>fr-BE</String>
+																	<String>fr-CA</String>
+																	<String>fr-CH</String>
+																	<String>fr-FR</String>
+																	<String>fr-LU</String>
+																	<String>fr-MC</String>
+																	<String>gl-ES</String>
+																	<String>gu-IN</String>
+																	<String>he-IL</String>
+																	<String>hi-IN</String>
+																	<String>hr-HR</String>
+																	<String>hu-HU</String>
+																	<String>hy-AM</String>
+																	<String>id-ID</String>
+																	<String>is-IS</String>
+																	<String>it-CH</String>
+																	<String>it-IT</String>
+																	<String>ja-JP</String>
+																	<String>ka-GE</String>
+																	<String>kk-KZ</String>
+																	<String>kn-IN</String>
+																	<String>ko-KR</String>
+																	<String>kok-IN</String>
+																	<String>ky-KZ</String>
+																	<String>Lt-az-AZ</String>
+																	<String>lt-LT</String>
+																	<String>Lt-sr-SP</String>
+																	<String>Lt-uz-UZ</String>
+																	<String>lv-LV</String>
+																	<String>mk-MK</String>
+																	<String>mn-MN</String>
+																	<String>mr-IN</String>
+																	<String>ms-BN</String>
+																	<String>ms-MY</String>
+																	<String>nb-NO</String>
+																	<String>nl-BE</String>
+																	<String>nl-NL</String>
+																	<String>nn-NO</String>
+																	<String>pa-IN</String>
+																	<String>pl-PL</String>
+																	<String>pt-BR</String>
+																	<String>pt-PT</String>
+																	<String>ro-RO</String>
+																	<String>ru-RU</String>
+																	<String>sa-IN</String>
+																	<String>sk-SK</String>
+																	<String>sl-SI</String>
+																	<String>sq-AL</String>
+																	<String>sv-FI</String>
+																	<String>sv-SE</String>
+																	<String>sw-KE</String>
+																	<String>syr-SY</String>
+																	<String>ta-IN</String>
+																	<String>te-IN</String>
+																	<String>th-TH</String>
+																	<String>tr-TR</String>
+																	<String>tt-RU</String>
+																	<String>uk-UA</String>
+																	<String>ur-PK</String>
+																	<String>vi-VN</String>
+																	<String>zh-CHS</String>
+																	<String>zh-CHT</String>
+																	<String>zh-CN</String>
+																	<String>zh-HK</String>
+																	<String>zh-MO</String>
+																	<String>zh-SG</String>
+																	<String>zh-TW</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${configured.ditaot.dir}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>output.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/out/tbx-basic</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>temp.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/temp/tbx-basic</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -4303,16 +5115,16 @@ By default, the output is written to dta.dir/out.</String>
 													<String></String>
 												</field>
 												<field name="workingDir">
-													<String>${cfd}</String>
+													<null/>
 												</field>
 												<field name="showConsoleAlways">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="advancedOptionsMap">
 													<null/>
 												</field>
 												<field name="name">
-													<String>TBX-Basic ANT</String>
+													<String>TBX-Min</String>
 												</field>
 												<field name="baseURL">
 													<null/>
@@ -4342,13 +5154,13 @@ By default, the output is written to dta.dir/out.</String>
 													<Boolean>false</Boolean>
 												</field>
 												<field name="type">
-													<String>ANT</String>
+													<String>DITAMAP</String>
 												</field>
 												<field name="saveAs">
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
@@ -4357,7 +5169,7 @@ By default, the output is written to dta.dir/out.</String>
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
 													<String></String>
@@ -4387,18 +5199,12 @@ By default, the output is written to dta.dir/out.</String>
 													<String-array/>
 												</field>
 												<field name="xslTransformer">
-													<String>ANT</String>
+													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array>
-														<String>${configured.ditaot.dir}/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
-														<String>${oxygenHome}/lib/*.jar</String>
-													</String-array>
+													<String-array/>
 												</field>
-											</antScenario>
+											</ditaScenario>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -4415,183 +5221,665 @@ By default, the output is written to dta.dir/out.</String>
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
-											<antScenario>
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/tbx-basic</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/tbx-basic</String>
+												</field>
+												<field name="transtype">
+													<String>tbx-basic</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
 												<field name="additionalAntArgs">
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>dita2tbx-min</String>
+													<String></String>
 												</field>
 												<field name="buildFilePath">
-													<String>${configured.ditaot.dir}/build.xml</String>
+													<String></String>
 												</field>
 												<field name="ditaParams">
 													<list>
-														<antParameter>
-															<field name="name">
-																<String>args.grammar.cache</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>no</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>args.input</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cf}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.source.language</String>
 															</field>
 															<field name="description">
-																<String></String>
+																<null/>
 															</field>
 															<field name="value">
-																<String>${ask('TBX-Min - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
+																<String>${ask('TBX-Basic - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>af-ZA</String>
+																	<String>ar-AE</String>
+																	<String>ar-BH</String>
+																	<String>ar-DZ</String>
+																	<String>ar-EG</String>
+																	<String>ar-IQ</String>
+																	<String>ar-JO</String>
+																	<String>ar-KW</String>
+																	<String>ar-LB</String>
+																	<String>ar-LY</String>
+																	<String>ar-MA</String>
+																	<String>ar-OM</String>
+																	<String>ar-QA</String>
+																	<String>ar-SA</String>
+																	<String>ar-SY</String>
+																	<String>ar-TN</String>
+																	<String>ar-YE</String>
+																	<String>be-BY</String>
+																	<String>bg-BG</String>
+																	<String>ca-ES</String>
+																	<String>cs-CZ</String>
+																	<String>Cy-az-AZ</String>
+																	<String>Cy-sr-SP</String>
+																	<String>Cy-uz-UZ</String>
+																	<String>da-DK</String>
+																	<String>de-AT</String>
+																	<String>de-CH</String>
+																	<String>de-DE</String>
+																	<String>de-LI</String>
+																	<String>de-LU</String>
+																	<String>div-MV</String>
+																	<String>el-GR</String>
+																	<String>en-AU</String>
+																	<String>en-BZ</String>
+																	<String>en-CA</String>
+																	<String>en-CB</String>
+																	<String>en-GB</String>
+																	<String>en-IE</String>
+																	<String>en-JM</String>
+																	<String>en-NZ</String>
+																	<String>en-PH</String>
+																	<String>en-TT</String>
+																	<String>en-US</String>
+																	<String>en-ZA</String>
+																	<String>en-ZW</String>
+																	<String>es-AR</String>
+																	<String>es-BO</String>
+																	<String>es-CL</String>
+																	<String>es-CO</String>
+																	<String>es-CR</String>
+																	<String>es-DO</String>
+																	<String>es-EC</String>
+																	<String>es-ES</String>
+																	<String>es-GT</String>
+																	<String>es-HN</String>
+																	<String>es-MX</String>
+																	<String>es-NI</String>
+																	<String>es-PA</String>
+																	<String>es-PE</String>
+																	<String>es-PR</String>
+																	<String>es-PY</String>
+																	<String>es-SV</String>
+																	<String>es-UY</String>
+																	<String>es-VE</String>
+																	<String>et-EE</String>
+																	<String>eu-ES</String>
+																	<String>fa-IR</String>
+																	<String>fi-FI</String>
+																	<String>fo-FO</String>
+																	<String>fr-BE</String>
+																	<String>fr-CA</String>
+																	<String>fr-CH</String>
+																	<String>fr-FR</String>
+																	<String>fr-LU</String>
+																	<String>fr-MC</String>
+																	<String>gl-ES</String>
+																	<String>gu-IN</String>
+																	<String>he-IL</String>
+																	<String>hi-IN</String>
+																	<String>hr-HR</String>
+																	<String>hu-HU</String>
+																	<String>hy-AM</String>
+																	<String>id-ID</String>
+																	<String>is-IS</String>
+																	<String>it-CH</String>
+																	<String>it-IT</String>
+																	<String>ja-JP</String>
+																	<String>ka-GE</String>
+																	<String>kk-KZ</String>
+																	<String>kn-IN</String>
+																	<String>ko-KR</String>
+																	<String>kok-IN</String>
+																	<String>ky-KZ</String>
+																	<String>Lt-az-AZ</String>
+																	<String>lt-LT</String>
+																	<String>Lt-sr-SP</String>
+																	<String>Lt-uz-UZ</String>
+																	<String>lv-LV</String>
+																	<String>mk-MK</String>
+																	<String>mn-MN</String>
+																	<String>mr-IN</String>
+																	<String>ms-BN</String>
+																	<String>ms-MY</String>
+																	<String>nb-NO</String>
+																	<String>nl-BE</String>
+																	<String>nl-NL</String>
+																	<String>nn-NO</String>
+																	<String>pa-IN</String>
+																	<String>pl-PL</String>
+																	<String>pt-BR</String>
+																	<String>pt-PT</String>
+																	<String>ro-RO</String>
+																	<String>ru-RU</String>
+																	<String>sa-IN</String>
+																	<String>sk-SK</String>
+																	<String>sl-SI</String>
+																	<String>sq-AL</String>
+																	<String>sv-FI</String>
+																	<String>sv-SE</String>
+																	<String>sw-KE</String>
+																	<String>syr-SY</String>
+																	<String>ta-IN</String>
+																	<String>te-IN</String>
+																	<String>th-TH</String>
+																	<String>tr-TR</String>
+																	<String>tt-RU</String>
+																	<String>uk-UA</String>
+																	<String>ur-PK</String>
+																	<String>vi-VN</String>
+																	<String>zh-CHS</String>
+																	<String>zh-CHT</String>
+																	<String>zh-CN</String>
+																	<String>zh-HK</String>
+																	<String>zh-MO</String>
+																	<String>zh-SG</String>
+																	<String>zh-TW</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
+														</ditaParameter>
+														<ditaParameter>
 															<field name="name">
 																<String>args.target.language</String>
 															</field>
 															<field name="description">
-																<String></String>
+																<null/>
 															</field>
 															<field name="value">
-																<String>${ask('TBX-Min - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
+																<String>${ask('TBX-Basic - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-GB':'English - United Kingdom';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>5</Integer>
+																<Integer>0</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>af-ZA</String>
+																	<String>ar-AE</String>
+																	<String>ar-BH</String>
+																	<String>ar-DZ</String>
+																	<String>ar-EG</String>
+																	<String>ar-IQ</String>
+																	<String>ar-JO</String>
+																	<String>ar-KW</String>
+																	<String>ar-LB</String>
+																	<String>ar-LY</String>
+																	<String>ar-MA</String>
+																	<String>ar-OM</String>
+																	<String>ar-QA</String>
+																	<String>ar-SA</String>
+																	<String>ar-SY</String>
+																	<String>ar-TN</String>
+																	<String>ar-YE</String>
+																	<String>be-BY</String>
+																	<String>bg-BG</String>
+																	<String>ca-ES</String>
+																	<String>cs-CZ</String>
+																	<String>Cy-az-AZ</String>
+																	<String>Cy-sr-SP</String>
+																	<String>Cy-uz-UZ</String>
+																	<String>da-DK</String>
+																	<String>de-AT</String>
+																	<String>de-CH</String>
+																	<String>de-DE</String>
+																	<String>de-LI</String>
+																	<String>de-LU</String>
+																	<String>div-MV</String>
+																	<String>el-GR</String>
+																	<String>en-AU</String>
+																	<String>en-BZ</String>
+																	<String>en-CA</String>
+																	<String>en-CB</String>
+																	<String>en-GB</String>
+																	<String>en-IE</String>
+																	<String>en-JM</String>
+																	<String>en-NZ</String>
+																	<String>en-PH</String>
+																	<String>en-TT</String>
+																	<String>en-US</String>
+																	<String>en-ZA</String>
+																	<String>en-ZW</String>
+																	<String>es-AR</String>
+																	<String>es-BO</String>
+																	<String>es-CL</String>
+																	<String>es-CO</String>
+																	<String>es-CR</String>
+																	<String>es-DO</String>
+																	<String>es-EC</String>
+																	<String>es-ES</String>
+																	<String>es-GT</String>
+																	<String>es-HN</String>
+																	<String>es-MX</String>
+																	<String>es-NI</String>
+																	<String>es-PA</String>
+																	<String>es-PE</String>
+																	<String>es-PR</String>
+																	<String>es-PY</String>
+																	<String>es-SV</String>
+																	<String>es-UY</String>
+																	<String>es-VE</String>
+																	<String>et-EE</String>
+																	<String>eu-ES</String>
+																	<String>fa-IR</String>
+																	<String>fi-FI</String>
+																	<String>fo-FO</String>
+																	<String>fr-BE</String>
+																	<String>fr-CA</String>
+																	<String>fr-CH</String>
+																	<String>fr-FR</String>
+																	<String>fr-LU</String>
+																	<String>fr-MC</String>
+																	<String>gl-ES</String>
+																	<String>gu-IN</String>
+																	<String>he-IL</String>
+																	<String>hi-IN</String>
+																	<String>hr-HR</String>
+																	<String>hu-HU</String>
+																	<String>hy-AM</String>
+																	<String>id-ID</String>
+																	<String>is-IS</String>
+																	<String>it-CH</String>
+																	<String>it-IT</String>
+																	<String>ja-JP</String>
+																	<String>ka-GE</String>
+																	<String>kk-KZ</String>
+																	<String>kn-IN</String>
+																	<String>ko-KR</String>
+																	<String>kok-IN</String>
+																	<String>ky-KZ</String>
+																	<String>Lt-az-AZ</String>
+																	<String>lt-LT</String>
+																	<String>Lt-sr-SP</String>
+																	<String>Lt-uz-UZ</String>
+																	<String>lv-LV</String>
+																	<String>mk-MK</String>
+																	<String>mn-MN</String>
+																	<String>mr-IN</String>
+																	<String>ms-BN</String>
+																	<String>ms-MY</String>
+																	<String>nb-NO</String>
+																	<String>nl-BE</String>
+																	<String>nl-NL</String>
+																	<String>nn-NO</String>
+																	<String>pa-IN</String>
+																	<String>pl-PL</String>
+																	<String>pt-BR</String>
+																	<String>pt-PT</String>
+																	<String>ro-RO</String>
+																	<String>ru-RU</String>
+																	<String>sa-IN</String>
+																	<String>sk-SK</String>
+																	<String>sl-SI</String>
+																	<String>sq-AL</String>
+																	<String>sv-FI</String>
+																	<String>sv-SE</String>
+																	<String>sw-KE</String>
+																	<String>syr-SY</String>
+																	<String>ta-IN</String>
+																	<String>te-IN</String>
+																	<String>th-TH</String>
+																	<String>tr-TR</String>
+																	<String>tt-RU</String>
+																	<String>uk-UA</String>
+																	<String>ur-PK</String>
+																	<String>vi-VN</String>
+																	<String>zh-CHS</String>
+																	<String>zh-CHT</String>
+																	<String>zh-CN</String>
+																	<String>zh-HK</String>
+																	<String>zh-MO</String>
+																	<String>zh-SG</String>
+																	<String>zh-TW</String>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>dita.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${configured.ditaot.dir}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>output.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/out/tbx-min</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>temp.dir</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${cfd}/temp/tbx-min</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
+														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -4606,16 +5894,16 @@ By default, the output is written to dta.dir/out.</String>
 													<String></String>
 												</field>
 												<field name="workingDir">
-													<String>${cfd}</String>
+													<null/>
 												</field>
 												<field name="showConsoleAlways">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="advancedOptionsMap">
 													<null/>
 												</field>
 												<field name="name">
-													<String>TBX-Min ANT</String>
+													<String>TBX-Basic</String>
 												</field>
 												<field name="baseURL">
 													<null/>
@@ -4645,13 +5933,13 @@ By default, the output is written to dta.dir/out.</String>
 													<Boolean>false</Boolean>
 												</field>
 												<field name="type">
-													<String>ANT</String>
+													<String>DITAMAP</String>
 												</field>
 												<field name="saveAs">
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
@@ -4660,7 +5948,7 @@ By default, the output is written to dta.dir/out.</String>
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
 													<String></String>
@@ -4690,19 +5978,12 @@ By default, the output is written to dta.dir/out.</String>
 													<String-array/>
 												</field>
 												<field name="xslTransformer">
-													<String>ANT</String>
+													<String>DITA-OT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array>
-														<String>${configured.ditaot.dir}/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/org.dita-ng.library/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.dita-ot.plugin.webhelp/lib/*.jar</String>
-														<String>${configured.ditaot.dir}/plugins/com.oxygenxml.highlight/lib/*.jar</String>
-														<String>${oxygenHome}/lib/*.jar</String>
-													</String-array>
+													<String-array/>
 												</field>
-											</antScenario>
+											</ditaScenario>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
