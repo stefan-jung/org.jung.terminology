@@ -543,13 +543,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.element</String>
+													<String>doctales.element.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.element)}</String>
+													<String>${i18n(doctales.element.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.element_description)}</String>
+													<String>${i18n(doctales.element.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -675,13 +675,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.fullForm</String>
+													<String>doctales.fullForm.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.fullForm)}</String>
+													<String>${i18n(doctales.fullForm.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.fullForm_description)}</String>
+													<String>${i18n(doctales.fullForm.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -799,13 +799,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.abbreviation</String>
+													<String>doctales.abbreviation.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.abbreviation)}</String>
+													<String>${i18n(doctales.abbreviation.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.abbreviation_description)}</String>
+													<String>${i18n(doctales.abbreviation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -923,13 +923,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.acronym</String>
+													<String>doctales.acronym.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.acronym)}</String>
+													<String>${i18n(doctales.acronym.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.acronym_description)}</String>
+													<String>${i18n(doctales.acronym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1047,13 +1047,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.verb</String>
+													<String>doctales.verb.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.verb)}</String>
+													<String>${i18n(doctales.verb.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.verb_description)}</String>
+													<String>${i18n(doctales.verb.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1171,13 +1171,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.fullForm</String>
+													<String>doctales.fullForm.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.fullForm)}</String>
+													<String>${i18n(doctales.fullForm.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.fullForm_description)}</String>
+													<String>${i18n(doctales.fullForm.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -1233,13 +1233,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.abbreviation</String>
+													<String>doctales.abbreviation.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.abbreviation)}</String>
+													<String>${i18n(doctales.abbreviation.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.abbreviation_description)}</String>
+													<String>${i18n(doctales.abbreviation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -1295,13 +1295,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.acronym</String>
+													<String>doctales.acronym.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.acronym)}</String>
+													<String>${i18n(doctales.acronym.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.acronym_description)}</String>
+													<String>${i18n(doctales.acronym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -1357,13 +1357,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.verb</String>
+													<String>doctales.verb.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.verb)}</String>
+													<String>${i18n(doctales.verb.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.verb_description)}</String>
+													<String>${i18n(doctales.verb.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -1419,13 +1419,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.attribute.number</String>
+													<String>doctales.attribute.number.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.attribute.number)}</String>
+													<String>${i18n(doctales.attribute.number.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.attribute.number_description)}</String>
+													<String>${i18n(doctales.attribute.number.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1493,13 +1493,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.attribute.case</String>
+													<String>doctales.attribute.case.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.attribute.case)}</String>
+													<String>${i18n(doctales.attribute.case.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.attribute.case_description)}</String>
+													<String>${i18n(doctales.attribute.case.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1629,13 +1629,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.annotation</String>
+													<String>doctales.annotation.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.annotation)}</String>
+													<String>${i18n(doctales.annotation.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.annotation_description)}</String>
+													<String>${i18n(doctales.annotation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1723,13 +1723,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.termContext</String>
+													<String>doctales.termContext.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.termContext)}</String>
+													<String>${i18n(doctales.termContext.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.termContext_description)}</String>
+													<String>${i18n(doctales.termContext.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1796,13 +1796,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.termSource</String>
+													<String>doctales.termSource.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.termSource)}</String>
+													<String>${i18n(doctales.termSource.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.termSource_description)}</String>
+													<String>${i18n(doctales.termSource.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1868,13 +1868,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.antonyms</String>
+													<String>doctales.antonyms.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.antonyms)}</String>
+													<String>${i18n(doctales.antonyms.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.antonyms_description)}</String>
+													<String>${i18n(doctales.antonyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -1990,13 +1990,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.partsOf</String>
+													<String>doctales.partsOf.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.partsOf)}</String>
+													<String>${i18n(doctales.partsOf.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.partsOf_description)}</String>
+													<String>${i18n(doctales.partsOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2230,13 +2230,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.hyponyms</String>
+													<String>doctales.hyponyms.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.hyponyms)}</String>
+													<String>${i18n(doctales.hyponyms.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.hyponyms_description)}</String>
+													<String>${i18n(doctales.hyponyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2350,13 +2350,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.relatedTerms</String>
+													<String>doctales.relatedTerms.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.relatedTerms)}</String>
+													<String>${i18n(doctales.relatedTerms.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.relatedTerms_description)}</String>
+													<String>${i18n(doctales.relatedTerms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2470,13 +2470,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.definition</String>
+													<String>doctales.definition.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.definition)}</String>
+													<String>${i18n(doctales.definition.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.definition_description)}</String>
+													<String>${i18n(doctales.definition.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2546,13 +2546,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.definition</String>
+													<String>doctales.definition.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.definition)}</String>
+													<String>${i18n(doctales.definition.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.definition_description)}</String>
+													<String>${i18n(doctales.definition.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -2608,13 +2608,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.equation-figure</String>
+													<String>doctales.equation-figure.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.equation-figure)}</String>
+													<String>${i18n(doctales.equation-figure.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.equation-figure_description)}</String>
+													<String>${i18n(doctales.equation-figure.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2678,13 +2678,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.note</String>
+													<String>doctales.note.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.note)}</String>
+													<String>${i18n(doctales.note.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.note_description)}</String>
+													<String>${i18n(doctales.note.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2748,13 +2748,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.partOfSpeech</String>
+													<String>doctales.partOfSpeech.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.partOfSpeech)}</String>
+													<String>${i18n(doctales.partOfSpeech.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.partOfSpeech_description)}</String>
+													<String>${i18n(doctales.partOfSpeech.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2818,13 +2818,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.fig</String>
+													<String>doctales.fig.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.fig)}</String>
+													<String>${i18n(doctales.fig.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.fig_description)}</String>
+													<String>${i18n(doctales.fig.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2893,13 +2893,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.domains</String>
+													<String>doctales.domains.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.domains)}</String>
+													<String>${i18n(doctales.domains.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.domains_description)}</String>
+													<String>${i18n(doctales.domains.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -2965,13 +2965,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.definitionSource</String>
+													<String>doctales.definitionSource.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.definitionSource)}</String>
+													<String>${i18n(doctales.definitionSource.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.definitionSource_description)}</String>
+													<String>${i18n(doctales.definitionSource.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -3390,13 +3390,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.agreedWith</String>
+													<String>doctales.agreedWith.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.agreedWith)}</String>
+													<String>${i18n(doctales.agreedWith.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.agreedWith_description)}</String>
+													<String>${i18n(doctales.agreedWith.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -3462,13 +3462,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.relations</String>
+													<String>doctales.relations.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.relations)}</String>
+													<String>${i18n(doctales.relations.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.relations_description)}</String>
+													<String>${i18n(doctales.relations.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -3532,13 +3532,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.definitionSource</String>
+													<String>doctales.definitionSource.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.definitionSource)}</String>
+													<String>${i18n(doctales.definitionSource.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.definitionSource_description)}</String>
+													<String>${i18n(doctales.definitionSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3594,13 +3594,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.annotation</String>
+													<String>doctales.annotation.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.annotation)}</String>
+													<String>${i18n(doctales.annotation.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.annotation_description)}</String>
+													<String>${i18n(doctales.annotation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3656,13 +3656,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.termContext</String>
+													<String>doctales.termContext.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.termContext)}</String>
+													<String>${i18n(doctales.termContext.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.termContext_description)}</String>
+													<String>${i18n(doctales.termContext.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3718,13 +3718,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.termSource</String>
+													<String>doctales.termSource.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.termSource)}</String>
+													<String>${i18n(doctales.termSource.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.termSource_description)}</String>
+													<String>${i18n(doctales.termSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3780,13 +3780,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.relations</String>
+													<String>doctales.relations.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.relations)}</String>
+													<String>${i18n(doctales.relations.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.relations_description)}</String>
+													<String>${i18n(doctales.relations.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3858,13 +3858,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.antonyms</String>
+													<String>doctales.antonyms.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.antonyms)}</String>
+													<String>${i18n(doctales.antonyms.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.antonyms_description)}</String>
+													<String>${i18n(doctales.antonyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3920,13 +3920,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.partsOf</String>
+													<String>doctales.partsOf.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.partsOf)}</String>
+													<String>${i18n(doctales.partsOf.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.partsOf_description)}</String>
+													<String>${i18n(doctales.partsOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4044,13 +4044,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.hyponyms</String>
+													<String>doctales.hyponyms.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.hyponyms)}</String>
+													<String>${i18n(doctales.hyponyms.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.hyponyms_description)}</String>
+													<String>${i18n(doctales.hyponyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4106,13 +4106,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.relatedTerms</String>
+													<String>doctales.relatedTerms.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.relatedTerms)}</String>
+													<String>${i18n(doctales.relatedTerms.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.relatedTerms_description)}</String>
+													<String>${i18n(doctales.relatedTerms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4168,13 +4168,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.antonym</String>
+													<String>doctales.antonym.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.antonym)}</String>
+													<String>${i18n(doctales.antonym.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.antonym_description)}</String>
+													<String>${i18n(doctales.antonym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -4225,13 +4225,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.partOf</String>
+													<String>doctales.partOf.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.partOf)}</String>
+													<String>${i18n(doctales.partOf.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.partOf_description)}</String>
+													<String>${i18n(doctales.partOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -4339,13 +4339,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.hyponym</String>
+													<String>doctales.hyponym.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.hyponym)}</String>
+													<String>${i18n(doctales.hyponym.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.hyponym_description)}</String>
+													<String>${i18n(doctales.hyponym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -4396,13 +4396,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.relatedTerm</String>
+													<String>doctales.relatedTerm.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.relatedTerm)}</String>
+													<String>${i18n(doctales.relatedTerm.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.relatedTerm_description)}</String>
+													<String>${i18n(doctales.relatedTerm.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -4515,13 +4515,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.termCommitteeMember</String>
+													<String>doctales.termCommitteeMember.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.termCommitteeMember)}</String>
+													<String>${i18n(doctales.termCommitteeMember.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.termCommitteeMember_description)}</String>
+													<String>${i18n(doctales.termCommitteeMember.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -4609,13 +4609,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.agreedWith</String>
+													<String>doctales.agreedWith.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.agreedWith)}</String>
+													<String>${i18n(doctales.agreedWith.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.agreedWith_description)}</String>
+													<String>${i18n(doctales.agreedWith.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4671,13 +4671,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.termCommitteeMember</String>
+													<String>doctales.termCommitteeMember.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.termCommitteeMember)}</String>
+													<String>${i18n(doctales.termCommitteeMember.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.termCommitteeMember_description)}</String>
+													<String>${i18n(doctales.termCommitteeMember.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4733,13 +4733,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.domain</String>
+													<String>doctales.domain.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.domain)}</String>
+													<String>${i18n(doctales.domain.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.domain_description)}</String>
+													<String>${i18n(doctales.domain.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -4803,13 +4803,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.domains</String>
+													<String>doctales.domains.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.domains)}</String>
+													<String>${i18n(doctales.domains.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.domains_description)}</String>
+													<String>${i18n(doctales.domains.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4927,13 +4927,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.partOfSpeech</String>
+													<String>doctales.partOfSpeech.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.partOfSpeech)}</String>
+													<String>${i18n(doctales.partOfSpeech.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.partOfSpeech_description)}</String>
+													<String>${i18n(doctales.partOfSpeech.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -5051,13 +5051,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.fig</String>
+													<String>doctales.fig.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.fig)}</String>
+													<String>${i18n(doctales.fig.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.fig_description)}</String>
+													<String>${i18n(doctales.fig.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -5113,13 +5113,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.note</String>
+													<String>doctales.note.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.note)}</String>
+													<String>${i18n(doctales.note.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.note_description)}</String>
+													<String>${i18n(doctales.note.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -5232,13 +5232,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.imageReference</String>
+													<String>doctales.imageReference.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.imageReference)}</String>
+													<String>${i18n(doctales.imageReference.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.imageReference_description)}</String>
+													<String>${i18n(doctales.imageReference.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String></String>
@@ -5289,13 +5289,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.image</String>
+													<String>doctales.image.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.image)}</String>
+													<String>${i18n(doctales.image.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.image_description)}</String>
+													<String>${i18n(doctales.image.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -5351,13 +5351,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.rename.toFullForm</String>
+													<String>doctales.fullForm.renameTo</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.rename.toFullForm)}</String>
+													<String>${i18n(doctales.fullForm.renameTo)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.rename.toFullForm_description)}</String>
+													<String>${i18n(doctales.fullForm.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5413,13 +5413,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.rename.toVerb</String>
+													<String>doctales.verb.renameTo</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.rename.toVerb)}</String>
+													<String>${i18n(doctales.verb.renameTo)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.rename.toVerb_description)}</String>
+													<String>${i18n(doctales.verb.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5475,13 +5475,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.rename.toAcronym</String>
+													<String>doctales.acronym.renameTo</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.rename.toAcronym)}</String>
+													<String>${i18n(doctales.acronym.renameTo)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.rename.toAcronym_description)}</String>
+													<String>${i18n(doctales.acronym.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5537,13 +5537,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.rename.toAbbreviation</String>
+													<String>doctales.abbreviation.renameTo</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.rename.toAbbreviation)}</String>
+													<String>${i18n(doctales.abbreviation.renameTo)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.rename.toAbbreviation)}</String>
+													<String>${i18n(doctales.abbreviation.renameTo)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5599,13 +5599,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.instancesOf</String>
+													<String>doctales.instancesOf.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.instancesOf)}</String>
+													<String>${i18n(doctales.instancesOf.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.instancesOf_description)}</String>
+													<String>${i18n(doctales.instancesOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5719,13 +5719,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.instanceOf</String>
+													<String>doctales.instanceOf.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.instanceOf)}</String>
+													<String>${i18n(doctales.instanceOf.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.instanceOf_description)}</String>
+													<String>${i18n(doctales.instanceOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5776,13 +5776,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.instancesOf</String>
+													<String>doctales.instancesOf.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.instancesOf)}</String>
+													<String>${i18n(doctales.instancesOf.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.instancesOf_description)}</String>
+													<String>${i18n(doctales.instancesOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -5838,13 +5838,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.termRelation</String>
+													<String>doctales.termRelation.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.termRelation)}</String>
+													<String>${i18n(doctales.termRelation.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.termRelation_description)}</String>
+													<String>${i18n(doctales.termRelation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/link_20.png</String>
@@ -5895,13 +5895,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.open.termRelation</String>
+													<String>doctales.termRelation.open</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.open.termRelation)}</String>
+													<String>${i18n(doctales.termRelation.open)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.open.termRelation_description)}</String>
+													<String>${i18n(doctales.termRelation.open_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/link_20.png</String>
@@ -6449,7 +6449,7 @@
 													<menuEntry-array>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.acronym</String>
+																<String>doctales.acronym.add</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
@@ -6488,22 +6488,22 @@
 													<menuEntry-array>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.fullForm</String>
+																<String>doctales.fullForm.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.abbreviation</String>
+																<String>doctales.abbreviation.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.acronym</String>
+																<String>doctales.acronym.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.verb</String>
+																<String>doctales.verb.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
@@ -6513,32 +6513,32 @@
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.attribute.case</String>
+																<String>doctales.attribute.case.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.attribute.number</String>
+																<String>doctales.attribute.number.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.delete.fullForm</String>
+																<String>doctales.fullForm.delete</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.delete.abbreviation</String>
+																<String>doctales.abbreviation.delete</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.delete.acronym</String>
+																<String>doctales.acronym.delete</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.delete.verb</String>
+																<String>doctales.verb.delete</String>
 															</field>
 														</menuItem>
 														<menuItem>
