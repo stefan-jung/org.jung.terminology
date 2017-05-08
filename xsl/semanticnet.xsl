@@ -250,7 +250,7 @@
                                 <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
                             </label>
                             <input id="search-input" class="form-control autocomplete" type="text"><!----></input>
-                            <button type="button" class="btn btn-default" onclick="termFocus($('.autocomplete').val());">
+                            <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus($('.autocomplete').val());">
                                 <xsl:value-of select="doctales:getString($language, 'Search')"/>
                             </button>
                         </div>

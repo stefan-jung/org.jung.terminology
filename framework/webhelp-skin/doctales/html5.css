@@ -1,5 +1,14 @@
 /* DITA Open Toolkit documentation style */
 
+/*********************************************
+ * DEFAULTS
+ *********************************************/
+html * {
+  font-size: 12pt !important;
+  color: #000 !important;
+  font-family: 'Nunito', sans-serif !important;
+}
+
 /****************************************
   Basic fonts and typography
 ****************************************/
@@ -261,4 +270,34 @@ div.definitionText:before {
     padding: 0;
     background-color: transparent;
 }
+
+/****************************************
+  SEMANTIC NET SEARCH
+****************************************/
+.ui-menu.ui-autocomplete {
+  background: #ffffff;
+  border: 1pt solid gray;
+  padding: 3pt;
+  width: 50% !important;
+}
+.ui-autocomplete-input {
+  width: 50%;
+  display: inline-block;
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+.ui-menu.ui-autocomplete .ui-menu-item {
+  list-style: none;
+  cursor: pointer;
+}
+#search-input {
+  width: 50%;
+}
+.semantic-search-button {
+  float: left;
+}
+#search > .form > .form-group {
+  height: 50px;
+}
+
 

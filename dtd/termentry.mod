@@ -242,9 +242,12 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
                                          preposition |
                                          conjunction |
                                          interjection |
-                                         article)
+                                         article |
+                                         other)
                                            'noun'
                                     ">
+
+
 
 <!-- ================================================================================ -->
 <!--                            DOMAINS ATTRIBUTE OVERRIDE                            -->

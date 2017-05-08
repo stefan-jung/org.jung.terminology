@@ -874,7 +874,10 @@
   <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
 
   <!-- Overriding XSLT -->
-  <feature extension="dita.xsl.xhtml" file="xsl/terminology2html.xsl"/>
+  <feature extension="dita.xsl.xhtml" file="xsl/xhtml.xsl"/>
+  
+  <!-- Overriding XSLT -->
+  <feature extension="dita.xsl.html5" file="xsl/html5.xsl"/>
   
   <!-- New strings -->
   <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>

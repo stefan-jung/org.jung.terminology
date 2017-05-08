@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="18.1" xml:space="preserve">
+<serialized version="19.0" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -31,7 +31,7 @@
 											<String>classpath</String>
 										</field>
 										<field name="index">
-											<Integer>5</Integer>
+											<Integer>6</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/i18n/</String>
@@ -48,7 +48,7 @@
 											<String>classpath</String>
 										</field>
 										<field name="index">
-											<Integer>6</Integer>
+											<Integer>7</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/resources/</String>
@@ -605,13 +605,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.termVariant</String>
+													<String>doctales.termVariant.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.termVariant)}</String>
+													<String>${i18n(doctales.termVariant.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.termVariant_description)}</String>
+													<String>${i18n(doctales.termVariant.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -725,7 +725,7 @@
 														</actionMode>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/termNotation ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -742,6 +742,32 @@
 																	<entry>
 																		<String>insertPosition</String>
 																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termBody ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;fullForm language="en-GB" usage="preferred">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/fullForm></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -823,7 +849,7 @@
 														</actionMode>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/termNotation ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -840,6 +866,32 @@
 																	<entry>
 																		<String>insertPosition</String>
 																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termBody ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;abbreviation language="en-GB" usage="preferred">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/abbreviation></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -945,6 +997,32 @@
 																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 															</field>
 														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termBody ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;acronym language="en-GB" usage="preferred">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/acronym></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
 													</actionMode-array>
 												</field>
 												<field name="enabledInReadOnlyContext">
@@ -1019,7 +1097,7 @@
 														</actionMode>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termNotation ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/termNotation ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -1036,6 +1114,32 @@
 																	<entry>
 																		<String>insertPosition</String>
 																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termBody ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;verb language="en-GB" usage="preferred">
+  &lt;termVariant>${caret}&lt;/termVariant>  
+&lt;/verb></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -1463,13 +1567,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.termVariant</String>
+													<String>doctales.termVariant.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.termVariant)}</String>
+													<String>${i18n(doctales.termVariant.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.termVariant_description)}</String>
+													<String>${i18n(doctales.termVariant.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -2934,13 +3038,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.sourceName</String>
+													<String>doctales.sourceName.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.sourceName)}</String>
+													<String>${i18n(doctales.sourceName.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.sourceName_description)}</String>
+													<String>${i18n(doctales.sourceName.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -3004,13 +3108,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.sourceReference</String>
+													<String>doctales.sourceReference.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.sourceReference)}</String>
+													<String>${i18n(doctales.sourceReference.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.sourceReference_description)}</String>
+													<String>${i18n(doctales.sourceReference.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -3034,7 +3138,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;sourceReference/></String>
+																		<String>&lt;sourceReference format="html" scope="external"/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -3058,7 +3162,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;sourceReference/></String>
+																		<String>&lt;sourceReference format="html" scope="external"/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -3098,13 +3202,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.sourceName</String>
+													<String>doctales.sourceName.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.sourceName)}</String>
+													<String>${i18n(doctales.sourceName.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.sourceName_description)}</String>
+													<String>${i18n(doctales.sourceName.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3192,13 +3296,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.sourceReference</String>
+													<String>doctales.sourceReference.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.sourceReference)}</String>
+													<String>${i18n(doctales.sourceReference.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.sourceReference_description)}</String>
+													<String>${i18n(doctales.sourceReference.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -3216,7 +3320,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/definitionSource ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/definitionSource ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -4435,7 +4539,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/agreedWith ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/agreedWith ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -4450,6 +4554,30 @@
 																	<entry>
 																		<String>insertPosition</String>
 																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/termCommitteeMember ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;termCommitteeMember>${caret}&lt;/termCommitteeMember></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -6261,7 +6389,7 @@
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.add.termVariant</String>
+																<String>doctales.termVariant.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
@@ -6596,23 +6724,6 @@
 										</field>
 										<field name="index">
 											<Integer>0</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
-											<Integer>8</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7463,6 +7574,7 @@
 							<String>${framework}/i18n/</String>
 							<String>${framework}/reuse/</String>
 							<String>${framework}/styleguide/</String>
+							<String>${framework}/refactoring/</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -7694,7 +7806,7 @@
 											<String>/images/Bold24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/Bold16.gif</String>
+											<String>/images/Bold16.png</String>
 										</field>
 										<field name="accessKey">
 											<String>B</String>
@@ -7786,7 +7898,7 @@
 											<String>/images/Underline24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/Underline16.gif</String>
+											<String>/images/Underline16.png</String>
 										</field>
 										<field name="accessKey">
 											<String>U</String>
@@ -10792,7 +10904,7 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 														<serializableOrderedMap>
 															<entry>
 																<String>URL pattern</String>
-																<String>https://docs.oasis-open.org/dita/v1.2/os/spec/langref/{Element_name}.html</String>
+																<String>https://www.oxygenxml.com/dita/1.3/specs/langRef/base/{Element_name}.html</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -11117,7 +11229,7 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 															<entry>
 																<String>resourcePath</String>
 																<String>let $i:=local-name(),  
-$loc:=doc('http://www.oxygenxml.com/dita/styleguide/contentCompletionElementsMap.xml')//*[$i=@elementName and @linkText='DITA Style Guide']/concat(base-uri(), @path) 
+$loc:=doc('http://www.oxygenxml.com/documentation/dita/styleguide/contentCompletionElementsMap.xml')//*[$i=@elementName and @linkText='DITA Style Guide']/concat(base-uri(), @path) 
 return 
   if ($loc) 
     then $loc 
@@ -11981,7 +12093,9 @@ ancestor-or-self::node()[self::*[contains(@class," topic/simpletable ") or conta
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>oxy:allows-global-element("*", "class", " task/choicetable")</String>
+														<String>oxy:allows-child-element("*", "class", " task/choicetable")
+or self::*[contains(@class, " task/step ")] 
+or ancestor-or-self::*[contains(@class, " task/cmd ") and parent::*[contains(@class, " task/step ")]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -13570,6 +13684,26 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 													<String>choicetable</String>
 												</field>
 											</contextRemoveItem>
+											<contextRemoveItem>
+												<field name="targets">
+													<list>
+														<Integer>0</Integer>
+													</list>
+												</field>
+												<field name="renderName">
+													<String>&lt;SPLIT> table</String>
+												</field>
+											</contextRemoveItem>
+											<contextRemoveItem>
+												<field name="targets">
+													<list>
+														<Integer>0</Integer>
+													</list>
+												</field>
+												<field name="renderName">
+													<String>&lt;SPLIT> entry</String>
+												</field>
+											</contextRemoveItem>
 										</contextRemoveItem-array>
 									</field>
 								</contextProvider>
@@ -13613,7 +13747,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/topic (Dita 4 Publishers)</String>
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/topic-rng</String>
 							<String>${configured.ditaot.dir}/plugins/mathml/oxygen_templates/MathML</String>
-							<String>${configured.ditaot.dir}/plugins/org.oasis.lwdita/oxygen_templates/LW (Lightweight) DITA/topic</String>
+							<String>${configured.ditaot.dir}/plugins/org.oasis.xdita/oxygen_templates/LW (Lightweight) DITA/topic-lw</String>
 						</String-array>
 					</field>
 					<field name="xmlCatalogs">
@@ -14771,6 +14905,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 						<null/>
 					</field>
 					<field name="customAttributeValueEditor">
+						<null/>
+					</field>
+					<field name="textModeExternalObjectInsertionHandler">
 						<null/>
 					</field>
 				</documentTypeDescriptor>

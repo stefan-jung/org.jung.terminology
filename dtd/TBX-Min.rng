@@ -119,10 +119,14 @@
                <element name="partOfSpeech">
                   <choice>
                      <value>noun</value>
-                     <value>properNoun</value>
-                     <value>verb</value>
+                     <value>pronoun</value>
                      <value>adjective</value>
+                     <value>verb</value>
                      <value>adverb</value>
+                     <value>preposition</value>
+                     <value>conjunction</value>
+                     <value>interjection</value>
+                     <value>article</value>
                      <value>other</value>
                   </choice>
                </element>
