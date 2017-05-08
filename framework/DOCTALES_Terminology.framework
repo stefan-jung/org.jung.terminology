@@ -2110,13 +2110,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.hypernyms</String>
+													<String>doctales.hypernyms.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.hypernyms)}</String>
+													<String>${i18n(doctales.hypernyms.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.hypernyms_description)}</String>
+													<String>${i18n(doctales.hypernyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -3982,13 +3982,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.delete.hypernyms</String>
+													<String>doctales.hypernyms.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.delete.hypernyms)}</String>
+													<String>${i18n(doctales.hypernyms.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.delete.hypernyms_description)}</String>
+													<String>${i18n(doctales.hypernyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_20.png</String>
@@ -4282,13 +4282,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.add.hypernym</String>
+													<String>doctales.hypernym.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.add.hypernym)}</String>
+													<String>${i18n(doctales.hypernym.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.add.hypernym_description)}</String>
+													<String>${i18n(doctales.hypernym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_20.png</String>
@@ -5935,6 +5935,125 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.JSOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>150</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.keyref.change</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.keyref.change)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.keyref.change_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap/>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.dita.keyref.InsertKeyrefOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>151</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.hypernym.delete</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.hypernym.delete)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.hypernym.delete_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/definition ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>

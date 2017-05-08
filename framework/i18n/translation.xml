@@ -31,6 +31,12 @@
         <val lang="de_DE">Lösche das aktuelle Element.</val>
     </key>
     
+    <!-- Key Reference -->
+    <key value="doctales.keyref.change">
+        <val lang="en_US">Change key reference</val>
+        <val lang="de_DE">Schlüsselreferenz ändern</val>
+    </key>
+    
     <!-- Menu Buton Labels -->
     <key value="doctales.termAdministration">
         <val lang="en_US">Term Administration</val>
@@ -749,40 +755,46 @@
         <val lang="de_DE">Links auf Bestandteile löschen</val>
     </key>
 
-    <!-- hypernyms -->
-    <key value="doctales.terminology.hypernyms">
-        <val lang="en_US">Hypernyms</val>
-        <val lang="de_DE">Hypernyme</val>
+    <!-- Hypernym -->
+    <key value="doctales.hypernym">
+        <val lang="en_US">Hypernym</val>
+        <val lang="de_DE">Hypernym</val>
     </key>
-    <key value="doctales.add.hypernyms">
-        <val lang="en_US">Add hypernyms</val>
-        <val lang="de_DE">Hypernyme einfügen</val>
-    </key>
-    <key value="doctales.add.hypernyms_description">
-        <val lang="en_US">A hypernyms element contains references to hypernyms.</val>
-        <val lang="de_DE">Ein hypernyms Element enthält Referenzen zu Hypernymen des aktuellen Begriffs.</val>
-    </key>
-    <key value="doctales.add.hypernym">
+    <key value="doctales.hypernym.add">
         <val lang="en_US">Link a hypernym</val>
         <val lang="de_DE">Hypernym verlinken</val>
     </key>
-    <key value="doctales.add.hypernym_description">
+    <key value="doctales.hypernym.add_description">
         <val lang="en_US">Add link to a hypernym to model a semantic net</val>
         <val lang="de_DE">Verlinke ein Hypernym, um ein semantisches Netz zu bilden.</val>
     </key>
-    <key value="doctales.delete.hypernym">
+    <key value="doctales.hypernym.delete">
         <val lang="en_US">Delete link to hypernym</val>
         <val lang="de_DE">Link auf Hypernym löschen</val>
     </key>
-    <key value="doctales.delete.hypernym_description">
+    <key value="doctales.hypernym.delete_description">
         <val lang="en_US">Delete link to hypernym</val>
         <val lang="de_DE">Link auf Hypernym löschen</val>
     </key>
-    <key value="doctales.delete.hypernyms">
+
+    <!-- Hypernyms -->
+    <key value="doctales.hypernyms">
+        <val lang="en_US">Hypernyms</val>
+        <val lang="de_DE">Hypernyme</val>
+    </key>
+    <key value="doctales.hypernyms.add">
+        <val lang="en_US">Add hypernyms</val>
+        <val lang="de_DE">Hypernyme einfügen</val>
+    </key>
+    <key value="doctales.hypernyms.add_description">
+        <val lang="en_US">A hypernyms element contains references to hypernyms.</val>
+        <val lang="de_DE">Ein hypernyms Element enthält Referenzen zu Hypernymen des aktuellen Begriffs.</val>
+    </key>
+    <key value="doctales.hypernyms.delete">
         <val lang="en_US">Delete links to hypernyms</val>
         <val lang="de_DE">Links auf Hypernyme löschen</val>
     </key>
-    <key value="doctales.delete.hypernyms_description">
+    <key value="doctales.hypernyms.delete_description">
         <val lang="en_US">Delete links to hypernyms</val>
         <val lang="de_DE">Links auf Hypernyme löschen</val>
     </key>
@@ -947,6 +959,22 @@
     <key value="doctales.usage">
         <val lang="en_US">Usage</val>
         <val lang="de_DE">Verwendung</val>
+    </key>
+    <key value="doctales.usage.admitted">
+        <val lang="en_US">admitted</val>
+        <val lang="de_DE">zulässig</val>
+    </key>
+    <key value="doctales.usage.notRecommended">
+        <val lang="en_US">not recommended</val>
+        <val lang="de_DE">nicht empfohlen</val>
+    </key>
+    <key value="doctales.usage.obsolete">
+        <val lang="en_US">obsolete</val>
+        <val lang="de_DE">obsolet</val>
+    </key>
+    <key value="doctales.usage.preferred">
+        <val lang="en_US">preferred</val>
+        <val lang="de_DE">bevorzugt</val>
     </key>
     <key value="doctales.language">
         <val lang="en_US">Language</val>
