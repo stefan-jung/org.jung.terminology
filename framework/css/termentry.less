@@ -43,7 +43,7 @@
     oxy_buttonGroup(
         label, '${i18n(doctales.conceptLevel)}',
         transparent, @oxy_buttonGroup_transparent,
-        fontInherit, @oxy_buttonGroup_fontInherit,
+        fontInherit, false,
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.definition.add'),
@@ -61,22 +61,6 @@
 /*********************************************
  * TERM BODY
  *********************************************/
-*[class~="termentry/termBody"]:before {
-    .header();
-    content:
-    oxy_buttonGroup(
-        label, '${i18n(doctales.termLevel)}',
-        transparent, @oxy_buttonGroup_transparent,
-        fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
-        oxy_action_list(
-            oxy_action(id, 'doctales.abbreviation.add'),
-            oxy_action(id, 'doctales.acronym.add'),
-            oxy_action(id, 'doctales.fullForm.add'),
-            oxy_action(id, 'doctales.verb.add')
-        )
-    );
-}
 *[class~="termentry/termBody"] {
     margin-top: 2em;
 }
@@ -87,7 +71,7 @@
     oxy_buttonGroup(
         label, '${i18n(doctales.relations)}',
         transparent, @oxy_buttonGroup_transparent,
-        fontInherit, @oxy_buttonGroup_fontInherit,
+        fontInherit, false,
         actions, 
         oxy_action_list(
             oxy_action(id, 'doctales.antonyms.add'),
@@ -506,6 +490,34 @@
 }
 *[class~="termentry/partOfSpeech"]:after {
     .separator();
+}
+*[class~="termentry/partOfSpeech"]:after(100) {
+    .header();
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.termLevel)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, false,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.abbreviation.add'),
+            oxy_action(id, 'doctales.acronym.add'),
+            oxy_action(id, 'doctales.fullForm.add'),
+            oxy_action(id, 'doctales.verb.add')
+        )
+    );
+    border-left: 1pt solid transparent !important;
+    border-top: 1pt solid black !important;
+    border-right: 1pt solid transparent !important;
+    border-bottom: 1pt solid transparent !important;
+    display: block;
+    padding-top: 2.0em;
+    margin-left: -2pt;
+    margin-top: -2pt;
+    margin-right: -9pt;
+    margin-bottom: -2pt;
+    width: 100% - 2pt;
+    background-color: white;
 }
 
 /*********************************************
@@ -1069,7 +1081,7 @@
     );
     .header();
 }
-*[class~="termentry/hyponyms"] {
+*[class~="termentry/hypernyms"] {
     visibility: -oxy-collapse-text;
     .blockElement();
 }
@@ -1087,6 +1099,50 @@
         oxy_action_list(
             oxy_action(id, 'doctales.hypernym.add'),
             oxy_action(id, 'doctales.hypernym.delete')
+        )
+    );
+    .col1();
+}
+*[class~="termentry/hypernym"] {
+    visibility: -oxy-collapse-text;
+    .blockElement();
+}
+
+/*********************************************
+ * HYPONYMS
+ *********************************************/
+*[class~="termentry/hyponyms"]:before(10) {
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.hyponyms)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.hyponym.add'),
+            oxy_action(id, 'doctales.hyponyms.delete')
+        )
+    );
+    .header();
+}
+*[class~="termentry/hyponyms"] {
+    visibility: -oxy-collapse-text;
+    .blockElement();
+}
+
+/*********************************************
+ * HYPERNYM
+ *********************************************/
+*[class~="termentry/hyponym"]:before(20) {
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.hyponym)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.hyponym.add'),
+            oxy_action(id, 'doctales.hyponym.delete')
         )
     );
     .col1();
