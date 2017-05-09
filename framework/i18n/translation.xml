@@ -400,6 +400,18 @@
         <val lang="en_US">Alternative Text</val>
         <val lang="de_DE">Alternativer Text</val>
     </key>
+    <key value="doctales.alt.add">
+        <val lang="en_US">Add Alternative Text</val>
+        <val lang="de_DE">Alternativen Text einfügen</val>
+    </key>
+    <key value="doctales.alt.delete">
+        <val lang="en_US">Delete Alternative Text</val>
+        <val lang="de_DE">Alternativen Text löschen</val>
+    </key>
+    <key value="doctales.alt.placeholder">
+        <val lang="en_US">Enter an alternative text for the image. The text is shown, if the image cannot be displayed.</val>
+        <val lang="de_DE">Geben Sie einen alternativen Text für das Bild ein. Der Text wird angezeigt, wenn das Bild nicht dargestellt werden kann.</val>
+    </key>
 
     <!-- domains -->
     <key value="doctales.domains">
@@ -429,6 +441,10 @@
     <key value="doctales.domain.add_description">
         <val lang="en_US">Add a Domain</val>
         <val lang="de_DE">Domäne einfügen</val>
+    </key>
+    <key value="doctales.domain.delete">
+        <val lang="en_US">Delete Domain</val>
+        <val lang="de_DE">Domäne löschen</val>
     </key>
 
     <!-- fullForm -->
@@ -1014,9 +1030,9 @@
         <val lang="en_US">Language</val>
         <val lang="de_DE">Sprache</val>
     </key>
-    <key value="doctales.developedByDoctales">
-        <val lang="en_US">Developed by Doctales</val>
-        <val lang="de_DE">Entwickelt von Doctales</val>
+    <key value="doctales.developedBy">
+        <val lang="en_US">Developed by</val>
+        <val lang="de_DE">Entwickelt von</val>
     </key>
     <key value="doctales.termdomain">
         <val lang="en_US">Term Domain</val>
