@@ -383,7 +383,7 @@ Category: Termentry elements-->
                                        (%domains;) |
                                        (%annotation;))*),
                                        (%agreedWith;)?,
-                                       (%partOfSpeech;)?,                                       
+                                       (%partOfSpeech;),
                                       ((%fullForm;) |
                                        (%abbreviation;) |
                                        (%acronym;) |
