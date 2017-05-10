@@ -279,7 +279,6 @@
     );
 }
 *[class~="termentry/termSource"] {
-    visibility: -oxy-collapse-text;
     .blockElement();
 }
 
@@ -429,26 +428,58 @@
         fontInherit, @oxy_buttonGroup_fontInherit,
         actions, 
         oxy_action_list(
+            oxy_action(id, 'doctales.termContextText.add'),
             oxy_action(id, 'doctales.termContext.delete')
         )
     );
     .header();
 }
 *[class~="termentry/termContext"] {
-    -oxy-placeholder-content: "<termContext>";
     .blockElement();
 }
+
+/*********************************************
+ * TERM CONTEXT TEXT
+ *********************************************/
+*[class~="termentry/termContextText"]:before(10) {
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.termContextText)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.termContextText.delete')
+        )
+    );
+    .header();
+}
+*[class~="termentry/termContextText"] {
+    .blockElement();
+    -oxy-placeholder-content: "${i18n(doctales.termContextText.placeholder)}";
+}
+
 
 /*********************************************
  * TERM CONTEXT SOURCE
  *********************************************/
 *[class~="termentry/termContextSource"]:before(10) {
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.termContextSource)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
+        actions, 
+        oxy_action_list(
+            oxy_action(id, 'doctales.termContextSource.delete')
+        )
+    );
     .header();
-    content: "\A ${i18n(doctales.termContextSource)}";
 }
 *[class~="termentry/termContextSource"] {
-    visibility: -oxy-collapse-text;
     .blockElement();
+    -oxy-editable: true;
+    -oxy-placeholder-content: "${i18n(doctales.termContextSource.placeholder)}";
 }
 
 /*********************************************
@@ -650,12 +681,10 @@
 *[class~="termentry/termCommitteeMember"]:before(9) {
     .col2();
 }
-*[class~="termentry/termCommitteeMember"]:after {
-    .deleteInlineElementButton();
-}
 *[class~="termentry/termCommitteeMember"] {
     list-style: none !important;
     .blockElementNoBorder();
+    -oxy-placeholder-content: "${i18n(doctales.termCommitteeMember.placeholder)}";
 }
 
 /*********************************************

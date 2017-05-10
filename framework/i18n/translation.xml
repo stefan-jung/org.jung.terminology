@@ -302,6 +302,10 @@
         <val lang="en_US">Term Committee Member</val>
         <val lang="de_DE">Term-Komitee-Mitglied</val>
     </key>
+    <key value="doctales.termCommitteeMember.placeholder">
+        <val lang="en_US">Enter the name of the term committee member, who has agreed to the term.</val>
+        <val lang="de_DE">Geben Sie den Names des Term-Komitee-Mitglieds ein, das dem Term zugestimmt hat.</val>
+    </key>
     <key value="doctales.termCommitteeMember.add">
         <val lang="en_US">Add Term Committee Member</val>
         <val lang="de_DE">Term-Komitee-Mitglied einfügen</val>
@@ -562,11 +566,57 @@
         <val lang="en_US">Delete term context</val>
         <val lang="de_DE">Term-Kontext löschen</val>
     </key>
+    
+    <!-- termContextText -->
+    <key value="doctales.termContextText">
+        <val lang="en_US">Term Context Text</val>
+        <val lang="de_DE">Term-Kontext-Text</val>
+    </key>
+    <key value="doctales.termContextText.add">
+        <val lang="en_US">Add context text</val>
+        <val lang="de_DE">Kontext-Text einfügen</val>
+    </key>
+    <key value="doctales.termContextText.add_description">
+        <val lang="en_US">Add context text</val>
+        <val lang="de_DE">Kontext-Text einfügen</val>
+    </key>
+    <key value="doctales.termContextText.delete">
+        <val lang="en_US">Delete term context text</val>
+        <val lang="de_DE">Term-Kontext-Text löschen</val>
+    </key>
+    <key value="doctales.termContextText.delete_description">
+        <val lang="en_US">Delete term context text</val>
+        <val lang="de_DE">Term-Kontext-Text löschen</val>
+    </key>
+    <key value="doctales.termContextText.placeholder">
+        <val lang="en_US">Give a text example where the term is used.</val>
+        <val lang="de_DE">Geben Sie ein Textbeispiel, in dem die Bezeichnung verwendet wird.</val>
+    </key>
 
     <!-- termContextSource -->
     <key value="doctales.termContextSource">
         <val lang="en_US">Source of Context</val>
         <val lang="de_DE">Quelle des Kontextes</val>
+    </key>
+    <key value="doctales.termContextSource.add">
+        <val lang="en_US">Add Source of Context</val>
+        <val lang="de_DE">Quelle des Kontextes einfügen</val>
+    </key>
+    <key value="doctales.termContextSource.add_description">
+        <val lang="en_US">Add Source of Context</val>
+        <val lang="de_DE">Quelle des Kontextes einfügen</val>
+    </key>
+    <key value="doctales.termContextSource.delete">
+        <val lang="en_US">Delete Source of Context</val>
+        <val lang="de_DE">Quelle des Kontexte löschen</val>
+    </key>
+    <key value="doctales.termContextSource.delete_description">
+        <val lang="en_US">Delete Source of Context</val>
+        <val lang="de_DE">Quelle des Kontexte löschen</val>
+    </key>
+    <key value="doctales.termContextSource.placeholder">
+        <val lang="en_US">Explain, where the context text comes from.</val>
+        <val lang="de_DE">Erklären Sie, woher das Textbeispiel stammt.</val>
     </key>
 
     <!-- termSource -->
