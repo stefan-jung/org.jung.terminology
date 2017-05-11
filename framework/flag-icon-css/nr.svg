@@ -1,12 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" viewBox="0 0 640 480">
-  <defs>
-    <clipPath id="a">
-      <path fill-opacity=".67" d="M-54.667 0h682.67v512h-682.67z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="16"
+   width="21.333437"
+   viewBox="0 0 21.333437 16"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="nr.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     id="namedview17"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.49166667"
+     inkscape:cx="320.00031"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg15" />
+  <defs
+     id="defs5">
+    <clipPath
+       id="a">
+      <path
+         d="m -54.667,0 h 682.67 v 512 h -682.67 z"
+         id="path2"
+         inkscape:connector-curvature="0"
+         style="fill-opacity:0.67000002" />
     </clipPath>
   </defs>
-  <g fill-rule="evenodd" clip-path="url(#a)" transform="translate(51.25) scale(.9375)" stroke-width="1pt">
-    <path fill="#002170" d="M-140 0H884v512H-140z"/>
-    <path fill="#ffb20d" d="M-140 234.11H884v43.783H-140z"/>
-    <path fill="#fff" d="M161.81 437.989l-32.916-32.971-10.604 45.363-12.008-45.015-31.875 33.978 12.107-44.989-44.59 13.498 32.972-32.907-45.365-10.613 45.016-12.008L40.56 320.45l44.989 12.108-13.49-44.591 32.907 32.971 10.614-45.364 12.008 45.015 31.866-33.977-12.098 44.988 44.59-13.498-32.98 32.908 45.363 10.613-45.015 12.009 33.987 31.874-44.989-12.108z"/>
+  <g
+     clip-path="url(#a)"
+     transform="matrix(0.03125,0,0,0.03125,1.7083438,0)"
+     id="g13"
+     style="fill-rule:evenodd;stroke-width:1.00000003pt">
+    <path
+       d="M -140,0 H 884 V 512 H -140 Z"
+       id="path7"
+       inkscape:connector-curvature="0"
+       style="fill:#002170" />
+    <path
+       d="M -140,234.11 H 884 v 43.783 H -140 Z"
+       id="path9"
+       inkscape:connector-curvature="0"
+       style="fill:#ffb20d" />
+    <path
+       d="M 161.81,437.989 128.894,405.018 118.29,450.381 106.282,405.366 74.407,439.344 86.514,394.355 41.924,407.853 74.896,374.946 29.531,364.333 74.547,352.325 40.56,320.45 l 44.989,12.108 -13.49,-44.591 32.907,32.971 10.614,-45.364 12.008,45.015 31.866,-33.977 -12.098,44.988 44.59,-13.498 -32.98,32.908 45.363,10.613 -45.015,12.009 33.987,31.874 -44.989,-12.108 z"
+       id="path11"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
   </g>
 </svg>

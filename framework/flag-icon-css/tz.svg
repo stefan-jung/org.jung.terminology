@@ -1,13 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" viewBox="0 0 640 480">
-  <defs>
-    <clipPath id="a">
-      <path fill-opacity=".67" d="M10 0h160v120H10z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="16"
+   width="21.333332"
+   viewBox="0 0 21.333332 16"
+   version="1.1"
+   id="svg17"
+   sodipodi:docname="tz.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata21">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     id="namedview19"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.49166667"
+     inkscape:cx="320"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg17" />
+  <defs
+     id="defs5">
+    <clipPath
+       id="a">
+      <path
+         d="M 10,0 H 170 V 120 H 10 Z"
+         id="path2"
+         inkscape:connector-curvature="0"
+         style="fill-opacity:0.67000002" />
     </clipPath>
   </defs>
-  <g clip-path="url(#a)" fill-rule="evenodd" transform="matrix(4 0 0 4 -40 0)" stroke-width="1pt">
-    <path fill="#09f" d="M0 0h180v120H0z"/>
-    <path d="M0 0h180L0 120V0z" fill="#090"/>
-    <path d="M0 120h40l140-95V0h-40L0 95v25z"/>
-    <path d="M0 91.456L137.18 0h13.52L0 100.47v-9.014zM29.295 120l150.7-100.47v9.014L42.815 120h-13.52z" fill="#ff0"/>
+  <g
+     clip-path="url(#a)"
+     transform="matrix(0.13333333,0,0,0.13333333,-1.3333333,0)"
+     id="g15"
+     style="fill-rule:evenodd;stroke-width:1.00000003pt">
+    <path
+       d="M 0,0 H 180 V 120 H 0 Z"
+       id="path7"
+       inkscape:connector-curvature="0"
+       style="fill:#0099ff" />
+    <path
+       d="M 0,0 H 180 L 0,120 Z"
+       id="path9"
+       inkscape:connector-curvature="0"
+       style="fill:#009900" />
+    <path
+       d="M 0,120 H 40 L 180,25 V 0 H 140 L 0,95 Z"
+       id="path11"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 0,91.456 137.18,0 H 150.7 L 0,100.47 Z M 29.295,120 179.995,19.53 v 9.014 L 42.815,120 Z"
+       id="path13"
+       inkscape:connector-curvature="0"
+       style="fill:#ffff00" />
   </g>
 </svg>

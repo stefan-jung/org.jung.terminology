@@ -1,15 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" viewBox="0 0 640 480">
-  <defs>
-    <clipPath id="a">
-      <path fill-opacity=".67" d="M5.077.1h682.53V512H5.077z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="15.999997"
+   width="21.333225"
+   viewBox="0 0 21.333225 15.999997"
+   version="1.1"
+   id="svg21"
+   sodipodi:docname="kp.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     id="namedview23"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.49166667"
+     inkscape:cx="320.0004"
+     inkscape:cy="239.99815"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21" />
+  <defs
+     id="defs5">
+    <clipPath
+       id="a">
+      <path
+         d="m 5.077,0.1 h 682.53 V 512 H 5.077 Z"
+         id="path2"
+         inkscape:connector-curvature="0"
+         style="fill-opacity:0.67000002" />
     </clipPath>
   </defs>
-  <g fill-rule="evenodd" clip-path="url(#a)" transform="translate(-4.761 -.094) scale(.93768)">
-    <path stroke="#000" stroke-width="1.014" fill="#fff" d="M775.94 511.52H-75.92V.57h851.86z"/>
-    <path fill="#3e5698" d="M775.94 419.07H-75.92v92.457h851.86z"/>
-    <path fill="#c60000" d="M775.94 397.65H-75.92V114.44h851.86z"/>
-    <path fill="#3e5698" d="M775.94.576H-75.92v92.457h851.86z"/>
-    <path d="M328.518 256.07c0 63.45-53.108 114.886-118.619 114.886-65.512 0-118.618-51.437-118.618-114.886 0-63.45 53.108-114.885 118.618-114.885 65.512 0 118.619 51.436 118.619 114.885z" fill="#fff"/>
-    <path fill="#c40000" d="M175.83 270.567l-57.06-40.618 71.056-.289 22.636-66.367 21.164 66.147 71.057-.407-57.978 41.177 21.275 66.117-56.998-40.696-57.908 41.264z"/>
+  <g
+     clip-path="url(#a)"
+     transform="matrix(0.0312561,0,0,0.0312561,-0.15868722,-0.00312561)"
+     id="g19"
+     style="fill-rule:evenodd">
+    <path
+       d="M 775.94,511.52 H -75.92 V 0.57 h 851.86 z"
+       id="path7"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1.01400006" />
+    <path
+       d="M 775.94,419.07 H -75.92 v 92.457 h 851.86 z"
+       id="path9"
+       inkscape:connector-curvature="0"
+       style="fill:#3e5698" />
+    <path
+       d="M 775.94,397.65 H -75.92 V 114.44 h 851.86 z"
+       id="path11"
+       inkscape:connector-curvature="0"
+       style="fill:#c60000" />
+    <path
+       d="M 775.94,0.576 H -75.92 v 92.457 h 851.86 z"
+       id="path13"
+       inkscape:connector-curvature="0"
+       style="fill:#3e5698" />
+    <path
+       d="m 328.518,256.07 c 0,63.45 -53.108,114.886 -118.619,114.886 -65.512,0 -118.618,-51.437 -118.618,-114.886 0,-63.45 53.108,-114.885 118.618,-114.885 65.512,0 118.619,51.436 118.619,114.885 z"
+       id="path15"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 175.83,270.567 -57.06,-40.618 71.056,-0.289 22.636,-66.367 21.164,66.147 71.057,-0.407 -57.978,41.177 21.275,66.117 -56.998,-40.696 -57.908,41.264 z"
+       id="path17"
+       inkscape:connector-curvature="0"
+       style="fill:#c40000" />
   </g>
 </svg>

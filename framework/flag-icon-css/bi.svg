@@ -1,15 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="480" width="640" viewBox="0 0 640 480">
-  <defs>
-    <clipPath id="a">
-      <path fill-opacity=".67" d="M-90.533 0h682.67v512h-682.67z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="16"
+   width="21.333437"
+   viewBox="0 0 21.333437 16"
+   version="1.1"
+   id="svg21"
+   sodipodi:docname="bi.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata25">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     id="namedview23"
+     showgrid="false"
+     inkscape:zoom="0.49166667"
+     inkscape:cx="319.99969"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs5">
+    <clipPath
+       id="a">
+      <path
+         d="m -90.533,0 h 682.67 v 512 h -682.67 z"
+         id="path2"
+         inkscape:connector-curvature="0"
+         style="fill-opacity:0.67000002" />
     </clipPath>
   </defs>
-  <g clip-path="url(#a)" fill-rule="evenodd" transform="translate(84.875) scale(.9375)">
-    <path d="M-178 0l428.8 256L-178 512zm857.6 0L250.8 256l428.8 256z" fill="#00cf00"/>
-    <path d="M-178 0l428.8 256L679.6 0zm0 512l428.8-256 428.8 256z" fill="red"/>
-    <path d="M679.6 0h-79.902l-777.7 464.3v47.703H-98.1l777.7-464.3z" fill="#fff"/>
-    <path d="M398.855 256c0 81.767-66.285 148.05-148.052 148.05S102.75 337.768 102.75 256s66.285-148.053 148.053-148.053S398.855 174.232 398.855 256z" fill="#fff"/>
-    <path d="M-178 0v47.703l777.7 464.3h79.902V464.3L-98.098 0z" fill="#fff"/>
-    <path stroke="#00de00" stroke-width="3.901" fill="red" d="M279.943 200.164l-19.25.322-9.948 16.442-9.92-16.472-19.22-.41 9.303-16.822-9.245-16.875 19.222-.332 9.977-16.457 9.918 16.496 19.222.41-9.333 16.817zm-64.5 111.62l-19.25.322-9.948 16.442-9.92-16.47-19.22-.41 9.303-16.824-9.245-16.875 19.222-.332 9.977-16.457 9.918 16.496 19.222.41-9.333 16.817zm130.57 0l-19.25.322-9.948 16.442-9.92-16.47-19.22-.41 9.303-16.824-9.245-16.875 19.222-.332 9.977-16.457 9.918 16.496 19.222.41-9.333 16.817z"/>
+  <g
+     clip-path="url(#a)"
+     transform="matrix(0.03125,0,0,0.03125,2.8291563,0)"
+     id="g19"
+     style="fill-rule:evenodd">
+    <path
+       d="M -178,0 250.8,256 -178,512 Z M 679.6,0 250.8,256 679.6,512 Z"
+       id="path7"
+       inkscape:connector-curvature="0"
+       style="fill:#00cf00" />
+    <path
+       d="M -178,0 250.8,256 679.6,0 Z m 0,512 428.8,-256 428.8,256 z"
+       id="path9"
+       inkscape:connector-curvature="0"
+       style="fill:#ff0000" />
+    <path
+       d="m 679.6,0 h -79.902 l -777.7,464.3 v 47.703 H -98.1 l 777.7,-464.3 z"
+       id="path11"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 398.855,256 c 0,81.767 -66.285,148.05 -148.052,148.05 -81.767,0 -148.053,-66.282 -148.053,-148.05 0,-81.768 66.285,-148.053 148.053,-148.053 81.768,0 148.052,66.285 148.052,148.053 z"
+       id="path13"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m -178,0 v 47.703 l 777.7,464.3 h 79.902 V 464.3 L -98.098,0 Z"
+       id="path15"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 279.943,200.164 -19.25,0.322 -9.948,16.442 -9.92,-16.472 -19.22,-0.41 9.303,-16.822 -9.245,-16.875 19.222,-0.332 9.977,-16.457 9.918,16.496 19.222,0.41 -9.333,16.817 z m -64.5,111.62 -19.25,0.322 -9.948,16.442 -9.92,-16.47 -19.22,-0.41 9.303,-16.824 -9.245,-16.875 19.222,-0.332 9.977,-16.457 9.918,16.496 19.222,0.41 -9.333,16.817 z m 130.57,0 -19.25,0.322 -9.948,16.442 -9.92,-16.47 -19.22,-0.41 9.303,-16.824 -9.245,-16.875 19.222,-0.332 9.977,-16.457 9.918,16.496 19.222,0.41 -9.333,16.817 z"
+       id="path17"
+       inkscape:connector-curvature="0"
+       style="fill:#ff0000;stroke:#00de00;stroke-width:3.90100002" />
   </g>
 </svg>

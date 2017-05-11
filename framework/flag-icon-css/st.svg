@@ -1,16 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="480" width="640" viewBox="0 0 640 480">
-  <path fill="#12ad2b" d="M0 0h640v480H0z"/>
-  <path fill="#ffce00" d="M0 137.143h640v205.714H0z"/>
-  <path d="M0 0v480l240-240" fill="#d21034"/>
-  <g id="c" transform="matrix(.34286 0 0 .34286 351.595 240)">
-    <g id="b">
-      <path id="a" d="M0-200V0h100" transform="rotate(18 0 -200)"/>
-      <use height="100%" width="100%" xlink:href="#a" transform="scale(-1 1)"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="15.999998"
+   width="21.333332"
+   viewBox="0 0 21.333332 15.999998"
+   version="1.1"
+   id="svg23"
+   sodipodi:docname="st.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata29">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs27" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     id="namedview25"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.49166667"
+     inkscape:cx="320"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg23" />
+  <g
+     id="g43"
+     transform="scale(0.03333333)">
+    <path
+       id="path2"
+       d="M 0,0 H 640 V 480 H 0 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#12ad2b" />
+    <path
+       id="path4"
+       d="M 0,137.143 H 640 V 342.857 H 0 Z"
+       inkscape:connector-curvature="0"
+       style="fill:#ffce00" />
+    <path
+       id="path6"
+       d="M 0,0 V 480 L 240,240"
+       inkscape:connector-curvature="0"
+       style="fill:#d21034" />
+    <g
+       transform="matrix(0.34286,0,0,0.34286,351.595,240)"
+       id="c">
+      <g
+         id="b">
+        <path
+           transform="rotate(18,0,-200)"
+           d="M 0,-200 V 0 h 100"
+           id="a"
+           inkscape:connector-curvature="0" />
+        <use
+           id="use9"
+           transform="scale(-1,1)"
+           xlink:href="#a"
+           width="100%"
+           height="100%"
+           x="0"
+           y="0" />
+      </g>
+      <use
+         id="use12"
+         transform="rotate(72)"
+         xlink:href="#b"
+         width="100%"
+         height="100%"
+         x="0"
+         y="0" />
+      <use
+         id="use14"
+         transform="rotate(144)"
+         xlink:href="#b"
+         width="100%"
+         height="100%"
+         x="0"
+         y="0" />
+      <use
+         id="use16"
+         transform="rotate(-144)"
+         xlink:href="#b"
+         width="100%"
+         height="100%"
+         x="0"
+         y="0" />
+      <use
+         id="use18"
+         transform="rotate(-72)"
+         xlink:href="#b"
+         width="100%"
+         height="100%"
+         x="0"
+         y="0" />
     </g>
-    <use height="100%" width="100%" xlink:href="#b" transform="rotate(72)"/>
-    <use height="100%" width="100%" xlink:href="#b" transform="rotate(144)"/>
-    <use height="100%" width="100%" xlink:href="#b" transform="rotate(-144)"/>
-    <use height="100%" width="100%" xlink:href="#b" transform="rotate(-72)"/>
+    <use
+       id="use21"
+       transform="translate(-523.19)"
+       x="700"
+       xlink:href="#c"
+       width="100%"
+       height="100%"
+       y="0" />
   </g>
-  <use height="100%" width="100%" xlink:href="#c" x="700" transform="translate(-523.19)"/>
 </svg>
