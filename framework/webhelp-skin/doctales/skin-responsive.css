@@ -499,8 +499,21 @@ a:hover, a:focus {
 }
 
 /*********************************************
+ * SHORTDESC
+ *********************************************/
+p.shortdesc {
+  background-color: #ECF2F9;
+  padding: 0.7em 0.7em 0.5em 0.7em;
+  margin: 1em 0 2em;
+}
+
+/*********************************************
  * TERM CONFLICTS
  *********************************************/
+.termconflicts {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
 .termconflicts-table {
   width: 100%;
   border-collapse: collapse;
@@ -536,3 +549,24 @@ div.related_link {
   font-family: 'Glyphicons Halflings' !important;
 }
 
+/*********************************************
+ * WELCOME FRAGMENT
+ *********************************************/
+li.welcome-li {
+  list-style: none;
+}
+
+/*********************************************
+ * H2
+ *********************************************/
+h2 {
+  font-size: 1.2em !important;
+  font-weight: bold;
+}
+
+/*********************************************
+ * TERMSTATS DIV
+ *********************************************/
+.termstats-div {
+  margin-bottom: 32pt;
+}

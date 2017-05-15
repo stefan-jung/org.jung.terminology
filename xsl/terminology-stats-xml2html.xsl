@@ -42,8 +42,9 @@
     </xsl:template>
     
     <xsl:template match="termconflicts" mode="body">
-        <div class="termconflicts">
-           <xsl:choose>
+        <div class="termstats-div termconflicts">
+            <h2><xsl:value-of select="doctales:getString($language, 'Term Conflicts')"/></h2>
+            <xsl:choose>
                 <xsl:when test="termconflict">
                     <table class="termconflicts-table">
                         <thead class="termconflicts-thead">
@@ -72,7 +73,8 @@
     </xsl:template>
     
     <xsl:template match="termNotationsPerLanguage" mode="body">
-        <div class="termNotationsPerLanguageList">
+        <div class="termstats-div termNotationsPerLanguageList">
+            <h2><xsl:value-of select="doctales:getString($language, 'Number of Terms')"/></h2>
             <ul>
                 <xsl:for-each select="language">
                     <li>
@@ -87,78 +89,78 @@
                     </li>
                 </xsl:for-each>
             </ul>
-        </div>
-        <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
-            <div class="termNotations">
-                <xsl:value-of select="$newline"/>
-                <script>
-                    function displayTermNotationsPerLanguageCharts() {
+            <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
+                <div class="termNotations">
+                    <xsl:value-of select="$newline"/>
+                    <script>
+                        function displayTermNotationsPerLanguageCharts() {
                         var termNotationsPerLanguageData = {
-                            labels: [
-                                <xsl:for-each select="language">
-                                    <xsl:text>"</xsl:text>
-                                    <xsl:value-of select="@lang"/> 
-                                    <xsl:text>"</xsl:text>
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::language">
-                                            <xsl:text>,</xsl:text>
-                                        </xsl:when>
-                                    </xsl:choose>
-                                </xsl:for-each>
-                            ],
-                            datasets: [{
-                                data: [
-                                   <xsl:for-each select="language">
-                                       <xsl:value-of select="."/> 
-                                       <xsl:choose>
-                                           <xsl:when test="following-sibling::language">
-                                               <xsl:text>,</xsl:text>
-                                           </xsl:when>
-                                       </xsl:choose>
-                                   </xsl:for-each>
-                                ],
-                                backgroundColor: [
-                                    <xsl:for-each select="language">
-                                        <xsl:text>"</xsl:text>
-                                        <xsl:value-of select="doctales:getColorCode(position())"/>
-                                        <xsl:text>"</xsl:text>
-                                        <xsl:choose>
-                                            <xsl:when test="following-sibling::language">
-                                                <xsl:text>,</xsl:text>
-                                            </xsl:when>
-                                        </xsl:choose>
-                                    </xsl:for-each>
-                                ],
-                                hoverBackgroundColor: [
-                                    <xsl:for-each select="language">
-                                        <xsl:text>"</xsl:text>
-                                        <xsl:value-of select="doctales:getHoverColorCode(position())"/>
-                                        <xsl:text>"</xsl:text>
-                                        <xsl:choose>
-                                            <xsl:when test="following-sibling::language">
-                                                <xsl:text>,</xsl:text>
-                                            </xsl:when>
-                                        </xsl:choose>
-                                    </xsl:for-each>
-                                ]
-                            }]
+                        labels: [
+                        <xsl:for-each select="language">
+                            <xsl:text>"</xsl:text>
+                            <xsl:value-of select="@lang"/> 
+                            <xsl:text>"</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ],
+                        datasets: [{
+                        data: [
+                        <xsl:for-each select="language">
+                            <xsl:value-of select="."/> 
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ],
+                        backgroundColor: [
+                        <xsl:for-each select="language">
+                            <xsl:text>"</xsl:text>
+                            <xsl:value-of select="doctales:getColorCode(position())"/>
+                            <xsl:text>"</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ],
+                        hoverBackgroundColor: [
+                        <xsl:for-each select="language">
+                            <xsl:text>"</xsl:text>
+                            <xsl:value-of select="doctales:getHoverColorCode(position())"/>
+                            <xsl:text>"</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ]
+                        }]
                         };
                         var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
                         var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                            type: 'pie',
-                            data: termNotationsPerLanguageData,
-                            options: {}
+                        type: 'pie',
+                        data: termNotationsPerLanguageData,
+                        options: {}
                         });
-                    }
-                </script>
-                <xsl:value-of select="$newline"/>
-                <canvas id="termNotationsPerLanguage" width="400" height="400"/>
-            </div>
-            <script>
-                $(document).ready(function() {
+                        }
+                    </script>
+                    <xsl:value-of select="$newline"/>
+                    <canvas id="termNotationsPerLanguage" width="400" height="400"/>
+                </div>
+                <script>
+                    $(document).ready(function() {
                     displayTermNotationsPerLanguageCharts();
-                });
-            </script>
+                    });
+                </script>
+            </div>
         </div>
     </xsl:template>
     
@@ -185,7 +187,8 @@
     </xsl:template>
     
     <xsl:template match="chronologicalStatistics" mode="body">
-        <div class="termNotations" style="width:900px; height:900px;">
+        <div class="termstats-div termNotations" style="width:900px; height:900px;">
+            <h2><xsl:value-of select="doctales:getString($language, 'Chronological Sequence')"/></h2>
             <xsl:value-of select="$newline"/>
             <script>
                 function displayLineCharts() {
