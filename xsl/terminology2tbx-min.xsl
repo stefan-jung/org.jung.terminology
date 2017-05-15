@@ -83,5 +83,8 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
+    
+    <!-- Empty fall-through template for non-termentry topics -->
+    <xsl:template match="*[contains(@class, ' topic/topic ')][not(contains(@class, ' termentry/termentry '))]" priority="1.0" mode="termEntry"/>
 
 </xsl:stylesheet>
