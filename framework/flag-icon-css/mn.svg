@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="16"
+   width="21.336666"
+   viewBox="0 0 21.336666 16"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="mn.svg"
+   inkscape:version="0.92.1 r">
+  <metadata
+     id="metadata30">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs28" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     id="namedview26"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.49166667"
+     inkscape:cx="320.05"
+     inkscape:cy="240"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <path
+     d="M 0,0 H 21.336667 V 16 H 0 Z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="fill:#c4272f;stroke-width:0.03333334" />
+  <path
+     d="M 7.1122333,0 H 14.224467 V 16 H 7.1122333 Z"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="fill:#015197;stroke-width:0.03333334" />
+  <circle
+     cx="3.5683334"
+     cy="6.3018799"
+     r="1.1666666"
+     id="circle6"
+     style="fill:#f9cf02;stroke-width:0.03333334" />
+  <circle
+     cx="3.5683334"
+     cy="5.7715759"
+     r="1.2727333"
+     id="circle8"
+     style="fill:#c4272f;stroke-width:0.03333334" />
+  <path
+     d="m 3.0387667,4.3935 c 0,0.29247 0.2371,0.52957 0.5295666,0.52957 C 3.8608,4.92307 4.0979,4.68597 4.0979,4.3935 4.0979,4.18167 3.9655,4.15517 3.9655,4.07577 3.9655,3.99637 4.044933,3.89043 3.886067,3.758 3.9655,3.8904 3.833134,3.9169 3.833134,4.04927 c 0,0.1324 0.052933,0.1324 0.052933,0.23833 a 0.1059167,0.1059167 0 0 1 -0.2118334,0 c 0,-0.10593 0.1059334,-0.21183 0.1059334,-0.3707 0,-0.1589 -0.0265,-0.21183 -0.1059334,-0.34423 -0.079433,-0.1324 -0.2118,-0.23834 -0.1059,-0.34424 -0.1588666,0.053 -0.079433,0.2648 -0.079433,0.3972 0,0.13237 -0.1059,0.21184 -0.1059,0.37067 0,0.1589 0.079433,0.18537 0.079433,0.2913 a 0.10591667,0.10591667 0 0 1 -0.2118333,0 c 0,-0.10593 0.052933,-0.10593 0.052933,-0.23833 0,-0.13237 -0.1323666,-0.15887 -0.052933,-0.29127 -0.1588667,0.1324 -0.079433,0.23833 -0.079433,0.31777 0,0.0794 -0.1324,0.1059 -0.1324006,0.31773 z"
+     id="path10"
+     inkscape:connector-curvature="0"
+     style="fill:#f9cf02;fill-rule:evenodd;stroke-width:0.03333334" />
+  <circle
+     cx="3.5683334"
+     cy="5.9836731"
+     r="0.84850001"
+     id="circle12"
+     style="fill:#f9cf02;stroke-width:0.03333334" />
+  <path
+     d="m 1.235,7.68067 v 5.0909 H 2.2956 V 7.68063 Z m 3.6060667,0 v 5.0909 h 1.0606 V 7.68063 Z M 2.5077333,8.52913 v 0.4242 h 2.1212 V 8.5291 Z m 0,2.96967 v 0.42427 h 2.1212 v -0.42424 z m 0,-3.81817 h 2.1212 l -1.0606,0.63637 z m 0,4.45457 h 2.1212 l -1.0606,0.63633 z"
+     id="path14"
+     inkscape:connector-curvature="0"
+     style="fill:#f9cf02;stroke-width:0.03333334" />
+  <circle
+     cx="3.5683334"
+     cy="10.226105"
+     r="1.1242334"
+     id="circle16"
+     style="fill:#f9cf02;stroke:#c4272f;stroke-width:0.12726668" />
+  <path
+     d="m 3.5683333,9.10187 a 0.56213333,0.56213333 0 0 1 0,1.12423 0.56213333,0.56213333 0 1 0 0,1.12423"
+     id="path18"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#c4272f;stroke-width:0.12726668" />
+  <circle
+     r="0.21213333"
+     cy="9.6639709"
+     cx="3.5683334"
+     id="circle20"
+     style="fill:#c4272f;stroke-width:0.03333334" />
+  <circle
+     r="0.21213333"
+     cy="10.788239"
+     cx="3.5683334"
+     id="circle22"
+     style="fill:#c4272f;stroke-width:0.03333334" />
+</svg>

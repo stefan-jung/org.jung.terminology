@@ -5,17 +5,21 @@
 @placeholderColor: #bd4932;
 @focusedPlaceholderColor: #105b63;
 @headerBorderColor: #767676;
-@borderColor: #3d3d3d;
 @preferredColor: #beffbe;
 @admittedColor: #feffbe;
 @notRecommendedColor: #ffbfbf;
 @highlightBackgroundColor: #dbefff;
 
+// Dimensions
+@containerWidth: 768px;
+
 // oxy_buttonGroup
 @oxy_buttonGroup_fontInherit: 'true';
 @oxy_buttonGroup_transparent: 'true';
 
-// Dark Theme Colors
+// Borders
+@border: 1pt solid #3d3d3d;
+@borderColor: #3d3d3d;
 @borderColorDark: #767676;
 
 // Icons
@@ -24,13 +28,14 @@
 
 // Font Families
 @font: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+@fontSize: 16px;
 
 *[class~="topic/related-links"]:before {
     display: none;
 }
 
 * {
-    font-family: Arial;
+    font-family: @font;
 }
 
 .header {
@@ -40,56 +45,77 @@
     font-size: 8pt;
     font-style: normal;
     font-weight: normal;
-    padding-top: 0.5em !important;
-    padding-bottom: 0.0em;
-    padding-left: 0.3em !important;
-    padding-right: 0.0em !important;
-    margin-top: 0.0em !important;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+    padding-left: 0.3em;
+    padding-right: 0;
+    margin-top: 0;
     margin-bottom: 0.2em;
-    margin-left: 0.0 !important;
-    margin-right: 0.0em !important;
+    margin-left: 0;
+    margin-right: 0;
     /*width: inherit !important;*/
-    width: 120%;
-    height: 111px !important;
+    /*width: 120%;*/
+    /*height: 111px !important;*/
 }
 
-.mainBlock {
+.blockElement {
     border: 1pt solid @borderColor;
+    .defaultElement();
+}
+
+.blockElementNoBorder {
+    border: none;
+    .defaultElement();
+}
+
+.defaultElement {
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         border: 1pt solid @borderColorDark;
     }
     display: block;
     font-family: @font;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    padding-top: 0.0em;
-    padding-bottom: 0.2em;
-    padding-left: 0.0em;
-    padding-right: 0.0em !important;
-    max-width: 700px;
-}
-
-.mainEditableBlock {
-    border: 1pt solid @borderColor;
-    @media oxygen-high-contrast-black, oxygen-dark-theme {
-        border: 1pt solid @borderColorDark;
-    }
-    display: block;
-    font-family: @font;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    padding-top: 0.0em;
-    padding-bottom: 0.2em;
-    padding-left: 0.2em;
-    padding-right: 0.2em !important;
-    max-width: 700px;
-    visibility: visible;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /* visibility: -oxy-collapse-text; */
+    color: black;
+    width: 99% !important;
+    -oxy-display-tags: none;
     -oxy-show-placeholder: always;
     -oxy-editable: true;
+}
+
+.enableEditModeButton {
+    content:
+    oxy_button(
+        transparent, 'true',
+        action, oxy_action(
+            name, 'TogglePseudoClassOperation', 
+            description, 'TogglePseudoClassOperation Desc.',
+            icon, url('../icons/expand_12.png'), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation',
+            arg-elementLocation, '.',
+            arg-name, 'edit-mode',
+            arg-includeAllNodes, 'yes'
+        )
+    )
+}
+
+.disableEditModeButton {
+    content:
+    oxy_button(
+        transparent, 'true',
+        action, oxy_action(
+            name, 'TogglePseudoClassOperation', 
+            description, 'TogglePseudoClassOperation Desc.',
+            icon, url('../icons/collapse_12.png'), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.TogglePseudoClassOperation',
+            arg-elementLocation, '.',
+            arg-name, 'edit-mode',
+            arg-includeAllNodes, 'yes'
+        )
+    )
 }
 
 .afterBlock {
@@ -100,40 +126,29 @@
     padding: 0.1em;
 }
 
-.uiElement {
-    display: block;
-    margin-top: -1.5em;
-    margin-left: 10em;
-    padding-top: 0.1em;
-    -oxy-display-tags: none;
-}
-
-.uiElementLabel {
-    width: 25% !important;
-    padding-top: 0.1em;
-    padding-left: 1.0em;
+.col1 {
+    width: 20%;
     font-weight: normal;
+    height: 20px;
+    display: inline-block;
+    line-height: 2em;
+    padding-left: 5px;
     font-size: 0.8em;
     font-family: @font;
+}
+
+.col2 {
+    width: 75%;
+    line-height: 2em;
+    height: 20px;
+    display: inline-block;
+    float: right;
+    -oxy-display-tags: none;
 }
 
 .indent {
     width: 25%;
     content: ' ';
-}
-
-.deleteButton() {
-    content: 
-    oxy_button(
-        action, oxy_action(
-            name, 'Delete', 
-            description, 'Delete the current element', 
-            icon, url(@deleteIcon), 
-            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
-            arg-elementLocation, '.'
-        ),
-        transparent, true
-    );
 }
 
 .keyrefButton() {
@@ -149,8 +164,8 @@
     );
 }
 
-.closeButton {
-    content:
+.deleteElementButton {
+    /*content:
     oxy_button(
         action, oxy_action(
             name, 'Delete', 
@@ -162,10 +177,26 @@
         transparent, @oxy_buttonGroup_transparent
     );
     display: block;
-    text-align: right;
-    margin-top: -1.8em !important;
+    z-index: 5;
+    float: right;
+    margin-right: -9.0em;
+    margin-top: -1.65em !important;
     max-width:-moz-max-content;
-    margin-right: -8.0em;
+    text-align: right;*/
+}
+
+.deleteInlineElementButton() {
+    content: 
+    oxy_button(
+        action, oxy_action(
+            name, 'Delete', 
+            description, 'Delete the current element', 
+            icon, url(@deleteIcon), 
+            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
+            arg-elementLocation, '.'
+        ),
+        transparent, true
+    );
 }
 
 .openKeyrefButton {
@@ -235,20 +266,20 @@
 /* Footer */
 *[class~="termentry/termentry"]:after(9),
 *[class~="termmap/termmap"]:after(9) {
-    content: '${i18n(doctales.developedByDoctales)} ';
-    link: 'https://doctales.github.io';
+    content: '${i18n(doctales.developedBy)}' "  ";
     color: #767676;
+    link: 'https://doctales.github.io';
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         color: inherit !important;
     }
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 0.7em;
-    font-family: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 *[class~="termentry/termentry"]:after(10),
 *[class~="termmap/termmap"]:after(10) {
     content: ' ';
-    width: 5em;
+    width: 5.5em;
     background-image: url('../icons/doctales.png');
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         background-image: url('../icons/doctales_dark.png') !important;

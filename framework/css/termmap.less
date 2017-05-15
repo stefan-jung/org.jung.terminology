@@ -20,13 +20,13 @@
         fontInherit, @oxy_buttonGroup_fontInherit,
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.termref')
+            oxy_action(id, 'doctales.termref.add')
         )
     );
 }
 
 *[class~="termmap/termref"] {
-    .mainBlock();
+    .blockElement();
 }
 
 *[class~="termmap/termref"][format] {
@@ -42,8 +42,8 @@
         fontInherit, @oxy_buttonGroup_fontInherit,
         actions, 
         oxy_action_list(
-            oxy_action(id, 'doctales.add.termref'),
-            oxy_action(id, 'doctales.delete.termref')
+            oxy_action(id, 'doctales.termref.add'),
+            oxy_action(id, 'doctales.termref.delete')
         )
     );
 }
@@ -52,8 +52,8 @@
     .separator();
 }
 
-*[class~="termmap/termref"]:before(10) {
-    .closeButton();
+*[class~="termmap/termref"]:hover:before(10) {
+    .deleteElementButton();
 }
 
 *[class~="termmap/termref"]:before(9) {
@@ -66,7 +66,7 @@
 
 *[class~="termmap/termref"]:before(7) {
     content: "href";
-    .uiElementLabel();
+    .col1();
     .link();
 }
 
@@ -76,13 +76,13 @@
           edit, '@href',
           columns, 40
     );
-    .uiElement();
+    .col2();
     padding-left: 0.5em;
 }
 
 *[class~="termmap/termref"]:before(5) {
     content: "keys";
-    .uiElementLabel();
+    .col1();
 }
 
 *[class~="termmap/termref"]:before(4) {
@@ -91,13 +91,13 @@
           edit, '@keys',
           columns, 40
     );
-    .uiElement();
+    .col2();
     padding-left: 0.5em;
 }
 
 *[class~="termmap/termref"]:before(3) {
     content: "termdomain";
-    .uiElementLabel();
+    .col1();
 }
 
 *[class~="termmap/termref"]:before(2) {
@@ -106,7 +106,7 @@
         edit, "@termdomain", 
         columns, 40
     );
-    .uiElement();
+    .col2();
     padding-left: 0.5em;
 }
 

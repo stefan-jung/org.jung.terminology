@@ -562,9 +562,7 @@
         <optional>
           <ref name="agreedWith"/>
         </optional>
-        <optional>
-          <ref name="partOfSpeech"/>
-        </optional>
+        <ref name="partOfSpeech"/>
         <zeroOrMore>
           <choice>
             <ref name="fullForm"/>

@@ -17,9 +17,4 @@
    <termVariant>wheel</termVariant>
   </fullForm>
  </termBody>
- <relations>
-  <partsOf>
-   <partOf keyref="drivetrain"/>
-  </partsOf>
- </relations>
 </termentry>
