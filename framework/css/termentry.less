@@ -533,7 +533,10 @@
         )
     );
     border-left: 1pt solid transparent !important;
-    border-top: 1pt solid black !important;
+    border-top: 1pt solid @borderColor !important;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        border-top: 1pt solid @borderColorDark !important;
+    }
     border-right: 1pt solid transparent !important;
     border-bottom: 1pt solid transparent !important;
     display: block;
@@ -543,7 +546,10 @@
     margin-right: -9pt;
     margin-bottom: -2pt;
     width: 100% - 2pt;
-    background-color: white;
+    background-color: @backgroundColor;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        background-color: @backgroundColorDark;
+    }
 }
 
 /*********************************************
