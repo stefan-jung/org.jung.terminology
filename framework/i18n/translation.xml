@@ -642,6 +642,10 @@
         <val lang="en_US">Annotation</val>
         <val lang="de_DE">Anmerkung</val>
     </key>
+    <key value="doctales.annotation.placeholder">
+        <val lang="en_US">Enter an annotation.</val>
+        <val lang="de_DE">Geben Sie eine Anmerkung ein.</val>
+    </key>
     <key value="doctales.annotation.add">
         <val lang="en_US">Add annotation</val>
         <val lang="de_DE">Anmerkung einfügen</val>

@@ -18,7 +18,7 @@
 @containerWidth: 768px;
 
 // oxy_buttonGroup
-@oxy_buttonGroup_fontInherit: 'true';
+@oxy_buttonGroup_fontInherit: 'false';
 @oxy_buttonGroup_transparent: 'true';
 
 // Borders
@@ -39,6 +39,26 @@
 @fontColor: #000000;
 @fontColorDark: #ffffff;
 
+// Buttons
+@deleteElementButton:
+oxy_button(
+    actionID, 'doctales.element.delete',
+    showIcon, true,
+    transparent, true
+);
+@moveElementUpButton:
+oxy_button(
+    actionID, 'doctales.move.element.up',
+    showIcon, true,
+    transparent, true
+);
+@moveElementDownButton:
+oxy_button(
+    actionID, 'doctales.move.element.down',
+    showIcon, true,
+    transparent, true
+);
+
 *[class~="topic/related-links"]:before {
     display: none;
 }
@@ -50,18 +70,6 @@
 .header {
     border-bottom: 0.05rem solid @headerBorderColor;
     display: block;
-    font-family: @font;
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: normal;
-    padding-top: 0.5em;
-    padding-bottom: 0;
-    padding-left: 0.3em;
-    padding-right: 0;
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .blockElement {
@@ -87,7 +95,6 @@
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    /* visibility: -oxy-collapse-text; */
     color: @fontColor;
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         color: @fontColorDark;
@@ -146,18 +153,13 @@
 .col1 {
     width: 20%;
     font-weight: normal;
-    height: 20px;
     display: inline-block;
-    line-height: 2em;
     padding-left: 5px;
-    font-size: 0.8em;
     font-family: @font;
 }
 
 .col2 {
     width: 75%;
-    line-height: 2em;
-    height: 20px;
     display: inline-block;
     float: right;
     -oxy-display-tags: none;
@@ -181,25 +183,26 @@
     );
 }
 
-.deleteElementButton {
-    /*content:
-    oxy_button(
-        action, oxy_action(
-            name, 'Delete', 
-            description, 'Delete the current element', 
-            icon, url(@deleteIcon), 
-            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
-            arg-elementLocation, '.'
-        ),
-        transparent, @oxy_buttonGroup_transparent
+/* The placeholder button is an empty and invisible button.
+ * It ensures, that the screen does not flicker,
+ * if a button appears on hover. */
+.placeholderButton() {
+    content: oxy_button(
+        actionID, 'doctales.dummy',
+        showIcon, true,
+        transparent, true,
     );
+}
+
+.topRightButtonContainer() {
+    color: transparent;
     display: block;
-    z-index: 5;
-    float: right;
-    margin-right: -9.0em;
-    margin-top: -1.65em !important;
-    max-width:-moz-max-content;
-    text-align: right;*/
+    margin-top: -28px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+    text-align: right;
+    width: 100%;
 }
 
 .deleteInlineElementButton() {

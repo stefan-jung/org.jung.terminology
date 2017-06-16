@@ -5,30 +5,27 @@
  * TERMENTRY
  *********************************************/
 *[class~="termentry/termentry"] {
-    display: block; 
-    empty-cells: true; 
-    font-family: @font; 
-    font-size: @fontSize; 
-    font-style: normal; 
-    font-weight: 400; 
-    line-height: 1.2; 
-    margin-bottom: 24px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 24px; 
-    min-height: 378px; 
-    outline-width: 0; 
-    padding-bottom: 80px; 
-    /*padding-left: 32px; 
-    padding-right: 16px;*/ 
-    padding-top: 32px; 
-    text-decoration-color: rgba(0,0,0,1.0); 
-    text-decoration-line: none; 
-    text-decoration-style: solid; 
+    display: block;
+    empty-cells: true;
+    font-family: @font;
+    font-size: @fontSize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    min-height: 378px;
+    outline-width: 0;
+    padding-bottom: 80px;
+    padding-top: 32px;
+    text-decoration-color: rgba(0,0,0,1.0);
+    text-decoration-line: none;
+    text-decoration-style: solid;
     width: @containerWidth;
     -oxy-display-tags: none;
 }
-
 *[class~="termentry/termentry"] > *[class~="topic/title"] {
     font-family: @font;
     font-weight: bold;
@@ -36,7 +33,6 @@
     -oxy-display-tags: none;
     width: 700px;
 }
-
 *[class~="termentry/termentry"] > *[class~="topic/title"]:after {
     .header();
     content:
@@ -44,7 +40,7 @@
         label, '${i18n(doctales.conceptLevel)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, false,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.definition.add'),
             oxy_action(id, 'doctales.partOfSpeech.add'),
@@ -69,7 +65,7 @@
         label, '${i18n(doctales.relations)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, false,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.antonyms.add'),
             oxy_action(id, 'doctales.partsOf.add'),
@@ -91,13 +87,20 @@
     oxy_buttonGroup(
         label, '${i18n(doctales.definition)}',
         transparent, @oxy_buttonGroup_transparent,
-        fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        fontInherit, false,
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.definitionSource.add'),
             oxy_action(id, 'doctales.definition.delete')
         )
     );
+}
+*[class~="termentry/definition"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/definition"]:hover:before(2) {
+    content: @deleteElementButton;
 }
 *[class~="termentry/definition"] {
     .blockElement();
@@ -121,13 +124,25 @@
     oxy_buttonGroup(
         label, '${i18n(doctales.definitionSource)}',
         transparent, @oxy_buttonGroup_transparent,
-        fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        fontInherit, false,
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.sourceName.add'),
             oxy_action(id, 'doctales.sourceReference.add'),
             oxy_action(id, 'doctales.definitionSource.delete')
         )
+    );
+}
+*[class~="termentry/definitionSource"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/definitionSource"]:hover:before(2) {
+    content:
+    oxy_button(
+        actionID, 'doctales.element.delete',
+        showIcon, true,
+        transparent, true
     );
 }
 *[class~="termentry/definitionSource"] {
@@ -144,7 +159,7 @@
         label, '${i18n(doctales.fig)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.fig.delete')
         )
@@ -171,7 +186,6 @@
 }
 *[class~="topic/fig"] > *[class~="topic/title"] {
     .blockElementNoBorder();
-    /*visibility: -oxy-collapse-text;*/
     -oxy-show-placeholder: no !important;
 }
 
@@ -185,12 +199,12 @@
 }
 *[class~="topic/image"]:before(10) {
     .header();
-    content: 
+    content:
     oxy_buttonGroup(
         label, '${i18n(doctales.image)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.imageReference.add'),
             oxy_action(id, 'doctales.alt.add'),
@@ -242,7 +256,7 @@
         label, '${i18n(doctales.alt)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.alt.delete')
         )
@@ -268,7 +282,7 @@
         label, '${i18n(doctales.termSource)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.sourceName.add'),
             oxy_action(id, 'doctales.sourceReference.add'),
@@ -291,7 +305,7 @@
         label, '${i18n(doctales.sourceName)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.sourceName.delete')
         )
@@ -307,12 +321,12 @@
  * SOURCE REFERENCE
  *********************************************/
 *[class~="termentry/sourceReference"]:before(15) {
-    content: 
+    content:
     oxy_buttonGroup(
         label, '${i18n(doctales.sourceReference)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.sourceReference.delete')
         )
@@ -372,7 +386,7 @@
 }
 *[class~="termentry/sourceReference"]:edit-mode:after(8) {
     content:
-    oxy_combobox( 
+    oxy_combobox(
         edit, '@format',
         columns, 13
     );
@@ -387,7 +401,7 @@
 }
 *[class~="termentry/sourceReference"]:edit-mode:after(11) {
     content:
-    oxy_combobox( 
+    oxy_combobox(
         edit, '@scope',
         columns, 13
     ) !important;
@@ -402,19 +416,23 @@
         label, '${i18n(doctales.annotation)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.annotation.delete')
         )
     );
     .header();
 }
-*[class~="termentry/annotation"]:before(8) {
-    .separator();
+*[class~="termentry/annotation"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/annotation"]:hover:before(2) {
+    content: @deleteElementButton;
 }
 *[class~="termentry/annotation"] {
-    -oxy-placeholder-content: "<annotation>";
     .blockElement();
+    -oxy-placeholder-content: "${i18n(doctales.annotation.placeholder)}";
 }
 
 /*********************************************
@@ -426,13 +444,20 @@
         label, '${i18n(doctales.termContext)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.termContextText.add'),
             oxy_action(id, 'doctales.termContext.delete')
         )
     );
     .header();
+}
+*[class~="termentry/termContext"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/termContext"]:hover:before(2) {
+    content: @deleteElementButton;
 }
 *[class~="termentry/termContext"] {
     .blockElement();
@@ -447,7 +472,7 @@
         label, '${i18n(doctales.termContextText)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.termContextText.delete')
         )
@@ -459,7 +484,6 @@
     -oxy-placeholder-content: "${i18n(doctales.termContextText.placeholder)}";
 }
 
-
 /*********************************************
  * TERM CONTEXT SOURCE
  *********************************************/
@@ -469,7 +493,7 @@
         label, '${i18n(doctales.termContextSource)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.termContextSource.delete')
         )
@@ -491,23 +515,21 @@
         label, '${i18n(doctales.partOfSpeech)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.partOfSpeech.delete')
         )
     );
-    .col1();
 }
 *[class~="termentry/partOfSpeech"]:before(7) {
     content:
-    oxy_combobox( 
+    oxy_combobox(
         edit, '@value',
         editable, false,
         values, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article, other',
         labels, '${i18n(doctales.partOfSpeech.noun)}, ${i18n(doctales.partOfSpeech.pronoun)}, ${i18n(doctales.partOfSpeech.adjective)}, ${i18n(doctales.partOfSpeech.verb)}, ${i18n(doctales.partOfSpeech.adverb)}, ${i18n(doctales.partOfSpeech.preposition)}, ${i18n(doctales.partOfSpeech.conjunction)}, ${i18n(doctales.partOfSpeech.interjection)}, ${i18n(doctales.partOfSpeech.article)}, ${i18n(doctales.partOfSpeech.other)}',
         columns, 15
     );
-    .col2();
 }
 *[class~="termentry/partOfSpeech"] {
     -oxy-show-placeholder: no !important;
@@ -524,7 +546,7 @@
         label, '${i18n(doctales.termLevel)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, false,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.abbreviation.add'),
             oxy_action(id, 'doctales.acronym.add'),
@@ -532,20 +554,20 @@
             oxy_action(id, 'doctales.verb.add')
         )
     );
-    border-left: 1pt solid transparent !important;
-    border-top: 1pt solid @borderColor !important;
+    border-left: 1px solid transparent !important;
+    border-top: 1px solid @borderColor !important;
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         border-top: 1pt solid @borderColorDark !important;
     }
-    border-right: 1pt solid transparent !important;
-    border-bottom: 1pt solid transparent !important;
+    border-right: 1px solid transparent !important;
+    border-bottom: 1px solid transparent !important;
     display: block;
     padding-top: 2.0em;
-    margin-left: -2pt;
-    margin-top: -2pt;
-    margin-right: -9pt;
-    margin-bottom: -2pt;
-    width: 100% - 2pt;
+    margin-left: -1px;
+    margin-top: -2px;
+    margin-right: -1px;
+    margin-bottom: -2px;
+    width: 100%;
     background-color: @backgroundColor;
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         background-color: @backgroundColorDark;
@@ -561,7 +583,7 @@
         label, '${i18n(doctales.note)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.note.delete')
         )
@@ -595,7 +617,7 @@
         label, '${i18n(doctales.domains)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.domain.add'),
             oxy_action(id, 'doctales.domains.delete')
@@ -620,7 +642,7 @@
         label, '${i18n(doctales.domain)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.domain.add'),
             oxy_action(id, 'doctales.domain.delete')
@@ -653,15 +675,19 @@
         label, '${i18n(doctales.agreedWith)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.termCommitteeMember.add'),
             oxy_action(id, 'doctales.agreedWith.delete')
         )
     );
 }
-*[class~="termentry/agreedWith"]:before(9) {
-    .deleteElementButton();
+*[class~="termentry/agreedWith"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/agreedWith"]:hover:before(2) {
+    content: @deleteElementButton;
 }
 *[class~="termentry/agreedWith"] {
     .blockElement();
@@ -676,7 +702,7 @@
         label, '${i18n(doctales.termCommitteeMember)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.termCommitteeMember.add'),
             oxy_action(id, 'doctales.termCommitteeMember.delete')
@@ -697,68 +723,55 @@
  * TERM NOTATION
  *********************************************/
 *[class~="termentry/termNotation"]:before(50) {
-    .col1();
+    /*.col1();*/
+    display: inline-block;
+    width: 150px;
 }
-*[class~="termentry/termNotation"]:before(13) {
-    content: attr(language) " ";
-    font-weight: bold;
+*[class~="termentry/termNotation"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+    .header();
 }
-*[class~="termentry/termNotation"][usage='admitted']:before(12) {
-    content: "${i18n(doctales.usage.admitted)}";
-}
-*[class~="termentry/termNotation"][usage='notRecommended']:before(12) {
-    content: "${i18n(doctales.usage.notRecommended)}";
-}
-*[class~="termentry/termNotation"][usage='preferred']:before(12) {
-    content: "${i18n(doctales.usage.preferred)}";
-}
-*[class~="termentry/termNotation"][usage='obsolete']:before(12) {
-    content: "${i18n(doctales.usage.obsolete)}";
-}
-*[class~="termentry/termNotation"]:before(11) {
-    .enableEditModeButton();
-}
-*[class~="termentry/termNotation"]:before(9) {
-    .separator();
-}
-*[class~="termentry/termNotation"]:edit-mode:before(11) {
-    .disableEditModeButton();
-}
-*[class~="termentry/termNotation"]:edit-mode:before(10) {
-    .separator();
-}
-*[class~="termentry/termNotation"]:edit-mode:before(9) {
-    content: "${i18n(doctales.usage)}";
-    .col1();
-}
-*[class~="termentry/termNotation"]:edit-mode:before(8) {
+*[class~="termentry/termNotation"]:hover:before(2) {
     content:
-    oxy_combobox( 
+    @moveElementUpButton
+    @moveElementDownButton
+    @deleteElementButton;
+}
+// The first element after partOfSpeech
+*[class~="termentry/partOfSpeech"] + *[class~="termentry/termNotation"]:hover:before(2) {
+    content:
+    @moveElementDownButton
+    @deleteElementButton;
+}
+*[class~="termentry/termNotation"]:last-child:hover:before(2) {
+    content:
+    @moveElementUpButton
+    @deleteElementButton;
+}
+*[class~="termentry/termNotation"]:before(21) {
+    content:
+    "${i18n(doctales.language)}"
+    "   "
+    oxy_combobox(
+        edit, '@language',
+        editable, false,
+        columns, 8,
+    );
+}
+*[class~="termentry/termNotation"]:before(19) {
+    content:
+    "      "
+    "${i18n(doctales.usage)}"
+    "   "
+    oxy_combobox(
         edit, '@usage',
         editable, false,
         values, 'admitted, notRecommended, obsolete, preferred',
-        labels, 'admitted, not recommended, obsolete, preferred'
-        columns, 20
+        labels, '${i18n(doctales.usage.admitted)}, ${i18n(doctales.usage.notRecommended)}, ${i18n(doctales.usage.obsolete)}, ${i18n(doctales.usage.preferred)}'
+        columns, 15
     );
-    .col2();
-    padding-left: 1.0em;
-}
-*[class~="termentry/termNotation"]:edit-mode:before(7) {
-    .separator();
-}
-*[class~="termentry/termNotation"]:edit-mode:before(6) {
-    content: "${i18n(doctales.language)}";
-    .col1();
-}
-*[class~="termentry/termNotation"]:edit-mode:before(5) {
-    content:
-    oxy_combobox( 
-        edit, '@language',
-        editable, false,
-        columns, 20,
-    );
-    .col2();
-    padding-left: 1.0em;
+    font-size: 0.8em;
 }
 *[class~="termentry/termNotation"]:edit-mode:before(4) {
     .separator();
@@ -770,7 +783,7 @@
 *[class~="termentry/termNotation"]:edit-mode:before(2) {
     content:
     oxy_textfield(
-        edit, "@termdomain", 
+        edit, "@termdomain",
         columns, 50
     );
     .col2();
@@ -804,7 +817,7 @@
         label, '${i18n(doctales.fullForm)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.abbreviation.add'),
             oxy_action(id, 'doctales.acronym.add'),
@@ -813,8 +826,6 @@
             oxy_action(id, 'doctales.abbreviation.renameTo'),
             oxy_action(id, 'doctales.acronym.renameTo'),
             oxy_action(id, 'doctales.verb.renameTo'),
-            oxy_action(id, 'doctales.move.element.up'),
-            oxy_action(id, 'doctales.move.element.down'),
             oxy_action(id, 'doctales.fullForm.delete')
         )
     );
@@ -829,7 +840,7 @@
         label, '${i18n(doctales.abbreviation)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.abbreviation.add'),
             oxy_action(id, 'doctales.acronym.add'),
@@ -838,8 +849,6 @@
             oxy_action(id, 'doctales.acronym.renameTo'),
             oxy_action(id, 'doctales.fullForm.renameTo'),
             oxy_action(id, 'doctales.verb.renameTo'),
-            oxy_action(id, 'doctales.move.element.up'),
-            oxy_action(id, 'doctales.move.element.down'),
             oxy_action(id, 'doctales.abbreviation.delete')
         )
     );
@@ -854,7 +863,7 @@
         label, '${i18n(doctales.acronym)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.abbreviation.add'),
             oxy_action(id, 'doctales.acronym.add'),
@@ -863,8 +872,6 @@
             oxy_action(id, 'doctales.abbreviation.renameTo'),
             oxy_action(id, 'doctales.fullForm.renameTo'),
             oxy_action(id, 'doctales.verb.renameTo'),
-            oxy_action(id, 'doctales.move.element.up'),
-            oxy_action(id, 'doctales.move.element.down'),
             oxy_action(id, 'doctales.acronym.delete')
         )
     );
@@ -879,7 +886,7 @@
         label, '${i18n(doctales.verb)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.abbreviation.add'),
             oxy_action(id, 'doctales.acronym.add'),
@@ -888,8 +895,6 @@
             oxy_action(id, 'doctales.abbreviation.renameTo'),
             oxy_action(id, 'doctales.acronym.renameTo'),
             oxy_action(id, 'doctales.fullForm.renameTo'),
-            oxy_action(id, 'doctales.move.element.up'),
-            oxy_action(id, 'doctales.move.element.down'),
             oxy_action(id, 'doctales.verb.delete')
         )
     );
@@ -904,7 +909,7 @@
         label, '${i18n(doctales.termVariant)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.termSource.add'),
             oxy_action(id, 'doctales.termContext.add'),
@@ -933,7 +938,7 @@
 }
 *[class~="termentry/termVariant"][case]:edit-mode:after(4) {
     content:
-    oxy_combobox( 
+    oxy_combobox(
         edit, '@case',
         editable, false,
         columns, 20
@@ -948,8 +953,8 @@
     .col1();
 }
 *[class~="termentry/termVariant"][number]:edit-mode:after(7) {
-    content: 
-    oxy_combobox( 
+    content:
+    oxy_combobox(
         edit, '@number',
         editable, false,
         columns, 20
@@ -972,7 +977,7 @@
         label, '${i18n(doctales.antonyms)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.antonym.add'),
             oxy_action(id, 'doctales.antonyms.delete')
@@ -984,7 +989,6 @@
     visibility: -oxy-collapse-text;
     .blockElement();
 }
-
 /*********************************************
  * ANTONYM
  *********************************************/
@@ -994,7 +998,7 @@
         label, '${i18n(doctales.antonym)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.antonym.add'),
             oxy_action(id, 'doctales.antonym.delete')
@@ -1012,7 +1016,7 @@
         label, '${i18n(doctales.instancesOf)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.instanceOf.add'),
             oxy_action(id, 'doctales.instancesOf.delete')
@@ -1034,7 +1038,7 @@
         label, '${i18n(doctales.instanceOf)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.instanceOf.add'),
             oxy_action(id, 'doctales.instanceOf.delete')
@@ -1052,7 +1056,7 @@
         label, '${i18n(doctales.partsOf)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.partOf.add'),
             oxy_action(id, 'doctales.partsOf.delete')
@@ -1074,7 +1078,7 @@
         label, '${i18n(doctales.partOf)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.partOf.add'),
             oxy_action(id, 'doctales.partOf.delete')
@@ -1092,7 +1096,7 @@
         label, '${i18n(doctales.hypernyms)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.hypernym.add'),
             oxy_action(id, 'doctales.hypernyms.delete')
@@ -1114,7 +1118,7 @@
         label, '${i18n(doctales.hypernym)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.hypernym.add'),
             oxy_action(id, 'doctales.hypernym.delete')
@@ -1132,7 +1136,7 @@
         label, '${i18n(doctales.hyponyms)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.hyponym.add'),
             oxy_action(id, 'doctales.hyponyms.delete')
@@ -1154,7 +1158,7 @@
         label, '${i18n(doctales.hyponym)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.hyponym.add'),
             oxy_action(id, 'doctales.hyponym.delete')
@@ -1172,7 +1176,7 @@
         label, '${i18n(doctales.relatedTerms)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.relatedTerm.add'),
             oxy_action(id, 'doctales.relatedTerms.delete')
@@ -1194,7 +1198,7 @@
         label, '${i18n(doctales.relatedTerm)}',
         transparent, @oxy_buttonGroup_transparent,
         fontInherit, @oxy_buttonGroup_fontInherit,
-        actions, 
+        actions,
         oxy_action_list(
             oxy_action(id, 'doctales.relatedTerm.add'),
             oxy_action(id, 'doctales.relatedTerm.delete')
@@ -1206,14 +1210,18 @@
 /*********************************************
  * RELATIONS LINKLIST
  *********************************************/
-*[class~="termentry/relations-linklist"]:before(8) {
-    .separator();
+*[class~="termentry/relations-linklist"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/relations-linklist"]:hover:before(2) {
+    content:
+    @deleteElementButton;
 }
 *[class~="termentry/relations-linklist"] {
     .blockElement();
     -oxy-show-placeholder: no !important;
 }
-
 /*********************************************
  * TERM RELATION
  *********************************************/
