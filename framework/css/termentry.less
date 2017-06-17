@@ -104,6 +104,7 @@
 }
 *[class~="termentry/definition"] {
     .blockElement();
+    .border();
 }
 
 /*********************************************
@@ -111,8 +112,8 @@
  *********************************************/
 *[class~="termentry/definitionText"] {
     -oxy-placeholder-content: "${i18n(doctales.definitionText.placeholder)}";
-    border: none !important;
     .blockElement();
+    .noBorder();
 }
 
 /*********************************************
@@ -147,6 +148,39 @@
 }
 *[class~="termentry/definitionSource"] {
     .blockElement();
+    .border();
+}
+
+/*********************************************
+ * EQUATION FIGURE
+ *********************************************/
+*[class~="topic/fig"][class~="equation-d/equation-figure"]:before(10) {
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.equation-figure)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, @oxy_buttonGroup_fontInherit,
+        actions,
+        oxy_action_list(
+            oxy_action(id, 'doctales.equation-figure.delete')
+        )
+    );
+    .header();
+}
+*[class~="topic/fig"][class~="equation-d/equation-figure"]:before {
+    .hideContent();
+}
+*[class~="topic/fig"][class~="equation-d/equation-figure"] {
+    content:
+    oxy_textArea(
+        edit, '#content',
+        contentType, 'text/xml',
+        width, 100%,
+    );
+    white-space: pre-wrap;
+    visibility: -oxy-collapse-text;
+    .blockElement();
+    .border();
 }
 
 /*********************************************
@@ -165,12 +199,20 @@
         )
     );
 }
-*[class~="topic/fig"]:before(8) {
+/**[class~="topic/fig"]:before(8) {
     .separator();
+}*/
+*[class~="topic/fig"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="topic/fig"]:hover:before(2) {
+    content: @deleteElementButton;
 }
 *[class~="topic/fig"] {
     visibility: -oxy-collapse-text;
     .blockElement();
+    .border();
 }
 *[class~="topic/fig"] > *[class~="topic/title"]:before(10) {
     content: "${i18n(doctales.fig.title)}";
@@ -185,7 +227,7 @@
     );
 }
 *[class~="topic/fig"] > *[class~="topic/title"] {
-    .blockElementNoBorder();
+    .blockElement();
     -oxy-show-placeholder: no !important;
 }
 
@@ -194,8 +236,8 @@
  *********************************************/
 *[class~="topic/image"] {
     content: attr(href , url);
-    visibility: -oxy-collapse-text;
     .blockElement();
+    .border();
 }
 *[class~="topic/image"]:before(10) {
     .header();
@@ -212,7 +254,6 @@
         )
     );
     -oxy-show-placeholder: no !important;
-    visibility: -oxy-collapse-text;
 }
 *[class~="topic/image"]:after(1) {
     .separator();
@@ -314,7 +355,7 @@
 }
 *[class~="termentry/sourceName"] {
     -oxy-placeholder-content: "${i18n(doctales.sourceName.placeholder)}";
-    .blockElementNoBorder();
+    .blockElement();
 }
 
 /*********************************************
@@ -341,19 +382,19 @@
 }
 *[class~="termentry/sourceReference"] {
     -oxy-placeholder-content: "${i18n(doctales.sourceReference.placeholder)}";
-    .blockElementNoBorder();
+    .blockElement();
 }
 *[class~="termentry/sourceReference"]:edit-mode {
-    border: @border;
+    .border();
 }
 *[class~="termentry/sourceReference"]:after(1) {
     display: inline-block;
-    margin-left: 15pt;
-    margin-right: 5pt;
-    link: attr(href);
-    background-image: url('../icons/link_12.png');
-    background-repeat: no-repeat;
-    content: "    ";
+    content:
+    oxy_button(
+        actionID, 'doctales.open.url',
+        showIcon, true,
+        transparent, true
+    );
 }
 *[class~="termentry/sourceReference"]:after(2) {
     .enableEditModeButton();
@@ -432,6 +473,7 @@
 }
 *[class~="termentry/annotation"] {
     .blockElement();
+    .border();
     -oxy-placeholder-content: "${i18n(doctales.annotation.placeholder)}";
 }
 
@@ -461,6 +503,7 @@
 }
 *[class~="termentry/termContext"] {
     .blockElement();
+    .border();
 }
 
 /*********************************************
@@ -481,6 +524,7 @@
 }
 *[class~="termentry/termContextText"] {
     .blockElement();
+    .border();
     -oxy-placeholder-content: "${i18n(doctales.termContextText.placeholder)}";
 }
 
@@ -502,7 +546,7 @@
 }
 *[class~="termentry/termContextSource"] {
     .blockElement();
-    -oxy-editable: true;
+    .border();
     -oxy-placeholder-content: "${i18n(doctales.termContextSource.placeholder)}";
 }
 
@@ -534,7 +578,8 @@
 *[class~="termentry/partOfSpeech"] {
     -oxy-show-placeholder: no !important;
     .blockElement();
-    width: 100%;
+    .border();
+    /*width: 100%;*/
 }
 *[class~="termentry/partOfSpeech"]:after {
     .separator();
@@ -590,22 +635,17 @@
     );
     .header();
 }
-*[class~="topic/note"]:before(8) {
-    .col1();
-    content: "${i18n(doctales.note)}";
-    padding-left: 0.5em;
+*[class~="topic/note"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
 }
-*[class~="topic/note"]:before {
-    .hideContent();
+*[class~="topic/note"]:hover:before(2) {
+    content: @deleteElementButton;
 }
 *[class~="topic/note"] {
-    content:
-    oxy_textArea(
-        edit, '#content',
-        contentType, 'text/xml'
-    );
-    visibility: -oxy-collapse-text;
+    -oxy-placeholder-content: "${i18n(doctales.note.placeholder)}";
     .blockElement();
+    .border();
 }
 
 /*********************************************
@@ -629,8 +669,8 @@
     .separator();
 }
 *[class~="termentry/domains"] {
-    visibility: -oxy-collapse-text;
     .blockElement();
+    .border();
 }
 
 /*********************************************
@@ -650,19 +690,16 @@
     );
     .col1();
 }
-*[class~="termentry/domain"]:before {
-    content:
+*[class~="termentry/domain"] {
+content:
     oxy_textfield(
         edit, '@value',
-        columns, 50
+        columns, 50,
+        tooltip, '${i18n(doctales.domain.placeholder)}'
     ) !important;
-    float: right;
-    display: inline-block;
-}
-*[class~="termentry/domain"] {
+    .col2();
     visibility: -oxy-collapse-text;
-    -oxy-show-placeholder: no !important;
-    .blockElementNoBorder();
+    -oxy-show-placeholder: no !important; 
 }
 
 /*********************************************
@@ -715,7 +752,7 @@
 }
 *[class~="termentry/termCommitteeMember"] {
     list-style: none !important;
-    .blockElementNoBorder();
+    .blockElement();
     -oxy-placeholder-content: "${i18n(doctales.termCommitteeMember.placeholder)}";
 }
 
@@ -791,6 +828,7 @@
 }
 *[class~="termentry/termNotation"] {
     .blockElement();
+    .border();
 }
 *[class~="termentry/termNotation"][usage~="preferred"] {
     background-color: @preferredColor;
@@ -1025,7 +1063,6 @@
     .header();
 }
 *[class~="termentry/instancesOf"] {
-    visibility: -oxy-collapse-text;
     .blockElement();
 }
 
@@ -1220,6 +1257,7 @@
 }
 *[class~="termentry/relations-linklist"] {
     .blockElement();
+    .border();
     -oxy-show-placeholder: no !important;
 }
 /*********************************************
@@ -1244,7 +1282,7 @@
     .col2();
 }
 *[class~="termentry/termRelation"] {
-    .blockElementNoBorder();
+    .blockElement();
     -oxy-show-placeholder: no !important;
     visibility: -oxy-collapse-text;
 }

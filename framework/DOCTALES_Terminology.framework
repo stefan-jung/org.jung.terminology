@@ -2742,7 +2742,27 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;equation-figure/></String>
+																		<String>&lt;equation-figure id="equation-figure_jr2_qbm_g1b">
+  &lt;title>An Equation&lt;/title>
+  &lt;equation-block>
+    &lt;mathml>
+      &lt;m:math display="block">
+        &lt;m:mrow>
+          &lt;m:mfrac>
+            &lt;m:mrow>
+              &lt;m:mi>a&lt;/m:mi>
+            &lt;/m:mrow>
+            &lt;m:mrow>
+              &lt;m:mi>b&lt;/m:mi>
+            &lt;/m:mrow>
+          &lt;/m:mfrac>
+          &lt;m:mo>=&lt;/m:mo>
+          &lt;m:mi>c&lt;/m:mi>
+        &lt;/m:mrow>
+      &lt;/m:math>
+    &lt;/mathml>
+  &lt;/equation-block>
+&lt;/equation-figure></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2806,7 +2826,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')][1]</String>
+																<String></String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -5079,7 +5099,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/partOfSpeech ')][1]</String>
+																<String>not(self::*[contains(@class, ' termentry/partOfSpeech ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -6356,7 +6376,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/partOf ')]</String>
+																<String>self::*[contains(@class, ' mandatory ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -6953,6 +6973,68 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>164</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.open.url</String>
+												</field>
+												<field name="name">
+													<String>doctales.open.url</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/link_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/link_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>resourcePath</String>
+																		<String>@href</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.OpenInSystemAppOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>

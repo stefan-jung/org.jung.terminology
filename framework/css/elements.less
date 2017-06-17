@@ -24,6 +24,7 @@
 // Borders
 @border: 1pt solid #3d3d3d;
 @borderWidth: 0.05rem;
+@borderStyle: solid;
 @borderColor: #3d3d3d;
 @borderColorDark: #767676;
 
@@ -72,20 +73,27 @@ oxy_button(
     display: block;
 }
 
-.blockElement {
+/*.blockElement {
     border: 1pt solid @borderColor;
     .defaultElement();
 }
 
 .blockElementNoBorder {
-    border: none;
+    border: none !important;
     .defaultElement();
+}*/
+
+.border {
+    border-width: @borderWidth;
+    border-style: @borderStyle;
+    border-color: @borderColor;
 }
 
-.defaultElement {
-    border-width: @borderWidth;
-    border-style: solid;
-    border-color: @borderColor;
+.noBorder {
+    border: none !important;
+}
+
+.blockElement {
     @media oxygen-high-contrast-black, oxygen-dark-theme {
         border-color: @borderColorDark;
     }

@@ -13,6 +13,27 @@
     </definitionSource>
   </definition>
   <termBody>
+    <equation-figure id="equation-figure_jr2_qbm_g1b">
+      <title>An Equation</title>
+      <equation-block>
+        <mathml>
+          <m:math display="block">
+            <m:mrow>
+              <m:mfrac>
+                <m:mrow>
+                  <m:mi>a</m:mi>
+                </m:mrow>
+                <m:mrow>
+                  <m:mi>b</m:mi>
+                </m:mrow>
+              </m:mfrac>
+              <m:mo>=</m:mo>
+              <m:mi>c</m:mi>
+            </m:mrow>
+          </m:math>
+        </mathml>
+      </equation-block>
+    </equation-figure>
     <agreedWith>
       <termCommitteeMember>Bruce Wayne</termCommitteeMember>
       <termCommitteeMember>Peter Parker</termCommitteeMember>

@@ -318,29 +318,33 @@
     <!-- equation-figure -->
     <key value="doctales.equation-figure">
         <val lang="en_US">Equation</val>
-        <val lang="de_DE">Formel</val>
+        <val lang="de_DE">Gleichung</val>
     </key>
     <key value="doctales.equation-figure.add">
         <val lang="en_US">Add Equation</val>
-        <val lang="de_DE">Formel einfügen</val>
+        <val lang="de_DE">Gleichung einfügen</val>
     </key>
     <key value="doctales.equation-figure.add_description">
         <val lang="en_US">Add Equation</val>
-        <val lang="de_DE">Formel einfügen</val>
+        <val lang="de_DE">Gleichung einfügen</val>
     </key>
     <key value="doctales.equation-figure.delete">
         <val lang="en_US">Delete Equation</val>
-        <val lang="de_DE">Formel löschen</val>
+        <val lang="de_DE">Gleichung löschen</val>
     </key>
     <key value="doctales.equation-figure.delete_description">
         <val lang="en_US">Delete Equation</val>
-        <val lang="de_DE">Formel löschen</val>
+        <val lang="de_DE">Gleichung löschen</val>
     </key>
 
     <!-- note -->
     <key value="doctales.note">
         <val lang="en_US">Note</val>
         <val lang="de_DE">Hinweis</val>
+    </key>
+    <key value="doctales.note.placeholder">
+        <val lang="en_US">Provide additional information.</val>
+        <val lang="de_DE">Geben Sie zusätzliche Hinweise.</val>
     </key>
     <key value="doctales.note.add">
         <val lang="en_US">Add Note</val>
@@ -438,12 +442,22 @@
         <val lang="en_US">Delete Domains</val>
         <val lang="de_DE">Domänen löschen</val>
     </key>
+
+    <!-- domain -->
+    <key value="doctales.domain">
+        <val lang="en_US">Domain</val>
+        <val lang="de_DE">Domäne</val>
+    </key>
+    <key value="doctales.domain.placeholder">
+        <val lang="en_US">Give a textual description of the term field.</val>
+        <val lang="de_DE">Beschreiben Sie das Fachgebiet des Begriffs.</val>
+    </key>
     <key value="doctales.domain.add">
-        <val lang="en_US">Add a Domain</val>
+        <val lang="en_US">Add Domain</val>
         <val lang="de_DE">Domäne einfügen</val>
     </key>
     <key value="doctales.domain.add_description">
-        <val lang="en_US">Add a Domain</val>
+        <val lang="en_US">Add Domain</val>
         <val lang="de_DE">Domäne einfügen</val>
     </key>
     <key value="doctales.domain.delete">
@@ -1051,14 +1065,6 @@
     <key value="doctales.sourceName">
         <val lang="en_US">Printed Source</val>
         <val lang="de_DE">Literaturquelle</val>
-    </key>
-    <key value="doctales.domains">
-        <val lang="en_US">Domains</val>
-        <val lang="de_DE">Domänen</val>
-    </key>
-    <key value="doctales.domain">
-        <val lang="en_US">Domain</val>
-        <val lang="de_DE">Domäne</val>
     </key>
     <key value="doctales.usage">
         <val lang="en_US">Usage</val>
