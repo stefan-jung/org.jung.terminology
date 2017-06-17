@@ -275,6 +275,38 @@
         <val lang="de_DE">Notiz löschen</val>
     </key>
 
+    <!-- altDefinition -->
+    <key value="doctales.altDefinition">
+        <val lang="en_US">Alternative Definition</val>
+        <val lang="de_DE">Alternative Definition</val>
+    </key>
+    <key value="doctales.altDefinition.add">
+        <val lang="en_US">Add alternative definition</val>
+        <val lang="de_DE">Alternative Definition einfügen</val>
+    </key>
+    <key value="doctales.altDefinition.add_description">
+        <val lang="en_US">Add alternative definition</val>
+        <val lang="de_DE">Alternative Definition einfügen</val>
+    </key>
+    <key value="doctales.altDefinition.delete">
+        <val lang="en_US">Delete alternative definition</val>
+        <val lang="de_DE">Alternative Definition löschen</val>
+    </key>
+    <key value="doctales.altDefinition.delete_description">
+        <val lang="en_US">Delete agreements</val>
+        <val lang="de_DE">Alternative Definition löschen</val>
+    </key>
+    
+    <!-- altDefinitionText -->
+    <key value="doctales.altDefinitionText">
+        <val lang="en_US">Definition</val>
+        <val lang="de_DE">Definition</val>
+    </key>
+    <key value="doctales.altDefinitionText.placeholder">
+        <val lang="en_US">Enter the alternative definition of the concept.</val>
+        <val lang="de_DE">Geben Sie die alternative Definition des Begriffs ein.</val>
+    </key>
+
     <!-- agreedWith -->
     <key value="doctales.agreedWith">
         <val lang="en_US">Agreed With</val>

@@ -23,14 +23,16 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-    
+
+    <!-- Definition Text -->
     <xsl:template match="*[contains(@class, ' termentry/definitionText ')]">
         <xsl:element name="div">
             <xsl:attribute name="class">panel-body shortdesc definitionText</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-    
+
+    <!-- Definition Source -->
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
         <xsl:element name="div">
             <xsl:attribute name="class">panel-footer</xsl:attribute>
@@ -42,6 +44,31 @@
                     <xsl:with-param name="id" select="'Delimiter String'"/>
                 </xsl:call-template>
             </xsl:element>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Alternative Definition -->
+    <xsl:template match="*[contains(@class, ' termentry/altDefinition ')]">
+        <xsl:element name="div">
+            <xsl:attribute name="class">panel panel-default altDefinition</xsl:attribute>
+            <xsl:element name="div">
+                <xsl:attribute name="class">panel-heading</xsl:attribute>
+                <xsl:element name="h3">
+                    <xsl:attribute name="class">panel-title</xsl:attribute>
+                    <xsl:call-template name="getVariable">
+                        <xsl:with-param name="id" select="'Alternative Definition'"/>
+                    </xsl:call-template>
+                </xsl:element>
+            </xsl:element>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Alternative Definition Text -->
+    <xsl:template match="*[contains(@class, ' termentry/altDefinitionText ')]">
+        <xsl:element name="div">
+            <xsl:attribute name="class">panel-body altDefinitionText</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>

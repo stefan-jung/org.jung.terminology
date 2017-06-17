@@ -43,8 +43,8 @@
         actions,
         oxy_action_list(
             oxy_action(id, 'doctales.definition.add'),
-            oxy_action(id, 'doctales.partOfSpeech.add'),
             oxy_action(id, 'doctales.agreedWith.add'),
+            oxy_action(id, 'doctales.altDefinition.add'),
             oxy_action(id, 'doctales.equation-figure.add'),
             oxy_action(id, 'doctales.note.add'),
             oxy_action(id, 'doctales.fig.add'),
@@ -446,6 +446,44 @@
         edit, '@scope',
         columns, 13
     ) !important;
+}
+
+/*********************************************
+ * ALTERNATIVE DEFINITION
+ *********************************************/
+*[class~="termentry/altDefinition"]:before(10) {
+    .header();
+    content:
+    oxy_buttonGroup(
+        label, '${i18n(doctales.altDefinition)}',
+        transparent, @oxy_buttonGroup_transparent,
+        fontInherit, false,
+        actions,
+        oxy_action_list(
+            oxy_action(id, 'doctales.definitionSource.add'),
+            oxy_action(id, 'doctales.altDefinition.delete')
+        )
+    );
+}
+*[class~="termentry/altDefinition"]:before(2) {
+    .topRightButtonContainer();
+    .placeholderButton();
+}
+*[class~="termentry/altDefinition"]:hover:before(2) {
+    content: @deleteElementButton;
+}
+*[class~="termentry/altDefinition"] {
+    .blockElement();
+    .border();
+}
+
+/*********************************************
+ * ALTERNATIVE DEFINITION TEXT
+ *********************************************/
+*[class~="termentry/altDefinitionText"] {
+    -oxy-placeholder-content: "${i18n(doctales.altDefinitionText.placeholder)}";
+    .blockElement();
+    .noBorder();
 }
 
 /*********************************************

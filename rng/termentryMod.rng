@@ -75,6 +75,12 @@
     <define name="agreedWith">
       <ref name="agreedWith.element"/>
     </define>
+    <define name="altDefinition">
+      <ref name="altDefinition.element"/>
+    </define>
+    <define name="altDefinitionText">
+      <ref name="altDefinitionText.element"/>
+    </define>
     <define name="termCommitteeMember">
       <ref name="termCommitteeMember.element"/>
     </define>
@@ -554,6 +560,7 @@
             <ref name="fig"/>
             <ref name="note"/>
             <ref name="annotation"/>
+            <ref name="altDefinition"/>
           </choice>
         </zeroOrMore>
         <optional>
@@ -760,6 +767,52 @@
       </define>
       <define name="partOfSpeech.attlist" combine="interleave">
         <ref name="partOfSpeech.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Alternative Definition </a:documentation>
+      <define name="altDefinition.content">
+        <ref name="altDefinitionText"/>
+        <optional>
+          <ref name="definitionSource"/>
+        </optional>
+      </define>
+      <define name="altDefinition.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="altDefinition.element">
+        <element name="altDefinition" dita:longName="Alternative Definition">
+          <a:documentation>The &lt;altDefinition> element contains an alternative definition.
+            Category: Termentry elements</a:documentation>
+          <ref name="altDefinition.attlist"/>
+          <ref name="altDefinition.content"/>
+        </element>
+      </define>
+      <define name="altDefinition.attlist" combine="interleave">
+        <ref name="altDefinition.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Alternative Definition Text </a:documentation>
+      <define name="altDefinitionText.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="altDefinitionText.element">
+        <element name="altDefinitionText" dita:longName="Alternative Definition Text">
+          <a:documentation>The &lt;altDefinitionText> element contains the textual content of the alternative definition.
+            Category: Termentry elements</a:documentation>
+          <ref name="definitionText.attlist"/>
+          <ref name="div.content"/>
+        </element>
+      </define>
+      <define name="altDefinitionText.attlist" combine="interleave">
+        <ref name="altDefinitionText.attributes"/>
       </define>
     </div>
     <div>
@@ -1474,6 +1527,18 @@
       <ref name="global-atts"/>
       <optional>
         <attribute name="class" a:defaultValue="- topic/ul termentry/agreedWith "/>
+      </optional>
+    </define>
+    <define name="altDefinition.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/altDefinition "/>
+      </optional>
+    </define>
+    <define name="altDefinitionText.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/altDefinitionText "/>
       </optional>
     </define>
     <define name="annotation.attlist" combine="interleave">

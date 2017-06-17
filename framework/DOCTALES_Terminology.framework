@@ -7053,6 +7053,144 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>165</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.altDefinition.add</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.altDefinition.add)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.altDefinition.add_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/add_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/add_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>not(following-sibling::*[contains(@class, ' termentry/termBody ')][1]/*[contains(@class, ' termentry/altDefinition ')])</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;altDefinition>
+  &lt;altDefinitionText>&lt;/altDefinitionText>
+  &lt;definitionSource>
+    &lt;sourceName>&lt;/sourceName>
+    &lt;sourceReference>&lt;/sourceReference>
+  &lt;/definitionSource>
+&lt;/altDefinition></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>following-sibling::*[contains(@class, ' termentry/termBody ')][1]</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as first child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>166</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.altDefinition.delete</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.altDefinition.delete)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.altDefinition.delete_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/altDefinition ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
