@@ -6500,7 +6500,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/agreedWith ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/acronym ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
