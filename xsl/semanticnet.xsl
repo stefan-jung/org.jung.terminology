@@ -146,6 +146,9 @@
                                 arrows: 'to',
                                 color: 'gray'
                             },
+                            layout: {
+                                improvedLayout: false
+                            },
                             physics: {
                                 forceAtlas2Based: {
                                     gravitationalConstant: -26,
