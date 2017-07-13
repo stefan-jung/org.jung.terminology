@@ -10,15 +10,21 @@
 @notRecommendedColor: #ffbfbf;
 @highlightBackgroundColor: #dbefff;
 
+// Background Color
+@backgroundColor: #ffffff;
+@backgroundColorDark: #3c3c3c;
+
 // Dimensions
 @containerWidth: 768px;
 
 // oxy_buttonGroup
-@oxy_buttonGroup_fontInherit: 'true';
+@oxy_buttonGroup_fontInherit: 'false';
 @oxy_buttonGroup_transparent: 'true';
 
 // Borders
 @border: 1pt solid #3d3d3d;
+@borderWidth: 0.05rem;
+@borderStyle: solid;
 @borderColor: #3d3d3d;
 @borderColorDark: #767676;
 
@@ -27,8 +33,32 @@
 @linkIcon: '../icons/link_12.png';
 
 // Font Families
-@font: "Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-@fontSize: 16px;
+@font: Arial,sans-serif;
+@fontSize: 1.0rem;
+
+// Font Color
+@fontColor: #000000;
+@fontColorDark: #ffffff;
+
+// Buttons
+@deleteElementButton:
+oxy_button(
+    actionID, 'doctales.element.delete',
+    showIcon, true,
+    transparent, true
+);
+@moveElementUpButton:
+oxy_button(
+    actionID, 'doctales.move.element.up',
+    showIcon, true,
+    transparent, true
+);
+@moveElementDownButton:
+oxy_button(
+    actionID, 'doctales.move.element.down',
+    showIcon, true,
+    transparent, true
+);
 
 *[class~="topic/related-links"]:before {
     display: none;
@@ -39,38 +69,35 @@
 }
 
 .header {
-    border-bottom: 1pt solid @headerBorderColor;
+    border-bottom: 0.05rem solid @headerBorderColor;
     display: block;
-    font-family: @font;
-    font-size: 8pt;
-    font-style: normal;
-    font-weight: normal;
-    padding-top: 0.5em;
-    padding-bottom: 0;
-    padding-left: 0.3em;
-    padding-right: 0;
-    margin-top: 0;
-    margin-bottom: 0.2em;
-    margin-left: 0;
-    margin-right: 0;
-    /*width: inherit !important;*/
-    /*width: 120%;*/
-    /*height: 111px !important;*/
+    padding-bottom: 5px;
+    margin-bottom: 2px;
 }
 
-.blockElement {
+/*.blockElement {
     border: 1pt solid @borderColor;
     .defaultElement();
 }
 
 .blockElementNoBorder {
-    border: none;
+    border: none !important;
     .defaultElement();
+}*/
+
+.border {
+    border-width: @borderWidth;
+    border-style: @borderStyle;
+    border-color: @borderColor;
 }
 
-.defaultElement {
+.noBorder {
+    border: none !important;
+}
+
+.blockElement {
     @media oxygen-high-contrast-black, oxygen-dark-theme {
-        border: 1pt solid @borderColorDark;
+        border-color: @borderColorDark;
     }
     display: block;
     font-family: @font;
@@ -78,8 +105,10 @@
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    /* visibility: -oxy-collapse-text; */
-    color: black;
+    color: @fontColor;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        color: @fontColorDark;
+    }
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -122,25 +151,25 @@
     font-size: 0.7em;
     display: block;
     color: #005544;
-    border: 1pt solid @borderColor;
+    border-width: @borderWidth;
+    border-style: solid;
+    border-color: @borderColor;
+    @media oxygen-high-contrast-black, oxygen-dark-theme {
+        border-color: @borderColorDark;
+    }
     padding: 0.1em;
 }
 
 .col1 {
     width: 20%;
     font-weight: normal;
-    height: 20px;
     display: inline-block;
-    line-height: 2em;
     padding-left: 5px;
-    font-size: 0.8em;
     font-family: @font;
 }
 
 .col2 {
     width: 75%;
-    line-height: 2em;
-    height: 20px;
     display: inline-block;
     float: right;
     -oxy-display-tags: none;
@@ -164,25 +193,26 @@
     );
 }
 
-.deleteElementButton {
-    /*content:
-    oxy_button(
-        action, oxy_action(
-            name, 'Delete', 
-            description, 'Delete the current element', 
-            icon, url(@deleteIcon), 
-            operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation', 
-            arg-elementLocation, '.'
-        ),
-        transparent, @oxy_buttonGroup_transparent
+/* The placeholder button is an empty and invisible button.
+ * It ensures, that the screen does not flicker,
+ * if a button appears on hover. */
+.placeholderButton() {
+    content: oxy_button(
+        actionID, 'doctales.dummy',
+        showIcon, true,
+        transparent, true,
     );
+}
+
+.topRightButtonContainer() {
+    color: transparent;
     display: block;
-    z-index: 5;
-    float: right;
-    margin-right: -9.0em;
-    margin-top: -1.65em !important;
-    max-width:-moz-max-content;
-    text-align: right;*/
+    margin-top: -28px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+    margin-right: -1px;
+    text-align: right;
+    width: 100%;
 }
 
 .deleteInlineElementButton() {

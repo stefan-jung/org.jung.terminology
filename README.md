@@ -17,13 +17,6 @@ org.doctales.terminology
 - Check DITA or XLIFF files with a Schematron based terminology checker.
 - Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP).
 
-> **Table of Contents**
->
-> * [Installation](#installation)
-> * [Install Framework](#install-framework)
-> * [Using the Plugin](#install-framework)
-> * [Contribution](#contribution)
-
 ## Installation
 
 **Prerequisites**
@@ -31,20 +24,18 @@ org.doctales.terminology
 - DITA-OT 2.3 or higher
 - &lt;oXygen/&gt; XML 18 or higher (optional)
 
-You can install the plugin to the DITA-OT with the following command:
+**Install the plugin**
 
-```shell
-dita -install https://github.com/doctales/org.doctales.terminology/archive/master.zip
-```
+1. Install the plugin with the [`dita` command](http://www.dita-ot.org/dev/parameters/dita-command-arguments.html).
+   ```shell
+   dita -install https://github.com/doctales/org.doctales.terminology/archive/master.zip
+   ```
 
-
-## Install &lt;oXygen/&gt; Framework
+**Install the &lt;oXygen/&gt; XML Framework**
 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
-3. Add the directory of the plugin.
-   ![framework](https://raw.githubusercontent.com/doctales/doctales.github.io/master/media/images/framework.png)
-
+3. Add the directory of the plugin in the DITA-OT as an additional framework directory, e.g. `/home/user/workspace/DITA/dita-ot/plugins/org.doctales.terminology`.
 
 ## Using the Plugin
 

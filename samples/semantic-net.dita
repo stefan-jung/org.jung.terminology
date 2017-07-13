@@ -9,7 +9,6 @@
       <li>Keep the left mouse button pressed and move the mouse to shift the semantic net.</li>
       <li>Click a term node to select it. Its definition is displayed in the legend below the semantic net.</li>
     </ul>
-    <note type="notice" deliveryTarget="termbrowser-classic">The semantic net is only supported for the termbrowser reponsive.</note>
     <net deliveryTarget="termbrowser-responsive termbrowser-html5"/>
   </semanticbody>
 </semanticnet>

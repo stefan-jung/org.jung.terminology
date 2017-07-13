@@ -21,6 +21,8 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
 <!ENTITY % abbreviation          "abbreviation"                                         >
 <!ENTITY % acronym               "acronym"                                              >
 <!ENTITY % agreedWith            "agreedWith"                                           >
+<!ENTITY % altDefinition         "altDefinition"                                        >
+<!ENTITY % altDefinitionText     "altDefinitionText"                                    >
 <!ENTITY % annotation            "annotation"                                           >
 <!ENTITY % antonym               "antonym"                                              >
 <!ENTITY % antonyms              "antonyms"                                             >
@@ -367,6 +369,30 @@ Category: Termentry elements-->
 <!ELEMENT partOfSpeech   %partOfSpeech.content;>
 <!ATTLIST partOfSpeech   %partOfSpeech.attributes;>
 
+<!--                                 LONG NAME: Alternative Definition                -->
+<!ENTITY % altDefinition.content    "((%altDefinitionText;),
+                                      (%definitionSource;)?)
+                                    ">
+<!ENTITY % altDefinition.attributes "%univ-atts;
+                                     outputclass
+                                        CDATA
+                                           #IMPLIED">
+<!--doc:The <altDefinition> element contains an alternative definition.
+Category: Termentry elements-->
+<!ELEMENT altDefinition   %altDefinition.content;>
+<!ATTLIST altDefinition   %altDefinition.attributes;>
+
+<!--                                 LONG NAME: Alternative Definition Text           -->
+<!ENTITY % altDefinitionText.attributes
+                                    "%univ-atts;
+                                     outputclass
+                                        CDATA
+                                           #IMPLIED">
+<!--doc:The <altDefinitionText> element contains the textual content of the alternative definition.
+Category: Termentry elements-->
+<!ELEMENT altDefinitionText    %div.content;>
+<!ATTLIST altDefinitionText    %altDefinitionText.attributes;>
+
 <!--                                 LONG NAME: Annotation                            -->
 <!ENTITY % annotation.attributes    "%univ-atts;
                                      outputclass
@@ -381,6 +407,7 @@ Category: Termentry elements-->
 <!ENTITY % termBody.content         "((((%fig;) | 
                                        (%note;) |
                                        (%domains;) |
+                                       (%altDefinition;) |
                                        (%annotation;))*),
                                        (%agreedWith;)?,
                                        (%partOfSpeech;),
@@ -764,6 +791,8 @@ Category: Termentry elements-->
 <!ATTLIST abbreviation          %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/abbreviation ">
 <!ATTLIST acronym               %global-atts;   class CDATA "- topic/section concept/section termentry/termNotation termentry/acronym ">
 <!ATTLIST agreedWith            %global-atts;   class CDATA "- topic/ul termentry/agreedWith ">
+<!ATTLIST altDefinition         %global-atts;   class CDATA "- topic/div termentry/altDefinition ">
+<!ATTLIST altDefinitionText     %global-atts;   class CDATA "- topic/div termentry/altDefinitionText ">
 <!ATTLIST annotation            %global-atts;   class CDATA "- topic/div termentry/annotation ">
 <!ATTLIST antonym               %global-atts;   class CDATA "- topic/link termentry/termRelation termentry/antonym ">
 <!ATTLIST antonyms              %global-atts;   class CDATA "- topic/linklist termentry/relations-linklist termentry/antonyms ">
