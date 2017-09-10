@@ -1,7 +1,8 @@
 #!/bin/sh
 zip -r org.doctales.terminology.zip . -x *.zip* *.git/* *temp/* *out/*
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/2.5.3/dita-ot-2.5.3.zip
-unzip -q dita-ot-2.5.3.zip
+curl -LO 
+https://github.com/dita-ot/dita-ot/releases/download/2.4.2/dita-ot-2.4.2.zip
+unzip -q dita-ot-2.4.2.zip
 mv dita-ot-*/ dita-ot/
 git clone https://github.com/queshaw/dita-ng-library.git
 cd dita-ng-library
