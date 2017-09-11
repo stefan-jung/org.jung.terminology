@@ -437,7 +437,7 @@
   </transtype>
   
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
-  <feature extension="dita.conductor.transtype.check" value="termchecker"/>
+  <feature extension="dita.conductor.transtype.check" value="termchecker-xliff"/>
   <transtype name="termchecker-xliff" extends="html5" desc="Termchecker for XLIFF">
     <param name="args.check.elements" desc="Choose whether terms should be checked only in source elements or target elements or in both of them." type="string">
       <val default="true">source</val>

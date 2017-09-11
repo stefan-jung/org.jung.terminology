@@ -29,8 +29,8 @@
             filedirparameter="FILEDIR">
             <param name="language" expression="${args.language}" if="args.language"/>
             <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
-            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
-            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
@@ -40,6 +40,12 @@
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
+        <!-- Replace conflicting DOCTYPE declarations -->
+        <replaceregexp match="&lt;!DOCTYPE[\s\S]*dtd&quot;[\s]*&gt;" replace="" byline="false">
+            <fileset dir="${output.dir}">
+                <include name="**/${schematronFile}*.sch"/>
+            </fileset>
+        </replaceregexp>
     </target>
     
 </project>

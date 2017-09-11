@@ -2237,7 +2237,7 @@
 													<String>${cfd}/temp/termbrowser-responsive</String>
 												</field>
 												<field name="transtype">
-													<String>termbrowser-responsive</String>
+													<String>xhtml</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -2435,6 +2435,29 @@
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>termbrowser-responsive</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
 																<String>webhelp.fragment.after.logo_and_title</String>
 															</field>
 															<field name="description">
@@ -2599,7 +2622,7 @@
 																<String>webhelp.show.main.page.toc</String>
 															</field>
 															<field name="description">
-																<String>Specifies if the table of contents will be presented in the main page of the output. The default value is yes.</String>
+																<String>Specifies if the table of contents will be presented in the main page of the output.</String>
 															</field>
 															<field name="value">
 																<String>yes</String>
@@ -2622,7 +2645,7 @@
 																<String>webhelp.show.top.menu</String>
 															</field>
 															<field name="description">
-																<String>Specifies if a menu will be presented at the topic of the main page in the output. The default value is yes.</String>
+																<String>Specifies if a menu will be presented at the topic of the main page in the output.</String>
 															</field>
 															<field name="value">
 																<String>no</String>
@@ -2643,7 +2666,7 @@
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx2048m</String>
+													<String>-Xmx384m</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -2712,10 +2735,10 @@
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String>${cfd}/out/termbrowser-responsive/index.html</String>
+													<String></String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
@@ -2781,7 +2804,7 @@
 													<String>${cfd}/temp/termbrowser</String>
 												</field>
 												<field name="transtype">
-													<String>termbrowser</String>
+													<String>xhtml</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -2926,6 +2949,29 @@
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
+																<String>args.hdf</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>${frameworkDir}/webhelp-skin/header/termbrowser-classic.xml</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
 																<String>args.xhtml.classattr</String>
 															</field>
 															<field name="description">
@@ -2952,6 +2998,29 @@
 																	<String></String>
 																	<String></String>
 																</String-array>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>termbrowser</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 													</list>
@@ -2981,7 +3050,7 @@
 													<null/>
 												</field>
 												<field name="name">
-													<String>Termbrowser Classic</String>
+													<String>Termbrowser</String>
 												</field>
 												<field name="baseURL">
 													<null/>
@@ -3026,10 +3095,10 @@
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String>${cfd}/out/termbrowser/index.html</String>
+													<String></String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
@@ -3095,7 +3164,7 @@
 													<String>${cfd}/temp/termbrowser-html5</String>
 												</field>
 												<field name="transtype">
-													<String>termbrowser-html5</String>
+													<String>html5</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -3197,7 +3266,7 @@
 																<String>args.default.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('Termbrowser - Choose language of labels', combobox, ('en-GB':'English - Great Britain';'de-DE':'German - Germany';)}</String>
@@ -3206,7 +3275,7 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
 																<null/>
@@ -3395,10 +3464,10 @@
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String>${cfd}/out/termbrowser-html5/index.html</String>
+													<String></String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
@@ -3464,7 +3533,7 @@
 													<String>${cfd}/temp/termchecker-dita</String>
 												</field>
 												<field name="transtype">
-													<String>termchecker-dita</String>
+													<String>html5</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -3513,7 +3582,7 @@
 																<String>args.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('Termchecker for DITA - Choose language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -3522,287 +3591,36 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>af-ZA</String>
-																	<String>ar-AE</String>
-																	<String>ar-BH</String>
-																	<String>ar-DZ</String>
-																	<String>ar-EG</String>
-																	<String>ar-IQ</String>
-																	<String>ar-JO</String>
-																	<String>ar-KW</String>
-																	<String>ar-LB</String>
-																	<String>ar-LY</String>
-																	<String>ar-MA</String>
-																	<String>ar-OM</String>
-																	<String>ar-QA</String>
-																	<String>ar-SA</String>
-																	<String>ar-SY</String>
-																	<String>ar-TN</String>
-																	<String>ar-YE</String>
-																	<String>be-BY</String>
-																	<String>bg-BG</String>
-																	<String>ca-ES</String>
-																	<String>cs-CZ</String>
-																	<String>Cy-az-AZ</String>
-																	<String>Cy-sr-SP</String>
-																	<String>Cy-uz-UZ</String>
-																	<String>da-DK</String>
-																	<String>de-AT</String>
-																	<String>de-CH</String>
-																	<String>de-DE</String>
-																	<String>de-LI</String>
-																	<String>de-LU</String>
-																	<String>div-MV</String>
-																	<String>el-GR</String>
-																	<String>en-AU</String>
-																	<String>en-BZ</String>
-																	<String>en-CA</String>
-																	<String>en-CB</String>
-																	<String>en-GB</String>
-																	<String>en-IE</String>
-																	<String>en-JM</String>
-																	<String>en-NZ</String>
-																	<String>en-PH</String>
-																	<String>en-TT</String>
-																	<String>en-US</String>
-																	<String>en-ZA</String>
-																	<String>en-ZW</String>
-																	<String>es-AR</String>
-																	<String>es-BO</String>
-																	<String>es-CL</String>
-																	<String>es-CO</String>
-																	<String>es-CR</String>
-																	<String>es-DO</String>
-																	<String>es-EC</String>
-																	<String>es-ES</String>
-																	<String>es-GT</String>
-																	<String>es-HN</String>
-																	<String>es-MX</String>
-																	<String>es-NI</String>
-																	<String>es-PA</String>
-																	<String>es-PE</String>
-																	<String>es-PR</String>
-																	<String>es-PY</String>
-																	<String>es-SV</String>
-																	<String>es-UY</String>
-																	<String>es-VE</String>
-																	<String>et-EE</String>
-																	<String>eu-ES</String>
-																	<String>fa-IR</String>
-																	<String>fi-FI</String>
-																	<String>fo-FO</String>
-																	<String>fr-BE</String>
-																	<String>fr-CA</String>
-																	<String>fr-CH</String>
-																	<String>fr-FR</String>
-																	<String>fr-LU</String>
-																	<String>fr-MC</String>
-																	<String>gl-ES</String>
-																	<String>gu-IN</String>
-																	<String>he-IL</String>
-																	<String>hi-IN</String>
-																	<String>hr-HR</String>
-																	<String>hu-HU</String>
-																	<String>hy-AM</String>
-																	<String>id-ID</String>
-																	<String>is-IS</String>
-																	<String>it-CH</String>
-																	<String>it-IT</String>
-																	<String>ja-JP</String>
-																	<String>ka-GE</String>
-																	<String>kk-KZ</String>
-																	<String>kn-IN</String>
-																	<String>ko-KR</String>
-																	<String>kok-IN</String>
-																	<String>ky-KZ</String>
-																	<String>Lt-az-AZ</String>
-																	<String>lt-LT</String>
-																	<String>Lt-sr-SP</String>
-																	<String>Lt-uz-UZ</String>
-																	<String>lv-LV</String>
-																	<String>mk-MK</String>
-																	<String>mn-MN</String>
-																	<String>mr-IN</String>
-																	<String>ms-BN</String>
-																	<String>ms-MY</String>
-																	<String>nb-NO</String>
-																	<String>nl-BE</String>
-																	<String>nl-NL</String>
-																	<String>nn-NO</String>
-																	<String>pa-IN</String>
-																	<String>pl-PL</String>
-																	<String>pt-BR</String>
-																	<String>pt-PT</String>
-																	<String>ro-RO</String>
-																	<String>ru-RU</String>
-																	<String>sa-IN</String>
-																	<String>sk-SK</String>
-																	<String>sl-SI</String>
-																	<String>sq-AL</String>
-																	<String>sv-FI</String>
-																	<String>sv-SE</String>
-																	<String>sw-KE</String>
-																	<String>syr-SY</String>
-																	<String>ta-IN</String>
-																	<String>te-IN</String>
-																	<String>th-TH</String>
-																	<String>tr-TR</String>
-																	<String>tt-RU</String>
-																	<String>uk-UA</String>
-																	<String>ur-PK</String>
-																	<String>vi-VN</String>
-																	<String>zh-CHS</String>
-																	<String>zh-CHT</String>
-																	<String>zh-CN</String>
-																	<String>zh-HK</String>
-																	<String>zh-MO</String>
-																	<String>zh-SG</String>
-																	<String>zh-TW</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>termchecker-dita</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 													</list>
@@ -3877,10 +3695,10 @@
 													<null/>
 												</field>
 												<field name="openOtherLocationInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="locationToOpenInBrowserURL">
-													<String>${cfd}/out/termchecker-dita/${cfn}-DITA-${args.language}.sch</String>
+													<String></String>
 												</field>
 												<field name="openInEditor">
 													<Boolean>false</Boolean>
@@ -3946,7 +3764,7 @@
 													<String>${cfd}/temp/termchecker-xliff</String>
 												</field>
 												<field name="transtype">
-													<String>termchecker-xliff</String>
+													<String>html5</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -3995,30 +3813,22 @@
 																<String>args.check.elements</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('Termchecker for XLIFF - Choose for which elements termchecker rules should be applied', combobox, ('source':'&lt;source> elements';'target':'&lt;target> elements';'both':'&lt;source> and &lt;target> elements';)}</String>
 															</field>
 															<field name="defaultValue">
-																<String>source</String>
+																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>source</String>
-																	<String>target</String>
-																	<String>both</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
 															</field>
 														</ditaParameter>
 														<ditaParameter>
@@ -4026,7 +3836,7 @@
 																<String>args.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('Termchecker for XLIFF - Choose language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -4035,287 +3845,36 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>af-ZA</String>
-																	<String>ar-AE</String>
-																	<String>ar-BH</String>
-																	<String>ar-DZ</String>
-																	<String>ar-EG</String>
-																	<String>ar-IQ</String>
-																	<String>ar-JO</String>
-																	<String>ar-KW</String>
-																	<String>ar-LB</String>
-																	<String>ar-LY</String>
-																	<String>ar-MA</String>
-																	<String>ar-OM</String>
-																	<String>ar-QA</String>
-																	<String>ar-SA</String>
-																	<String>ar-SY</String>
-																	<String>ar-TN</String>
-																	<String>ar-YE</String>
-																	<String>be-BY</String>
-																	<String>bg-BG</String>
-																	<String>ca-ES</String>
-																	<String>cs-CZ</String>
-																	<String>Cy-az-AZ</String>
-																	<String>Cy-sr-SP</String>
-																	<String>Cy-uz-UZ</String>
-																	<String>da-DK</String>
-																	<String>de-AT</String>
-																	<String>de-CH</String>
-																	<String>de-DE</String>
-																	<String>de-LI</String>
-																	<String>de-LU</String>
-																	<String>div-MV</String>
-																	<String>el-GR</String>
-																	<String>en-AU</String>
-																	<String>en-BZ</String>
-																	<String>en-CA</String>
-																	<String>en-CB</String>
-																	<String>en-GB</String>
-																	<String>en-IE</String>
-																	<String>en-JM</String>
-																	<String>en-NZ</String>
-																	<String>en-PH</String>
-																	<String>en-TT</String>
-																	<String>en-US</String>
-																	<String>en-ZA</String>
-																	<String>en-ZW</String>
-																	<String>es-AR</String>
-																	<String>es-BO</String>
-																	<String>es-CL</String>
-																	<String>es-CO</String>
-																	<String>es-CR</String>
-																	<String>es-DO</String>
-																	<String>es-EC</String>
-																	<String>es-ES</String>
-																	<String>es-GT</String>
-																	<String>es-HN</String>
-																	<String>es-MX</String>
-																	<String>es-NI</String>
-																	<String>es-PA</String>
-																	<String>es-PE</String>
-																	<String>es-PR</String>
-																	<String>es-PY</String>
-																	<String>es-SV</String>
-																	<String>es-UY</String>
-																	<String>es-VE</String>
-																	<String>et-EE</String>
-																	<String>eu-ES</String>
-																	<String>fa-IR</String>
-																	<String>fi-FI</String>
-																	<String>fo-FO</String>
-																	<String>fr-BE</String>
-																	<String>fr-CA</String>
-																	<String>fr-CH</String>
-																	<String>fr-FR</String>
-																	<String>fr-LU</String>
-																	<String>fr-MC</String>
-																	<String>gl-ES</String>
-																	<String>gu-IN</String>
-																	<String>he-IL</String>
-																	<String>hi-IN</String>
-																	<String>hr-HR</String>
-																	<String>hu-HU</String>
-																	<String>hy-AM</String>
-																	<String>id-ID</String>
-																	<String>is-IS</String>
-																	<String>it-CH</String>
-																	<String>it-IT</String>
-																	<String>ja-JP</String>
-																	<String>ka-GE</String>
-																	<String>kk-KZ</String>
-																	<String>kn-IN</String>
-																	<String>ko-KR</String>
-																	<String>kok-IN</String>
-																	<String>ky-KZ</String>
-																	<String>Lt-az-AZ</String>
-																	<String>lt-LT</String>
-																	<String>Lt-sr-SP</String>
-																	<String>Lt-uz-UZ</String>
-																	<String>lv-LV</String>
-																	<String>mk-MK</String>
-																	<String>mn-MN</String>
-																	<String>mr-IN</String>
-																	<String>ms-BN</String>
-																	<String>ms-MY</String>
-																	<String>nb-NO</String>
-																	<String>nl-BE</String>
-																	<String>nl-NL</String>
-																	<String>nn-NO</String>
-																	<String>pa-IN</String>
-																	<String>pl-PL</String>
-																	<String>pt-BR</String>
-																	<String>pt-PT</String>
-																	<String>ro-RO</String>
-																	<String>ru-RU</String>
-																	<String>sa-IN</String>
-																	<String>sk-SK</String>
-																	<String>sl-SI</String>
-																	<String>sq-AL</String>
-																	<String>sv-FI</String>
-																	<String>sv-SE</String>
-																	<String>sw-KE</String>
-																	<String>syr-SY</String>
-																	<String>ta-IN</String>
-																	<String>te-IN</String>
-																	<String>th-TH</String>
-																	<String>tr-TR</String>
-																	<String>tt-RU</String>
-																	<String>uk-UA</String>
-																	<String>ur-PK</String>
-																	<String>vi-VN</String>
-																	<String>zh-CHS</String>
-																	<String>zh-CHT</String>
-																	<String>zh-CN</String>
-																	<String>zh-HK</String>
-																	<String>zh-MO</String>
-																	<String>zh-SG</String>
-																	<String>zh-TW</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>termchecker-xliff</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 													</list>
@@ -4459,7 +4018,7 @@
 													<String>${cfd}/temp/tbx-min</String>
 												</field>
 												<field name="transtype">
-													<String>tbx-min</String>
+													<String>xhtml</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -4508,7 +4067,7 @@
 																<String>args.source.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('TBX-Basic - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -4517,287 +4076,13 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>af-ZA</String>
-																	<String>ar-AE</String>
-																	<String>ar-BH</String>
-																	<String>ar-DZ</String>
-																	<String>ar-EG</String>
-																	<String>ar-IQ</String>
-																	<String>ar-JO</String>
-																	<String>ar-KW</String>
-																	<String>ar-LB</String>
-																	<String>ar-LY</String>
-																	<String>ar-MA</String>
-																	<String>ar-OM</String>
-																	<String>ar-QA</String>
-																	<String>ar-SA</String>
-																	<String>ar-SY</String>
-																	<String>ar-TN</String>
-																	<String>ar-YE</String>
-																	<String>be-BY</String>
-																	<String>bg-BG</String>
-																	<String>ca-ES</String>
-																	<String>cs-CZ</String>
-																	<String>Cy-az-AZ</String>
-																	<String>Cy-sr-SP</String>
-																	<String>Cy-uz-UZ</String>
-																	<String>da-DK</String>
-																	<String>de-AT</String>
-																	<String>de-CH</String>
-																	<String>de-DE</String>
-																	<String>de-LI</String>
-																	<String>de-LU</String>
-																	<String>div-MV</String>
-																	<String>el-GR</String>
-																	<String>en-AU</String>
-																	<String>en-BZ</String>
-																	<String>en-CA</String>
-																	<String>en-CB</String>
-																	<String>en-GB</String>
-																	<String>en-IE</String>
-																	<String>en-JM</String>
-																	<String>en-NZ</String>
-																	<String>en-PH</String>
-																	<String>en-TT</String>
-																	<String>en-US</String>
-																	<String>en-ZA</String>
-																	<String>en-ZW</String>
-																	<String>es-AR</String>
-																	<String>es-BO</String>
-																	<String>es-CL</String>
-																	<String>es-CO</String>
-																	<String>es-CR</String>
-																	<String>es-DO</String>
-																	<String>es-EC</String>
-																	<String>es-ES</String>
-																	<String>es-GT</String>
-																	<String>es-HN</String>
-																	<String>es-MX</String>
-																	<String>es-NI</String>
-																	<String>es-PA</String>
-																	<String>es-PE</String>
-																	<String>es-PR</String>
-																	<String>es-PY</String>
-																	<String>es-SV</String>
-																	<String>es-UY</String>
-																	<String>es-VE</String>
-																	<String>et-EE</String>
-																	<String>eu-ES</String>
-																	<String>fa-IR</String>
-																	<String>fi-FI</String>
-																	<String>fo-FO</String>
-																	<String>fr-BE</String>
-																	<String>fr-CA</String>
-																	<String>fr-CH</String>
-																	<String>fr-FR</String>
-																	<String>fr-LU</String>
-																	<String>fr-MC</String>
-																	<String>gl-ES</String>
-																	<String>gu-IN</String>
-																	<String>he-IL</String>
-																	<String>hi-IN</String>
-																	<String>hr-HR</String>
-																	<String>hu-HU</String>
-																	<String>hy-AM</String>
-																	<String>id-ID</String>
-																	<String>is-IS</String>
-																	<String>it-CH</String>
-																	<String>it-IT</String>
-																	<String>ja-JP</String>
-																	<String>ka-GE</String>
-																	<String>kk-KZ</String>
-																	<String>kn-IN</String>
-																	<String>ko-KR</String>
-																	<String>kok-IN</String>
-																	<String>ky-KZ</String>
-																	<String>Lt-az-AZ</String>
-																	<String>lt-LT</String>
-																	<String>Lt-sr-SP</String>
-																	<String>Lt-uz-UZ</String>
-																	<String>lv-LV</String>
-																	<String>mk-MK</String>
-																	<String>mn-MN</String>
-																	<String>mr-IN</String>
-																	<String>ms-BN</String>
-																	<String>ms-MY</String>
-																	<String>nb-NO</String>
-																	<String>nl-BE</String>
-																	<String>nl-NL</String>
-																	<String>nn-NO</String>
-																	<String>pa-IN</String>
-																	<String>pl-PL</String>
-																	<String>pt-BR</String>
-																	<String>pt-PT</String>
-																	<String>ro-RO</String>
-																	<String>ru-RU</String>
-																	<String>sa-IN</String>
-																	<String>sk-SK</String>
-																	<String>sl-SI</String>
-																	<String>sq-AL</String>
-																	<String>sv-FI</String>
-																	<String>sv-SE</String>
-																	<String>sw-KE</String>
-																	<String>syr-SY</String>
-																	<String>ta-IN</String>
-																	<String>te-IN</String>
-																	<String>th-TH</String>
-																	<String>tr-TR</String>
-																	<String>tt-RU</String>
-																	<String>uk-UA</String>
-																	<String>ur-PK</String>
-																	<String>vi-VN</String>
-																	<String>zh-CHS</String>
-																	<String>zh-CHT</String>
-																	<String>zh-CN</String>
-																	<String>zh-HK</String>
-																	<String>zh-MO</String>
-																	<String>zh-SG</String>
-																	<String>zh-TW</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
 															</field>
 														</ditaParameter>
 														<ditaParameter>
@@ -4805,7 +4090,7 @@
 																<String>args.target.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('TBX-Basic - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -4814,287 +4099,36 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>af-ZA</String>
-																	<String>ar-AE</String>
-																	<String>ar-BH</String>
-																	<String>ar-DZ</String>
-																	<String>ar-EG</String>
-																	<String>ar-IQ</String>
-																	<String>ar-JO</String>
-																	<String>ar-KW</String>
-																	<String>ar-LB</String>
-																	<String>ar-LY</String>
-																	<String>ar-MA</String>
-																	<String>ar-OM</String>
-																	<String>ar-QA</String>
-																	<String>ar-SA</String>
-																	<String>ar-SY</String>
-																	<String>ar-TN</String>
-																	<String>ar-YE</String>
-																	<String>be-BY</String>
-																	<String>bg-BG</String>
-																	<String>ca-ES</String>
-																	<String>cs-CZ</String>
-																	<String>Cy-az-AZ</String>
-																	<String>Cy-sr-SP</String>
-																	<String>Cy-uz-UZ</String>
-																	<String>da-DK</String>
-																	<String>de-AT</String>
-																	<String>de-CH</String>
-																	<String>de-DE</String>
-																	<String>de-LI</String>
-																	<String>de-LU</String>
-																	<String>div-MV</String>
-																	<String>el-GR</String>
-																	<String>en-AU</String>
-																	<String>en-BZ</String>
-																	<String>en-CA</String>
-																	<String>en-CB</String>
-																	<String>en-GB</String>
-																	<String>en-IE</String>
-																	<String>en-JM</String>
-																	<String>en-NZ</String>
-																	<String>en-PH</String>
-																	<String>en-TT</String>
-																	<String>en-US</String>
-																	<String>en-ZA</String>
-																	<String>en-ZW</String>
-																	<String>es-AR</String>
-																	<String>es-BO</String>
-																	<String>es-CL</String>
-																	<String>es-CO</String>
-																	<String>es-CR</String>
-																	<String>es-DO</String>
-																	<String>es-EC</String>
-																	<String>es-ES</String>
-																	<String>es-GT</String>
-																	<String>es-HN</String>
-																	<String>es-MX</String>
-																	<String>es-NI</String>
-																	<String>es-PA</String>
-																	<String>es-PE</String>
-																	<String>es-PR</String>
-																	<String>es-PY</String>
-																	<String>es-SV</String>
-																	<String>es-UY</String>
-																	<String>es-VE</String>
-																	<String>et-EE</String>
-																	<String>eu-ES</String>
-																	<String>fa-IR</String>
-																	<String>fi-FI</String>
-																	<String>fo-FO</String>
-																	<String>fr-BE</String>
-																	<String>fr-CA</String>
-																	<String>fr-CH</String>
-																	<String>fr-FR</String>
-																	<String>fr-LU</String>
-																	<String>fr-MC</String>
-																	<String>gl-ES</String>
-																	<String>gu-IN</String>
-																	<String>he-IL</String>
-																	<String>hi-IN</String>
-																	<String>hr-HR</String>
-																	<String>hu-HU</String>
-																	<String>hy-AM</String>
-																	<String>id-ID</String>
-																	<String>is-IS</String>
-																	<String>it-CH</String>
-																	<String>it-IT</String>
-																	<String>ja-JP</String>
-																	<String>ka-GE</String>
-																	<String>kk-KZ</String>
-																	<String>kn-IN</String>
-																	<String>ko-KR</String>
-																	<String>kok-IN</String>
-																	<String>ky-KZ</String>
-																	<String>Lt-az-AZ</String>
-																	<String>lt-LT</String>
-																	<String>Lt-sr-SP</String>
-																	<String>Lt-uz-UZ</String>
-																	<String>lv-LV</String>
-																	<String>mk-MK</String>
-																	<String>mn-MN</String>
-																	<String>mr-IN</String>
-																	<String>ms-BN</String>
-																	<String>ms-MY</String>
-																	<String>nb-NO</String>
-																	<String>nl-BE</String>
-																	<String>nl-NL</String>
-																	<String>nn-NO</String>
-																	<String>pa-IN</String>
-																	<String>pl-PL</String>
-																	<String>pt-BR</String>
-																	<String>pt-PT</String>
-																	<String>ro-RO</String>
-																	<String>ru-RU</String>
-																	<String>sa-IN</String>
-																	<String>sk-SK</String>
-																	<String>sl-SI</String>
-																	<String>sq-AL</String>
-																	<String>sv-FI</String>
-																	<String>sv-SE</String>
-																	<String>sw-KE</String>
-																	<String>syr-SY</String>
-																	<String>ta-IN</String>
-																	<String>te-IN</String>
-																	<String>th-TH</String>
-																	<String>tr-TR</String>
-																	<String>tt-RU</String>
-																	<String>uk-UA</String>
-																	<String>ur-PK</String>
-																	<String>vi-VN</String>
-																	<String>zh-CHS</String>
-																	<String>zh-CHT</String>
-																	<String>zh-CN</String>
-																	<String>zh-HK</String>
-																	<String>zh-MO</String>
-																	<String>zh-SG</String>
-																	<String>zh-TW</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>tbx-min</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 													</list>
@@ -5160,7 +4194,7 @@
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>
@@ -5238,7 +4272,7 @@
 													<String>${cfd}/temp/tbx-basic</String>
 												</field>
 												<field name="transtype">
-													<String>tbx-basic</String>
+													<String>xhtml</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -5287,7 +4321,7 @@
 																<String>args.source.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('TBX-Basic - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -5296,287 +4330,13 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>af-ZA</String>
-																	<String>ar-AE</String>
-																	<String>ar-BH</String>
-																	<String>ar-DZ</String>
-																	<String>ar-EG</String>
-																	<String>ar-IQ</String>
-																	<String>ar-JO</String>
-																	<String>ar-KW</String>
-																	<String>ar-LB</String>
-																	<String>ar-LY</String>
-																	<String>ar-MA</String>
-																	<String>ar-OM</String>
-																	<String>ar-QA</String>
-																	<String>ar-SA</String>
-																	<String>ar-SY</String>
-																	<String>ar-TN</String>
-																	<String>ar-YE</String>
-																	<String>be-BY</String>
-																	<String>bg-BG</String>
-																	<String>ca-ES</String>
-																	<String>cs-CZ</String>
-																	<String>Cy-az-AZ</String>
-																	<String>Cy-sr-SP</String>
-																	<String>Cy-uz-UZ</String>
-																	<String>da-DK</String>
-																	<String>de-AT</String>
-																	<String>de-CH</String>
-																	<String>de-DE</String>
-																	<String>de-LI</String>
-																	<String>de-LU</String>
-																	<String>div-MV</String>
-																	<String>el-GR</String>
-																	<String>en-AU</String>
-																	<String>en-BZ</String>
-																	<String>en-CA</String>
-																	<String>en-CB</String>
-																	<String>en-GB</String>
-																	<String>en-IE</String>
-																	<String>en-JM</String>
-																	<String>en-NZ</String>
-																	<String>en-PH</String>
-																	<String>en-TT</String>
-																	<String>en-US</String>
-																	<String>en-ZA</String>
-																	<String>en-ZW</String>
-																	<String>es-AR</String>
-																	<String>es-BO</String>
-																	<String>es-CL</String>
-																	<String>es-CO</String>
-																	<String>es-CR</String>
-																	<String>es-DO</String>
-																	<String>es-EC</String>
-																	<String>es-ES</String>
-																	<String>es-GT</String>
-																	<String>es-HN</String>
-																	<String>es-MX</String>
-																	<String>es-NI</String>
-																	<String>es-PA</String>
-																	<String>es-PE</String>
-																	<String>es-PR</String>
-																	<String>es-PY</String>
-																	<String>es-SV</String>
-																	<String>es-UY</String>
-																	<String>es-VE</String>
-																	<String>et-EE</String>
-																	<String>eu-ES</String>
-																	<String>fa-IR</String>
-																	<String>fi-FI</String>
-																	<String>fo-FO</String>
-																	<String>fr-BE</String>
-																	<String>fr-CA</String>
-																	<String>fr-CH</String>
-																	<String>fr-FR</String>
-																	<String>fr-LU</String>
-																	<String>fr-MC</String>
-																	<String>gl-ES</String>
-																	<String>gu-IN</String>
-																	<String>he-IL</String>
-																	<String>hi-IN</String>
-																	<String>hr-HR</String>
-																	<String>hu-HU</String>
-																	<String>hy-AM</String>
-																	<String>id-ID</String>
-																	<String>is-IS</String>
-																	<String>it-CH</String>
-																	<String>it-IT</String>
-																	<String>ja-JP</String>
-																	<String>ka-GE</String>
-																	<String>kk-KZ</String>
-																	<String>kn-IN</String>
-																	<String>ko-KR</String>
-																	<String>kok-IN</String>
-																	<String>ky-KZ</String>
-																	<String>Lt-az-AZ</String>
-																	<String>lt-LT</String>
-																	<String>Lt-sr-SP</String>
-																	<String>Lt-uz-UZ</String>
-																	<String>lv-LV</String>
-																	<String>mk-MK</String>
-																	<String>mn-MN</String>
-																	<String>mr-IN</String>
-																	<String>ms-BN</String>
-																	<String>ms-MY</String>
-																	<String>nb-NO</String>
-																	<String>nl-BE</String>
-																	<String>nl-NL</String>
-																	<String>nn-NO</String>
-																	<String>pa-IN</String>
-																	<String>pl-PL</String>
-																	<String>pt-BR</String>
-																	<String>pt-PT</String>
-																	<String>ro-RO</String>
-																	<String>ru-RU</String>
-																	<String>sa-IN</String>
-																	<String>sk-SK</String>
-																	<String>sl-SI</String>
-																	<String>sq-AL</String>
-																	<String>sv-FI</String>
-																	<String>sv-SE</String>
-																	<String>sw-KE</String>
-																	<String>syr-SY</String>
-																	<String>ta-IN</String>
-																	<String>te-IN</String>
-																	<String>th-TH</String>
-																	<String>tr-TR</String>
-																	<String>tt-RU</String>
-																	<String>uk-UA</String>
-																	<String>ur-PK</String>
-																	<String>vi-VN</String>
-																	<String>zh-CHS</String>
-																	<String>zh-CHT</String>
-																	<String>zh-CN</String>
-																	<String>zh-HK</String>
-																	<String>zh-MO</String>
-																	<String>zh-SG</String>
-																	<String>zh-TW</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
 															</field>
 														</ditaParameter>
 														<ditaParameter>
@@ -5584,7 +4344,7 @@
 																<String>args.target.language</String>
 															</field>
 															<field name="description">
-																<null/>
+																<String></String>
 															</field>
 															<field name="value">
 																<String>${ask('TBX-Basic - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
@@ -5593,287 +4353,36 @@
 																<null/>
 															</field>
 															<field name="type">
-																<Integer>0</Integer>
+																<Integer>5</Integer>
 															</field>
 															<field name="possibleValues">
-																<String-array>
-																	<String>af-ZA</String>
-																	<String>ar-AE</String>
-																	<String>ar-BH</String>
-																	<String>ar-DZ</String>
-																	<String>ar-EG</String>
-																	<String>ar-IQ</String>
-																	<String>ar-JO</String>
-																	<String>ar-KW</String>
-																	<String>ar-LB</String>
-																	<String>ar-LY</String>
-																	<String>ar-MA</String>
-																	<String>ar-OM</String>
-																	<String>ar-QA</String>
-																	<String>ar-SA</String>
-																	<String>ar-SY</String>
-																	<String>ar-TN</String>
-																	<String>ar-YE</String>
-																	<String>be-BY</String>
-																	<String>bg-BG</String>
-																	<String>ca-ES</String>
-																	<String>cs-CZ</String>
-																	<String>Cy-az-AZ</String>
-																	<String>Cy-sr-SP</String>
-																	<String>Cy-uz-UZ</String>
-																	<String>da-DK</String>
-																	<String>de-AT</String>
-																	<String>de-CH</String>
-																	<String>de-DE</String>
-																	<String>de-LI</String>
-																	<String>de-LU</String>
-																	<String>div-MV</String>
-																	<String>el-GR</String>
-																	<String>en-AU</String>
-																	<String>en-BZ</String>
-																	<String>en-CA</String>
-																	<String>en-CB</String>
-																	<String>en-GB</String>
-																	<String>en-IE</String>
-																	<String>en-JM</String>
-																	<String>en-NZ</String>
-																	<String>en-PH</String>
-																	<String>en-TT</String>
-																	<String>en-US</String>
-																	<String>en-ZA</String>
-																	<String>en-ZW</String>
-																	<String>es-AR</String>
-																	<String>es-BO</String>
-																	<String>es-CL</String>
-																	<String>es-CO</String>
-																	<String>es-CR</String>
-																	<String>es-DO</String>
-																	<String>es-EC</String>
-																	<String>es-ES</String>
-																	<String>es-GT</String>
-																	<String>es-HN</String>
-																	<String>es-MX</String>
-																	<String>es-NI</String>
-																	<String>es-PA</String>
-																	<String>es-PE</String>
-																	<String>es-PR</String>
-																	<String>es-PY</String>
-																	<String>es-SV</String>
-																	<String>es-UY</String>
-																	<String>es-VE</String>
-																	<String>et-EE</String>
-																	<String>eu-ES</String>
-																	<String>fa-IR</String>
-																	<String>fi-FI</String>
-																	<String>fo-FO</String>
-																	<String>fr-BE</String>
-																	<String>fr-CA</String>
-																	<String>fr-CH</String>
-																	<String>fr-FR</String>
-																	<String>fr-LU</String>
-																	<String>fr-MC</String>
-																	<String>gl-ES</String>
-																	<String>gu-IN</String>
-																	<String>he-IL</String>
-																	<String>hi-IN</String>
-																	<String>hr-HR</String>
-																	<String>hu-HU</String>
-																	<String>hy-AM</String>
-																	<String>id-ID</String>
-																	<String>is-IS</String>
-																	<String>it-CH</String>
-																	<String>it-IT</String>
-																	<String>ja-JP</String>
-																	<String>ka-GE</String>
-																	<String>kk-KZ</String>
-																	<String>kn-IN</String>
-																	<String>ko-KR</String>
-																	<String>kok-IN</String>
-																	<String>ky-KZ</String>
-																	<String>Lt-az-AZ</String>
-																	<String>lt-LT</String>
-																	<String>Lt-sr-SP</String>
-																	<String>Lt-uz-UZ</String>
-																	<String>lv-LV</String>
-																	<String>mk-MK</String>
-																	<String>mn-MN</String>
-																	<String>mr-IN</String>
-																	<String>ms-BN</String>
-																	<String>ms-MY</String>
-																	<String>nb-NO</String>
-																	<String>nl-BE</String>
-																	<String>nl-NL</String>
-																	<String>nn-NO</String>
-																	<String>pa-IN</String>
-																	<String>pl-PL</String>
-																	<String>pt-BR</String>
-																	<String>pt-PT</String>
-																	<String>ro-RO</String>
-																	<String>ru-RU</String>
-																	<String>sa-IN</String>
-																	<String>sk-SK</String>
-																	<String>sl-SI</String>
-																	<String>sq-AL</String>
-																	<String>sv-FI</String>
-																	<String>sv-SE</String>
-																	<String>sw-KE</String>
-																	<String>syr-SY</String>
-																	<String>ta-IN</String>
-																	<String>te-IN</String>
-																	<String>th-TH</String>
-																	<String>tr-TR</String>
-																	<String>tt-RU</String>
-																	<String>uk-UA</String>
-																	<String>ur-PK</String>
-																	<String>vi-VN</String>
-																	<String>zh-CHS</String>
-																	<String>zh-CHT</String>
-																	<String>zh-CN</String>
-																	<String>zh-HK</String>
-																	<String>zh-MO</String>
-																	<String>zh-SG</String>
-																	<String>zh-TW</String>
-																</String-array>
+																<null/>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																	<String></String>
-																</String-array>
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>tbx-basic</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
 															</field>
 														</ditaParameter>
 													</list>
@@ -5939,7 +4448,7 @@
 													<Boolean>true</Boolean>
 												</field>
 												<field name="openInBrowser">
-													<Boolean>true</Boolean>
+													<Boolean>false</Boolean>
 												</field>
 												<field name="outputFile">
 													<null/>

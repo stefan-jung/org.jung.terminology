@@ -4373,7 +4373,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/partOf ')]</String>
+																<String></String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap/>
