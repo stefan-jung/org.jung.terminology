@@ -19,12 +19,23 @@
             </condition>
         </fail>
     </target>
-
-    <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available, dita2webhelp, termbrowser-termstats, semanticnet"/>
-    <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available, dita2webhelp-responsive, termbrowser-termstats, semanticnet"/>
-    <target name="dita2termbrowser-html5" depends="dita2html5, termbrowser-termstats, semanticnet"/>
-    
-    <target name="termbrowser-termstats" description="Generate terminology statistics.">
+    <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available">
+        <antcall target="dita2webhelp"/>
+        <antcall target="termbrowser-termstats"/>
+        <antcall target="semanticnet"/>
+    </target>
+    <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available">
+        <antcall target="dita2webhelp-responsive"/>
+        <antcall target="termbrowser-termstats"/>
+        <antcall target="semanticnet"/>
+    </target>
+    <target name="dita2termbrowser-html5">
+        <antcall target="dita2html5"/>
+        <antcall target="termbrowser-termstats"/>
+        <antcall target="semanticnet"/>
+    </target>
+    <target name="termbrowser-termstats"
+        description="Generate terminology statistics.">
         
         <condition property="termmap" value="${args.term.containermap}">
             <isset property="args.term.containermap"/>
@@ -41,6 +52,8 @@
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
         
+        
+        <!--<property name="dita.temp.dir.rel" value="${dita.temp.dir}" relative="yes"/>-->
         <property name="dita.temp.dir.abs" location="${dita.temp.dir}"/>
         <makeurl file="${dita.temp.dir.abs}" property="dita.temp.dir.abs.url"/>
         <property name="dita.map.rel" value="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap" relative="no"/>
@@ -88,6 +101,18 @@
         
         <!-- Copy the XML file to the output dir. It has to be shipped with the webhelp to be used as an input parameter for the next publication. -->
         <copy file="${dita.temp.dir}/termstats_merged.xml" tofile="${output.dir}/termstats.xml"/>
+        
+        <!--<loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.head">
+            <filterchain>
+                <replaceregex pattern="\s\s+" replace=" "/>
+                <trim/>
+                <ignoreblank/>
+                <striplinebreaks/>
+                <replaceregex pattern="(.*)&lt;!-\-HEAD BEGINNING-\-&gt;" replace=""/>
+                <replaceregex pattern="&lt;!-\-HEAD END-\-&gt;(.*)" replace=""/>
+            </filterchain>
+        </loadfile>-->
+        <!--<echo>terminology_stats.head=${terminology_stats.head}</echo>-->
         
         <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
             <filterchain>
