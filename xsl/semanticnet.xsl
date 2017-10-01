@@ -323,9 +323,8 @@
     
     <!-- Generate data set for autocomplete search box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="search">
-        <xsl:text>'</xsl:text>
-        <xsl:value-of select="@keys"/>
-        <xsl:text>'</xsl:text>
+        <xsl:text>{value:'</xsl:text><xsl:value-of select="@keys"/><xsl:text>',</xsl:text>
+        <xsl:text>label:'</xsl:text><xsl:value-of select="descendant::*[contains(@class, ' topic/navtitle ')][1]"/><xsl:text>'}</xsl:text>
         <xsl:choose>
             <xsl:when test="following-sibling::*[contains(@class, ' termmap/termref ')]">
                 <xsl:text>,</xsl:text>
