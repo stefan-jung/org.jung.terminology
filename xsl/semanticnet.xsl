@@ -355,7 +355,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/antonym ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsAntonymOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -369,7 +369,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hypernym ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsHypernymOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -383,7 +383,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hyponym ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsHyponymOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -397,7 +397,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/instanceOf ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsInstanceOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -411,7 +411,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/partOf ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsPartOf</xsl:text>
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="$key"/>
@@ -425,7 +425,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsRelatedWith</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
