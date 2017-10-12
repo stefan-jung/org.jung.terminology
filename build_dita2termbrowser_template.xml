@@ -14,7 +14,11 @@
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
                 <not>
+                  <or>
                     <isset property="dita.plugin.com.oxygenxml.dita-ot.plugin.webhelp.dir"/>
+                    <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
+                    <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
+                  </or>
                 </not>
             </condition>
         </fail>
