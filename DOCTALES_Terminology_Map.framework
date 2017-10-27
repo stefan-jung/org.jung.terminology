@@ -1936,6 +1936,23 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
+											<Integer>18</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>DITA Map Metrics Report</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
 											<Integer>17</Integer>
 										</field>
 										<field name="value">
@@ -2344,7 +2361,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\doctales\skin-responsive.css</String>
+																<String>${frameworkDir}/framework/webhelp-skin/doctales/skin-responsive.css</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2443,7 +2460,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\resources\ditaval\termbrowser-responsive.ditaval</String>
+																<String>${frameworkDir}/framework/resources/ditaval/termbrowser-responsive.ditaval</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2489,7 +2506,7 @@
 																<String>Specifies an XML fragment (or a path to a file that contains well formed XML content) that will be displayed after the logo and title in the output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\fragments\webhelp.fragment.after.logo_and_title.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.after.logo_and_title.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2512,7 +2529,7 @@
 																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed after the top menu in the output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\fragments\webhelp.fragment.after.top_menu.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.after.top_menu.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2535,7 +2552,7 @@
 																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as the footer in the output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\fragments\webhelp.fragment.footer.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.footer.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2558,7 +2575,7 @@
 																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as the header in the output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\header\termbrowser-reponsive.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/header/termbrowser-reponsive.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2581,7 +2598,7 @@
 																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as a welcome message (or title) in the output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\fragments\webhelp.fragment.welcome.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.welcome.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2604,7 +2621,7 @@
 																<String>To add a logo in the title area of your WebHelp output.</String>
 															</field>
 															<field name="value">
-																<String>${frameworksDir}\framework\webhelp-skin\logo\doctales-logo.svg</String>
+																<String>${frameworkDir}/framework/webhelp-skin/logo/doctales-logo.svg</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2911,7 +2928,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/doctales/skin.css</String>
+																<String>${frameworkDir}/framework/webhelp-skin/doctales/skin.css</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2980,7 +2997,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/header/termbrowser-classic.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/header/termbrowser-classic.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -3271,7 +3288,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/doctales/html5.css</String>
+																<String>${frameworkDir}/framework/webhelp-skin/doctales/html5.css</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -3340,7 +3357,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/webhelp-skin/header/termbrowser-html5.xml</String>
+																<String>${frameworkDir}/framework/webhelp-skin/header/termbrowser-html5.xml</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
