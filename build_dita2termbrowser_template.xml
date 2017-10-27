@@ -30,7 +30,7 @@
         in the termbrowser-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
-    <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available, init-properties">
+    <target name="dita2termbrowser-classic" depends="is.com.oxygen.webhelp.available, init-properties">
         <antcall target="dita2webhelp"/>
         <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>

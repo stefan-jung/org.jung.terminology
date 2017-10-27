@@ -2840,10 +2840,10 @@
 													<String>${cfd}</String>
 												</field>
 												<field name="outputDir">
-													<String>${cfd}/out/termbrowser</String>
+													<String>${cfd}/out/termbrowser-classic</String>
 												</field>
 												<field name="tempDir">
-													<String>${cfd}/temp/termbrowser</String>
+													<String>${cfd}/temp/termbrowser-classic</String>
 												</field>
 												<field name="transtype">
 													<String>xhtml</String>
@@ -3050,7 +3050,7 @@
 																<null/>
 															</field>
 															<field name="value">
-																<String>termbrowser</String>
+																<String>termbrowser-classic</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -3092,7 +3092,7 @@
 													<null/>
 												</field>
 												<field name="name">
-													<String>Termbrowser</String>
+													<String>Termbrowser Classic</String>
 												</field>
 												<field name="baseURL">
 													<null/>
