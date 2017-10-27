@@ -8012,6 +8012,23 @@
 											<String>doctypeRules</String>
 										</field>
 										<field name="index">
+											<Integer>17</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>doctypeRules</String>
+										</field>
+										<field name="index">
 											<Integer>16</Integer>
 										</field>
 										<field name="value">
