@@ -339,6 +339,7 @@
                         var myLineChart = new Chart(termNotationsChart, {
                         type: 'line',
                         data: data,
+                        steppedLine: 'before',
                         options: {
                             title: {
                                 display: true,
