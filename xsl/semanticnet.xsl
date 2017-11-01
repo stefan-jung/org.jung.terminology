@@ -14,7 +14,7 @@
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     
-    <xsl:param name="language"/>
+    <xsl:param name="language" as="xs:string"/>
     
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
