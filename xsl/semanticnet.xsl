@@ -403,7 +403,7 @@
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:text>', arrows: 'from', label: '</xsl:text>
                 <xsl:value-of select="doctales:getString($language, 'Is Instance Of')"/>
                 <xsl:text>'},</xsl:text>
             </xsl:for-each>
