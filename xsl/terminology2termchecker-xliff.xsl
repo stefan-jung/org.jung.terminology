@@ -94,7 +94,8 @@
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
                     <xsl:choose>
                         <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:if test="*[contains(@class, 'termentry/termVariant')] = ''">
+                            <xsl:message>Generate SQF for term notation '<xsl:value-of select="$notRecommendedTerm"/>'</xsl:message>
+                            <xsl:if test="not(*[contains(@class, 'termentry/termVariant')]) or *[contains(@class, 'termentry/termVariant')] = ''">
                                 <xsl:message terminate="yes">ERROR: Could not create SQF for not recommended term '<xsl:value-of select="$notRecommendedTerm"/>', because the preferred term is empty.</xsl:message>
                             </xsl:if>
                             <xsl:call-template name="createSqfFix">
