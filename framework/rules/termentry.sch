@@ -35,12 +35,22 @@
             </sch:assert>
             <sqf:fix id="fix-id">
                 <sqf:description>
-                    <sqf:title>Rename ID to '<sch:value-of select="$new-id"/>'</sqf:title>
+                    <sqf:title diagnostics="rename-to-en rename-to-de">
+                        Rename ID to '<sch:value-of select="$new-id"/>'
+                    </sqf:title>
                 </sqf:description>
                 <sqf:add node-type="attribute" target="id"><sch:value-of select="$new-id"/></sqf:add>
             </sqf:fix>
         </sch:rule>
     </sch:pattern>
+    <sch:diagnostics>
+        <sch:diagnostic id="rename-to-en" xml:lang="en">
+            Rename ID to '<sch:value-of select="$new-id"/>'
+        </sch:diagnostic>
+        <sch:diagnostic id="rename-to-de" xml:lang="de">
+            Ändere ID zu '<sch:value-of select="$new-id"/>'
+        </sch:diagnostic>
+    </sch:diagnostics>
     <sch:diagnostics>
         <sch:diagnostic id="termentry-topic-id-en" xml:lang="en">
             The ID of the termentry topic must be equal to its filename without file extension.

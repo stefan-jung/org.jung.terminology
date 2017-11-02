@@ -151,9 +151,9 @@
                         };
                         var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
                         var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                        type: 'pie',
-                        data: termNotationsPerLanguageData,
-                        options: {}
+                            type: 'pie',
+                            data: termNotationsPerLanguageData,
+                            options: {}
                         });
                         }
                     </script>

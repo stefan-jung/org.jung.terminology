@@ -880,11 +880,6 @@
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
-          <attribute name="type" a:defaultValue="antonyms">
-            <value>antonyms</value>
-          </attribute>
-        </optional>
-        <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
@@ -910,11 +905,6 @@
       <define name="hypernyms.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
-        <optional>
-          <attribute name="type" a:defaultValue="hypernyms">
-            <value>hypernyms</value>
-          </attribute>
-        </optional>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -942,11 +932,6 @@
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
-          <attribute name="type" a:defaultValue="hyponyms">
-            <value>hyponyms</value>
-          </attribute>
-        </optional>
-        <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
@@ -972,11 +957,6 @@
       <define name="instancesOf.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
-        <optional>
-          <attribute name="type" a:defaultValue="instancesOf">
-            <value>instancesOf</value>
-          </attribute>
-        </optional>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -1004,11 +984,6 @@
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
-          <attribute name="type" a:defaultValue="partsOf">
-            <value>partsOf</value>
-          </attribute>
-        </optional>
-        <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
@@ -1034,11 +1009,6 @@
       <define name="relatedTerms.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
-        <optional>
-          <attribute name="type" a:defaultValue="relatedTerms">
-            <value>relatedTerms</value>
-          </attribute>
-        </optional>
         <optional>
           <attribute name="outputclass"/>
         </optional>
