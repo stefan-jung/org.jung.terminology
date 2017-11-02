@@ -7,11 +7,10 @@ org.doctales.terminology
 
 [![Build Status](https://travis-ci.org/doctales/org.doctales.terminology.svg?branch=master)](https://travis-ci.org/doctales/org.doctales.terminology)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Stories in Ready](https://badge.waffle.io/doctales/org.doctales.terminology.png?label=ready&title=Ready)](https://waffle.io/doctales/org.doctales.terminology)
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
 
-- Create and change terms easily using specialized DITA topics. The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
+- Create and change terms easily using specialized DITA topics (DTD/RNG). The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
 - Author terms easily using an &lt;oXygen/&gt; XML framework with author mode stylesheets, that simplify the editing of `<termentry>` and `<termmap>` topics.
 - Navigate through the terminology database with a classic or responsive terminology browser ([DEMO](https://doctales.github.io/samples/termbrowser-responsive/index.html)) based on the &lt;oXygen/&gt; webhelp transformation.
 - Check DITA or XLIFF files with a Schematron based terminology checker.
@@ -23,13 +22,17 @@ org.doctales.terminology
 
 - DITA-OT 2.3 or higher
 - &lt;oXygen/&gt; XML 18 or higher (optional)
+- To use the Relax NG topics and maps, you need to install the **dita-relaxng-defaults** plugin.
+  ```shell
+  dita --install https://github.com/oxygenxml/dita-relaxng-defaults/archive/master.zip
+  ```  
 
 **Install the plugin**
 
-1. Install the plugin with the [`dita` command](http://www.dita-ot.org/dev/parameters/dita-command-arguments.html).
-   ```shell
-   dita -install https://github.com/doctales/org.doctales.terminology/archive/master.zip
-   ```
+Install the plugin with the [`dita` command](http://www.dita-ot.org/dev/parameters/dita-command-arguments.html).
+```shell
+dita --install https://github.com/doctales/org.doctales.terminology/archive/master.zip
+```
 
 **Install the &lt;oXygen/&gt; XML Framework**
 
