@@ -23,7 +23,7 @@
 
           SYSTEM:   Darwin Information Typing Architecture (DITA)
 
-          PURPOSE:  Define elements and specialization atttributes for Termentries
+          PURPOSE:  Define elements and specialization attributes for Termentries
 
           ORIGINAL CREATION DATE:
                     March 2017
@@ -414,10 +414,10 @@
           <a:documentation>Icelandic - Iceland</a:documentation>
           <value>it</value>
           <a:documentation>Italian</a:documentation>
-          <value>it-IT</value>
-          <a:documentation>Italian - Italy</a:documentation>
           <value>it-CH</value>
           <a:documentation>Italian - Switzerland</a:documentation>
+          <value>it-IT</value>
+          <a:documentation>Italian - Italy</a:documentation>
           <value>ja</value>
           <a:documentation>Japanese</a:documentation>
           <value>ja-JP</value>
@@ -452,6 +452,7 @@
           <value>lv-LV</value>
           <a:documentation>Latvian - Latvia</a:documentation>
           <value>mk</value>
+          <a:documentation>Macedonian</a:documentation>
           <value>mk-MK</value>
           <a:documentation>Macedonian (FYROM)</a:documentation>
           <value>mn-MN</value>
@@ -518,10 +519,10 @@
           <value>sr</value>
           <value>sv</value>
           <a:documentation>Swedish</a:documentation>
-          <value>sv-SE</value>
-          <a:documentation>Swedish - Sweden</a:documentation>
           <value>sv-FI</value>
           <a:documentation>Swedish - Finland</a:documentation>
+          <value>sv-SE</value>
+          <a:documentation>Swedish - Sweden</a:documentation>
           <value>sw-KE</value>
           <a:documentation>Swahili - Kenya</a:documentation>
           <value>sx</value>

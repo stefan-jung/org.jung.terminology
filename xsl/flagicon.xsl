@@ -6,10 +6,20 @@
     exclude-result-prefixes="xs xd doctales"
     version="2.0">
     
-    
     <xd:doc>
         <xd:p>Return the corresponding flag</xd:p>
-        <xd:p>Usually this should be: <xd:i>ISO-639 Language Code</xd:i> + "-" + <xd:i>ISO-3166 Country Code</xd:i></xd:p>
+        <xd:p>
+            Usually this should be: <xd:i>ISO-639-1 Language Code</xd:i> + "-" + <xd:i>ISO-3166 Country Code</xd:i>,
+            as explained in https://tools.ietf.org/html/bcp47
+        </xd:p>
+        <xd:p>Good resources are:</xd:p>
+        <xd:ul>
+            <xd:li><xd:a>https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx</xd:a></xd:li>
+            <xd:li><xd:a>https://www.andiamo.co.uk/resources/iso-language-codes</xd:a></xd:li>
+            <xd:li><xd:a>https://datahub.io/core/language-codes</xd:a>, section <xd:i>ietf-language-tags</xd:i></xd:li>
+            <xd:li><xd:a>https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html</xd:a></xd:li>
+        </xd:ul>
+        <xd:p>A good resource for language names is <xd:a>http://id.loc.gov/vocabulary/iso639-1.html</xd:a>.</xd:p>
         <xd:param name="language">
             <xd:p>Boolean</xd:p>
         </xd:param>
@@ -24,11 +34,6 @@
         <xsl:element name="span">
             <xsl:attribute name="class">label label-default</xsl:attribute>
             <xsl:choose>
-                <xsl:when test="$language = 'af'">
-                    <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-af</xsl:attribute>
-                    </xsl:element>
-                </xsl:when>
                 <xsl:when test="$language = 'af-ZA'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-za</xsl:attribute>
@@ -129,14 +134,14 @@
                         <xsl:attribute name="class">flag-icon flag-icon-at</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
-                <xsl:when test="$language = 'de-DE'">
-                    <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-de</xsl:attribute>
-                    </xsl:element>
-                </xsl:when>
                 <xsl:when test="$language = 'de-CH'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-ch</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'de-DE'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-de</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'de-LI'">
@@ -147,6 +152,36 @@
                 <xsl:when test="$language = 'de-LU'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-lu</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'div-MV'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-mv</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'el-GR'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-gr</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'en-AU'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-au</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'en-BZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-bz</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'en-CA'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ca</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'en-CB'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-cb</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'en-GB'">
@@ -169,6 +204,11 @@
                         <xsl:attribute name="class">flag-icon flag-icon-nz</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'en-PH'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ph</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'en-TT'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-tt</xsl:attribute>
@@ -184,9 +224,9 @@
                         <xsl:attribute name="class">flag-icon flag-icon-za</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
-                <xsl:when test="$language = 'es-ES'">
+                <xsl:when test="$language = 'en-ZW'">
                     <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-es</xsl:attribute>
+                        <xsl:attribute name="class">flag-icon flag-icon-zw</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'es-AR'">
@@ -222,6 +262,11 @@
                 <xsl:when test="$language = 'es-EC'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-ec</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'es-ES'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-es</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'es-GT'">
@@ -279,9 +324,29 @@
                         <xsl:attribute name="class">flag-icon flag-icon-ve</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
-                <xsl:when test="$language = 'fr-FR'">
+                <xsl:when test="$language = 'et-EE'">
                     <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-fr</xsl:attribute>
+                        <xsl:attribute name="class">flag-icon flag-icon-ee</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'eu-ES'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-es</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'fa-IR'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ir</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'fi-FI'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-fi</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'fo-FO'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-fo</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'fr-BE'">
@@ -299,14 +364,39 @@
                         <xsl:attribute name="class">flag-icon flag-icon-ch</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'fr-FR'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-fr</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'fr-LU'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-lu</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
-                <xsl:when test="$language = 'fr-GA'">
+                <xsl:when test="$language = 'fr-MC'">
                     <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-ga</xsl:attribute>
+                        <xsl:attribute name="class">flag-icon flag-icon-mc</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'gl-ES'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-es</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'gu-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'he-IL'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-il</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'hi-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'hr-HR'">
@@ -317,6 +407,16 @@
                 <xsl:when test="$language = 'hu-HU'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-hu</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'hy-AM'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-am</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'id-ID'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-id</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'is-IS'">
@@ -339,9 +439,89 @@
                         <xsl:attribute name="class">flag-icon flag-icon-ja</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'ka-GE'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ge</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'kk-KZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-kz</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'kn-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'ko-KR'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-kr</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'kok-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ky-KZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-kz</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'lt-LT'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-lt</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'Lt-az-AZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-az</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'Lt-sr-SP'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-sp</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'Lt-uz-UZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-uz</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'lv-LV'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-lv</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'mk-MK'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-mk</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'mn-MN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-mn</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'mr-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ms-BN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-bn</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ms-MY'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-my</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'nb-NO'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-no</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'nl-BE'">
@@ -354,14 +534,19 @@
                         <xsl:attribute name="class">flag-icon flag-icon-nl</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'nn-NO'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-no</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'pa-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'pl-PL'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-pl</xsl:attribute>
-                    </xsl:element>
-                </xsl:when>
-                <xsl:when test="$language = 'pt-PT'">
-                    <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-pt</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'pt-BR'">
@@ -369,9 +554,24 @@
                         <xsl:attribute name="class">flag-icon flag-icon-br</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'pt-PT'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-pt</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ro-MO'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-mo</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'ro-RO'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-ro</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ru-MO'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-mo</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'ru-RU'">
@@ -379,9 +579,94 @@
                         <xsl:attribute name="class">flag-icon flag-icon-ru</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'sa-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'sk-SK'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-sk</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'sl-SI'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-si</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'sq-AL'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-al</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'sv-FI'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-fi</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'sv-SE'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-se</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'sw-KE'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ke</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'syr-SY'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-sy</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ta-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'te-IN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-in</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'th-TH'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-th</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'tr-TR'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-tr</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'tt-RU'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ru</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'uk-UA'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-ua</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ur-PK'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-pk</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'vi-VN'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-vn</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'zh-CHS'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-cn</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'zh-CHT'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-cn</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'zh-CN'">
@@ -392,6 +677,11 @@
                 <xsl:when test="$language = 'zh-HK'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-hk</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'zh-MO'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-mo</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'zh-SG'">
