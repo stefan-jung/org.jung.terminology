@@ -20,7 +20,7 @@ org.doctales.terminology
 
 **Prerequisites**
 
-- DITA-OT 2.3 or higher
+- DITA-OT 2.3 - 2.5.4
 - &lt;oXygen/&gt; XML 18 or higher (optional)
 - To use the Relax NG topics and maps, you need to install the **dita-relaxng-defaults** plugin.
   ```shell
