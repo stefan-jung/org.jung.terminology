@@ -20,9 +20,9 @@
       </image>
     </fig>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
-   <termVariant>motorcycle</termVariant>
-  </fullForm>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>motorcycle</termVariant>
+    </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
       <termVariant>motor-bike</termVariant>
     </fullForm>

@@ -10,11 +10,11 @@
  </definition>
  <termBody>
   <partOfSpeech/>
-  <fullForm usage="preferred" language="de-DE">
-   <termVariant>Rad</termVariant>
-  </fullForm>
   <fullForm usage="preferred" language="en-GB">
    <termVariant>wheel</termVariant>
+  </fullForm>
+  <fullForm usage="preferred" language="de-DE" id="fullForm_h35_rvk_tbb">
+   <termVariant>Rad</termVariant>
   </fullForm>
  </termBody>
 </termentry>

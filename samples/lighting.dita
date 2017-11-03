@@ -22,13 +22,13 @@
       </image>
     </fig>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
-   <termVariant>lighting</termVariant>
-  </fullForm>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>lighting</termVariant>
+    </fullForm>
     <fullForm language="en-GB" usage="preferred">
       <termVariant>lightning system</termVariant>
     </fullForm>
-    <fullForm language="de" usage="preferred">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Beleuchtung</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">

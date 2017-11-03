@@ -13,10 +13,10 @@
   </definition>
   <termBody>
     <partOfSpeech value="noun"/>
-    <fullForm usage="preferred" language="en">
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>advanced driver assistance systems</termVariant>
     </fullForm>
-    <acronym language="en" usage="preferred">
+    <acronym language="en-GB" usage="preferred">
       <termVariant>ADAS</termVariant>
     </acronym>
     <fullForm language="de-DE" usage="preferred">
