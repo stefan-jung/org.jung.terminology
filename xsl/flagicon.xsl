@@ -119,6 +119,21 @@
                         <xsl:attribute name="class">flag-icon flag-icon-ye</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'be-BY'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-by</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'bg-BG'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-bg</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'ca-ES'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-es</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'cs-CZ'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-cz</xsl:attribute>
