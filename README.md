@@ -44,6 +44,9 @@ dita --install https://github.com/doctales/org.doctales.terminology/archive/mast
 
 Please refer to the [documentation](https://doctales.atlassian.net/wiki/display/TERM/org.doctales.terminology).
 
+## Licenses
+
+**org.doctales.terminology** is available under the [Apache Public License (APL) 2](https://www.apache.org/licenses/LICENSE-2.0). The plugin contains SVG flags taken from the [flag-icon-css](https://github.com/lipis/flag-icon-css) project, which is available under the [MIT license](https://opensource.org/licenses/MIT). The plugin contains the [OOPS Consultancy XMLTask library](http://www.oopsconsultancy.com/software/xmltask), which is available under the [Apache Public License (APL)](https://www.apache.org/licenses/LICENSE-1.0).
 
 ## Contribution
 
