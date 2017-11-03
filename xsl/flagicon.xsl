@@ -139,6 +139,21 @@
                         <xsl:attribute name="class">flag-icon flag-icon-cz</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
+                <xsl:when test="$language = 'Cy-az-AZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-az</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'Cy-sr-SP'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-sr</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:when test="$language = 'Cy-uz-UZ'">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">flag-icon flag-icon-uz</xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
                 <xsl:when test="$language = 'da-DK'">
                     <xsl:element name="span">
                         <xsl:attribute name="class">flag-icon flag-icon-dk</xsl:attribute>
@@ -451,7 +466,7 @@
                 </xsl:when>
                 <xsl:when test="$language = 'ja-JP'">
                     <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-ja</xsl:attribute>
+                        <xsl:attribute name="class">flag-icon flag-icon-jp</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'ka-GE'">
@@ -496,7 +511,7 @@
                 </xsl:when>
                 <xsl:when test="$language = 'Lt-sr-SP'">
                     <xsl:element name="span">
-                        <xsl:attribute name="class">flag-icon flag-icon-sp</xsl:attribute>
+                        <xsl:attribute name="class">flag-icon flag-icon-sr</xsl:attribute>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$language = 'Lt-uz-UZ'">
