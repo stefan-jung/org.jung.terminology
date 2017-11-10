@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-    <moduleTitle>DITA Bookmap</moduleTitle>
+    <moduleTitle>DITA DOCTALES Term Map</moduleTitle>
       <headerComment xml:space="preserve">
 ========================================================================================================================
                                                          HEADER
@@ -51,12 +54,12 @@
       <moduleType>map</moduleType>
       <moduleShortName>termmap</moduleShortName>
       <modulePublicIds>
-        <dtdMod>-//OASIS//ELEMENTS DITA<var presep=" " name="ditaver"/> Termmap//EN</dtdMod>
-        <dtdEnt>-//OASIS//ENTITIES DITA<var presep=" " name="ditaver"/> Termmap//EN</dtdEnt>
-        <xsdGrp>urn:doctales:dita:rnc:termmapGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
-        <xsdMod>urn:doctales:dita:rnc:termmapMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <dtdMod>-//DOCTALES//ELEMENTS DITA<var presep=" " name="ditaver"/> Termmap//EN</dtdMod>
+        <dtdEnt>-//DOCTALES//ENTITIES DITA<var presep=" " name="ditaver"/> Termmap//EN</dtdEnt>
+        <xsdGrp>urn:doctales:dita:xsd:termmapGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <xsdMod>urn:doctales:dita:xsd:termmapMod.xsd<var presep=":" name="ditaver"/></xsdMod>
         <rncMod>urn:doctales:dita:rnc:termmapMod.rnc<var presep=":" name="ditaver"/></rncMod>
-        <rngMod>urn:doctales:dita:rnc:termmapMod.rng<var presep=":" name="ditaver"/></rngMod>
+        <rngMod>urn:doctales:dita:rng:termmapMod.rng<var presep=":" name="ditaver"/></rngMod>
       </modulePublicIds>
       <domainsContribution>(map termmap)</domainsContribution>
     </moduleMetadata>
