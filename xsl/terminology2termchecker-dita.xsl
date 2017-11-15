@@ -29,7 +29,7 @@
             <!-- The context text() matches the text content of all nodes. -->
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="doctales:generateId()"/>
+            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termLanguageRegionCode)"/>
             
             <!-- 
                 Create a report that will be reported if the tested topic: 
