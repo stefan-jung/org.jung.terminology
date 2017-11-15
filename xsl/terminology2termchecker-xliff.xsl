@@ -30,7 +30,7 @@
             
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="doctales:generateId()"/>
+            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termLanguageRegionCode)"/>
             <xsl:variable name="parent">
                 <xsl:choose>
                     <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
