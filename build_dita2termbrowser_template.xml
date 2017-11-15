@@ -38,7 +38,6 @@
         <condition property="xmltask-available" value="true">
             <contains string="${dost.class.path.property}" substring="xmltask"/>
         </condition>
-        <echo level="warning">dost.class.path=${dost.class.path.property}</echo>
         <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
     </target>
     
