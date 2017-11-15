@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net">
     
-    <path id="org.doctales.terminology.path">    
-        <pathelement path="dost.class.path"/>
-    </path>
-    
     <target name="-is-oxygen-webhelp-available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
@@ -38,11 +34,11 @@
     <target name="dita2termbrowser-html5" depends="dita2html5, termbrowser-termstats, semanticnet"/>
     
     <target name="-is-xmltask-available">
-        <pathconvert property="terminology.path" refid="org.doctales.terminology.path"/>
+        <pathconvert refid="dost.class.path" property="dost.class.path.property"/>
         <condition property="xmltask-available" value="true">
-            <contains string="${terminology.path}" substring="xmltask"/>
+            <contains string="${dost.class.path.property}" substring="xmltask"/>
         </condition>
-        <echo level="warning">terminology.path=${terminology.path}</echo>
+        <echo level="warning">dost.class.path=${dost.class.path.property}</echo>
         <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
     </target>
     
