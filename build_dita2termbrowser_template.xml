@@ -3,14 +3,9 @@
     
     <path id="org.doctales.terminology.path">    
         <pathelement path="dost.class.path"/>
-        <pathelement location="${dita.plugin.org.doctales.terminology.dir}/lib/xmltask.jar"/>
-        <pathelement location="lib/xmltask.jar"/>
-        <pathelement location="${dita.dir}/plugins/org.doctales.terminology/lib/xmltask.jar"/>
     </path>
     
-    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="org.doctales.terminology.path"/>
-
-    <target name="is.com.oxygen.webhelp.available">
+    <target name="-is-oxygen-webhelp-available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
                 <not>
@@ -30,20 +25,29 @@
         in the termbrowser-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
-    <target name="dita2termbrowser-classic" depends="is.com.oxygen.webhelp.available, init-properties">
+    <target name="dita2termbrowser-classic" depends="-is-oxygen-webhelp-available, init-properties">
         <antcall target="dita2webhelp"/>
         <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
-    <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available, init-properties">
+    <target name="dita2termbrowser-responsive" depends="-is-oxygen-webhelp-available, init-properties">
         <antcall target="dita2webhelp-responsive"/>
         <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
     <target name="dita2termbrowser-html5" depends="dita2html5, termbrowser-termstats, semanticnet"/>
     
+    <target name="-is-xmltask-available">
+        <pathconvert property="terminology.path" refid="org.doctales.terminology.path"/>
+        <condition property="xmltask-available" value="true">
+            <contains string="${terminology.path}" substring="xmltask"/>
+        </condition>
+        <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
+    </target>
+    
     <target name="termbrowser-termstats"
-        description="Generate terminology statistics.">
+        description="Generate terminology statistics."
+        depends="-is-xmltask-available">
         <condition property="termmap" value="${args.term.containermap}">
             <isset property="args.term.containermap"/>
         </condition>
@@ -173,7 +177,7 @@
         <move file="${dita.temp.dir}${file.separator}terminology_stats.xml" tofile="${dita.temp.dir}/termstats_merged.xml"/>
     </target>
     
-    <target name="semanticnet">
+    <target name="semanticnet" depends="-is-xmltask-available">
         <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
