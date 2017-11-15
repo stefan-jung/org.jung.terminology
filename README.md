@@ -20,7 +20,7 @@ org.doctales.terminology
 
 **Prerequisites**
 
-- DITA-OT 2.3 - 2.5.4
+- DITA-OT 2.3.x, DITA-OT 2.4.x, DITA-OT 2.5.x or DITA-OT 3.x
 - The termbrowser needs the [OOPS Consultancy XMLTask](http://www.oopsconsultancy.com/software/xmltask/) library on classpath. If this library is missing, you can provide it by installing the DITA-OT utility plugin [org.doctales.xmltask](https://github.com/doctales/org.doctales.xmltask). 
 - &lt;oXygen/&gt; XML 18 or higher (optional)
 - To use the Relax NG topics and maps, you need to install the **dita-relaxng-defaults** plugin.
