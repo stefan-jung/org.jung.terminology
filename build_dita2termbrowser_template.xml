@@ -42,6 +42,7 @@
         <condition property="xmltask-available" value="true">
             <contains string="${terminology.path}" substring="xmltask"/>
         </condition>
+        <echo level="warning">terminology.path=${terminology.path}</echo>
         <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
     </target>
     

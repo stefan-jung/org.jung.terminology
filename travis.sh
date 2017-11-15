@@ -9,7 +9,7 @@ dita-ot/bin/dita --install https://github.com/oxygenxml/dita-relaxng-defaults/ar
 dita-ot/bin/dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
 dita-ot/bin/dita --install org.doctales.terminology.zip
 dita-ot/bin/dita --input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap --format termchecker-dita -Dprocessing-mode=strict -Dargs.language=en-GB --output out/termchecker-dita
-dita-ot/bin/dita --input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap --format termchecker-xliff -Dprocessing-mode=strict -Dargs.language=en-GB --output out/termchecker-xliff
+dita-ot/bin/dita --input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap --format termchecker-xliff -Dprocessing-mode=strict -Dargs.language=en-GB -Dargs.check.elements=both --output out/termchecker-xliff
 dita-ot/bin/dita --input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap --format tbx-basic -Dprocessing-mode=strict --output out/tbx-basic
 dita-ot/bin/dita --input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap --format tbx-min -Dprocessing-mode=strict -Dargs.source.language=en-GB -Dargs.target.language=de-DE --output out/tbx-min
 dita-ot/bin/dita --input dita-ot/plugins/org.doctales.terminology/samples/terminology.ditamap --format termbrowser-html5 -Dargs.default.language=en-GB --output out/termbrowser-html5
