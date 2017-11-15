@@ -226,7 +226,7 @@
         <xd:return><xd:p>Return a unique UUID.</xd:p></xd:return>
     </xd:doc>
     <xsl:function name="doctales:generateId">
-        <xsl:variable name="randomNumber" select="generate-id()"/>
+        <xsl:variable name="randomNumber" select="(floor(math:random()*3) + 1) mod 4"/>
         <xsl:sequence select="concat('sqf', $randomNumber)"/>
     </xsl:function>
 
