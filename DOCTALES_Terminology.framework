@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="19.0" xml:space="preserve">
+<serialized version="19.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -34,7 +34,7 @@
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/i18n/</String>
+											<String>${framework}/framework/i18n/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -51,7 +51,7 @@
 											<Integer>7</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/resources/</String>
+											<String>${framework}/framework/resources/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -62,36 +62,29 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
-											<String>classpath</String>
-										</field>
-										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
 											<String>authorExtensionDescriptor/cssDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>16</Integer>
+											<Integer>17</Integer>
 										</field>
 										<field name="value">
-											<null/>
+											<cssFile>
+												<field name="href">
+													<String>${framework}/framework/css/termentry.less</String>
+												</field>
+												<field name="title">
+													<String>DOCTALES Termentry</String>
+												</field>
+												<field name="alternate">
+													<Boolean>false</Boolean>
+												</field>
+											</cssFile>
 										</field>
 										<field name="patchHandling">
-											<String>removeIndex</String>
+											<String>addIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/actions/actions.css</String>
+											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -108,7 +101,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/hints/hints.css</String>
+											<String>${baseFramework}/css/actions/actions.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -125,7 +118,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-hide-draft-comments.css</String>
+											<String>${baseFramework}/css/hints/hints.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -142,7 +135,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-table-show-colspec.css</String>
+											<String>${baseFramework}/css/edit/alternate-hide-draft-comments.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -159,7 +152,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-syntax-highlight.css</String>
+											<String>${baseFramework}/css/edit/alternate-table-show-colspec.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -176,7 +169,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-coloured-revisions.css</String>
+											<String>${baseFramework}/css/edit/alternate-syntax-highlight.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -193,7 +186,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-map-print-preview-layout.css</String>
+											<String>${baseFramework}/css/edit/alternate-coloured-revisions.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -210,7 +203,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-full-width-layout.css</String>
+											<String>${baseFramework}/css/edit/alternate-map-print-preview-layout.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -227,7 +220,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css_classed/dita.css</String>
+											<String>${baseFramework}/css/edit/alternate-full-width-layout.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -368,33 +361,6 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
-											<String>authorExtensionDescriptor/cssDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>0</Integer>
-										</field>
-										<field name="value">
-											<cssFile>
-												<field name="href">
-													<String>${framework}/css/termentry.less</String>
-												</field>
-												<field name="title">
-													<String>DOCTALES Termentry</String>
-												</field>
-												<field name="alternate">
-													<Boolean>false</Boolean>
-												</field>
-											</cssFile>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
@@ -412,10 +378,10 @@
 													<String>${i18n(doctales.move.element.up_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/up_20.png</String>
+													<String>${framework}/framework/icons/up_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/up_16.png</String>
+													<String>${framework}/framework/icons/up_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -482,10 +448,10 @@
 													<String>${i18n(doctales.move.element.down_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/down_20.png</String>
+													<String>${framework}/framework/icons/down_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/down_16.png</String>
+													<String>${framework}/framework/icons/down_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -552,10 +518,10 @@
 													<String>${i18n(doctales.element.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -614,10 +580,10 @@
 													<String>${i18n(doctales.termVariant.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -684,10 +650,10 @@
 													<String>${i18n(doctales.fullForm.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -705,7 +671,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="en-GB" usage="preferred">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -731,7 +697,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="en-GB" usage="preferred">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -757,7 +723,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="en-GB" usage="preferred">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -783,7 +749,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="en-GB" usage="preferred">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -834,10 +800,10 @@
 													<String>${i18n(doctales.abbreviation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -855,7 +821,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;abbreviation language="en-GB" usage="preferred">
+																		<String>&lt;abbreviation language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/abbreviation></String>
 																	</entry>
@@ -881,7 +847,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;abbreviation language="en-GB" usage="preferred">
+																		<String>&lt;abbreviation language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/abbreviation></String>
 																	</entry>
@@ -907,7 +873,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;abbreviation language="en-GB" usage="preferred">
+																		<String>&lt;abbreviation language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/abbreviation></String>
 																	</entry>
@@ -933,7 +899,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;abbreviation language="en-GB" usage="preferred">
+																		<String>&lt;abbreviation language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/abbreviation></String>
 																	</entry>
@@ -984,10 +950,10 @@
 													<String>${i18n(doctales.acronym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1005,7 +971,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;acronym language="en-GB" usage="preferred">
+																		<String>&lt;acronym language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/acronym></String>
 																	</entry>
@@ -1031,7 +997,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;acronym language="en-GB" usage="preferred">
+																		<String>&lt;acronym language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/acronym></String>
 																	</entry>
@@ -1057,7 +1023,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;acronym language="en-GB" usage="preferred">
+																		<String>&lt;acronym language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/acronym></String>
 																	</entry>
@@ -1083,7 +1049,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;acronym language="en-GB" usage="preferred">
+																		<String>&lt;acronym language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/acronym></String>
 																	</entry>
@@ -1134,10 +1100,10 @@
 													<String>${i18n(doctales.verb.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1155,7 +1121,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;verb language="en-GB" usage="preferred">
+																		<String>&lt;verb language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/verb></String>
 																	</entry>
@@ -1181,7 +1147,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;verb language="en-GB" usage="preferred">
+																		<String>&lt;verb language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/verb></String>
 																	</entry>
@@ -1207,7 +1173,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;verb language="en-GB" usage="preferred">
+																		<String>&lt;verb language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/verb></String>
 																	</entry>
@@ -1233,7 +1199,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;verb language="en-GB" usage="preferred">
+																		<String>&lt;verb language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/verb></String>
 																	</entry>
@@ -1284,10 +1250,10 @@
 													<String>${i18n(doctales.fullForm.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1346,10 +1312,10 @@
 													<String>${i18n(doctales.abbreviation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1408,10 +1374,10 @@
 													<String>${i18n(doctales.relatedTerm.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1470,10 +1436,10 @@
 													<String>${i18n(doctales.verb.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1532,10 +1498,10 @@
 													<String>${i18n(doctales.attribute.number.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1606,10 +1572,10 @@
 													<String>${i18n(doctales.attribute.case.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1680,10 +1646,10 @@
 													<String>${i18n(doctales.termVariant.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1742,10 +1708,10 @@
 													<String>${i18n(doctales.annotation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1836,10 +1802,10 @@
 													<String>${i18n(doctales.termContext.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1909,10 +1875,10 @@
 													<String>${i18n(doctales.termSource.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1981,10 +1947,10 @@
 													<String>${i18n(doctales.antonyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2103,10 +2069,10 @@
 													<String>${i18n(doctales.partsOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2223,10 +2189,10 @@
 													<String>${i18n(doctales.hypernyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2343,10 +2309,10 @@
 													<String>${i18n(doctales.hyponyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2463,10 +2429,10 @@
 													<String>${i18n(doctales.relatedTerms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2583,10 +2549,10 @@
 													<String>${i18n(doctales.definition.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2659,10 +2625,10 @@
 													<String>${i18n(doctales.definition.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2721,10 +2687,10 @@
 													<String>${i18n(doctales.equation-figure.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2811,10 +2777,10 @@
 													<String>${i18n(doctales.note.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2881,10 +2847,10 @@
 													<String>${i18n(doctales.partOfSpeech.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2951,10 +2917,10 @@
 													<String>${i18n(doctales.fig.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3026,10 +2992,10 @@
 													<String>${i18n(doctales.domains.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3098,10 +3064,10 @@
 													<String>${i18n(doctales.definitionSource.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3171,10 +3137,10 @@
 													<String>${i18n(doctales.sourceName.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3241,10 +3207,10 @@
 													<String>${i18n(doctales.sourceReference.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3335,10 +3301,10 @@
 													<String>${i18n(doctales.sourceName.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3429,10 +3395,10 @@
 													<String>${i18n(doctales.sourceReference.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3523,10 +3489,10 @@
 													<String>${i18n(doctales.agreedWith.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3595,10 +3561,10 @@
 													<String>${i18n(doctales.relations.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3665,10 +3631,10 @@
 													<String>${i18n(doctales.definitionSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3727,10 +3693,10 @@
 													<String>${i18n(doctales.annotation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3789,10 +3755,10 @@
 													<String>${i18n(doctales.termContext.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3851,10 +3817,10 @@
 													<String>${i18n(doctales.termSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3913,10 +3879,10 @@
 													<String>${i18n(doctales.relations.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3991,10 +3957,10 @@
 													<String>${i18n(doctales.antonyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4053,10 +4019,10 @@
 													<String>${i18n(doctales.partsOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4115,10 +4081,10 @@
 													<String>${i18n(doctales.hypernyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4177,10 +4143,10 @@
 													<String>${i18n(doctales.hyponyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4239,10 +4205,10 @@
 													<String>${i18n(doctales.relatedTerms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4301,10 +4267,10 @@
 													<String>${i18n(doctales.antonym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4358,10 +4324,10 @@
 													<String>${i18n(doctales.partOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4415,10 +4381,10 @@
 													<String>${i18n(doctales.hypernym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4472,10 +4438,10 @@
 													<String>${i18n(doctales.hyponym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4529,10 +4495,10 @@
 													<String>${i18n(doctales.relatedTerm.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4586,10 +4552,10 @@
 													<String>${i18n(doctales.termRelation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4648,10 +4614,10 @@
 													<String>${i18n(doctales.termCommitteeMember.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4742,10 +4708,10 @@
 													<String>${i18n(doctales.agreedWith.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4804,10 +4770,10 @@
 													<String>${i18n(doctales.termCommitteeMember.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4866,10 +4832,10 @@
 													<String>${i18n(doctales.domain.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4960,10 +4926,10 @@
 													<String>${i18n(doctales.domains.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5022,10 +4988,10 @@
 													<String>${i18n(doctales.domain.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5084,10 +5050,10 @@
 													<String>${i18n(doctales.partOfSpeech.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5146,10 +5112,10 @@
 													<String>${i18n(doctales.termNotation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5208,10 +5174,10 @@
 													<String>${i18n(doctales.fig.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5270,10 +5236,10 @@
 													<String>${i18n(doctales.note.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5332,10 +5298,10 @@
 													<String>${i18n(doctales.keyref.termRelation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/link_16.png</String>
+													<String>${framework}/framework/icons/link_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5446,10 +5412,10 @@
 													<String>${i18n(doctales.image.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5508,10 +5474,10 @@
 													<String>${i18n(doctales.fullForm.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5570,10 +5536,10 @@
 													<String>${i18n(doctales.verb.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5632,10 +5598,10 @@
 													<String>${i18n(doctales.acronym.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5694,10 +5660,10 @@
 													<String>${i18n(doctales.abbreviation.renameTo)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5756,10 +5722,10 @@
 													<String>${i18n(doctales.instancesOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5876,10 +5842,10 @@
 													<String>${i18n(doctales.instanceOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5933,10 +5899,10 @@
 													<String>${i18n(doctales.instancesOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5995,10 +5961,10 @@
 													<String>${i18n(doctales.termRelation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/link_16.png</String>
+													<String>${framework}/framework/icons/link_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6052,10 +6018,10 @@
 													<String>${i18n(doctales.open.termRelation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/link_16.png</String>
+													<String>${framework}/framework/icons/link_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6175,10 +6141,10 @@
 													<String>${i18n(doctales.hypernym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6237,10 +6203,10 @@
 													<String>${i18n(doctales.instanceOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6299,10 +6265,10 @@
 													<String>${i18n(doctales.antonym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6361,10 +6327,10 @@
 													<String>${i18n(doctales.partOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6423,10 +6389,10 @@
 													<String>${i18n(doctales.hyponym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6485,10 +6451,10 @@
 													<String>${i18n(doctales.acronym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6547,10 +6513,10 @@
 													<String>${i18n(doctales.equation-figure.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6609,10 +6575,10 @@
 													<String>${i18n(doctales.alt.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6671,10 +6637,10 @@
 													<String>${i18n(doctales.alt.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6741,10 +6707,10 @@
 													<String>${i18n(doctales.termContextText.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6819,10 +6785,10 @@
 													<String>${i18n(doctales.termContextSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6881,10 +6847,10 @@
 													<String>${i18n(doctales.termContextText.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6951,10 +6917,10 @@
 													<String>doctales.dummy</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/dummy_24.png</String>
+													<String>${framework}/framework/icons/dummy_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/dummy_16.png</String>
+													<String>${framework}/framework/icons/dummy_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7008,10 +6974,10 @@
 													<String></String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/link_16.png</String>
+													<String>${framework}/framework/icons/link_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7070,10 +7036,10 @@
 													<String>${i18n(doctales.altDefinition.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/add_20.png</String>
+													<String>${framework}/framework/icons/add_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/add_16.png</String>
+													<String>${framework}/framework/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7146,10 +7112,10 @@
 													<String>${i18n(doctales.altDefinition.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/icons/delete_20.png</String>
+													<String>${framework}/framework/icons/delete_20.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/icons/delete_16.png</String>
+													<String>${framework}/framework/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7562,7 +7528,7 @@
 													<String></String>
 												</field>
 												<field name="iconPath">
-													<String>${framework}/icons/termentry-icon16.png</String>
+													<String>${framework}/framework/icons/termentry-icon16.png</String>
 												</field>
 												<field name="menuEntriesDescriptorList">
 													<menuEntry-array>
@@ -7601,7 +7567,7 @@
 													<String></String>
 												</field>
 												<field name="iconPath">
-													<String>${framework}/icons/termentry-icon16.png</String>
+													<String>${framework}/framework/icons/termentry-icon16.png</String>
 												</field>
 												<field name="menuEntriesDescriptorList">
 													<menuEntry-array>
@@ -7978,6 +7944,23 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
+											<Integer>8</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>templatesLocations</String>
+										</field>
+										<field name="index">
 											<Integer>7</Integer>
 										</field>
 										<field name="value">
@@ -8117,44 +8100,10 @@
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
-											<String>${frameworkDir}/templates</String>
+											<String>${frameworkDir}/framework/templates</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>xmlCatalogs</String>
-										</field>
-										<field name="index">
-											<Integer>3</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>xmlCatalogs</String>
-										</field>
-										<field name="index">
-											<Integer>2</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
 											<null/>
@@ -8182,27 +8131,10 @@
 											<String>xmlCatalogs</String>
 										</field>
 										<field name="index">
-											<Integer>0</Integer>
+											<Integer>1</Integer>
 										</field>
 										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>xmlCatalogs</String>
-										</field>
-										<field name="index">
-											<Integer>0</Integer>
-										</field>
-										<field name="value">
-											<String>${frameworks}/catalog-dita.xml</String>
+											<String>${framework}/catalog-dita.xml</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -8719,7 +8651,7 @@
 																		<Integer>7</Integer>
 																	</field>
 																	<field name="uri">
-																		<String>${framework}/rules/termentry.sch</String>
+																		<String>${framework}/framework/rules/termentry.sch</String>
 																	</field>
 																</validationUnitSchema>
 															</field>
@@ -8783,7 +8715,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<Integer>4</Integer>
+											<Integer>3</Integer>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
@@ -8905,17 +8837,6 @@
 										</field>
 										<field name="title">
 											<String>Papyrus</String>
-										</field>
-										<field name="alternate">
-											<Boolean>false</Boolean>
-										</field>
-									</cssFile>
-									<cssFile>
-										<field name="href">
-											<String>${framework}/css_classed/dita.css</String>
-										</field>
-										<field name="title">
-											<String>&lt;Old - Compatibility Mode></String>
 										</field>
 										<field name="alternate">
 											<Boolean>false</Boolean>
@@ -9192,6 +9113,26 @@
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:allows-child-element("*", "class", " topic/p ")</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;p/></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
 														<String>ancestor-or-self::*[contains(@class," topic/p ")]</String>
@@ -11461,7 +11402,7 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String></String>
+														<String>self::* or oxy:current-selected-element()[self::*[contains(@class," topic/topic ")]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap/>

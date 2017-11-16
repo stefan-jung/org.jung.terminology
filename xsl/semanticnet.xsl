@@ -14,7 +14,7 @@
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     
-    <xsl:param name="language"/>
+    <xsl:param name="language" as="xs:string"/>
     
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline">
@@ -323,9 +323,8 @@
     
     <!-- Generate data set for autocomplete search box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="search">
-        <xsl:text>'</xsl:text>
-        <xsl:value-of select="@keys"/>
-        <xsl:text>'</xsl:text>
+        <xsl:text>{value:'</xsl:text><xsl:value-of select="@keys"/><xsl:text>',</xsl:text>
+        <xsl:text>label:'</xsl:text><xsl:value-of select="descendant::*[contains(@class, ' topic/navtitle ')][1]"/><xsl:text>'}</xsl:text>
         <xsl:choose>
             <xsl:when test="following-sibling::*[contains(@class, ' termmap/termref ')]">
                 <xsl:text>,</xsl:text>
@@ -356,7 +355,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/antonym ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsAntonymOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -370,7 +369,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hypernym ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsHypernymOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -384,7 +383,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/hyponym ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsHyponymOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
@@ -398,13 +397,13 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/instanceOf ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsInstanceOf</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', to: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>', arrows: 'to', label: '</xsl:text>
+                <xsl:text>', arrows: 'from', label: '</xsl:text>
                 <xsl:value-of select="doctales:getString($language, 'Is Instance Of')"/>
                 <xsl:text>'},</xsl:text>
             </xsl:for-each>
@@ -412,7 +411,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/partOf ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="$key"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsPartOf</xsl:text>
                 <xsl:value-of select="@keyref"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="$key"/>
@@ -426,7 +425,7 @@
             <xsl:for-each select="document(./$filename)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
                 <xsl:text>{id: '</xsl:text>
                 <xsl:value-of select="@keyref"/>
-                <xsl:text>2</xsl:text>
+                <xsl:text>IsRelatedWith</xsl:text>
                 <xsl:value-of select="$key"/>
                 <xsl:text>', from: '</xsl:text>
                 <xsl:value-of select="@keyref"/>

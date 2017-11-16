@@ -23,7 +23,7 @@
 
           SYSTEM:   Darwin Information Typing Architecture (DITA)
 
-          PURPOSE:  Define elements and specialization atttributes for Termentries
+          PURPOSE:  Define elements and specialization attributes for Termentries
 
           ORIGINAL CREATION DATE:
                     March 2017
@@ -200,130 +200,379 @@
       <attribute name="language" a:defaultValue="en-GB">
         <a:documentation>The language of the term</a:documentation>
         <choice>
-          <value>ar-AE</value> 
-          <value>ar-BH</value> 
-          <value>ar-DZ</value> 
-          <value>ar-EG</value> 
-          <value>ar-IQ</value> 
-          <value>ar-JO</value> 
-          <value>ar-KW</value> 
-          <value>ar-LB</value> 
-          <value>ar-LY</value> 
-          <value>ar-MA</value> 
-          <value>ar-OM</value> 
-          <value>ar-QA</value> 
-          <value>ar-SA</value> 
-          <value>ar-SY</value> 
-          <value>ar-TN</value> 
-          <value>ar-YE</value> 
+          <value>af-ZA</value>
+          <a:documentation>Afrikaans - South Africa</a:documentation>
+          <value>ar-AE</value>
+          <a:documentation>Arabic - United Arab Emirates</a:documentation>
+          <value>ar-BH</value>
+          <a:documentation>Arabic - Bahrain</a:documentation>
+          <value>ar-DZ</value>
+          <a:documentation>Arabic - Algeria</a:documentation>
+          <value>ar-EG</value>
+          <a:documentation>Arabic - Egypt</a:documentation>
+          <value>ar-IQ</value>
+          <a:documentation>Arabic - Iraq</a:documentation>
+          <value>ar-JO</value>
+          <a:documentation>Arabic - Jordan</a:documentation>
+          <value>ar-KW</value>
+          <a:documentation>Arabic - Kuwait</a:documentation>
+          <value>ar-LB</value>
+          <a:documentation>Arabic - Lebanon</a:documentation>
+          <value>ar-LY</value>
+          <a:documentation>Arabic - Libya</a:documentation>
+          <value>ar-MA</value>
+          <a:documentation>Arabic - Morocco</a:documentation>
+          <value>ar-OM</value>
+          <a:documentation>Arabic - Oman</a:documentation>
+          <value>ar-QA</value>
+          <a:documentation>Arabic - Qatar</a:documentation>
+          <value>ar-SA</value>
+          <a:documentation>Arabic - Saudi Arabia</a:documentation>
+          <value>ar-SY</value>
+          <a:documentation>Arabic - Syria</a:documentation>
+          <value>ar-TN</value>
+          <a:documentation>Arabic - Tunisia</a:documentation>
+          <value>ar-YE</value>
+          <a:documentation>Arabic - Yemen</a:documentation>
           <value>be</value>
+          <a:documentation>Belarusian</a:documentation>
+          <value>be-BY</value>
+          <a:documentation>Belarusian - Belarus</a:documentation>
           <value>bg</value>
+          <a:documentation>Bulgarian</a:documentation>
+          <value>bg-BG</value>
+          <a:documentation>Bulgarian - Bulgaria</a:documentation>
           <value>ca</value>
+          <a:documentation>Catalan</a:documentation>
+          <value>ca-ES</value>
+          <a:documentation>Catalan - Catalan</a:documentation>
           <value>cs</value>
-          <value>cs-CZ</value> 
+          <a:documentation>Czech</a:documentation>
+          <value>cs-CZ</value>
+          <a:documentation>Czech - Czech Republic</a:documentation>
+          <value>Cy-az-AZ</value>
+          <a:documentation>Azeri (Cyrillic) - Azerbaijan</a:documentation>
+          <value>Cy-sr-SP</value>
+          <a:documentation>Serbian (Cyrillic) - Serbia</a:documentation>
+          <value>Cy-uz-UZ</value>
+          <a:documentation>Uzbek (Cyrillic) - Uzbekistan</a:documentation>
           <value>da</value>
-          <value>da-DK</value> 
+          <a:documentation>Danish</a:documentation>
+          <value>da-DK</value>
+          <a:documentation>Danish - Denmark</a:documentation>
           <value>de</value>
-          <value>de-AT</value> 
+          <a:documentation>German</a:documentation>
+          <value>de-AT</value>
+          <a:documentation>German - Austria</a:documentation>
           <value>de-CH</value>
+          <a:documentation>German - Switzerland</a:documentation>
           <value>de-DE</value>
           <a:documentation>German - Germany</a:documentation>
-          <value>de-LI</value> 
-          <value>de-LU</value> 
+          <value>de-LI</value>
+          <a:documentation>German - Liechtenstein</a:documentation>
+          <value>de-LU</value>
+          <a:documentation>German - Luxembourg</a:documentation>
+          <value>div-MV</value>
+          <a:documentation>Dhivehi - Maldives</a:documentation>
           <value>el</value>
+          <a:documentation>Greek</a:documentation>
+          <value>el-GR</value>
+          <a:documentation>Greek - Greece</a:documentation>
           <value>en</value>
-          <value>en-AU</value> 
-          <value>en-BZ</value> 
-          <value>en-CA</value> 
+          <a:documentation>English</a:documentation>
+          <value>en-AU</value>
+          <a:documentation>English - Australia</a:documentation>
+          <value>en-BZ</value>
+          <a:documentation>English - Belize</a:documentation>
+          <value>en-CA</value>
+          <a:documentation>English - Canada</a:documentation>
+          <value>en-CB</value>
+          <a:documentation>English - Caribbean</a:documentation>
           <value>en-GB</value>
-          <a:documentation>English - Great Britain</a:documentation>
-          <value>en-IE</value> 
-          <value>en-JM</value> 
-          <value>en-NZ</value> 
-          <value>en-TT</value> 
-          <value>en-US</value> 
-          <value>en-ZA</value> 
+          <a:documentation>English - United Kingdom</a:documentation>
+          <value>en-IE</value>
+          <a:documentation>English - Ireland</a:documentation>
+          <value>en-JM</value>
+          <a:documentation>English - Jamaica</a:documentation>
+          <value>en-NZ</value>
+          <a:documentation>English - New Zealand</a:documentation>
+          <value>en-PH</value>
+          <a:documentation>English - Philippines</a:documentation>
+          <value>en-TT</value>
+          <a:documentation>English - Trinidad and Tobago</a:documentation>
+          <value>en-US</value>
+          <a:documentation>English - United States</a:documentation>
+          <value>en-ZA</value>
+          <a:documentation>English - South Africa</a:documentation>
+          <value>en-ZW</value>
+          <a:documentation>English - Zimbabwe</a:documentation>
           <value>es</value>
-          <value>es-AR</value> 
-          <value>es-BO</value> 
-          <value>es-CL</value> 
-          <value>es-CO</value> 
-          <value>es-CR</value> 
-          <value>es-DO</value> 
-          <value>es-EC</value> 
-          <value>es-GT</value> 
-          <value>es-HN</value> 
-          <value>es-MX</value> 
-          <value>es-NI</value> 
-          <value>es-PA</value> 
-          <value>es-PE</value> 
-          <value>es-PR</value> 
-          <value>es-PY</value> 
-          <value>es-SV</value> 
-          <value>es-UY</value> 
-          <value>es-VE</value> 
+          <a:documentation>Spanish</a:documentation>
+          <value>es-AR</value>
+          <a:documentation>Spanish - Argentina</a:documentation>
+          <value>es-BO</value>
+          <a:documentation>Spanish - Bolivia</a:documentation>
+          <value>es-CL</value>
+          <a:documentation>Spanish - Chile</a:documentation>
+          <value>es-CO</value>
+          <a:documentation>Spanish - Colombia</a:documentation>
+          <value>es-CR</value>
+          <a:documentation>Spanish - Costa Rica</a:documentation>
+          <value>es-DO</value>
+          <a:documentation>Spanish - Dominican Republic</a:documentation>
+          <value>es-EC</value>
+          <a:documentation>Spanish - Ecuador</a:documentation>
+          <value>es-ES</value>
+          <a:documentation>Spanish - Spain</a:documentation>
+          <value>es-GT</value>
+          <a:documentation>Spanish - Guatemala</a:documentation>
+          <value>es-HN</value>
+          <a:documentation>Spanish - Honduras</a:documentation>
+          <value>es-MX</value>
+          <a:documentation>Spanish - Mexico</a:documentation>
+          <value>es-NI</value>
+          <a:documentation>Spanish - Nicaragua</a:documentation>
+          <value>es-PA</value>
+          <a:documentation>Spanish - Panama</a:documentation>
+          <value>es-PE</value>
+          <a:documentation>Spanish - Peru</a:documentation>
+          <value>es-PR</value>
+          <a:documentation>Spanish - Puerto Rico</a:documentation>
+          <value>es-PY</value>
+          <a:documentation>Spanish - Paraguay</a:documentation>
+          <value>es-SV</value>
+          <a:documentation>Spanish - El Salvador</a:documentation>
+          <value>es-UY</value>
+          <a:documentation>Spanish - Uruguay</a:documentation>
+          <value>es-VE</value>
+          <a:documentation>Spanish - Venezuela</a:documentation>
           <value>et</value>
+          <a:documentation>Estonian</a:documentation>
+          <value>et-EE</value>
+          <a:documentation>Estonian - Estonia</a:documentation>
           <value>eu</value>
+          <a:documentation>Basque</a:documentation>
+          <value>eu-ES</value>
+          <a:documentation>Basque - Basque</a:documentation>
           <value>fa</value>
+          <a:documentation>Farsi</a:documentation>
+          <value>fa-IR</value>
+          <a:documentation>Farsi - Iran</a:documentation>
           <value>fi</value>
+          <a:documentation>Finnish</a:documentation>
+          <value>fi-FI</value>
+          <a:documentation>Finnish - Finland</a:documentation>
           <value>fo</value>
+          <a:documentation>Faroese</a:documentation>
+          <value>fo-FO</value>
+          <a:documentation>Faroese - Faroe Islands</a:documentation>
           <value>fr</value>
-          <value>fr-BE</value> 
-          <value>fr-CA</value> 
-          <value>fr-CH</value> 
-          <value>fr-LU</value> 
+          <a:documentation>French</a:documentation>
+          <value>fr-BE</value>
+          <a:documentation>French - Belgium</a:documentation>
+          <value>fr-CA</value>
+          <a:documentation>French - Canada</a:documentation>
+          <value>fr-CH</value>
+          <a:documentation>French - Switzerland</a:documentation>
+          <value>fr-FR</value>
+          <a:documentation>French - France</a:documentation>
+          <value>fr-LU</value>
+          <a:documentation>French - Luxembourg</a:documentation>
+          <value>fr-MC</value>
+          <a:documentation>French - Monaco</a:documentation>
           <value>ga</value>
           <value>gd</value>
+          <value>gl-ES</value>
+          <a:documentation>Galician - Galician</a:documentation>
+          <value>gu-IN</value>
+          <a:documentation>Gujarati - India</a:documentation>
           <value>he</value>
+          <a:documentation>Hebrew</a:documentation>
+          <value>he-IL</value>
+          <a:documentation>Hebrew - Israel</a:documentation>
           <value>hi</value>
+          <a:documentation>Hindi</a:documentation>
+          <value>hi-IN</value>
+          <a:documentation>Hindi - India</a:documentation>
           <value>hr</value>
+          <a:documentation>Croatian</a:documentation>
+          <value>hr-HR</value>
+          <a:documentation>Croatian - Croatia</a:documentation>
           <value>hu</value>
+          <a:documentation>Hungarian</a:documentation>
+          <value>hu-HU</value>
+          <a:documentation>Hungarian - Hungary</a:documentation>
+          <value>hy-AM</value>
+          <a:documentation>Armenian - Armenia</a:documentation>
           <value>id</value>
+          <a:documentation>Indonesian</a:documentation>
+          <value>id-ID</value>
+          <a:documentation>Indonesian - Indonesia</a:documentation>
           <value>is</value>
+          <a:documentation>Icelandic</a:documentation>
+          <value>is-IS</value>
+          <a:documentation>Icelandic - Iceland</a:documentation>
           <value>it</value>
-          <value>it-CH</value> 
+          <a:documentation>Italian</a:documentation>
+          <value>it-CH</value>
+          <a:documentation>Italian - Switzerland</a:documentation>
+          <value>it-IT</value>
+          <a:documentation>Italian - Italy</a:documentation>
           <value>ja</value>
+          <a:documentation>Japanese</a:documentation>
+          <value>ja-JP</value>
+          <a:documentation>Japanese - Japan</a:documentation>
           <value>ji</value>
+          <value>ka-GE</value>
+          <a:documentation>Georgian - Georgia</a:documentation>
+          <value>kk-KZ</value>
+          <a:documentation>Kazakh - Kazakhstan</a:documentation>
+          <value>kn-IN</value>
+          <a:documentation>Kannada - India</a:documentation>
           <value>ko</value>
+          <a:documentation>Korean</a:documentation>
+          <value>ko-KR</value>
+          <a:documentation>Korean - Korea</a:documentation>
+          <value>kok-IN</value>
+          <a:documentation>Konkani - India</a:documentation>
+          <value>ky-KZ</value>
+          <a:documentation>Kyrgyz - Kazakhstan</a:documentation>
           <value>lt</value>
+          <a:documentation>Lithuanian</a:documentation>
+          <value>lt-LT</value>
+          <a:documentation>Lithuanian - Lithuania</a:documentation>
+          <value>Lt-az-AZ</value>
+          <a:documentation>Azeri (Latin) - Azerbaijan</a:documentation>
+          <value>Lt-sr-SP</value>
+          <a:documentation>Serbian (Latin) - Serbia</a:documentation>
+          <value>Lt-uz-UZ</value>
+          <a:documentation>Uzbek (Latin) - Uzbekistan</a:documentation>
           <value>lv</value>
+          <a:documentation>Latvian</a:documentation>
+          <value>lv-LV</value>
+          <a:documentation>Latvian - Latvia</a:documentation>
           <value>mk</value>
+          <a:documentation>Macedonian</a:documentation>
+          <value>mk-MK</value>
+          <a:documentation>Macedonian (FYROM)</a:documentation>
+          <value>mn-MN</value>
+          <a:documentation>Mongolian - Mongolia</a:documentation>
+          <value>mr-IN</value>
+          <a:documentation>Marathi - India</a:documentation>
           <value>ms</value>
+          <a:documentation>Malay</a:documentation>
+          <value>ms-BN</value>
+          <a:documentation>Malay - Brunei</a:documentation>
+          <value>ms-MY</value>
+          <a:documentation>Malay - Malaysia</a:documentation>
           <value>mt</value>
+          <value>nb-NO</value>
+          <a:documentation>Norwegian (Bokmål) - Norway</a:documentation>
           <value>nl</value>
-          <value>nl-BE</value> 
+          <a:documentation>Dutch</a:documentation>
+          <value>nl-BE</value>
+          <a:documentation>Dutch - Belgium</a:documentation>
+          <value>nl-NL</value>
+          <a:documentation>Dutch - The Netherlands</a:documentation>
+          <value>nn-NO</value>
+          <a:documentation>Norwegian (Nynorsk) - Norway</a:documentation>
           <value>no</value>
+          <a:documentation>Norwegian</a:documentation>
+          <value>pa-IN</value>
+          <a:documentation>Punjabi - India</a:documentation>
           <value>pl</value>
-          <value>pl-PL</value> 
+          <a:documentation>Polish</a:documentation>
+          <value>pl-PL</value>
+          <a:documentation>Polish - Poland</a:documentation>
           <value>pt</value>
-          <value>pt-BR</value> 
+          <a:documentation>Portuguese</a:documentation>
+          <value>pt-BR</value>
+          <a:documentation>Portuguese - Brazil</a:documentation>
+          <value>pt-PT</value>
+          <a:documentation>Portuguese - Portugal</a:documentation>
           <value>rm</value>
           <value>ro</value>
-          <value>ro-MO</value> 
+          <a:documentation>Romanian</a:documentation>
+          <value>ro-MO</value>
+          <value>ro-RO</value>
+          <a:documentation>Romanian - Romania</a:documentation>
           <value>ru</value>
-          <value>ru-MO</value> 
+          <a:documentation>Russian</a:documentation>
+          <value>ru-MO</value>
+          <value>ru-RU</value>
+          <a:documentation>Russian - Russia</a:documentation>
+          <value>sa-IN</value>
+          <a:documentation>Sanskrit - India</a:documentation>
           <value>sb</value>
           <value>sk</value>
+          <a:documentation>Slovak</a:documentation>
+          <value>sk-SK</value>
+          <a:documentation>Slovak - Slovakia</a:documentation>
           <value>sl</value>
+          <a:documentation>Slovenian</a:documentation>
+          <value>sl-SI</value>
+          <a:documentation>Slovenian - Slovenia</a:documentation>
           <value>sq</value>
+          <a:documentation>Albanian</a:documentation>
+          <value>sq-AL</value>
+          <a:documentation>Albanian - Albania</a:documentation>
           <value>sr</value>
           <value>sv</value>
-          <value>sv-FI</value> 
+          <a:documentation>Swedish</a:documentation>
+          <value>sv-FI</value>
+          <a:documentation>Swedish - Finland</a:documentation>
+          <value>sv-SE</value>
+          <a:documentation>Swedish - Sweden</a:documentation>
+          <value>sw-KE</value>
+          <a:documentation>Swahili - Kenya</a:documentation>
           <value>sx</value>
+          <value>syr-SY</value>
+          <a:documentation>Syriac - Syria</a:documentation>
           <value>sz</value>
+          <value>ta-IN</value>
+          <a:documentation>Tamil - India</a:documentation>
+          <value>te-IN</value>
+          <a:documentation>Telugu - India</a:documentation>
           <value>th</value>
+          <a:documentation>Thai</a:documentation>
+          <value>th-TH</value>
+          <a:documentation>Thai - Thailand</a:documentation>
           <value>tn</value>
           <value>tr</value>
+          <a:documentation>Turkish</a:documentation>
+          <value>tr-TR</value>
+          <a:documentation>Turkish - Turkey</a:documentation>
           <value>ts</value>
+          <value>tt-RU</value>
+          <a:documentation>Tatar - Russia</a:documentation>
           <value>uk</value>
+          <a:documentation>Ukrainian</a:documentation>
+          <value>uk-UA</value>
+          <a:documentation>Ukrainian - Ukraine</a:documentation>
           <value>ur</value>
+          <a:documentation>Urdu</a:documentation>
+          <value>ur-PK</value>
+          <a:documentation>Urdu - Pakistan</a:documentation>
           <value>ve</value>
           <value>vi</value>
+          <a:documentation>Vietnamese</a:documentation>
+          <value>vi-VN</value>
+          <a:documentation>Vietnamese - Vietnam</a:documentation>
           <value>xh</value>
-          <value>zh-CN</value> 
-          <value>zh-HK</value> 
-          <value>zh-SG</value> 
-          <value>zh-TW</value> 
+          <value>zh-CHS</value>
+          <a:documentation>Chinese (Simplified)</a:documentation>
+          <value>zh-CHT</value>
+          <a:documentation>Chinese (Traditional)</a:documentation>
+          <value>zh-CN</value>
+          <a:documentation>Chinese - China</a:documentation>
+          <value>zh-HK</value>
+          <a:documentation>Chinese - Hong Kong SAR</a:documentation>
+          <value>zh-MO</value>
+          <a:documentation>Chinese - Macau SAR</a:documentation>
+          <value>zh-SG</value>
+          <a:documentation>Chinese - Singapore</a:documentation>
+          <value>zh-TW</value>
+          <a:documentation>Chinese - Taiwan</a:documentation>
           <value>zu</value>
         </choice>
       </attribute>
@@ -880,11 +1129,6 @@
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
-          <attribute name="type" a:defaultValue="antonyms">
-            <value>antonyms</value>
-          </attribute>
-        </optional>
-        <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
@@ -910,11 +1154,6 @@
       <define name="hypernyms.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
-        <optional>
-          <attribute name="type" a:defaultValue="hypernyms">
-            <value>hypernyms</value>
-          </attribute>
-        </optional>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -942,11 +1181,6 @@
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
-          <attribute name="type" a:defaultValue="hyponyms">
-            <value>hyponyms</value>
-          </attribute>
-        </optional>
-        <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
@@ -972,11 +1206,6 @@
       <define name="instancesOf.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
-        <optional>
-          <attribute name="type" a:defaultValue="instancesOf">
-            <value>instancesOf</value>
-          </attribute>
-        </optional>
         <optional>
           <attribute name="outputclass"/>
         </optional>
@@ -1004,11 +1233,6 @@
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
-          <attribute name="type" a:defaultValue="partsOf">
-            <value>partsOf</value>
-          </attribute>
-        </optional>
-        <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
@@ -1034,11 +1258,6 @@
       <define name="relatedTerms.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
-        <optional>
-          <attribute name="type" a:defaultValue="relatedTerms">
-            <value>relatedTerms</value>
-          </attribute>
-        </optional>
         <optional>
           <attribute name="outputclass"/>
         </optional>

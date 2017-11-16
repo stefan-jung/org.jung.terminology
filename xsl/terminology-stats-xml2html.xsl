@@ -28,7 +28,12 @@
     
     <xsl:template match="/" priority="1">
         <html>
-            <head><!----></head>
+            <head>
+                <xsl:comment>HEAD BEGINNING</xsl:comment>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js" integrity="sha256-Gn7MUQono8LUxTfRA0WZzJgTua52Udm1Ifrk5421zkA=" crossorigin="anonymous"><!----></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" integrity="sha256-GcknncGKzlKm69d+sp+k3A2NyQE+jnu43aBl6rrDN2I=" crossorigin="anonymous"><!----></script>
+                <xsl:comment>HEAD END</xsl:comment>
+            </head>
             <body>
                 <xsl:call-template name="body"/>
             </body>
@@ -146,9 +151,9 @@
                         };
                         var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
                         var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                        type: 'pie',
-                        data: termNotationsPerLanguageData,
-                        options: {}
+                            type: 'pie',
+                            data: termNotationsPerLanguageData,
+                            options: {}
                         });
                         }
                     </script>
@@ -334,6 +339,7 @@
                         var myLineChart = new Chart(termNotationsChart, {
                         type: 'line',
                         data: data,
+                        steppedLine: 'before',
                         options: {
                             title: {
                                 display: true,
@@ -343,16 +349,10 @@
                                 xAxes: [{
                                     type: 'time',
                                     time: {
+                                        unit: 'month',
+                                        unitStepSize: 1,
                                         displayFormats: {
-                                            'millisecond': 'MMM DD',
-                                            'second': 'MMM DD',
-                                            'minute': 'MMM DD',
-                                            'hour': 'MMM DD',
-                                            'day': 'MMM DD',
-                                            'week': 'MMM DD',
-                                            'month': 'MMM DD',
-                                            'quarter': 'MMM DD',
-                                            'year': 'MMM DD',
+                                            'day': 'MMM DD'
                                         }
                                     }
                                 }]

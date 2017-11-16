@@ -19,9 +19,9 @@
       </image>
     </fig>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
-   <termVariant>gas engine</termVariant>
-  </fullForm>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>gas engine</termVariant>
+    </fullForm>
  </termBody>
   <relations>
     <hypernyms>

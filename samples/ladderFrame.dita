@@ -21,9 +21,9 @@
       </image>
     </fig>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
-   <termVariant>ladder frame</termVariant>
-  </fullForm>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>ladder frame</termVariant>
+    </fullForm>
  </termBody>
   <relations>
     <antonyms>

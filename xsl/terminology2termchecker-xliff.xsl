@@ -30,7 +30,7 @@
             
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="doctales:generateId()"/>
+            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termLanguageRegionCode)"/>
             <xsl:variable name="parent">
                 <xsl:choose>
                     <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
@@ -94,6 +94,10 @@
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
                     <xsl:choose>
                         <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
+                            <xsl:message use-when="system-property('debug_on') = 'yes'">Generate SQF for term notation '<xsl:value-of select="$notRecommendedTerm"/>'</xsl:message>
+                            <xsl:if test="not(*[contains(@class, 'termentry/termVariant')]) or *[contains(@class, 'termentry/termVariant')] = ''">
+                                <xsl:message terminate="yes">ERROR: Could not create SQF for not recommended term '<xsl:value-of select="$notRecommendedTerm"/>', because the preferred term is empty.</xsl:message>
+                            </xsl:if>
                             <xsl:call-template name="createSqfFix">
                                 <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
                                 <xsl:with-param name="preferredTerm" select="*[contains(@class, 'termentry/termVariant')]"/>

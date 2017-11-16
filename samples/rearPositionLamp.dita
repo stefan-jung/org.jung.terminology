@@ -22,22 +22,22 @@
       </image>
     </fig>
     <partOfSpeech value="noun"/>
-    <fullForm usage="preferred" language="en">
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>rear position lamp</termVariant>
     </fullForm>
-    <fullForm language="en" usage="notRecommended">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>taillight</termVariant>
     </fullForm>
-    <fullForm language="en" usage="notRecommended">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>tail light</termVariant>
     </fullForm>
-    <fullForm language="en" usage="notRecommended">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>taillamp</termVariant>
     </fullForm>
-    <fullForm language="en" usage="notRecommended">
+    <fullForm language="en-GB" usage="notRecommended">
       <termVariant>tail lamp</termVariant>
     </fullForm>
-    <fullForm language="de" usage="preferred">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Rücklicht</termVariant>
     </fullForm>
   </termBody>

@@ -1,7 +1,25 @@
 @import url("elements.less");
 
 *[class~="termmap/termmap"] {
-    display: block; 
+    display: block;
+    empty-cells: true;
+    font-family: @font;
+    font-size: @fontSize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    min-height: 378px;
+    outline-width: 0;
+    padding-bottom: 80px;
+    padding-top: 32px;
+    text-decoration-color: rgba(0,0,0,1.0);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    width: @containerWidth;
     -oxy-display-tags: none;
 }
 
@@ -27,13 +45,15 @@
 
 *[class~="termmap/termref"] {
     .blockElement();
+    .border();
+    -oxy-show-placeholder: no;
 }
 
 *[class~="termmap/termref"][format] {
     display: none;
 }
 
-*[class~="termmap/termref"]:before(12) {
+*[class~="termmap/termref"]:before(20) {
     .header();
     content:
     oxy_buttonGroup(
@@ -48,25 +68,17 @@
     );
 }
 
-*[class~="termmap/termref"]:before(11) {
+*[class~="termmap/termref"]:before(19) {
     .separator();
 }
 
-*[class~="termmap/termref"]:before(9) {
-    .separator();
-}
-
-*[class~="termmap/termref"]:before(8) {
-    .separator();
-}
-
-*[class~="termmap/termref"]:before(7) {
+*[class~="termmap/termref"]:before(18) {
     content: "href";
     .col1();
     .link();
 }
 
-*[class~="termmap/termref"]:before(6) {
+*[class~="termmap/termref"]:before(17) {
     content:
     oxy_textfield(
           edit, '@href',
@@ -75,13 +87,16 @@
     .col2();
     padding-left: 0.5em;
 }
+*[class~="termmap/termref"]:before(16) {
+    .separator();
+}
 
-*[class~="termmap/termref"]:before(5) {
+*[class~="termmap/termref"]:before(15) {
     content: "keys";
     .col1();
 }
 
-*[class~="termmap/termref"]:before(4) {
+*[class~="termmap/termref"]:before(14) {
     content:
     oxy_textfield(
           edit, '@keys',
@@ -90,13 +105,16 @@
     .col2();
     padding-left: 0.5em;
 }
+*[class~="termmap/termref"]:before(13) {
+    .separator();
+}
 
-*[class~="termmap/termref"]:before(3) {
+*[class~="termmap/termref"]:before(12) {
     content: "termdomain";
     .col1();
 }
 
-*[class~="termmap/termref"]:before(2) {
+*[class~="termmap/termref"]:before(11) {
     content:
     oxy_textfield(
         edit, "@termdomain", 
@@ -106,6 +124,6 @@
     padding-left: 0.5em;
 }
 
-*[class~="termmap/termref"]:before(1) {
+*[class~="termmap/termref"]:before(10) {
     .separator();
 }

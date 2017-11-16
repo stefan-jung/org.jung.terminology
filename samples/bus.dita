@@ -24,6 +24,9 @@
     <fullForm language="en-GB" usage="admitted">
       <termVariant>omnibus</termVariant>
     </fullForm>
+    <fullForm language="de-DE" usage="preferred" id="fullForm_l1b_x5k_tbb">
+      <termVariant>Bus</termVariant>
+    </fullForm>
   </termBody>
   <relations>
     <relatedTerms>
