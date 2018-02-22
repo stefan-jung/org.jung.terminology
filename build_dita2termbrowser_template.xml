@@ -4,13 +4,14 @@
     <target name="-is-oxygen-webhelp-available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
-                <not>
-                  <or>
-                    <isset property="dita.plugin.com.oxygenxml.dita-ot.plugin.webhelp.dir"/>
-                    <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
-                    <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
-                  </or>
-                </not>
+                <or>
+                    <not>
+                        <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
+                    </not>
+                    <not>
+                        <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
+                    </not>
+                </or>
             </condition>
         </fail>
     </target>
