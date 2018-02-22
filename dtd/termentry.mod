@@ -498,10 +498,7 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Antonyms                              -->
 <!ENTITY % antonyms.content         "((%antonym;)+)">
-<!ENTITY % antonyms.attributes      "%termLinkGroup-atts;
-                                     type
-                                        CDATA
-                                           'antonyms'">
+<!ENTITY % antonyms.attributes      "%termLinkGroup-atts;">
 <!--doc:The <antonyms> element contains references to <antonym> elements.
 Category: Termentry elements-->
 <!ELEMENT  antonyms %antonyms.content;>
@@ -509,10 +506,7 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Hypernyms                             -->
 <!ENTITY % hypernyms.content        "((%hypernym;)+)">
-<!ENTITY % hypernyms.attributes     "%termLinkGroup-atts;
-                                     type
-                                        CDATA
-                                           'hypernyms'">
+<!ENTITY % hypernyms.attributes     "%termLinkGroup-atts;">
 <!--doc:The <hypernyms> element contains references to <hypernym> elements.
 Category: Termentry elements-->
 <!ELEMENT  hypernyms %hypernyms.content;>
@@ -520,10 +514,7 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Hyponyms                              -->
 <!ENTITY % hyponyms.content         "((%hyponym;)+)">
-<!ENTITY % hyponyms.attributes      "%termLinkGroup-atts;
-                                     type
-                                        CDATA
-                                           'hyponyms'">
+<!ENTITY % hyponyms.attributes      "%termLinkGroup-atts;">
 <!--doc:The <hyponyms> element contains references to <hyponym> elements.
 Category: Termentry elements-->
 <!ELEMENT  hyponyms %hyponyms.content;>
@@ -531,10 +522,7 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Instances Of                       -->
 <!ENTITY % instancesOf.content    "((%instanceOf;)+)">
-<!ENTITY % instancesOf.attributes "%termLinkGroup-atts;
-                                     type
-                                        CDATA
-                                           'instancesOf'">
+<!ENTITY % instancesOf.attributes "%termLinkGroup-atts;">
 <!--doc:The <instancesOf> element contains references to <instanceOf> elements.
 Category: Termentry elements-->
 <!ELEMENT  instancesOf %instancesOf.content;>
@@ -542,10 +530,7 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Parts Of                           -->
 <!ENTITY % partsOf.content        "((%partOf;)+)">
-<!ENTITY % partsOf.attributes     "%termLinkGroup-atts;
-                                     type
-                                        CDATA
-                                           'partsOf'">
+<!ENTITY % partsOf.attributes     "%termLinkGroup-atts;">
 <!--doc:The <partsOf> element contains references to <partOf> elements.
 Category: Termentry elements-->
 <!ELEMENT  partsOf %partsOf.content;>
@@ -553,10 +538,7 @@ Category: Termentry elements-->
 
 <!--                                 LONG NAME: Related Terms                         -->
 <!ENTITY % relatedTerms.content     "((%relatedTerm;)+)">
-<!ENTITY % relatedTerms.attributes  "%termLinkGroup-atts;
-                                     type
-                                        CDATA
-                                           'relatedTerms'">
+<!ENTITY % relatedTerms.attributes  "%termLinkGroup-atts;">
 <!--doc:The <relatedTerms> element contains references to <relatedTerm> elements.
 Category: Termentry elements-->
 <!ELEMENT  relatedTerms %relatedTerms.content;>
@@ -741,42 +723,60 @@ Category: Termentry elements-->
 <!ATTLIST verb            %genericTerm.attributes;>
 
 <!--                                 LONG NAME: Antonym                               -->
-<!ENTITY % antonym.attributes       "%termLink-atts;">
+<!ENTITY % antonym.attributes       "%termLink-atts;
+                                     type
+                                        CDATA
+                                           'termentry'">
 <!--doc:The <antonym> element refers to the antonym of a term.
 Category: Termentry elements-->
 <!ELEMENT antonym         %link.content;>
 <!ATTLIST antonym         %antonym.attributes;>
 
 <!--                                 LONG NAME: Hypernym                              -->
-<!ENTITY % hypernym.attributes      "%termLink-atts;">
+<!ENTITY % hypernym.attributes      "%termLink-atts;
+                                     type
+                                        CDATA
+                                           'termentry'">
 <!--doc:The <hypernym> element refers to the hypernym of a term.
 Category: Termentry elements-->
 <!ELEMENT hypernym        %link.content;>
 <!ATTLIST hypernym        %hypernym.attributes;>
 
 <!--                                 LONG NAME: Hyponym                               -->
-<!ENTITY % hyponym.attributes       "%termLink-atts;">
+<!ENTITY % hyponym.attributes       "%termLink-atts;
+                                     type
+                                        CDATA
+                                           'termentry'">
 <!--doc:The <hyponym> element refers to the hyponym of a term.
 Category: Termentry elements-->
 <!ELEMENT hyponym         %link.content;>
 <!ATTLIST hyponym         %hyponym.attributes;>
 
 <!--                                 LONG NAME: Instance Of                           -->
-<!ENTITY % instanceOf.attributes  "%termLink-atts;">
+<!ENTITY % instanceOf.attributes  "%termLink-atts;
+                                   type
+                                      CDATA
+                                         'termentry'">
 <!--doc:The <instanceOf> element indicates, that the current term is an instance ot the referenced term.
 Category: Termentry elements-->
 <!ELEMENT instanceOf    %link.content;>
 <!ATTLIST instanceOf    %instanceOf.attributes;>
 
 <!--                                 LONG NAME: Part Of                               -->
-<!ENTITY % partOf.attributes      "%termLink-atts;">
+<!ENTITY % partOf.attributes      "%termLink-atts;
+                                   type
+                                      CDATA
+                                         'termentry'">
 <!--doc:The <partOf> element indicates, that the current term is part ot the referenced term.
 Category: Termentry elements-->
 <!ELEMENT partOf        %link.content;>
 <!ATTLIST partOf        %partOf.attributes;>
 
 <!--                                 LONG NAME: Related Term                          -->
-<!ENTITY % relatedTerm.attributes   "%termLink-atts;">
+<!ENTITY % relatedTerm.attributes   "%termLink-atts;
+                                     type
+                                        CDATA
+                                           'termentry'">
 <!--doc:The <relatedTerm> element refers to a related term.
 Category: Termentry elements-->
 <!ELEMENT relatedTerm     %link.content;>

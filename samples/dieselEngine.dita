@@ -23,9 +23,9 @@
       </image>
     </fig>
   <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en">
-   <termVariant>diesel enginge</termVariant>
-  </fullForm>
+  <fullForm usage="preferred" language="en-GB">
+      <termVariant>diesel enginge</termVariant>
+    </fullForm>
     <fullForm language="de-DE" usage="preferred">
       <termVariant>Dieselmotor</termVariant>
     </fullForm>

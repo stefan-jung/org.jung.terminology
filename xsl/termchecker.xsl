@@ -147,7 +147,7 @@
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
         <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="doctales:generateId()"/>
+            <xsl:attribute name="id" select="doctales:generateId($notRecommendedTermNormalized, $preferredTerm)"/>
             <xsl:element name="sqf:description">
                 <xsl:element name="sqf:title">
                     <xsl:value-of select="normalize-space($sqfTitle)"/>
@@ -222,12 +222,20 @@
     </xsl:function>
     
     <xd:doc>
-        <xd:desc><xd:p>Generate a random UUID. The XSLT generate-id() does not generate a unique ID, when called on the same node.</xd:p></xd:desc>
+        <xd:desc>
+            <xd:p>Generate a ID based on two strings.</xd:p>
+            <xd:p>The XSLT generate-id() does not generate a unique ID, when called on the same node.</xd:p>
+        </xd:desc>
         <xd:return><xd:p>Return a unique UUID.</xd:p></xd:return>
+        <xd:param name="string1">First string</xd:param>
+        <xd:param name="string2">Second string</xd:param>
     </xd:doc>
     <xsl:function name="doctales:generateId">
-        <xsl:variable name="randomNumber" select="(current-dateTime() - xs:dateTime('1970-01-01T00:00:00')) div xs:dayTimeDuration('PT1S') * 100000 * math:random()"/>
-        <xsl:sequence select="concat('sqf', $randomNumber)"/>
+        <xsl:param name="string1" as="xs:string"/>
+        <xsl:param name="string2" as="xs:string"/>
+        <!-- The ID has to be a unique valid NMTOKEN -->
+        <xsl:variable name="newID" select="replace(concat($string1, $string2), '[^A-Za-z0-9,.-]','')"/>
+        <xsl:sequence select="$newID"/>
     </xsl:function>
 
 </xsl:stylesheet>

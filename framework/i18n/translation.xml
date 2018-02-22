@@ -30,6 +30,14 @@
         <val lang="en_US">Delete the current element.</val>
         <val lang="de_DE">Lösche das aktuelle Element.</val>
     </key>
+    <key value="doctales.language.select">
+        <val lang="en_US">Select language</val>
+        <val lang="de_DE">Sprache wählen</val>
+    </key>
+    <key value="doctales.usage.select">
+        <val lang="en_US">Select usage</val>
+        <val lang="de_DE">Verwendung wählen</val>
+    </key>
     
     <!-- Key Reference -->
     <key value="doctales.keyref.change">

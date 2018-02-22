@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net">
     
-    <path id="org.doctales.terminology.path">    
-        <pathelement path="dost.class.path"/>
-        <pathelement location="${dita.plugin.org.doctales.terminology.dir}/lib/xmltask.jar"/>
-        <pathelement location="lib/xmltask.jar"/>
-        <pathelement location="${dita.dir}/plugins/org.doctales.terminology/lib/xmltask.jar"/>
-    </path>
-    
-    <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpathref="org.doctales.terminology.path"/>
-
-    <target name="is.com.oxygen.webhelp.available">
+    <target name="-is-oxygen-webhelp-available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
-                <not>
-                    <isset property="dita.plugin.com.oxygenxml.dita-ot.plugin.webhelp.dir"/>
-                </not>
+                <or>
+                    <not>
+                        <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
+                    </not>
+                    <not>
+                        <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
+                    </not>
+                </or>
             </condition>
         </fail>
     </target>
@@ -26,20 +22,29 @@
         in the termbrowser-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
-    <target name="dita2termbrowser" depends="is.com.oxygen.webhelp.available, init-properties">
+    <target name="dita2termbrowser-classic" depends="-is-oxygen-webhelp-available, init-properties">
         <antcall target="dita2webhelp"/>
         <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
-    <target name="dita2termbrowser-responsive" depends="is.com.oxygen.webhelp.available, init-properties">
+    <target name="dita2termbrowser-responsive" depends="-is-oxygen-webhelp-available, init-properties">
         <antcall target="dita2webhelp-responsive"/>
         <antcall target="termbrowser-termstats"/>
         <antcall target="semanticnet"/>
     </target>
     <target name="dita2termbrowser-html5" depends="dita2html5, termbrowser-termstats, semanticnet"/>
     
+    <target name="-is-xmltask-available">
+        <pathconvert refid="dost.class.path" property="dost.class.path.property"/>
+        <condition property="xmltask-available" value="true">
+            <contains string="${dost.class.path.property}" substring="xmltask"/>
+        </condition>
+        <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
+    </target>
+    
     <target name="termbrowser-termstats"
-        description="Generate terminology statistics.">
+        description="Generate terminology statistics."
+        depends="-is-xmltask-available">
         <condition property="termmap" value="${args.term.containermap}">
             <isset property="args.term.containermap"/>
         </condition>
@@ -103,6 +108,17 @@
         <!-- Copy the XML file to the output dir. It has to be shipped with the webhelp to be used as an input parameter for the next publication. -->
         <copy file="${dita.temp.dir}/termstats_merged.xml" tofile="${output.dir}/termstats.xml"/>
         
+        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
+            <filterchain>
+                <replaceregex pattern="\s\s+" replace=" "/>
+                <trim/>
+                <ignoreblank/>
+                <striplinebreaks/>
+                <replaceregex pattern="(.*)&lt;!--HEAD BEGINNING--&gt;" replace=""/>
+                <replaceregex pattern="&lt;!--HEAD END--&gt;(.*)" replace=""/>
+            </filterchain>
+        </loadfile>
+        
         <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
@@ -119,6 +135,9 @@
             <copy path="//*[contains(@type, 'termstats')]/@href" property="termstats-file" attrValue="yes"/>
         </xmltask>
         <basename property="termstats.base" file="${termstats-file}" suffix=".dita"/>
+        
+        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;head&gt;" replace="&lt;head&gt;${terminlogy_stats.head}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
         
         <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}\${termstats.base}.html</echo>
         <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
@@ -155,7 +174,7 @@
         <move file="${dita.temp.dir}${file.separator}terminology_stats.xml" tofile="${dita.temp.dir}/termstats_merged.xml"/>
     </target>
     
-    <target name="semanticnet">
+    <target name="semanticnet" depends="-is-xmltask-available">
         <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
@@ -205,7 +224,7 @@
         <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
         
         <!-- Replace certain parts of the topic with the semantic net data -->
-        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;\/head&gt;" replace="${semantic-net.head}&lt;\/head&gt;" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;head&gt;" replace="&lt;head&gt;${semantic-net.head}" flags="gis" byline="false"/>
         <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>

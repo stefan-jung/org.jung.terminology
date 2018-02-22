@@ -10,7 +10,7 @@ org.doctales.terminology
 
 **org.doctales.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
 
-- Create and change terms easily using specialized DITA topics. The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
+- Create and change terms easily using specialized DITA topics (DTD/RNG). The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
 - Author terms easily using an &lt;oXygen/&gt; XML framework with author mode stylesheets, that simplify the editing of `<termentry>` and `<termmap>` topics.
 - Navigate through the terminology database with a classic or responsive terminology browser ([DEMO](https://doctales.github.io/samples/termbrowser-responsive/index.html)) based on the &lt;oXygen/&gt; webhelp transformation.
 - Check DITA or XLIFF files with a Schematron based terminology checker.
@@ -20,15 +20,20 @@ org.doctales.terminology
 
 **Prerequisites**
 
-- DITA-OT 2.3 or higher
+- DITA-OT 2.3.x, DITA-OT 2.4.x, DITA-OT 2.5.x or DITA-OT 3.x
+- The termbrowser needs the [OOPS Consultancy XMLTask](http://www.oopsconsultancy.com/software/xmltask/) library on classpath. If this library is missing, you can provide it by installing the DITA-OT utility plugin [org.doctales.xmltask](https://github.com/doctales/org.doctales.xmltask). 
 - &lt;oXygen/&gt; XML 18 or higher (optional)
+- To use the Relax NG topics and maps, you need to install the **dita-relaxng-defaults** plugin.
+  ```shell
+  dita --install https://github.com/oxygenxml/dita-relaxng-defaults/archive/master.zip
+  ```  
 
 **Install the plugin**
 
-1. Install the plugin with the [`dita` command](http://www.dita-ot.org/dev/parameters/dita-command-arguments.html).
-   ```shell
-   dita -install https://github.com/doctales/org.doctales.terminology/archive/master.zip
-   ```
+Install the plugin with the [`dita` command](http://www.dita-ot.org/dev/parameters/dita-command-arguments.html).
+```shell
+dita --install https://github.com/doctales/org.doctales.terminology/archive/master.zip
+```
 
 **Install the &lt;oXygen/&gt; XML Framework**
 
@@ -40,6 +45,9 @@ org.doctales.terminology
 
 Please refer to the [documentation](https://doctales.atlassian.net/wiki/x/AoAy).
 
+## Licenses
+
+**org.doctales.terminology** is available under the [Apache Public License (APL) 2](https://www.apache.org/licenses/LICENSE-2.0). The plugin contains SVG flags taken from the [flag-icon-css](https://github.com/lipis/flag-icon-css) project, which is available under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Contribution
 

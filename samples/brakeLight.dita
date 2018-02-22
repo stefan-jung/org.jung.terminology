@@ -23,13 +23,13 @@
       </image>
     </fig>
     <partOfSpeech value="noun"/>
-    <fullForm usage="preferred" language="en">
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>brake light</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
       <termVariant>stop lamp</termVariant>
     </fullForm>
-    <fullForm language="de" usage="preferred">
+    <fullForm language="de-DE" usage="preferred">
       <termVariant>Rücklicht</termVariant>
     </fullForm>
   </termBody>
