@@ -226,6 +226,13 @@
         <!-- Replace certain parts of the topic with the semantic net data -->
         <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;head&gt;" replace="&lt;head&gt;${semantic-net.head}" flags="gis" byline="false"/>
         <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
+        
+        <!-- The vis.js script needs to be injected as the first lib to the head. We have no extension point for this, so we need to make this dirty. -->
+        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/webhelp-skin/header/vis.js.txt" property="vis.js.txt"/>
+        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;script" replace="${vis.js.txt}&lt;script" flags="is" byline="false"/>
+        
+        
+        
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>
     
