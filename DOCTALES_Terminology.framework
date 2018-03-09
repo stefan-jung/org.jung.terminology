@@ -8715,7 +8715,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<Integer>3</Integer>
+											<Integer>4</Integer>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>

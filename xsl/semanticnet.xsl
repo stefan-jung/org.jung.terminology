@@ -8,9 +8,9 @@
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
     <xsl:import href="termbrowser-utility.xsl"/>
     
-    <xsl:output method="html"
+    <xsl:output method="xml"
         encoding="UTF-8"
-        indent="no"
+        indent="yes"
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     
@@ -119,11 +119,6 @@
                     }
                 </style>
                 <xsl:value-of select="$newline"/>
-                
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.js"><!-- --></script>
-                <xsl:value-of select="$newline"/>
-                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.17.0/vis.min.css"><!-- --></link>
-                
                 <script type="text/javascript">
                     var nodes = null;
                     var edges = null;
@@ -252,7 +247,7 @@
                             <label for="search-input" class="col-form-label">
                                 <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
                             </label>
-                            <input id="search-input" class="form-control autocomplete" type="text"><!----></input>
+                            <input id="search-input" class="form-control autocomplete" type="text"><!-- --></input>
                             <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus($('.autocomplete').val());">
                                 <xsl:value-of select="doctales:getString($language, 'Search')"/>
                             </button>

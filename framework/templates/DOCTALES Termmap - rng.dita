@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:doctales:dita:rng:termmap.rng:1.3" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<termmap id="ui_${id}">
+    <termgroup>
+        <termref/>
+    </termgroup>
+</termmap>

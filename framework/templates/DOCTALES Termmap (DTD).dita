@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
 <termmap id="ui_${id}">
-  <title>Terminology</title>
-  <termgroup>
-    <termref/>
-  </termgroup>
+    <termgroup>
+        <termref/>
+    </termgroup>
 </termmap>
