@@ -186,6 +186,10 @@
         <val lang="en_US">Enter the name of the printed source.</val>
         <val lang="de_DE">Geben Sie den Namen der Literaturquelle ein.</val>
     </key>
+    <key value="doctales.sourceName.renameTo">
+        <val lang="en_US">Rename element to &lt;sourceName&gt;</val>
+        <val lang="de_DE">Element umbenennen in &lt;sourceName&gt;</val>
+    </key>
     <key value="doctales.sourceName.delete">
         <val lang="en_US">Delete printed source</val>
         <val lang="de_DE">Literaturquelle löschen</val>
@@ -211,6 +215,10 @@
     <key value="doctales.sourceReference.placeholder">
         <val lang="en_US">Enter the name of the internet source.</val>
         <val lang="de_DE">Geben Sie den Namen der Internetquelle ein.</val>
+    </key>
+    <key value="doctales.sourceReference.renameTo">
+        <val lang="en_US">Rename element to &lt;sourceReference&gt;</val>
+        <val lang="de_DE">Element umbenennen in &lt;sourceReference&gt;</val>
     </key>
     <key value="doctales.sourceReference.delete">
         <val lang="en_US">Delete internet source</val>
@@ -1137,5 +1145,11 @@
     <key value="doctales.termdomain">
         <val lang="en_US">Term Domain</val>
         <val lang="de_DE">Term Domain</val>
+    </key>
+    
+    <!-- General Descriptions -->
+    <key value="doctales.renameTo_description">
+        <val lang="en_US">Mofifies the name of the XML element.</val>
+        <val lang="de_DE">Ändert den Namen des XML-Elements.</val>
     </key>
 </translation>
