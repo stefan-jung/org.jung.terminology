@@ -35,7 +35,7 @@
             </sch:assert>
             <sqf:fix id="fix-id">
                 <sqf:description>
-                    <sqf:title diagnostics="rename-to-en rename-to-de">
+                    <sqf:title ref="rename-to-en rename-to-de" xml:lang="en">
                         Rename ID to '<sch:value-of select="$new-id"/>'
                     </sqf:title>
                 </sqf:description>
