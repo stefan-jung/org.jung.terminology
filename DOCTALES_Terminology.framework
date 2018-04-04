@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="19.1" xml:space="preserve">
+<serialized version="20.0" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -52,33 +52,6 @@
 										</field>
 										<field name="value">
 											<String>${framework}/framework/resources/</String>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/cssDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>17</Integer>
-										</field>
-										<field name="value">
-											<cssFile>
-												<field name="href">
-													<String>${framework}/framework/css/termentry.less</String>
-												</field>
-												<field name="title">
-													<String>DOCTALES Termentry</String>
-												</field>
-												<field name="alternate">
-													<Boolean>false</Boolean>
-												</field>
-											</cssFile>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -194,16 +167,26 @@
 											<String>authorExtensionDescriptor/cssDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>9</Integer>
+											<Integer>10</Integer>
 										</field>
 										<field name="value">
-											<null/>
+											<cssFile>
+												<field name="href">
+													<String>${framework}/framework/css/termentry.less</String>
+												</field>
+												<field name="title">
+													<String>DOCTALES Termentry</String>
+												</field>
+												<field name="alternate">
+													<Boolean>false</Boolean>
+												</field>
+											</cssFile>
 										</field>
 										<field name="patchHandling">
-											<String>removeIndex</String>
+											<String>addIndex</String>
 										</field>
 										<field name="anchor">
-											<String>${baseFramework}/css/edit/alternate-map-print-preview-layout.css</String>
+											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -364,7 +347,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>75</Integer>
+											<Integer>77</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -434,7 +417,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>76</Integer>
+											<Integer>78</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -504,7 +487,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>77</Integer>
+											<Integer>79</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -566,7 +549,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>78</Integer>
+											<Integer>80</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -636,7 +619,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>79</Integer>
+											<Integer>81</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -786,7 +769,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>80</Integer>
+											<Integer>82</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -936,7 +919,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>81</Integer>
+											<Integer>83</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1086,7 +1069,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>82</Integer>
+											<Integer>84</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1236,7 +1219,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>83</Integer>
+											<Integer>85</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1298,7 +1281,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>84</Integer>
+											<Integer>86</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1360,7 +1343,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>85</Integer>
+											<Integer>87</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1422,7 +1405,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>86</Integer>
+											<Integer>88</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1484,7 +1467,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>87</Integer>
+											<Integer>89</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1558,7 +1541,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>88</Integer>
+											<Integer>90</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1632,7 +1615,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>89</Integer>
+											<Integer>91</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1694,7 +1677,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>90</Integer>
+											<Integer>92</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1788,7 +1771,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>91</Integer>
+											<Integer>93</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1861,7 +1844,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>92</Integer>
+											<Integer>94</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1933,7 +1916,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>93</Integer>
+											<Integer>95</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2055,7 +2038,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>94</Integer>
+											<Integer>96</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2175,7 +2158,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>95</Integer>
+											<Integer>97</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2295,7 +2278,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>96</Integer>
+											<Integer>98</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2415,7 +2398,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>97</Integer>
+											<Integer>99</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2535,7 +2518,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>98</Integer>
+											<Integer>100</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2611,7 +2594,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>99</Integer>
+											<Integer>101</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2673,7 +2656,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>100</Integer>
+											<Integer>102</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2763,7 +2746,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>101</Integer>
+											<Integer>103</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2833,7 +2816,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>102</Integer>
+											<Integer>104</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2903,7 +2886,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>103</Integer>
+											<Integer>105</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2978,7 +2961,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>104</Integer>
+											<Integer>106</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3050,7 +3033,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>105</Integer>
+											<Integer>107</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3123,7 +3106,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>106</Integer>
+											<Integer>108</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3193,7 +3176,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>107</Integer>
+											<Integer>109</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3287,7 +3270,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>108</Integer>
+											<Integer>110</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3381,7 +3364,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>109</Integer>
+											<Integer>111</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3475,7 +3458,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>110</Integer>
+											<Integer>112</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3547,7 +3530,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>111</Integer>
+											<Integer>113</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3617,7 +3600,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>112</Integer>
+											<Integer>114</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3679,7 +3662,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>113</Integer>
+											<Integer>115</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3741,7 +3724,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>114</Integer>
+											<Integer>116</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3803,7 +3786,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>115</Integer>
+											<Integer>117</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3865,7 +3848,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>116</Integer>
+											<Integer>118</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3943,7 +3926,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>117</Integer>
+											<Integer>119</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4005,7 +3988,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>118</Integer>
+											<Integer>120</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4067,7 +4050,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>119</Integer>
+											<Integer>121</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4129,7 +4112,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>120</Integer>
+											<Integer>122</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4191,7 +4174,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>121</Integer>
+											<Integer>123</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4253,7 +4236,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>122</Integer>
+											<Integer>124</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4310,7 +4293,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>123</Integer>
+											<Integer>125</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4367,7 +4350,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>124</Integer>
+											<Integer>126</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4424,7 +4407,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>125</Integer>
+											<Integer>127</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4481,7 +4464,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>126</Integer>
+											<Integer>128</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4538,7 +4521,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>127</Integer>
+											<Integer>129</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4600,7 +4583,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>128</Integer>
+											<Integer>130</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4694,7 +4677,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>129</Integer>
+											<Integer>131</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4756,7 +4739,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>130</Integer>
+											<Integer>132</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4818,7 +4801,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>131</Integer>
+											<Integer>133</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4912,7 +4895,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>132</Integer>
+											<Integer>134</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4974,7 +4957,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>133</Integer>
+											<Integer>135</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5036,7 +5019,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>134</Integer>
+											<Integer>136</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5098,7 +5081,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>135</Integer>
+											<Integer>137</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5160,7 +5143,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>136</Integer>
+											<Integer>138</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5222,7 +5205,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>137</Integer>
+											<Integer>139</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5284,7 +5267,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>138</Integer>
+											<Integer>140</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5341,7 +5324,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>139</Integer>
+											<Integer>141</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5398,7 +5381,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>140</Integer>
+											<Integer>142</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5460,7 +5443,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>141</Integer>
+											<Integer>143</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5522,7 +5505,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>142</Integer>
+											<Integer>144</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5584,7 +5567,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>143</Integer>
+											<Integer>145</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5618,6 +5601,10 @@
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
 																		<String>elementName</String>
 																		<String>acronym</String>
 																	</entry>
@@ -5646,7 +5633,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>144</Integer>
+											<Integer>146</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5708,7 +5695,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>145</Integer>
+											<Integer>147</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5828,7 +5815,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>146</Integer>
+											<Integer>148</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5885,7 +5872,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>147</Integer>
+											<Integer>149</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5947,7 +5934,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>148</Integer>
+											<Integer>150</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6004,7 +5991,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>149</Integer>
+											<Integer>151</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6070,7 +6057,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>150</Integer>
+											<Integer>152</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6127,7 +6114,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>151</Integer>
+											<Integer>153</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6189,7 +6176,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>152</Integer>
+											<Integer>154</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6251,7 +6238,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>153</Integer>
+											<Integer>155</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6313,7 +6300,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>154</Integer>
+											<Integer>156</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6375,7 +6362,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>155</Integer>
+											<Integer>157</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6437,7 +6424,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>156</Integer>
+											<Integer>158</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6499,7 +6486,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>157</Integer>
+											<Integer>159</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6561,7 +6548,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>158</Integer>
+											<Integer>160</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6623,7 +6610,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>159</Integer>
+											<Integer>161</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6693,7 +6680,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>160</Integer>
+											<Integer>162</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6771,7 +6758,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>161</Integer>
+											<Integer>163</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6833,7 +6820,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>162</Integer>
+											<Integer>164</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6903,7 +6890,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>163</Integer>
+											<Integer>165</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6960,7 +6947,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>164</Integer>
+											<Integer>166</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7022,7 +7009,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>165</Integer>
+											<Integer>167</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7098,7 +7085,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>166</Integer>
+											<Integer>168</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7139,6 +7126,130 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>169</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.sourceName.renameTo</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.sourceName.renameTo)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.renameTo_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/sourceReference ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementName</String>
+																		<String>sourceName</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.RenameElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>170</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>doctales.sourceReference.renameTo</String>
+												</field>
+												<field name="name">
+													<String>${i18n(doctales.sourceReference.renameTo)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(doctales.renameTo_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/sourceName ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementName</String>
+																		<String>sourceReference</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.RenameElementOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -7944,6 +8055,23 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
+											<Integer>9</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>templatesLocations</String>
+										</field>
+										<field name="index">
 											<Integer>8</Integer>
 										</field>
 										<field name="value">
@@ -8013,23 +8141,6 @@
 										</field>
 										<field name="index">
 											<Integer>4</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
-											<Integer>3</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -8855,7 +8966,7 @@
 									</cssFile>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/edit/alternate-map-print-preview-layout.css</String>
+											<String>${framework}/css/edit/alternate-map-print-preview-layout-force-media-print.css</String>
 										</field>
 										<field name="title">
 											<String>+ Print ready</String>
@@ -8928,17 +9039,6 @@
 										</field>
 										<field name="alternate">
 											<Boolean>true</Boolean>
-										</field>
-									</cssFile>
-									<cssFile>
-										<field name="href">
-											<String>${framework}/css/webauthor/profiling.css</String>
-										</field>
-										<field name="title">
-											<String></String>
-										</field>
-										<field name="alternate">
-											<Boolean>false</Boolean>
 										</field>
 									</cssFile>
 								</cssFile-array>
@@ -11042,7 +11142,7 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::node()[self::*[contains(@class," topic/row ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/tbody ") or contains(@class," topic/thead ")]][1][self::*[contains(@class," topic/row ") or contains(@class," topic/tbody ") or contains(@class," topic/thead ")]]</String>
+														<String>oxy:is-editable-element((ancestor-or-self::*[contains(@class, ' topic/table ')])[last()]) and (ancestor-or-self::node()[self::*[contains(@class," topic/row ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/tbody ") or contains(@class," topic/thead ")]][1][self::*[contains(@class," topic/row ") or contains(@class," topic/tbody ") or contains(@class," topic/thead ")]])</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap/>
@@ -11053,7 +11153,7 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::node()[self::*[contains(@class," topic/row ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/simpletable ")]][1][self::*[contains(@class," topic/strow ") or contains(@class," topic/sthead ") or contains(@class," topic/simpletable ")]]</String>
+														<String>oxy:is-editable-element((ancestor-or-self::*[contains(@class, ' topic/simpletable ')])[last()]) and ancestor-or-self::node()[self::*[contains(@class," topic/row ") or contains(@class," topic/sthead ") or contains(@class," topic/strow ") or contains(@class," topic/simpletable ")]][1][self::*[contains(@class," topic/strow ") or contains(@class," topic/sthead ") or contains(@class," topic/simpletable ")]]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap/>
@@ -13745,6 +13845,98 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>subscript</String>
+										</field>
+										<field name="name">
+											<String>${i18n(subscript)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(subscript_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/Subscript24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/Subscript16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;sub/></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>superscript</String>
+										</field>
+										<field name="name">
+											<String>${i18n(superscript)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(superscript_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/Superscript24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/Superscript16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;sup/></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -13925,6 +14117,16 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														<menuItem>
 															<field name="actionID">
 																<String>underline</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>subscript</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>superscript</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
@@ -14883,6 +15085,16 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 													<String>&lt;SPLIT> entry</String>
 												</field>
 											</contextRemoveItem>
+											<contextRemoveItem>
+												<field name="targets">
+													<list>
+														<Integer>0</Integer>
+													</list>
+												</field>
+												<field name="renderName">
+													<String>row</String>
+												</field>
+											</contextRemoveItem>
 										</contextRemoveItem-array>
 									</field>
 								</contextProvider>
@@ -14921,6 +15133,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 							<String>${configured.ditaot.dir}/plugins/*/template_folders/*</String>
 							<String>${frameworkDir}/templates/topic</String>
 							<String>${frameworkDir}/templates/topic-xsd</String>
+							<String>${frameworkDir}/templates/topic-rng</String>
 							<String>${frameworkDir}/templates/plugin</String>
 							<String>${configured.ditaot.dir}/org.dita-ng.doctypes_oxygen_templates/topic-rng</String>
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/topic (Dita 4 Publishers)</String>
@@ -15464,6 +15677,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="webhelpResponsiveTemplate">
 									<null/>
 								</field>
+								<field name="publishingTemplateDataPO">
+									<null/>
+								</field>
 								<field name="additionalAntArgs">
 									<String></String>
 								</field>
@@ -15680,6 +15896,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									<null/>
 								</field>
 								<field name="webhelpResponsiveTemplate">
+									<null/>
+								</field>
+								<field name="publishingTemplateDataPO">
 									<null/>
 								</field>
 								<field name="additionalAntArgs">
