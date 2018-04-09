@@ -199,9 +199,6 @@
         )
     );
 }
-/**[class~="topic/fig"]:before(8) {
-    .separator();
-}*/
 *[class~="topic/fig"]:before(2) {
     .topRightButtonContainer();
     .placeholderButton();
@@ -234,11 +231,6 @@
 /*********************************************
  * IMAGE
  *********************************************/
-*[class~="topic/image"] {
-    content: attr(href , url);
-    .blockElement();
-    .border();
-}
 *[class~="topic/image"]:before(10) {
     .header();
     content:
@@ -254,6 +246,15 @@
         )
     );
     -oxy-show-placeholder: no !important;
+}
+*[class~="topic/image"] {
+    .border();
+}
+*[class~="topic/image"][href]:not([keyref]) {
+    content: attr(href, url);
+}
+*[class~="topic/image"][keyref]:not([href]) {
+    content: attr(keyref, keyref);
 }
 *[class~="topic/image"]:after(1) {
     .separator();
