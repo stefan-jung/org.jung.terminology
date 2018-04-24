@@ -453,6 +453,7 @@
     </xsl:template>
     
     <!-- Fall Through Templates -->
+    <xsl:template match="*[contains(@class, ' topic/title ')]" mode="nodes edges termmeta search"/>
     <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta search"/>
     <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta search"/>
     <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta search"/>
