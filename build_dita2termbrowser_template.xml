@@ -134,13 +134,23 @@
         <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
             <copy path="//*[contains(@type, 'termstats')]/@href" property="termstats-file" attrValue="yes"/>
         </xmltask>
-        <basename property="termstats.base" file="${termstats-file}" suffix=".dita"/>
         
-        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;head&gt;" replace="&lt;head&gt;${terminlogy_stats.head}" flags="gis" byline="false"/>
-        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
+        <!-- Replace file suffix -->
+        <loadresource property="termstats-file-html">
+            <propertyresource name="termstats-file"/>
+            <filterchain>
+                <tokenfilter>
+                    <replacestring from=".dita" to=".html"/>
+                    <replacestring from=".xml" to=".html"/>
+                </tokenfilter>
+            </filterchain>
+        </loadresource>
         
-        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}\${termstats.base}.html</echo>
-        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${termstats-file-html}" match="&lt;head&gt;" replace="&lt;head&gt;${terminlogy_stats.head}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${termstats-file-html}" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
+        
+        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}</echo>
+        <replaceregexp file="${output.dir}/${termstats-file-html}" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
     </target>
     
     <target name="termstats-merge"
