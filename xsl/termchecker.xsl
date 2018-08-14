@@ -147,7 +147,7 @@
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
         <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="doctales:generateId($notRecommendedTermNormalized, $preferredTerm)"/>
+            <xsl:attribute name="id" select="doctales:generateId($notRecommendedTermNormalized, 'id', $preferredTerm)"/>
             <xsl:element name="sqf:description">
                 <xsl:element name="sqf:title">
                     <xsl:value-of select="normalize-space($sqfTitle)"/>
@@ -226,15 +226,17 @@
             <xd:p>Generate a ID based on two strings.</xd:p>
             <xd:p>The XSLT generate-id() does not generate a unique ID, when called on the same node.</xd:p>
         </xd:desc>
-        <xd:return><xd:p>Return a unique UUID.</xd:p></xd:return>
-        <xd:param name="string1">First string</xd:param>
-        <xd:param name="string2">Second string</xd:param>
+        <xd:return><xd:p>Return a unique ID.</xd:p></xd:return>
+        <xd:param name="notRecommendedTerm">First string</xd:param>
+        <xd:param name="id">ID of term entry</xd:param>
+        <xd:param name="languageCode">Language Code</xd:param>
     </xd:doc>
     <xsl:function name="doctales:generateId">
-        <xsl:param name="string1" as="xs:string"/>
-        <xsl:param name="string2" as="xs:string"/>
+        <xsl:param name="notRecommendedTerm" as="xs:string"/>
+        <xsl:param name="id" as="xs:string"/>
+        <xsl:param name="languageCode" as="xs:string"/>
         <!-- The ID has to be a unique valid NMTOKEN -->
-        <xsl:variable name="newID" select="replace(concat($string1, $string2), '[^A-Za-z0-9,.-]','')"/>
+        <xsl:variable name="newID" select="replace(concat(concat($notRecommendedTerm, $id), $languageCode), '[^A-Za-z0-9,.-]','')"/>
         <xsl:sequence select="$newID"/>
     </xsl:function>
 

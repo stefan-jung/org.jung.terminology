@@ -29,7 +29,7 @@
             <!-- The context text() matches the text content of all nodes. -->
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termLanguageRegionCode)"/>
+            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>
             
             <!-- 
                 Create a report that will be reported if the tested topic: 
@@ -40,9 +40,9 @@
                 <xsl:attribute name="test">
                     <xsl:text>contains(/*/@xml:lang, '</xsl:text>
                     <xsl:value-of select="$termLanguageRegionCode"/>
-                    <xsl:text>') and matches(., '(((\W|^))</xsl:text>
+                    <xsl:text>') and matches(., '((\W|^)</xsl:text>
                     <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>((\W|$)))', 'i')</xsl:text>
+                    <xsl:text>(\W|$))', 'i')</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="role">warning</xsl:attribute>
                 <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>

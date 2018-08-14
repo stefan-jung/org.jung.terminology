@@ -30,7 +30,7 @@
             
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termLanguageRegionCode)"/>
+            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>
             <xsl:variable name="parent">
                 <xsl:choose>
                     <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
@@ -57,9 +57,9 @@
                             <xsl:text>(contains(ancestor::*/@source-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') or contains(ancestor::*/@target-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>')) </xsl:text>
                         </xsl:when>
                     </xsl:choose>
-                    <xsl:text>and matches(., '(((\W|^))</xsl:text>
+                    <xsl:text>and matches(., '((\W|^)</xsl:text>
                     <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>((\W|$)))', 'i') and </xsl:text>
+                    <xsl:text>(\W|$))', 'i') and </xsl:text>
                     <xsl:value-of select="$parent"/>
                 </xsl:attribute>
                 <xsl:attribute name="role">warning</xsl:attribute>
