@@ -65,6 +65,17 @@
 											<String>authorExtensionDescriptor/cssDescriptors</String>
 										</field>
 										<field name="index">
+											<Integer>18</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
 											<Integer>16</Integer>
 										</field>
 										<field name="value">
@@ -160,33 +171,6 @@
 										</field>
 										<field name="anchor">
 											<String>${baseFramework}/css/edit/alternate-coloured-revisions.css</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/cssDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>10</Integer>
-										</field>
-										<field name="value">
-											<cssFile>
-												<field name="href">
-													<String>${framework}/framework/css/termentry.less</String>
-												</field>
-												<field name="title">
-													<String>DOCTALES Termentry</String>
-												</field>
-												<field name="alternate">
-													<Boolean>false</Boolean>
-												</field>
-											</cssFile>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -5475,13 +5459,17 @@
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
-																		<String>elementName</String>
-																		<String>fullForm</String>
+																		<String>externalParams</String>
+																		<String>new-element=fullForm</String>
+																	</entry>
+																	<entry>
+																		<String>script</String>
+																		<String>${framework}/framework/xsl/renameTermTypeElement.xsl</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.RenameElementOperation</String>
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -5537,13 +5525,17 @@
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
-																		<String>elementName</String>
-																		<String>verb</String>
+																		<String>externalParams</String>
+																		<String>new-element=verb</String>
+																	</entry>
+																	<entry>
+																		<String>script</String>
+																		<String>${framework}/framework/xsl/renameTermTypeElement.xsl</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.RenameElementOperation</String>
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -5599,17 +5591,17 @@
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
-																		<String>elementLocation</String>
-																		<String>.</String>
+																		<String>externalParams</String>
+																		<String>new-element=acronym</String>
 																	</entry>
 																	<entry>
-																		<String>elementName</String>
-																		<String>acronym</String>
+																		<String>script</String>
+																		<String>${framework}/framework/xsl/renameTermTypeElement.xsl</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.RenameElementOperation</String>
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -5665,13 +5657,17 @@
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
-																		<String>elementName</String>
-																		<String>abbreviation</String>
+																		<String>externalParams</String>
+																		<String>new-element=abbreviation</String>
+																	</entry>
+																	<entry>
+																		<String>script</String>
+																		<String>${framework}/framework/xsl/renameTermTypeElement.xsl</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
 															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.RenameElementOperation</String>
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
@@ -8139,23 +8135,6 @@
 										</field>
 										<field name="index">
 											<Integer>4</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
-											<Integer>3</Integer>
 										</field>
 										<field name="value">
 											<null/>
