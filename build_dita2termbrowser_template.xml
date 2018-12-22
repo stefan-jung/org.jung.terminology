@@ -4,13 +4,14 @@
     <target name="-is-oxygen-webhelp-available">
         <fail message="The plugin com.oxygen.webhelp is not available">
             <condition>
-                <not>
-                  <or>
-                    <isset property="dita.plugin.com.oxygenxml.dita-ot.plugin.webhelp.dir"/>
-                    <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
-                    <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
-                  </or>
-                </not>
+                <or>
+                    <not>
+                        <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
+                    </not>
+                    <not>
+                        <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
+                    </not>
+                </or>
             </condition>
         </fail>
     </target>
@@ -133,13 +134,23 @@
         <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
             <copy path="//*[contains(@type, 'termstats')]/@href" property="termstats-file" attrValue="yes"/>
         </xmltask>
-        <basename property="termstats.base" file="${termstats-file}" suffix=".dita"/>
         
-        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;head&gt;" replace="&lt;head&gt;${terminlogy_stats.head}" flags="gis" byline="false"/>
-        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
+        <!-- Replace file suffix -->
+        <loadresource property="termstats-file-html">
+            <propertyresource name="termstats-file"/>
+            <filterchain>
+                <tokenfilter>
+                    <replacestring from=".dita" to=".html"/>
+                    <replacestring from=".xml" to=".html"/>
+                </tokenfilter>
+            </filterchain>
+        </loadresource>
         
-        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}\${termstats.base}.html</echo>
-        <replaceregexp file="${output.dir}/${termstats.base}.html" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${termstats-file-html}" match="&lt;head&gt;" replace="&lt;head&gt;${terminlogy_stats.head}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${termstats-file-html}" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
+        
+        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}</echo>
+        <replaceregexp file="${output.dir}/${termstats-file-html}" match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" replace="${terminology_stats.body}" flags="gis" byline="false"/>
     </target>
     
     <target name="termstats-merge"
@@ -220,11 +231,27 @@
             <copy path="//*[contains(@type, 'semanticnet')]/@href" property="semantic-net-file" attrValue="yes"/>
         </xmltask>
         
-        <basename property="semantic-net.base" file="${semantic-net-file}" suffix=".dita"/>
-        
+        <!-- Replace file suffix -->
+        <loadresource property="semantic-net-file-html">
+            <propertyresource name="semantic-net-file"/>
+            <filterchain>
+                <tokenfilter>
+                    <replacestring from=".dita" to=".html"/>
+                    <replacestring from=".xml" to=".html"/>
+                </tokenfilter>
+            </filterchain>
+        </loadresource>
+
         <!-- Replace certain parts of the topic with the semantic net data -->
-        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;head&gt;" replace="&lt;head&gt;${semantic-net.head}" flags="gis" byline="false"/>
-        <replaceregexp file="${output.dir}/${semantic-net.base}.html" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${semantic-net-file-html}" match="&lt;head&gt;" replace="&lt;head&gt;${semantic-net.head}" flags="gis" byline="false"/>
+        <replaceregexp file="${output.dir}/${semantic-net-file-html}" match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;" replace="${semantic-net.body}" flags="gis" byline="false"/>
+        
+        <!-- The vis.js script needs to be injected as the first lib to the head. We have no extension point for this, so we need to make this dirty. -->
+        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/webhelp-skin/header/vis.js.txt" property="vis.js.txt"/>
+        <replaceregexp file="${output.dir}/${semantic-net-file-html}" match="&lt;script" replace="${vis.js.txt}&lt;script" flags="is" byline="false"/>
+        
+        
+        
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
     </target>
     

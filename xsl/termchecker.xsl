@@ -233,7 +233,8 @@
     <xsl:function name="doctales:generateId">
         <xsl:param name="string1" as="xs:string"/>
         <xsl:param name="string2" as="xs:string"/>
-        <xsl:variable name="newID" select="replace(concat($string1, $string2), ' ','')"/>
+        <!-- The ID has to be a unique valid NMTOKEN -->
+        <xsl:variable name="newID" select="replace(concat($string1, $string2), '[^A-Za-z0-9,.-]','')"/>
         <xsl:sequence select="$newID"/>
     </xsl:function>
 
