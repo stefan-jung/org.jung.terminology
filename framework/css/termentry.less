@@ -247,8 +247,10 @@
     );
     -oxy-show-placeholder: no !important;
 }
-*[class~="topic/image"] {
+*[class~="topic/fig"] > *[class~="topic/image"] {
     .border();
+    .blockElement();
+    width: auto !important;
 }
 *[class~="topic/image"][href]:not([keyref]) {
     content: attr(href, url);
@@ -260,32 +262,34 @@
     .separator();
 }
 *[class~="topic/image"]:after(2) {
-    content: "href";
-    .col1();
-    .link();
+    .separator();
 }
 *[class~="topic/image"]:after(3) {
+    content: "href";
+    .col1();
+}
+*[class~="topic/image"]:after(4) {
     content:
-    oxy_textfield(
+    oxy_urlChooser(
         edit, '@href',
         columns, 60
     );
 }
-*[class~="topic/image"]:after(4) {
+*[class~="topic/image"]:after(5) {
     .separator();
 }
-*[class~="topic/image"]:after(5) {
+*[class~="topic/image"]:after(6) {
     content: "width";
     .col1();
 }
-*[class~="topic/image"]:after(6) {
+*[class~="topic/image"]:after(7) {
     content:
     oxy_textfield(
         edit, '@width',
         columns, 10
     );
 }
-*[class~="topic/image"]:after(7) {
+*[class~="topic/image"]:after(8) {
     .separator();
 }
 
@@ -387,8 +391,6 @@
 *[class~="termentry/sourceReference"] {
     -oxy-placeholder-content: "${i18n(doctales.sourceReference.placeholder)}";
     .blockElement();
-}
-*[class~="termentry/sourceReference"]:edit-mode {
     .border();
 }
 *[class~="termentry/sourceReference"]:after(1) {
@@ -401,50 +403,44 @@
     );
 }
 *[class~="termentry/sourceReference"]:after(2) {
-    .enableEditModeButton();
-}
-*[class~="termentry/sourceReference"]:edit-mode:after(2) {
-    .disableEditModeButton();
-}
-*[class~="termentry/sourceReference"]:edit-mode:after(3) {
     .separator();
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(4) {
+*[class~="termentry/sourceReference"]:after(3) {
     content: "${i18n(doctales.sourceReference.href)}";
     .col1();
     .link();
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(5) {
+*[class~="termentry/sourceReference"]:after(4) {
     content:
     oxy_textfield(
         edit, '@href',
         columns, 60
     );
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(6) {
+*[class~="termentry/sourceReference"]:after(5) {
     .separator();
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(7) {
+*[class~="termentry/sourceReference"]:after(6) {
     content: "${i18n(doctales.sourceReference.format)}";
     .col1();
     .link();
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(8) {
+*[class~="termentry/sourceReference"]:after(7) {
     content:
     oxy_combobox(
         edit, '@format',
         columns, 13
     );
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(9) {
+*[class~="termentry/sourceReference"]:after(8) {
     .separator();
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(10) {
+*[class~="termentry/sourceReference"]:after(9) {
     content: "${i18n(doctales.sourceReference.scope)}";
     .col1();
     .link();
 }
-*[class~="termentry/sourceReference"]:edit-mode:after(11) {
+*[class~="termentry/sourceReference"]:after(10) {
     content:
     oxy_combobox(
         edit, '@scope',
