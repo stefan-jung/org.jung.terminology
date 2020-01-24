@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="20.1" xml:space="preserve">
+<serialized version="21.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -347,7 +347,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>80</Integer>
+											<Integer>82</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -417,7 +417,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>81</Integer>
+											<Integer>83</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -487,7 +487,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>82</Integer>
+											<Integer>84</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -549,7 +549,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>83</Integer>
+											<Integer>85</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -619,7 +619,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>84</Integer>
+											<Integer>86</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -654,7 +654,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';))}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';))}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -680,7 +680,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';))}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';))}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -706,7 +706,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';))}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';))}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -732,7 +732,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';)}">
+																		<String>&lt;fullForm language="${ask('${i18n(doctales.language.select)}', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';))}" usage="${ask('${i18n(doctales.usage.select)}', combobox, ('preferred':'${i18n(doctales.usage.preferred)}';'admitted':'${i18n(doctales.usage.admitted)}';'notRecommended':'${i18n(doctales.usage.notRecommended)}';'obsolete':'${i18n(doctales.usage.obsolete)}';))}">
   &lt;termVariant>${caret}&lt;/termVariant>  
 &lt;/fullForm></String>
 																	</entry>
@@ -769,7 +769,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>85</Integer>
+											<Integer>87</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -919,7 +919,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>86</Integer>
+											<Integer>88</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1069,7 +1069,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>87</Integer>
+											<Integer>89</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1219,7 +1219,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>88</Integer>
+											<Integer>90</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1281,7 +1281,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>89</Integer>
+											<Integer>91</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1343,7 +1343,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>90</Integer>
+											<Integer>92</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1405,7 +1405,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>91</Integer>
+											<Integer>93</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1467,7 +1467,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>92</Integer>
+											<Integer>94</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1541,7 +1541,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>93</Integer>
+											<Integer>95</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1615,7 +1615,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>94</Integer>
+											<Integer>96</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1677,7 +1677,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>95</Integer>
+											<Integer>97</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1771,7 +1771,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>96</Integer>
+											<Integer>98</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1844,7 +1844,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>97</Integer>
+											<Integer>99</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1916,7 +1916,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>98</Integer>
+											<Integer>100</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2038,7 +2038,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>99</Integer>
+											<Integer>101</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2158,7 +2158,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>100</Integer>
+											<Integer>102</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2278,7 +2278,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>101</Integer>
+											<Integer>103</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2398,7 +2398,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>102</Integer>
+											<Integer>104</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2518,7 +2518,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>103</Integer>
+											<Integer>105</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2594,7 +2594,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>104</Integer>
+											<Integer>106</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2656,7 +2656,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>105</Integer>
+											<Integer>107</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2746,7 +2746,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>106</Integer>
+											<Integer>108</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2816,7 +2816,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>107</Integer>
+											<Integer>109</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2886,7 +2886,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>108</Integer>
+											<Integer>110</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2959,7 +2959,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>109</Integer>
+											<Integer>111</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3031,7 +3031,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>110</Integer>
+											<Integer>112</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3104,7 +3104,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>111</Integer>
+											<Integer>113</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3174,7 +3174,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>112</Integer>
+											<Integer>114</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3268,7 +3268,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>113</Integer>
+											<Integer>115</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3362,7 +3362,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>114</Integer>
+											<Integer>116</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3456,7 +3456,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>115</Integer>
+											<Integer>117</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3528,7 +3528,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>116</Integer>
+											<Integer>118</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3598,7 +3598,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>117</Integer>
+											<Integer>119</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3660,7 +3660,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>118</Integer>
+											<Integer>120</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3722,7 +3722,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>119</Integer>
+											<Integer>121</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3784,7 +3784,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>120</Integer>
+											<Integer>122</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3846,7 +3846,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>121</Integer>
+											<Integer>123</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3924,7 +3924,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>122</Integer>
+											<Integer>124</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3986,7 +3986,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>123</Integer>
+											<Integer>125</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4048,7 +4048,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>124</Integer>
+											<Integer>126</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4110,7 +4110,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>125</Integer>
+											<Integer>127</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4172,7 +4172,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>126</Integer>
+											<Integer>128</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4234,7 +4234,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>127</Integer>
+											<Integer>129</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4291,7 +4291,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>128</Integer>
+											<Integer>130</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4348,7 +4348,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>129</Integer>
+											<Integer>131</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4405,7 +4405,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>130</Integer>
+											<Integer>132</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4462,7 +4462,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>131</Integer>
+											<Integer>133</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4519,7 +4519,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>132</Integer>
+											<Integer>134</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4581,7 +4581,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>133</Integer>
+											<Integer>135</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4675,7 +4675,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>134</Integer>
+											<Integer>136</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4737,7 +4737,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>135</Integer>
+											<Integer>137</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4799,7 +4799,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>136</Integer>
+											<Integer>138</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4893,7 +4893,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>137</Integer>
+											<Integer>139</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4955,7 +4955,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>138</Integer>
+											<Integer>140</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5017,7 +5017,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>139</Integer>
+											<Integer>141</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5079,7 +5079,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>140</Integer>
+											<Integer>142</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5141,7 +5141,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>141</Integer>
+											<Integer>143</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5203,7 +5203,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>142</Integer>
+											<Integer>144</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5265,7 +5265,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>143</Integer>
+											<Integer>145</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5322,7 +5322,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>144</Integer>
+											<Integer>146</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5379,7 +5379,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>145</Integer>
+											<Integer>147</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5441,7 +5441,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>146</Integer>
+											<Integer>148</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5507,7 +5507,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>147</Integer>
+											<Integer>149</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5573,7 +5573,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>148</Integer>
+											<Integer>150</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5639,7 +5639,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>149</Integer>
+											<Integer>151</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5705,7 +5705,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>150</Integer>
+											<Integer>152</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5825,7 +5825,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>151</Integer>
+											<Integer>153</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5882,7 +5882,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>152</Integer>
+											<Integer>154</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5944,7 +5944,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>153</Integer>
+											<Integer>155</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6001,7 +6001,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>154</Integer>
+											<Integer>156</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6067,7 +6067,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>155</Integer>
+											<Integer>157</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6124,7 +6124,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>156</Integer>
+											<Integer>158</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6186,7 +6186,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>157</Integer>
+											<Integer>159</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6248,7 +6248,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>158</Integer>
+											<Integer>160</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6310,7 +6310,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>159</Integer>
+											<Integer>161</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6372,7 +6372,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>160</Integer>
+											<Integer>162</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6434,7 +6434,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>161</Integer>
+											<Integer>163</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6496,7 +6496,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>162</Integer>
+											<Integer>164</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6558,7 +6558,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>163</Integer>
+											<Integer>165</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6620,7 +6620,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>164</Integer>
+											<Integer>166</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6690,7 +6690,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>165</Integer>
+											<Integer>167</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6768,7 +6768,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>166</Integer>
+											<Integer>168</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6830,7 +6830,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>167</Integer>
+											<Integer>169</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6900,7 +6900,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>168</Integer>
+											<Integer>170</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6957,7 +6957,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>169</Integer>
+											<Integer>171</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7019,7 +7019,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>170</Integer>
+											<Integer>172</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7095,7 +7095,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>171</Integer>
+											<Integer>173</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7157,7 +7157,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>172</Integer>
+											<Integer>174</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7219,7 +7219,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>173</Integer>
+											<Integer>175</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7281,7 +7281,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>21</Integer>
+											<Integer>22</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -8065,23 +8065,6 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
-											<Integer>9</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
 											<Integer>8</Integer>
 										</field>
 										<field name="value">
@@ -8235,7 +8218,7 @@
 											<String>xmlCatalogs</String>
 										</field>
 										<field name="index">
-											<Integer>1</Integer>
+											<Integer>2</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -8252,7 +8235,7 @@
 											<String>xmlCatalogs</String>
 										</field>
 										<field name="index">
-											<Integer>1</Integer>
+											<Integer>2</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/catalog-dita.xml</String>
@@ -8929,10 +8912,10 @@
 									</cssFile>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/edit/alternate-hide-prolog.css</String>
+											<String>${framework}/css/edit/alternate-fold-prolog.css</String>
 										</field>
 										<field name="title">
-											<String>+ Hide prolog</String>
+											<String>+ Fold prolog</String>
 										</field>
 										<field name="alternate">
 											<Boolean>true</Boolean>
@@ -9223,7 +9206,7 @@
 											<String>/images/ListItem24.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>/images/ListItem16.gif</String>
+											<String>/images/ListItem16.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -9577,7 +9560,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*[contains(@class," topic/li ") or contains(@class," topic/ul ") or contains(@class," topic/ul ")][1][contains(@class," topic/li ")]</String>
+														<String>ancestor-or-self::*[contains(@class," topic/li ") or contains(@class," topic/ul ") or contains(@class," topic/sli ") or contains(@class," topic/sl ")][1][contains(@class," topic/li ")]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -9601,22 +9584,6 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>self::*[contains(@class," topic/ul ")] | self::*[contains(@class," topic/ol ")]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;li/></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
 														<String>ancestor-or-self::*[contains(@class," topic/sli ")]</String>
 													</field>
 													<field name="argValues">
@@ -9633,6 +9600,10 @@
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
@@ -9648,6 +9619,22 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;sli/></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>self::*[contains(@class," topic/ul ")] | self::*[contains(@class," topic/ol ")]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;li/></String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -9685,6 +9672,38 @@
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:allows-child-element("*", "class", " topic/ul ")</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>listType</String>
+																<String>unorderedlist</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.DITAInsertListOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:allows-child-element("*", "class", " topic/sl ")</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>listType</String>
+																<String>simplelist</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.DITAInsertListOperation</String>
+													</field>
+												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
 														<String></String>
@@ -9731,6 +9750,33 @@
 										</field>
 										<field name="actionModes">
 											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:allows-child-element("*", "class", " topic/ol ")</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.DITAInsertListOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:allows-child-element("*", "class", " topic/sl ")</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>listType</String>
+																<String>simplelist</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.DITAInsertListOperation</String>
+													</field>
+												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
 														<String></String>
@@ -11613,6 +11659,47 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 									</action>
 									<action>
 										<field name="id">
+											<String>find.similar.topics</String>
+										</field>
+										<field name="name">
+											<String>${i18n(find.similar.topics)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(find.similar.topics_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>//*[contains(@class," topic/shortdesc ") or contains(@class," topic/keyword ") or contains(@class," topic/indexterm ") or contains(@class," topic/title ")] and oxy:platform()="standalone"</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.FindSimilarTopicsOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
 											<String>insert.key.reference</String>
 										</field>
 										<field name="name">
@@ -12151,15 +12238,10 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 														<String>true()</String>
 													</field>
 													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>URL pattern</String>
-																<String>https://www.oxygenxml.com/dita/1.3/specs/langRef/base/{Element_name}.html</String>
-															</entry>
-														</serializableOrderedMap>
+														<serializableOrderedMap/>
 													</field>
 													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.ShowElementDocumentationOperation</String>
+														<String>ro.sync.ecss.extensions.dita.ShowDITAElementDocumentationOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -12179,10 +12261,10 @@ oxy:current-selected-element()[self::*[contains(@class," topic/tbody ") or conta
 											<String>${i18n(play.media.desc)}</String>
 										</field>
 										<field name="largeIconPath">
-											<String>${framework}/img/play_media.png</String>
+											<String>${framework}/img/PlayMedia21.png</String>
 										</field>
 										<field name="smallIconPath">
-											<String>${framework}/img/play_media.png</String>
+											<String>${framework}/img/PlayMedia21.png</String>
 										</field>
 										<field name="accessKey">
 											<String></String>
@@ -14072,6 +14154,67 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>apply.image.map</String>
+										</field>
+										<field name="name">
+											<String>${i18n(apply.image.map)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(apply.image.map.description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[contains(@class,'topic/image') and not(ancestor::imagemap) ]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;imagemap>
+  ${selection}
+  &lt;area>
+    &lt;shape/>
+    &lt;coords/>
+    &lt;xref/>
+  &lt;/area>
+&lt;/imagemap></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Replace</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertOrReplaceFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -14467,6 +14610,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 												</field>
 											</menuItem>
 											<menuSeparator/>
+											<menuItem>
+												<field name="actionID">
+													<String>find.similar.topics</String>
+												</field>
+											</menuItem>
 											<menuItem>
 												<field name="actionID">
 													<String>styleguide</String>
@@ -15299,7 +15447,6 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 							<String>${frameworkDir}/templates/topic</String>
 							<String>${frameworkDir}/templates/topic-xsd</String>
 							<String>${frameworkDir}/templates/topic-rng</String>
-							<String>${frameworkDir}/templates/plugin</String>
 							<String>${configured.ditaot.dir}/org.dita-ng.doctypes_oxygen_templates/topic-rng</String>
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/topic (Dita 4 Publishers)</String>
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/topic-rng</String>
@@ -15310,6 +15457,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 					<field name="xmlCatalogs">
 						<String-array>
 							<String>${framework}/catalog.xml</String>
+							<String>${configured.ditaot.dir.url}/plugins/org.dita.base/catalog-dita.xml</String>
 							<String>${configured.ditaot.dir.url}/catalog-dita.xml</String>
 							<String>${framework}/styleguide/catalog.xml</String>
 							<String>${framework}/plugin/catalog.xml</String>
@@ -15923,6 +16071,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="publishingTemplateDataPO">
 									<null/>
 								</field>
+								<field name="oxygenFeedbackPO">
+									<null/>
+								</field>
 								<field name="additionalAntArgs">
 									<String></String>
 								</field>
@@ -16048,9 +16199,6 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="openInBrowser">
 									<Boolean>true</Boolean>
 								</field>
-								<field name="outputFile">
-									<null/>
-								</field>
 								<field name="outputResource">
 									<null/>
 								</field>
@@ -16142,6 +16290,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									<null/>
 								</field>
 								<field name="publishingTemplateDataPO">
+									<null/>
+								</field>
+								<field name="oxygenFeedbackPO">
 									<null/>
 								</field>
 								<field name="additionalAntArgs">
@@ -16243,9 +16394,6 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="openInBrowser">
 									<Boolean>true</Boolean>
 								</field>
-								<field name="outputFile">
-									<null/>
-								</field>
 								<field name="outputResource">
 									<null/>
 								</field>
@@ -16339,6 +16487,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="publishingTemplateDataPO">
 									<null/>
 								</field>
+								<field name="oxygenFeedbackPO">
+									<null/>
+								</field>
 								<field name="additionalAntArgs">
 									<String></String>
 								</field>
@@ -16413,9 +16564,6 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								</field>
 								<field name="openInBrowser">
 									<Boolean>true</Boolean>
-								</field>
-								<field name="outputFile">
-									<null/>
 								</field>
 								<field name="outputResource">
 									<null/>
