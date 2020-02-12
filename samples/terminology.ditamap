@@ -39,7 +39,7 @@
     <termref href="vehicle.dita" keys="vehicle" type="termentry"/>
     <termref href="wheel.dita" keys="wheel"/>
   </termgroup>
-  <topicref href="semantic-net.dita"/>
-  <topicref href="termstats.dita"/>
   <topicref href="terminology-ssm.ditamap" format="ditamap"/>
+  <semanticnetref href="semantic-net.dita"/>
+  <termstatsref href="termstats.dita"/>
 </termmap>
