@@ -27,8 +27,7 @@
                  init-properties,
                  dita2webhelp,
                  -generate-termstats,
-                 termbrowser-termstats,
-                 semanticnet">
+                 -generate-semanticnet">
     </target>
     
     <target name="dita2termbrowser-responsive"
@@ -36,15 +35,13 @@
                  init-properties,
                  dita2webhelp-responsive,
                  -generate-termstats,
-                 termbrowser-termstats,
-                 semanticnet">
+                 -generate-semanticnet">
     </target>
     
     <target name="dita2termbrowser-html5" 
         depends="dita2html5,
-                 termbrowser-termstats,
                  -generate-termstats,
-                 semanticnet">
+                 -generate-semanticnet">
     </target>
     
     <target name="-is-xmltask-available">
@@ -76,12 +73,37 @@
         <property if:set="termstatsref" name="generate-termstats" value="true"/>
         <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
         <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
+        <antcall if:set="generate-termstats" target="termbrowser-termstats"/>
+    </target>
+   
+    <target name="-generate-semanticnet">
+        <description>
+            Helper target to determine if a semantic net should be generated.
+            This target is looking for a &lt;semanticnetref&gt; element on the terminology map.
+        </description>
+        
+        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
+        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
+        <!-- <echo level="info">termmap=${termmap}</echo> -->        
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        <loadfile property="semanticnetref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
+            <filterchain>       
+                <linecontainsregexp>          
+                    <regexp pattern="termmap/semanticnetref "/>        
+                </linecontainsregexp>      
+            </filterchain> 
+        </loadfile>
+        <property if:set="semanticnetref" name="generate-semanticnet" value="true"/>
+        <echo if:set="generate-semanticnet" level="info">Generate semantic net: true</echo>
+        <echo unless:set="generate-semanticnet" level="info">Generate semantic net: false</echo>
+        <antcall if:set="generate-semanticnet" target="semanticnet"/>
     </target>
     
     <target name="termbrowser-termstats"
         description="Generate terminology statistics."
         depends="-is-xmltask-available"
-        if:set="-generate-termstats">
+        if:set="generate-termstats">
         
         <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
         <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
@@ -270,7 +292,7 @@
         </replaceregexp>
     </target>
     
-    <target name="semanticnet" depends="-is-xmltask-available">
+    <target if:set="generate-semanticnet" name="semanticnet" depends="-is-xmltask-available">
         <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <xslt basedir="${dita.temp.dir}"
