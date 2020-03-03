@@ -8207,6 +8207,23 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
+											<Integer>3</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>templatesLocations</String>
+										</field>
+										<field name="index">
 											<Integer>2</Integer>
 										</field>
 										<field name="value">
