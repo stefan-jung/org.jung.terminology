@@ -34,6 +34,14 @@
         <val lang="en_US">Select language</val>
         <val lang="de_DE">Sprache wählen</val>
     </key>
+    <key value="doctales.url.reference">
+        <val lang="en_US">Add link</val>
+        <val lang="de_DE">Link einfügen</val>
+    </key>
+    <key value="doctales.url.reference_description">
+        <val lang="en_US">Add a link, which is pointing to the source.</val>
+        <val lang="de_DE">Fügen Sie einen Link ein, der auf die Quelle zeigt.</val>
+    </key>
     <key value="doctales.usage.select">
         <val lang="en_US">Select usage</val>
         <val lang="de_DE">Verwendung wählen</val>
