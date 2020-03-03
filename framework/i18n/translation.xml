@@ -176,7 +176,11 @@
         <val lang="en_US">Delete source of definition</val>
         <val lang="de_DE">Quelle der Definition löschen</val>
     </key>
-
+    <key value="doctales.definitionSource.placeholder">
+        <val lang="en_US">Define the source of the definition.</val>
+        <val lang="de_DE">Geben Sie die Quelle der Definition an.</val>
+    </key>
+    
     <!-- sourceName -->
     <key value="doctales.sourceName">
         <val lang="en_US">Printed Source</val>
