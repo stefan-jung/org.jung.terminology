@@ -4,10 +4,8 @@
 <termentry id="ui_${id}">
   <title>Term</title>
   <definition>
-    <definitionText></definitionText>
-    <definitionSource>
-      <sourceReference href="https://en.wikipedia.org" format="html" scope="external"/>
-    </definitionSource>
+    <definitionText/>
+    <definitionSource/>
   </definition>
   <termBody>
     <partOfSpeech value="noun"/>
