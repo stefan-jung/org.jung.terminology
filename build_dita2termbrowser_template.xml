@@ -346,9 +346,9 @@
         </replaceregexp>
         
         <replaceregexp file="${output.dir}/${semantic-net-file-html}"
-            match="&lt;div class=&quot;div net&quot;(.+?)&lt;\/div&gt;"
+            match="&lt;div class=&quot;(.+?)semanticnet-d\/net(.+?)&quot;&gt;(.*)&lt;\/div&gt;"
             replace="${semantic-net.body}"
-            flags="gis"
+            flags="i"
             byline="false">
         </replaceregexp>
         
