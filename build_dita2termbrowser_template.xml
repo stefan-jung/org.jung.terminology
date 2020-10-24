@@ -254,15 +254,7 @@
             file="${output.dir}/${termstats-file-html}"
             match="&lt;head&gt;"
             replace="&lt;head&gt;${terminlogy_stats.head}"
-            flags="gis"
-            byline="false">
-        </replaceregexp>
-        
-        <replaceregexp
-            file="${output.dir}/${termstats-file-html}" 
-            match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" 
-            replace="${terminology_stats.body}" 
-            flags="gis" 
+            flags="i"
             byline="false">
         </replaceregexp>
         
@@ -272,9 +264,9 @@
         
         <replaceregexp
             file="${output.dir}/${termstats-file-html}" 
-            match="&lt;div class=&quot;div stats&quot;(.+?)&lt;\/div&gt;" 
+            match="&lt;div class=&quot;(.+?)termstats-d\/stats(.+?)&quot;&gt;(.*)&lt;\/div&gt;" 
             replace="${terminology_stats.body}" 
-            flags="gis" 
+            flags="i" 
             byline="false">
         </replaceregexp>
     </target>
