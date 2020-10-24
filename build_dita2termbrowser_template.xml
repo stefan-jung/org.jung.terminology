@@ -22,24 +22,11 @@
         in the termbrowser-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
-    <target name="dita2termbrowser-classic"
-        depends="-is-oxygen-webhelp-available,
-                 init-properties,
-                 dita2webhelp,
-                 -generate-termstats,
-                 -generate-semanticnet">
-    </target>
     
     <target name="dita2termbrowser-responsive"
         depends="-is-oxygen-webhelp-available,
                  init-properties,
                  dita2webhelp-responsive,
-                 -generate-termstats,
-                 -generate-semanticnet">
-    </target>
-    
-    <target name="dita2termbrowser-html5" 
-        depends="dita2html5,
                  -generate-termstats,
                  -generate-semanticnet">
     </target>
