@@ -46,6 +46,7 @@
                     All Rights Reserved.
                                                    
           UPDATES:
+                    2020-02-12 SE: semanticnetref and termstatsref added
                     2017-01-11 SE: Initial Relax NG release
 
 ========================================================================================================================
@@ -72,6 +73,12 @@
     </define>
     <define name="termref">
       <ref name="termref.element"/>
+    </define>
+    <define name="semanticnetref">
+      <ref name="semanticnetref.element"/>
+    </define>
+    <define name="termstatsref">
+      <ref name="termstatsref.element"/>
     </define>
     <define name="termgroup">
       <ref name="termgroup.element"/>
@@ -101,6 +108,12 @@
             <ref name="termgroup"/>
           </choice>
         </zeroOrMore>
+        <optional>
+          <ref name="semanticnetref"/>
+        </optional>
+        <optional>
+          <ref name="termstatsref"/>
+        </optional>
       </define>
       <define name="termmap.attributes">
         <optional>
@@ -148,6 +161,34 @@
       </define>
     </div>
     <div>
+      <a:documentation>LONG NAME: Semantic Net Reference</a:documentation>
+      <define name="semanticnetref.element">
+        <element name="semanticnetref" dita:longName="Semantic Net Reference">
+          <a:documentation>The &lt;semanticnetref> element is a reference to a semantic net topic.
+            Category: Term Map elements</a:documentation>
+          <ref name="semanticnetref.attlist"/>
+          <ref name="topicref.content"/>
+        </element>
+      </define>
+      <define name="semanticnetref.attlist" combine="interleave">
+        <ref name="topicref.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation>LONG NAME: Terminology Statistics Reference</a:documentation>
+      <define name="termstatsref.element">
+        <element name="termstatsref" dita:longName="Terminology Statistics Reference">
+          <a:documentation>The &lt;termstatsref> element is a reference to a terminology statistics topic.
+            Category: Term Map elements</a:documentation>
+          <ref name="termstatsref.attlist"/>
+          <ref name="topicref.content"/>
+        </element>
+      </define>
+      <define name="termstatsref.attlist" combine="interleave">
+        <ref name="topicref.attributes"/>
+      </define>
+    </div>
+    <div>
       <a:documentation>LONG NAME: Term Group</a:documentation>
       <define name="termgroup.content">
         <oneOrMore>
@@ -188,6 +229,18 @@
       <ref name="global-atts"/>
       <optional>
         <attribute name="class" a:defaultValue="- map/topicref termmap/termref "/>
+      </optional>
+    </define>
+    <define name="semanticnetref.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- map/topicref termmap/semanticnetref "/>
+      </optional>
+    </define>
+    <define name="termstatsref.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- map/topicref termmap/termstatsref "/>
       </optional>
     </define>
     <define name="termgroup.attlist" combine="interleave">

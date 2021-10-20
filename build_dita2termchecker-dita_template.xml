@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:dita="http://dita-ot.sourceforge.net" name="dita2termchecker-dita">
+<project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless" name="dita2termchecker-dita">
     
     <target name="dita2termchecker-dita"
         depends="termchecker-dita.init,

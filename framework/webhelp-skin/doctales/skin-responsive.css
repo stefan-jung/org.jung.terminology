@@ -16,6 +16,9 @@ html * {
   text-decoration: none;
   color: #FF4D4D;
 }
+.wh_header {
+  background-color: #FFFFFF;
+}
 .frmBody, .shortdesc, .p, .q, .example, .ul, .ol, .dl, .dt, .dd, .keyword.apiname, .p .image, :not(p) > .image, .fig.fignone, .figcap, .simpletable td, .footer, .footer a, #header #productTitle H1, #splitterContainer .topic:not(.menuItemSelected), #splitterContainer .hasSubMenuClosed, #splitterContainer .hasSubMenuOpened {
   background-color: transparent;
 }
@@ -197,7 +200,6 @@ pre.screen, #header .tab.selectedTab, #header .tab:not(.selectedTab) {
 }
 #header .tab.selectedTab, #header .tab:not(.selectedTab), #header .navheader_parent_path, #header .link {
   font-size: 13.3333px;
-  /*font-family: arial, helvetica, "Lucida Grande", Verdana, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;*/
 }
 #splitterContainer .menuItemSelected, #splitterContainer .topic:not(.menuItemSelected), .hasSubMenuOpened, .hasSubMenuClosed {
   font-size: 14px;
@@ -221,7 +223,6 @@ pre.screen, #header .tab.selectedTab, #header .tab:not(.selectedTab) {
   font-weight: 400;
 }
 .title.topictitle1, .title.sectiontitle, .title.topictitle2, .shortdesc, .p, #header #productTitle H1 {
-  /*font-family: "Trebuchet MS", "Lucida Grande", Verdana, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif*/;
 }
 .ul, .ol, .dl, #splitterContainer .menuItemSelected, #splitterContainer .topic:not(.menuItemSelected), .hasSubMenuOpened, .hasSubMenuClosed {
   font-family: Calibri, "Lucida Grande", Verdana, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
@@ -284,6 +285,9 @@ pre.screen, #header #lHeader, #header .tab.selectedTab, #header .tab:not(.select
 }
 .navnext {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACpQTFRFWlpaqqqq////qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqWlpakpKSqqqqRySlLQAAAAt0Uk5TAAAAAQMECAoREx23C7FDAAAAUklEQVQI12MQhAIGISUlpQ0MDIpgxm4YY88WKGPv6QRFBundu3fvvbODkUH6LgicXghl3NkIE5kIVbOdkUGAgYFh7+kACGPPZnSTwXbBbVeCAgBpGypCou3HmwAAAABJRU5ErkJggg==');
+}
+.navbar {
+  background-color: #FFFFFF;
 }
 #oldFrames {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABJQTFRFWlpa////qqqqtbW1gICAWlpaBWuBKAAAAAV0Uk5TAAAzmbJhqr6LAAAAO0lEQVQI12NwDQ0IBYIQhiClgCAlJSVVICMwCCgCZAQFBhkbG0NE4FIQRhBITRA5UkFgEahdcNsFoQAA5GEeAEgsEdMAAAAASUVORK5CYII=');
@@ -358,7 +362,6 @@ span.topic {
   margin-top:0px;
   margin-bottom:0px;
   padding-top:3px;
-  /*line-height: 1.5em;*/
   max-width: 15em;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -392,11 +395,9 @@ table.tool td{
 }
 
 .wh_search_textfield {
-  height: 2.0em;
 }
 
 .wh_search_button {
-  height: 2.0em;
   background-color: #5fbcd3;
 }
 
@@ -488,10 +489,6 @@ a:hover, a:focus {
   width: 50% !important;
 }
 .ui-autocomplete-input {
-  width: 50%;
-  display: inline-block;
-  margin-left: 10pt;
-  margin-right: 10pt;
 }
 .ui-menu.ui-autocomplete .ui-menu-item {
   list-style: none;

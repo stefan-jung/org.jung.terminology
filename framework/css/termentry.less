@@ -129,7 +129,7 @@
         actions,
         oxy_action_list(
             oxy_action(id, 'doctales.sourceName.add'),
-            oxy_action(id, 'doctales.sourceReference.add'),
+            oxy_action(id, 'doctales.url.reference'),
             oxy_action(id, 'doctales.definitionSource.delete')
         )
     );
@@ -147,6 +147,7 @@
     );
 }
 *[class~="termentry/definitionSource"] {
+    -oxy-placeholder-content: "${i18n(doctales.definitionSource.placeholder)}";
     .blockElement();
     .border();
 }
@@ -331,7 +332,7 @@
         actions,
         oxy_action_list(
             oxy_action(id, 'doctales.sourceName.add'),
-            oxy_action(id, 'doctales.sourceReference.add'),
+            oxy_action(id, 'doctales.url.reference'),
             oxy_action(id, 'doctales.sourceName.delete'),
             oxy_action(id, 'doctales.sourceReference.delete'),
             oxy_action(id, 'doctales.termSource.delete')
@@ -391,7 +392,6 @@
 *[class~="termentry/sourceReference"] {
     -oxy-placeholder-content: "${i18n(doctales.sourceReference.placeholder)}";
     .blockElement();
-    .border();
 }
 *[class~="termentry/sourceReference"]:after(1) {
     display: inline-block;
@@ -402,22 +402,21 @@
         transparent, true
     );
 }
-*[class~="termentry/sourceReference"]:after(2) {
+/**[class~="termentry/sourceReference"]:after(2) {
     .separator();
 }
 *[class~="termentry/sourceReference"]:after(3) {
     content: "${i18n(doctales.sourceReference.href)}";
     .col1();
     .link();
-}
-*[class~="termentry/sourceReference"]:after(4) {
+}*/
+/**[class~="termentry/sourceReference"]:after(4) {
     content:
-    oxy_textfield(
-        edit, '@href',
-        columns, 60
+    oxy_button(
+        actionID, 'doctales.url.reference'
     );
-}
-*[class~="termentry/sourceReference"]:after(5) {
+}*/
+/**[class~="termentry/sourceReference"]:after(5) {
     .separator();
 }
 *[class~="termentry/sourceReference"]:after(6) {
@@ -432,7 +431,8 @@
         columns, 13
     );
 }
-*[class~="termentry/sourceReference"]:after(8) {
+*/
+/**[class~="termentry/sourceReference"]:after(8) {
     .separator();
 }
 *[class~="termentry/sourceReference"]:after(9) {
@@ -446,7 +446,7 @@
         edit, '@scope',
         columns, 13
     ) !important;
-}
+}*/
 
 /*********************************************
  * ALTERNATIVE DEFINITION

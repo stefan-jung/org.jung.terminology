@@ -17,8 +17,10 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
 <!--                              ELEMENT NAME ENTITIES                               -->
 <!-- ================================================================================ -->
 
+<!ENTITY % semanticnetref        "semanticnetref"                                       >
 <!ENTITY % termmap               "termmap"                                              >
 <!ENTITY % termref               "termref"                                              >
+<!ENTITY % termstatsref          "termstatsref"                                         >
 <!ENTITY % termgroup             "termgroup"                                            >
 
 
@@ -46,8 +48,10 @@ Category: Termmap elements-->
                                        %navref; |
                                        %reltable; |
                                        %topicref; |
-                                       %termgroup;+)*)
-                                    ">
+                                       %termgroup;+)*,
+                                       (%semanticnetref;)?,
+                                       (%termstatsref;)?
+                                      )">
 <!ELEMENT termmap                    %termmap.content;>
 <!ATTLIST termmap                    %map.attributes;
                                      %arch-atts;
@@ -63,6 +67,19 @@ Category: Termmap elements-->
 <!ELEMENT termref                    %topicref.content;>
 <!ATTLIST termref                    %topicref.attributes;>
 
+<!--                                 LONG NAME: Semantic Net Reference                -->
+
+<!--doc:The <semanticnetref> element is a reference to a semantic net topic.
+Category: Termmap elements-->
+<!ELEMENT semanticnetref             %topicref.content;>
+<!ATTLIST semanticnetref             %topicref.attributes;>
+
+<!--                                 LONG NAME: Terminology Statistics Reference      -->
+
+<!--doc:The <termstatsref> element is a reference to a term statistics topic.
+Category: Termmap elements-->
+<!ELEMENT termstatsref               %topicref.content;>
+<!ATTLIST termstatsref               %topicref.attributes;>
 
 <!--                                 LONG NAME: Term Group                            -->
 
@@ -83,8 +100,10 @@ Category: Termmap elements-->
 <!-- ================================================================================ -->
 <!--                      SPECIALIZATION ATTRIBUTE DECLARATIONS                       -->
 <!-- ================================================================================ -->
-<!ATTLIST termmap   %global-atts; class CDATA "- map/map termmap/termmap ">
-<!ATTLIST termref   %global-atts; class CDATA "- map/topicref termmap/termref ">
-<!ATTLIST termgroup %global-atts; class CDATA "- map/topicref mapgroup-d/topicgroup termmap/termgroup ">
+<!ATTLIST semanticnetref   %global-atts; class CDATA "- map/topicref termmap/semanticnetref ">
+<!ATTLIST termmap          %global-atts; class CDATA "- map/map termmap/termmap ">
+<!ATTLIST termref          %global-atts; class CDATA "- map/topicref termmap/termref ">
+<!ATTLIST termstatsref     %global-atts; class CDATA "- map/topicref termmap/termstatsref ">
+<!ATTLIST termgroup        %global-atts; class CDATA "- map/topicref mapgroup-d/topicgroup termmap/termgroup ">
 
 <!-- ================================= End of file ================================== -->

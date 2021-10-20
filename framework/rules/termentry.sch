@@ -71,6 +71,64 @@
         </sch:rule>
     </sch:pattern>-->
     
+    <sch:pattern id="xref-missing-format-html">
+        <sch:rule context="*[contains(@class, ' topic/xref ')][contains(@href, 'http')]" role="info">
+            <sch:assert test="@format='html'" diagnostics="xref-missing-format-html-en xref-missing-format-html-de" sqf:fix="set-format">
+                Attribute @format should be set to 'html'
+            </sch:assert>
+            <sqf:fix id="set-format">
+                <sqf:description>
+                    <sqf:title ref="xref-missing-format-html-description-title_en xref-missing-format-html-description-title_de"
+                        xml:lang="en">Set @format=&quot;html&quot;</sqf:title>
+                </sqf:description>
+                <sqf:add node-type="attribute" target="format" select="'html'"/>
+            </sqf:fix>
+        </sch:rule>
+    </sch:pattern>
+    <sch:diagnostics>
+        <sch:diagnostic id="xref-missing-format-html-description-title-en">
+            Set @format=&quot;html&quot;
+        </sch:diagnostic>
+        <sch:diagnostic id="xref-missing-format-html-description-title-de">
+            Setze @format=&quot;html&quot;
+        </sch:diagnostic>
+        <sch:diagnostic id="xref-missing-format-html-en" xml:lang="en">
+            Attribute @format should be set to 'html'
+        </sch:diagnostic>
+        <sch:diagnostic id="xref-missing-format-html-de" xml:lang="de">
+            Attribut @format sollte den Wert 'html' haben
+        </sch:diagnostic>
+    </sch:diagnostics>
+    
+    <sch:pattern id="xref-missing-scope-external">
+        <sch:rule context="*[contains(@class, ' topic/xref ')][contains(@href, 'http')]" role="info">
+            <sch:assert test="@scope='external'" diagnostics="xref-missing-scope-external-en xref-missing-scope-external-de" sqf:fix="set-format">
+                Attribute @scope should be set to 'external'
+            </sch:assert>
+            <sqf:fix id="set-format">
+                <sqf:description>
+                    <sqf:title ref="xref-missing-scope-external-description-title_en xref-missing-scope-external-description-title_de"
+                        xml:lang="en">Set @scope=&quot;external&quot;</sqf:title>
+                </sqf:description>
+                <sqf:add node-type="attribute" target="scope" select="'external'"/>
+            </sqf:fix>
+        </sch:rule>
+    </sch:pattern>
+    <sch:diagnostics>
+        <sch:diagnostic id="xref-missing-scope-external-description-title-en">
+            Set @scope=&quot;external&quot;
+        </sch:diagnostic>
+        <sch:diagnostic id="xref-missing-scope-external-description-title-de">
+            Setze @scope=&quot;external&quot;
+        </sch:diagnostic>
+        <sch:diagnostic id="xref-missing-scope-external-en" xml:lang="en">
+            Attribute @scope should be set to 'external'
+        </sch:diagnostic>
+        <sch:diagnostic id="xref-missing-scope-external-de" xml:lang="de">
+            Attribut @scope sollte den Wert 'external' haben
+        </sch:diagnostic>
+    </sch:diagnostics>
+    
     <xsl:key name="hypernyms" match="//*[contains(@class, ' termentry/hypernym ')][@keyref]" use="@keyref"/>
     <xsl:key name="hyponyms" match="//*[contains(@class, ' termentry/hyponym ')][@keyref]" use="@keyref"/>
     <xsl:key name="relatedterms" match="//*[contains(@class, ' termentry/relatedTerm ')][@keyref]" use="@keyref"/>
@@ -161,4 +219,5 @@
             Doppelte Teil-Von-Termbeziehung
         </sch:diagnostic>
     </sch:diagnostics>
+    
 </sch:schema>

@@ -43,7 +43,7 @@ dita --install https://github.com/doctales/org.doctales.terminology/archive/mast
 
 ## Using the Plugin
 
-Please refer to the [documentation](https://doctales.atlassian.net/wiki/display/TERM/org.doctales.terminology).
+Please refer to the [documentation](https://doctales.atlassian.net/wiki/x/AoAy).
 
 ## Licenses
 

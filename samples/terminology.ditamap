@@ -2,44 +2,45 @@
 <!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
 <termmap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
   <termgroup>
-    <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem" type="termentry"/>
-    <termref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem" type="termentry"/>
-    <termref href="axle.dita" keys="axle" type="termentry"/>
+    <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
+    <termref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem"/>
+    <termref href="axle.dita" keys="axle"/>
     <termref href="beetle.dita" keys="beetle" termdomain="vw"/>
-    <termref href="brakeLight.dita" keys="brakeLight" type="termentry"/>
-    <termref href="bus.dita" keys="bus" termdomain="persons public" type="termentry"/>
-    <termref href="car.dita" keys="car" termdomain="persons private" type="termentry"/>
-    <termref href="chassis.dita" keys="chassis" type="termentry"/>
-    <termref href="classBMotorHome.dita" keys="classBMotorHome" termdomain="private vacation" type="termentry"/>
-    <termref href="classBPlusMotorHome.dita" keys="classBPlusMotorHome" termdomain="private vacation" type="termentry"/>
-    <termref href="classCMotorHome.dita" keys="classCMotorHome" termdomain="private vacation" type="termentry"/>
-    <termref href="coachwork.dita" keys="coachwork" type="termentry"/>
-    <termref href="dieselEngine.dita" keys="dieselEngine" type="termentry"/>
-    <termref href="electronicStabilityControl.dita" keys="electronicStabilityControl" type="termentry"/>
-    <termref href="engine.dita" keys="engine" type="termentry"/>
-    <termref href="exhaustSystem.dita" keys="exhaustSystem" type="termentry"/>
-    <termref href="gasengine.dita" keys="gasengine" type="termentry"/>
-    <termref href="headlamp.dita" keys="headlamp" type="termentry"/>
-    <termref href="internalCombustionEngine.dita" keys="internalCombustionEngine" type="termentry"/>
-    <termref href="kaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H" type="termentry"/>
-    <termref href="ladderFrame.dita" keys="ladderFrame" type="termentry"/>
-    <termref href="lighting.dita" keys="lighting" type="termentry"/>
-    <termref href="motorCycle.dita" termdomain="private sport" keys="motorCycle" type="termentry"/>
-    <termref href="motorHome.dita" type="termentry" keys="motorHome"/>
-    <termref href="motorVehicle.dita" keys="motorVehicle" type="termentry"/>
-    <termref href="petrolEngine.dita" keys="petrolEngine" type="termentry"/>
-    <termref href="powertrain.dita" type="termentry" keys="powertrain"/>
-    <termref href="rearFogLamp.dita" keys="rearFogLamp" type="termentry"/>
-    <termref href="rearPositionLamp.dita" keys="rearPositionLamp" type="termentry"/>
-    <termref href="reversingLamp.dita" keys="reversingLamp" type="termentry"/>
-    <termref href="transmission.dita" keys="transmission" type="termentry"/>
-    <termref href="truck.dita" keys="truck" termdomain="cargo" type="termentry"/>
-    <termref href="turnSignal.dita" keys="turnSignal" type="termentry"/>
-    <termref href="unitizedBody.dita" keys="unitizedBody" type="termentry"/>
-    <termref href="vehicle.dita" keys="vehicle" type="termentry"/>
+    <termref href="brakeLight.dita" keys="brakeLight"/>
+    <termref href="bus.dita" keys="bus" termdomain="persons public"/>
+    <termref href="car.dita" keys="car" termdomain="persons private"/>
+    <termref href="chassis.dita" keys="chassis"/>
+    <termref href="classBMotorHome.dita" keys="classBMotorHome" termdomain="private vacation"/>
+    <termref href="classBPlusMotorHome.dita" keys="classBPlusMotorHome" termdomain="private vacation"/>
+    <termref href="classCMotorHome.dita" keys="classCMotorHome" termdomain="private vacation"/>
+    <termref href="coachwork.dita" keys="coachwork"/>
+    <termref href="dieselEngine.dita" keys="dieselEngine"/>
+    <termref href="electronicStabilityControl.dita" keys="electronicStabilityControl"/>
+    <termref href="engine.dita" keys="engine"/>
+    <termref href="exhaustSystem.dita" keys="exhaustSystem"/>
+    <termref href="gasengine.dita" keys="gasengine"/>
+    <termref href="headlamp.dita" keys="headlamp"/>
+    <termref href="internalCombustionEngine.dita" keys="internalCombustionEngine"/>
+    <termref href="kaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H"/>
+    <termref href="ladderFrame.dita" keys="ladderFrame"/>
+    <termref href="lighting.dita" keys="lighting"/>
+    <termref href="motorCycle.dita" termdomain="private sport" keys="motorCycle"/>
+    <termref href="motorHome.dita" keys="motorHome"/>
+    <termref href="motorVehicle.dita" keys="motorVehicle"/>
+    <termref href="petrolEngine.dita" keys="petrolEngine"/>
+    <termref href="powertrain.dita" keys="powertrain"/>
+    <termref href="rearFogLamp.dita" keys="rearFogLamp"/>
+    <termref href="rearPositionLamp.dita" keys="rearPositionLamp"/>
+    <termref href="reversingLamp.dita" keys="reversingLamp"/>
+    <termref href="steeringWheel.dita" keys="steeringWheel"/>
+    <termref href="transmission.dita" keys="transmission"/>
+    <termref href="truck.dita" keys="truck" termdomain="cargo"/>
+    <termref href="turnSignal.dita" keys="turnSignal"/>
+    <termref href="unitizedBody.dita" keys="unitizedBody"/>
+    <termref href="vehicle.dita" keys="vehicle"/>
     <termref href="wheel.dita" keys="wheel"/>
   </termgroup>
-  <topicref href="semantic-net.dita"/>
-  <topicref href="termstats.dita"/>
   <topicref href="terminology-ssm.ditamap" format="ditamap"/>
+  <semanticnetref href="semantic-net.dita"/>
+  <termstatsref href="termstats.dita"/>
 </termmap>
