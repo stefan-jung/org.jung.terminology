@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless">
-    
-    <target name="-is-oxygen-webhelp-available">
-        <fail message="The plugin com.oxygen.webhelp is not available">
-            <condition>
-                <or>
-                    <not>
-                        <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
-                    </not>
-                    <not>
-                        <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
-                    </not>
-                </or>
-            </condition>
-        </fail>
-    </target>
-    
+        
     <!-- 
         WORKAROUND: It is mandatory to call init-properties here.
         Otherwise, the dita.temp.dir property would not be available
         in the termbrowser-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
-    
     <target name="dita2termbrowser-responsive"
-        depends="-is-oxygen-webhelp-available,
-                 init-properties,
+        depends="init-properties,
+                 -is-webhelp-responsive-available,
                  dita2webhelp-responsive,
                  -generate-termstats,
                  -generate-semanticnet">
+    </target>
+    
+    <!--
+        Check the availability of the plugin by checking the property.
+        We cannot make this a hard dependency in the plugin.xml,
+        otherwise the plugin might not work in specific environments.
+    -->
+    <target name="-is-webhelp-responsive-available">
+        <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
+            com.oxygenxml.webhelp.responsive is not found
+        </fail>
     </target>
     
     <target name="-is-xmltask-available">
