@@ -18,21 +18,18 @@
     </target>
     
     <target name="termchecker-xliff.create-schematron" description="Create a Schematron termchecker for XLIFF">
-        <xslt basedir="${dita.temp.dir}"
-            destdir="${output.dir}"
-            includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
-            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
-            classpathref="dost.class.path"
-            extension="-XLIFF-${args.language}.sch"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termchecker-xliff.xsl"
-            filenameparameter="FILENAME" 
-            filedirparameter="FILEDIR">
-            <param name="language" expression="${args.language}" if="args.language"/>
-            <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
-            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
-            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"/>
-            <xmlcatalog refid="dita.catalog"/>
-        </xslt>
+        <pipeline>
+            <xslt 
+                destdir="${output.dir}"
+                reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+                extension="-XLIFF-${args.language}.sch"
+                style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termchecker-xliff.xsl">
+                <ditafileset format="dita" processingRole="normal"/>
+                <param name="language" expression="${args.language}" if="args.language"/>
+                <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
+                <xmlcatalog refid="dita.catalog"/>
+            </xslt>
+        </pipeline>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >

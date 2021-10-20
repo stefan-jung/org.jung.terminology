@@ -15,21 +15,18 @@
     </target>
     
     <target name="dita.topics.html.tbx-min" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
-        <xslt basedir="${dita.temp.dir}"
-            destdir="${output.dir}"
-            includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
-            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
-            classpathref="dost.class.path"
-            extension=".tbxm"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2tbx-min.xsl"
-            filenameparameter="FILENAME" 
-            filedirparameter="FILEDIR">
-            <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
-            <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
-            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"></excludesfile>
-            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"></includesfile>
-            <xmlcatalog refid="dita.catalog"/>
-        </xslt>
+        <pipeline>
+            <xslt 
+                destdir="${output.dir}"
+                reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+                extension=".tbxm"
+                style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2tbx-min.xsl">
+                <ditafileset format="dita" processingRole="normal"/>
+                <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
+                <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
+                <xmlcatalog refid="dita.catalog"/>
+            </xslt>
+        </pipeline>
         <basename property="tbx-min" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >

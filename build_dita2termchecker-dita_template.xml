@@ -18,20 +18,17 @@
     </target>
     
     <target name="termchecker-dita.create-schematron" description="Create a Schematron termchecker for XLIFF">
-        <xslt basedir="${dita.temp.dir}"
+        <pipeline>
+        <xslt 
             destdir="${output.dir}"
-            includesfile="${dita.temp.dir}${file.separator}${fullditatopicfile}"
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
-            classpathref="dost.class.path"
             extension="-DITA-${args.language}.sch"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termchecker-dita.xsl"
-            filenameparameter="FILENAME" 
-            filedirparameter="FILEDIR">
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termchecker-dita.xsl">
+            <ditafileset format="dita" processingRole="normal"/>
             <param name="language" expression="${args.language}" if="args.language"/>
-            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
-            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"/>
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
+        </pipeline>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >
