@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="22.0" xml:space="preserve">
+<serialized xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
 					<field name="extensionPatch">
 						<documentTypeDescriptorPatch>
 							<field name="patchList">
@@ -347,7 +350,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>86</Integer>
+											<Integer>91</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -417,7 +420,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>87</Integer>
+											<Integer>92</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -487,7 +490,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>88</Integer>
+											<Integer>93</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -549,7 +552,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>89</Integer>
+											<Integer>94</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -619,7 +622,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>90</Integer>
+											<Integer>95</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -769,7 +772,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>91</Integer>
+											<Integer>96</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -919,7 +922,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>92</Integer>
+											<Integer>97</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1069,7 +1072,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>93</Integer>
+											<Integer>98</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1219,7 +1222,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>94</Integer>
+											<Integer>99</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1281,7 +1284,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>95</Integer>
+											<Integer>100</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1343,7 +1346,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>96</Integer>
+											<Integer>101</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1405,7 +1408,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>97</Integer>
+											<Integer>102</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1467,7 +1470,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>98</Integer>
+											<Integer>103</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1541,7 +1544,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>99</Integer>
+											<Integer>104</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1615,7 +1618,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>100</Integer>
+											<Integer>105</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1677,7 +1680,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>101</Integer>
+											<Integer>106</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1771,7 +1774,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>102</Integer>
+											<Integer>107</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1844,7 +1847,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>103</Integer>
+											<Integer>108</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1916,7 +1919,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>104</Integer>
+											<Integer>109</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2038,7 +2041,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>105</Integer>
+											<Integer>110</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2158,7 +2161,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>106</Integer>
+											<Integer>111</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2278,7 +2281,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>107</Integer>
+											<Integer>112</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2398,7 +2401,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>108</Integer>
+											<Integer>113</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2518,7 +2521,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>109</Integer>
+											<Integer>114</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2594,7 +2597,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>110</Integer>
+											<Integer>115</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2656,7 +2659,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>111</Integer>
+											<Integer>116</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2746,7 +2749,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>112</Integer>
+											<Integer>117</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2816,7 +2819,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>113</Integer>
+											<Integer>118</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2886,7 +2889,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>114</Integer>
+											<Integer>119</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2959,7 +2962,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>115</Integer>
+											<Integer>120</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3031,7 +3034,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>116</Integer>
+											<Integer>121</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3104,7 +3107,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>117</Integer>
+											<Integer>122</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3174,7 +3177,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>118</Integer>
+											<Integer>123</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3268,7 +3271,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>119</Integer>
+											<Integer>124</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3362,7 +3365,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>120</Integer>
+											<Integer>125</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3456,7 +3459,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>121</Integer>
+											<Integer>126</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3528,7 +3531,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>122</Integer>
+											<Integer>127</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3598,7 +3601,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>123</Integer>
+											<Integer>128</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3660,7 +3663,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>124</Integer>
+											<Integer>129</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3722,7 +3725,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>125</Integer>
+											<Integer>130</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3784,7 +3787,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>126</Integer>
+											<Integer>131</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3846,7 +3849,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>127</Integer>
+											<Integer>132</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3924,7 +3927,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>128</Integer>
+											<Integer>133</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3986,7 +3989,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>129</Integer>
+											<Integer>134</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4048,7 +4051,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>130</Integer>
+											<Integer>135</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4110,7 +4113,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>131</Integer>
+											<Integer>136</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4172,7 +4175,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>132</Integer>
+											<Integer>137</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4234,7 +4237,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>133</Integer>
+											<Integer>138</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4291,7 +4294,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>134</Integer>
+											<Integer>139</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4348,7 +4351,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>135</Integer>
+											<Integer>140</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4405,7 +4408,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>136</Integer>
+											<Integer>141</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4462,7 +4465,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>137</Integer>
+											<Integer>142</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4519,7 +4522,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>138</Integer>
+											<Integer>143</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4581,7 +4584,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>139</Integer>
+											<Integer>144</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4675,7 +4678,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>140</Integer>
+											<Integer>145</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4737,7 +4740,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>141</Integer>
+											<Integer>146</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4799,7 +4802,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>142</Integer>
+											<Integer>147</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4893,7 +4896,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>143</Integer>
+											<Integer>148</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4955,7 +4958,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>144</Integer>
+											<Integer>149</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5017,7 +5020,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>145</Integer>
+											<Integer>150</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5079,7 +5082,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>146</Integer>
+											<Integer>151</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5141,7 +5144,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>147</Integer>
+											<Integer>152</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5203,7 +5206,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>148</Integer>
+											<Integer>153</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5265,7 +5268,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>149</Integer>
+											<Integer>154</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5322,7 +5325,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>150</Integer>
+											<Integer>155</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5379,7 +5382,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>151</Integer>
+											<Integer>156</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5441,7 +5444,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>152</Integer>
+											<Integer>157</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5507,7 +5510,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>153</Integer>
+											<Integer>158</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5573,7 +5576,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>154</Integer>
+											<Integer>159</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5639,7 +5642,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>155</Integer>
+											<Integer>160</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5705,7 +5708,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>156</Integer>
+											<Integer>161</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5825,7 +5828,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>157</Integer>
+											<Integer>162</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5882,7 +5885,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>158</Integer>
+											<Integer>163</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5944,7 +5947,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>159</Integer>
+											<Integer>164</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6001,7 +6004,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>160</Integer>
+											<Integer>165</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6067,7 +6070,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>161</Integer>
+											<Integer>166</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6124,7 +6127,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>162</Integer>
+											<Integer>167</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6186,7 +6189,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>163</Integer>
+											<Integer>168</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6248,7 +6251,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>164</Integer>
+											<Integer>169</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6310,7 +6313,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>165</Integer>
+											<Integer>170</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6372,7 +6375,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>166</Integer>
+											<Integer>171</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6434,7 +6437,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>167</Integer>
+											<Integer>172</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6496,7 +6499,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>168</Integer>
+											<Integer>173</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6558,7 +6561,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>169</Integer>
+											<Integer>174</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6620,7 +6623,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>170</Integer>
+											<Integer>175</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6690,7 +6693,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>171</Integer>
+											<Integer>176</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6768,7 +6771,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>172</Integer>
+											<Integer>177</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6830,7 +6833,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>173</Integer>
+											<Integer>178</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6900,7 +6903,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>174</Integer>
+											<Integer>179</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6957,7 +6960,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>175</Integer>
+											<Integer>180</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7019,7 +7022,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>176</Integer>
+											<Integer>181</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7095,7 +7098,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>177</Integer>
+											<Integer>182</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7157,7 +7160,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>178</Integer>
+											<Integer>183</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7219,7 +7222,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>179</Integer>
+											<Integer>184</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7281,7 +7284,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>180</Integer>
+											<Integer>185</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -8241,23 +8244,6 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
@@ -8292,7 +8278,7 @@
 											<String>xmlCatalogs</String>
 										</field>
 										<field name="index">
-											<Integer>2</Integer>
+											<Integer>1</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -8309,7 +8295,7 @@
 											<String>xmlCatalogs</String>
 										</field>
 										<field name="index">
-											<Integer>2</Integer>
+											<Integer>1</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/catalog-dita.xml</String>
@@ -8697,6 +8683,9 @@
 																	</field>
 																</validationUnitSchema>
 															</field>
+															<field name="validationAdvancedSettings">
+																<null/>
+															</field>
 														</validationUnit>
 													</list>
 												</field>
@@ -8757,7 +8746,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<Integer>4</Integer>
+											<Integer>3</Integer>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
@@ -9871,7 +9860,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*[contains(@class," topic/section ") and not(contains(@class," task/context "))]</String>
+														<String>oxy:allows-global-element("section")</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -9880,28 +9869,8 @@
 																<String>&lt;section>&lt;title/>&lt;p/>&lt;/section></String>
 															</entry>
 															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::*[contains(@class," topic/section ") and not(contains(@class," task/context "))][1]</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::*[contains(@class," topic/body ") and not(contains(@class," task/taskbody "))]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;section>&lt;title/>&lt;p/>&lt;/section></String>
+																<String>insertEvenIfInvalid</String>
+																<String>false</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -10297,7 +10266,7 @@ oxy:allows-global-element("*", "class", " topic/simpletable ")</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(ancestor::dita) and ancestor::concept</String>
+														<String>oxy:allows-global-element("concept")</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -10306,68 +10275,20 @@ oxy:allows-global-element("*", "class", " topic/simpletable ")</String>
 																<String>&lt;concept id="">&lt;title/>&lt;conbody>&lt;/conbody>&lt;/concept></String>
 															</entry>
 															<entry>
+																<String>insertEvenIfInvalid</String>
+																<String>false</String>
+															</entry>
+															<entry>
 																<String>insertLocation</String>
-																<String>ancestor::concept[1]/*[last()]</String>
+																<String></String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
 																<String>After</String>
 															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::dita or (not(ancestor::dita) and self::concept)</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
 															<entry>
-																<String>fragment</String>
-																<String>&lt;concept id="">&lt;title/>&lt;/concept></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor::dita and (self::*[contains(@class,"topic/topic ")])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;concept id="">&lt;title/>&lt;/concept></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor::dita and (ancestor-or-self::*[contains(@class,"topic/topic ")])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;concept id="">&lt;title/>&lt;/concept></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::*[contains(@class,"topic/topic ")]/*[last()]</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
+																<String>schemaAware</String>
+																<String>true</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
@@ -10407,7 +10328,7 @@ oxy:allows-global-element("*", "class", " topic/simpletable ")</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(ancestor::dita) and ancestor::task</String>
+														<String>oxy:allows-global-element("task")</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -10416,64 +10337,12 @@ oxy:allows-global-element("*", "class", " topic/simpletable ")</String>
 																<String>&lt;task id="">&lt;title/>&lt;taskbody>&lt;/taskbody>&lt;/task></String>
 															</entry>
 															<entry>
-																<String>insertLocation</String>
-																<String>ancestor::task[1]/*[last()]</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::dita or (not(ancestor::dita) and self::task)</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;task id="">&lt;title/>&lt;/task></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor::dita and (self::*[contains(@class,"topic/topic ")])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;task id="">&lt;title/>&lt;/task></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor::dita and (ancestor-or-self::*[contains(@class,"topic/topic ")])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;task id="">&lt;title/>&lt;/task></String>
+																<String>insertEvenIfInvalid</String>
+																<String>false</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::*[contains(@class,"topic/topic ")]/*[last()]</String>
+																<String></String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -10627,73 +10496,21 @@ oxy:allows-global-element("*", "class", " topic/simpletable ")</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>not(ancestor::dita) and ancestor::reference</String>
+														<String>oxy:allows-global-element("reference")</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;reference id="">&lt;title/>&lt;refbody/>&lt;/reference></String>
+															</entry>
+															<entry>
+																<String>insertEvenIfInvalid</String>
+																<String>false</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor::reference[1]/*[last()]</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>After</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::dita or (not(ancestor::dita) and self::reference)</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;reference id="">&lt;title/>&lt;refbody/>&lt;/reference></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor::dita and (self::*[contains(@class,"topic/topic ")])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;reference id="">&lt;title/>&lt;refbody/>&lt;/reference></String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor::dita and (ancestor-or-self::*[contains(@class,"topic/topic ")])</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;reference id="">&lt;title/>&lt;refbody/>&lt;/reference></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>(ancestor-or-self::*[contains(@class,"topic/topic ")])/*[last()]</String>
+																<String></String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -14274,10 +14091,10 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<String>${i18n(insert_code_block)}</String>
 										</field>
 										<field name="description">
-											<String></String>
+											<String>${i18n(insert_codeblock_description)}</String>
 										</field>
 										<field name="largeIconPath">
-											<String></String>
+											<String>/images/CodeBlock24.png</String>
 										</field>
 										<field name="smallIconPath">
 											<String>/images/CodeBlock16.png</String>
@@ -14324,7 +14141,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<String>${i18n(insert_note)}</String>
 										</field>
 										<field name="description">
-											<String></String>
+											<String>${i18n(insert_note_description)}</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -14374,7 +14191,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<String>${i18n(insert_definition_list)}</String>
 										</field>
 										<field name="description">
-											<String></String>
+											<String>${i18n(insert_definition_list_description)}</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -14429,10 +14246,10 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<String>${i18n(code)}</String>
 										</field>
 										<field name="description">
-											<String></String>
+											<String>${i18n(code_description)}</String>
 										</field>
 										<field name="largeIconPath">
-											<String></String>
+											<String>/images/CodeBlock24.png</String>
 										</field>
 										<field name="smallIconPath">
 											<String>/images/CodeBlock16.png</String>
@@ -14459,6 +14276,256 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>up</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Move_up)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Move_up)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/NodeUp24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/NodeUp16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[preceding-sibling::*[1]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>Before</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>oxy:current-selected-element()/preceding-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>down</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Move_down)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Move_down)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>/images/NodeDown24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>/images/NodeDown16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>oxy:current-selected-element()[following-sibling::*[1]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>oxy:current-selected-element()</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>oxy:current-selected-element()/following-sibling::*[1]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.MoveElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>surround.uicontrol</String>
+										</field>
+										<field name="name">
+											<String>${i18n(surround_uicontrol)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(surround_uicontrol_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/img/UIControl24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/img/UIControl16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;uicontrol/></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>surround.filepath</String>
+										</field>
+										<field name="name">
+											<String>${i18n(surround_filepath)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(surround_filepath_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/img/Filepath24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/img/Filepath16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>element</String>
+																<String>&lt;filepath/></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>insert.menucascade</String>
+										</field>
+										<field name="name">
+											<String>${i18n(insert_menucascade)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(insert_menucascade_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String>${framework}/img/MenuCascade24.png</String>
+										</field>
+										<field name="smallIconPath">
+											<String>${framework}/img/MenuCascade16.png</String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;menucascade>&lt;uicontrol/>&lt;uicontrol/>&lt;/menucascade></String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -14606,6 +14673,23 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 																<String>insert.reference</String>
 															</field>
 														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>insert.note</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>insert.code.block</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>insert.menucascade</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
 																<String>insert.image</String>
@@ -14654,6 +14738,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 																<String>underline</String>
 															</field>
 														</menuItem>
+														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
 																<String>subscript</String>
@@ -14662,6 +14747,23 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														<menuItem>
 															<field name="actionID">
 																<String>superscript</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>insert.code.phrase</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>surround.filepath</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>surround.uicontrol</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
@@ -14744,6 +14846,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														<menuItem>
 															<field name="actionID">
 																<String>orderedList</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>insert.definition.list</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
@@ -15054,6 +15161,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
+																<String>insert.menucascade</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
 																<String>insert.definition.list</String>
 															</field>
 														</menuItem>
@@ -15121,6 +15233,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 																<String>underline</String>
 															</field>
 														</menuItem>
+														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
 																<String>subscript</String>
@@ -15131,9 +15244,21 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 																<String>superscript</String>
 															</field>
 														</menuItem>
+														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
 																<String>insert.code.phrase</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>surround.filepath</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>surround.uicontrol</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>
@@ -15865,6 +15990,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 					<field name="templatesLocations">
 						<String-array>
 							<String>${configured.ditaot.dir}/plugins/*/template_folders/*</String>
+							<String>${frameworkDir}/templates/sample-project</String>
 							<String>${frameworkDir}/templates/topic</String>
 							<String>${frameworkDir}/templates/topic-xsd</String>
 							<String>${frameworkDir}/templates/topic-rng</String>
@@ -15872,13 +15998,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/topic (Dita 4 Publishers)</String>
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/topic-rng</String>
 							<String>${configured.ditaot.dir}/plugins/mathml/oxygen_templates/MathML</String>
-							<String>${configured.ditaot.dir}/plugins/org.oasis.xdita/oxygen_templates/LW (Lightweight) DITA/topic-lw</String>
 						</String-array>
 					</field>
 					<field name="xmlCatalogs">
 						<String-array>
 							<String>${framework}/catalog.xml</String>
-							<String>${configured.ditaot.dir.url}/plugins/org.dita.base/catalog-dita.xml</String>
 							<String>${configured.ditaot.dir.url}/catalog-dita.xml</String>
 							<String>${framework}/styleguide/catalog.xml</String>
 							<String>${framework}/plugin/catalog.xml</String>
@@ -16446,6 +16570,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -16508,7 +16635,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -16617,6 +16744,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -16641,7 +16771,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<null/>
 										</field>
 										<field name="ditavalFilePath">
-											<String></String>
+											<null/>
 										</field>
 										<field name="simpleFiltersList">
 											<list/>
@@ -16676,34 +16806,10 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									<String></String>
 								</field>
 								<field name="ditaParams">
-									<list>
-										<ditaParameter>
-											<field name="name">
-												<String>dita.dir</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>${configured.ditaot.dir}</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>3</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-									</list>
+									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -16812,6 +16918,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -16905,72 +17014,10 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 												<null/>
 											</field>
 										</ditaParameter>
-										<ditaParameter>
-											<field name="name">
-												<String>css.processor.type</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>chemistry</String>
-											</field>
-											<field name="defaultValue">
-												<String>chemistry</String>
-											</field>
-											<field name="type">
-												<Integer>4</Integer>
-											</field>
-											<field name="possibleValues">
-												<String-array>
-													<String>chemistry</String>
-													<String>prince</String>
-													<String>antenna-house</String>
-													<null/>
-												</String-array>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<String-array>
-													<String></String>
-													<String></String>
-													<String></String>
-												</String-array>
-											</field>
-										</ditaParameter>
-										<ditaParameter>
-											<field name="name">
-												<String>fix.external.refs.com.oxygenxml</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>true</String>
-											</field>
-											<field name="defaultValue">
-												<String>true</String>
-											</field>
-											<field name="type">
-												<Integer>4</Integer>
-											</field>
-											<field name="possibleValues">
-												<String-array>
-													<String>true</String>
-													<String>false</String>
-													<null/>
-												</String-array>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<String-array>
-													<String></String>
-													<String></String>
-												</String-array>
-											</field>
-										</ditaParameter>
 									</list>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -17079,6 +17126,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -17168,7 +17218,7 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 									</list>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -17307,6 +17357,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<field name="validationSchema">
 												<null/>
 											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
 										</validationUnit>
 										<validationUnit>
 											<field name="validationType">
@@ -17351,6 +17404,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 													</field>
 												</validationUnitSchema>
 											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
 										</validationUnit>
 										<validationUnit>
 											<field name="validationType">
@@ -17382,49 +17438,8 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<field name="validationSchema">
 												<null/>
 											</field>
-										</validationUnit>
-										<validationUnit>
-											<field name="validationType">
-												<validationUnitType>
-													<field name="validationInputType">
-														<String>text/xml</String>
-													</field>
-												</validationUnitType>
-											</field>
-											<field name="url">
-												<String>${currentFileURL}</String>
-											</field>
-											<field name="validationEngine">
-												<validationEngine>
-													<field name="engineType">
-														<String>&lt;Default engine></String>
-													</field>
-													<field name="allowsAutomaticValidation">
-														<Boolean>true</Boolean>
-													</field>
-												</validationEngine>
-											</field>
-											<field name="allowAutomaticValidation">
-												<Boolean>false</Boolean>
-											</field>
-											<field name="extensions">
+											<field name="validationAdvancedSettings">
 												<null/>
-											</field>
-											<field name="validationSchema">
-												<validationUnitSchema>
-													<field name="dtdSchemaPublicID">
-														<null/>
-													</field>
-													<field name="schematronPhase">
-														<null/>
-													</field>
-													<field name="type">
-														<Integer>7</Integer>
-													</field>
-													<field name="uri">
-														<String>${framework}/resources/dita-1.2-for-xslt2-other.sch</String>
-													</field>
-												</validationUnitSchema>
 											</field>
 										</validationUnit>
 										<validationUnit>
@@ -17469,6 +17484,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														<String>${framework}/styleguide/rules/styleguide.sch</String>
 													</field>
 												</validationUnitSchema>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
 											</field>
 										</validationUnit>
 									</list>
@@ -17525,6 +17543,9 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														<String>${framework}/resources/accessibility.sch</String>
 													</field>
 												</validationUnitSchema>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
 											</field>
 										</validationUnit>
 									</list>

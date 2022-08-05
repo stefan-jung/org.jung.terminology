@@ -22,16 +22,20 @@
     -->
     <target name="-is-webhelp-responsive-available">
         <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-            com.oxygenxml.webhelp.responsive is not found
+            com.oxygenxml.webhelp.responsive not found
         </fail>
+        <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
+            com.oxygenxml.webhelp.responsive not found
+        </echo>
     </target>
     
     <target name="-is-xmltask-available">
-        <pathconvert refid="dost.class.path" property="dost.class.path.property"/>
-        <condition property="xmltask-available" value="true">
-            <contains string="${dost.class.path.property}" substring="xmltask"/>
-        </condition>
-        <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
+        <fail unless:set="dita.plugin.org.doctales.xmltask.dir">
+            org.doctales.xmltask not found
+        </fail>
+        <echo if:set="dita.plugin.org.doctales.xmltask.dir">
+            org.doctales.xmltask found
+        </echo>
     </target>
     
     <target name="-generate-termstats">

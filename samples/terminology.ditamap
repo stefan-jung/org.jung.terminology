@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
 <termmap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Doctales Termbrowser</title>
   <termgroup>
     <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
     <termref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem"/>
@@ -40,6 +41,6 @@
     <termref href="wheel.dita" keys="wheel"/>
   </termgroup>
   <topicref href="terminology-ssm.ditamap" format="ditamap"/>
-  <semanticnetref href="semantic-net.dita"/>
-  <termstatsref href="termstats.dita"/>
+  <!--<semanticnetref href="semantic-net.dita"/>-->
+  <!--<termstatsref href="termstats.dita"/>-->
 </termmap>
