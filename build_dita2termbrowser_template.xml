@@ -347,7 +347,7 @@
             The vis.js script needs to be injected as the first lib to the head.
             We have no extension point for this, so we need to make this dirty.
         -->
-        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/webhelp-skin/header/vis.js.txt" property="vis.js.txt"/>
+        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
         <replaceregexp file="${output.dir}/${semantic-net-file-html}"
             match="&lt;script"
             replace="${vis.js.txt}&lt;script"

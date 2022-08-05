@@ -41,6 +41,6 @@
     <termref href="wheel.dita" keys="wheel"/>
   </termgroup>
   <topicref href="terminology-ssm.ditamap" format="ditamap"/>
-  <!--<semanticnetref href="semantic-net.dita"/>-->
-  <!--<termstatsref href="termstats.dita"/>-->
+  <semanticnetref href="semantic-net.dita"/>
+  <termstatsref href="termstats.dita"/>
 </termmap>
