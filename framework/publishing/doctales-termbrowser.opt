@@ -60,6 +60,7 @@
     <html-fragments>
       <fragment file="fragments/webhelp.fragment.before.body.html" placeholder="webhelp.fragment.before.body"/>
       <fragment file="fragments/webhelp.fragment.footer.html" placeholder="webhelp.fragment.footer"/>
+      <fragment file="fragments/webhelp.fragment.head.html" placeholder="webhelp.fragment.head"/>
       <fragment file="fragments/webhelp.fragment.welcome.html" placeholder="webhelp.fragment.welcome"/>
     </html-fragments>
   </webhelp>
