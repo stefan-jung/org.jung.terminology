@@ -55,7 +55,7 @@
             <xsl:element name="language">
                 <xsl:value-of select="."/>
             </xsl:element>
-        </xsl:for-each>
+        </xsl:for-each>git 
     </xsl:template>
     
     <xsl:template name="termNotationsPerLanguage">

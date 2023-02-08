@@ -882,7 +882,7 @@
   <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
-  <transtype name="termbrowser-responsive" extends="base-html" desc="Termbrowser Responsive">
+  <transtype name="termbrowser-responsive" extends="webhelp-responsive" desc="Termbrowser Responsive">
     <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
   </transtype>
   

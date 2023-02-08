@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="22.1" xml:space="preserve">
+<serialized xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
 					<field name="extensionPatch">
 						<documentTypeDescriptorPatch>
 							<field name="patchList">
@@ -31,7 +34,7 @@
 											<String>classpath</String>
 										</field>
 										<field name="index">
-											<Integer>4</Integer>
+											<Integer>5</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/framework/i18n/</String>
@@ -48,7 +51,7 @@
 											<String>classpath</String>
 										</field>
 										<field name="index">
-											<Integer>5</Integer>
+											<Integer>6</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/framework/resources/</String>
@@ -330,7 +333,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>32</Integer>
+											<Integer>30</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -392,7 +395,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>21</Integer>
+											<Integer>19</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -409,7 +412,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>20</Integer>
+											<Integer>18</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -426,7 +429,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>19</Integer>
+											<Integer>17</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -443,7 +446,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>18</Integer>
+											<Integer>16</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -460,7 +463,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>17</Integer>
+											<Integer>15</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -477,7 +480,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>16</Integer>
+											<Integer>14</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -494,7 +497,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>15</Integer>
+											<Integer>13</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -511,7 +514,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>13</Integer>
+											<Integer>12</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -528,7 +531,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>12</Integer>
+											<Integer>11</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -545,7 +548,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>11</Integer>
+											<Integer>10</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -562,7 +565,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>10</Integer>
+											<Integer>9</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -579,7 +582,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>9</Integer>
+											<Integer>8</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -596,7 +599,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>8</Integer>
+											<Integer>7</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -613,23 +616,6 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>7</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>insert.topichead</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/actionDescriptors</String>
-										</field>
-										<field name="index">
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
@@ -639,7 +625,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>insert.topicref</String>
+											<String>insert.topichead</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -1563,23 +1549,6 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
-											<Integer>7</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>templatesLocations</String>
-										</field>
-										<field name="index">
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
@@ -1885,7 +1854,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>12</Integer>
+											<Integer>13</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1902,7 +1871,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>11</Integer>
+											<Integer>12</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1919,7 +1888,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>10</Integer>
+											<Integer>11</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1936,7 +1905,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>9</Integer>
+											<Integer>10</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1953,7 +1922,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>8</Integer>
+											<Integer>9</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1970,7 +1939,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>7</Integer>
+											<Integer>8</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -1987,7 +1956,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>6</Integer>
+											<Integer>7</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -2004,7 +1973,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>5</Integer>
+											<Integer>6</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -2021,7 +1990,7 @@
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>4</Integer>
+											<Integer>5</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -2031,6 +2000,499 @@
 										</field>
 										<field name="anchor">
 											<String>DITA Map EPUB</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>5</Integer>
+										</field>
+										<field name="value">
+											<ditaScenario>
+												<field name="useXEP">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useDITAScript">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="baseDir">
+													<String>${cfd}</String>
+												</field>
+												<field name="outputDir">
+													<String>${cfd}/out/tbx-min</String>
+												</field>
+												<field name="tempDir">
+													<String>${cfd}/temp/tbx-min</String>
+												</field>
+												<field name="transtype">
+													<String>xhtml</String>
+												</field>
+												<field name="filters">
+													<ditavalFilters>
+														<field name="useDitavalFilePath">
+															<Boolean>false</Boolean>
+														</field>
+														<field name="useAppliedConditionSet">
+															<Boolean>true</Boolean>
+														</field>
+														<field name="appliedConditionSet">
+															<null/>
+														</field>
+														<field name="ditavalFilePath">
+															<null/>
+														</field>
+														<field name="simpleFiltersList">
+															<list/>
+														</field>
+													</ditavalFilters>
+												</field>
+												<field name="addOxygenJars">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="skinCssFile">
+													<null/>
+												</field>
+												<field name="lastCustomSkinCssPath">
+													<null/>
+												</field>
+												<field name="webhelpResponsiveTemplate">
+													<null/>
+												</field>
+												<field name="publishingTemplateDataPO">
+													<null/>
+												</field>
+												<field name="oxygenFeedbackPO">
+													<null/>
+												</field>
+												<field name="additionalAntArgs">
+													<String></String>
+												</field>
+												<field name="buildTarget">
+													<String></String>
+												</field>
+												<field name="buildFilePath">
+													<String></String>
+												</field>
+												<field name="ditaParams">
+													<list>
+														<ditaParameter>
+															<field name="name">
+																<String>args.source.language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${ask('TBX-Basic - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>args.target.language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${ask('TBX-Basic - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+														<ditaParameter>
+															<field name="name">
+																<String>transtype</String>
+															</field>
+															<field name="description">
+																<null/>
+															</field>
+															<field name="value">
+																<String>tbx-min</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>2</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</ditaParameter>
+													</list>
+												</field>
+												<field name="jvmArgs">
+													<String>-Xmx384m</String>
+												</field>
+												<field name="useCustomJavaHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customJavaHomeDir">
+													<String></String>
+												</field>
+												<field name="useCustomANTHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customANTHomeDir">
+													<String></String>
+												</field>
+												<field name="workingDir">
+													<null/>
+												</field>
+												<field name="showConsoleAlways">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="advancedOptionsMap">
+													<null/>
+												</field>
+												<field name="name">
+													<String>TBX-Min</String>
+												</field>
+												<field name="baseURL">
+													<null/>
+												</field>
+												<field name="footerURL">
+													<null/>
+												</field>
+												<field name="fOPMethod">
+													<null/>
+												</field>
+												<field name="fOProcessorName">
+													<null/>
+												</field>
+												<field name="headerURL">
+													<null/>
+												</field>
+												<field name="inputXSLURL">
+													<null/>
+												</field>
+												<field name="inputXMLURL">
+													<null/>
+												</field>
+												<field name="defaultScenario">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="isFOPPerforming">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="type">
+													<String>DITAMAP</String>
+												</field>
+												<field name="saveAs">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="openInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="outputResource">
+													<null/>
+												</field>
+												<field name="openOtherLocationInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="locationToOpenInBrowserURL">
+													<String></String>
+												</field>
+												<field name="openInEditor">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInHTMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInXMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInSVGPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInResultSetPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useXSLTInput">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="xsltParams">
+													<list/>
+												</field>
+												<field name="cascadingStylesheets">
+													<String-array/>
+												</field>
+												<field name="xslTransformer">
+													<String>DITA-OT</String>
+												</field>
+												<field name="extensionURLs">
+													<String-array/>
+												</field>
+											</ditaScenario>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>scenarios</String>
+										</field>
+										<field name="index">
+											<Integer>6</Integer>
+										</field>
+										<field name="value">
+											<scenario>
+												<field name="advancedOptionsMap">
+													<serializableOrderedMap>
+														<entry>
+															<String>Saxon-EE</String>
+															<xsltSaxonSAAdvancedOptions>
+																<field name="sourceValidation">
+																	<String>saxon.source.no.schema.based.validation</String>
+																</field>
+																<field name="schemaVersion">
+																	<String>1.0</String>
+																</field>
+																<field name="treatResultValidationErrorsAsWarnings">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="addCommentsForValidationErrors">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="streamingEnabled">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="isJITEnabled">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="allowCallsOnExtensionFunctions">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="registerSaxonCEExtensions">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="enableAssertions">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="showVersionWarnings">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="dtdSourceValidation">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="dtdSourceValidationRecover">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="lineNumbering">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="initialMode">
+																	<null/>
+																</field>
+																<field name="initialTemplate">
+																	<null/>
+																</field>
+																<field name="traceXPathExpression">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="expandAttributeDefaults">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="errorRecoverPolicy">
+																	<String>saxon.recover.with.warning</String>
+																</field>
+																<field name="stripWS">
+																	<String>saxon.strip.ws.none</String>
+																</field>
+																<field name="optimizationEnabled">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="useConfigFile">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="configSystemID">
+																	<null/>
+																</field>
+																<field name="initializer">
+																	<String></String>
+																</field>
+																<field name="profilingOutputFile">
+																	<null/>
+																</field>
+																<field name="isProfilingEnabled">
+																	<Boolean>false</Boolean>
+																</field>
+															</xsltSaxonSAAdvancedOptions>
+														</entry>
+														<entry>
+															<String>Saxon-HE</String>
+															<xsltSaxonHEAdvancedOptions>
+																<field name="showVersionWarnings">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="dtdSourceValidation">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="dtdSourceValidationRecover">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="lineNumbering">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="initialMode">
+																	<null/>
+																</field>
+																<field name="initialTemplate">
+																	<null/>
+																</field>
+																<field name="traceXPathExpression">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="expandAttributeDefaults">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="errorRecoverPolicy">
+																	<String>saxon.recover.with.warning</String>
+																</field>
+																<field name="stripWS">
+																	<String>saxon.strip.ws.none</String>
+																</field>
+																<field name="optimizationEnabled">
+																	<Boolean>true</Boolean>
+																</field>
+																<field name="useConfigFile">
+																	<Boolean>false</Boolean>
+																</field>
+																<field name="configSystemID">
+																	<null/>
+																</field>
+																<field name="initializer">
+																	<String></String>
+																</field>
+																<field name="profilingOutputFile">
+																	<null/>
+																</field>
+																<field name="isProfilingEnabled">
+																	<Boolean>false</Boolean>
+																</field>
+															</xsltSaxonHEAdvancedOptions>
+														</entry>
+													</serializableOrderedMap>
+												</field>
+												<field name="name">
+													<String>Import TBX-Basic</String>
+												</field>
+												<field name="baseURL">
+													<String></String>
+												</field>
+												<field name="footerURL">
+													<String></String>
+												</field>
+												<field name="fOPMethod">
+													<String>pdf</String>
+												</field>
+												<field name="fOProcessorName">
+													<String>Apache FOP</String>
+												</field>
+												<field name="headerURL">
+													<String></String>
+												</field>
+												<field name="inputXSLURL">
+													<String>${framework}/xsl/import-tbx-basic.xsl</String>
+												</field>
+												<field name="inputXMLURL">
+													<String>${currentFileURL}</String>
+												</field>
+												<field name="defaultScenario">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="isFOPPerforming">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="type">
+													<String>XSL</String>
+												</field>
+												<field name="saveAs">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="openInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="outputResource">
+													<String>${cfd}/out/terminology.ditamap</String>
+												</field>
+												<field name="openOtherLocationInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="locationToOpenInBrowserURL">
+													<null/>
+												</field>
+												<field name="openInEditor">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="showInHTMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInXMLPane">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="showInSVGPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInResultSetPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useXSLTInput">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="xsltParams">
+													<list/>
+												</field>
+												<field name="cascadingStylesheets">
+													<String-array/>
+												</field>
+												<field name="xslTransformer">
+													<String>Saxon-PE</String>
+												</field>
+												<field name="extensionURLs">
+													<String-array/>
+												</field>
+											</scenario>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -2116,17 +2578,20 @@
 												<field name="useAntennaHouse">
 													<Boolean>false</Boolean>
 												</field>
+												<field name="useDITAScript">
+													<Boolean>true</Boolean>
+												</field>
 												<field name="baseDir">
 													<String>${cfd}</String>
 												</field>
 												<field name="outputDir">
-													<String>${cfd}/out/termbrowser-responsive</String>
+													<String>${cfd}/out/webhelp-responsive</String>
 												</field>
 												<field name="tempDir">
-													<String>${cfd}/temp/termbrowser-responsive</String>
+													<String>${cfd}/temp/webhelp-responsive</String>
 												</field>
 												<field name="transtype">
-													<String>xhtml</String>
+													<String>webhelp-responsive</String>
 												</field>
 												<field name="filters">
 													<ditavalFilters>
@@ -2160,7 +2625,17 @@
 													<null/>
 												</field>
 												<field name="publishingTemplateDataPO">
-													<null/>
+													<publishingTemplate>
+														<field name="templateRoot">
+															<String>/home/stefan/workspace/org.doctales.terminology/framework/publishing</String>
+														</field>
+														<field name="descriptorRelativePath">
+															<String>doctales-termbrowser.opt</String>
+														</field>
+														<field name="isCustomTemplate">
+															<Boolean>false</Boolean>
+														</field>
+													</publishingTemplate>
 												</field>
 												<field name="oxygenFeedbackPO">
 													<null/>
@@ -2176,105 +2651,6 @@
 												</field>
 												<field name="ditaParams">
 													<list>
-														<ditaParameter>
-															<field name="name">
-																<String>args.copycss</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>yes</String>
-															</field>
-															<field name="defaultValue">
-																<String>no</String>
-															</field>
-															<field name="type">
-																<Integer>4</Integer>
-															</field>
-															<field name="possibleValues">
-																<String-array>
-																	<String>yes</String>
-																	<String>no</String>
-																	<null/>
-																</String-array>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<String-array>
-																	<String></String>
-																	<String></String>
-																</String-array>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>args.css</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/doctales/skin-responsive.css</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>2</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>args.default.language</String>
-															</field>
-															<field name="description">
-																<String>Specifies the language used for the termbrowser labels.</String>
-															</field>
-															<field name="value">
-																<String>${ask('Termbrowser - Choose language of labels', combobox, ('en-GB':'English - Great Britain';'de-DE':'German - Germany';))}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>args.dita.locale</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>en</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>0</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
 																<String>args.xhtml.classattr</String>
@@ -2307,25 +2683,32 @@
 														</ditaParameter>
 														<ditaParameter>
 															<field name="name">
-																<String>dita.input.valfile</String>
+																<String>force-unique</String>
 															</field>
 															<field name="description">
 																<null/>
 															</field>
 															<field name="value">
-																<String>${frameworkDir}/framework/resources/ditaval/termbrowser-responsive.ditaval</String>
+																<String>true</String>
 															</field>
 															<field name="defaultValue">
-																<null/>
+																<String>false</String>
 															</field>
 															<field name="type">
-																<Integer>2</Integer>
+																<Integer>4</Integer>
 															</field>
 															<field name="possibleValues">
-																<null/>
+																<String-array>
+																	<String>true</String>
+																	<String>false</String>
+																	<null/>
+																</String-array>
 															</field>
 															<field name="possibleValuesDescriptions">
-																<null/>
+																<String-array>
+																	<String></String>
+																	<String></String>
+																</String-array>
 															</field>
 														</ditaParameter>
 														<ditaParameter>
@@ -2351,217 +2734,10 @@
 																<null/>
 															</field>
 														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.fragment.after.logo_and_title</String>
-															</field>
-															<field name="description">
-																<String>Specifies an XML fragment (or a path to a file that contains well formed XML content) that will be displayed after the logo and title in the output.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.after.logo_and_title.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.fragment.after.top_menu</String>
-															</field>
-															<field name="description">
-																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed after the top menu in the output.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.after.top_menu.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.fragment.footer</String>
-															</field>
-															<field name="description">
-																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as the footer in the output.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.footer.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.fragment.head</String>
-															</field>
-															<field name="description">
-																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as the header in the output.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/header/termbrowser-reponsive.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.fragment.welcome</String>
-															</field>
-															<field name="description">
-																<String>Specify an XML fragment (or a path to a file that contains well formed XML content) that will be displayed as a welcome message (or title) in the output.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/fragments/webhelp.fragment.welcome.xml</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.logo.image</String>
-															</field>
-															<field name="description">
-																<String>To add a logo in the title area of your WebHelp output.</String>
-															</field>
-															<field name="value">
-																<String>${frameworkDir}/framework/webhelp-skin/logo/doctales-logo.svg</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.show.main.page.tiles</String>
-															</field>
-															<field name="description">
-																<String>Specifies if the tiles component will be presented in the main page of the output. For a tree style layout, this parameter should be set to no.</String>
-															</field>
-															<field name="value">
-																<String>no</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.show.main.page.toc</String>
-															</field>
-															<field name="description">
-																<String>Specifies if the table of contents will be presented in the main page of the output.</String>
-															</field>
-															<field name="value">
-																<String>yes</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>webhelp.show.top.menu</String>
-															</field>
-															<field name="description">
-																<String>Specifies if a menu will be presented at the topic of the main page in the output.</String>
-															</field>
-															<field name="value">
-																<String>no</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx384m</String>
+													<String></String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -2684,6 +2860,9 @@
 													<Boolean>false</Boolean>
 												</field>
 												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useDITAScript">
 													<Boolean>false</Boolean>
 												</field>
 												<field name="baseDir">
@@ -2918,6 +3097,9 @@
 													<Boolean>false</Boolean>
 												</field>
 												<field name="useAntennaHouse">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useDITAScript">
 													<Boolean>false</Boolean>
 												</field>
 												<field name="baseDir">
@@ -3177,6 +3359,9 @@
 												<field name="useAntennaHouse">
 													<Boolean>false</Boolean>
 												</field>
+												<field name="useDITAScript">
+													<Boolean>false</Boolean>
+												</field>
 												<field name="baseDir">
 													<String>${cfd}</String>
 												</field>
@@ -3421,484 +3606,6 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
-											<String>scenarios</String>
-										</field>
-										<field name="index">
-											<Integer>4</Integer>
-										</field>
-										<field name="value">
-											<ditaScenario>
-												<field name="useXEP">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="useAntennaHouse">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="baseDir">
-													<String>${cfd}</String>
-												</field>
-												<field name="outputDir">
-													<String>${cfd}/out/tbx-min</String>
-												</field>
-												<field name="tempDir">
-													<String>${cfd}/temp/tbx-min</String>
-												</field>
-												<field name="transtype">
-													<String>xhtml</String>
-												</field>
-												<field name="filters">
-													<ditavalFilters>
-														<field name="useDitavalFilePath">
-															<Boolean>false</Boolean>
-														</field>
-														<field name="useAppliedConditionSet">
-															<Boolean>true</Boolean>
-														</field>
-														<field name="appliedConditionSet">
-															<null/>
-														</field>
-														<field name="ditavalFilePath">
-															<null/>
-														</field>
-														<field name="simpleFiltersList">
-															<list/>
-														</field>
-													</ditavalFilters>
-												</field>
-												<field name="addOxygenJars">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="skinCssFile">
-													<null/>
-												</field>
-												<field name="lastCustomSkinCssPath">
-													<null/>
-												</field>
-												<field name="webhelpResponsiveTemplate">
-													<null/>
-												</field>
-												<field name="publishingTemplateDataPO">
-													<null/>
-												</field>
-												<field name="oxygenFeedbackPO">
-													<null/>
-												</field>
-												<field name="additionalAntArgs">
-													<String></String>
-												</field>
-												<field name="buildTarget">
-													<String></String>
-												</field>
-												<field name="buildFilePath">
-													<String></String>
-												</field>
-												<field name="ditaParams">
-													<list>
-														<ditaParameter>
-															<field name="name">
-																<String>args.source.language</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${ask('TBX-Basic - Source language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>args.target.language</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${ask('TBX-Basic - Target language', combobox, ('af-ZA':'Afrikaans - South Africa';'sq-AL':'Albanian - Albania';'ar-DZ':'Arabic - Algeria';'ar-BH':'Arabic - Bahrain';'ar-EG':'Arabic - Egypt';'ar-IQ':'Arabic - Iraq';'ar-JO':'Arabic - Jordan';'ar-KW':'Arabic - Kuwait';'ar-LB':'Arabic - Lebanon';'ar-LY':'Arabic - Libya';'ar-MA':'Arabic - Morocco';'ar-OM':'Arabic - Oman';'ar-QA':'Arabic - Qatar';'ar-SA':'Arabic - Saudi Arabia';'ar-SY':'Arabic - Syria';'ar-TN':'Arabic - Tunisia';'ar-AE':'Arabic - United Arab Emirates';'ar-YE':'Arabic - Yemen';'hy-AM':'Armenian - Armenia';'Cy-az-AZ':'Azeri (Cyrillic) - Azerbaijan';'Lt-az-AZ':'Azeri (Latin) - Azerbaijan';'eu-ES':'Basque - Basque';'be-BY':'Belarusian - Belarus';'bg-BG':'Bulgarian - Bulgaria';'ca-ES':'Catalan - Catalan';'zh-CN':'Chinese - China';'zh-HK':'Chinese - Hong Kong SAR';'zh-MO':'Chinese - Macau SAR';'zh-SG':'Chinese - Singapore';'zh-TW':'Chinese - Taiwan';'zh-CHS':'Chinese (Simplified)';'zh-CHT':'Chinese (Traditional)';'hr-HR':'Croatian - Croatia';'cs-CZ':'Czech - Czech Republic';'da-DK':'Danish - Denmark';'div-MV':'Dhivehi - Maldives';'nl-BE':'Dutch - Belgium';'nl-NL':'Dutch - The Netherlands';'en-AU':'English - Australia';'en-BZ':'English - Belize';'en-CA':'English - Canada';'en-CB':'English - Caribbean';'en-GB':'English - Great Britain';'en-IE':'English - Ireland';'en-JM':'English - Jamaica';'en-NZ':'English - New Zealand';'en-PH':'English - Philippines';'en-ZA':'English - South Africa';'en-TT':'English - Trinidad and Tobago';'en-US':'English - United States';'en-ZW':'English - Zimbabwe';'et-EE':'Estonian - Estonia';'fo-FO':'Faroese - Faroe Islands';'fa-IR':'Farsi - Iran';'fi-FI':'Finnish - Finland';'fr-BE':'French - Belgium';'fr-CA':'French - Canada';'fr-FR':'French - France';'fr-LU':'French - Luxembourg';'fr-MC':'French - Monaco';'fr-CH':'French - Switzerland';'gl-ES':'Galician - Galician';'ka-GE':'Georgian - Georgia';'de-AT':'German - Austria';'de-DE':'German - Germany';'de-LI':'German - Liechtenstein';'de-LU':'German - Luxembourg';'de-CH':'German - Switzerland';'el-GR':'Greek - Greece';'gu-IN':'Gujarati - India';'he-IL':'Hebrew - Israel';'hi-IN':'Hindi - India';'hu-HU':'Hungarian - Hungary';'is-IS':'Icelandic - Iceland';'id-ID':'Indonesian - Indonesia';'it-IT':'Italian - Italy';'it-CH':'Italian - Switzerland';'ja-JP':'Japanese - Japan';'kn-IN':'Kannada - India';'kk-KZ':'Kazakh - Kazakhstan';'kok-IN':'Konkani - India';'ko-KR':'Korean - Korea';'ky-KZ':'Kyrgyz - Kazakhstan';'lv-LV':'Latvian - Latvia';'lt-LT':'Lithuanian - Lithuania';'mk-MK':'Macedonian (FYROM)	';'ms-BN':'Malay - Brunei';'ms-MY':'Malay - Malaysia';'mr-IN':'Marathi - India';'mn-MN':'Mongolian - Mongolia';'nb-NO':'Norwegian (Bokmål) - Norway';'nn-NO':'Norwegian (Nynorsk) - Norway';'pl-PL':'Polish - Poland';'pt-BR':'Portuguese - Brazil';'pt-PT':'Portuguese - Portugal';'pa-IN':'Punjabi - India';'ro-RO':'Romanian - Romania';'ru-RU':'Russian - Russia';'sa-IN':'Sanskrit - India';'Cy-sr-SP':'Serbian (Cyrillic) - Serbia';'Lt-sr-SP':'Serbian (Latin) - Serbia';'sk-SK':'Slovak - Slovakia';'sl-SI':'Slovenian - Slovenia';'es-AR':'Spanish - Argentina';'es-BO':'Spanish - Bolivia';'es-CL':'Spanish - Chile';'es-CO':'Spanish - Colombia';'es-CR':'Spanish - Costa Rica';'es-DO':'Spanish - Dominican Republic';'es-EC':'Spanish - Ecuador';'es-SV':'Spanish - El Salvador';'es-GT':'Spanish - Guatemala';'es-HN':'Spanish - Honduras';'es-MX':'Spanish - Mexico';'es-NI':'Spanish - Nicaragua';'es-PA':'Spanish - Panama';'es-PY':'Spanish - Paraguay';'es-PE':'Spanish - Peru';'es-PR':'Spanish - Puerto Rico';'es-ES':'Spanish - Spain';'es-UY':'Spanish - Uruguay';'es-VE':'Spanish - Venezuela';'sw-KE':'Swahili - Kenya';'sv-FI':'Swedish - Finland';'sv-SE':'Swedish - Sweden';'syr-SY':'Syriac - Syria';'ta-IN':'Tamil - India';'tt-RU':'Tatar - Russia';'te-IN':'Telugu - India';'th-TH':'Thai - Thailand';'tr-TR':'Turkish - Turkey';'uk-UA':'Ukrainian - Ukraine';'ur-PK':'Urdu - Pakistan';'Cy-uz-UZ':'Uzbek (Cyrillic) - Uzbekistan';'Lt-uz-UZ':'Uzbek (Latin) - Uzbekistan';'vi-VN':'Vietnamese - Vietnam';)}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-														<ditaParameter>
-															<field name="name">
-																<String>transtype</String>
-															</field>
-															<field name="description">
-																<null/>
-															</field>
-															<field name="value">
-																<String>tbx-min</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>2</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</ditaParameter>
-													</list>
-												</field>
-												<field name="jvmArgs">
-													<String>-Xmx384m</String>
-												</field>
-												<field name="useCustomJavaHome">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="customJavaHomeDir">
-													<String></String>
-												</field>
-												<field name="useCustomANTHome">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="customANTHomeDir">
-													<String></String>
-												</field>
-												<field name="workingDir">
-													<null/>
-												</field>
-												<field name="showConsoleAlways">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="advancedOptionsMap">
-													<null/>
-												</field>
-												<field name="name">
-													<String>TBX-Min</String>
-												</field>
-												<field name="baseURL">
-													<null/>
-												</field>
-												<field name="footerURL">
-													<null/>
-												</field>
-												<field name="fOPMethod">
-													<null/>
-												</field>
-												<field name="fOProcessorName">
-													<null/>
-												</field>
-												<field name="headerURL">
-													<null/>
-												</field>
-												<field name="inputXSLURL">
-													<null/>
-												</field>
-												<field name="inputXMLURL">
-													<null/>
-												</field>
-												<field name="defaultScenario">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="isFOPPerforming">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="type">
-													<String>DITAMAP</String>
-												</field>
-												<field name="saveAs">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="openInBrowser">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="outputResource">
-													<null/>
-												</field>
-												<field name="openOtherLocationInBrowser">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="locationToOpenInBrowserURL">
-													<String></String>
-												</field>
-												<field name="openInEditor">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInHTMLPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInXMLPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInSVGPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInResultSetPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="useXSLTInput">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="xsltParams">
-													<list/>
-												</field>
-												<field name="cascadingStylesheets">
-													<String-array/>
-												</field>
-												<field name="xslTransformer">
-													<String>DITA-OT</String>
-												</field>
-												<field name="extensionURLs">
-													<String-array/>
-												</field>
-											</ditaScenario>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>scenarios</String>
-										</field>
-										<field name="index">
-											<Integer>5</Integer>
-										</field>
-										<field name="value">
-											<scenario>
-												<field name="advancedOptionsMap">
-													<serializableOrderedMap>
-														<entry>
-															<String>Saxon-EE</String>
-															<xsltSaxonSAAdvancedOptions>
-																<field name="sourceValidation">
-																	<String>saxon.source.no.schema.based.validation</String>
-																</field>
-																<field name="schemaVersion">
-																	<String>1.0</String>
-																</field>
-																<field name="treatResultValidationErrorsAsWarnings">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="addCommentsForValidationErrors">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="streamingEnabled">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="isJITEnabled">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="allowCallsOnExtensionFunctions">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="registerSaxonCEExtensions">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="enableAssertions">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="showVersionWarnings">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="dtdSourceValidation">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="dtdSourceValidationRecover">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="lineNumbering">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="initialMode">
-																	<null/>
-																</field>
-																<field name="initialTemplate">
-																	<null/>
-																</field>
-																<field name="traceXPathExpression">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="expandAttributeDefaults">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="errorRecoverPolicy">
-																	<String>saxon.recover.with.warning</String>
-																</field>
-																<field name="stripWS">
-																	<String>saxon.strip.ws.none</String>
-																</field>
-																<field name="optimizationEnabled">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="useConfigFile">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="configSystemID">
-																	<null/>
-																</field>
-																<field name="initializer">
-																	<String></String>
-																</field>
-															</xsltSaxonSAAdvancedOptions>
-														</entry>
-														<entry>
-															<String>Saxon-HE</String>
-															<xsltSaxonHEAdvancedOptions>
-																<field name="showVersionWarnings">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="dtdSourceValidation">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="dtdSourceValidationRecover">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="lineNumbering">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="initialMode">
-																	<null/>
-																</field>
-																<field name="initialTemplate">
-																	<null/>
-																</field>
-																<field name="traceXPathExpression">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="expandAttributeDefaults">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="errorRecoverPolicy">
-																	<String>saxon.recover.with.warning</String>
-																</field>
-																<field name="stripWS">
-																	<String>saxon.strip.ws.none</String>
-																</field>
-																<field name="optimizationEnabled">
-																	<Boolean>true</Boolean>
-																</field>
-																<field name="useConfigFile">
-																	<Boolean>false</Boolean>
-																</field>
-																<field name="configSystemID">
-																	<null/>
-																</field>
-																<field name="initializer">
-																	<String></String>
-																</field>
-															</xsltSaxonHEAdvancedOptions>
-														</entry>
-													</serializableOrderedMap>
-												</field>
-												<field name="name">
-													<String>Import TBX-Basic</String>
-												</field>
-												<field name="baseURL">
-													<String></String>
-												</field>
-												<field name="footerURL">
-													<String></String>
-												</field>
-												<field name="fOPMethod">
-													<String>pdf</String>
-												</field>
-												<field name="fOProcessorName">
-													<String>Apache FOP</String>
-												</field>
-												<field name="headerURL">
-													<String></String>
-												</field>
-												<field name="inputXSLURL">
-													<String>${framework}/xsl/import-tbx-basic.xsl</String>
-												</field>
-												<field name="inputXMLURL">
-													<String>${currentFileURL}</String>
-												</field>
-												<field name="defaultScenario">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="isFOPPerforming">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="type">
-													<String>XSL</String>
-												</field>
-												<field name="saveAs">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="openInBrowser">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="outputResource">
-													<String>${cfd}/out/terminology.ditamap</String>
-												</field>
-												<field name="openOtherLocationInBrowser">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="locationToOpenInBrowserURL">
-													<null/>
-												</field>
-												<field name="openInEditor">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="showInHTMLPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInXMLPane">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="showInSVGPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="showInResultSetPane">
-													<Boolean>false</Boolean>
-												</field>
-												<field name="useXSLTInput">
-													<Boolean>true</Boolean>
-												</field>
-												<field name="xsltParams">
-													<list/>
-												</field>
-												<field name="cascadingStylesheets">
-													<String-array/>
-												</field>
-												<field name="xslTransformer">
-													<String>Saxon-PE</String>
-												</field>
-												<field name="extensionURLs">
-													<String-array/>
-												</field>
-											</scenario>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
 											<String>validationScenarios</String>
 										</field>
 										<field name="index">
@@ -3968,6 +3675,9 @@
 																	</field>
 																</validationUnitSchema>
 															</field>
+															<field name="validationAdvancedSettings">
+																<null/>
+															</field>
 														</validationUnit>
 													</list>
 												</field>
@@ -4028,7 +3738,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<Integer>4</Integer>
+											<Integer>3</Integer>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
@@ -4056,6 +3766,7 @@
 							<String>${framework}/resources/</String>
 							<String>${framework}/i18n/</String>
 							<String>${framework}/styleguide/</String>
+							<String>${framework}/map_refactoring/</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -4545,47 +4256,6 @@ or oxy:current-selected-element()[self::*[contains(@class," map/relrow ") or con
 									</action>
 									<action>
 										<field name="id">
-											<String>insert.topicref</String>
-										</field>
-										<field name="name">
-											<String>${i18n(insert.topicref2)}</String>
-										</field>
-										<field name="description">
-											<String>${i18n(insert.topicref_description2)}</String>
-										</field>
-										<field name="largeIconPath">
-											<String>/images/Topicref24.png</String>
-										</field>
-										<field name="smallIconPath">
-											<String>/images/Topicref16.png</String>
-										</field>
-										<field name="accessKey">
-											<String>R</String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::*[contains(@class, " map/map ") or contains(@class, " map/topicref ") or contains(@class, " map/relcell ") or contains(@class, " map/relcolspec ")]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap/>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.dita.map.topicref.InsertTopicrefOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
 											<String>insert.topichead</String>
 										</field>
 										<field name="name">
@@ -4901,47 +4571,6 @@ self::*[contains(@class," map/reltable ")]][1]
 													</field>
 													<field name="operationID">
 														<String>ro.sync.ecss.extensions.dita.map.table.RelTableShowPropertiesOperation</String>
-													</field>
-												</actionMode>
-											</actionMode-array>
-										</field>
-										<field name="enabledInReadOnlyContext">
-											<Boolean>false</Boolean>
-										</field>
-									</action>
-									<action>
-										<field name="id">
-											<String>insert.new.dita.resource</String>
-										</field>
-										<field name="name">
-											<String>${i18n(insert.new.dita.resource)}</String>
-										</field>
-										<field name="description">
-											<String>${i18n(insert.new.dita.resource_description)}</String>
-										</field>
-										<field name="largeIconPath">
-											<String>/images/NewTopic24.png</String>
-										</field>
-										<field name="smallIconPath">
-											<String>/images/NewTopic16.png</String>
-										</field>
-										<field name="accessKey">
-											<String>N</String>
-										</field>
-										<field name="accelerator">
-											<null/>
-										</field>
-										<field name="actionModes">
-											<actionMode-array>
-												<actionMode>
-													<field name="xpathCondition">
-														<String>self::*[contains(@class, " map/map ") or contains(@class, " map/topicref ") or contains(@class, " map/relcell ") or contains(@class, " map/relcolspec ")]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap/>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.dita.map.topicref.InsertNewTopicOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
@@ -6306,13 +5935,11 @@ self::*[contains(@class," map/reltable ")]][1]
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/map-rng</String>
 							<String>${configured.ditaot.dir}/plugins/org.oasis-open.dita.v1_3/oxygen_templates/DITA 1.3/map</String>
 							<String>${configured.ditaot.dir}/plugins/net.sourceforge.dita4publishers.doctypes/oxygen_templates/map (Dita 4 Publishers)</String>
-							<String>${configured.ditaot.dir}/plugins/org.oasis.xdita/oxygen_templates/LW (Lightweight) DITA/map-lw</String>
 						</String-array>
 					</field>
 					<field name="xmlCatalogs">
 						<String-array>
 							<String>${framework}/catalog.xml</String>
-							<String>${configured.ditaot.dir.url}/plugins/org.dita.base/catalog-dita.xml</String>
 							<String>${configured.ditaot.dir.url}/catalog-dita.xml</String>
 						</String-array>
 					</field>
@@ -6488,6 +6115,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -6655,7 +6285,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									</list>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -6764,6 +6394,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -6833,34 +6466,10 @@ self::*[contains(@class," map/reltable ")]][1]
 									<String></String>
 								</field>
 								<field name="ditaParams">
-									<list>
-										<ditaParameter>
-											<field name="name">
-												<String>css.processor.type</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>chemistry</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>0</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-									</list>
+									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -6969,6 +6578,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -7031,7 +6643,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -7140,6 +6752,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -7164,7 +6779,7 @@ self::*[contains(@class," map/reltable ")]][1]
 											<null/>
 										</field>
 										<field name="ditavalFilePath">
-											<String></String>
+											<null/>
 										</field>
 										<field name="simpleFiltersList">
 											<list/>
@@ -7199,34 +6814,10 @@ self::*[contains(@class," map/reltable ")]][1]
 									<String></String>
 								</field>
 								<field name="ditaParams">
-									<list>
-										<ditaParameter>
-											<field name="name">
-												<String>dita.dir</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>${configured.ditaot.dir}</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>3</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-									</list>
+									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -7335,6 +6926,183 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="baseDir">
+									<String>${cfd}</String>
+								</field>
+								<field name="outputDir">
+									<String>${cfd}/out/markdown</String>
+								</field>
+								<field name="tempDir">
+									<String>${cfd}/temp/markdown</String>
+								</field>
+								<field name="transtype">
+									<String>markdown</String>
+								</field>
+								<field name="filters">
+									<ditavalFilters>
+										<field name="useDitavalFilePath">
+											<Boolean>false</Boolean>
+										</field>
+										<field name="useAppliedConditionSet">
+											<Boolean>true</Boolean>
+										</field>
+										<field name="appliedConditionSet">
+											<null/>
+										</field>
+										<field name="ditavalFilePath">
+											<null/>
+										</field>
+										<field name="simpleFiltersList">
+											<list/>
+										</field>
+									</ditavalFilters>
+								</field>
+								<field name="addOxygenJars">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="skinCssFile">
+									<null/>
+								</field>
+								<field name="lastCustomSkinCssPath">
+									<null/>
+								</field>
+								<field name="webhelpResponsiveTemplate">
+									<null/>
+								</field>
+								<field name="publishingTemplateDataPO">
+									<null/>
+								</field>
+								<field name="oxygenFeedbackPO">
+									<null/>
+								</field>
+								<field name="additionalAntArgs">
+									<String></String>
+								</field>
+								<field name="buildTarget">
+									<String></String>
+								</field>
+								<field name="buildFilePath">
+									<String></String>
+								</field>
+								<field name="ditaParams">
+									<list/>
+								</field>
+								<field name="jvmArgs">
+									<String></String>
+								</field>
+								<field name="useCustomJavaHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customJavaHomeDir">
+									<String></String>
+								</field>
+								<field name="useCustomANTHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customANTHomeDir">
+									<String></String>
+								</field>
+								<field name="workingDir">
+									<null/>
+								</field>
+								<field name="showConsoleAlways">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>DITA Map Markdown</String>
+								</field>
+								<field name="baseURL">
+									<null/>
+								</field>
+								<field name="footerURL">
+									<null/>
+								</field>
+								<field name="fOPMethod">
+									<null/>
+								</field>
+								<field name="fOProcessorName">
+									<null/>
+								</field>
+								<field name="headerURL">
+									<null/>
+								</field>
+								<field name="inputXSLURL">
+									<null/>
+								</field>
+								<field name="inputXMLURL">
+									<null/>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>DITAMAP</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputResource">
+									<null/>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<String></String>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>DITA-OT</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</ditaScenario>
+							<ditaScenario>
+								<field name="useXEP">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useAntennaHouse">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -7359,7 +7127,7 @@ self::*[contains(@class," map/reltable ")]][1]
 											<null/>
 										</field>
 										<field name="ditavalFilePath">
-											<String></String>
+											<null/>
 										</field>
 										<field name="simpleFiltersList">
 											<list/>
@@ -7485,7 +7253,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									</list>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -7594,6 +7362,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -7618,7 +7389,7 @@ self::*[contains(@class," map/reltable ")]][1]
 											<null/>
 										</field>
 										<field name="ditavalFilePath">
-											<String></String>
+											<null/>
 										</field>
 										<field name="simpleFiltersList">
 											<list/>
@@ -7653,34 +7424,10 @@ self::*[contains(@class," map/reltable ")]][1]
 									<String></String>
 								</field>
 								<field name="ditaParams">
-									<list>
-										<ditaParameter>
-											<field name="name">
-												<String>dita.dir</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>${configured.ditaot.dir}</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>3</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-									</list>
+									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -7789,6 +7536,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -7851,7 +7601,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -8120,6 +7870,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -8144,7 +7897,7 @@ self::*[contains(@class," map/reltable ")]][1]
 											<null/>
 										</field>
 										<field name="ditavalFilePath">
-											<String></String>
+											<null/>
 										</field>
 										<field name="simpleFiltersList">
 											<list/>
@@ -8179,34 +7932,10 @@ self::*[contains(@class," map/reltable ")]][1]
 									<String></String>
 								</field>
 								<field name="ditaParams">
-									<list>
-										<ditaParameter>
-											<field name="name">
-												<String>dita.dir</String>
-											</field>
-											<field name="description">
-												<null/>
-											</field>
-											<field name="value">
-												<String>${configured.ditaot.dir}</String>
-											</field>
-											<field name="defaultValue">
-												<null/>
-											</field>
-											<field name="type">
-												<Integer>3</Integer>
-											</field>
-											<field name="possibleValues">
-												<null/>
-											</field>
-											<field name="possibleValuesDescriptions">
-												<null/>
-											</field>
-										</ditaParameter>
-									</list>
+									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -8315,6 +8044,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -8339,7 +8071,7 @@ self::*[contains(@class," map/reltable ")]][1]
 											<null/>
 										</field>
 										<field name="ditavalFilePath">
-											<String></String>
+											<null/>
 										</field>
 										<field name="simpleFiltersList">
 											<list/>
@@ -8377,7 +8109,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -8486,6 +8218,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -8548,7 +8283,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									<list/>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -8657,6 +8392,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -8743,7 +8481,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									</list>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -8852,6 +8590,9 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="useAntennaHouse">
 									<Boolean>false</Boolean>
 								</field>
+								<field name="useDITAScript">
+									<Boolean>true</Boolean>
+								</field>
 								<field name="baseDir">
 									<String>${cfd}</String>
 								</field>
@@ -8941,7 +8682,7 @@ self::*[contains(@class," map/reltable ")]][1]
 									</list>
 								</field>
 								<field name="jvmArgs">
-									<String>-Xmx384m</String>
+									<String></String>
 								</field>
 								<field name="useCustomJavaHome">
 									<Boolean>false</Boolean>
@@ -9080,6 +8821,9 @@ self::*[contains(@class," map/reltable ")]][1]
 											<field name="validationSchema">
 												<null/>
 											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
 										</validationUnit>
 										<validationUnit>
 											<field name="validationType">
@@ -9111,6 +8855,9 @@ self::*[contains(@class," map/reltable ")]][1]
 											<field name="validationSchema">
 												<null/>
 											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
 										</validationUnit>
 									</list>
 								</field>
@@ -9119,6 +8866,120 @@ self::*[contains(@class," map/reltable ")]][1]
 								</field>
 								<field name="name">
 									<String>DITA Map</String>
+								</field>
+							</validationScenario>
+							<validationScenario>
+								<field name="pairs">
+									<list>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/xml</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>DITA Validation</String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<null/>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
+										</validationUnit>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/any</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>&lt;Default engine></String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>true</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>true</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<null/>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
+										</validationUnit>
+										<validationUnit>
+											<field name="validationType">
+												<validationUnitType>
+													<field name="validationInputType">
+														<String>text/xml</String>
+													</field>
+												</validationUnitType>
+											</field>
+											<field name="url">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="validationEngine">
+												<validationEngine>
+													<field name="engineType">
+														<String>DITA Map Validation and Completeness Check</String>
+													</field>
+													<field name="allowsAutomaticValidation">
+														<Boolean>false</Boolean>
+													</field>
+												</validationEngine>
+											</field>
+											<field name="allowAutomaticValidation">
+												<Boolean>false</Boolean>
+											</field>
+											<field name="extensions">
+												<null/>
+											</field>
+											<field name="validationSchema">
+												<null/>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
+											</field>
+										</validationUnit>
+									</list>
+								</field>
+								<field name="type">
+									<String>Validation_scenario</String>
+								</field>
+								<field name="name">
+									<String>DITA Map Validation and Completeness Check</String>
 								</field>
 							</validationScenario>
 						</validationScenario-array>

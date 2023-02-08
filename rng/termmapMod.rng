@@ -94,7 +94,9 @@
     <div>
       <a:documentation>LONG NAME: Term Map</a:documentation>
       <define name="termmap.content">
-        <empty/>
+        <optional>
+          <ref name="title"/>
+        </optional>
         <optional>
           <ref name="topicmeta"/>
         </optional>

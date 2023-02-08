@@ -42,7 +42,8 @@ PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
 <!--doc:The <termmap> element is the root element of a terminology map. A term map connects the termentry elements and forms a terminology database.
 Category: Termmap elements-->
 <!ENTITY % termmap.content
-                                    "((%topicmeta;)?,
+                                    "((%title;)?,
+                                      (%topicmeta;)?,
                                       (%anchor; |
                                        %data.elements.incl; |
                                        %navref; |

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE termmap PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN" "termmap.dtd">
 <termmap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+  <title>Doctales Termbrowser</title>
   <termgroup>
     <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
     <termref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem"/>
@@ -32,7 +33,6 @@
     <termref href="rearFogLamp.dita" keys="rearFogLamp"/>
     <termref href="rearPositionLamp.dita" keys="rearPositionLamp"/>
     <termref href="reversingLamp.dita" keys="reversingLamp"/>
-    <termref href="steeringWheel.dita" keys="steeringWheel"/>
     <termref href="transmission.dita" keys="transmission"/>
     <termref href="truck.dita" keys="truck" termdomain="cargo"/>
     <termref href="turnSignal.dita" keys="turnSignal"/>

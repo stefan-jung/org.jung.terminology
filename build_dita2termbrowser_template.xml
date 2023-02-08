@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless">
-    
-    <target name="-is-oxygen-webhelp-available">
-        <fail message="The plugin com.oxygen.webhelp is not available">
-            <condition>
-                <or>
-                    <not>
-                        <isset property="dita.plugin.com.oxygenxml.webhelp.responsive.dir"/>
-                    </not>
-                    <not>
-                        <isset property="dita.plugin.com.oxygenxml.webhelp.classic.dir"/>
-                    </not>
-                </or>
-            </condition>
-        </fail>
-    </target>
-    
+        
     <!-- 
         WORKAROUND: It is mandatory to call init-properties here.
         Otherwise, the dita.temp.dir property would not be available
         in the termbrowser-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
-    
     <target name="dita2termbrowser-responsive"
-        depends="-is-oxygen-webhelp-available,
-                 init-properties,
+        depends="init-properties,
+                 -is-webhelp-responsive-available,
                  dita2webhelp-responsive,
                  -generate-termstats,
                  -generate-semanticnet">
     </target>
     
+    <!--
+        Check the availability of the plugin by checking the property.
+        We cannot make this a hard dependency in the plugin.xml,
+        otherwise the plugin might not work in specific environments.
+    -->
+    <target name="-is-webhelp-responsive-available">
+        <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
+            com.oxygenxml.webhelp.responsive not found
+        </fail>
+        <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
+            com.oxygenxml.webhelp.responsive not found
+        </echo>
+    </target>
+    
     <target name="-is-xmltask-available">
-        <pathconvert refid="dost.class.path" property="dost.class.path.property"/>
-        <condition property="xmltask-available" value="true">
-            <contains string="${dost.class.path.property}" substring="xmltask"/>
-        </condition>
-        <fail unless="xmltask-available">xmltask.jar is not found on classpath</fail>
+        <fail unless:set="dita.plugin.org.doctales.xmltask.dir">
+            org.doctales.xmltask not found
+        </fail>
+        <echo if:set="dita.plugin.org.doctales.xmltask.dir">
+            org.doctales.xmltask found
+        </echo>
     </target>
     
     <target name="-generate-termstats">
@@ -348,7 +347,7 @@
             The vis.js script needs to be injected as the first lib to the head.
             We have no extension point for this, so we need to make this dirty.
         -->
-        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/webhelp-skin/header/vis.js.txt" property="vis.js.txt"/>
+        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
         <replaceregexp file="${output.dir}/${semantic-net-file-html}"
             match="&lt;script"
             replace="${vis.js.txt}&lt;script"
