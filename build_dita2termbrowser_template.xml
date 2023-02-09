@@ -285,6 +285,8 @@
             filedirparameter="FILEDIR">
             <xmlcatalog refid="dita.catalog"/>
             <param name="language" expression="${args.default.language}"/>
+            <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
+            <param name="file.separator" expression="${file.separator}"/>
         </xslt>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
