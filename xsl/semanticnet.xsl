@@ -8,8 +8,9 @@
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
     <xsl:import href="termbrowser-utility.xsl"/>
     
-    <xsl:output method="xml"
+    <xsl:output method="xhtml"
         encoding="UTF-8"
+        indent="yes"
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     
@@ -41,7 +42,7 @@
                         font: 10pt arial;
                     }
                     #mynetwork {
-                        width: 960px;
+                        width: 100%;
                         height: 540px;
                         border: 1px solid lightgray;
                     }
@@ -61,7 +62,7 @@
                     }
                     #wrapper {
                         position: relative;
-                        width: 960px;
+                        width: 100%;
                         height: 540px;
                     }
                     #text {
@@ -114,8 +115,14 @@
                         background: rgb(0, 173, 246); /* Old browsers */
                         box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
                     }
+                    #search-input {
+                        width: 200px;
+                    }
                     #legend {
                         margin-top: 1.2em;
+                    }
+                    .legend_col2 {
+                        width: 100%;
                     }
                 </style>
                 <xsl:value-of select="$newline"/>
@@ -126,7 +133,6 @@
                     function draw() {
                         nodes = [<xsl:apply-templates mode="nodes"/>];
                         edges = [<xsl:apply-templates mode="edges"/>];
-                        var mainId = 5;
                         var container = document.getElementById('mynetwork');
                         var data = {
                             nodes: nodes,
@@ -225,20 +231,17 @@
                     termContainer.appendChild(node);
                         document.getElementById("t_definition").textContent = result[0].definition;
                     }
+                    
+                    document.addEventListener("DOMContentLoaded", function() {
+                        draw();
+                        var data = [<xsl:apply-templates mode="search"/>];
+                        $( "#search-input" ).autocomplete({
+                            source: data
+                        });
+                    });
+                    
                 </script>
-            <!--<script type="text/javascript">
-                if (document.addEventListener) { // IE >= 9; other browsers
-                document.addEventListener('contextmenu', function(e) {
-                alert("You've tried to open context menu"); //here you draw your own menu
-                e.preventDefault();
-                }, false);
-                } else { // IE < 9
-                     document.attachEvent('oncontextmenu', function() {
-                         alert("You've tried to open context menu");
-                         window.event.returnValue = false;
-                     });
-                 }
-               </script>-->
+                
             </head>
             <body>
                 <div id="search">
@@ -248,12 +251,13 @@
                                 <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
                             </label>
                             <input id="search-input" class="form-control autocomplete" type="text"><!-- --></input>
-                            <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus($('.autocomplete').val());">
+                            <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus(document.getElementById('search-input').value.toLowerCase());">
                                 <xsl:value-of select="doctales:getString($language, 'Search')"/>
                             </button>
                         </div>
                     </div>
                 </div>
+                
                 <div id="wrapper">
                     <div id="mynetwork">
                         <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
@@ -270,17 +274,6 @@
                     </div>
                 </div>
                 <script>
-                    $(function() {
-                        draw();
-                    });
-                </script>
-                <script>
-                    $(document).ready(function() {
-                        var data = [<xsl:apply-templates mode="search"/>];
-                        $(".autocomplete").autocomplete({
-                            source: data
-                        });
-                    });
                     
                     function termFocus(term) {
                         network.fit();
@@ -318,28 +311,37 @@
     
     <!-- Generate data set for autocomplete search box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="search">
+        <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
-        <xsl:value-of select="'{value:''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
+        <xsl:value-of select="'{value:''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
     </xsl:template>
 
     <!-- Generate nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="nodes">
+        <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="delim" as="xs:string" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''"/>
-        <xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>
+        <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
+        <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
     </xsl:template>
     
     <!-- Generate edges between nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="edges">
-        <xsl:variable name="key" select="@keys" as="xs:string"/>
+        <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename" as="xs:string"/>
         
-        <xsl:if test="$debugging.mode = 'true'">
+<!--        <xsl:if test="$debugging.mode = 'true'">
             <xsl:message select="'[DEBUG] : Generate edges for file: ' || $filepath"/>
         </xsl:if>
-        
+-->        
         <xsl:if test="document($filepath)/descendant::*[contains(@class, ' termentry/termRelation ')]">
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, 'termentry/')]">
+            <xsl:for-each select="document($filepath)/descendant::*[
+                contains(@class, 'termentry/antonym') 
+                or contains(@class, 'termentry/hypernym')
+                or contains(@class, 'termentry/hyponym')
+                or contains(@class, 'termentry/instaceOf')
+                or contains(@class, 'termentry/partOf')
+                or contains(@class, 'termentry/relatedTerm')]">
                 <xsl:variable name="relationString" select="
                     if (contains(@class, 'antonym')) then 'IsAntonymOf'
                     else if (contains(@class, 'hypernym')) then 'IsHypernymOf'
@@ -358,10 +360,13 @@
                     else if (contains(@class, 'relatedTerm')) then 'Is Related To'
                     else 'Is Related To'
                     "/>
+                <xsl:variable name="keyref" select="lower-case(@keyref)" as="xs:string"/>
                 <xsl:if test="$debugging.mode = 'true'">
                     <xsl:message select="'[DEBUG]: doctales:getString(' || $language || ', ' || $labelString || ')'"/>
                 </xsl:if>
-                <xsl:value-of select="'{id: ''' || @keyref || $relationString || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, $labelString) || '''},' || $newline"/>
+                <xsl:if test="$key != '' and @keyref != ''">
+                    <xsl:value-of select="'{from: ''' || $keyref || ''', to : ''' || $key || ''', label: ''' || doctales:getString($language, $labelString) || '''},' || $newline"/>
+                </xsl:if>
             </xsl:for-each>
         </xsl:if>
     </xsl:template>
@@ -372,11 +377,12 @@
         <xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>
         <xsl:variable name="filename" select="@href"/>
         <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename"/>
+        <xsl:variable name="quot">"</xsl:variable>
         
         <xsl:value-of select="
-            '{key: ''' || $key || ''', term: ''' || $term || 
-            ''', definition: ''' || document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')] || 
-            ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || $newline"/>
+            '{key: ' || $quot || $key || $quot || ', term: ' || $quot || $term || $quot ||
+            ', definition: ' || $quot || doctales:cleanDefinition(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || $quot || 
+            ', href: ' || $quot || replace(normalize-unicode($filename), '.dita', '.html') || $quot || '},' || $newline"/>
     </xsl:template>
     
     <!-- Fall Through Templates -->
@@ -385,5 +391,11 @@
     <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta search"/>
     <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta search"/>
     <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="nodes edges termmeta search"/>
+    
+    <!-- Escape or remove conflicting characters -->
+    <xsl:function name="doctales:cleanDefinition" as="xs:string">
+        <xsl:param name="definition" as="xs:string"/>
+        <xsl:sequence select="replace($definition, '&quot;', '')"/>
+    </xsl:function>
 
 </xsl:stylesheet>
