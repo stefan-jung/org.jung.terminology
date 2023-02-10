@@ -10,7 +10,6 @@
     
     <xsl:output method="xml"
         encoding="UTF-8"
-        indent="yes"
         doctype-system="about:legacy-compat"
         omit-xml-declaration="yes"/>
     
@@ -333,36 +332,36 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="edges">
         <xsl:variable name="key" select="@keys" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
-        <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename"/>
+        <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename" as="xs:string"/>
         
         <xsl:if test="$debugging.mode = 'true'">
             <xsl:message select="'[DEBUG] : Generate edges for file: ' || $filepath"/>
         </xsl:if>
         
         <xsl:if test="document($filepath)/descendant::*[contains(@class, ' termentry/termRelation ')]">
-            <!-- antonym -->
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, ' termentry/antonym ')]">
-                <xsl:value-of select="'{id: ''' || @keyref || 'IsAntonymOf' || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, 'Is Antonym Of') || '''},' || $newline"/>
-            </xsl:for-each>
-            <!-- hypernym -->
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, ' termentry/hypernym ')]">
-                <xsl:value-of select="'{id: ''' || @keyref || 'IsHypernymOf' || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, 'Is Hypernym Of') || '''},' || $newline"/>
-            </xsl:for-each>
-            <!-- hyponym -->
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, ' termentry/hyponym ')]">
-                <xsl:value-of select="'{id: ''' || @keyref || 'IsHyponymOf' || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, 'Is Hyponym Of') || '''},' || $newline"/>
-            </xsl:for-each>
-            <!-- instanceOf -->
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, ' termentry/instanceOf ')]">
-                <xsl:value-of select="'{id: ''' || @keyref || 'IsInstanceOf' || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, 'Is Instance Of') || '''},' || $newline"/>
-            </xsl:for-each>
-            <!-- partOf -->
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, ' termentry/partOf ')]">
-                <xsl:value-of select="'{id: ''' || @keyref || 'IsPartOf' || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, 'Is Part Of') || '''},' || $newline"/>
-            </xsl:for-each>
-            <!-- relatedTerm -->
-            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, ' termentry/relatedTerm ')]">
-                <xsl:value-of select="'{id: ''' || @keyref || 'IsRelatedWith' || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, 'Is Related Of') || '''},' || $newline"/>
+            <xsl:for-each select="document($filepath)/descendant::*[contains(@class, 'termentry/')]">
+                <xsl:variable name="relationString" select="
+                    if (contains(@class, 'antonym')) then 'IsAntonymOf'
+                    else if (contains(@class, 'hypernym')) then 'IsHypernymOf'
+                    else if (contains(@class, 'hyponym')) then 'IsHyponymOf'
+                    else if (contains(@class, 'instanceOf')) then 'IsInstanceOf'
+                    else if (contains(@class, 'partOf')) then 'IsPartOf'
+                    else if (contains(@class, 'relatedTerm')) then 'IsRelatedTo'
+                    else 'IsRelatedTo'
+                    "/>
+                <xsl:variable name="labelString" select="
+                    if (contains(@class, 'antonym')) then 'Is Antonym Of'
+                    else if (contains(@class, 'hypernym')) then 'Is Hypernym Of'
+                    else if (contains(@class, 'hyponym')) then 'Is Hyponym Of'
+                    else if (contains(@class, 'instanceOf')) then 'Is Instance Of'
+                    else if (contains(@class, 'partOf')) then 'Is Part Of'
+                    else if (contains(@class, 'relatedTerm')) then 'Is Related To'
+                    else 'Is Related To'
+                    "/>
+                <xsl:if test="$debugging.mode = 'true'">
+                    <xsl:message select="'[DEBUG]: doctales:getString(' || $language || ', ' || $labelString || ')'"/>
+                </xsl:if>
+                <xsl:value-of select="'{id: ''' || @keyref || $relationString || $key || ''', from: ''' || @keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || doctales:getString($language, $labelString) || '''},' || $newline"/>
             </xsl:for-each>
         </xsl:if>
     </xsl:template>
@@ -371,19 +370,13 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>
-        <xsl:variable name="href" select="@href"/>
-        <xsl:text>{key: '</xsl:text>
-        <xsl:value-of select="$key"/>
-        <xsl:text>', term: '</xsl:text>
-        <xsl:value-of select="$term"/>
-        <xsl:text>', definition: '</xsl:text>
-        <xsl:variable name="definitionText">
-            <xsl:value-of select="doctales:normalize(document(./$href)/descendant::*[contains(@class, ' termentry/definitionText ')])"/>
-        </xsl:variable>
-        <xsl:value-of select="normalize-unicode($definitionText)"/>
-        <xsl:text>', href: '</xsl:text>
-        <xsl:value-of select="replace(normalize-unicode($href), '.dita', '.html')"/>
-        <xsl:text>'},</xsl:text>
+        <xsl:variable name="filename" select="@href"/>
+        <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename"/>
+        
+        <xsl:value-of select="
+            '{key: ''' || $key || ''', term: ''' || $term || 
+            ''', definition: ''' || document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')] || 
+            ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || $newline"/>
     </xsl:template>
     
     <!-- Fall Through Templates -->

@@ -27,7 +27,7 @@
     <str name="Is Hyponym Of">is hyponym of</str>
     <str name="Is Instance Of">is instance of</str>
     <str name="Is Not Recommended In">is not recommended in</str>
-    <str name="Is Part Of">Is Part of</str>
+    <str name="Is Part Of">is part of</str>
     <str name="Is Preferred In">is preferred in</str>
     <str name="Is Related To">is related to</str>
     <str name="No Termconflicts Found">No termconflicts found</str>
