@@ -1224,7 +1224,9 @@
       </define>
       <define name="termContextText.attributes">
         <ref name="univ-atts"/>
-        <attribute name="outputclass"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
       </define>
       <define name="termContextText.element">
         <element name="termContextText" dita:longName="Term Context Text">
@@ -1248,7 +1250,9 @@
       </define>
       <define name="termContextSource.attributes">
         <ref name="univ-atts"/>
-        <attribute name="outputclass"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
       </define>
       <define name="termContextSource.element">
         <element name="termContextSource" dita:longName="Term Context Source">
