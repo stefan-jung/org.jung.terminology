@@ -1245,6 +1245,8 @@
       <define name="termContextSource.content">
         <optional>
           <ref name="sourceName"/>
+        </optional>
+        <optional>
           <ref name="sourceReference"/>
         </optional>
       </define>
