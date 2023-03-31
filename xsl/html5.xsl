@@ -9,160 +9,137 @@
     
     <!-- Definition -->
     <xsl:template match="*[contains(@class, ' termentry/definition ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel panel-default definition</xsl:attribute>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-heading</xsl:attribute>
-                <xsl:element name="h3">
-                    <xsl:attribute name="class">panel-title</xsl:attribute>
+        <div class="panel panel-default definition">
+            <div class="panel-heading">
+                <h3 class="panel-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Definition'"/>
                     </xsl:call-template>
-                </xsl:element>
-            </xsl:element>
+                </h3>
+            </div>
             <xsl:apply-templates/>
-        </xsl:element>
+        </div>
     </xsl:template>
 
     <!-- Definition Text -->
     <xsl:template match="*[contains(@class, ' termentry/definitionText ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel-body shortdesc definitionText</xsl:attribute>
+        <div class="panel-body shortdesc definitionText">
             <xsl:apply-templates/>
-        </xsl:element>
+        </div>
     </xsl:template>
 
     <!-- Definition Source -->
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel-footer</xsl:attribute>
-            <xsl:element name="b">
+        <div class="panel-footer">
+            <b>
                 <xsl:call-template name="getVariable">
                     <xsl:with-param name="id" select="'Definition Source'"/>
                 </xsl:call-template>
                 <xsl:call-template name="getVariable">
                     <xsl:with-param name="id" select="'Delimiter String'"/>
                 </xsl:call-template>
-            </xsl:element>
+            </b>
             <xsl:apply-templates/>
-        </xsl:element>
+        </div>
     </xsl:template>
     
     <!-- Alternative Definition -->
     <xsl:template match="*[contains(@class, ' termentry/altDefinition ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel panel-default altDefinition</xsl:attribute>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-heading</xsl:attribute>
-                <xsl:element name="h3">
-                    <xsl:attribute name="class">panel-title</xsl:attribute>
+        <div class="panel panel-default altDefinition">
+            <div class="panel-heading">
+                <h3 class="panel-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Alternative Definition'"/>
                     </xsl:call-template>
-                </xsl:element>
-            </xsl:element>
+                </h3>
+            </div>
             <xsl:apply-templates/>
-        </xsl:element>
+        </div>
     </xsl:template>
 
     <!-- Alternative Definition Text -->
     <xsl:template match="*[contains(@class, ' termentry/altDefinitionText ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel-body altDefinitionText</xsl:attribute>
+        <div class="panel-body altDefinitionText">
             <xsl:apply-templates/>
-        </xsl:element>
+        </div>
     </xsl:template>
     
     <!-- Annotation -->
     <xsl:template match="*[contains(@class, ' termentry/annotation ')][ancestor::*[contains(@class, ' termentry/termBody ')]]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel panel-default annotation</xsl:attribute>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-heading</xsl:attribute>
-                <xsl:element name="h3">
-                    <xsl:attribute name="class">panel-title</xsl:attribute>
+        <div class="panel panel-default annotation">
+            <div class="panel-heading">
+                <h3 class="panel-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Annotation'"/>
                     </xsl:call-template>
-                </xsl:element>
-            </xsl:element>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-body</xsl:attribute>
+                </h3>
+            </div>
+            <div class="panel-body">
                 <xsl:apply-templates/>
-            </xsl:element>
-        </xsl:element>
+            </div>
+        </div>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/termBody ')]">
         <!-- Does the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
-            <xsl:element name="table">
-                <xsl:attribute name="class">termTable table table-striped table-bordered table-hover table-condensed</xsl:attribute>
-                <xsl:element name="tr">
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+            <table class="termTable table table-striped table-bordered table-hover table-condensed">
+                <tr>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+                    </th>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Type'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+                    </th>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Language'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+                    </th>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Usage'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+                    </th>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Domain'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+                    </th>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Source'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
+                    </th>
+                    <th class="termTable">
                         <xsl:attribute name="class">termTable</xsl:attribute>
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Context'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                    <xsl:element name="th">
-                        <xsl:attribute name="class">termTable</xsl:attribute>
+                    </th>
+                    <th class="termTable">
                         <xsl:call-template name="getVariable">
                             <xsl:with-param name="id" select="'Term Annotations'"/>
                         </xsl:call-template>
-                    </xsl:element>
-                </xsl:element>
+                    </th>
+                </tr>
                 <xsl:apply-templates/>
-            </xsl:element>
+            </table>
         </xsl:if>
     </xsl:template>
        
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')]">
-        <xsl:element name="tr">
+        <tr>
             <!-- Term -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]"/>
-            </xsl:element>
+            </td>
             <!-- Type -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:choose>
                     <xsl:when test="contains(@class, ' termentry/fullForm ')">
                         <xsl:call-template name="getVariable">
@@ -185,74 +162,64 @@
                         </xsl:call-template>
                     </xsl:when>
                 </xsl:choose>
-            </xsl:element>
+            </td>
             <!-- Language -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:call-template name="getFlag">
                     <xsl:with-param name="language" select="@language"/>
                     <xsl:with-param name="languageCode" select="true()"/>
                 </xsl:call-template>
-            </xsl:element>
+            </td>
             <!-- Usage -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:choose>
                     <xsl:when test="contains(@usage, 'preferred')">
-                        <xsl:element name="div">
-                            <xsl:attribute name="class">alert alert-success</xsl:attribute>
+                        <div class="alert alert-success">
                             <xsl:call-template name="getVariable">
                                 <xsl:with-param name="id" select="'Usage Allowed'"/>
                             </xsl:call-template>
-                        </xsl:element>
+                        </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'notRecommended')">
-                        <xsl:element name="div">
-                            <xsl:attribute name="class">alert alert-danger</xsl:attribute>
+                        <div class="alert alert-danger">
                             <xsl:call-template name="getVariable">
                                 <xsl:with-param name="id" select="'Usage Deprecated'"/>
                             </xsl:call-template>
-                        </xsl:element>
+                        </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'admitted')">
-                        <xsl:element name="div">
-                            <xsl:attribute name="class">alert alert-warning</xsl:attribute>
+                        <div class="alert alert-warning">
                             <xsl:call-template name="getVariable">
                                 <xsl:with-param name="id" select="'Usage Admitted'"/>
                             </xsl:call-template>
-                        </xsl:element>
+                        </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'obsolete')">
-                        <xsl:element name="div">
-                            <xsl:attribute name="class">alert alert-info</xsl:attribute>
+                        <div class="alert alert-info">
                             <xsl:call-template name="getVariable">
                                 <xsl:with-param name="id" select="'Usage Obsolete'"/>
                             </xsl:call-template>
-                        </xsl:element>
+                        </div>
                     </xsl:when>
                 </xsl:choose>
-            </xsl:element>
+            </td>
             <!-- Domain -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:value-of select="@termdomain"/>
-            </xsl:element>
+            </td>
             <!-- Source -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:apply-templates select="*[contains(@class, ' termentry/termSource ')]"/>
-            </xsl:element>
+            </td>
             <!-- Context -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:apply-templates select="*[contains(@class, ' termentry/termContext ')]"/>
-            </xsl:element>
+            </td>
             <!-- Annotation -->
-            <xsl:element name="td">
-                <xsl:attribute name="class">termTable</xsl:attribute>
+            <td class="termTable">
                 <xsl:apply-templates select="*[contains(@class, ' termentry/annotation ')]"/>
-            </xsl:element>
-        </xsl:element>
+            </td>
+        </tr>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/sourceName ')]">
@@ -261,25 +228,20 @@
     
     <!-- Agreed With -->
     <xsl:template match="*[contains(@class, ' termentry/agreedWith ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel panel-default agreedWith</xsl:attribute>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-heading</xsl:attribute>
-                <xsl:element name="h3">
-                    <xsl:attribute name="class">panel-title</xsl:attribute>
+        <div class="panel panel-default agreedWith">
+            <div class="panel-heading">
+                <h3 class="panel-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Agreed With'"/>
                     </xsl:call-template>
-                </xsl:element>
-            </xsl:element>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-body</xsl:attribute>
-                <xsl:element name="ul">
-                    <xsl:attribute name="class">list-unstyled</xsl:attribute>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled">
                     <xsl:apply-templates/>    
-                </xsl:element>
-            </xsl:element>
-        </xsl:element>
+                </ul>
+            </div>
+        </div>
     </xsl:template>
     
     <!-- Figure -->
@@ -303,28 +265,24 @@
     
     <!-- Note -->
     <xsl:template match="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' topic/note ')]">
-        <xsl:element name="div">
-            <xsl:attribute name="class">panel panel-primary</xsl:attribute>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-heading</xsl:attribute>
-                <xsl:element name="h3">
-                    <xsl:attribute name="class">panel-title</xsl:attribute>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Annotation'"/>
                     </xsl:call-template>
-                </xsl:element>
-            </xsl:element>
-            <xsl:element name="div">
-                <xsl:attribute name="class">panel-body</xsl:attribute>
+                </h3>
+            </div>
+            <div class="panel-body">
                 <xsl:apply-templates/>
-            </xsl:element>
-        </xsl:element>
+            </div>
+        </div>
     </xsl:template>
 
     <xsl:template match="*[contains(@class, ' termentry/termCommitteeMember ')]">
-        <xsl:element name="li">
+        <li>
             <xsl:apply-templates/>
-        </xsl:element>
+        </li>
     </xsl:template>
     
     <!-- Hypernyms have their own group. -->
