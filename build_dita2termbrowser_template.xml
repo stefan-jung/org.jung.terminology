@@ -25,7 +25,7 @@
             com.oxygenxml.webhelp.responsive not found
         </fail>
         <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-            com.oxygenxml.webhelp.responsive not found
+            com.oxygenxml.webhelp.responsive found
         </echo>
     </target>
     
