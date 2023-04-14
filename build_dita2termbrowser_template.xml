@@ -25,7 +25,7 @@
             com.oxygenxml.webhelp.responsive not found
         </fail>
         <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-            com.oxygenxml.webhelp.responsive found
+            com.oxygenxml.webhelp.responsive not found
         </echo>
     </target>
     
@@ -273,21 +273,31 @@
     <target if:set="generate-semanticnet" name="semanticnet" depends="-is-xmltask-available">
         <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <xslt basedir="${dita.temp.dir}"
+        <!--<xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
             out="${dita.temp.dir}${file.separator}${basename}_net.html"
-            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
             extension=".html"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl"
-            filenameparameter="FILENAME" 
-            filedirparameter="FILEDIR">
+            style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl">
             <xmlcatalog refid="dita.catalog"/>
             <param name="language" expression="${args.default.language}"/>
             <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
             <param name="file.separator" expression="${file.separator}"/>
-        </xslt>
+        </xslt>-->
+        <pipeline>
+            <xslt basedir="${dita.temp.dir}"
+                destdir="${output.dir}"
+                in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+                out="${dita.temp.dir}${file.separator}${basename}_net.html"
+                extension=".html"
+                style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl">
+                <xmlcatalog refid="dita.catalog"/>
+                <param name="language" expression="${args.default.language}"/>
+                <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
+                <param name="file.separator" expression="${file.separator}"/>
+            </xslt>
+        </pipeline>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
         
