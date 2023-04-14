@@ -330,10 +330,10 @@
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename" as="xs:string"/>
         
-<!--        <xsl:if test="$debugging.mode = 'true'">
+        <xsl:if test="$debugging.mode = 'true'">
             <xsl:message select="'[DEBUG] : Generate edges for file: ' || $filepath"/>
         </xsl:if>
--->        
+        
         <xsl:if test="document($filepath)/descendant::*[contains(@class, ' termentry/termRelation ')]">
             <xsl:for-each select="document($filepath)/descendant::*[
                 contains(@class, 'termentry/antonym') 
