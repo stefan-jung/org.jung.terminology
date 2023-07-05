@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN"
+PUBLIC "-//STEFAN JUNG//ELEMENTS DITA DOCTALES SemanticNet//EN"
       Delivered as file "semanticnet.mod"  -->
 <!-- ================================================================================ -->
 

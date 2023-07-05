@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN"
+PUBLIC "-//STEFAN JUNG//DTD DITA TermStats//EN"
       Delivered as file "termstats.dtd"  -->
 <!-- ================================================================================ -->
 
@@ -16,7 +16,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN"
 >%concept-dec;
 
 <!ENTITY % termstats-dec     
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES TermStats//EN" 
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA DOCTALES TermStats//EN" 
          "termstats.ent"
 >%termstats-dec;
 
@@ -84,7 +84,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN"
 >%ui-d-dec;
 
 <!ENTITY % termstats-d-dec     
-  PUBLIC "-//DOCTALES//ENTITIES DITA Terminology Statistics Domain//EN" 
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA Terminology Statistics Domain//EN" 
          "termstatsDomain.ent"                                                       
 >%termstats-d-dec;
 
@@ -204,7 +204,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN"
 >%concept-type;
 
 <!ENTITY % termstats-typemod
-  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES TermStats//EN"
+  PUBLIC "-//STEFAN JUNG//ELEMENTS DITA TermStats//EN"
          "termstats.mod">
 %termstats-typemod;
 
@@ -228,7 +228,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN"
 >%svg-d-def;
 
 <!ENTITY % termstats-d-def
-  PUBLIC "-//DOCTALES//ELEMENTS DITA 1.3 Terminology Statistics Domain//EN"
+  PUBLIC "-//STEFAN JUNG//ELEMENTS DITA 1.3 Terminology Statistics Domain//EN"
          "termstatsDomain.mod"
 >%termstats-d-def;
 

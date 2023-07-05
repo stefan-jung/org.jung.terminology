@@ -15,7 +15,7 @@
           PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
 
           Refer to this file by the following public identifier or an appropriate system identifier
-          PUBLIC "-//DOCTALES//ELEMENTS DITA Termentry//EN"
+          PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Termentry//EN"
 
           Delivered as file "termentryMod.rng"
 
@@ -28,7 +28,7 @@
           ORIGINAL CREATION DATE:
                     March 2017
 
-                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    Copyright (c) Stefan Jung 2023. All rights reserved.
                     All Rights Reserved.
                                                    
           UPDATES:
@@ -40,8 +40,8 @@
       <moduleType>topic</moduleType>
       <moduleShortName>termentry</moduleShortName>
       <modulePublicIds>
-        <dtdMod>-//DOCTALES//ELEMENTS DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdMod>
-        <dtdEnt>-//DOCTALES//ENTITIES DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdEnt>
+        <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdMod>
+        <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdEnt>
         <xsdMod>urn:doctales:dita:xsd:termentryMod.xsd<var presep=":" name="ditaver"/></xsdMod>
         <xsdGrp>urn:doctales:dita:xsd:termentryGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
         <rncMod>urn:doctales:dita:rnc:termentryMod.rnc<var presep=":" name="ditaver"/></rncMod>

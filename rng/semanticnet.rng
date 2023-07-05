@@ -3,16 +3,15 @@
 <?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-    <moduleTitle>DOCTALES Semantic Net Shell</moduleTitle>
+    <moduleTitle>Semantic Net Shell</moduleTitle>
     <headerComment xml:space="preserve">
 ========================================================================================================================
                                                          HEADER
 ========================================================================================================================
           Darwin Information Typing Architecture (DITA) Version 1.3
-          DOCTALES Specialization
-          11.01.2017
-          Copyright (c) DOCTALES 2017. All rights reserved.
-          Source: https://doctales.atlassian.net/wiki
+          Stefan Jung Specialization
+          Copyright (c) Stefan Jung 2023. All rights reserved.
+          Source: https://stefan-jung.org
 
 ========================================================================================================================
           MODULE:   DITA Semantic Net Shell
@@ -24,12 +23,12 @@
 
           Refer to this file by the following public identifier or an appropriate system identifier
 
-          PUBLIC "-//DOCTALES//DTD DITA Semantic Net//EN"
+          PUBLIC "-//STEFAN JUNG//DTD DITA Semantic Net//EN"
           
           The public ID above refers to the latest version of this DTD.
           To refer to this specific version, you may use this value:
 
-          PUBLIC "-//DOCTALES//DTD DITA 1.3 Semantic Net//EN"
+          PUBLIC "-//STEFAN JUNG//DTD DITA 1.3 Semantic Net//EN"
 
 ========================================================================================================================
 
@@ -40,19 +39,16 @@
           ORIGINAL CREATION DATE:
                     January 2017                                       
 
-                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    Copyright (c) Stefan Jung 2023. All rights reserved.
                     All Rights Reserved.
                                                    
-          UPDATES:
-                    2017-01-11 SE: Initial Relax NG release
-
 ========================================================================================================================
   </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
       <moduleShortName>semanticnet</moduleShortName>
       <shellPublicIds>
-        <dtdShell>-//DOCTALES//DTD DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdShell>
+        <dtdShell>-//STEFAN JUNG//DTD DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdShell>
         <rncShell>urn:doctales:dita:rnc:semanticnet.rnc<var presep=":" name="ditaver"/></rncShell>
         <rngShell>urn:doctales:dita:rng:semanticnet.rng<var presep=":" name="ditaver"/></rngShell>
         <xsdShell>urn:doctales:dita:xsd:semanticnet.xsd<var presep=":" name="ditaver"/></xsdShell>

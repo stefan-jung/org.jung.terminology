@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
+PUBLIC "-//STEFAN JUNG//DTD DITA Termmap//EN"
       Delivered as file "termmap.dtd"  -->
 <!-- ================================================================================ -->
 
@@ -21,7 +21,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % termdomainAtt-d-dec
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
          "termdomainAttDomain.ent">
 %termdomainAtt-d-dec;
 
@@ -59,7 +59,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termmap//EN"
 %map-typemod;
 
 <!ENTITY % termmap-typemod
-  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN"
+  PUBLIC "-//STEFAN JUNG//ELEMENTS DITA DOCTALES Termmap//EN"
          "termmap.mod">
 %termmap-typemod;
 

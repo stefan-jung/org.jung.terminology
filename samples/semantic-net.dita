@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE semanticnet PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
+<!DOCTYPE semanticnet PUBLIC "-//STEFAN JUNG//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
 <semanticnet id="ui_qlt_xb4_hy">
   <title>Semantic Net</title>
   <shortdesc>The semantic net visualizes the relations between the terms.</shortdesc>

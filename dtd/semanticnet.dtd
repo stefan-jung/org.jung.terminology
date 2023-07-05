@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
+PUBLIC "-//STEFAN JUNG//DTD DITA DOCTALES SemanticNet//EN"
       Delivered as file "semanticnet.dtd"  -->
 <!-- ================================================================================ -->
 
@@ -16,7 +16,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
 >%concept-dec;
 
 <!ENTITY % semanticnet-dec     
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES SemanticNet//EN" 
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA DOCTALES SemanticNet//EN" 
          "semanticnet.ent"
 >%semanticnet-dec;
 
@@ -84,7 +84,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
 >%ui-d-dec;
 
 <!ENTITY % semanticnet-d-dec     
-  PUBLIC "-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" 
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA Semantic Net Domain//EN" 
          "semanticnetDomain.ent"                                                       
 >%semanticnet-d-dec;
 
@@ -204,7 +204,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
 >%concept-type;
 
 <!ENTITY % semanticnet-typemod
-  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN"
+  PUBLIC "-//STEFAN JUNG//ELEMENTS DITA DOCTALES SemanticNet//EN"
          "semanticnet.mod">
 %semanticnet-typemod;
 
@@ -228,7 +228,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN"
 >%svg-d-def;
 
 <!ENTITY % semanticnet-d-def
-  PUBLIC "-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN"
+  PUBLIC "-//STEFAN JUNG//ELEMENTS DITA 1.3 Semantic Net Domain//EN"
          "semanticnetDomain.mod"
 >%semanticnet-d-def;
 

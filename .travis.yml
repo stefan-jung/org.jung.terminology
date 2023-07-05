@@ -1,8 +1,0 @@
-language: java
-jdk:
-  - oraclejdk9
-script: bash travis.sh
-notifications:
-  slack:
-    rooms:
-      - doctales:aauBZMfrbD04vfiHdZ3GLXgF#terminology

@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES TermStats//EN"
+PUBLIC "-//STEFAN JUNG//ELEMENTS DITA TermStats//EN"
       Delivered as file "termstats.mod"  -->
 <!-- ================================================================================ -->
 

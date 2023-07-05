@@ -15,7 +15,7 @@
           PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
 
           Refer to this file by the following public identifier or an appropriate system identifier
-          PUBLIC "-//DOCTALES//ELEMENTS DITA Semantic Net//EN"
+          PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Semantic Net//EN"
 
           Delivered as file "semanticnetMod.rng"
 
@@ -28,7 +28,7 @@
           ORIGINAL CREATION DATE:
                     January 2017
 
-                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    Copyright (c) Stefan Jung 2023. All rights reserved.
                     All Rights Reserved.
 
           UPDATES:
@@ -40,8 +40,8 @@
       <moduleType>elementdomain</moduleType>
       <moduleShortName>semanticnet-d</moduleShortName>
       <modulePublicIds>
-        <dtdMod>-//DOCTALES//ELEMENTS DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdMod>
-        <dtdEnt>-//DOCTALES//ENTITIES DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdEnt>
+        <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdMod>
+        <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdEnt>
         <xsdMod>urn:doctales:dita:xsd:semanticnetDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
         <rncMod>urn:doctales:dita:rnc:semanticnetDomain.rnc<var presep=":" name="ditaver"/></rncMod>
         <rngMod>urn:doctales:dita:rng:semanticnetDomain.rng<var presep=":" name="ditaver"/></rngMod>

@@ -2,111 +2,70 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
   
   <group id="dtd-public-id"> 
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES Termentry//EN" uri="dtd/termentry.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termentry//EN" uri="dtd/termentry.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES TermStats//EN" uri="dtd/termstats.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 TermStats//EN" uri="dtd/termstats.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES Termmap//EN" uri="dtd/termmap.dtd"/>
-    <public publicId="-//DOCTALES//DTD DITA DOCTALES 1.3 Termmap//EN" uri="dtd/termmap.dtd"/>
+    <public publicId="-//STEFAN JUNG//DTD DITA Termentry//EN" uri="dtd/termentry.dtd"/>
+    <public publicId="-//STEFAN JUNG//DTD DITA SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
+    <public publicId="-//STEFAN JUNG//DTD DITA TermStats//EN" uri="dtd/termstats.dtd"/>
+    <public publicId="-//STEFAN JUNG//DTD DITA Termmap//EN" uri="dtd/termmap.dtd"/>
     
-    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES TermStats//EN" uri="dtd/termstats.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES TermStats//EN" uri="dtd/termstats.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.mod"/>
+    <public publicId="-//STEFAN JUNG//ELEMENTS DITA Termentry//EN" uri="dtd/termentry.mod"/>
+    <public publicId="-//STEFAN JUNG//ELEMENTS DITA SemanticNet//EN" uri="dtd/semanticnet.mod"/>
+    <public publicId="-//STEFAN JUNG//ELEMENTS DITA TermStats//EN" uri="dtd/termstats.mod"/>
+    <public publicId="-//STEFAN JUNG//ELEMENTS DITA Termmap//EN" uri="dtd/termmap.mod"/>
     
-    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termentry//EN" uri="dtd/termentry.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES TermStats//EN" uri="dtd/termstats.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES TermStats//EN" uri="dtd/termstats.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termmap//EN" uri="dtd/termmap.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA Termentry//EN" uri="dtd/termentry.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA SemanticNet//EN" uri="dtd/semanticnet.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA TermStats//EN" uri="dtd/termstats.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA Termmap//EN" uri="dtd/termmap.ent"/>
     
-    <public publicId="-//DOCTALES//ELEMENTS DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA TermStats Domain//EN" uri="dtd/termstatsDomain.mod"/>
-    <public publicId="-//DOCTALES//ELEMENTS DITA 1.3 TermStats Domain//EN" uri="dtd/termstatsDomain.mod"/>
+    <public publicId="-//STEFAN JUNG//ELEMENTS DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
+    <public publicId="-//STEFAN JUNG//ELEMENTS DITA TermStats Domain//EN" uri="dtd/termstatsDomain.mod"/>
     
-    <public publicId="-//DOCTALES//ENTITIES DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA TermStats Domain//EN" uri="dtd/termstatsDomain.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 TermStats Domain//EN" uri="dtd/termstatsDomain.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA TermStats Domain//EN" uri="dtd/termstatsDomain.ent"/>
     
-    <public publicId="-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
-    <public publicId="-//DOCTALES//ENTITIES DITA 1.3 DOCTALES Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
+    <public publicId="-//STEFAN JUNG//ENTITIES DITA Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
   </group>
   
   <group id="rng-public-id">
-    <public publicId="urn:doctales:dita:rng:semanticnet.rng:1.3" uri="rng/semanticnet.rng"/>
-    <public publicId="urn:doctales:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
-    <public publicId="urn:doctales:dita:rng:semanticnetMod.rng:1.3" uri="rng/semanticnetMod.rng"/>
-    <public publicId="urn:doctales:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
-    <public publicId="urn:doctales:dita:rng:semanticnetDomain.rng:1.3" uri="rng/semanticnetDomain.rng"/>
-    <public publicId="urn:doctales:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    <public publicId="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
+    <public publicId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
+    <public publicId="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
     
-    <public publicId="urn:doctales:dita:rng:termentry.rng:1.3" uri="rng/termentry.rng"/>
-    <public publicId="urn:doctales:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
-    <public publicId="urn:doctales:dita:rng:termentryMod.rng:1.3" uri="rng/termentryMod.rng"/>
-    <public publicId="urn:doctales:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    <public publicId="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
+    <public publicId="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
     
-    <public publicId="urn:doctales:dita:rng:termmap.rng:1.3" uri="rng/termmap.rng"/>
-    <public publicId="urn:doctales:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
-    <public publicId="urn:doctales:dita:rng:termmapMod.rng:1.3" uri="rng/termmapMod.rng"/>
-    <public publicId="urn:doctales:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    <public publicId="urn:jung:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
+    <public publicId="urn:jung:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
     
-    <public publicId="urn:doctales:dita:rng:termdomainAttDomain.rng:1.3" uri="rng/termdomainAttDomain.rng"/>
-    <public publicId="urn:doctales:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+    <public publicId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
   </group>
   
   <group id="rng-system-id">
-    <system systemId="urn:doctales:dita:rng:semanticnet.rng:1.3" uri="rng/semanticnet.rng"/>
-    <system systemId="urn:doctales:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
-    <system systemId="urn:doctales:dita:rng:semanticnetMod.rng:1.3" uri="rng/semanticnetMod.rng"/>
-    <system systemId="urn:doctales:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
-    <system systemId="urn:doctales:dita:rng:semanticnetDomain.rng:1.3" uri="rng/semanticnetDomain.rng"/>
-    <system systemId="urn:doctales:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
     
-    <system systemId="urn:doctales:dita:rng:termentry.rng:1.3" uri="rng/termentry.rng"/>
-    <system systemId="urn:doctales:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
-    <system systemId="urn:doctales:dita:rng:termentryMod.rng:1.3" uri="rng/termentryMod.rng"/>
-    <system systemId="urn:doctales:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
+    <system systemId="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
     
-    <system systemId="urn:doctales:dita:rng:termmap.rng:1.3" uri="rng/termmap.rng"/>
-    <system systemId="urn:doctales:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
-    <system systemId="urn:doctales:dita:rng:termmapMod.rng:1.3" uri="rng/termmapMod.rng"/>
-    <system systemId="urn:doctales:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
+    <system systemId="urn:jung:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
     
-    <system systemId="urn:doctales:dita:rng:termdomainAttDomain.rng:1.3" uri="rng/termdomainAttDomain.rng"/>
-    <system systemId="urn:doctales:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
   </group>
   
   <group id="rng-uri">
-    <uri name="urn:doctales:dita:rng:semanticnet.rng:1.3" uri="rng/semanticnet.rng"/>
-    <uri name="urn:doctales:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
-    <uri name="urn:doctales:dita:rng:semanticnetMod.rng:1.3" uri="rng/semanticnetMod.rng"/>
-    <uri name="urn:doctales:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
-    <uri name="urn:doctales:dita:rng:semanticnetDomain.rng:1.3" uri="rng/semanticnetDomain.rng"/>
-    <uri name="urn:doctales:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
     
-    <uri name="urn:doctales:dita:rng:termentry.rng:1.3" uri="rng/termentry.rng"/>
-    <uri name="urn:doctales:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
-    <uri name="urn:doctales:dita:rng:termentryMod.rng:1.3" uri="rng/termentryMod.rng"/>
-    <uri name="urn:doctales:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    <uri name="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
+    <uri name="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
     
-    <uri name="urn:doctales:dita:rng:termmap.rng:1.3" uri="rng/termmap.rng"/>
-    <uri name="urn:doctales:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
-    <uri name="urn:doctales:dita:rng:termmapMod.rng:1.3" uri="rng/termmapMod.rng"/>
-    <uri name="urn:doctales:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    <uri name="urn:jung:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
+    <uri name="urn:jung:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
     
-    <uri name="urn:doctales:dita:rng:termdomainAttDomain.rng:1.3" uri="rng/termdomainAttDomain.rng"/>
-    <uri name="urn:doctales:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+    <uri name="urn:jung:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
   </group>
   
 </catalog>

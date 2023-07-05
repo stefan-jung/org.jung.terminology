@@ -30,12 +30,8 @@
     </target>
     
     <target name="-is-xmltask-available">
-        <fail unless:set="dita.plugin.org.jung.xmltask.dir">
-            org.jung.xmltask not found
-        </fail>
-        <echo if:set="dita.plugin.org.jung.xmltask.dir">
-            org.jung.xmltask found
-        </echo>
+        <fail unless:set="dita.plugin.org.jung.xmltask.dir">org.jung.xmltask not found</fail>
+        <echo if:set="dita.plugin.org.jung.xmltask.dir">org.jung.xmltask found</echo>
     </target>
     
     <target name="-generate-termstats">

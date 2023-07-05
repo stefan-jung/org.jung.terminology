@@ -11,8 +11,8 @@
           Darwin Information Typing Architecture (DITA) Version 1.3
           DOCTALES Specialization
           11.01.2017
-          Copyright (c) DOCTALES 2017. All rights reserved.
-          Source: https://doctales.atlassian.net/wiki
+          Copyright (c) Stefan Jung 2023. All rights reserved.
+          Source: https://stefan-jung.org
 
 ========================================================================================================================
           MODULE:   DITA Termentry Shell
@@ -24,12 +24,12 @@
 
           Refer to this file by the following public identifier or an appropriate system identifier
 
-          PUBLIC "-//DOCTALES//DTD DITA Termentry//EN"
+          PUBLIC "-//STEFAN JUNG//DTD DITA Termentry//EN"
           
           The public ID above refers to the latest version of this DTD.
           To refer to this specific version, you may use this value:
 
-          PUBLIC "-//DOCTALES//DTD DITA 1.3 Termentry//EN"
+          PUBLIC "-//STEFAN JUNG//DTD DITA 1.3 Termentry//EN"
 
 ========================================================================================================================
 
@@ -40,7 +40,7 @@
           ORIGINAL CREATION DATE:
                     January 2017                                       
 
-                    (C) Copyright DOCTALES 2015, 2016, 2017.
+                    Copyright (c) Stefan Jung 2023. All rights reserved.
                     All Rights Reserved.
                                                    
           UPDATES:
@@ -52,7 +52,7 @@
       <moduleType>topicshell</moduleType>
       <moduleShortName>termentry</moduleShortName>
       <shellPublicIds>
-        <dtdShell>-//DOCTALES//DTD DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdShell>
+        <dtdShell>-//STEFAN JUNG//DTD DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdShell>
         <rncShell>urn:doctales:dita:rnc:termentry.rnc<var presep=":" name="ditaver"/></rncShell>
         <rngShell>urn:doctales:dita:rng:termentry.rng<var presep=":" name="ditaver"/></rngShell>
         <xsdShell>urn:doctales:dita:xsd:termentry.xsd<var presep=":" name="ditaver"/></xsdShell>

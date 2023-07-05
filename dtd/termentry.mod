@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
+PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Termentry//EN"
       Delivered as file "termentry.mod"  -->
 <!-- ================================================================================ -->
 

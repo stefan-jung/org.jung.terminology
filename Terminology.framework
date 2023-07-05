@@ -8530,7 +8530,7 @@
 													<String>*</String>
 												</field>
 												<field name="publicID">
-													<String>*-//DOCTALES//DTD DITA DOCTALES Termentry//EN*</String>
+													<String>*-//STEFAN JUNG//DTD DITA DOCTALES Termentry//EN*</String>
 												</field>
 												<field name="javaRuleClass">
 													<String></String>

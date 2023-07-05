@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termstats PUBLIC "-//DOCTALES//DTD DITA DOCTALES TermStats//EN" "termstats.dtd">
+<!DOCTYPE termstats PUBLIC "-//STEFAN JUNG//DTD DITA TermStats//EN" "termstats.dtd">
 <termstats id="ui_${id}">
   <title>Terminology statistics</title>
   <shortdesc>This topic shows automatically calculated statistics of your terminology

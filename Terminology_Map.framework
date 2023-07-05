@@ -1784,7 +1784,7 @@
 													<String>*</String>
 												</field>
 												<field name="publicID">
-													<String>*-//DOCTALES//DTD DITA DOCTALES Termmap//EN*</String>
+													<String>*-//STEFAN JUNG//DTD DITA DOCTALES Termmap//EN*</String>
 												</field>
 												<field name="javaRuleClass">
 													<String></String>

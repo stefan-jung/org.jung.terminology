@@ -1,7 +1,7 @@
 <!-- ================================================================================ -->
 <!--  Refer to this file by the following public identifier or an 
       appropriate system identifier 
-PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
+PUBLIC "-//STEFAN JUNG//DTD DITA Termentry//EN"
       Delivered as file "termentry.dtd"  -->
 <!-- ================================================================================ -->
 
@@ -16,7 +16,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 >%concept-dec;
 
 <!ENTITY % termentry-dec     
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termentry//EN" 
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA DOCTALES Termentry//EN" 
          "termentry.ent"
 >%termentry-dec;
 
@@ -89,7 +89,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 <!-- ================================================================================ -->
 
 <!ENTITY % termdomainAtt-d-dec
-  PUBLIC "-//DOCTALES//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
+  PUBLIC "-//STEFAN JUNG//ENTITIES DITA DOCTALES Termdomain Attribute Domain//EN"
          "termdomainAttDomain.ent">
 %termdomainAtt-d-dec;
 
@@ -191,7 +191,7 @@ PUBLIC "-//DOCTALES//DTD DITA DOCTALES Termentry//EN"
 %topic-type;
 
 <!ENTITY % termentry-typemod
-  PUBLIC "-//DOCTALES//ELEMENTS DITA DOCTALES Termentry//EN"
+  PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Termentry//EN"
          "termentry.mod">
 %termentry-typemod;
 
