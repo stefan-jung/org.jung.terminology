@@ -2,11 +2,10 @@
 <xsl:stylesheet version="3.0"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:custom-func="http://www.oxygenxml.com/custom/function"
     xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:doctales="http://doctales.github.io"
-    exclude-result-prefixes="custom-func related-links doctales xd xs">
+    xmlns:sj="http://stefan-jung.org"
+    exclude-result-prefixes="related-links sj xd xs">
     
     <xsl:include href="flagicon.xsl"/>
     
@@ -438,20 +437,20 @@
     
     <!--<xsl:template match="termconflicts" mode="termstats">
         <div class="termstats-div termconflicts">
-            <h2><xsl:value-of select="doctales:getString($language, 'Term Conflicts')"/></h2>
+            <h2><xsl:value-of select="sj:getString($language, 'Term Conflicts')"/></h2>
             <xsl:choose>
                 <xsl:when test="termconflict">
                     <table class="termconflicts-table">
                         <thead class="termconflicts-thead">
                             <tr>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
+                                    <xsl:value-of select="sj:getString($language, 'Term Notation')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="doctales:getString($language, 'Is Preferred In')"/>
+                                    <xsl:value-of select="sj:getString($language, 'Is Preferred In')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="doctales:getString($language, 'Is Not Recommended In')"/>
+                                    <xsl:value-of select="sj:getString($language, 'Is Not Recommended In')"/>
                                 </th>
                             </tr>
                         </thead>
@@ -460,7 +459,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <p>
-                        <xsl:value-of select="doctales:getString($language, 'No Termconflicts Found')"/>
+                        <xsl:value-of select="sj:getString($language, 'No Termconflicts Found')"/>
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
@@ -470,20 +469,20 @@
     
     <xsl:template match="termconflicts" mode="termstats">
         <div class="termstats-div termconflicts">
-            <h2><xsl:value-of select="doctales:getString($language, 'Term Conflicts')"/></h2>
+            <h2><xsl:value-of select="sj:getString($language, 'Term Conflicts')"/></h2>
             <xsl:choose>
                 <xsl:when test="termconflict">
                     <table class="termconflicts-table">
                         <thead class="termconflicts-thead">
                             <tr>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
+                                    <xsl:value-of select="sj:getString($language, 'Term Notation')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="doctales:getString($language, 'Is Preferred In')"/>
+                                    <xsl:value-of select="sj:getString($language, 'Is Preferred In')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="doctales:getString($language, 'Is Not Recommended In')"/>
+                                    <xsl:value-of select="sj:getString($language, 'Is Not Recommended In')"/>
                                 </th>
                             </tr>
                         </thead>
@@ -492,7 +491,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <p>
-                        <xsl:value-of select="doctales:getString($language, 'No Termconflicts Found')"/>
+                        <xsl:value-of select="sj:getString($language, 'No Termconflicts Found')"/>
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
@@ -501,7 +500,7 @@
     
     <xsl:template match="termNotationsPerLanguage" mode="termstats">
         <div class="termstats-div termNotationsPerLanguageList">
-            <h2><xsl:value-of select="doctales:getString($language, 'Number of Terms')"/></h2>
+            <h2><xsl:value-of select="sj:getString($language, 'Number of Terms')"/></h2>
             <ul>
                 <xsl:for-each select="language">
                     <li>
@@ -512,7 +511,7 @@
                         <xsl:text>: </xsl:text>
                         <xsl:value-of select="."/>
                         <xsl:text> </xsl:text>
-                        <xsl:value-of select="doctales:getString($language, 'Term Notations')"/>
+                        <xsl:value-of select="sj:getString($language, 'Term Notations')"/>
                     </li>
                 </xsl:for-each>
             </ul>
@@ -548,7 +547,7 @@
                         backgroundColor: [
                         <xsl:for-each select="language">
                             <xsl:text>"</xsl:text>
-                            <xsl:value-of select="doctales:getColorCode(position())"/>
+                            <xsl:value-of select="sj:getColorCode(position())"/>
                             <xsl:text>"</xsl:text>
                             <xsl:choose>
                                 <xsl:when test="following-sibling::language">
@@ -560,7 +559,7 @@
                         hoverBackgroundColor: [
                         <xsl:for-each select="language">
                             <xsl:text>"</xsl:text>
-                            <xsl:value-of select="doctales:getHoverColorCode(position())"/>
+                            <xsl:value-of select="sj:getHoverColorCode(position())"/>
                             <xsl:text>"</xsl:text>
                             <xsl:choose>
                                 <xsl:when test="following-sibling::language">
@@ -615,7 +614,7 @@
     
     <xsl:template match="chronologicalStatistics" mode="termstats">
         <div class="termstats-div termNotations" style="width:900px; height:900px;">
-            <h2><xsl:value-of select="doctales:getString($language, 'Chronological Sequence')"/></h2>
+            <h2><xsl:value-of select="sj:getString($language, 'Chronological Sequence')"/></h2>
             <xsl:value-of select="$newline"/>
             <script>
                 function displayLineCharts() {
@@ -633,7 +632,7 @@
                             </xsl:for-each>
                         ],
                         datasets: [{
-                            label: "<xsl:value-of select="doctales:getString($language, 'Preferred Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getString($language, 'Preferred Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(90,130,80,0.9)",
@@ -664,7 +663,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:value-of select="doctales:getString($language, 'Admitted Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getString($language, 'Admitted Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(75,192,192,0.1)",
@@ -695,7 +694,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:value-of select="doctales:getString($language, 'Not Recommended Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getString($language, 'Not Recommended Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(255,163,98,1.0)",
@@ -726,7 +725,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:value-of select="doctales:getString($language, 'Obsolete Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getString($language, 'Obsolete Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(232,204,78,1)",
@@ -765,7 +764,7 @@
                         options: {
                             title: {
                                 display: true,
-                                text: '<xsl:value-of select="doctales:getString($language, 'Term Notations')"/>'
+                                text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
                             },
                             scales: {
                                 xAxes: [{
@@ -802,7 +801,7 @@
         <xd:param name="index">Index of the color code array</xd:param>
         <xd:return>Returns the color code</xd:return>
     </xd:doc>
-    <xsl:function name="doctales:getColorCode">
+    <xsl:function name="sj:getColorCode">
         <xsl:param name="index"/>
         <xsl:value-of select="('#d50000', '#304ffe', '#00bfa5', '#ffab00', '#c51162', '#aa00ff', '#6200ea', '#2962ff', '#0091ea', '#00b8d4', '#00c853', '#64dd17', '#aeea00', '#ffd600', '#ff6d00', '#dd2c00', '#3e2723', '#212121', '#263238')[$index]"/>
     </xsl:function>
@@ -812,7 +811,7 @@
         <xd:param name="index">Index of the hover color code array</xd:param>
         <xd:return>Returns the hover color code</xd:return>
     </xd:doc>
-    <xsl:function name="doctales:getHoverColorCode">
+    <xsl:function name="sj:getHoverColorCode">
         <xsl:param name="index"/>
         <xsl:value-of select="('#ff5252', '#536dfe', '#64ffda', '#ffd740', '#ff4081', '#e040fb', '#7c4dff', '#448aff', '#40c4ff', '#18ffff', '#69f0ae', '#b2ff59', '#eeff41', '#ffff00', '#ffab40', '#ff6e40', '#5d4037', '#616161', '#455a64')[$index]"/>
     </xsl:function>
@@ -823,7 +822,7 @@
         <xd:param name="string"><xd:p>Name of the string.</xd:p></xd:param>
         <xd:return><xd:p>Returns the string in the specified language.</xd:p></xd:return>
     </xd:doc>
-    <xsl:function name="doctales:getString" as="xs:string">
+    <xsl:function name="sj:getString" as="xs:string">
         <xsl:param name="language"/>
         <xsl:param name="string"/>
         <xsl:variable name="file" select="concat(concat('termbrowser-strings-', $language), '.xml')"/>
