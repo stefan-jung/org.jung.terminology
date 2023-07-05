@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publishing-template>
+
+  <name>Termbrowser</name>
+  
+  <author>
+    <name>Stefan Jung</name>
+    <email>stefan.jung@mailbox.org</email>
+  </author>
+  
+  <webhelp>       
+    <tags>
+      <tag type="layout">termbrowser</tag>
+    </tags>
+    <preview-image file="preview/preview.png"/>
+    <resources>
+      <css file="css/doctales.css"/>
+      <logo file="logo/doctales-logo.svg"/>
+    </resources>
+    <parameters>
+      <parameter name="webhelp.show.main.page.tiles" value="no"/>
+      <parameter name="webhelp.show.main.page.toc" value="yes"/>
+      <parameter name="webhelp.show.top.menu" value="no"/>
+      <parameter name="webhelp.show.topic.toc" value="no"/>
+      <parameter name="webhelp.top.menu.depth" value="3"/>
+    </parameters>
+    <html-fragments>
+      <fragment file="fragments/webhelp.fragment.before.body.html" placeholder="webhelp.fragment.before.body"/>
+      <fragment file="fragments/webhelp.fragment.footer.html" placeholder="webhelp.fragment.footer"/>
+      <fragment file="fragments/webhelp.fragment.head.html" placeholder="webhelp.fragment.head"/>
+      <fragment file="fragments/webhelp.fragment.welcome.html" placeholder="webhelp.fragment.welcome"/>
+    </html-fragments>
+  </webhelp>
+
+</publishing-template>
