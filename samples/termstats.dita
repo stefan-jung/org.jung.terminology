@@ -8,6 +8,6 @@
   <p>In this topic you'll find terminology statistics. The statistics will be updated with each
    publication, if you specify the args.termstats property pointing to the URL for the terminology
    statistics XML file of your previous build.</p>
-  <stats/>
+  <stats class="+ topic/div termstats-d/stats "/>
  </termstatsbody>
 </termstats>

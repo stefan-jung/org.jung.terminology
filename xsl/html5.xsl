@@ -422,4 +422,8 @@
         <div class="semanticnet"/>
     </xsl:template>
     
+    <xsl:template match="*[contains(@class, 'termstats-d/stats')]">
+        GRINCH
+    </xsl:template>
+    
 </xsl:stylesheet>
