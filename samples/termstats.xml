@@ -1,0 +1,66 @@
+<termstats>
+   <currentStatistics>
+      <languages>
+         <language>en</language>
+         <language>de</language>
+         <language>en-GB</language>
+         <language>de-DE</language>
+         <language>en-US</language>
+      </languages>
+      <termNotationsPerLanguage>
+         <language lang="en">18</language>
+         <language lang="de">4</language>
+         <language lang="en-GB">52</language>
+         <language lang="de-DE">40</language>
+         <language lang="en-US">5</language>
+      </termNotationsPerLanguage>
+      <termconflicts>
+         <termconflict>
+            <termnotation>car</termnotation>
+            <preferredTermFile>car.dita</preferredTermFile>
+            <notRecommendedTermFile>vehicle.dita</notRecommendedTermFile>
+         </termconflict>
+         <termconflict>
+            <termnotation>Fahrgestell</termnotation>
+            <preferredTermFile>chassis.dita</preferredTermFile>
+            <notRecommendedTermFile>unitizedBody.dita</notRecommendedTermFile>
+         </termconflict>
+         <termconflict>
+            <termnotation>Motor</termnotation>
+            <preferredTermFile>engine.dita</preferredTermFile>
+            <notRecommendedTermFile>internalCombustionEngine.dita</notRecommendedTermFile>
+         </termconflict>
+         <termconflict>
+            <termnotation>Motor</termnotation>
+            <preferredTermFile>petrolEngine.dita</preferredTermFile>
+            <notRecommendedTermFile>internalCombustionEngine.dita</notRecommendedTermFile>
+         </termconflict>
+      </termconflicts>
+   </currentStatistics>
+   <chronologicalSequence>
+        <report date="2017-03-10">
+         <numberOfTermTopics>20</numberOfTermTopics>
+         <numberOfLanguages>20</numberOfLanguages>
+         <numberOfPreferredTermNotations>50</numberOfPreferredTermNotations>
+         <numberOfAdmittedTermNotations>15</numberOfAdmittedTermNotations>
+         <numberOfNotRecommendedTermNotations>12</numberOfNotRecommendedTermNotations>
+         <numberOfObsoleteTermNotations>55</numberOfObsoleteTermNotations>
+      </report>
+      <report date="2017-03-15">
+         <numberOfTermTopics>76</numberOfTermTopics>
+         <numberOfLanguages>34</numberOfLanguages>
+         <numberOfPreferredTermNotations>12</numberOfPreferredTermNotations>
+         <numberOfAdmittedTermNotations>67</numberOfAdmittedTermNotations>
+         <numberOfNotRecommendedTermNotations>34</numberOfNotRecommendedTermNotations>
+         <numberOfObsoleteTermNotations>67</numberOfObsoleteTermNotations>
+      </report>
+      <report date="2017-03-22">
+         <numberOfTermTopics>36</numberOfTermTopics>
+         <numberOfLanguages>5</numberOfLanguages>
+         <numberOfPreferredTermNotations>83</numberOfPreferredTermNotations>
+         <numberOfAdmittedTermNotations>7</numberOfAdmittedTermNotations>
+         <numberOfNotRecommendedTermNotations>29</numberOfNotRecommendedTermNotations>
+         <numberOfObsoleteTermNotations>0</numberOfObsoleteTermNotations>
+      </report>
+   </chronologicalSequence>
+</termstats>
