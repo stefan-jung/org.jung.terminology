@@ -2327,9 +2327,6 @@
 																<field name="expandAttributeDefaults">
 																	<Boolean>true</Boolean>
 																</field>
-																<field name="errorRecoverPolicy">
-																	<String>saxon.recover.with.warning</String>
-																</field>
 																<field name="stripWS">
 																	<String>saxon.strip.ws.none</String>
 																</field>
@@ -2379,9 +2376,6 @@
 																</field>
 																<field name="expandAttributeDefaults">
 																	<Boolean>true</Boolean>
-																</field>
-																<field name="errorRecoverPolicy">
-																	<String>saxon.recover.with.warning</String>
 																</field>
 																<field name="stripWS">
 																	<String>saxon.strip.ws.none</String>
@@ -2627,10 +2621,10 @@
 												<field name="publishingTemplateDataPO">
 													<publishingTemplate>
 														<field name="templateRoot">
-															<String>/home/stefan/workspace/org.doctales.terminology/framework/publishing</String>
+															<String>${configured.ditaot.dir}/plugins/com.oxygenxml.webhelp.responsive/templates/oxygen-red</String>
 														</field>
 														<field name="descriptorRelativePath">
-															<String>doctales-termbrowser.opt</String>
+															<String>oxygen-red-tree.opt</String>
 														</field>
 														<field name="isCustomTemplate">
 															<Boolean>false</Boolean>
@@ -7842,23 +7836,8 @@ self::*[contains(@class," map/reltable ")]][1]
 								<field name="extensionURLs">
 									<String-array>
 										<String>${configured.ditaot.dir.url}/config/</String>
-										<String>${oxygenHome}/classes/</String>
-										<String>${oxygenHome}/lib/oxygenCommons.jar</String>
-										<String>${oxygenHome}/lib/oxygen.jar</String>
-										<String>${oxygenHome}/lib/oxygenAuthor.jar</String>
-										<String>${oxygenHome}/lib/oxygenDeveloper.jar</String>
-										<String>${oxygenHome}/lib/oxygenEclipse.jar</String>
-										<String>${oxygenHome}/lib/oxygenAuthorEclipse.jar</String>
-										<String>${oxygenHome}/lib/oxygenDeveloperEclipse.jar</String>
-										<String>${oxygenHome}/lib/oxygen-basic-utilities.jar</String>
-										<String>${oxygenHome}/lib/oxygen-sandbox.jar</String>
-										<String>${oxygenHome}/lib/oxygen-editor-variables-parser.jar</String>
-										<String>${oxygenHome}/lib/*resolver*.jar</String>
-										<String>${oxygenHome}/lib/xml-apis.jar</String>
-										<String>${oxygenHome}/lib/*xerces*.jar</String>
-										<String>${oxygenHome}/lib/*saxon*9*.jar</String>
-										<String>${oxygenHome}/lib/*log4j*.jar</String>
 										<String>${configured.ditaot.dir.url}/plugins/com.oxygenxml.dost.patches/lib/*.jar</String>
+										<String>${configured.ditaot.dir.url}/lib/saxon/*.jar</String>
 										<String>${configured.ditaot.dir.url}/lib/*.jar</String>
 									</String-array>
 								</field>

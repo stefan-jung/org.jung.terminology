@@ -1,8 +1,6 @@
 *.zip
 out/
 temp/
-*.xpr
-build_install.xml
 MANIFEST.MF
 *.orig
 *.tmp

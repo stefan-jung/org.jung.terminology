@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Install org.jung.terminology" default="install">
+  
+  <condition property="dita.cmd" value="dita.bat">
+    <os family="windows"/>
+  </condition>
+  <condition property="dita.cmd" value="dita">
+    <os family="unix"/>
+  </condition>
+  
+  <target name="install">
+    <mkdir dir="${dita.dir}/plugins/org.jung.terminology"/>
+    <echo>Copy files to "${dita.dir}/plugins/org.jung.terminology"</echo>
+    <copy todir="${dita.dir}/plugins/org.jung.terminology" overwrite="true">
+      <fileset dir="."/>
+    </copy>
+    <exec executable="${dita.dir}${file.separator}bin${file.separator}${dita.cmd}">
+      <arg line="--install"/>
+    </exec>
+  </target>
+  
+</project>

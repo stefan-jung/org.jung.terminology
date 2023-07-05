@@ -30,11 +30,11 @@
     </target>
     
     <target name="-is-xmltask-available">
-        <fail unless:set="dita.plugin.org.doctales.xmltask.dir">
-            org.doctales.xmltask not found
+        <fail unless:set="dita.plugin.org.jung.xmltask.dir">
+            org.jung.xmltask not found
         </fail>
-        <echo if:set="dita.plugin.org.doctales.xmltask.dir">
-            org.doctales.xmltask found
+        <echo if:set="dita.plugin.org.jung.xmltask.dir">
+            org.jung.xmltask found
         </echo>
     </target>
     
