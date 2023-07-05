@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE semanticnet PUBLIC "-//STEFAN JUNG//DTD DITA DOCTALES SemanticNet//EN" "semanticnet.dtd">
+<!DOCTYPE semanticnet PUBLIC "-//STEFAN JUNG//DTD DITA SemanticNet//EN" "semanticnet.dtd">
 <semanticnet id="ui_${id}">
   <title>Semantic Net</title>
   <semanticbody>
