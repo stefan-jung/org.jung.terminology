@@ -4,7 +4,7 @@
     <!-- DITA-Map -->
     <param name="ditamap" expression="${args.input}" if="args.input"/>
     <!-- Temporary Directory -->
-    <param name="temp.dir" expression="${dita.temp.dir}" if="dita.temp.dir"/>
+    <param name="temp.dir" expression="${dita.temp.dir}"/>
     
     <!-- Parameters for TBX-Min -->
     <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>

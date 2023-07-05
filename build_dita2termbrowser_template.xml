@@ -10,9 +10,8 @@
     <target name="dita2termbrowser-responsive"
         depends="init-properties,
                  -is-webhelp-responsive-available,
-                 dita2webhelp-responsive,
-                 -generate-termstats,
-                 -generate-semanticnet">
+                 dita2webhelp-responsive
+                 ">
     </target>
     
     <!--
@@ -21,12 +20,8 @@
         otherwise the plugin might not work in specific environments.
     -->
     <target name="-is-webhelp-responsive-available">
-        <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-            com.oxygenxml.webhelp.responsive not found
-        </fail>
-        <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-            com.oxygenxml.webhelp.responsive not found
-        </echo>
+        <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive not found</fail>
+        <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive found</echo>
     </target>
     
     <target name="-is-xmltask-available">
@@ -58,7 +53,7 @@
         <antcall if:set="generate-semanticnet" target="semanticnet"/>
     </target>
     
-    <target name="-generate-termstats">
+    <target name="generate-termstats">
         <description>
             Helper target to determine if terminology statistics should be generated.
             This target is looking for a &lt;termstatsref&gt; element on the terminology map.
@@ -80,6 +75,7 @@
         <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
         <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
         <antcall if:set="generate-termstats" target="termbrowser-termstats"/>
+        <antcall target="termbrowser-termstats"/>
     </target>
     
     <!--<!-\- Check if the conditions for merging termstats are met. -\->
@@ -143,9 +139,6 @@
             <xmlcatalog refid="dita.catalog"/>
         </xslt>
         
-        <!--<antcall target="termstats-merge"/>-->
-        
-        
         <!-- termstats-merge-previous-statics -->
         <echo unless:set="args.termstats">Property args.termstats is not set</echo>
         <echo if:set="args.termstats" level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
@@ -168,7 +161,9 @@
             file="${dita.temp.dir}${file.separator}terminology_stats.xml"
             tofile="${dita.temp.dir}/termstats_merged.xml">
         </move>
-        
+
+        <!-- Set args.default.language, if it has not yet been set. -->
+        <property name="args.default.language" value="en-GB"/>
         
         
         <!--
@@ -176,7 +171,6 @@
             The content of the <head> element and the <body> element
             will later be injected into the termstats topic.
         -->
-        <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
         <fail>
             File ${dita.temp.dir}/termstats_merged.xml is not available
             <condition>
@@ -188,7 +182,7 @@
                 </and>
             </condition>
         </fail>
-        <xslt
+        <!--<xslt
             basedir="${dita.temp.dir}"
             destdir="${output.dir}"
             in="${dita.temp.dir}/termstats_merged.xml"
@@ -202,7 +196,7 @@
             <param name="outext" expression="${args.outext}"/>
             <param name="language" expression="${args.default.language}"/>
             <xmlcatalog refid="dita.catalog"/>
-        </xslt>
+        </xslt>-->
         
         <!--
             Copy the XML file to the output dir.
@@ -213,37 +207,37 @@
             tofile="${output.dir}/termstats.xml">
         </copy>
         
-        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
+        <!--<loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
                 <ignoreblank/>
                 <striplinebreaks/>
-                <replaceregex pattern="(.*)&lt;!--HEAD BEGINNING--&gt;" replace=""/>
-                <replaceregex pattern="&lt;!--HEAD END--&gt;(.*)" replace=""/>
+                <replaceregex pattern="(.*)&lt;!-\-HEAD BEGINNING-\-&gt;" replace=""/>
+                <replaceregex pattern="&lt;!-\-HEAD END-\-&gt;(.*)" replace=""/>
             </filterchain>
         </loadfile>
-        <echo>terminlogy_stats.head=${terminlogy_stats.head}</echo>
+        <echo>terminlogy_stats.head=${terminlogy_stats.head}</echo>-->
         
-        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
+        <!--<loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
                 <ignoreblank/>
                 <striplinebreaks/>
-                <replaceregex pattern="(.*)&lt;!--BODY BEGINNING--&gt;" replace=""/>
-                <replaceregex pattern="&lt;!--BODY END--&gt;(.*)" replace=""/>
+                <replaceregex pattern="(.*)&lt;!-\-BODY BEGINNING-\-&gt;" replace=""/>
+                <replaceregex pattern="&lt;!-\-BODY END-\-&gt;(.*)" replace=""/>
             </filterchain>
-        </loadfile>
+        </loadfile>-->
         
         <!-- Get filename of termstats topic -->
-        <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
+        <!--<xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
             <copy path="//*[contains(@type, 'termstats')]/@href" property="termstats-file" attrValue="yes"/>
         </xmltask>
-        <echo>termstats-file=${termstats-file}</echo>
+        <echo>termstats-file=${termstats-file}</echo>-->
         
         <!-- Replace file suffix -->
-        <loadresource if:set="termstats-file" property="termstats-file-html">
+        <!--<loadresource if:set="termstats-file" property="termstats-file-html">
             <propertyresource name="termstats-file"/>
             <filterchain>
                 <tokenfilter>
@@ -251,29 +245,32 @@
                     <replacestring from=".xml" to=".html"/>
                 </tokenfilter>
             </filterchain>
-        </loadresource>
+        </loadresource>-->
         
-        <replaceregexp
+        <!--<replaceregexp
             file="${output.dir}/${termstats-file-html}"
             match="&lt;head&gt;"
             replace="&lt;head&gt;${terminlogy_stats.head}"
             flags="i"
             byline="false">
-        </replaceregexp>
+        </replaceregexp>-->
         
-        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}</echo>
+        <!--<echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}</echo>-->
         
-        <replaceregexp
+        <!--<replaceregexp
             file="${output.dir}/${termstats-file-html}" 
             match="&lt;div class=&quot;(.+?)termstats-d\/stats(.+?)&quot;&gt;(.*)&lt;\/div&gt;" 
             replace="${terminology_stats.body}" 
             flags="i" 
             byline="false">
-        </replaceregexp>
+        </replaceregexp>-->
     </target>
     
     <target if:set="generate-semanticnet" name="semanticnet" depends="-is-xmltask-available">
-        <fail unless="args.default.language">'args.default.language' is not set, e.g. to 'en-GB'</fail>
+        
+        <!-- Set args.default.language, if it has not yet been set. -->
+        <property name="args.default.language" value="en-GB"/>
+        
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <!--<xslt basedir="${dita.temp.dir}"
             destdir="${output.dir}"

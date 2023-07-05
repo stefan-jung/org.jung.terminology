@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+<xsl:stylesheet version="3.0"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:custom-func="http://www.oxygenxml.com/custom/function"
     xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:doctales="http://doctales.github.io"
-    exclude-result-prefixes="related-links doctales xs">
+    exclude-result-prefixes="custom-func related-links doctales xd xs">
     
     <xsl:include href="flagicon.xsl"/>
+    
+    <xsl:param name="temp.dir"/>
+    <xsl:param name="language" select="'en-GB'"/>
+    
+    <xsl:variable name="newline" select="'&#xd;'" as="xs:string"/>
     
     <!-- Definition -->
     <xsl:template match="*[contains(@class, ' termentry/definition ')]">
@@ -423,7 +431,403 @@
     </xsl:template>
     
     <xsl:template match="*[contains(@class, 'termstats-d/stats')]">
-        GRINCH
+        <xsl:variable name="temp.dir.uri" select="concat('file:///', encode-for-uri(replace($temp.dir, '\\', '/')))"/>
+        <xsl:variable name="termstats.uri" select="$temp.dir.uri || '/termstats_merged.xml'"/>
+        <xsl:apply-templates select="document($termstats.uri, /)" mode="termstats"/>
     </xsl:template>
+    
+    <!--<xsl:template match="termconflicts" mode="termstats">
+        <div class="termstats-div termconflicts">
+            <h2><xsl:value-of select="doctales:getString($language, 'Term Conflicts')"/></h2>
+            <xsl:choose>
+                <xsl:when test="termconflict">
+                    <table class="termconflicts-table">
+                        <thead class="termconflicts-thead">
+                            <tr>
+                                <th class="termconflicts-th">
+                                    <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
+                                </th>
+                                <th class="termconflicts-th">
+                                    <xsl:value-of select="doctales:getString($language, 'Is Preferred In')"/>
+                                </th>
+                                <th class="termconflicts-th">
+                                    <xsl:value-of select="doctales:getString($language, 'Is Not Recommended In')"/>
+                                </th>
+                            </tr>
+                        </thead>
+                        <xsl:apply-templates mode="termstats"/>
+                    </table>
+                </xsl:when>
+                <xsl:otherwise>
+                    <p>
+                        <xsl:value-of select="doctales:getString($language, 'No Termconflicts Found')"/>
+                    </p>
+                </xsl:otherwise>
+            </xsl:choose>
+        </div>
+    </xsl:template>-->
+    
+    
+    <xsl:template match="termconflicts" mode="termstats">
+        <div class="termstats-div termconflicts">
+            <h2><xsl:value-of select="doctales:getString($language, 'Term Conflicts')"/></h2>
+            <xsl:choose>
+                <xsl:when test="termconflict">
+                    <table class="termconflicts-table">
+                        <thead class="termconflicts-thead">
+                            <tr>
+                                <th class="termconflicts-th">
+                                    <xsl:value-of select="doctales:getString($language, 'Term Notation')"/>
+                                </th>
+                                <th class="termconflicts-th">
+                                    <xsl:value-of select="doctales:getString($language, 'Is Preferred In')"/>
+                                </th>
+                                <th class="termconflicts-th">
+                                    <xsl:value-of select="doctales:getString($language, 'Is Not Recommended In')"/>
+                                </th>
+                            </tr>
+                        </thead>
+                        <xsl:apply-templates mode="termstats"/>
+                    </table>
+                </xsl:when>
+                <xsl:otherwise>
+                    <p>
+                        <xsl:value-of select="doctales:getString($language, 'No Termconflicts Found')"/>
+                    </p>
+                </xsl:otherwise>
+            </xsl:choose>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="termNotationsPerLanguage" mode="termstats">
+        <div class="termstats-div termNotationsPerLanguageList">
+            <h2><xsl:value-of select="doctales:getString($language, 'Number of Terms')"/></h2>
+            <ul>
+                <xsl:for-each select="language">
+                    <li>
+                        <xsl:call-template name="getFlag">
+                            <xsl:with-param name="language" select="@lang"/>
+                            <xsl:with-param name="languageCode" select="true()"/>
+                        </xsl:call-template>
+                        <xsl:text>: </xsl:text>
+                        <xsl:value-of select="."/>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="doctales:getString($language, 'Term Notations')"/>
+                    </li>
+                </xsl:for-each>
+            </ul>
+            <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
+                <div class="termNotations">
+                    <xsl:value-of select="$newline"/>
+                    <script>
+                        function displayTermNotationsPerLanguageCharts() {
+                        var termNotationsPerLanguageData = {
+                        labels: [
+                        <xsl:for-each select="language">
+                            <xsl:text>"</xsl:text>
+                            <xsl:value-of select="@lang"/> 
+                            <xsl:text>"</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ],
+                        datasets: [{
+                        data: [
+                        <xsl:for-each select="language">
+                            <xsl:value-of select="."/> 
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ],
+                        backgroundColor: [
+                        <xsl:for-each select="language">
+                            <xsl:text>"</xsl:text>
+                            <xsl:value-of select="doctales:getColorCode(position())"/>
+                            <xsl:text>"</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ],
+                        hoverBackgroundColor: [
+                        <xsl:for-each select="language">
+                            <xsl:text>"</xsl:text>
+                            <xsl:value-of select="doctales:getHoverColorCode(position())"/>
+                            <xsl:text>"</xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:when>
+                            </xsl:choose>
+                        </xsl:for-each>
+                        ]
+                        }]
+                        };
+                        var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
+                        var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
+                            type: 'pie',
+                            data: termNotationsPerLanguageData,
+                            options: {}
+                        });
+                        }
+                    </script>
+                    <xsl:value-of select="$newline"/>
+                    <canvas id="termNotationsPerLanguage" width="400" height="400"/>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                    displayTermNotationsPerLanguageCharts();
+                    });
+                </script>
+            </div>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="termconflict" mode="termstats">
+        <xsl:variable name="preferredTermFile" select="preferredTermFile/text()" as="xs:string"/>
+        <xsl:variable name="notRecommendedTermFile" select="notRecommendedTermFile/text()" as="xs:string"/>
+        <tr class="termconflicts-tr">
+            <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
+            <td class="termconflicts-td">
+                <a>
+                    <xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', 'html')"/></xsl:attribute>
+                    <xsl:attribute name="target">_self</xsl:attribute>
+                    <xsl:value-of select="$preferredTermFile"/>
+                </a>
+            </td>
+            <td class="termconflicts-td">
+                <a>
+                    <xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', 'html')"/></xsl:attribute>
+                    <xsl:attribute name="target">_self</xsl:attribute>
+                    <xsl:value-of select="$notRecommendedTermFile"/>
+                </a>
+            </td>
+        </tr>
+    </xsl:template>
+    
+    <xsl:template match="chronologicalStatistics" mode="termstats">
+        <div class="termstats-div termNotations" style="width:900px; height:900px;">
+            <h2><xsl:value-of select="doctales:getString($language, 'Chronological Sequence')"/></h2>
+            <xsl:value-of select="$newline"/>
+            <script>
+                function displayLineCharts() {
+                    var data = {
+                        labels: [
+                            <xsl:for-each select="report">
+                                <xsl:text>"</xsl:text>
+                                <xsl:value-of select="@date"/>
+                                <xsl:text>"</xsl:text>
+                                <xsl:choose>
+                                    <xsl:when test="following-sibling::report">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:when>
+                                </xsl:choose>
+                            </xsl:for-each>
+                        ],
+                        datasets: [{
+                            label: "<xsl:value-of select="doctales:getString($language, 'Preferred Term Notations')"/>",
+                            fill: false,
+                            lineTension: 0.1,
+                            backgroundColor: "rgba(90,130,80,0.9)",
+                            borderColor: "rgba(90,130,80,1)",
+                            borderCapStyle: 'butt',
+                            borderDash: [],
+                            borderDashOffset: 0.0,
+                            borderJoinStyle: 'miter',
+                            pointBorderColor: "rgba(90,130,80,1)",
+                            pointBackgroundColor: "#fff",
+                            pointBorderWidth: 1,
+                            pointHoverRadius: 5,
+                            pointHoverBackgroundColor: "rgba(90,130,80,1)",
+                            pointHoverBorderColor: "rgba(90,130,80,1)",
+                            pointHoverBorderWidth: 2,
+                            pointRadius: 1,
+                            pointHitRadius: 10,
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfPreferredTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
+                            spanGaps: false,
+                        }, 
+                        {
+                            label: "<xsl:value-of select="doctales:getString($language, 'Admitted Term Notations')"/>",
+                            fill: false,
+                            lineTension: 0.1,
+                            backgroundColor: "rgba(75,192,192,0.1)",
+                            borderColor: "rgba(75,192,192,1)",
+                            borderCapStyle: 'butt',
+                            borderDash: [],
+                            borderDashOffset: 0.0,
+                            borderJoinStyle: 'miter',
+                            pointBorderColor: "rgba(75,192,192,1)",
+                            pointBackgroundColor: "#fff",
+                            pointBorderWidth: 1,
+                            pointHoverRadius: 5,
+                            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                            pointHoverBorderColor: "rgba(220,220,220,1)",
+                            pointHoverBorderWidth: 2,
+                            pointRadius: 1,
+                            pointHitRadius: 10,
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfAdmittedTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
+                            spanGaps: false,
+                        }, 
+                        {
+                            label: "<xsl:value-of select="doctales:getString($language, 'Not Recommended Term Notations')"/>",
+                            fill: false,
+                            lineTension: 0.1,
+                            backgroundColor: "rgba(255,163,98,1.0)",
+                            borderColor: "rgba(255,163,98,1.0)",
+                            borderCapStyle: 'butt',
+                            borderDash: [],
+                            borderDashOffset: 0.0,
+                            borderJoinStyle: 'miter',
+                            pointBorderColor: "rgba(255,163,98,1.0)",
+                            pointBackgroundColor: "#fff",
+                            pointBorderWidth: 1,
+                            pointHoverRadius: 5,
+                            pointHoverBackgroundColor: "rgba(255,163,98,1.0)",
+                            pointHoverBorderColor: "rgba(255,163,98,1.0)",
+                            pointHoverBorderWidth: 2,
+                            pointRadius: 1,
+                            pointHitRadius: 10,
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfNotRecommendedTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
+                            spanGaps: false,
+                        }, 
+                        {
+                            label: "<xsl:value-of select="doctales:getString($language, 'Obsolete Term Notations')"/>",
+                            fill: false,
+                            lineTension: 0.1,
+                            backgroundColor: "rgba(232,204,78,1)",
+                            borderColor: "rgba(232,204,78,1)",
+                            borderCapStyle: 'butt',
+                            borderDash: [],
+                            borderDashOffset: 0.0,
+                            borderJoinStyle: 'miter',
+                            pointBorderColor: "rgba(232,204,78,1)",
+                            pointBackgroundColor: "#fff",
+                            pointBorderWidth: 1,
+                            pointHoverRadius: 5,
+                            pointHoverBackgroundColor: "rgba(232,204,78,1)",
+                            pointHoverBorderColor: "rgba(232,204,78,1)",
+                            pointHoverBorderWidth: 2,
+                            pointRadius: 1,
+                            pointHitRadius: 10,
+                            data: [
+                                <xsl:for-each select="report">
+                                    <xsl:value-of select="numberOfObsoleteTermNotations"/>
+                                    <xsl:choose>
+                                        <xsl:when test="following-sibling::report">
+                                            <xsl:text>,</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:for-each>
+                            ],
+                            spanGaps: false,
+                        }]
+                        };
+                        var termNotationsChart = document.getElementById("termNotations");
+                        var myLineChart = new Chart(termNotationsChart, {
+                        type: 'line',
+                        data: data,
+                        steppedLine: 'before',
+                        options: {
+                            title: {
+                                display: true,
+                                text: '<xsl:value-of select="doctales:getString($language, 'Term Notations')"/>'
+                            },
+                            scales: {
+                                xAxes: [{
+                                    type: 'time',
+                                    time: {
+                                        unit: 'month',
+                                        unitStepSize: 1,
+                                        displayFormats: {
+                                            'day': 'MMM DD'
+                                        }
+                                    }
+                                }]
+                            },
+                            responsive: true
+                        }
+                    });
+                }   
+            </script>
+            <xsl:value-of select="$newline"/>
+            <canvas id="termNotations"/>
+        </div>
+        <script>
+            $(document).ready(function() {
+                displayLineCharts();
+            });
+        </script>
+    </xsl:template>
+
+    <!-- Fall Through Templates -->
+    <xsl:template match="languages" mode="termstats"/>
+    
+    <xd:doc>
+        <xd:desc>Function to get color code from a list by index.</xd:desc>
+        <xd:param name="index">Index of the color code array</xd:param>
+        <xd:return>Returns the color code</xd:return>
+    </xd:doc>
+    <xsl:function name="doctales:getColorCode">
+        <xsl:param name="index"/>
+        <xsl:value-of select="('#d50000', '#304ffe', '#00bfa5', '#ffab00', '#c51162', '#aa00ff', '#6200ea', '#2962ff', '#0091ea', '#00b8d4', '#00c853', '#64dd17', '#aeea00', '#ffd600', '#ff6d00', '#dd2c00', '#3e2723', '#212121', '#263238')[$index]"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>Function to get hover color code from a list by index.</xd:desc>
+        <xd:param name="index">Index of the hover color code array</xd:param>
+        <xd:return>Returns the hover color code</xd:return>
+    </xd:doc>
+    <xsl:function name="doctales:getHoverColorCode">
+        <xsl:param name="index"/>
+        <xsl:value-of select="('#ff5252', '#536dfe', '#64ffda', '#ffd740', '#ff4081', '#e040fb', '#7c4dff', '#448aff', '#40c4ff', '#18ffff', '#69f0ae', '#b2ff59', '#eeff41', '#ffff00', '#ffab40', '#ff6e40', '#5d4037', '#616161', '#455a64')[$index]"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc><xd:p>Function to get string from translation file.</xd:p></xd:desc>
+        <xd:param name="language"><xd:p>Language to be used.</xd:p></xd:param>
+        <xd:param name="string"><xd:p>Name of the string.</xd:p></xd:param>
+        <xd:return><xd:p>Returns the string in the specified language.</xd:p></xd:return>
+    </xd:doc>
+    <xsl:function name="doctales:getString" as="xs:string">
+        <xsl:param name="language"/>
+        <xsl:param name="string"/>
+        <xsl:variable name="file" select="concat(concat('termbrowser-strings-', $language), '.xml')"/>
+        <xsl:sequence select="document($file)/descendant::str[@name = $string][1]"/>
+    </xsl:function>
     
 </xsl:stylesheet>
