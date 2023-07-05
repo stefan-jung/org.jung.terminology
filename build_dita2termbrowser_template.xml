@@ -133,9 +133,7 @@
         <!-- termstats-merge-previous-statics -->
         <echo if:set="args.termstats">Property args.termstats is set</echo>
         <echo unless:set="args.termstats">Property args.termstats is not set</echo>
-        <echo if:set="args.termstats" level="info">
-            Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'
-        </echo>
+        <echo if:set="args.termstats" level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
         
         <makeurl if:set="args.termstats" file="${args.termstats}" property="old.termstats.url"/>
         <makeurl if:set="args.termstats" file="${dita.temp.dir}${file.separator}terminology_stats.xml" property="new.termstats.url"/>
@@ -364,6 +362,22 @@
         </replaceregexp>
         
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
+    </target>
+    
+    <!-- Check if the conditions for processing termstats are met. -->
+    <target name="-process-termstats">
+        <condition property="process-termstats" value="true">
+            <and>
+                <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
+                <isset property="args.termstats"/>
+            </and>
+        </condition>
+        <echo if:set="process-termstats">Conditions for processing terminology statistics are met</echo>
+        <echo unless:set="process-termstats">Conditions for processing terminology statistics are NOT met. Skipping...</echo>
+    </target>
+    
+    <target name="merge-termstats" depends="-process-termstats" if="process-termstats">
+        <echo>Processing terminology statistics</echo>
     </target>
     
 </project>

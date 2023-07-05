@@ -11,6 +11,9 @@
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
   
+  <!-- Use the preprocess.post extension point to merge the terminology statistics. -->
+  <feature extension="depend.preprocess.post" value="merge-termstats"/>
+  
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
   <feature extension="dita.conductor.transtype.check" value="tbx-min"/>
   <transtype name="tbx-min" extends="html5" desc="TBX-Min">
