@@ -34,30 +34,6 @@
         <echo if:set="dita.plugin.org.jung.xmltask.dir">org.jung.xmltask found</echo>
     </target>
     
-    <target name="-generate-termstats">
-        <description>
-            Helper target to determine if terminology statistics should be generated.
-            This target is looking for a &lt;termstatsref&gt; element on the terminology map.
-        </description>
-
-        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
-        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
-        <!-- <echo level="info">termmap=${termmap}</echo> -->        
-        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
-        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
-            <filterchain>       
-                <linecontainsregexp>          
-                    <regexp pattern="termmap/termstatsref "/>        
-                </linecontainsregexp>      
-            </filterchain> 
-        </loadfile>
-        <property if:set="termstatsref" name="generate-termstats" value="true"/>
-        <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
-        <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
-        <antcall if:set="generate-termstats" target="termbrowser-termstats"/>
-    </target>
-   
     <target name="-generate-semanticnet">
         <description>
             Helper target to determine if a semantic net should be generated.
@@ -81,6 +57,46 @@
         <echo unless:set="generate-semanticnet" level="info">Generate semantic net: false</echo>
         <antcall if:set="generate-semanticnet" target="semanticnet"/>
     </target>
+    
+    <target name="-generate-termstats">
+        <description>
+            Helper target to determine if terminology statistics should be generated.
+            This target is looking for a &lt;termstatsref&gt; element on the terminology map.
+        </description>
+        
+        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
+        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
+        <!-- <echo level="info">termmap=${termmap}</echo> -->        
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
+            <filterchain>       
+                <linecontainsregexp>          
+                    <regexp pattern="termmap/termstatsref "/>        
+                </linecontainsregexp>      
+            </filterchain> 
+        </loadfile>
+        <property if:set="termstatsref" name="generate-termstats" value="true"/>
+        <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
+        <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
+        <antcall if:set="generate-termstats" target="termbrowser-termstats"/>
+    </target>
+    
+    <!--<!-\- Check if the conditions for merging termstats are met. -\->
+    <target name="-merge-termstats.check">
+        <condition property="merge-termstats" value="true">
+            <and>
+                <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
+                <isset property="args.termstats"/>
+            </and>
+        </condition>
+        <echo if:set="merge-termstats">Conditions for processing terminology statistics are met</echo>
+        <echo unless:set="merge-termstats">Conditions for processing terminology statistics are NOT met. Skipping...</echo>
+    </target>
+    
+    <target name="merge-termstats" depends="-merge-termstats.check" if="merge-termstats">
+        <echo>Processing terminology statistics</echo>
+    </target>-->
     
     <target name="termbrowser-termstats"
         description="Generate terminology statistics."
@@ -131,7 +147,6 @@
         
         
         <!-- termstats-merge-previous-statics -->
-        <echo if:set="args.termstats">Property args.termstats is set</echo>
         <echo unless:set="args.termstats">Property args.termstats is not set</echo>
         <echo if:set="args.termstats" level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
         
@@ -203,17 +218,17 @@
             tofile="${output.dir}/termstats.xml">
         </copy>
         
-        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
+        <!--<loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
                 <ignoreblank/>
                 <striplinebreaks/>
-                <replaceregex pattern="(.*)&lt;!--HEAD BEGINNING--&gt;" replace=""/>
-                <replaceregex pattern="&lt;!--HEAD END--&gt;(.*)" replace=""/>
+                <replaceregex pattern="(.*)&lt;!-\-HEAD BEGINNING-\-&gt;" replace=""/>
+                <replaceregex pattern="&lt;!-\-HEAD END-\-&gt;(.*)" replace=""/>
             </filterchain>
         </loadfile>
-        <echo>terminlogy_stats.head=${terminlogy_stats.head}</echo>
+        <echo>terminlogy_stats.head=${terminlogy_stats.head}</echo>-->
         
         <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
             <filterchain>
@@ -243,13 +258,13 @@
             </filterchain>
         </loadresource>
         
-        <replaceregexp
+        <!--<replaceregexp
             file="${output.dir}/${termstats-file-html}"
             match="&lt;head&gt;"
             replace="&lt;head&gt;${terminlogy_stats.head}"
             flags="i"
             byline="false">
-        </replaceregexp>
+        </replaceregexp>-->
         
         <echo level="info">
             Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}
@@ -362,22 +377,6 @@
         </replaceregexp>
         
         <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
-    </target>
-    
-    <!-- Check if the conditions for processing termstats are met. -->
-    <target name="-process-termstats">
-        <condition property="process-termstats" value="true">
-            <and>
-                <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
-                <isset property="args.termstats"/>
-            </and>
-        </condition>
-        <echo if:set="process-termstats">Conditions for processing terminology statistics are met</echo>
-        <echo unless:set="process-termstats">Conditions for processing terminology statistics are NOT met. Skipping...</echo>
-    </target>
-    
-    <target name="merge-termstats" depends="-process-termstats" if="process-termstats">
-        <echo>Processing terminology statistics</echo>
     </target>
     
 </project>
