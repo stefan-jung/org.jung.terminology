@@ -20,7 +20,7 @@
                 destdir="${output.dir}"
                 reloadstylesheet="${dita.xhtml.reloadstylesheet}"
                 extension=".tbxm"
-                style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2tbx-min.xsl">
+                style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology2tbx-min.xsl">
                 <ditafileset format="dita" processingRole="normal"/>
                 <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
                 <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
@@ -34,7 +34,7 @@
             </fileset>
             <dirset dir="${output.dir}"/>
         </delete>
-        <copy file="${dita.plugin.org.doctales.terminology.dir}${file.separator}dtd${file.separator}TBX-Min.rng" todir="${output.dir}"/>
+        <copy file="${dita.plugin.org.jung.terminology.dir}${file.separator}dtd${file.separator}TBX-Min.rng" todir="${output.dir}"/>
         <replaceregexp file="${output.dir}${file.separator}${tbx-min}.tbxm" match="&lt;!DOCTYPE TBX\s+PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" replace=""/>
     </target>
     

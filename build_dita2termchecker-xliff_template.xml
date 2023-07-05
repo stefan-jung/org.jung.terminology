@@ -23,7 +23,7 @@
                 destdir="${output.dir}"
                 reloadstylesheet="${dita.xhtml.reloadstylesheet}"
                 extension="-XLIFF-${args.language}.sch"
-                style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology2termchecker-xliff.xsl">
+                style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology2termchecker-xliff.xsl">
                 <ditafileset format="dita" processingRole="normal"/>
                 <param name="language" expression="${args.language}" if="args.language"/>
                 <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>

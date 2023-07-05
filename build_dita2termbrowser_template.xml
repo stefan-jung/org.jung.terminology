@@ -117,7 +117,7 @@
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
             extension="_check.xml"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats.xsl"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-stats.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <param name="ditamap" expression="${dita.map.rel}"/>
@@ -145,7 +145,7 @@
             destdir="${dita.temp.dir}"
             in="${args.termstats}"
             out="${dita.temp.dir}/termstats_merged.xml"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats-merge-xml.xsl">
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-stats-merge-xml.xsl">
             <!--<param name="old.termstats" expression="${args.termstats}"/>
             <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>-->
             <param name="old.termstats" expression="${old.termstats.url}"/>
@@ -188,7 +188,7 @@
             reloadstylesheet="${dita.xhtml.reloadstylesheet}"
             classpathref="dost.class.path"
             extension=".html"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/terminology-stats-xml2html.xsl"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-stats-xml2html.xsl"
             filenameparameter="FILENAME" 
             filedirparameter="FILEDIR">
             <param name="outext" expression="${args.outext}"/>
@@ -275,7 +275,7 @@
             out="${dita.temp.dir}${file.separator}${basename}_net.html"
             classpathref="dost.class.path"
             extension=".html"
-            style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl">
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/semanticnet.xsl">
             <xmlcatalog refid="dita.catalog"/>
             <param name="language" expression="${args.default.language}"/>
             <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
@@ -287,7 +287,7 @@
                 in="${dita.temp.dir}${file.separator}${basename}.ditamap"
                 out="${dita.temp.dir}${file.separator}${basename}_net.html"
                 extension=".html"
-                style="${dita.plugin.org.doctales.terminology.dir}/xsl/semanticnet.xsl">
+                style="${dita.plugin.org.jung.terminology.dir}/xsl/semanticnet.xsl">
                 <xmlcatalog refid="dita.catalog"/>
                 <param name="language" expression="${args.default.language}"/>
                 <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
@@ -355,7 +355,7 @@
             The vis.js script needs to be injected as the first lib to the head.
             We have no extension point for this, so we need to make this dirty.
         -->
-        <loadfile srcfile="${dita.plugin.org.doctales.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
+        <loadfile srcfile="${dita.plugin.org.jung.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
         <replaceregexp file="${output.dir}/${semantic-net-file-html}"
             match="&lt;script"
             replace="${vis.js.txt}&lt;script"
