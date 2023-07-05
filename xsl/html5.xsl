@@ -435,38 +435,6 @@
         <xsl:apply-templates select="document($termstats.uri, /)" mode="termstats"/>
     </xsl:template>
     
-    <!--<xsl:template match="termconflicts" mode="termstats">
-        <div class="termstats-div termconflicts">
-            <h2><xsl:value-of select="sj:getString($language, 'Term Conflicts')"/></h2>
-            <xsl:choose>
-                <xsl:when test="termconflict">
-                    <table class="termconflicts-table">
-                        <thead class="termconflicts-thead">
-                            <tr>
-                                <th class="termconflicts-th">
-                                    <xsl:value-of select="sj:getString($language, 'Term Notation')"/>
-                                </th>
-                                <th class="termconflicts-th">
-                                    <xsl:value-of select="sj:getString($language, 'Is Preferred In')"/>
-                                </th>
-                                <th class="termconflicts-th">
-                                    <xsl:value-of select="sj:getString($language, 'Is Not Recommended In')"/>
-                                </th>
-                            </tr>
-                        </thead>
-                        <xsl:apply-templates mode="termstats"/>
-                    </table>
-                </xsl:when>
-                <xsl:otherwise>
-                    <p>
-                        <xsl:value-of select="sj:getString($language, 'No Termconflicts Found')"/>
-                    </p>
-                </xsl:otherwise>
-            </xsl:choose>
-        </div>
-    </xsl:template>-->
-    
-    
     <xsl:template match="termconflicts" mode="termstats">
         <div class="termstats-div termconflicts">
             <h2><xsl:value-of select="sj:getString($language, 'Term Conflicts')"/></h2>
