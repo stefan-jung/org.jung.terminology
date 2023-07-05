@@ -37,30 +37,30 @@
          </termconflict>
       </termconflicts>
    </currentStatistics>
-   <chronologicalSequence>
-        <report date="2017-03-10">
-         <numberOfTermTopics>20</numberOfTermTopics>
-         <numberOfLanguages>20</numberOfLanguages>
-         <numberOfPreferredTermNotations>50</numberOfPreferredTermNotations>
-         <numberOfAdmittedTermNotations>15</numberOfAdmittedTermNotations>
-         <numberOfNotRecommendedTermNotations>12</numberOfNotRecommendedTermNotations>
-         <numberOfObsoleteTermNotations>55</numberOfObsoleteTermNotations>
+   <chronologicalStatistics>
+        <report date="2023-03-10">
+         <numberOfTermTopics>5</numberOfTermTopics>
+         <numberOfLanguages>1</numberOfLanguages>
+         <numberOfPreferredTermNotations>8</numberOfPreferredTermNotations>
+         <numberOfAdmittedTermNotations>2</numberOfAdmittedTermNotations>
+         <numberOfNotRecommendedTermNotations>4</numberOfNotRecommendedTermNotations>
+         <numberOfObsoleteTermNotations>1</numberOfObsoleteTermNotations>
       </report>
-      <report date="2017-03-15">
-         <numberOfTermTopics>76</numberOfTermTopics>
-         <numberOfLanguages>34</numberOfLanguages>
+      <report date="2023-03-15">
+         <numberOfTermTopics>21</numberOfTermTopics>
+         <numberOfLanguages>2</numberOfLanguages>
          <numberOfPreferredTermNotations>12</numberOfPreferredTermNotations>
-         <numberOfAdmittedTermNotations>67</numberOfAdmittedTermNotations>
-         <numberOfNotRecommendedTermNotations>34</numberOfNotRecommendedTermNotations>
-         <numberOfObsoleteTermNotations>67</numberOfObsoleteTermNotations>
+         <numberOfAdmittedTermNotations>20</numberOfAdmittedTermNotations>
+         <numberOfNotRecommendedTermNotations>17</numberOfNotRecommendedTermNotations>
+         <numberOfObsoleteTermNotations>23</numberOfObsoleteTermNotations>
       </report>
-      <report date="2017-03-22">
+      <report date="2023-03-22">
          <numberOfTermTopics>36</numberOfTermTopics>
-         <numberOfLanguages>5</numberOfLanguages>
-         <numberOfPreferredTermNotations>83</numberOfPreferredTermNotations>
+         <numberOfLanguages>3</numberOfLanguages>
+         <numberOfPreferredTermNotations>20</numberOfPreferredTermNotations>
          <numberOfAdmittedTermNotations>7</numberOfAdmittedTermNotations>
          <numberOfNotRecommendedTermNotations>29</numberOfNotRecommendedTermNotations>
          <numberOfObsoleteTermNotations>0</numberOfObsoleteTermNotations>
       </report>
-   </chronologicalSequence>
+   </chronologicalStatistics>
 </termstats>

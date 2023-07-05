@@ -156,19 +156,14 @@
         <xslt if:set="args.termstats"
             basedir="${dita.temp.dir}"
             destdir="${dita.temp.dir}"
-            in="${args.termstats}"
+            in="${dita.plugin.org.jung.terminology.dir}/templates/dummy.xml"
             out="${dita.temp.dir}/termstats_merged.xml"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-stats-merge-xml.xsl">
-            <!--<param name="old.termstats" expression="${args.termstats}"/>
-            <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>-->
+            <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>
             <param name="old.termstats" expression="${old.termstats.url}"/>
             <param name="new.termstats" expression="${new.termstats.url}"/>
         </xslt>
-
-        <!-- Merge step done -->
-
-        <!-- termstats-move-new -->
-        <!--<echo  level="info">No previous termstats file found</echo>-->
+        
         <move unless:set="args.termstats"
             file="${dita.temp.dir}${file.separator}terminology_stats.xml"
             tofile="${dita.temp.dir}/termstats_merged.xml">
@@ -218,17 +213,17 @@
             tofile="${output.dir}/termstats.xml">
         </copy>
         
-        <!--<loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
+        <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminlogy_stats.head">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
                 <ignoreblank/>
                 <striplinebreaks/>
-                <replaceregex pattern="(.*)&lt;!-\-HEAD BEGINNING-\-&gt;" replace=""/>
-                <replaceregex pattern="&lt;!-\-HEAD END-\-&gt;(.*)" replace=""/>
+                <replaceregex pattern="(.*)&lt;!--HEAD BEGINNING--&gt;" replace=""/>
+                <replaceregex pattern="&lt;!--HEAD END--&gt;(.*)" replace=""/>
             </filterchain>
         </loadfile>
-        <echo>terminlogy_stats.head=${terminlogy_stats.head}</echo>-->
+        <echo>terminlogy_stats.head=${terminlogy_stats.head}</echo>
         
         <loadfile srcFile="${dita.temp.dir}${file.separator}terminology_stats.html" property="terminology_stats.body">
             <filterchain>
@@ -258,17 +253,15 @@
             </filterchain>
         </loadresource>
         
-        <!--<replaceregexp
+        <replaceregexp
             file="${output.dir}/${termstats-file-html}"
             match="&lt;head&gt;"
             replace="&lt;head&gt;${terminlogy_stats.head}"
             flags="i"
             byline="false">
-        </replaceregexp>-->
+        </replaceregexp>
         
-        <echo level="info">
-            Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}
-        </echo>
+        <echo level="info">Replace &lt;div class="div stats"&gt; placeholder element of: ${output.dir}/${termstats-file-html}</echo>
         
         <replaceregexp
             file="${output.dir}/${termstats-file-html}" 

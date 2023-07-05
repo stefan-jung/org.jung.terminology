@@ -12,6 +12,7 @@
       <param name="webhelp.publishing.template" path="framework/publishing"/>
       <param name="webhelp.publishing.template.descriptor" value="termbrowser.opt"/>
       <param name="args.termstats" href="samples/termstats.xml"/>
+      <param name="clean.temp" value="no"/>
     </publication>
   </deliverable>
   
