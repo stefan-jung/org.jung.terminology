@@ -1,4 +1,17 @@
 <div>
+    <!--
+        chart.js
+        
+        The Oxygen Webhelp plugin is using require.js for asynchronous loading of JavaScript libraries.
+        The main benefit is, that the page is loaded and rendered while the JavaScript libraries are loaded.
+        The "normal way" is, that all CSS/JS libraries are loaded BEFORE the HTML content is rendered.
+        This slows down the rendering of the website.
+        
+        require.js can load only AMD modules, so be sure to require one of the UMD builds.
+        In order to use the time scale, you need to make sure one of the available date adapters and 
+        corresponding date library are fully loaded after requiring chart.js.
+    -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"><!----></link>
     
     <!-- vis.js is used to render the terminology semantic net -->
