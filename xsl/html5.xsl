@@ -22,7 +22,7 @@
         select="'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js'"
     />
     <xsl:variable name="chartjs-adapter-moment.js" as="xs:string"
-        select="'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.min.js'"
+        select="'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.esm.js'"
     />
     
     <!-- Definition -->
