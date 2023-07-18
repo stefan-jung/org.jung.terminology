@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="3.0"
+    xmlns:sj="https://stefan-jung.org"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:doctales="http://doctales.github.io"
-    exclude-result-prefixes="xs doctales" version="2.0">
+    exclude-result-prefixes="sj xd xs">
+    
+    <xd:doc>
+        <xd:desc>
+            This stylesheet is not part of the normal DITA-OT processing.
+            It iterates over all temporary DITA files and outputs an XML
+            file containing numbers of the terminology topics 
+            (e.g. number of terms by status).
+            
+            The XML file is (optionally) merged with previous statistics
+            by the terminology-stats-merge-xml.xsl stylesheet.
+        </xd:desc>
+    </xd:doc>
     
     <xsl:output method="xml"
         encoding="UTF-8"
@@ -16,15 +30,10 @@
     <xsl:param name="temp.dir.abs"/>
     <xsl:param name="ditamap.filename"/>
 
-    <!-- The parameter $newline defines a line break. -->
-    <xsl:variable name="newline">
-        <xsl:text>
-        </xsl:text>
-    </xsl:variable>
+    <xsl:variable name="newline" select="'&#xd;'" as="xs:string"/>
     
     <xsl:template match="/" priority="1">
-        <!--<xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita'))"/>-->
-        <xsl:variable name="termCollection" select="collection(concat($temp.dir.abs, '/?select=*.dita;recurse=yes'))"/>
+        <xsl:variable name="termCollection" select="collection($temp.dir.abs || '/?select=*.dita;recurse=yes')"/>
         <termstats>
             <currentStatistics>
                 <languages>
