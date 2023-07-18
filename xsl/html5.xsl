@@ -739,31 +739,62 @@
                         }]
                         };
                         var termNotationsChart = document.getElementById("termNotations");
-                        var myLineChart = new Chart(termNotationsChart, {
-                        type: 'line',
-                        data: data,
-                        steppedLine: 'before',
-                        options: {
-                            title: {
-                                display: true,
-                                text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
-                            },
-                            scales: {
-                                xAxes: [{
-                                    type: 'time',
-                                    time: {
-                                        unit: 'month',
-                                        unitStepSize: 1,
-                                        displayFormats: {
-                                            'day': 'MMM DD'
-                                        }
-                                    }
-                                }]
-                            },
-                            responsive: true
-                        }
+                        // var myLineChart = new Chart(termNotationsChart, {
+                        //                        type: 'line',
+                        //                        data: data,
+                        //                        steppedLine: 'before',
+                        //                        options: {
+                        //                            title: {
+                        //                                display: true,
+                        //                                text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
+                //                            },
+                //                            scales: {
+                //                                xAxes: [{
+                //                                    type: 'time',
+                //                                    time: {
+                //                                        unit: 'month',
+                //                                        unitStepSize: 1,
+                //                                        displayFormats: {
+                //                                            'day': 'MMM DD'
+                //                                        }
+                //                                    }
+                //                                }]
+                //                            },
+                //                            responsive: true
+                //                        }
+                //                    });
+                //                }
+                require(['<xsl:value-of select="$chart.js"/>'], function(Chart) {
+                    require(['<xsl:value-of select="$moment.js"/>'], function() {
+                        require(['<xsl:value-of select="$chartjs-adapter-moment.js"/>'], function() {
+                            var myLineChart = new Chart(termNotationsChart, {
+                                type: 'line',
+                                data: data,
+                                steppedLine: 'before',
+                                options: {
+                                    title: {
+                                        display: true,
+                                        text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
+                                    },
+                                    scales: {
+                                       xAxes: [{
+                                           type: 'time',
+                                           time: {
+                                               unit: 'month',
+                                               unitStepSize: 1,
+                                               displayFormats: {
+                                                   'day': 'MMM DD'
+                                               }
+                                           }
+                                        }]
+                                    },
+                                    responsive: true
+                                }
+                                }); // myLineChart
+                            });
+                        });
                     });
-                }   
+                }
             </script>
             <xsl:value-of select="$newline"/>
             <canvas id="termNotations"/>
