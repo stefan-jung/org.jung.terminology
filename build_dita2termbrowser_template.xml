@@ -4,7 +4,7 @@
     <!-- 
         WORKAROUND: It is mandatory to call init-properties here.
         Otherwise, the dita.temp.dir property would not be available
-        in the termbrowser-termstats and semanticnet target
+        in the generate-termstats and semanticnet target
         on some Linux OSes when using DITA-OT 2.4.3+
     -->
     <target name="dita2termbrowser-responsive"
@@ -50,10 +50,10 @@
         <property if:set="semanticnetref" name="generate-semanticnet" value="true"/>
         <echo if:set="generate-semanticnet" level="info">Generate semantic net: true</echo>
         <echo unless:set="generate-semanticnet" level="info">Generate semantic net: false</echo>
-        <antcall if:set="generate-semanticnet" target="semanticnet"/>
+        <!--<antcall if:set="generate-semanticnet" target="generate-semanticnet"/>-->
     </target>
     
-    <target name="generate-termstats">
+    <target name="-generate-termstats">
         <description>
             Helper target to determine if terminology statistics should be generated.
             This target is looking for a &lt;termstatsref&gt; element on the terminology map.
@@ -74,8 +74,8 @@
         <property if:set="termstatsref" name="generate-termstats" value="true"/>
         <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
         <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
-        <antcall if:set="generate-termstats" target="termbrowser-termstats"/>
-        <antcall target="termbrowser-termstats"/>
+        <!--<antcall if:set="generate-termstats" target="termbrowser-termstats"/>-->
+        <!--<antcall target="termbrowser-termstats"/>-->
     </target>
     
     <!--<!-\- Check if the conditions for merging termstats are met. -\->
@@ -94,9 +94,9 @@
         <echo>Processing terminology statistics</echo>
     </target>-->
     
-    <target name="termbrowser-termstats"
+    <target name="generate-termstats"
         description="Generate terminology statistics."
-        depends="-is-xmltask-available"
+        depends="-is-xmltask-available, -generate-termstats"
         if:set="generate-termstats">
         
         <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
@@ -266,7 +266,7 @@
         </replaceregexp>-->
     </target>
     
-    <target if:set="generate-semanticnet" name="semanticnet" depends="-is-xmltask-available">
+    <target name="generate-semanticnet" depends="-is-xmltask-available, -generate-semanticnet" if:set="generate-semanticnet">
         
         <!-- Set args.default.language, if it has not yet been set. -->
         <property name="args.default.language" value="en-GB"/>
@@ -284,7 +284,7 @@
             <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
             <param name="file.separator" expression="${file.separator}"/>
         </xslt>-->
-        <pipeline>
+        <!--<pipeline>
             <xslt basedir="${dita.temp.dir}"
                 destdir="${output.dir}"
                 in="${dita.temp.dir}${file.separator}${basename}.ditamap"
@@ -298,10 +298,10 @@
             </xslt>
         </pipeline>
         <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
-        <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>
+        <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>-->
         
         <!-- Read <head> from semantic net -->
-        <loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.head">
+        <!--<loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.head">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <trim/>
@@ -310,10 +310,10 @@
                 <replaceregex pattern="&lt;!DOCTYPE(.*)&lt;\/title&gt;" replace=""/>
                 <replaceregex pattern="&lt;\/head&gt;(.*)&lt;\/html&gt;" replace=""/>
             </filterchain>
-        </loadfile>
+        </loadfile>-->
         
         <!-- Read <body> from semantic net -->
-        <loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.body">
+        <!--<loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.body">
             <filterchain>
                 <replaceregex pattern="\s\s+" replace=" "/>
                 <ignoreblank/>
@@ -321,15 +321,15 @@
                 <replaceregex pattern="&lt;!DOCTYPE(.*)&lt;body&gt;" replace=""/>
                 <replaceregex pattern="&lt;\/body&gt;&lt;\/html&gt;" replace=""/>
             </filterchain>
-        </loadfile>
+        </loadfile>-->
         
         <!-- Get filename of semantic-net topic -->
-        <xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
+        <!--<xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
             <copy path="//*[contains(@type, 'semanticnet')]/@href" property="semantic-net-file" attrValue="yes"/>
-        </xmltask>
+        </xmltask>-->
         
         <!-- Replace file suffix -->
-        <loadresource property="semantic-net-file-html">
+        <!--<loadresource property="semantic-net-file-html">
             <propertyresource name="semantic-net-file"/>
             <filterchain>
                 <tokenfilter>
@@ -337,10 +337,10 @@
                     <replacestring from=".xml" to=".html"/>
                 </tokenfilter>
             </filterchain>
-        </loadresource>
+        </loadresource>-->
 
         <!-- Replace certain parts of the topic with the semantic net data -->
-        <replaceregexp file="${output.dir}/${semantic-net-file-html}"
+        <!--<replaceregexp file="${output.dir}/${semantic-net-file-html}"
             match="&lt;head&gt;"
             replace="&lt;head&gt;${semantic-net.head}"
             flags="gis"
@@ -352,13 +352,13 @@
             replace="${semantic-net.body}"
             flags="i"
             byline="false">
-        </replaceregexp>
+        </replaceregexp>-->
         
         <!--
             The vis.js script needs to be injected as the first lib to the head.
             We have no extension point for this, so we need to make this dirty.
         -->
-        <loadfile srcfile="${dita.plugin.org.jung.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
+        <!--<loadfile srcfile="${dita.plugin.org.jung.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
         <replaceregexp file="${output.dir}/${semantic-net-file-html}"
             match="&lt;script"
             replace="${vis.js.txt}&lt;script"
@@ -366,7 +366,7 @@
             byline="false">
         </replaceregexp>
         
-        <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>
+        <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>-->
     </target>
     
 </project>
