@@ -7,7 +7,14 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="related-links sj xd xs">
     
+    <xsl:param name="ditamap"/>
+    <!--<xsl:param name="temp.dir.abs"/>-->
+    <!--<xsl:param name="tempdir"/>-->
+    
+    <!--<xsl:variable name="dita.temp.dir" select="$temp.dir.abs"/>-->
+    
     <!-- vis.js -->
+    
     <xsl:variable name="vis.js" as="xs:string" 
         select="'https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js'"
     />
@@ -75,8 +82,8 @@
             var network = null;
             
             function draw() {
-                nodes = [<xsl:apply-templates mode="semantic-net-nodes"/>];
-                edges = [<xsl:apply-templates select="/" mode="semantic-net-edges"/>];
+                nodes = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-nodes"/>];
+                edges = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-edges"/>];
                 var container = document.getElementById('mynetwork');
                 var data = {
                     nodes: nodes,
@@ -204,17 +211,29 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
-        <xsl:value-of select="'{value:''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
+        <xsl:value-of select="'{value:''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || ' '"/>
     </xsl:template>
     
     <!-- Generate nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-nodes">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
-        <xsl:variable name="delim" as="xs:string" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''"/>
-        <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
-        <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
+        <xsl:variable name="filename" select="@href" as="xs:string"/>
+        <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
+        <xsl:variable name="label" select="document($filepath)//title[1]/text()"/>
+        <!--<xsl:variable name="label" select="':('"/>-->
         
-        <xsl:message>  termmap/termref semantic-net-nodes<xsl:value-of select="@keys"/></xsl:message>
+        <xsl:message>/--------------------------------------------------------------------------------\</xsl:message>
+        <xsl:message>filename: <xsl:value-of select="$filename"/></xsl:message>
+        <xsl:message>filepath: <xsl:value-of select="$filepath"/></xsl:message>
+        <xsl:message>label: <xsl:value-of select="$label"/></xsl:message>
+        <xsl:message>\--------------------------------------------------------------------------------/</xsl:message>
+        
+        <xsl:variable name="delim" as="xs:string" select="
+            if (following-sibling::*[contains(@class, ' termmap/termref ')])
+            then ',' else ''
+            "/>
+        <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
+        <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim || ' '"/>
         
     </xsl:template>
     
@@ -222,7 +241,7 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="semantic-net-edges">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
-        <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename" as="xs:string"/>
+        <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
         
         <xsl:if test="$debugging.mode = 'true'">
             <xsl:message select="'[DEBUG] : Generate edges for file: ' || $filepath"/>
@@ -259,7 +278,7 @@
                     <xsl:message select="'[DEBUG]: sj:getString(' || $language || ', ' || $labelString || ')'"/>
                 </xsl:if>
                 <xsl:if test="$key != '' and @keyref != ''">
-                    <xsl:value-of select="'{from: ''' || $keyref || ''', to : ''' || $key || ''', label: ''' || sj:getString($language, $labelString) || '''},' || $newline"/>
+                    <xsl:value-of select="'{from: ''' || $keyref || ''', to : ''' || $key || ''', label: ''' || sj:getString($language, $labelString) || '''}, '"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:if>

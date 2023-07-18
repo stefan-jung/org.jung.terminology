@@ -16,7 +16,7 @@
     <xsl:param name="temp.dir"/>
     <xsl:param name="language" select="'en-GB'"/>
     <xsl:param name="dita.temp.dir" as="xs:string"/>
-    <xsl:param name="file.separator" as="xs:string"/>
+    <xsl:param name="file.separator" select="'/'" as="xs:string"/>
     
     <xsl:variable name="debugging.mode" select="'true'" as="xs:string"/>
     <xsl:variable name="newline" select="'&#xd;'" as="xs:string"/>
