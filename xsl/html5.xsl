@@ -14,6 +14,17 @@
     
     <xsl:variable name="newline" select="'&#xd;'" as="xs:string"/>
     
+    <!-- chart.js -->
+    <xsl:variable name="moment.js" as="xs:string"
+        select="'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js'"
+    />
+    <xsl:variable name="chart.js" as="xs:string"
+        select="'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js'"
+    />
+    <xsl:variable name="chartjs-adapter-moment.js" as="xs:string"
+        select="'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.min.js'"
+    />
+    
     <!-- Definition -->
     <xsl:template match="*[contains(@class, ' termentry/definition ')]">
         <div class="panel panel-default definition">
@@ -88,7 +99,7 @@
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/termBody ')]">
-        <!-- Does the <termBody> has <fullForm> children -->
+        <!-- Check if the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
             <table class="termTable table table-striped table-bordered table-hover table-condensed">
                 <tr>
@@ -539,11 +550,14 @@
                         }]
                         };
                         var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
-                        var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                            type: 'pie',
-                            data: termNotationsPerLanguageData,
-                            options: {}
+                        require(['<xsl:value-of select="$chart.js"/>'], function(Chart) {
+                            var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
+                                type: 'pie',
+                                data: termNotationsPerLanguageData,
+                                options: {}
+                            });
                         });
+                        
                         }
                     </script>
                     <xsl:value-of select="$newline"/>
