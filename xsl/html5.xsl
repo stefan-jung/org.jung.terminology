@@ -510,8 +510,8 @@
             var network = null;
             
             function draw() {
-                nodes = [<xsl:apply-templates mode="nodes"/>];
-                edges = [<xsl:apply-templates mode="edges"/>];
+                nodes = [<xsl:apply-templates mode="semantic-net-nodes"/>];
+                edges = [<xsl:apply-templates select="/" mode="semantic-net-edges"/>];
                 var container = document.getElementById('mynetwork');
                 var data = {
                     nodes: nodes,
@@ -593,7 +593,7 @@
                 }
             });
             
-            var terms = [<xsl:apply-templates mode="termmeta"/>];
+            var terms = [<xsl:apply-templates mode="semantic-net-legend"/>];
             
             function loadTerm(key) {
                 var result = terms.filter(function(obj) {
@@ -615,7 +615,7 @@
             
             document.addEventListener("DOMContentLoaded", function() {
                 draw();
-                var data = [<xsl:apply-templates mode="search"/>];
+                var data = [<xsl:apply-templates mode="semantic-net-search"/>];
                 $( "#search-input" ).autocomplete({source: data});
             });
             
@@ -636,22 +636,25 @@
     </xsl:template>
     
     <!-- Generate data set for autocomplete search box -->
-    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="search">
+    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
         <xsl:value-of select="'{value:''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
     </xsl:template>
     
     <!-- Generate nodes -->
-    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="nodes">
+    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-nodes">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="delim" as="xs:string" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''"/>
         <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
         <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || $newline"/>
+        
+        <xsl:message>  termmap/termref semantic-net-nodes<xsl:value-of select="@keys"/></xsl:message>
+        
     </xsl:template>
     
     <!-- Generate edges between nodes -->
-    <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="edges">
+    <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="semantic-net-edges">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename" as="xs:string"/>
@@ -698,7 +701,7 @@
     </xsl:template>
     
     <!-- Load term metadata for the legend box -->
-    <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="termmeta">
+    <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="semantic-net-legend">
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>
         <xsl:variable name="filename" select="@href"/>
@@ -712,11 +715,11 @@
     </xsl:template>
     
     <!-- Fall Through Templates -->
-    <xsl:template match="*[contains(@class, ' topic/title ')]" mode="nodes edges termmeta search"/>
-    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="nodes edges termmeta search"/>
-    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="nodes edges termmeta search"/>
-    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="nodes edges termmeta search"/>
-    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="nodes edges termmeta search"/>
+    <xsl:template match="*[contains(@class, ' topic/title ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
+    <xsl:template match="*[contains(@class, ' topic/navtitle ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
+    <xsl:template match="*[contains(@class, ' map/topicmeta ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
+    <xsl:template match="*[contains(@class, ' bookmap/booktitle ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
+    <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
     
     <!-- Escape or remove conflicting characters -->
     <xsl:function name="sj:cleanDefinition" as="xs:string">
@@ -728,8 +731,8 @@
     
     
     <xsl:template match="*[contains(@class, 'termstats-d/stats')]">
-        <xsl:variable name="temp.dir.uri" select="concat('file:///', encode-for-uri(replace($temp.dir, '\\', '/')))"/>
-        <xsl:variable name="termstats.uri" select="$temp.dir.uri || '/termstats_merged.xml'"/>
+        <!--<xsl:variable name="temp.dir.uri" select="concat('file:///', encode-for-uri(replace($temp.dir, '\\', '/')))"/>-->
+        <xsl:variable name="termstats.uri" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/termstats_merged.xml'"/>
         <xsl:apply-templates select="document($termstats.uri, /)" mode="termstats"/>
     </xsl:template>
     
@@ -774,10 +777,7 @@
                             <xsl:with-param name="language" select="@lang"/>
                             <xsl:with-param name="languageCode" select="true()"/>
                         </xsl:call-template>
-                        <xsl:text>: </xsl:text>
-                        <xsl:value-of select="."/>
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="sj:getString($language, 'Term Notations')"/>
+                        <xsl:value-of select="': ' || . ||' ' || sj:getString($language, 'Term Notations')"/>
                     </li>
                 </xsl:for-each>
             </ul>
@@ -786,64 +786,50 @@
                     <xsl:value-of select="$newline"/>
                     <script>
                         function displayTermNotationsPerLanguageCharts() {
-                        var termNotationsPerLanguageData = {
-                        labels: [
-                        <xsl:for-each select="language">
-                            <xsl:text>"</xsl:text>
-                            <xsl:value-of select="@lang"/> 
-                            <xsl:text>"</xsl:text>
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::language">
+                            var termNotationsPerLanguageData = {
+                            labels: [
+                            <xsl:for-each select="language">
+                                <xsl:value-of select="'&quot;' || @lang || '&quot;'"/> 
+                                <xsl:if test="following-sibling::language">
                                     <xsl:text>,</xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:for-each>
-                        ],
-                        datasets: [{
-                        data: [
-                        <xsl:for-each select="language">
-                            <xsl:value-of select="."/> 
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::language">
+                                </xsl:if>
+                            </xsl:for-each>
+                            ],
+                            datasets: [{
+                            data: [
+                            <xsl:for-each select="language">
+                                <xsl:value-of select="."/> 
+                                <xsl:if test="following-sibling::language">
                                     <xsl:text>,</xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:for-each>
-                        ],
-                        backgroundColor: [
-                        <xsl:for-each select="language">
-                            <xsl:text>"</xsl:text>
-                            <xsl:value-of select="sj:getColorCode(position())"/>
-                            <xsl:text>"</xsl:text>
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::language">
+                                </xsl:if>
+                            </xsl:for-each>
+                            ],
+                            backgroundColor: [
+                            <xsl:for-each select="language">
+                                <xsl:value-of select="'&quot;' || sj:getColorCode(position()) || '&quot;'"/>
+                                <xsl:if test="following-sibling::language">
                                     <xsl:text>,</xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:for-each>
-                        ],
-                        hoverBackgroundColor: [
-                        <xsl:for-each select="language">
-                            <xsl:text>"</xsl:text>
-                            <xsl:value-of select="sj:getHoverColorCode(position())"/>
-                            <xsl:text>"</xsl:text>
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::language">
+                                </xsl:if>
+                            </xsl:for-each>
+                            ],
+                            hoverBackgroundColor: [
+                            <xsl:for-each select="language">
+                                <xsl:value-of select="'&quot;' || sj:getHoverColorCode(position()) || '&quot;'"/>
+                                <xsl:if test="following-sibling::language">
                                     <xsl:text>,</xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:for-each>
-                        ]
-                        }]
-                        };
-                        var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
-                        require(['<xsl:value-of select="$chart.js"/>'], function(Chart) {
-                            var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                                type: 'pie',
-                                data: termNotationsPerLanguageData,
-                                options: {}
+                                </xsl:if>
+                            </xsl:for-each>
+                            ]
+                            }]
+                            };
+                            var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
+                            require(['<xsl:value-of select="$chart.js"/>'], function(Chart) {
+                                var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
+                                    type: 'pie',
+                                    data: termNotationsPerLanguageData,
+                                    options: {}
+                                });
                             });
-                        });
                         
                         }
                     </script>
@@ -865,16 +851,16 @@
         <tr class="termconflicts-tr">
             <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
             <td class="termconflicts-td">
-                <a>
-                    <xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', 'html')"/></xsl:attribute>
-                    <xsl:attribute name="target">_self</xsl:attribute>
+                <a href="{replace($preferredTermFile, 'dita', 'html')}" target="_self">
+                    <!--<xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', 'html')"/></xsl:attribute>
+                    <xsl:attribute name="target">_self</xsl:attribute>-->
                     <xsl:value-of select="$preferredTermFile"/>
                 </a>
             </td>
-            <td class="termconflicts-td">
+            <td class="termconflicts-td" href="{replace($notRecommendedTermFile, 'dita', 'html')}" target="_self">
                 <a>
-                    <xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', 'html')"/></xsl:attribute>
-                    <xsl:attribute name="target">_self</xsl:attribute>
+                    <!--<xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', 'html')"/></xsl:attribute>
+                    <xsl:attribute name="target">_self</xsl:attribute>-->
                     <xsl:value-of select="$notRecommendedTermFile"/>
                 </a>
             </td>
@@ -890,14 +876,10 @@
                     var data = {
                         labels: [
                             <xsl:for-each select="report">
-                                <xsl:text>"</xsl:text>
-                                <xsl:value-of select="@date"/>
-                                <xsl:text>"</xsl:text>
-                                <xsl:choose>
-                                    <xsl:when test="following-sibling::report">
-                                        <xsl:text>,</xsl:text>
-                                    </xsl:when>
-                                </xsl:choose>
+                                <xsl:value-of select="'&quot;' || @date || '&quot;'"/>
+                                <xsl:if test="following-sibling::report">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:if>
                             </xsl:for-each>
                         ],
                         datasets: [{
@@ -922,11 +904,9 @@
                             data: [
                                 <xsl:for-each select="report">
                                     <xsl:value-of select="numberOfPreferredTermNotations"/>
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::report">
-                                            <xsl:text>,</xsl:text>
-                                        </xsl:when>
-                                    </xsl:choose>
+                                    <xsl:if test="following-sibling::report">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
                                 </xsl:for-each>
                             ],
                             spanGaps: false,
@@ -953,11 +933,9 @@
                             data: [
                                 <xsl:for-each select="report">
                                     <xsl:value-of select="numberOfAdmittedTermNotations"/>
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::report">
-                                            <xsl:text>,</xsl:text>
-                                        </xsl:when>
-                                    </xsl:choose>
+                                    <xsl:if test="following-sibling::report">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
                                 </xsl:for-each>
                             ],
                             spanGaps: false,
@@ -984,11 +962,9 @@
                             data: [
                                 <xsl:for-each select="report">
                                     <xsl:value-of select="numberOfNotRecommendedTermNotations"/>
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::report">
-                                            <xsl:text>,</xsl:text>
-                                        </xsl:when>
-                                    </xsl:choose>
+                                    <xsl:if test="following-sibling::report">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
                                 </xsl:for-each>
                             ],
                             spanGaps: false,
@@ -997,29 +973,27 @@
                             label: "<xsl:value-of select="sj:getString($language, 'Obsolete Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
-                            backgroundColor: "rgba(232,204,78,1)",
-                            borderColor: "rgba(232,204,78,1)",
+                            backgroundColor: "rgba(232, 204, 78, 1)",
+                            borderColor: "rgba(232, 204, 78, 1)",
                             borderCapStyle: 'butt',
                             borderDash: [],
                             borderDashOffset: 0.0,
                             borderJoinStyle: 'miter',
-                            pointBorderColor: "rgba(232,204,78,1)",
+                            pointBorderColor: "rgba(232, 204, 78, 1)",
                             pointBackgroundColor: "#fff",
                             pointBorderWidth: 1,
                             pointHoverRadius: 5,
-                            pointHoverBackgroundColor: "rgba(232,204,78,1)",
-                            pointHoverBorderColor: "rgba(232,204,78,1)",
+                            pointHoverBackgroundColor: "rgba(232, 204, 78, 1)",
+                            pointHoverBorderColor: "rgba(232, 204, 78, 1)",
                             pointHoverBorderWidth: 2,
                             pointRadius: 1,
                             pointHitRadius: 10,
                             data: [
                                 <xsl:for-each select="report">
                                     <xsl:value-of select="numberOfObsoleteTermNotations"/>
-                                    <xsl:choose>
-                                        <xsl:when test="following-sibling::report">
-                                            <xsl:text>,</xsl:text>
-                                        </xsl:when>
-                                    </xsl:choose>
+                                    <xsl:if test="following-sibling::report">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
                                 </xsl:for-each>
                             ],
                             spanGaps: false,

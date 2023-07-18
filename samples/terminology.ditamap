@@ -3,7 +3,7 @@
 <termmap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
   <title>Termbrowser</title>
   <termgroup>
-    <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
+    <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem" class="- map/topicref termmap/termref "/>
     <termref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem"/>
     <termref href="axle.dita" keys="axle"/>
     <termref href="beetle.dita" keys="beetle" termdomain="vw"/>
