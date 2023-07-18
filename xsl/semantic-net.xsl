@@ -219,7 +219,7 @@
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
-        <xsl:variable name="label" select="document($filepath)//title[1]/text()"/>
+        <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
         <!--<xsl:variable name="label" select="':('"/>-->
         
         <xsl:message>/--------------------------------------------------------------------------------\</xsl:message>
