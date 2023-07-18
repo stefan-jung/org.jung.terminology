@@ -10,6 +10,10 @@
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>
+                        <String>key.editor.open.option.pane</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
@@ -191,6 +195,7 @@
     <projectTree name="org.jung.terminology.xpr">
         <folder masterFiles="true" name="Main Files">
             <file name="catalog-dita.xml"/>
+            <file name="xsl/termbrowser.xsl"/>
             <file name="samples/terminology.ditamap"/>
         </folder>
         <folder path="."/>
