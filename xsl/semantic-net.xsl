@@ -15,8 +15,11 @@
     
     <!-- vis.js -->
     
-    <xsl:variable name="vis.js" as="xs:string" 
+    <!--<xsl:variable name="vis.js" as="xs:string" 
         select="'https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js'"
+    />-->
+    <xsl:variable name="vis.js" as="xs:string" 
+        select="'https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.6/standalone/umd/vis-network.min.js'"
     />
     
     <!-- Generate a placeholder that is replaced with the semantic net later -->
@@ -72,8 +75,11 @@
         
         <script type="text/javascript">
             
+            //require(['vis'], function(math) {
+            // ... load a visualization
+            //})
             
-            require(['<xsl:value-of select="$vis.js"/>'], function(vis.Network) {
+            //require(['<xsl:value-of select="$vis.js"/>'], function(math) {
             
             // network = new vis.Network(container, data, options);
             
@@ -141,10 +147,10 @@
                     }
                 }
             }
-                var network = new vis.Network(container, data, options);
                 
-            });
+            //});
             
+            var network = new vis.Network(container, data, options);
             network.on("stabilizationProgress", function(params) {
                 var maxWidth = 496;
                 var minWidth = 20;
@@ -164,8 +170,8 @@
                     loadTerm(params.nodes);
                 }
             });
-            
-            var terms = [<xsl:apply-templates mode="semantic-net-legend"/>];
+            }
+            var terms = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-legend"/>];
             
             function loadTerm(key) {
                 var result = terms.filter(function(obj) {
@@ -187,7 +193,7 @@
             
             document.addEventListener("DOMContentLoaded", function() {
                 draw();
-                var data = [<xsl:apply-templates mode="semantic-net-search"/>];
+                var data = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-search"/>];
                 $( "#search-input" ).autocomplete({source: data});
             });
             
@@ -210,8 +216,11 @@
     <!-- Generate data set for autocomplete search box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
+        <xsl:variable name="filename" select="@href" as="xs:string"/>
+        <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
+        <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
-        <xsl:value-of select="'{value:''' || $key || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || '''}' || $delim || ' '"/>
+        <xsl:value-of select="'''' || $key || '''' || $delim || ' '"/>
     </xsl:template>
     
     <!-- Generate nodes -->
@@ -220,6 +229,7 @@
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
+        <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
         <!--<xsl:variable name="label" select="':('"/>-->
         
         <xsl:message>/--------------------------------------------------------------------------------\</xsl:message>
@@ -228,10 +238,6 @@
         <xsl:message>label: <xsl:value-of select="$label"/></xsl:message>
         <xsl:message>\--------------------------------------------------------------------------------/</xsl:message>
         
-        <xsl:variable name="delim" as="xs:string" select="
-            if (following-sibling::*[contains(@class, ' termmap/termref ')])
-            then ',' else ''
-            "/>
         <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
         <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim || ' '"/>
         
@@ -287,15 +293,16 @@
     <!-- Load term metadata for the legend box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href]" mode="semantic-net-legend">
         <xsl:variable name="key" select="@keys"/>
-        <xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>
-        <xsl:variable name="filename" select="@href"/>
-        <xsl:variable name="filepath" select="$dita.temp.dir || $file.separator || $filename"/>
+        <xsl:variable name="filename" select="@href" as="xs:string"/>
+        <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
+        <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
+        <!--<xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>-->
         <xsl:variable name="quot">"</xsl:variable>
         
         <xsl:value-of select="
-            '{key: ' || $quot || $key || $quot || ', term: ' || $quot || $term || $quot ||
+            '{key: ' || $quot || $key || $quot || ', term: ' || $quot || $label || $quot ||
             ', definition: ' || $quot || sj:cleanDefinition(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || $quot || 
-            ', href: ' || $quot || replace(normalize-unicode($filename), '.dita', '.html') || $quot || '},' || $newline"/>
+            ', href: ' || $quot || replace(normalize-unicode($filename), '.dita', '.html') || $quot || '},'"/>
     </xsl:template>
     
     <!-- Fall Through Templates -->
