@@ -8,10 +8,6 @@
     exclude-result-prefixes="related-links sj xd xs">
     
     <xsl:param name="ditamap"/>
-    <!--<xsl:param name="temp.dir.abs"/>-->
-    <!--<xsl:param name="tempdir"/>-->
-    
-    <!--<xsl:variable name="dita.temp.dir" select="$temp.dir.abs"/>-->
     
     <!-- vis.js -->
     
@@ -229,7 +225,7 @@
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
-        <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
+        <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ', ' else ' '" as="xs:string"/>
         <!--<xsl:variable name="label" select="':('"/>-->
         
         <xsl:message>/--------------------------------------------------------------------------------\</xsl:message>
@@ -239,7 +235,7 @@
         <xsl:message>\--------------------------------------------------------------------------------/</xsl:message>
         
         <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
-        <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim || ' '"/>
+        <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim"/>
         
     </xsl:template>
     
@@ -284,7 +280,7 @@
                     <xsl:message select="'[DEBUG]: sj:getString(' || $language || ', ' || $labelString || ')'"/>
                 </xsl:if>
                 <xsl:if test="$key != '' and @keyref != ''">
-                    <xsl:value-of select="'{from: ''' || $keyref || ''', to : ''' || $key || ''', label: ''' || sj:getString($language, $labelString) || '''}, '"/>
+                    <xsl:value-of select="'{id: ''' || $keyref || $key || ''', from: ''' || $keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || sj:getString($language, $labelString) || '''}, '"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:if>
@@ -296,13 +292,8 @@
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
-        <!--<xsl:variable name="term" select="*[contains(@class, ' map/topicmeta ')]/*[contains(@class, ' topic/navtitle ')]"/>-->
-        <xsl:variable name="quot">"</xsl:variable>
         
-        <xsl:value-of select="
-            '{key: ' || $quot || $key || $quot || ', term: ' || $quot || $label || $quot ||
-            ', definition: ' || $quot || sj:cleanDefinition(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || $quot || 
-            ', href: ' || $quot || replace(normalize-unicode($filename), '.dita', '.html') || $quot || '},'"/>
+        <xsl:value-of select="'{key: ''' || $key || ''', term: ' || '''' || $label || '''' || ', definition: ''' || sj:cleanDefinition(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || '''}, '"/>
     </xsl:template>
     
     <!-- Fall Through Templates -->
@@ -313,8 +304,8 @@
     <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
     
     <!-- Escape or remove conflicting characters -->
-    <xsl:function name="sj:cleanDefinition" as="xs:string">
+    <xsl:function name="sj:cleanDefinition" as="xs:string" visibility="private">
         <xsl:param name="definition" as="xs:string"/>
-        <xsl:sequence select="replace($definition, '&quot;', '')"/>
+        <xsl:sequence select="normalize-space(replace($definition, '&quot;', ''))"/>
     </xsl:function>
 </xsl:stylesheet>

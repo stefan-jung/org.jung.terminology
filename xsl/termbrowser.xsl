@@ -19,6 +19,6 @@
     <xsl:param name="file.separator" select="'/'" as="xs:string"/>
     
     <xsl:variable name="debugging.mode" select="'true'" as="xs:string"/>
-    <xsl:variable name="newline" select="'&#xd;'" as="xs:string"/>
+    <xsl:variable name="newline" select="'&#xa;'" as="xs:string"/>
     
 </xsl:stylesheet>
