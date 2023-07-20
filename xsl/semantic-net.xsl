@@ -58,26 +58,24 @@
                     <td class="legend_col1">
                         <xsl:value-of select="sj:getString($language, 'Term')"/>
                     </td>
-                    <td class="legend_col2"><div id="t_term"><a id=""/></div></td>
+                    <td class="legend_col2">
+                        <div id="t_term">
+                            <a id="term-link"/>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td class="legend_col1">
                         <xsl:value-of select="sj:getString($language, 'Definition')"/>
                     </td>
-                    <td class="legend_col2"><div id="t_definition"/></td>
+                    <td class="legend_col2">
+                        <div id="t_definition"/>
+                    </td>
                 </tr>
             </table>
         </div>
         
         <script type="text/javascript">
-            
-            //require(['vis'], function(math) {
-            // ... load a visualization
-            //})
-            
-            //require(['<xsl:value-of select="$vis.js"/>'], function(math) {
-            
-            // network = new vis.Network(container, data, options);
             
             var nodes = null;
             var edges = null;
@@ -139,13 +137,11 @@
                         },
                         fontSize: 18,
                         fontFace: 'arial',
-                        shape: 'box',
+                        shape: 'box'
                     }
                 }
-            }
+            };
                 
-            //});
-            
             var network = new vis.Network(container, data, options);
             network.on("stabilizationProgress", function(params) {
                 var maxWidth = 496;
@@ -211,12 +207,12 @@
     
     <!-- Generate data set for autocomplete search box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
-        <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
+        <!--<xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>-->
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
-        <xsl:value-of select="'''' || $key || '''' || $delim || ' '"/>
+        <xsl:value-of select="'''' || $label || '''' || $delim || ' '"/>
     </xsl:template>
     
     <!-- Generate nodes -->
@@ -226,17 +222,7 @@
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ', ' else ' '" as="xs:string"/>
-        <!--<xsl:variable name="label" select="':('"/>-->
-        
-        <xsl:message>/--------------------------------------------------------------------------------\</xsl:message>
-        <xsl:message>filename: <xsl:value-of select="$filename"/></xsl:message>
-        <xsl:message>filepath: <xsl:value-of select="$filepath"/></xsl:message>
-        <xsl:message>label: <xsl:value-of select="$label"/></xsl:message>
-        <xsl:message>\--------------------------------------------------------------------------------/</xsl:message>
-        
-        <!--<xsl:value-of select="'{id: ''' || @keys || ''', label: ''' || descendant::*[contains(@class, ' topic/navtitle ')][1] || ''', shape: ''box'', group: ''term''}' || $delim || $newline"/>-->
         <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim"/>
-        
     </xsl:template>
     
     <!-- Generate edges between nodes -->
@@ -244,10 +230,6 @@
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
-        
-        <xsl:if test="$debugging.mode = 'true'">
-            <xsl:message select="'[DEBUG] : Generate edges for file: ' || $filepath"/>
-        </xsl:if>
         
         <xsl:if test="document($filepath)/descendant::*[contains(@class, ' termentry/termRelation ')]">
             <xsl:for-each select="document($filepath)/descendant::*[
@@ -312,7 +294,7 @@
         <xsl:variable name="apos" select="'&apos;&apos;'" as="xs:string"/>
         <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
         <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
-        <xsl:if test="$s != $out">
+        <xsl:if test="$debugging.mode = 'true' and $s != $out">
             <xsl:message> [DEBUG] sj:jsonEscape(): Escaped literals in string</xsl:message>
             <xsl:message> [DEBUG] INPUT:  <xsl:value-of select="$s"/></xsl:message>
             <xsl:message> [DEBUG] OUTPUT: <xsl:value-of select="$out"/></xsl:message>
