@@ -293,7 +293,7 @@
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
         
-        <xsl:value-of select="'{key: ''' || $key || ''', term: ' || '''' || $label || '''' || ', definition: ''' || sj:cleanDefinition(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || '''}, '"/>
+        <xsl:value-of select="'{key: ''' || $key || ''', term: ' || '''' || $label || '''' || ', definition: ''' || sj:jsonEscape(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || '''}, '"/>
     </xsl:template>
     
     <!-- Fall Through Templates -->
@@ -304,8 +304,19 @@
     <xsl:template match="*[contains(@class, ' bookmap/mainbooktitle ')]" mode="semantic-net-nodes semantic-net-edges semantic-net-legend semantic-net-search"/>
     
     <!-- Escape or remove conflicting characters -->
-    <xsl:function name="sj:cleanDefinition" as="xs:string" visibility="private">
-        <xsl:param name="definition" as="xs:string"/>
-        <xsl:sequence select="normalize-space(replace($definition, '&quot;', ''))"/>
+    <xsl:function name="sj:jsonEscape" as="xs:string" visibility="private">
+        <xsl:param name="str" as="xs:string"/>
+        <xsl:variable name="s" select="normalize-space($str)"/>
+        <xsl:variable name="quot" select="'&quot;'" as="xs:string"/>
+        <xsl:variable name="quot-escaped" select="'\\' || $quot"/>
+        <xsl:variable name="apos" select="'&apos;&apos;'" as="xs:string"/>
+        <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
+        <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
+        <xsl:if test="$s != $out">
+            <xsl:message> [DEBUG] sj:jsonEscape(): Escaped literals in string</xsl:message>
+            <xsl:message> [DEBUG] INPUT:  <xsl:value-of select="$s"/></xsl:message>
+            <xsl:message> [DEBUG] OUTPUT: <xsl:value-of select="$out"/></xsl:message>
+        </xsl:if>
+        <xsl:sequence select="$out"/>
     </xsl:function>
 </xsl:stylesheet>
