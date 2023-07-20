@@ -77,6 +77,9 @@
         
         <script type="text/javascript">
             
+            <!-- If you comment out the following line (require.js) IN THE HTML OUTPUT, which is injected by webhelp, it works, except the search function. -->
+            <!--<script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>-->
+            
             var nodes = null;
             var edges = null;
             var network = null;
@@ -202,6 +205,7 @@
                 network.focus(term, focusOptions);
                 network.selectNodes([term])
             }
+            <!--});-->
         </script>
     </xsl:template>
     
