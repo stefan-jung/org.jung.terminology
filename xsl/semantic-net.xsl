@@ -80,6 +80,10 @@
             <!-- If you comment out the following line (require.js) IN THE HTML OUTPUT, which is injected by webhelp, it works, except the search function. -->
             <!--<script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>-->
             
+            <!--
+                https://almende.github.io/vis/examples/timeline/other/requirejs/requirejs_example.html
+            -->
+            
             var nodes = null;
             var edges = null;
             var network = null;
@@ -193,6 +197,7 @@
             });
             
             function termFocus(term) {
+                console.log("termFocus");
                 network.fit();
                 var focusOptions = {
                     scale: 0.7,
