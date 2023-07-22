@@ -72,57 +72,55 @@
             <div class="termNotationsPerLanguage" style="width:500px; height:500px;">
                 <div class="termNotations">
                     <xsl:value-of select="$newline"/>
-                    <script>
-                        function displayTermNotationsPerLanguageCharts() {
-                            var termNotationsPerLanguageData = {
-                            labels: [
-                            <xsl:for-each select="language">
-                                <xsl:value-of select="'&quot;' || @lang || '&quot;'"/> 
-                                <xsl:if test="following-sibling::language">
-                                    <xsl:text>,</xsl:text>
-                                </xsl:if>
-                            </xsl:for-each>
-                            ],
-                            datasets: [{
-                            data: [
-                            <xsl:for-each select="language">
-                                <xsl:value-of select="."/> 
-                                <xsl:if test="following-sibling::language">
-                                    <xsl:text>,</xsl:text>
-                                </xsl:if>
-                            </xsl:for-each>
-                            ],
-                            backgroundColor: [
-                            <xsl:for-each select="language">
-                                <xsl:value-of select="'&quot;' || sj:getColorCode(position()) || '&quot;'"/>
-                                <xsl:if test="following-sibling::language">
-                                    <xsl:text>,</xsl:text>
-                                </xsl:if>
-                            </xsl:for-each>
-                            ],
-                            hoverBackgroundColor: [
-                            <xsl:for-each select="language">
-                                <xsl:value-of select="'&quot;' || sj:getHoverColorCode(position()) || '&quot;'"/>
-                                <xsl:if test="following-sibling::language">
-                                    <xsl:text>,</xsl:text>
-                                </xsl:if>
-                            </xsl:for-each>
-                            ]
-                            }]
-                            };
-                            var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
-                            var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                                type: 'pie',
-                                data: termNotationsPerLanguageData,
-                                options: {}
-                            }
-                        
-                        }
-                    </script>
                     <xsl:value-of select="$newline"/>
                     <canvas id="termNotationsPerLanguage" width="400" height="400"/>
                 </div>
                 <script>
+                    function displayTermNotationsPerLanguageCharts() {
+                        var termNotationsPerLanguageData = {
+                        labels: [
+                        <xsl:for-each select="language">
+                            <xsl:value-of select="'&quot;' || @lang || '&quot;'"/> 
+                            <xsl:if test="following-sibling::language">
+                                <xsl:text>,</xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                        ],
+                        datasets: [{
+                        data: [
+                        <xsl:for-each select="language">
+                            <xsl:value-of select="."/> 
+                            <xsl:if test="following-sibling::language">
+                                <xsl:text>,</xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                        ],
+                        backgroundColor: [
+                        <xsl:for-each select="language">
+                            <xsl:value-of select="'&quot;' || sj:getColorCode(position()) || '&quot;'"/>
+                            <xsl:if test="following-sibling::language">
+                                <xsl:text>,</xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                        ],
+                        hoverBackgroundColor: [
+                        <xsl:for-each select="language">
+                            <xsl:value-of select="'&quot;' || sj:getHoverColorCode(position()) || '&quot;'"/>
+                            <xsl:if test="following-sibling::language">
+                                <xsl:text>,</xsl:text>
+                            </xsl:if>
+                        </xsl:for-each>
+                        ]
+                        }]
+                        };
+                        var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
+                        var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
+                            type: 'pie',
+                            data: termNotationsPerLanguageData,
+                            options: {}
+                        });
+                    }
+                    
                     $(document).ready(function() {
                         displayTermNotationsPerLanguageCharts();
                     });
