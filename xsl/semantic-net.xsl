@@ -9,19 +9,7 @@
     
     <xsl:param name="ditamap"/>
     
-    <!-- vis.js -->
-    
-    <!--<xsl:variable name="vis.js" as="xs:string" 
-        select="'https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js'"
-    />-->
-    <xsl:variable name="vis.js" as="xs:string" 
-        select="'https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.6/standalone/umd/vis-network.min.js'"
-    />
-    
-    <!-- Generate a placeholder that is replaced with the semantic net later -->
     <xsl:template match="*[contains(@class, ' semanticnet-d/net ')]">
-        <!--<div class="semanticnet"/>-->
-        
         <div id="search">
             <div class="form">
                 <div class="form-group row">
@@ -77,34 +65,29 @@
         
         <script type="text/javascript">
             
-            <!-- If you comment out the following line (require.js) IN THE HTML OUTPUT, which is injected by webhelp, it works, except the search function. -->
-            <!--<script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>-->
-            
-            <!--
-                https://almende.github.io/vis/examples/timeline/other/requirejs/requirejs_example.html
-            -->
-            
             var nodes = null;
             var edges = null;
             var network = null;
             
-            function draw() {
-                nodes = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-nodes"/>];
-                edges = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-edges"/>];
-                var container = document.getElementById('mynetwork');
-                var data = {
-                    nodes: nodes,
-                    edges: edges
-                };
-                var options = {
-                    interaction: {
-                        hover: true
-                    },
-                    edges: {
-                        width: 2,
-                        arrows: 'to',
-                        color: 'gray'
-                    },
+            nodes = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-nodes"/>];
+            edges = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-edges"/>];
+            
+            var container = document.getElementById('mynetwork');
+            
+            var data = {
+                nodes: nodes,
+                edges: edges
+            };
+            
+            var options = {
+                interaction: {
+                    hover: true
+                },
+                edges: {
+                    width: 2,
+                    arrows: 'to',
+                    color: 'gray'
+                },
                 layout: {
                     improvedLayout: false
                 },
@@ -148,8 +131,9 @@
                     }
                 }
             };
-                
+                            
             var network = new vis.Network(container, data, options);
+             
             network.on("stabilizationProgress", function(params) {
                 var maxWidth = 496;
                 var minWidth = 20;
@@ -158,18 +142,20 @@
                 document.getElementById('bar').style.width = width + 'px';
                 document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
             });
+             
             network.once("stabilizationIterationsDone", function() {
                 document.getElementById('text').innerHTML = '100%';
                 document.getElementById('bar').style.width = '496px';
                 document.getElementById('loadingBar').style.opacity = 0;
                 setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
             });
+             
             network.on('click', function(params) {
                 if (!(params.nodes == 0)) {
                     loadTerm(params.nodes);
                 }
             });
-            }
+                 
             var terms = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-legend"/>];
             
             function loadTerm(key) {
@@ -191,7 +177,6 @@
             }
             
             document.addEventListener("DOMContentLoaded", function() {
-                draw();
                 var data = [<xsl:apply-templates select="document($ditamap)" mode="semantic-net-search"/>];
                 $( "#search-input" ).autocomplete({source: data});
             });
@@ -210,13 +195,12 @@
                 network.focus(term, focusOptions);
                 network.selectNodes([term])
             }
-            <!--});-->
+
         </script>
     </xsl:template>
     
     <!-- Generate data set for autocomplete search box -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
-        <!--<xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>-->
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>

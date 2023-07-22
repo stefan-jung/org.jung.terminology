@@ -54,7 +54,8 @@ pre.screen {
   background-color: rgba(0, 0, 0, 0);
 }
 .table {
-background-color: rgb(255, 255, 255);  
+  background-color: rgb(255, 255, 255);
+  border: 1pt solid black;  
 }
 #header #lHeader, #splitterContainer #leftPane {
   background-color: rgb(255, 255, 255);
