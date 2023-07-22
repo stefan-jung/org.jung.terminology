@@ -14,8 +14,8 @@
     </tags>
     <preview-image file="preview/preview.png"/>
     <resources>
-      <css file="css/doctales.css"/>
-      <logo file="logo/doctales-logo.svg"/>
+      <css file="css/stefan-jung.css"/>
+      <logo file="logo/stefan-jung-logo.svg"/>
     </resources>
     <parameters>
       <parameter name="webhelp.show.main.page.tiles" value="no"/>
