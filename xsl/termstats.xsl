@@ -8,7 +8,7 @@
     exclude-result-prefixes="related-links sj xd xs">
     
     <!-- chart.js -->
-    <xsl:variable name="moment.js" as="xs:string"
+    <!--<xsl:variable name="moment.js" as="xs:string"
         select="'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js'"
     />
     <xsl:variable name="chart.js" as="xs:string"
@@ -16,7 +16,7 @@
     />
     <xsl:variable name="chartjs-adapter-moment.js" as="xs:string"
         select="'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.esm.js'"
-    />
+    />-->
     
     <xsl:template match="*[contains(@class, 'termstats-d/stats')]">
         <!--<xsl:variable name="temp.dir.uri" select="concat('file:///', encode-for-uri(replace($temp.dir, '\\', '/')))"/>-->
@@ -111,13 +111,11 @@
                             }]
                             };
                             var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
-                            require(['<xsl:value-of select="$chart.js"/>'], function(Chart) {
-                                var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
-                                    type: 'pie',
-                                    data: termNotationsPerLanguageData,
-                                    options: {}
-                                });
-                            });
+                            var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
+                                type: 'pie',
+                                data: termNotationsPerLanguageData,
+                                options: {}
+                            }
                         
                         }
                     </script>
@@ -288,36 +286,30 @@
                         }]
                         };
                         var termNotationsChart = document.getElementById("termNotations");
-                        require(['<xsl:value-of select="$chart.js"/>'], function(Chart) {
-                            require(['<xsl:value-of select="$moment.js"/>'], function() {
-                                require(['<xsl:value-of select="$chartjs-adapter-moment.js"/>'], function() {
-                                    var myLineChart = new Chart(termNotationsChart, {
-                                        type: 'line',
-                                        data: data,
-                                        steppedLine: 'before',
-                                        options: {
-                                            title: {
-                                                display: true,
-                                                text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
-                                            },
-                                            scales: {
-                                                xAxes: [{
-                                                    type: 'time',
-                                                    time: {
-                                                        unit: 'month',
-                                                        unitStepSize: 1,
-                                                        displayFormats: {
-                                                            'day': 'MMM DD'
-                                                        }
-                                                    }
-                                                }]
-                                            },
-                                            responsive: true
-                                        }
-                                    });
-                                });
-                            });
-                        });
+                        var myLineChart = new Chart(termNotationsChart, {
+                        type: 'line',
+                        data: data,
+                        steppedLine: 'before',
+                        options: {
+                        title: {
+                        display: true,
+                        text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
+                },
+                scales: {
+                xAxes: [{
+                type: 'time',
+                time: {
+                unit: 'month',
+                unitStepSize: 1,
+                displayFormats: {
+                'day': 'MMM DD'
+                }
+                }
+                }]
+                },
+                responsive: true
+                }
+                });
                     }
             </script>
             <xsl:value-of select="$newline"/>
