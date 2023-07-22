@@ -7,19 +7,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="related-links sj xd xs">
     
-    <!-- chart.js -->
-    <!--<xsl:variable name="moment.js" as="xs:string"
-        select="'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js'"
-    />
-    <xsl:variable name="chart.js" as="xs:string"
-        select="'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js'"
-    />
-    <xsl:variable name="chartjs-adapter-moment.js" as="xs:string"
-        select="'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-moment/1.0.1/chartjs-adapter-moment.esm.js'"
-    />-->
-    
     <xsl:template match="*[contains(@class, 'termstats-d/stats')]">
-        <!--<xsl:variable name="temp.dir.uri" select="concat('file:///', encode-for-uri(replace($temp.dir, '\\', '/')))"/>-->
         <xsl:variable name="termstats.uri" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/termstats_merged.xml'"/>
         <xsl:apply-templates select="document($termstats.uri, /)" mode="termstats"/>
     </xsl:template>
@@ -78,40 +66,40 @@
                 <script>
                     function displayTermNotationsPerLanguageCharts() {
                         var termNotationsPerLanguageData = {
-                        labels: [
-                        <xsl:for-each select="language">
-                            <xsl:value-of select="'&quot;' || @lang || '&quot;'"/> 
-                            <xsl:if test="following-sibling::language">
-                                <xsl:text>,</xsl:text>
-                            </xsl:if>
-                        </xsl:for-each>
-                        ],
-                        datasets: [{
-                        data: [
-                        <xsl:for-each select="language">
-                            <xsl:value-of select="."/> 
-                            <xsl:if test="following-sibling::language">
-                                <xsl:text>,</xsl:text>
-                            </xsl:if>
-                        </xsl:for-each>
-                        ],
-                        backgroundColor: [
-                        <xsl:for-each select="language">
-                            <xsl:value-of select="'&quot;' || sj:getColorCode(position()) || '&quot;'"/>
-                            <xsl:if test="following-sibling::language">
-                                <xsl:text>,</xsl:text>
-                            </xsl:if>
-                        </xsl:for-each>
-                        ],
-                        hoverBackgroundColor: [
-                        <xsl:for-each select="language">
-                            <xsl:value-of select="'&quot;' || sj:getHoverColorCode(position()) || '&quot;'"/>
-                            <xsl:if test="following-sibling::language">
-                                <xsl:text>,</xsl:text>
-                            </xsl:if>
-                        </xsl:for-each>
-                        ]
-                        }]
+                            labels: [
+                            <xsl:for-each select="language">
+                                <xsl:value-of select="'&quot;' || @lang || '&quot;'"/> 
+                                <xsl:if test="following-sibling::language">
+                                    <xsl:text>,</xsl:text>
+                                </xsl:if>
+                            </xsl:for-each>
+                            ],
+                            datasets: [{
+                                data: [
+                                <xsl:for-each select="language">
+                                    <xsl:value-of select="."/> 
+                                    <xsl:if test="following-sibling::language">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>
+                                ],
+                                backgroundColor: [
+                                <xsl:for-each select="language">
+                                    <xsl:value-of select="'&quot;' || sj:getColorCode(position()) || '&quot;'"/>
+                                    <xsl:if test="following-sibling::language">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>
+                                ],
+                                hoverBackgroundColor: [
+                                <xsl:for-each select="language">
+                                    <xsl:value-of select="'&quot;' || sj:getHoverColorCode(position()) || '&quot;'"/>
+                                    <xsl:if test="following-sibling::language">
+                                        <xsl:text>,</xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>
+                                ]
+                            }]
                         };
                         var termNotationsPerLanguageCanvas = document.getElementById("termNotationsPerLanguage");
                         var myPieChart = new Chart(termNotationsPerLanguageCanvas,{
@@ -136,15 +124,11 @@
             <td class="termconflicts-td"><xsl:value-of select="termnotation"/></td>
             <td class="termconflicts-td">
                 <a href="{replace($preferredTermFile, 'dita', 'html')}" target="_self">
-                    <!--<xsl:attribute name="href"><xsl:value-of select="replace($preferredTermFile, 'dita', 'html')"/></xsl:attribute>
-                    <xsl:attribute name="target">_self</xsl:attribute>-->
                     <xsl:value-of select="$preferredTermFile"/>
                 </a>
             </td>
             <td class="termconflicts-td" href="{replace($notRecommendedTermFile, 'dita', 'html')}" target="_self">
                 <a>
-                    <!--<xsl:attribute name="href"><xsl:value-of select="replace($notRecommendedTermFile, 'dita', 'html')"/></xsl:attribute>
-                    <xsl:attribute name="target">_self</xsl:attribute>-->
                     <xsl:value-of select="$notRecommendedTermFile"/>
                 </a>
             </td>
@@ -285,29 +269,29 @@
                         };
                         var termNotationsChart = document.getElementById("termNotations");
                         var myLineChart = new Chart(termNotationsChart, {
-                        type: 'line',
-                        data: data,
-                        steppedLine: 'before',
-                        options: {
-                        title: {
-                        display: true,
-                        text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
-                },
-                scales: {
-                xAxes: [{
-                type: 'time',
-                time: {
-                unit: 'month',
-                unitStepSize: 1,
-                displayFormats: {
-                'day': 'MMM DD'
-                }
-                }
-                }]
-                },
-                responsive: true
-                }
-                });
+                            type: 'line',
+                            data: data,
+                            steppedLine: 'before',
+                            options: {
+                                title: {
+                                    display: true,
+                                    text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        type: 'time',
+                                        time: {
+                                            unit: 'month',
+                                            unitStepSize: 1,
+                                            displayFormats: {
+                                                'day': 'MMM DD'
+                                            }
+                                        }
+                                    }]
+                                },
+                                responsive: true
+                            }
+                        });
                     }
             </script>
             <xsl:value-of select="$newline"/>
