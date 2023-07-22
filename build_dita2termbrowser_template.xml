@@ -24,32 +24,6 @@
         <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive found</echo>
     </target>
     
-    <target name="-is-xmltask-available">
-        <fail unless:set="dita.plugin.org.jung.xmltask.dir">org.jung.xmltask not found</fail>
-        <echo if:set="dita.plugin.org.jung.xmltask.dir">org.jung.xmltask found</echo>
-    </target>
-    
-    <target name="-generate-semanticnet">
-        <description>
-            Helper target to determine if a semantic net should be generated.
-            This target is looking for a &lt;semanticnetref&gt; element on the terminology map.
-        </description>
-        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
-        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
-        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
-        <loadfile property="semanticnetref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
-            <filterchain>       
-                <linecontainsregexp>          
-                    <regexp pattern="termmap/semanticnetref "/>        
-                </linecontainsregexp>      
-            </filterchain> 
-        </loadfile>
-        <property if:set="semanticnetref" name="generate-semanticnet" value="true"/>
-        <echo if:set="generate-semanticnet" level="info">Generate semantic net: true</echo>
-        <echo unless:set="generate-semanticnet" level="info">Generate semantic net: false</echo>
-    </target>
-    
     <target name="-generate-termstats">
         <description>
             Helper target to determine if terminology statistics should be generated.
@@ -71,25 +45,9 @@
         <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
     </target>
     
-    <!--<!-\- Check if the conditions for merging termstats are met. -\->
-    <target name="-merge-termstats.check">
-        <condition property="merge-termstats" value="true">
-            <and>
-                <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
-                <isset property="args.termstats"/>
-            </and>
-        </condition>
-        <echo if:set="merge-termstats">Conditions for processing terminology statistics are met</echo>
-        <echo unless:set="merge-termstats">Conditions for processing terminology statistics are NOT met. Skipping...</echo>
-    </target>
-    
-    <target name="merge-termstats" depends="-merge-termstats.check" if="merge-termstats">
-        <echo>Processing terminology statistics</echo>
-    </target>-->
-    
     <target name="generate-termstats"
         description="Generate terminology statistics."
-        depends="-is-xmltask-available, -generate-termstats"
+        depends="-generate-termstats"
         if:set="generate-termstats">
         
         <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
@@ -171,109 +129,6 @@
             file="${dita.temp.dir}/termstats_merged.xml"
             tofile="${output.dir}/termstats.xml">
         </copy>
-    </target>
-    
-    <target name="generate-semanticnet" depends="-is-xmltask-available, -generate-semanticnet" if:set="generate-semanticnet">
-        
-        <!-- Set args.default.language, if it has not yet been set. -->
-        <property name="args.default.language" value="en-GB"/>
-        
-        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <!--<xslt basedir="${dita.temp.dir}"
-            destdir="${output.dir}"
-            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
-            out="${dita.temp.dir}${file.separator}${basename}_net.html"
-            classpathref="dost.class.path"
-            extension=".html"
-            style="${dita.plugin.org.jung.terminology.dir}/xsl/semanticnet.xsl">
-            <xmlcatalog refid="dita.catalog"/>
-            <param name="language" expression="${args.default.language}"/>
-            <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
-            <param name="file.separator" expression="${file.separator}"/>
-        </xslt>-->
-        <!--<pipeline>
-            <xslt basedir="${dita.temp.dir}"
-                destdir="${output.dir}"
-                in="${dita.temp.dir}${file.separator}${basename}.ditamap"
-                out="${dita.temp.dir}${file.separator}${basename}_net.html"
-                extension=".html"
-                style="${dita.plugin.org.jung.terminology.dir}/xsl/semanticnet.xsl">
-                <xmlcatalog refid="dita.catalog"/>
-                <param name="language" expression="${args.default.language}"/>
-                <param name="dita.temp.dir" expression="${dita.temp.dir}"/>
-                <param name="file.separator" expression="${file.separator}"/>
-            </xslt>
-        </pipeline>
-        <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\[[/\r?\n|\r/]*\s+\,*\{" replace="[{" flags="g"/>
-        <replaceregexp file="${dita.temp.dir}/${basename}_net.html" match="\}\,*[/\r?\n|\r/]*\s+\]" replace="}]" flags="g"/>-->
-        
-        <!-- Read <head> from semantic net -->
-        <!--<loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.head">
-            <filterchain>
-                <replaceregex pattern="\s\s+" replace=" "/>
-                <trim/>
-                <ignoreblank/>
-                <striplinebreaks/>
-                <replaceregex pattern="&lt;!DOCTYPE(.*)&lt;\/title&gt;" replace=""/>
-                <replaceregex pattern="&lt;\/head&gt;(.*)&lt;\/html&gt;" replace=""/>
-            </filterchain>
-        </loadfile>-->
-        
-        <!-- Read <body> from semantic net -->
-        <!--<loadfile srcFile="${dita.temp.dir}/${basename}_net.html" property="semantic-net.body">
-            <filterchain>
-                <replaceregex pattern="\s\s+" replace=" "/>
-                <ignoreblank/>
-                <striplinebreaks/>
-                <replaceregex pattern="&lt;!DOCTYPE(.*)&lt;body&gt;" replace=""/>
-                <replaceregex pattern="&lt;\/body&gt;&lt;\/html&gt;" replace=""/>
-            </filterchain>
-        </loadfile>-->
-        
-        <!-- Get filename of semantic-net topic -->
-        <!--<xmltask source="${dita.temp.dir}${file.separator}${basename}.ditamap">
-            <copy path="//*[contains(@type, 'semanticnet')]/@href" property="semantic-net-file" attrValue="yes"/>
-        </xmltask>-->
-        
-        <!-- Replace file suffix -->
-        <!--<loadresource property="semantic-net-file-html">
-            <propertyresource name="semantic-net-file"/>
-            <filterchain>
-                <tokenfilter>
-                    <replacestring from=".dita" to=".html"/>
-                    <replacestring from=".xml" to=".html"/>
-                </tokenfilter>
-            </filterchain>
-        </loadresource>-->
-
-        <!-- Replace certain parts of the topic with the semantic net data -->
-        <!--<replaceregexp file="${output.dir}/${semantic-net-file-html}"
-            match="&lt;head&gt;"
-            replace="&lt;head&gt;${semantic-net.head}"
-            flags="gis"
-            byline="false">
-        </replaceregexp>
-        
-        <replaceregexp file="${output.dir}/${semantic-net-file-html}"
-            match="&lt;div class=&quot;(.+?)semanticnet-d\/net(.+?)&quot;&gt;(.*)&lt;\/div&gt;"
-            replace="${semantic-net.body}"
-            flags="i"
-            byline="false">
-        </replaceregexp>-->
-        
-        <!--
-            The vis.js script needs to be injected as the first lib to the head.
-            We have no extension point for this, so we need to make this dirty.
-        -->
-        <!--<loadfile srcfile="${dita.plugin.org.jung.terminology.dir}/framework/vis/vis.js.txt" property="vis.js.txt"/>
-        <replaceregexp file="${output.dir}/${semantic-net-file-html}"
-            match="&lt;script"
-            replace="${vis.js.txt}&lt;script"
-            flags="is"
-            byline="false">
-        </replaceregexp>
-        
-        <copy file="${dita.temp.dir}${file.separator}${basename}_net.html" todir="${output.dir}"/>-->
     </target>
     
 </project>
