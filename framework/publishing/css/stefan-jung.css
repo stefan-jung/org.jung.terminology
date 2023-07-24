@@ -476,12 +476,18 @@ a:hover, a:focus {
   text-shadow: none !important;
 }
 
+/* RELATED LINKS */
+.wh_related_links {
+  padding: 1.0em;
+  border: 1pt solid black;
+}
+
 .semantic-net-header-link {
-	vertical-align: 18px;
+  vertical-align: 18px;
 }
 
 .termstats-link {
-	vertical-align: 18px;
+  vertical-align: 18px;
 }
 
 /*********************************************
