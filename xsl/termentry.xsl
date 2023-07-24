@@ -9,59 +9,57 @@
     
     <!-- Definition -->
     <xsl:template match="*[contains(@class, ' termentry/definition ')]">
-        <div class="panel panel-default definition">
-            <div class="panel-heading">
-                <h3 class="panel-title">
+        <div class="card definition">
+            <div class="card-body">
+                <h5 class="card-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Definition'"/>
                     </xsl:call-template>
-                </h3>
+                </h5>
+                <xsl:apply-templates/>
             </div>
-            <xsl:apply-templates/>
         </div>
     </xsl:template>
 
     <!-- Definition Text -->
     <xsl:template match="*[contains(@class, ' termentry/definitionText ')]">
-        <div class="panel-body shortdesc definitionText">
+        <p class="card-text shortdesc definitionText">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
 
     <!-- Definition Source -->
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
-        <div class="panel-footer">
-            <b>
-                <xsl:call-template name="getVariable">
-                    <xsl:with-param name="id" select="'Definition Source'"/>
-                </xsl:call-template>
-                <xsl:call-template name="getVariable">
-                    <xsl:with-param name="id" select="'Delimiter String'"/>
-                </xsl:call-template>
-            </b>
+        <blockquote class="blockquote">
+            <xsl:call-template name="getVariable">
+                <xsl:with-param name="id" select="'Definition Source'"/>
+            </xsl:call-template>
+            <xsl:call-template name="getVariable">
+                <xsl:with-param name="id" select="'Delimiter String'"/>
+            </xsl:call-template>
             <xsl:apply-templates/>
-        </div>
+        </blockquote>
     </xsl:template>
     
     <!-- Alternative Definition -->
     <xsl:template match="*[contains(@class, ' termentry/altDefinition ')]">
-        <div class="panel panel-default altDefinition">
-            <div class="panel-heading">
-                <h3 class="panel-title">
+        <div class="card definition">
+            <div class="card-body">
+                <h5 class="card-title">
                     <xsl:call-template name="getVariable">
                         <xsl:with-param name="id" select="'Alternative Definition'"/>
                     </xsl:call-template>
-                </h3>
+                </h5>
+                <xsl:apply-templates/>
             </div>
-            <xsl:apply-templates/>
         </div>
     </xsl:template>
 
     <!-- Alternative Definition Text -->
     <xsl:template match="*[contains(@class, ' termentry/altDefinitionText ')]">
-        <div class="panel-body altDefinitionText">
+        <p class="card-text altDefinitionText">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
     
     <!-- Annotation -->
