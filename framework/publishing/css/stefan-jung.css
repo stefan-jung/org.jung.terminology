@@ -50,13 +50,13 @@ pre.screen {
   background-color: rgb(221, 221, 221);
   border-bottom-color: rgb(204, 204, 204);
 }
-.tablecap, .table, th.entry, td.entry, #header .navheader_parent_path, #splitterContainer .splitbuttonV, .image {
+/*.tablecap, .table, th.entry, td.entry, #header .navheader_parent_path, #splitterContainer .splitbuttonV, .image {
   background-color: rgba(0, 0, 0, 0);
 }
 .table {
   background-color: rgb(255, 255, 255);
   border: 1pt solid black;  
-}
+}*/
 #header #lHeader, #splitterContainer #leftPane {
   background-color: rgb(255, 255, 255);
 }

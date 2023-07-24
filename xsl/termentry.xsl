@@ -82,49 +82,53 @@
         <!-- Check if the <termBody> has <fullForm> children -->
         <xsl:if test="*[contains(@class, ' termentry/termNotation ')]">
             <table class="termTable table table-striped table-bordered table-hover table-condensed">
-                <tr>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Type'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Language'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Usage'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Domain'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Source'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Context'"/>
-                        </xsl:call-template>
-                    </th>
-                    <th class="termTable">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Term Annotations'"/>
-                        </xsl:call-template>
-                    </th>
-                </tr>
-                <xsl:apply-templates/>
+                <thead class="thead-light">
+                    <tr>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Type'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Language'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Usage'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Domain'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Source'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Context'"/>
+                            </xsl:call-template>
+                        </th>
+                        <th class="termTable" scope="col">
+                            <xsl:call-template name="getVariable">
+                                <xsl:with-param name="id" select="'Term Annotations'"/>
+                            </xsl:call-template>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:apply-templates/>
+                </tbody>
             </table>
         </xsl:if>
     </xsl:template>
