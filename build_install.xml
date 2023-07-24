@@ -19,6 +19,9 @@
         <exclude name="**/*.zip"/>
         <exclude name="**/*out*"/>
         <exclude name="**/*temp*"/>
+        <exclude name="temp/"/>
+        <exclude name="out/"/>
+        <exclude name="samples/"/>
       </fileset>
     </copy>
     <exec executable="${dita.dir}${file.separator}bin${file.separator}${dita.cmd}">

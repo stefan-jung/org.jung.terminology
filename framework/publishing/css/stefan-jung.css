@@ -453,6 +453,12 @@ a:hover, a:focus {
   padding: 0;
   background-color: transparent;
 }
+.fi {
+  margin-left: 2.0em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /* Termstats and Semantic Net Icons */
 .logos {
