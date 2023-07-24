@@ -416,6 +416,11 @@ table.tool td{
   font-size: 1.8em !important;
 }
 
+/* Term Table */
+.termTable {
+  table-layout: auto;
+}
+
 /* Legend */
 .legend_col1 {
   width: 25%;

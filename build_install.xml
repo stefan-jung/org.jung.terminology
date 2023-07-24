@@ -12,8 +12,14 @@
     <mkdir dir="${dita.dir}/plugins/org.jung.terminology"/>
     <echo>Copy files to "${dita.dir}/plugins/org.jung.terminology"</echo>
     <!-- If overwrite="true" is not set, the <copy> task only overwrites files, which are older than the source file (the copied file). -->
-    <copy todir="${dita.dir}/plugins/org.jung.terminology">
-      <fileset dir="."/>
+    <copy todir="${dita.dir}/plugins/org.jung.terminology" verbose="true">
+      <fileset dir=".">
+        <exclude name="build_install.xml"/>
+        <exclude name="**/*.xpr"/>
+        <exclude name="**/*.zip"/>
+        <exclude name="**/*out*"/>
+        <exclude name="**/*temp*"/>
+      </fileset>
     </copy>
     <exec executable="${dita.dir}${file.separator}bin${file.separator}${dita.cmd}">
       <arg line="--install"/>
