@@ -72,7 +72,7 @@
             <incorrect-term ignorecase="true">
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
                 <xsl:for-each select="$root//*[contains(@class, ' termentry/termNotation ')][contains(@language, $language)][contains(@usage, 'preferred') or contains(@usage, 'admitted')]">
-                    <suggestion format="text"><xsl:value-of select="./termVariant/text()"/></suggestion>
+                    <suggestion format="text"><xsl:value-of select="normalize-space(./termVariant/text())"/></suggestion>
                 </xsl:for-each>
                 <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
                 <!--<link>https://www.example.com</link>-->
