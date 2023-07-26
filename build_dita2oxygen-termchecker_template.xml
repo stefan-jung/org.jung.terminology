@@ -11,6 +11,7 @@
     <target name="oxygen-termchecker" description="Create a Oxygem Termchecker file">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <makeurl property="output.dir.url" file="${output.dir}"/>
         <!--<echo>args.input: ${args.input}</echo>
         <echo>basename: ${basename}</echo>
         <echo>INPUT:  ${dita.temp.dir}${file.separator}${basename}.ditamap</echo>
@@ -20,15 +21,14 @@
         
         <!-- Let's try to harvest all used language codes. We want to output one
             termchecker XML file per language code. -->
-        <xslt 
+        <!--<xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
             out="${output.dir}${file.separator}language-codes.txt"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/language-codes.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
-        </xslt>
-            
+        </xslt>-->
         
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
@@ -37,6 +37,7 @@
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+            <param name="output.dir.url" expression="${output.dir.url}"/>
         </xslt>
     </target>
     
