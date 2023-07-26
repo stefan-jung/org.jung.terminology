@@ -8,6 +8,8 @@
     <xsl:output indent="true" encoding="UTF-8"/>
     <xsl:param name="dita.temp.dir.url" as="xs:anyURI"/>
     <xsl:mode name="termref" on-no-match="shallow-skip"/>
+    <xsl:mode name="deprecated-term" on-no-match="shallow-skip"/>
+    
     
     <!--<?xml version="1.0" encoding="UTF-8"?>
     <incorrect-terms>
@@ -20,7 +22,7 @@
     </incorrect-terms>-->
     
     <xsl:template match="/">
-        <incorrect-terms>
+        <incorrect-terms lang="en-US">
             <xsl:apply-templates mode="termref"/>
         </incorrect-terms>
     </xsl:template>
@@ -33,7 +35,16 @@
     </xsl:template>
     
     <xsl:template match="termentry" mode="termentry">
-        <incorrect-term>HELLO</incorrect-term>
+        <xsl:apply-templates mode="deprecated-term"/>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended']" mode="deprecated-term">
+        <incorrect-term ignorecase="true">
+            <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
+            <suggestion format="text">replace with this</suggestion>
+            <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
+            <link>https://www.example.com</link>
+        </incorrect-term>
     </xsl:template>
     
     
