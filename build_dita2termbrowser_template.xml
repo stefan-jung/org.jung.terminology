@@ -40,7 +40,12 @@
                 </linecontainsregexp>      
             </filterchain> 
         </loadfile>
-        <property if:set="termstatsref" name="generate-termstats" value="true"/>
+        <condition property="generate-termstats" value="true">
+            <and>
+                <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
+                <isset property="termstatsref"/>
+            </and>
+        </condition>
         <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
         <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
     </target>
@@ -48,12 +53,12 @@
     <target name="generate-termstats"
         description="Generate terminology statistics."
         depends="-generate-termstats"
-        if:set="generate-termstats">
+        if="generate-termstats">
         
         <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
         <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
         
-        <echo level="info">termmap=${termmap}</echo>
+        <echo level="info">termmap = "${termmap}"</echo>
         
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>

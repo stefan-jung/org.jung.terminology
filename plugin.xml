@@ -867,6 +867,10 @@
     </param>
   </transtype>
   
+  <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
+  <feature extension="dita.conductor.transtype.check" value="oxygen-termchecker"/>
+  <transtype name="oxygen-termchecker" extends="html5" desc="Oxygen Termchecker"/>
+  
   <!--
     The contents of the 'build.xml' build file are added to the
     'dita.conductor.target.relative' extension point.

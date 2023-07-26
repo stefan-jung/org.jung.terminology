@@ -6,6 +6,10 @@
             <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
+                        <String>Terminology_Checker_Options_Page_Extension_Key</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
                         <String>enable.project.master.files.support</String>
                         <Boolean>true</Boolean>
                     </entry>

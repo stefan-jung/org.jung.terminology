@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless" name="dita2oxygen-termchecker">
+    
+    <target name="dita2oxygen-termchecker"
+        depends="
+        html5.init,
+        build-init,
+        preprocess,
+        oxygen-termchecker"/>
+    
+    <target name="oxygen-termchecker" description="Create a Oxygem Termchecker file">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <echo>args.input: ${args.input}</echo>
+        <echo>basename: ${basename}</echo>
+        <echo>INPUT:  ${dita.temp.dir}${file.separator}${basename}.ditamap</echo>
+        <echo>OUTPUT: ${output.dir}${file.separator}${basename}.xml</echo>
+        <echo>dita.temp.dir: ${dita.temp.dir}</echo>
+        <echo>dita.temp.dir.url: ${dita.temp.dir.url}</echo>
+        <xslt 
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${output.dir}${file.separator}${basename}.xml"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology2oxygen-termchecker.xsl"
+            destdir="${output.dir}">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+        </xslt>
+    </target>
+    
+</project>

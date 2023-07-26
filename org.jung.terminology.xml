@@ -40,4 +40,10 @@
     <publication transtype="tbx-min"/>
   </deliverable>
   
+  <deliverable name="Oxygen Termchecker" id="oxygen-termchecker">
+    <context idref="terminology"/>
+    <output href="./oxygen-termchecker"/>
+    <publication transtype="oxygen-termchecker"/>
+  </deliverable>
+  
 </project>
