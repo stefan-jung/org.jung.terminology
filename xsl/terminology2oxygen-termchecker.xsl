@@ -58,17 +58,22 @@
     
     <xsl:template match="termentry" mode="termentry">
         <xsl:param name="language" as="xs:string"/>
+        <xsl:variable name="root" as="node()" select="."/>
         <xsl:apply-templates mode="deprecated-term">
+            <xsl:with-param name="root" select="$root"/>
             <xsl:with-param name="language" select="$language"/>
         </xsl:apply-templates>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended']" mode="deprecated-term">
+        <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
             <incorrect-term ignorecase="true">
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
-                <suggestion format="text">replace with this</suggestion>
+                <xsl:for-each select="$root//*[contains(@class, ' termentry/termNotation ')][contains(@language, $language)][contains(@usage, 'preferred') or contains(@usage, 'admitted')]">
+                    <suggestion format="text"><xsl:value-of select="./termVariant/text()"/></suggestion>
+                </xsl:for-each>
                 <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
