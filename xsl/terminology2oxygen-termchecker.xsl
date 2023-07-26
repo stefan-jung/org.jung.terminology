@@ -70,7 +70,7 @@
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
                 <suggestion format="text">replace with this</suggestion>
                 <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
-                <link>https://www.example.com</link>
+                <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
     </xsl:template>
