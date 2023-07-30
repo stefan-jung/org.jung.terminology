@@ -1,31 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
   
-  <group id="dtd-public-id"> 
-    <public publicId="-//STEFAN JUNG//DTD DITA Termentry//EN" uri="dtd/termentry.dtd"/>
-    <public publicId="-//STEFAN JUNG//DTD DITA SemanticNet//EN" uri="dtd/semanticnet.dtd"/>
-    <public publicId="-//STEFAN JUNG//DTD DITA TermStats//EN" uri="dtd/termstats.dtd"/>
-    <public publicId="-//STEFAN JUNG//DTD DITA Termmap//EN" uri="dtd/termmap.dtd"/>
-    
-    <public publicId="-//STEFAN JUNG//ELEMENTS DITA Termentry//EN" uri="dtd/termentry.mod"/>
-    <public publicId="-//STEFAN JUNG//ELEMENTS DITA SemanticNet//EN" uri="dtd/semanticnet.mod"/>
-    <public publicId="-//STEFAN JUNG//ELEMENTS DITA TermStats//EN" uri="dtd/termstats.mod"/>
-    <public publicId="-//STEFAN JUNG//ELEMENTS DITA Termmap//EN" uri="dtd/termmap.mod"/>
-    
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA Termentry//EN" uri="dtd/termentry.ent"/>
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA SemanticNet//EN" uri="dtd/semanticnet.ent"/>
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA TermStats//EN" uri="dtd/termstats.ent"/>
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA Termmap//EN" uri="dtd/termmap.ent"/>
-    
-    <public publicId="-//STEFAN JUNG//ELEMENTS DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.mod"/>
-    <public publicId="-//STEFAN JUNG//ELEMENTS DITA TermStats Domain//EN" uri="dtd/termstatsDomain.mod"/>
-    
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA Semantic Net Domain//EN" uri="dtd/semanticnetDomain.ent"/>
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA TermStats Domain//EN" uri="dtd/termstatsDomain.ent"/>
-    
-    <public publicId="-//STEFAN JUNG//ENTITIES DITA Termdomain Attribute Domain//EN" uri="dtd/termdomainAttDomain.ent"/>
-  </group>
-  
   <group id="rng-public-id">
     <public publicId="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
     <public publicId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
