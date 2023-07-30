@@ -9,26 +9,26 @@
     <sourceReference href="https://en.wikipedia.org/wiki/Axle" format="html" scope="external">Wikipedia</sourceReference>
   </definitionSource>
  </definition>
- <termBody>
-  <fig>
-    <title>Railroad car wheels are affixed to a straight axle, such that both wheels rotate in
-      unison.</title>
-    <image href="https://upload.wikimedia.org/wikipedia/commons/7/76/Rollingstock_axle.jpg" scope="external"
-      width="600px">
-      <alt>By No machine-readable author provided. Pantoine assumed (based on copyright claims).
-        [GFDL (http://www.gnu.org/copyleft/fdl.html), CC-BY-SA-3.0
-        (http://creativecommons.org/licenses/by-sa/3.0/) or CC BY 2.5
-        (http://creativecommons.org/licenses/by/2.5)], via Wikimedia Commons</alt>
-    </image>
-  </fig>
-  <partOfSpeech value="noun"/>
-  <fullForm usage="preferred" language="en-GB">
+ <termBody class="- topic/body concept/conbody termentry/termBody ">
+    <fig>
+      <title>Railroad car wheels are affixed to a straight axle, such that both wheels rotate in
+        unison.</title>
+      <image href="https://upload.wikimedia.org/wikipedia/commons/7/76/Rollingstock_axle.jpg"
+        scope="external" width="600px">
+        <alt>By No machine-readable author provided. Pantoine assumed (based on copyright claims).
+          [GFDL (http://www.gnu.org/copyleft/fdl.html), CC-BY-SA-3.0
+          (http://creativecommons.org/licenses/by-sa/3.0/) or CC BY 2.5
+          (http://creativecommons.org/licenses/by/2.5)], via Wikimedia Commons</alt>
+      </image>
+    </fig>
+    <partOfSpeech value="noun"/>
+    <fullForm usage="preferred" language="en-GB">
       <termVariant>axle</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
       <termVariant>Achse</termVariant>
     </fullForm>
- </termBody>
+  </termBody>
   <relations>
     <hypernyms>
       <hypernym keyref="chassis"/>

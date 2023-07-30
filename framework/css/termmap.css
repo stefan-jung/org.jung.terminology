@@ -1,4 +1,4 @@
-@import url("elements.less");
+@import url("elements.css");
 
 *[class~="termmap/termmap"] {
     display: block;

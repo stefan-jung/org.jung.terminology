@@ -209,7 +209,7 @@
 										<field name="value">
 											<cssFile>
 												<field name="href">
-													<String>${framework}/framework/css/termmap.less</String>
+													<String>${framework}/framework/css/termmap.css</String>
 												</field>
 												<field name="title">
 													<String>DOCTALES Term Map</String>
