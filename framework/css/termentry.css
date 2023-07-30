@@ -34,6 +34,12 @@
         border-color: #767676;
     }
 }
+@media oxygen-high-contrast-black, oxygen-dark-theme {
+    *:before,
+    *:after {
+        color: orange !important;
+    }
+}
 
 /*********************************************
  * TERMENTRY
@@ -41,7 +47,6 @@
 *[class~="termentry/termentry"] {
     -oxy-display-tags: none;
     display: block;
-    empty-cells: true;
     font-family: Arial, sans-serif;
     font-size: 1.0rem;
     font-style: normal;
@@ -449,7 +454,7 @@
     display: block;
     width: 100%;
 }
-*[class~="topic/image"]:after(6) {
+/**[class~="topic/image"]:after(6) {
     content: "width";
     width: 20%;
     font-weight: normal;
@@ -470,7 +475,7 @@
     font-size: 3pt;
     display: block;
     width: 100%;
-}
+}*/
 
 /*********************************************
  * ALT
@@ -1039,7 +1044,7 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="topic/note"]:before(2) {
+/**[class~="topic/note"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -1053,7 +1058,7 @@
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
 *[class~="topic/note"] {
     -oxy-display-tags: none;
@@ -1171,7 +1176,7 @@ content:
         )
     );
 }
-*[class~="termentry/agreedWith"]:before(2) {
+/**[class~="termentry/agreedWith"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -1185,7 +1190,7 @@ content:
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
 *[class~="termentry/agreedWith"] {
     -oxy-display-tags: none;
@@ -1259,7 +1264,7 @@ content:
     display: inline;
     width: 150px;
 }
-*[class~="termentry/termNotation"]:before(2) {
+/**[class~="termentry/termNotation"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -1277,7 +1282,7 @@ content:
     display: block;
     padding-bottom: 5px;
     margin-bottom: 2px;
-}
+}*/
 *[class~="termentry/termNotation"]:before(21) {
     content:
     "${i18n(term.language)}"
@@ -1884,7 +1889,7 @@ content:
 /*********************************************
  * RELATIONS LINKLIST
  *********************************************/
-*[class~="termentry/relations-linklist"]:before(2) {
+/**[class~="termentry/relations-linklist"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -1898,7 +1903,7 @@ content:
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
 *[class~="termentry/relations-linklist"] {
     display: block;
