@@ -420,7 +420,7 @@
 *[class~="topic/image"][keyref]:not([href]) {
     content: attr(keyref, keyref);
 }
-*[class~="topic/image"]:after(1) {
+/**[class~="topic/image"]:after(1) {
     content: " ";
     font-size: 3pt;
     display: block;
@@ -453,7 +453,7 @@
     font-size: 3pt;
     display: block;
     width: 100%;
-}
+}*/
 /**[class~="topic/image"]:after(6) {
     content: "width";
     width: 20%;
