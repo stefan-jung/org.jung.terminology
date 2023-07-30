@@ -1,6 +1,7 @@
 *.zip
 out/
 temp/
+import/
 MANIFEST.MF
 *.orig
 *.tmp
