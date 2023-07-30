@@ -9,6 +9,8 @@
     
     <!--
         The purpose of this script is to transform a TBX Basic file into a set of <termentry> topics.
+        This script has been tested with the TBX Basic Sample files provided on https://www.tbxinfo.net.
+        The direct link to the sample files is: https://www.tbxinfo.net/wp-content/uploads/2019/04/TBX-Basic-v3-Samples.zip
     -->
     
     <xsl:output method="xml" indent="true"/>
@@ -17,7 +19,10 @@
     <xsl:mode name="termentry-term" on-no-match="shallow-skip"/>
     <xsl:mode name="termref"  on-no-match="shallow-skip"/>
     <xsl:mode name="title" on-no-match="shallow-skip"/>
-    <xsl:mode name="termentry-definition" on-no-match="shallow-skip" />
+    <xsl:mode name="termentry-definition" on-no-match="shallow-skip"/>
+    
+    <xsl:variable name="termentry-xml-model-line1" select="'&lt;?xml-model href=&quot;urn:jung:dita:rng:termentry.rng&quot; schematypens=&quot;http://relaxng.org/ns/structure/1.0&quot;?>'"/>
+    <xsl:variable name="termentry-xml-model-line2" select="'&lt;?xml-model href=&quot;urn:jung:dita:rng:termentry.rng&quot; schematypens=&quot;http://purl.oclc.org/dsdl/schematron&quot;?>'"/>
     
     <xsl:template match="/tbx:tbx">
         <termmap>
@@ -35,10 +40,12 @@
     </xsl:template>
     
     <xsl:template match="tbx:conceptEntry" mode="termentry">
-        <xsl:result-document href="{ @id || '.dita' }" indent="true" method="xml">
-            <![CDATA[<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>]]>
-            <![CDATA[<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>]]>
-            <termentry>
+        <xsl:result-document href="{ descendant::tbx:term[1]/text() || '.dita' }" indent="true" method="xml">
+            <xsl:value-of select="'&#xa;' ||
+                $termentry-xml-model-line1 || '&#xa;' ||
+                $termentry-xml-model-line2 || '&#xa;'"
+                disable-output-escaping="true"/>
+            <termentry id="{descendant::tbx:term[1]/text()}">
                 <title><xsl:value-of select="descendant::tbx:term[1]/text()"/></title>
                 <xsl:apply-templates mode="termentry-definition"/>
                 <termBody>

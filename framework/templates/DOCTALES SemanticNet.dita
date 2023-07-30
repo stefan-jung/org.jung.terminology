@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="urn:jung:dita:rng:semanticnet.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="urn:jung:dita:rng:semanticnet.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<semanticnet id="ui_${id}">
+  <title>Semantic Net</title>
+  <semanticbody>
+    <net/>
+  </semanticbody>
+</semanticnet>

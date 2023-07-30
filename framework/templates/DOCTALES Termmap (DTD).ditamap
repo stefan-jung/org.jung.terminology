@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termmap PUBLIC "-//STEFAN JUNG//DTD DITA Termmap//EN" "termmap.dtd">
-<termmap id="ui_${id}">
-    <termgroup>
-        <termref/>
-    </termgroup>
-</termmap>

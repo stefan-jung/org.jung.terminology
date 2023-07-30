@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE termstats PUBLIC "-//STEFAN JUNG//DTD DITA TermStats//EN" "termstats.dtd">
+<?xml-model href="urn:jung:dita:rng:termstats.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <termstats id="concept_ht4_pgk_fz">
  <title>Terminology statistics</title>
  <shortdesc>This topic shows automatically calculated statistics of your terminology
