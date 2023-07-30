@@ -10,6 +10,7 @@
     <xsl:param name="output.dir.url" as="xs:anyURI"/>
     
     <xsl:mode name="termref" on-no-match="shallow-skip"/>
+    <xsl:mode name="termentry" on-no-match="shallow-skip"/>
     <xsl:mode name="deprecated-term" on-no-match="shallow-skip"/>
     
     <xsl:variable name="termentry-topics" select="collection($dita.temp.dir.url || '?select=*.dita;recurse=yes')"/>
@@ -45,6 +46,11 @@
             </xsl:if>
         </xsl:for-each>
     </xsl:template>
+
+    <!-- Fall through -->
+    <xsl:template match="topicref" mode="termref"/>
+    <xsl:template match="semanticnetref" mode="termref"/>
+    <xsl:template match="termstatsref" mode="termref"/>
     
     <xsl:template match="termref[@href][@keys]" mode="termref">
         <xsl:param name="language" as="xs:string"/>
