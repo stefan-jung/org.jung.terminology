@@ -13,10 +13,11 @@
     
     <xsl:output method="xml" indent="true"/>
     
-    <!--<xsl:mode on-no-match="shallow-skip"/>-->
     <xsl:mode name="termentry" on-no-match="shallow-skip"/>
+    <xsl:mode name="termentry-term" on-no-match="shallow-skip"/>
     <xsl:mode name="termref"  on-no-match="shallow-skip"/>
     <xsl:mode name="title" on-no-match="shallow-skip"/>
+    <xsl:mode name="termentry-definition" on-no-match="shallow-skip" />
     
     <xsl:template match="/tbx:tbx">
         <termmap>
@@ -35,13 +36,24 @@
     
     <xsl:template match="tbx:conceptEntry" mode="termentry">
         <xsl:result-document href="{ @id || '.dita' }" indent="true" method="xml">
+            <![CDATA[<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>]]>
+            <![CDATA[<?xml-model href="urn:doctales:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>]]>
             <termentry>
                 <title><xsl:value-of select="descendant::tbx:term[1]/text()"/></title>
+                <xsl:apply-templates mode="termentry-definition"/>
                 <termBody>
                     <xsl:apply-templates mode="termentry-term"/>
                 </termBody>
             </termentry>
         </xsl:result-document>
+    </xsl:template>
+    
+    <xsl:template match="tbx:descripGrp/tbx:descrip[@type = 'definition']" mode="termentry-definition">
+        <definition>
+            <definitionText>
+                <xsl:value-of select="fn:normalize-space(.)"/>
+            </definitionText>
+        </definition>
     </xsl:template>
     
     <xsl:template match="tbx:langSec" mode="termentry-term">
