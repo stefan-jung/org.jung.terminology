@@ -236,13 +236,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.termref.delete</String>
+													<String>term.termref.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.termref.delete)}</String>
+													<String>${i18n(term.termref.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.termref.delete)}</String>
+													<String>${i18n(term.termref.delete)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/delete_16.png</String>
@@ -638,13 +638,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.termref.add</String>
+													<String>term.termref.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.termref.add)}</String>
+													<String>${i18n(term.termref.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.termref.add)}</String>
+													<String>${i18n(term.termref.add)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/icons/add_16.png</String>
@@ -756,13 +756,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>doctales.termref.sort</String>
+													<String>term.termref.sort</String>
 												</field>
 												<field name="name">
-													<String>${i18n(doctales.termref.sort)}</String>
+													<String>${i18n(term.termref.sort)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(doctales.termref.sort)}</String>
+													<String>${i18n(term.termref.sort)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String></String>
@@ -1029,12 +1029,12 @@
 													<menuEntry-array>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.termref.add</String>
+																<String>term.termref.add</String>
 															</field>
 														</menuItem>
 														<menuItem>
 															<field name="actionID">
-																<String>doctales.termref.sort</String>
+																<String>term.termref.sort</String>
 															</field>
 														</menuItem>
 													</menuEntry-array>

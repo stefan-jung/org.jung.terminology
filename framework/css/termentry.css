@@ -1,5 +1,40 @@
 @import url("flags.css");
 
+@media oxygen-high-contrast-black, oxygen-dark-theme {
+    *[class~="termentry/definition"],
+    *[class~="termentry/definitionText"],
+    *[class~="termentry/definitionSource"],
+    *[class~="topic/fig"][class~="equation-d/equation-figure"],
+    *[class~="topic/fig"],
+    *[class~="topic/fig"] > *[class~="topic/title"],
+    *[class~="topic/fig"] > *[class~="topic/image"],
+    *[class~="termentry/termSource"],
+    *[class~="termentry/sourceName"],
+    *[class~="termentry/sourceReference"],
+    *[class~="termentry/altDefinition"],
+    *[class~="termentry/altDefinitionText"],
+    *[class~="termentry/annotation"],
+    *[class~="termentry/termContext"],
+    *[class~="termentry/termContextText"],
+    *[class~="termentry/termContextSource"],
+    *[class~="termentry/partOfSpeech"],
+    *[class~="topic/note"],
+    *[class~="termentry/domains"],
+    *[class~="termentry/agreedWith"],
+    *[class~="termentry/termCommitteeMember"],
+    *[class~="termentry/termNotation"],
+    *[class~="termentry/antonyms"],
+    *[class~="termentry/instancesOf"],
+    *[class~="termentry/partsOf"],
+    *[class~="termentry/hypernyms"],
+    *[class~="termentry/hyponyms"],
+    *[class~="termentry/relatedTerms"],
+    *[class~="termentry/relations-linklist"],
+    *[class~="termentry/termRelation"] {
+        border-color: #767676;
+    }
+}
+
 /*********************************************
  * TERMENTRY
  *********************************************/
@@ -20,9 +55,9 @@
     outline-width: 0;
     padding-bottom: 80px;
     padding-top: 32px;
-    text-decoration-color: rgba(0,0,0,1.0);
+    /*text-decoration-color: rgba(0,0,0,1.0);
     text-decoration-line: none;
-    text-decoration-style: solid;
+    text-decoration-style: solid;*/
     width: 768px;
 }
 *[class~="termentry/termentry"] > *[class~="topic/title"] {
@@ -107,7 +142,7 @@
         )
     );
 }
-*[class~="termentry/definition"]:before(2) {
+/**[class~="termentry/definition"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -121,21 +156,13 @@
         showIcon, true,
         transparent, true
     );
-}
-
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/definition"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
+}*/
 *[class~="termentry/definition"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 3.0em;
@@ -147,19 +174,12 @@
 /*********************************************
  * DEFINITION TEXT
  *********************************************/
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/definitionText"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/definitionText"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.definitionText.placeholder)}";
     -oxy-show-placeholder: always;
     border: none !important;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -190,7 +210,7 @@
         )
     );
 }
-*[class~="termentry/definitionSource"]:before(2) {
+/**[class~="termentry/definitionSource"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -204,30 +224,23 @@
         showIcon, true,
         transparent, true
     );
-}
+}*/
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/definitionSource"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/definitionSource"] {
+    -oxy-display-tags: none;
+    -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.definitionSource.placeholder)}";
+    -oxy-show-placeholder: always;
+    border-color: #3d3d3d;
+    border-style: solid;
+    border-width: 0.05rem;
     display: block;
     font-family: Arial, sans-serif;
+    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
-    border-width: 0.05rem;
-    border-style: solid;
-    border-color: #3d3d3d;
 }
 
 /*********************************************
@@ -252,12 +265,6 @@
 *[class~="topic/fig"][class~="equation-d/equation-figure"]:before {
     content: "" !important;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="topic/fig"][class~="equation-d/equation-figure"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="topic/fig"][class~="equation-d/equation-figure"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -265,7 +272,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     content:
         oxy_textArea(
             edit, '#content',
@@ -302,7 +308,7 @@
         )
     );
 }
-*[class~="topic/fig"]:before(2) {
+/**[class~="topic/fig"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -316,14 +322,8 @@
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="topic/fig"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="topic/fig"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -331,7 +331,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -358,18 +357,11 @@
         columns, 60
     );
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="topic/fig"] > *[class~="topic/title"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="topic/fig"] > *[class~="topic/title"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
     -oxy-show-placeholder: no !important;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -401,12 +393,6 @@
     );
     -oxy-show-placeholder: no !important;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="topic/fig"] > *[class~="topic/image"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="topic/fig"] > *[class~="topic/image"] {
    -oxy-display-tags: none;
     -oxy-editable: true;
@@ -414,7 +400,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -543,12 +528,6 @@
         )
     );
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termSource"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/termSource"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -556,7 +535,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -588,18 +566,11 @@
     font-family: Arial, sans-serif;
     font-size: 0.7rem;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/sourceName"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/sourceName"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.sourceName.placeholder)}";
     -oxy-show-placeholder: always;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -637,19 +608,12 @@
 *[class~="termentry/sourceReference"][href][format='html']:empty {
     content: "" !important;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/sourceReference"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/sourceReference"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.sourceReference.placeholder)}";
     -oxy-show-placeholder: always;
     /*width: 99% !important;*/
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -756,7 +720,7 @@
         )
     );
 }
-*[class~="termentry/altDefinition"]:before(2) {
+/**[class~="termentry/altDefinition"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -770,14 +734,8 @@
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/altDefinition"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/altDefinition"] {
     display: block;
     font-family: Arial, sans-serif;
@@ -785,7 +743,6 @@
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -798,19 +755,12 @@
 /*********************************************
  * ALTERNATIVE DEFINITION TEXT
  *********************************************/
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/altDefinitionText"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/altDefinitionText"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.altDefinitionText.placeholder)}";
     -oxy-show-placeholder: always;
     border: none !important;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -839,7 +789,7 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="termentry/annotation"]:before(2) {
+/**[class~="termentry/annotation"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -853,14 +803,8 @@
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/annotation"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/annotation"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -869,7 +813,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -899,7 +842,7 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="termentry/termContext"]:before(2) {
+/**[class~="termentry/termContext"]:before(2) {
     color: transparent;
     display: block;
     margin-top: -28px;
@@ -913,14 +856,8 @@
         showIcon, 'true',
         transparent, 'true'
     );
-}
+}*/
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termContext"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/termContext"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -928,7 +865,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -957,12 +893,6 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termContextText"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/termContextText"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -971,7 +901,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1000,12 +929,6 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termContextSource"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/termContextSource"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1014,7 +937,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1049,12 +971,6 @@
         columns, 15
     );
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/partOfSpeech"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/partOfSpeech"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1063,7 +979,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1076,12 +991,6 @@
     font-size: 3pt;
     display: block;
     width: 100%;
-}
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/partOfSpeech"]:after(100) {
-        border-top: 1pt solid #767676 !important;
-        background-color: #3c3c3c;
-    }
 }
 *[class~="termentry/partOfSpeech"]:after(100) {
     border-bottom: 0.05rem solid #767676;
@@ -1146,12 +1055,6 @@
     );
 }
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="topic/note"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="topic/note"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1160,7 +1063,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1196,12 +1098,6 @@
     display: block;
     width: 100%;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/domains"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/domains"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1209,7 +1105,6 @@
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1292,12 +1187,6 @@ content:
     );
 }
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/agreedWith"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/agreedWith"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1305,7 +1194,6 @@ content:
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1343,18 +1231,11 @@ content:
     float: right;
     -oxy-display-tags: none;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termCommitteeMember"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/termCommitteeMember"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.termCommitteeMember.placeholder)}";
     -oxy-show-placeholder: always;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     list-style: none !important;
@@ -1447,11 +1328,6 @@ content:
 *[class~="termentry/termNotation"]:first-of-type {
     margin-top: 2.0em;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termNotation"] {
-        border-color: #767676;
-    }
-}
 *[class~="termentry/termNotation"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1459,7 +1335,7 @@ content:
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
-    color: #000000;
+    color: #000000; /* Because of the background-color, this makes sense here. */
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1599,7 +1475,6 @@ content:
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.termVariant.placeholder)}";
     -oxy-show-placeholder: always;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1686,17 +1561,10 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/antonyms"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/antonyms"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    color: #000000;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1749,12 +1617,6 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/instancesOf"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/instancesOf"] {
     display: block;
     font-family: Arial, sans-serif;
@@ -1762,7 +1624,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -1812,12 +1673,6 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/partsOf"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/partsOf"] {
     visibility: -oxy-collapse-text;
     display: block;
@@ -1826,7 +1681,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -1876,12 +1730,6 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/hypernyms"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/hypernyms"] {
     visibility: -oxy-collapse-text;
     display: block;
@@ -1890,7 +1738,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -1940,12 +1787,6 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/hyponyms"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/hyponyms"] {
     visibility: -oxy-collapse-text;
     display: block;
@@ -1954,7 +1795,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -2004,12 +1844,6 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/relatedTerms"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/relatedTerms"] {
     visibility: -oxy-collapse-text;
     display: block;
@@ -2018,7 +1852,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -2067,12 +1900,6 @@ content:
     );
 }
 
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/relations-linklist"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/relations-linklist"] {
     display: block;
     font-family: Arial, sans-serif;
@@ -2080,7 +1907,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -2114,12 +1940,6 @@ content:
     float: right;
     -oxy-display-tags: none;
 }
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-    *[class~="termentry/termRelation"] {
-        border-color: #767676;
-        color: #ffffff;
-    }
-}
 *[class~="termentry/termRelation"] {
     display: block;
     font-family: Arial, sans-serif;
@@ -2127,7 +1947,6 @@ content:
     margin-right: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    color: #000000;
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
