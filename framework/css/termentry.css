@@ -4,6 +4,7 @@
  * TERMENTRY
  *********************************************/
 *[class~="termentry/termentry"] {
+    -oxy-display-tags: none;
     display: block;
     empty-cells: true;
     font-family: Arial, sans-serif;
@@ -23,14 +24,12 @@
     text-decoration-line: none;
     text-decoration-style: solid;
     width: 768px;
-    -oxy-display-tags: none;
 }
 *[class~="termentry/termentry"] > *[class~="topic/title"] {
     -oxy-display-tags: none;
     font-family: Arial, sans-serif;
     font-size: 2em;
     font-weight: bold;
-    width: 700px;
 }
 *[class~="termentry/termentry"] > *[class~="topic/title"]:after {
     border-bottom: 0.05rem solid #767676;
@@ -53,7 +52,6 @@
         );
     display: block;
     font-size: 1.0rem;
-    font-weight: bold;
     margin-bottom: 2px;
     padding-bottom: 5px;
 }
@@ -74,7 +72,7 @@
     oxy_buttonGroup(
         label, '${i18n(term.relations)}',
         transparent, 'true',
-        fontInherit, false,
+        fontInherit, 'true',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.antonyms.add'),
@@ -769,15 +767,18 @@
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
 }
 
-*[class~="termentry/altDefinition"] {
-    @media oxygen-high-contrast-black, oxygen-dark-theme {
+@media oxygen-high-contrast-black, oxygen-dark-theme {
+    *[class~="termentry/altDefinition"] {
         border-color: #767676;
+        color: #ffffff;
     }
+}
+*[class~="termentry/altDefinition"] {
     display: block;
     font-family: Arial, sans-serif;
     margin-left: 5px;
@@ -785,9 +786,6 @@
     margin-bottom: 5px;
     margin-top: 5px;
     color: #000000;
-    @media oxygen-high-contrast-black, oxygen-dark-theme {
-        color: #ffffff;
-    }
     width: 99% !important;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
@@ -852,8 +850,8 @@
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
 }
 
@@ -912,8 +910,8 @@
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
 }
 
@@ -1086,7 +1084,6 @@
     }
 }
 *[class~="termentry/partOfSpeech"]:after(100) {
-    background-color: #ffffff;
     border-bottom: 0.05rem solid #767676;
     border-bottom: 1px solid transparent !important;
     border-left: 1px solid transparent !important;
@@ -1144,8 +1141,8 @@
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
 }
 
@@ -1290,8 +1287,8 @@ content:
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
 }
 
@@ -1392,8 +1389,8 @@ content:
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
     border-bottom: 0.05rem solid #767676;
     display: block;
@@ -1406,8 +1403,8 @@ content:
     "   "
     oxy_combobox(
         edit, '@language',
-        editable, false,
-        columns, 8,
+        editable, 'false',
+        columns, '8'
     );
 }
 *[class~="termentry/termNotation"]:before(19) {
@@ -1479,12 +1476,6 @@ content:
 }
 *[class~="termentry/termNotation"][usage~="notRecommended"] {
     background-color: #ffbfbf;
-}
-// No background color for dark theme
-@media oxygen-high-contrast-black, oxygen-dark-theme {
-  *[class~="termentry/termNotation"] {
-    background-color: inherit !important;
-  }
 }
 
 /*********************************************
@@ -2071,8 +2062,8 @@ content:
     width: 100%;
     content: oxy_button(
         actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true,
+        showIcon, 'true',
+        transparent, 'true'
     );
 }
 

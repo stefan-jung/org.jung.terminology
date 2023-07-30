@@ -1673,48 +1673,6 @@
 										<field name="value">
 											<documentTypeRule>
 												<field name="namespace">
-													<String></String>
-												</field>
-												<field name="rootElem">
-													<String>*</String>
-												</field>
-												<field name="fileName">
-													<String>*</String>
-												</field>
-												<field name="publicID">
-													<String>*-//DOCTALES//DTD DITA DOCTALES Termmap//EN*</String>
-												</field>
-												<field name="javaRuleClass">
-													<String></String>
-												</field>
-												<field name="attributeLocalName">
-													<String>*</String>
-												</field>
-												<field name="attributeNamespace">
-													<String>*</String>
-												</field>
-												<field name="attributeValue">
-													<String>*</String>
-												</field>
-											</documentTypeRule>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>doctypeRules</String>
-										</field>
-										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<documentTypeRule>
-												<field name="namespace">
 													<String>*</String>
 												</field>
 												<field name="rootElem">
