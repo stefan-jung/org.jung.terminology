@@ -203,7 +203,7 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
-        <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
+        <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
         <xsl:value-of select="'''' || $label || '''' || $delim || ' '"/>
     </xsl:template>
@@ -213,7 +213,7 @@
         <xsl:variable name="key" select="lower-case(@keys)" as="xs:string"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
-        <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
+        <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ', ' else ' '" as="xs:string"/>
         <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim"/>
     </xsl:template>
@@ -284,7 +284,7 @@
         <xsl:variable name="s" select="normalize-space($str)"/>
         <xsl:variable name="quot" select="'&quot;'" as="xs:string"/>
         <xsl:variable name="quot-escaped" select="'\\' || $quot"/>
-        <xsl:variable name="apos" select="'&apos;&apos;'" as="xs:string"/>
+        <xsl:variable name="apos" as="xs:string">'</xsl:variable>
         <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
         <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
         <xsl:if test="$debugging.mode = 'true' and $s != $out">
