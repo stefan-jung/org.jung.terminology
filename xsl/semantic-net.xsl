@@ -266,7 +266,7 @@
         <xsl:variable name="key" select="@keys"/>
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
-        <xsl:variable name="label" select="document($filepath)/termentry/title[1]/text()[1]"/>
+        <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
         
         <xsl:value-of select="'{key: ''' || $key || ''', term: ' || '''' || $label || '''' || ', definition: ''' || sj:jsonEscape(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || '''}, '"/>
     </xsl:template>
@@ -284,7 +284,7 @@
         <xsl:variable name="s" select="normalize-space($str)"/>
         <xsl:variable name="quot" select="'&quot;'" as="xs:string"/>
         <xsl:variable name="quot-escaped" select="'\\' || $quot"/>
-        <xsl:variable name="apos" as="xs:string">'</xsl:variable>
+        <xsl:variable name="apos" select="'&apos;&apos;'" as="xs:string"/>
         <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
         <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
         <xsl:if test="$debugging.mode = 'true' and $s != $out">
