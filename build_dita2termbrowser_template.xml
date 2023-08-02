@@ -29,17 +29,6 @@
             Helper target to determine if terminology statistics should be generated.
             This target is looking for a &lt;termstatsref&gt; element on the terminology map.
         </description>
-        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
-        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
-        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
-        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
-            <filterchain>       
-                <linecontainsregexp>          
-                    <regexp pattern="termmap/termstatsref "/>        
-                </linecontainsregexp>      
-            </filterchain> 
-        </loadfile>
         <condition property="generate-termstats" value="true">
             <and>
                 <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
@@ -57,6 +46,15 @@
         
         <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
         <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
+            <filterchain>       
+                <linecontainsregexp>          
+                    <regexp pattern="termmap/termstatsref "/>        
+                </linecontainsregexp>      
+            </filterchain> 
+        </loadfile>
         
         <echo level="info">termmap = "${termmap}"</echo>
         
