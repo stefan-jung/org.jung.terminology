@@ -153,6 +153,23 @@
 											<String>authorExtensionDescriptor/cssDescriptors</String>
 										</field>
 										<field name="index">
+											<Integer>3</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${baseFramework}/css/edit/alternate-map-print-preview-layout-force-media-print.css</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
 											<Integer>2</Integer>
 										</field>
 										<field name="value">
@@ -212,7 +229,7 @@
 													<String>${framework}/framework/css/termmap.css</String>
 												</field>
 												<field name="title">
-													<String>DOCTALES Term Map</String>
+													<String>Terminology Map</String>
 												</field>
 												<field name="alternate">
 													<Boolean>false</Boolean>
@@ -828,7 +845,7 @@
 											<Integer>-1</Integer>
 										</field>
 										<field name="value">
-											<String>DOCTALES</String>
+											<String>Terminology</String>
 										</field>
 										<field name="patchHandling">
 											<String>set</String>
@@ -1017,7 +1034,7 @@
 										<field name="value">
 											<menu>
 												<field name="label">
-													<String>DOCTALES Terminology</String>
+													<String>Terminology</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
