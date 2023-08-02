@@ -1,4 +1,5 @@
 *[class~="termmap/termmap"] {
+    -oxy-display-tags: none;
     display: block;
     font-family: Arial, sans-serif;
     font-size: 1.0rem;
@@ -17,24 +18,23 @@
     text-decoration-line: none;
     text-decoration-style: solid;
     width: 768px;
-    -oxy-display-tags: none;
 }
 
 *[class~="termmap/termmap"] > *[class~="topic/title"] {
-    font-weight: bold;
-    font-size: 2em;
     -oxy-display-tags: none;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 *[class~="termmap/termgroup"]:before {
     border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
     content: "\A"
         oxy_buttonGroup(
-            actionIDs, 'doctales.termref.add'
+            actionIDs, 'term.termref.add'
         );
+    display: block;
+    margin-bottom: 2px;
+    padding-bottom: 5px;
 }
 
 @media oxygen-high-contrast-black, oxygen-dark-theme {
@@ -43,50 +43,50 @@
         color: #ffffff;
     }
 }
-*[class~="termmap/termref"] {
+*[class~="termmap/termref"],
+*[class~="termmap/termstatsref"],
+*[class~="termmap/semanticnetref"],
+*[type~="subjectScheme"] {
+    -oxy-display-tags: none;
+    -oxy-editable: true;
+    -oxy-show-placeholder: always;
+    -oxy-show-placeholder: no;
+    border-color: #3d3d3d;
+    border-style: solid;
+    border-width: 0.05rem;
     display: block;
     font-family: Arial, sans-serif;
+    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 5px;
     margin-top: 5px;
     width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
-    border-width: 0.05rem;
-    border-style: solid;
-    border-color: #3d3d3d;
-    -oxy-show-placeholder: no;
 }
-
-*[class~="termmap/termref"][format] {
-    display: none;
-}
-
 *[class~="termmap/termref"]:before {
     border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
     content: 
         oxy_buttonGroup(
-            label, '${i18n(doctales.map.termref)}',
-            actionIDs, 'doctales.termref.add, doctales.termref.delete'
+            label, '${i18n(term.map.termref)}',
+            actionIDs, 'term.termref.add, term.termref.delete'
         )
-        " href"
+        "\Ahref "
         oxy_urlChooser(
             edit, '@href',
-            columns, 40
+            columns, 30
         )
-        " keys"
+        "  keys "
         oxy_textfield(
             edit, '@keys',
-            columns, 40
+            columns, 20
         )
-        " termdomain"
+        "  termdomain "
         oxy_textfield(
             edit, "@termdomain", 
-            columns, 40
+            columns, 20
         );
+    display: block;
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+    padding-bottom: 5px;
 }
+
