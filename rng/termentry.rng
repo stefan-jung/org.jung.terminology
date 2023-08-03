@@ -53,9 +53,9 @@
       <moduleShortName>termentry</moduleShortName>
       <shellPublicIds>
         <dtdShell>-//STEFAN JUNG//DTD DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdShell>
-        <rncShell>urn:doctales:dita:rnc:termentry.rnc<var presep=":" name="ditaver"/></rncShell>
+        <rncShell>urn:jung:dita:rnc:termentry.rnc<var presep=":" name="ditaver"/></rncShell>
         <rngShell>urn:jung:dita:rng:termentry.rng<var presep=":" name="ditaver"/></rngShell>
-        <xsdShell>urn:doctales:dita:xsd:termentry.xsd<var presep=":" name="ditaver"/></xsdShell>
+        <xsdShell>urn:jung:dita:xsd:termentry.xsd<var presep=":" name="ditaver"/></xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>

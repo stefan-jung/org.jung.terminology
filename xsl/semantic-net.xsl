@@ -7,7 +7,12 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="related-links sj xd xs">
     
+    
     <xsl:param name="ditamap"/>
+    <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#303030;'"/>
+    <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'5'"/>
+    <xsl:param name="term.semantic-net.term.border" as="xs:string" select="'#efefef;'"/>
+    
     
     <xsl:template match="*[contains(@class, ' semanticnet-d/net ')]">
         <div id="search">
@@ -84,9 +89,9 @@
                     hover: true
                 },
                 edges: {
-                    width: 2,
+                    width: <xsl:value-of select="$term.semantic-net.edges.width"/>,
                     arrows: 'to',
-                    color: 'gray'
+                    color: '<xsl:value-of select="$term.semantic-net.edges.color"/>'
                 },
                 layout: {
                     improvedLayout: false
@@ -111,7 +116,7 @@
                     term: {
                         radius: 1500,
                         color: {
-                            border: '#004455',
+                            border: '<xsl:value-of select="$term.semantic-net.term.border"/>',
                             background: '#5fbcd3',
                             fontColor: '#ffffff',
                             hover: {

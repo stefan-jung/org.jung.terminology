@@ -6,6 +6,10 @@
     <public publicId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
     <public publicId="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
     
+    <public publicId="urn:jung:dita:rng:termstats.rng" uri="rng/termstats.rng"/>
+    <public publicId="urn:jung:dita:rng:termstatsMod.rng" uri="rng/termstatsMod.rng"/>
+    <public publicId="urn:jung:dita:rng:termstatsDomain.rng" uri="rng/termstatsDomain.rng"/>
+    
     <public publicId="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
     <public publicId="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
     
@@ -20,6 +24,10 @@
     <system systemId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
     <system systemId="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
     
+    <system systemId="urn:jung:dita:rng:termstats.rng" uri="rng/termstats.rng"/>
+    <system systemId="urn:jung:dita:rng:termstatsMod.rng" uri="rng/termstatsMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termstatsDomain.rng" uri="rng/termstatsDomain.rng"/>
+    
     <system systemId="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
     <system systemId="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
     
@@ -33,6 +41,10 @@
     <uri name="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
     <uri name="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
     <uri name="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    
+    <uri name="urn:jung:dita:rng:termstats.rng" uri="rng/termstats.rng"/>
+    <uri name="urn:jung:dita:rng:termstatsMod.rng" uri="rng/termstatsMod.rng"/>
+    <uri name="urn:jung:dita:rng:termstatsDomain.rng" uri="rng/termstatsDomain.rng"/>
     
     <uri name="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
     <uri name="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>

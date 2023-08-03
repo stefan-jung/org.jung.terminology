@@ -886,8 +886,11 @@
   <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
-  <transtype name="termbrowser-responsive" extends="webhelp-responsive" desc="Termbrowser Responsive">
+  <transtype name="termbrowser-responsive" extends="webhelp-responsive-common" desc="Termbrowser Responsive">
     <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+    <param name="term.semantic-net.edges.color" desc="Color of semantic net edges" type="string"/>
+    <param name="term.semantic-net.edges.width" desc="Width of semantic net edges" type="string"/>
+    <param name="term.semantic-net.term.border" desc="Thickness of semantic net term node border" type="string"/>
   </transtype>
   
 </plugin>

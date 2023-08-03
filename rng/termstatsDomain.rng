@@ -2,28 +2,27 @@
 <?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns="http://relaxng.org/ns/structure/1.0">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-    <moduleTitle>DITA Semantic Net Domain</moduleTitle>
+    <moduleTitle>DITA Terminology Statistics Domain</moduleTitle>
     <headerComment>
 ========================================================================================================================
                                                          HEADER
 ========================================================================================================================
-          MODULE:   DITA Semantic Net Domain
-          VERSION:  1.3
+          MODULE:   DITA Terminology Statistics Domain
           DATE:     January 2017
 
 ========================================================================================================================
           PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
 
           Refer to this file by the following public identifier or an appropriate system identifier
-          PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Semantic Net//EN"
+          PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Termstats//EN"
 
-          Delivered as file "semanticnetMod.rng"
+          Delivered as file "termstatsDomain.rng"
 
 ========================================================================================================================
 
           SYSTEM:   Darwin Information Typing Architecture (DITA)
 
-          PURPOSE:  Define elements and specialization attributes for Semantic Net Domain
+          PURPOSE:  Define elements and specialization attributes for Terminology Statistics Domain
 
           ORIGINAL CREATION DATE:
                     January 2017
@@ -31,76 +30,73 @@
                     Copyright (c) Stefan Jung 2023. All rights reserved.
                     All Rights Reserved.
 
-          UPDATES:
-                    2017-01-11 SE: Initial Relax NG release
-
 ========================================================================================================================
       </headerComment>
     <moduleMetadata>
       <moduleType>elementdomain</moduleType>
-      <moduleShortName>semanticnet-d</moduleShortName>
+      <moduleShortName>termstats-d</moduleShortName>
       <modulePublicIds>
-        <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdMod>
-        <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Semantic Net Domain//EN</dtdEnt>
-        <xsdMod>urn:jung:dita:xsd:semanticnetDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
-        <rncMod>urn:jung:dita:rnc:semanticnetDomain.rnc<var presep=":" name="ditaver"/></rncMod>
-        <rngMod>urn:jung:dita:rng:semanticnetDomain.rng<var presep=":" name="ditaver"/></rngMod>
+        <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Termstats Domain//EN</dtdMod>
+        <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Termstats Domain//EN</dtdEnt>
+        <xsdMod>urn:jung:dita:xsd:termstatsDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:jung:dita:rnc:termstatsDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:jung:dita:rng:termstatsDomain.rng<var presep=":" name="ditaver"/></rngMod>
       </modulePublicIds>
-      <domainsContribution>(topic semanticnet-d)</domainsContribution>
+      <domainsContribution>(topic termstats-d)</domainsContribution>
     </moduleMetadata>
   </moduleDesc>
 
   <div>
     <a:documentation>DOMAIN EXTENSION PATTERNS</a:documentation>
 
-    <define name="semanticnet-d-div">
+    <define name="termstats-d-div">
       <choice>
-        <ref name="net.element"/>
+        <ref name="stats.element"/>
       </choice>
     </define>
     <define name="div" combine="choice">
-      <ref name="semanticnet-d-div"/>
+      <ref name="termstats-d-div"/>
     </define>
 
   </div>
 
   <div>
     <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
-    <define name="net">
-      <ref name="net.element"/>
+    <define name="stats">
+      <ref name="stats.element"/>
     </define>
   </div>
   <div>
     <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
     <div>
-      <a:documentation>LONG NAME: Net</a:documentation>
-      <define name="net.content">
+      <a:documentation>LONG NAME: Statistics</a:documentation>
+      <define name="stats.content">
         <empty/>
       </define>
-      <define name="net.attributes">
+      <define name="stats.attributes">
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="net.element">
-        <element name="net" dita:longName="Net">
-          <a:documentation>The Net (&lt;net>) element is used as a placeholder for semantic nets. This element is part of the DITA semantic net domain. Category: Terminology elements</a:documentation>
-          <ref name="net.attlist"/>
-          <ref name="net.content"/>
+      <define name="stats.element">
+        <element name="stats" dita:longName="Statistics">
+          <a:documentation>The Statistics (&lt;stats>) element is used as a placeholder for terminology statistics. This element is part of the DITA Terminology Statistics domain. Category: Terminology elements</a:documentation>
+          <ref name="stats.attlist"/>
+          <ref name="stats.content"/>
         </element>
       </define>
-      <define name="net.attlist" combine="interleave">
-        <ref name="net.attributes"/>
+      <define name="stats.attlist" combine="interleave">
+        <ref name="stats.attributes"/>
       </define>
     </div>
   </div>
   <div>
     <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
-    <define name="net.attlist" combine="interleave">
+    <define name="stats.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="+ topic/div semanticnet-d/net "/>
+        <attribute name="class" a:defaultValue="+ topic/div termstats-d/stats "/>
       </optional>
     </define>
   </div>

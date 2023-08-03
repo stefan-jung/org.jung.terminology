@@ -52,9 +52,9 @@
       <moduleShortName>termdomainAtt-d</moduleShortName>
       <modulePublicIds>
         <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Termdomain Attribute Domain//EN</dtdEnt>
-        <xsdMod>urn:doctales:dita:xsd:termdomainAttDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
-        <rncMod>urn:doctales:dita:rnc:termdomainAttDomain.rnc<var presep=":" name="ditaver"/></rncMod>
-        <rngMod>urn:doctales:dita:rng:termdomainAttDomain.rng<var presep=":" name="ditaver"/></rngMod>
+        <xsdMod>urn:jung:dita:xsd:termdomainAttDomain.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <rncMod>urn:jung:dita:rnc:termdomainAttDomain.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:jung:dita:rng:termdomainAttDomain.rng<var presep=":" name="ditaver"/></rngMod>
       </modulePublicIds>
       <domainsContribution>a(props termdomain)</domainsContribution>
     </moduleMetadata>

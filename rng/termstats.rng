@@ -3,7 +3,7 @@
 <?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-    <moduleTitle>Semantic Net Shell</moduleTitle>
+    <moduleTitle>Terminology Statistics Shell</moduleTitle>
     <headerComment xml:space="preserve">
 ========================================================================================================================
                                                          HEADER
@@ -14,7 +14,7 @@
           Source: https://stefan-jung.org
 
 ========================================================================================================================
-          MODULE:   DITA Semantic Net Shell
+          MODULE:   DITA Terminology Statistics Shell
           VERSION:  1.3
           DATE:     January 2017
 
@@ -23,7 +23,7 @@
 
           Refer to this file by the following public identifier or an appropriate system identifier
 
-          PUBLIC "-//STEFAN JUNG//DTD DITA Semantic Net//EN"
+          PUBLIC "-//STEFAN JUNG//DTD DITA Termstats//EN"
 
 ========================================================================================================================
 
@@ -41,12 +41,12 @@
   </headerComment>
     <moduleMetadata>
       <moduleType>topicshell</moduleType>
-      <moduleShortName>semanticnet</moduleShortName>
+      <moduleShortName>termstats</moduleShortName>
       <shellPublicIds>
-        <dtdShell>-//STEFAN JUNG//DTD DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdShell>
-        <rncShell>urn:jung:dita:rnc:semanticnet.rnc<var presep=":" name="ditaver"/></rncShell>
-        <rngShell>urn:jung:dita:rng:semanticnet.rng<var presep=":" name="ditaver"/></rngShell>
-        <xsdShell>urn:jung:dita:xsd:semanticnet.xsd<var presep=":" name="ditaver"/></xsdShell>
+        <dtdShell>-//STEFAN JUNG//DTD DITA<var presep=" " name="ditaver"/> Termstats//EN</dtdShell>
+        <rncShell>urn:jung:dita:rnc:termstats.rnc<var presep=":" name="ditaver"/></rncShell>
+        <rngShell>urn:jung:dita:rng:termstats.rng<var presep=":" name="ditaver"/></rngShell>
+        <xsdShell>urn:jung:dita:xsd:termstats.xsd<var presep=":" name="ditaver"/></xsdShell>
       </shellPublicIds>
     </moduleMetadata>
   </moduleDesc>
@@ -54,7 +54,7 @@
   <div>
     <a:documentation>ROOT ELEMENT DECLARATION</a:documentation>
     <start>
-      <ref name="semanticnet.element"/>
+      <ref name="termstats.element"/>
     </start>
   </div>
   <div>
@@ -72,15 +72,13 @@
           (topic markup-d)
           (topic pr-d)
           (topic relmgmt-d)
-          (topic semanticnet)
-          (topic semanticnet-d)
           (topic sw-d)
+          (topic termstats)
+          (topic termstats-d)
           (topic ui-d)
           (topic ut-d)
           a(props deliveryTarget)"
         />
-          <!--(topic mathml-d)-->
-          <!--(topic svg-d)-->
       </optional>
     </define>
     
@@ -89,9 +87,9 @@
     <a:documentation>MODULE INCLUSIONS</a:documentation>
     <include href="urn:oasis:names:tc:dita:rng:topicMod.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:conceptMod.rng"/>
-    <include href="semanticnetMod.rng">
-      <define name="semanticnet-info-types">
-        <ref name="semanticnet.element"/>
+    <include href="termstatsMod.rng">
+      <define name="termstats-info-types">
+        <ref name="termstats.element"/>
       </define>
     </include>
     <include href="urn:oasis:names:tc:dita:rng:abbreviateDomain.rng"/>
@@ -104,7 +102,7 @@
     <!--<include href="urn:oasis:names:tc:dita:rng:mathmlDomain.rng" dita:since="1.3"/>-->
     <include href="urn:oasis:names:tc:dita:rng:programmingDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
-    <include href="semanticnetDomain.rng"/>
+    <include href="termstatsDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
     <!--<include href="urn:oasis:names:tc:dita:rng:svgDomain.rng" dita:since="1.3"/>-->
     <include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
@@ -124,7 +122,7 @@
               <except>
                 <name>topic</name>
                 <name>concept</name>
-                <name>semanticnet</name>
+                <name>termstats</name>
                 <!--<nsName ns="http://www.w3.org/2000/svg"/>
                 <nsName ns="http://www.w3.org/1998/Math/MathML"/>-->
               </except>

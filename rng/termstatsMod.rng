@@ -2,28 +2,26 @@
 <?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
-    <moduleTitle>DITA Semantic Net</moduleTitle>
+    <moduleTitle>DITA Terminology Statistics</moduleTitle>
     <headerComment xml:space="preserve">
 ========================================================================================================================
                                                          HEADER
 ========================================================================================================================
-          MODULE:   DITA Semantic Net
-          VERSION:  1.3
-          DATE:     January 2017
+          MODULE:   DITA Terminology Statistics
 
 ========================================================================================================================
           PUBLIC DOCUMENT TYPE DEFINITION TYPICAL INVOCATION
 
           Refer to this file by the following public identifier or an appropriate system identifier
-          PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Semantic Net//EN"
+          PUBLIC "-//STEFAN JUNG//ELEMENTS DITA Termstats//EN"
 
-          Delivered as file "semanticnetMod.rng"
+          Delivered as file "termstatsMod.rng"
 
 ========================================================================================================================
 
           SYSTEM:   Darwin Information Typing Architecture (DITA)
 
-          PURPOSE:  Define elements and specialization atttributes for Semantic Nets
+          PURPOSE:  Define elements and specialization atttributes for Terminology Statistics
 
           ORIGINAL CREATION DATE:
                     March 2017
@@ -31,40 +29,37 @@
                     Copyright (c) Stefan Jung 2023. All rights reserved.
                     All Rights Reserved.
                                                    
-          UPDATES:
-                    2017-01-11 SE: Initial Relax NG release
-
 ========================================================================================================================
     </headerComment>
     <moduleMetadata>
       <moduleType>topic</moduleType>
-      <moduleShortName>semanticnet</moduleShortName>
+      <moduleShortName>termstats</moduleShortName>
       <modulePublicIds>
-        <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdMod>
-        <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Semantic Net//EN</dtdEnt>
-        <xsdMod>urn:jung:dita:xsd:semanticnetMod.xsd<var presep=":" name="ditaver"/></xsdMod>
-        <xsdGrp>urn:jung:dita:xsd:semanticnetGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
-        <rncMod>urn:jung:dita:rnc:semanticnetMod.rnc<var presep=":" name="ditaver"/></rncMod>
-        <rngMod>urn:jung:dita:rng:semanticnetMod.rng<var presep=":" name="ditaver"/></rngMod>
+        <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Terminology Statistics//EN</dtdMod>
+        <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Terminology Statistics//EN</dtdEnt>
+        <xsdMod>urn:jung:dita:xsd:termstatsMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:jung:dita:xsd:termstatsGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:jung:dita:rnc:termstatsMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:jung:dita:rng:termstatsMod.rng<var presep=":" name="ditaver"/></rngMod>
       </modulePublicIds>
-      <domainsContribution>(topic concept semanticnet)</domainsContribution>
+      <domainsContribution>(topic concept termstats)</domainsContribution>
     </moduleMetadata>
   </moduleDesc>
   
   <div>
     <a:documentation>TOPIC NESTING OVERRIDES</a:documentation>
-    <define name="semanticnet-info-types">
+    <define name="termstats-info-types">
       <ref name="info-types"/>
     </define>
   </div>
   
   <div>
     <a:documentation>ELEMENT TYPE NAME PATTERNS</a:documentation>
-    <define name="semanticnet">
-      <ref name="semanticnet.element"/>
+    <define name="termstats">
+      <ref name="termstats.element"/>
     </define>
-    <define name="semanticbody">
-      <ref name="semanticbody.element"/>
+    <define name="termstatsbody">
+      <ref name="termstatsbody.element"/>
     </define>
   </div>
   
@@ -72,8 +67,8 @@
     <a:documentation>ELEMENT TYPE DECLARATIONS</a:documentation>
 
     <div>
-      <a:documentation> LONG NAME: Semantic Net </a:documentation>
-      <define name="semanticnet.content">
+      <a:documentation> LONG NAME: Terminology Statistics </a:documentation>
+      <define name="termstats.content">
         <ref name="title"/>
         <optional>
           <ref name="titlealts"/>
@@ -88,16 +83,16 @@
           <ref name="prolog"/>
         </optional>
         <optional>
-          <ref name="semanticbody"/>
+          <ref name="termstatsbody"/>
         </optional>
         <optional>
           <ref name="related-links"/>
         </optional>
         <zeroOrMore>
-          <ref name="semanticnet-info-types"/>
+          <ref name="termstats-info-types"/>
         </zeroOrMore>
       </define>
-      <define name="semanticnet.attributes">
+      <define name="termstats.attributes">
         <attribute name="id">
           <data type="ID"/>
         </attribute>
@@ -108,26 +103,26 @@
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="semanticnet.element">
-        <element name="semanticnet" dita:longName="Semantic Net">
-          <a:documentation>The &lt;semanticnet> element is the root element of a semanticnet topic.
-            Category: SemanticNet elements</a:documentation>
-          <ref name="semanticnet.attlist"/>
-          <ref name="semanticnet.content"/>
+      <define name="termstats.element">
+        <element name="termstats" dita:longName="Terminology Statistics">
+          <a:documentation>The &lt;termstats> element is the root element of a termstats topic.
+            Category: Terminology Statistic elements</a:documentation>
+          <ref name="termstats.attlist"/>
+          <ref name="termstats.content"/>
         </element>
       </define>
-      <define name="semanticnet.attlist" combine="interleave">
-        <ref name="semanticnet.attributes"/>
+      <define name="termstats.attlist" combine="interleave">
+        <ref name="termstats.attributes"/>
         <ref name="arch-atts"/>
         <ref name="domains-att"/>
       </define>
       <define name="idElements" combine="choice">
-        <ref name="semanticnet.element"/>
+        <ref name="termstats.element"/>
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Semantic Net Body </a:documentation>
-      <define name="semanticbody.content">
+      <a:documentation> LONG NAME: Terminology Statistics Body </a:documentation>
+      <define name="termstatsbody.content">
         <zeroOrMore>
           <ref name="body.cnt"/>
         </zeroOrMore>
@@ -139,7 +134,7 @@
           </choice>
         </zeroOrMore>
       </define>
-      <define name="semanticbody.attributes">
+      <define name="termstatsbody.attributes">
         <ref name="id-atts"/>
         <ref name="localization-atts"/>
         <optional>
@@ -150,17 +145,16 @@
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="semanticbody.element">
-        <element name="semanticbody" dita:longName="Semantic Body">
-          <a:documentation>The &lt;semanticbody> element is the main body-level element for a semantic net. Like the &lt;body> element of a general &lt;topic>, &lt;semanticbody> allows paragraphs, lists, and other
-            elements as well as sections and examples. But &lt;semanticnet> has a constraint that a section or an example can be followed only by other sections or examples.
-            Category: Semantic Net elements</a:documentation>
+      <define name="termstatsbody.element">
+        <element name="termstatsbody" dita:longName="Terminology Statistics Body">
+          <a:documentation>The &lt;termstatsbody> element is the main body-level element for terminology statistics. Like the &lt;body> element of a general &lt;topic>, &lt;termstatsbody> allows paragraphs, lists, and other elements as well as sections and examples. But &lt;termstats> has a constraint that a section or an example can be followed only by other sections or examples.
+            Category: Terminology Statistics elements</a:documentation>
           <ref name="conbody.attlist"/>
           <ref name="conbody.content"/>
         </element>
       </define>
-      <define name="semanticbody.attlist" combine="interleave">
-        <ref name="semanticbody.attributes"/>
+      <define name="termstatsbody.attlist" combine="interleave">
+        <ref name="termstatsbody.attributes"/>
       </define>
     </div>
   </div>
@@ -168,16 +162,16 @@
   <div>
     <a:documentation>SPECIALIZATION ATTRIBUTE DECLARATIONS</a:documentation>
 
-    <define name="semanticnet.attlist" combine="interleave">
+    <define name="termstats.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/topic concept/concept semanticnet/semanticnet "/>
+        <attribute name="class" a:defaultValue="- topic/topic concept/concept termstats/termstats "/>
       </optional>
     </define>
-    <define name="semanticbody.attlist" combine="interleave">
+    <define name="termstatsbody.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/body concept/conbody semanticnet/semanticbody "/>
+        <attribute name="class" a:defaultValue="- topic/body concept/conbody termstats/termstatsbody "/>
       </optional>
     </define>
   </div>

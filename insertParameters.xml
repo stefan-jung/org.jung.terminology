@@ -3,6 +3,7 @@
     
     <!-- DITA-Map -->
     <param name="ditamap" expression="${args.input}" if="args.input"/>
+    
     <!-- Temporary Directory -->
     <param name="temp.dir" expression="${dita.temp.dir}"/>
     
@@ -15,4 +16,9 @@
     
     <!-- Parameters for Termchecker-XLIFF -->
     <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
+    
+    <!-- Parameters for Termbrowser -->
+    <param name="term.semantic-net.edges.color" expression="${term.semantic-net.edges.color}" if="term.semantic-net.edges.color"/>
+    <param name="term.semantic-net.edges.width" expression="${term.semantic-net.edges.width}" if="term.semantic-net.edges.width"/>
+    <param name="term.semantic-net.term.border" expression="${term.semantic-net.term.border}" if="term.semantic-net.term.border"/>>
 </dummy>

@@ -42,10 +42,10 @@
       <modulePublicIds>
         <dtdMod>-//STEFAN JUNG//ELEMENTS DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdMod>
         <dtdEnt>-//STEFAN JUNG//ENTITIES DITA<var presep=" " name="ditaver"/> Termentry//EN</dtdEnt>
-        <xsdMod>urn:doctales:dita:xsd:termentryMod.xsd<var presep=":" name="ditaver"/></xsdMod>
-        <xsdGrp>urn:doctales:dita:xsd:termentryGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
-        <rncMod>urn:doctales:dita:rnc:termentryMod.rnc<var presep=":" name="ditaver"/></rncMod>
-        <rngMod>urn:doctales:dita:rng:termentryMod.rng<var presep=":" name="ditaver"/></rngMod>
+        <xsdMod>urn:jung:dita:xsd:termentryMod.xsd<var presep=":" name="ditaver"/></xsdMod>
+        <xsdGrp>urn:jung:dita:xsd:termentryGrp.xsd<var presep=":" name="ditaver"/></xsdGrp>
+        <rncMod>urn:jung:dita:rnc:termentryMod.rnc<var presep=":" name="ditaver"/></rncMod>
+        <rngMod>urn:jung:dita:rng:termentryMod.rng<var presep=":" name="ditaver"/></rngMod>
       </modulePublicIds>
       <domainsContribution>(topic concept termentry)</domainsContribution>
     </moduleMetadata>
