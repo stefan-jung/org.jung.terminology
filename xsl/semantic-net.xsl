@@ -138,20 +138,20 @@
                         color: {
                             border: '<xsl:value-of select="$term.semantic-net.term.border"/>',
                             background: '<xsl:value-of select="$term.semantic-net.term.background"/>',
-                            fontColor: '<xsl:value-of select="$term.semantic-net.term.fontColor"/>',
                             hover: {
                                 border: '<xsl:value-of select="$term.semantic-net.term.hover.border"/>',
                                 background: '<xsl:value-of select="$term.semantic-net.term.hover.background"/>',
-                                fontColor: '<xsl:value-of select="$term.semantic-net.term.hover.fontColor"/>'
                             },
                             highlight: {
                                 border: '<xsl:value-of select="$term.semantic-net.term.highlight.border"/>',
                                 background: '<xsl:value-of select="$term.semantic-net.term.highlight.background"/>',
-                                fontColor: '<xsl:value-of select="$term.semantic-net.term.highlight.fontColor"/>'
                             }
                         },
-                        fontSize: 12,
-                        fontFace: 'arial',
+                        font: {
+                            color: 'green',
+                            size: 12,
+                            face: 'arial'
+                        },
                         shape: 'box'
                     }
                 }
