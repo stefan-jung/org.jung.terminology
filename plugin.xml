@@ -896,7 +896,9 @@
       <val default="true">true</val>
       <val>false</val>
     </param>
-    <param name="term.semantic-net.edges.color" desc="Color of semantic net edges" type="string"/>
+    <param name="term.semantic-net.edges.color" desc="Color of semantic net edges" type="string">
+      <val default="true">orange</val>
+    </param>
     <param name="term.semantic-net.edges.width" desc="Width of semantic net edges" type="string"/>
     
     <param name="term.semantic-net.physics.stabilization.enabled" desc="Toggle the stabilization. This is an optional property. If undefined, it is automatically set to true when any of the properties of this object are defined." type="enum">
@@ -922,7 +924,15 @@
       <val default="true">0.08</val>
     </param>
     
-    <param name="term.semantic-net.term.border" desc="Thickness of semantic net term node border" type="string"/>
+    <param name="term.semantic-net.term.border" desc="Semantic net term node border" type="string">
+      <val default="true">10pt solid #1471bb;</val>
+    </param>
+    <param name="term.semantic-net.term.background" desc="Semantic net term node background" type="string">
+      <val default="true">yellow</val>
+    </param>
+    <param name="term.semantic-net.term.fontColor" desc="Semantic net term node font color" type="string">
+      <val default="true">#1471bb;</val>
+    </param> 
   </transtype>
   
 </plugin>

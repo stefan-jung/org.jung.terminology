@@ -21,14 +21,35 @@
     <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
     
     <!-- Parameters for Termbrowser -->
-    <param name="term.semantic-net.edges.color" expression="${term.semantic-net.edges.color}" if="term.semantic-net.edges.color"/>
-    <param name="term.semantic-net.edges.width" expression="${term.semantic-net.edges.width}" if="term.semantic-net.edges.width"/>
-    <param name="term.semantic-net.layout.improvedLayout" expression="${term.semantic-net.layout.improvedLayout}" if="term.semantic-net.layout.improvedLayout"/>
-    <param name="term.semantic-net.physics.stabilization.enabled" expression="${term.semantic-net.physics.stabilization.enabled}" if="term.semantic-net.physics.stabilization.enabled"/>
-    <param name="term.semantic-net.physics.stabilization.iterations" expression="${term.semantic-net.physics.stabilization.iterations}" if="term.semantic-net.physics.stabilization.iterations"/>
-    <param name="term.semantic-net.physics.stabilization.updateInterval" expression="${term.semantic-net.physics.stabilization.updateInterval}" if="term.semantic-net.physics.stabilization.updateInterval"/>
-    <param name="term.semantic-net.term.border" expression="${term.semantic-net.term.border}" if="term.semantic-net.term.border"/>
     
+    
+    <param name="term.semantic-net.edges.color"
+        expression="${term.semantic-net.edges.color}"
+        if="term.semantic-net.edges.color"/>
+    <param name="term.semantic-net.edges.width"
+        expression="${term.semantic-net.edges.width}"
+        if="term.semantic-net.edges.width"/>
+    <param name="term.semantic-net.layout.improvedLayout"
+        expression="${term.semantic-net.layout.improvedLayout}"
+        if="term.semantic-net.layout.improvedLayout"/>
+    <param name="term.semantic-net.physics.stabilization.enabled"
+        expression="${term.semantic-net.physics.stabilization.enabled}"
+        if="term.semantic-net.physics.stabilization.enabled"/>
+    <param name="term.semantic-net.physics.stabilization.iterations"
+        expression="${term.semantic-net.physics.stabilization.iterations}"
+        if="term.semantic-net.physics.stabilization.iterations"/>
+    <param name="term.semantic-net.physics.stabilization.updateInterval"
+        expression="${term.semantic-net.physics.stabilization.updateInterval}"
+        if="term.semantic-net.physics.stabilization.updateInterval"/>
+    <param name="term.semantic-net.term.border"
+        expression="${term.semantic-net.term.border}"
+        if="term.semantic-net.term.border"/>
+    <param name="term.semantic-net.term.background"
+        expression="${term.semantic-net.term.background}"
+        if="term.semantic-net.term.background"/>
+    <param name="term.semantic-net.term.fontColor" 
+        expression="${term.semantic-net.term.fontColor}"
+        if="term.semantic-net.term.fontColor"/>
     <param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant"
         expression="${term.semantic-net.physics.forceAtlas2Based.gravitationalConstant}"
         if="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant"/>

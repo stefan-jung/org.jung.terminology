@@ -12,7 +12,7 @@
     
     <xsl:param name="debugging.mode" as="xs:string"/>
     <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#1471bb;'"/>
-    <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'3'"/>
+    <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'1'"/>
     <xsl:param name="term.semantic-net.layout.improvedLayout" as="xs:string" select="'true'"/>
     <xsl:param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant" as="xs:string" select="'-50'"/>
     <xsl:param name="term.semantic-net.physics.forceAtlas2Based.centralGravity" as="xs:string" select="'0.01'"/>
@@ -21,9 +21,9 @@
     <xsl:param name="term.semantic-net.physics.stabilization.enabled" as="xs:string" select="'true'"/>
     <xsl:param name="term.semantic-net.physics.stabilization.iterations" as="xs:string" select="'1000'"/>
     <xsl:param name="term.semantic-net.physics.stabilization.updateInterval" as="xs:string" select="'50'"/>
-    <xsl:param name="term.semantic-net.term.border" as="xs:string" select="'#efefef;'"/>
-    
-    
+    <xsl:param name="term.semantic-net.term.border" as="xs:string" select="'1pt solid #1471bb;'"/>
+    <xsl:param name="term.semantic-net.term.background" as="xs:string" select="'#fca17a;'"/>
+    <xsl:param name="term.semantic-net.term.fontColor" as="xs:string" select="'#1471bb;'"/>
     
     
     <xsl:template match="*[contains(@class, ' semanticnet-d/net ')]">
@@ -129,11 +129,11 @@
                         radius: 1500,
                         color: {
                             border: '<xsl:value-of select="$term.semantic-net.term.border"/>',
-                            background: '#5fbcd3',
-                            fontColor: '#ffffff',
+                            background: '<xsl:value-of select="$term.semantic-net.term.background"/>',
+                            fontColor: '<xsl:value-of select="$term.semantic-net.term.fontColor"/>',
                             hover: {
                                 border: '#004455',
-                                background: '#beebee',
+                                background: 'orange',
                                 fontColor: '#ffffff'
                             },
                             highlight: {
@@ -142,7 +142,7 @@
                                 fontColor: '#ffffff'
                             }
                         },
-                        fontSize: 18,
+                        fontSize: 12,
                         fontFace: 'arial',
                         shape: 'box'
                     }
@@ -232,7 +232,7 @@
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ', ' else ' '" as="xs:string"/>
-        <xsl:value-of select="'{id: ''' || $key || ''', label: ''' || $label || '''}' || $delim"/>
+        <xsl:value-of select="'{id: ''' || $key || ''', group: ''term'', label: ''' || $label || '''}' || $delim"/>
     </xsl:template>
     
     <!-- Generate edges between nodes -->
@@ -268,9 +268,6 @@
                     else 'Is Related To'
                     "/>
                 <xsl:variable name="keyref" select="lower-case(@keyref)" as="xs:string"/>
-                <xsl:if test="$debugging.mode = 'true'">
-                    <xsl:message select="'[DEBUG]: sj:getString(' || $language || ', ' || $labelString || ')'"/>
-                </xsl:if>
                 <xsl:if test="$key != '' and @keyref != ''">
                     <xsl:value-of select="'{id: ''' || $keyref || $key || ''', from: ''' || $keyref || ''', to : ''' || $key || ''', arrows: ''to'', label: ''' || sj:getString($language, $labelString) || '''}, '"/>
                 </xsl:if>
