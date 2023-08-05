@@ -21,9 +21,17 @@
     <xsl:param name="term.semantic-net.physics.stabilization.enabled" as="xs:string" select="'true'"/>
     <xsl:param name="term.semantic-net.physics.stabilization.iterations" as="xs:string" select="'1000'"/>
     <xsl:param name="term.semantic-net.physics.stabilization.updateInterval" as="xs:string" select="'50'"/>
+
+    <!-- Terms -->
     <xsl:param name="term.semantic-net.term.border" as="xs:string" select="'1pt solid #1471bb;'"/>
     <xsl:param name="term.semantic-net.term.background" as="xs:string" select="'#fca17a;'"/>
     <xsl:param name="term.semantic-net.term.fontColor" as="xs:string" select="'#1471bb;'"/>
+    <xsl:param name="term.semantic-net.term.hover.border" as="xs:string" select="'red'"/>
+    <xsl:param name="term.semantic-net.term.hover.background" as="xs:string" select="'yellow'"/>
+    <xsl:param name="term.semantic-net.term.hover.fontColor" as="xs:string" select="'orange'"/>
+    <xsl:param name="term.semantic-net.term.highlight.border" as="xs:string" select="'#1471bb;'"/>
+    <xsl:param name="term.semantic-net.term.highlight.background" as="xs:string" select="'#1471bb;'"/>
+    <xsl:param name="term.semantic-net.term.highlight.fontColor" as="xs:string" select="'#1471bb;'"/>
     
     
     <xsl:template match="*[contains(@class, ' semanticnet-d/net ')]">
@@ -132,14 +140,14 @@
                             background: '<xsl:value-of select="$term.semantic-net.term.background"/>',
                             fontColor: '<xsl:value-of select="$term.semantic-net.term.fontColor"/>',
                             hover: {
-                                border: '#004455',
-                                background: 'orange',
-                                fontColor: '#ffffff'
+                                border: '<xsl:value-of select="$term.semantic-net.term.hover.border"/>',
+                                background: '<xsl:value-of select="$term.semantic-net.term.hover.background"/>',
+                                fontColor: '<xsl:value-of select="$term.semantic-net.term.hover.fontColor"/>'
                             },
                             highlight: {
-                                border: '#a5ecfd',
-                                background: '#beeec0',
-                                fontColor: '#ffffff'
+                                border: '<xsl:value-of select="$term.semantic-net.term.highlight.border"/>',
+                                background: '<xsl:value-of select="$term.semantic-net.term.highlight.background"/>',
+                                fontColor: '<xsl:value-of select="$term.semantic-net.term.highlight.fontColor"/>'
                             }
                         },
                         fontSize: 12,
