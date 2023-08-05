@@ -165,14 +165,16 @@
                 var widthFactor = params.iterations/params.total;
                 var width = Math.max(minWidth,maxWidth * widthFactor);
                 document.getElementById('bar').style.width = width + 'px';
-                document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                document.getElementById('text').innerHTML = Math.round(widthFactor * 100) + '%';
             });
              
             network.once("stabilizationIterationsDone", function() {
                 document.getElementById('text').innerHTML = '100%';
                 document.getElementById('bar').style.width = '496px';
                 document.getElementById('loadingBar').style.opacity = 0;
-                setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                setTimeout(function() {
+                    document.getElementById('loadingBar').style.display = 'none';
+                }, 500);
             });
              
             network.on('click', function(params) {
