@@ -10,7 +10,8 @@
     <!--
         The purpose of this script is to transform a TBX Basic file into a set of <termentry> topics.
         This script has been tested with the TBX Basic Sample files provided on https://www.tbxinfo.net.
-        The direct link to the sample files is: https://www.tbxinfo.net/wp-content/uploads/2019/04/TBX-Basic-v3-Samples.zip
+        The direct link to the sample files is:
+        https://www.tbxinfo.net/wp-content/uploads/2019/04/TBX-Basic-v3-Samples.zip
     -->
     
     <xsl:output method="xml" indent="true"/>

@@ -9,9 +9,21 @@
     
     
     <xsl:param name="ditamap"/>
-    <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#303030;'"/>
-    <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'5'"/>
+    
+    <xsl:param name="debugging.mode" as="xs:string"/>
+    <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#1471bb;'"/>
+    <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'3'"/>
+    <xsl:param name="term.semantic-net.layout.improvedLayout" as="xs:string" select="'true'"/>
+    <xsl:param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant" as="xs:string" select="'-50'"/>
+    <xsl:param name="term.semantic-net.physics.forceAtlas2Based.centralGravity" as="xs:string" select="'0.01'"/>
+    <xsl:param name="term.semantic-net.physics.forceAtlas2Based.springLength" as="xs:string" select="'100'"/>
+    <xsl:param name="term.semantic-net.physics.forceAtlas2Based.springConstant" as="xs:string" select="'0.08'"/>
+    <xsl:param name="term.semantic-net.physics.stabilization.enabled" as="xs:string" select="'true'"/>
+    <xsl:param name="term.semantic-net.physics.stabilization.iterations" as="xs:string" select="'1000'"/>
+    <xsl:param name="term.semantic-net.physics.stabilization.updateInterval" as="xs:string" select="'50'"/>
     <xsl:param name="term.semantic-net.term.border" as="xs:string" select="'#efefef;'"/>
+    
+    
     
     
     <xsl:template match="*[contains(@class, ' semanticnet-d/net ')]">
@@ -94,22 +106,22 @@
                     color: '<xsl:value-of select="$term.semantic-net.edges.color"/>'
                 },
                 layout: {
-                    improvedLayout: false
+                    improvedLayout: <xsl:value-of select="$term.semantic-net.layout.improvedLayout"/>
                 },
                 physics: {
                     forceAtlas2Based: {
-                        gravitationalConstant: -26,
-                        centralGravity: 0.005,
-                        springLength: 230,
-                        springConstant: 0.18
+                        gravitationalConstant: <xsl:value-of select="$term.semantic-net.physics.forceAtlas2Based.gravitationalConstant"/>,
+                        centralGravity: <xsl:value-of select="$term.semantic-net.physics.forceAtlas2Based.centralGravity"/>,
+                        springLength: <xsl:value-of select="$term.semantic-net.physics.forceAtlas2Based.springLength"/>,
+                        springConstant: <xsl:value-of select="$term.semantic-net.physics.forceAtlas2Based.springConstant"/>
                     },
-                    maxVelocity: 146,
+                    maxVelocity: 50,
                     solver: 'forceAtlas2Based',
                     timestep: 0.35,
                     stabilization: {
-                        enabled: true,
-                        iterations: 2000,
-                        updateInterval: 25
+                        enabled: <xsl:value-of select="$term.semantic-net.physics.stabilization.enabled"/>,
+                        iterations: <xsl:value-of select="$term.semantic-net.physics.stabilization.iterations"/>,
+                        updateInterval: <xsl:value-of select="$term.semantic-net.physics.stabilization.updateInterval"/>
                     }
                 },
                 groups: {
@@ -293,9 +305,9 @@
         <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
         <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
         <xsl:if test="$debugging.mode = 'true' and $s != $out">
-            <xsl:message> [DEBUG] sj:jsonEscape(): Escaped literals in string</xsl:message>
-            <xsl:message> [DEBUG] INPUT:  <xsl:value-of select="$s"/></xsl:message>
-            <xsl:message> [DEBUG] OUTPUT: <xsl:value-of select="$out"/></xsl:message>
+            <xsl:message>[DEBUG]: sj:jsonEscape(): Escaped literals in string</xsl:message>
+            <xsl:message>[DEBUG]      INPUT:  <xsl:value-of select="$s"/></xsl:message>
+            <xsl:message>[DEBUG]      OUTPUT: <xsl:value-of select="$out"/></xsl:message>
         </xsl:if>
         <xsl:sequence select="$out"/>
     </xsl:function>

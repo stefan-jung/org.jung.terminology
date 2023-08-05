@@ -887,9 +887,41 @@
   
   <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
   <transtype name="termbrowser-responsive" extends="webhelp-responsive-common" desc="Termbrowser Responsive">
+    <param name="debugging.mode" desc="Activate debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
     <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
+    <param name="term.semantic-net.layout.improvedLayout" desc="When enabled, the network will use the Kamada Kawai algorithm for initial layout. For networks larger than 100 nodes, clustering will be performed automatically to reduce the amount of nodes. This can greatly improve the stabilization times. If the network is very interconnected (no or few leaf nodes), this may not work and it will revert back to the old method. Performance will be improved in the future." type="enum">
+      <val default="true">true</val>
+      <val>false</val>
+    </param>
     <param name="term.semantic-net.edges.color" desc="Color of semantic net edges" type="string"/>
     <param name="term.semantic-net.edges.width" desc="Width of semantic net edges" type="string"/>
+    
+    <param name="term.semantic-net.physics.stabilization.enabled" desc="Toggle the stabilization. This is an optional property. If undefined, it is automatically set to true when any of the properties of this object are defined." type="enum">
+      <val default="true">true</val>
+      <val>false</val>
+    </param>
+    <param name="term.semantic-net.physics.stabilization.iterations" desc="The physics module tries to stabilize the network on load up til a maximum number of iterations defined here. If the network stabilized with less, you are finished before the maximum number." type="string">
+      <val default="true">1000</val>
+    </param>
+    <param name="term.semantic-net.physics.stabilization.updateInterval" desc="When stabilizing, the DOM can freeze. You can chop the stabilization up into pieces to show a loading bar for instance. The interval determines after how many iterations the stabilizationProgress event is triggered." type="string">
+      <val default="true">50</val>
+    </param>
+    <param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant" desc="This is similar to the barnesHut method except that the falloff is linear instead of quadratic. The connectivity is also taken into account as a factor of the mass. If you want the repulsion to be stronger, decrease the value (so -1000, -2000)." type="string">
+      <val default="true">-50</val>
+    </param>
+    <param name="term.semantic-net.physics.forceAtlas2Based.centralGravity" desc="There is a central gravity attractor to pull the entire network back to the center. This is not dependent on distance." type="string">
+      <val default="true">0.01</val>
+    </param>
+    <param name="term.semantic-net.physics.forceAtlas2Based.springLength" desc="The edges are modelled as springs. This springLength here is the rest length of the spring." type="string">
+      <val default="true">100</val>
+    </param>
+    <param name="term.semantic-net.physics.forceAtlas2Based.springConstant" desc="This is how 'sturdy' the springs are. Higher values mean stronger springs." type="string">
+      <val default="true">0.08</val>
+    </param>
+    
     <param name="term.semantic-net.term.border" desc="Thickness of semantic net term node border" type="string"/>
   </transtype>
   
