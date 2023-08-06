@@ -11,9 +11,16 @@
     <xsl:param name="ditamap"/>
     
     <xsl:param name="debugging.mode" as="xs:string"/>
-    <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#1471bb;'"/>
+    
+    <!-- Edges -->
+    <!-- NOTE: Color codes are NOT suffixed with a semicolon. Write '#96c3ff', not '#96c3ff;'. -->
+    <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#5a6e82'"/>
     <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'1'"/>
+    
+    <!-- Layout -->
     <xsl:param name="term.semantic-net.layout.improvedLayout" as="xs:string" select="'true'"/>
+    
+    <!-- Physics -->
     <xsl:param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant" as="xs:string" select="'-50'"/>
     <xsl:param name="term.semantic-net.physics.forceAtlas2Based.centralGravity" as="xs:string" select="'0.01'"/>
     <xsl:param name="term.semantic-net.physics.forceAtlas2Based.springLength" as="xs:string" select="'100'"/>
@@ -22,16 +29,21 @@
     <xsl:param name="term.semantic-net.physics.stabilization.iterations" as="xs:string" select="'1000'"/>
     <xsl:param name="term.semantic-net.physics.stabilization.updateInterval" as="xs:string" select="'50'"/>
 
-    <!-- Terms -->
-    <xsl:param name="term.semantic-net.term.border" as="xs:string" select="'1pt solid #1471bb;'"/>
-    <xsl:param name="term.semantic-net.term.background" as="xs:string" select="'#fca17a;'"/>
-    <xsl:param name="term.semantic-net.term.fontColor" as="xs:string" select="'#1471bb;'"/>
-    <xsl:param name="term.semantic-net.term.hover.border" as="xs:string" select="'red'"/>
-    <xsl:param name="term.semantic-net.term.hover.background" as="xs:string" select="'yellow'"/>
-    <xsl:param name="term.semantic-net.term.hover.fontColor" as="xs:string" select="'orange'"/>
-    <xsl:param name="term.semantic-net.term.highlight.border" as="xs:string" select="'#1471bb;'"/>
-    <xsl:param name="term.semantic-net.term.highlight.background" as="xs:string" select="'#1471bb;'"/>
-    <xsl:param name="term.semantic-net.term.highlight.fontColor" as="xs:string" select="'#1471bb;'"/>
+    <!-- Term -->
+    <!-- NOTE: Color codes are NOT suffixed with a semicolon. Write '#96c3ff', not '#96c3ff;'. -->
+    <xsl:param name="term.semantic-net.term.border.color" as="xs:string" select="'#96c3ff'"/>
+    <xsl:param name="term.semantic-net.term.border.width" as="xs:string" select="'1'"/>
+    <xsl:param name="term.semantic-net.term.border.width.selected" as="xs:string" select="'2'"/>
+    <xsl:param name="term.semantic-net.term.background" as="xs:string" select="'#96c3ff'"/>
+    <xsl:param name="term.semantic-net.term.font.color" as="xs:string" select="'#323c46'"/>
+    <xsl:param name="term.semantic-net.term.font.size" as="xs:string" select="'9'"/>
+    <xsl:param name="term.semantic-net.term.font.face" as="xs:string" select="'Arial, sans-serif'"/>
+    <xsl:param name="term.semantic-net.term.hover.border" as="xs:string" select="'2'"/>
+    <xsl:param name="term.semantic-net.term.hover.background" as="xs:string" select="'#96c3ff'"/>
+    <xsl:param name="term.semantic-net.term.hover.fontColor" as="xs:string" select="'#323c46'"/>
+    <xsl:param name="term.semantic-net.term.highlight.border" as="xs:string" select="'#1471bb'"/>
+    <xsl:param name="term.semantic-net.term.highlight.background" as="xs:string" select="'#96c3ff'"/>
+    <xsl:param name="term.semantic-net.term.highlight.fontColor" as="xs:string" select="'#5a6e82'"/>
     
     
     <xsl:template match="*[contains(@class, ' semanticnet-d/net ')]">
@@ -134,9 +146,11 @@
                 },
                 groups: {
                     term: {
+                        borderWidth: '<xsl:value-of select="$term.semantic-net.term.border.width"/>',
+                        borderWidthSelected: '<xsl:value-of select="$term.semantic-net.term.border.width.selected"/>',
                         radius: 1500,
                         color: {
-                            border: '<xsl:value-of select="$term.semantic-net.term.border"/>',
+                            border: '<xsl:value-of select="$term.semantic-net.term.border.color"/>',
                             background: '<xsl:value-of select="$term.semantic-net.term.background"/>',
                             hover: {
                                 border: '<xsl:value-of select="$term.semantic-net.term.hover.border"/>',
@@ -148,9 +162,9 @@
                             }
                         },
                         font: {
-                            color: 'green',
-                            size: 12,
-                            face: 'arial'
+                            color: '<xsl:value-of select="$term.semantic-net.term.font.color"/>',
+                            size: <xsl:value-of select="$term.semantic-net.term.font.size"/>,
+                            face: '<xsl:value-of select="$term.semantic-net.term.font.face"/>'
                         },
                         shape: 'box'
                     }

@@ -925,14 +925,17 @@
     </param>
     
     <param name="term.semantic-net.term.border" desc="Semantic net term node border" type="string">
-      <val default="true">10pt solid #1471bb;</val>
+      <val default="true">1</val>
     </param>
     <param name="term.semantic-net.term.background" desc="Semantic net term node background" type="string">
       <val default="true">yellow</val>
     </param>
-    <param name="term.semantic-net.term.fontColor" desc="Semantic net term node font color" type="string">
-      <val default="true">#1471bb;</val>
-    </param> 
+    <param name="term.semantic-net.term.font.color" desc="Semantic net term node font color" type="string">
+      <val default="true">#1471bb</val>
+    </param>
+    <param name="term.semantic-net.term.font.size" desc="Semantic net term node font size in px. Use only a digit." type="string">
+      <val default="true">9</val>
+    </param>
   </transtype>
   
 </plugin>
