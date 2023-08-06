@@ -695,3 +695,9 @@ div.outerBorder {
 .legend_col2 {
     width: 100%;
 }
+
+/* Search button of the semantic net */
+.btn.btn-default.semantic-search-button {
+    width: 200px;
+    border: 1pt solid gray;
+}
