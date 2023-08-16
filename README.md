@@ -36,7 +36,7 @@ dita --install https://github.com/stefan-jung/org.jung.terminology/archive/maste
 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
-3. Add the directory of the plugin in the DITA-OT as an additional framework directory, e.g. `/home/user/workspace/DITA/dita-ot/plugins/org.doctales.terminology`.
+3. Add the frameworks directory of the plugin in the DITA-OT as an additional framework directory, e.g. `/home/user/workspace/DITA/dita-ot/plugins/org.doctales.terminology/frameworks`.
 
 ## Using the Plugin
 
