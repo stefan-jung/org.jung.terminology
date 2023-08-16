@@ -2,57 +2,57 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
   
   <group id="rng-public-id">
-    <public publicId="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
-    <public publicId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
-    <public publicId="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    <public publicId="urn:jung:dita:rng:semanticnet.rng" uri="frameworks/termentry/rng/semanticnet.rng"/>
+    <public publicId="urn:jung:dita:rng:semanticnetMod.rng" uri="frameworks/termentry/rng/semanticnetMod.rng"/>
+    <public publicId="urn:jung:dita:rng:semanticnetDomain.rng" uri="frameworks/termentry/rng/semanticnetDomain.rng"/>
     
-    <public publicId="urn:jung:dita:rng:termstats.rng" uri="rng/termstats.rng"/>
-    <public publicId="urn:jung:dita:rng:termstatsMod.rng" uri="rng/termstatsMod.rng"/>
-    <public publicId="urn:jung:dita:rng:termstatsDomain.rng" uri="rng/termstatsDomain.rng"/>
+    <public publicId="urn:jung:dita:rng:termstats.rng" uri="frameworks/termentry/rng/termstats.rng"/>
+    <public publicId="urn:jung:dita:rng:termstatsMod.rng" uri="frameworks/termentry/rng/termstatsMod.rng"/>
+    <public publicId="urn:jung:dita:rng:termstatsDomain.rng" uri="frameworks/termentry/rng/termstatsDomain.rng"/>
     
-    <public publicId="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
-    <public publicId="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    <public publicId="urn:jung:dita:rng:termentry.rng" uri="frameworks/termentry/rng/termentry.rng"/>
+    <public publicId="urn:jung:dita:rng:termentryMod.rng" uri="frameworks/termentry/rng/termentryMod.rng"/>
     
-    <public publicId="urn:jung:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
-    <public publicId="urn:jung:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    <public publicId="urn:jung:dita:rng:termmap.rng" uri="frameworks/termmap/rng/termmap.rng"/>
+    <public publicId="urn:jung:dita:rng:termmapMod.rng" uri="frameworks/termmap/rng/termmapMod.rng"/>
     
-    <public publicId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+    <public publicId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termentry/rng/termdomainAttDomain.rng"/>
   </group>
   
   <group id="rng-system-id">
-    <system systemId="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
-    <system systemId="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
-    <system systemId="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnet.rng" uri="frameworks/termentry/rng/semanticnet.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnetMod.rng" uri="frameworks/termentry/rng/semanticnetMod.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnetDomain.rng" uri="frameworks/termentry/rng/semanticnetDomain.rng"/>
     
-    <system systemId="urn:jung:dita:rng:termstats.rng" uri="rng/termstats.rng"/>
-    <system systemId="urn:jung:dita:rng:termstatsMod.rng" uri="rng/termstatsMod.rng"/>
-    <system systemId="urn:jung:dita:rng:termstatsDomain.rng" uri="rng/termstatsDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:termstats.rng" uri="frameworks/termentry/rng/termstats.rng"/>
+    <system systemId="urn:jung:dita:rng:termstatsMod.rng" uri="frameworks/termentry/rng/termstatsMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termstatsDomain.rng" uri="frameworks/termentry/rng/termstatsDomain.rng"/>
     
-    <system systemId="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
-    <system systemId="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termentry.rng" uri="frameworks/termentry/rng/termentry.rng"/>
+    <system systemId="urn:jung:dita:rng:termentryMod.rng" uri="frameworks/termentry/rng/termentryMod.rng"/>
     
-    <system systemId="urn:jung:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
-    <system systemId="urn:jung:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termmap.rng" uri="frameworks/termmap/rng/termmap.rng"/>
+    <system systemId="urn:jung:dita:rng:termmapMod.rng" uri="frameworks/termmap/rng/termmapMod.rng"/>
     
-    <system systemId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termentry/rng/termdomainAttDomain.rng"/>
   </group>
   
   <group id="rng-uri">
-    <uri name="urn:jung:dita:rng:semanticnet.rng" uri="rng/semanticnet.rng"/>
-    <uri name="urn:jung:dita:rng:semanticnetMod.rng" uri="rng/semanticnetMod.rng"/>
-    <uri name="urn:jung:dita:rng:semanticnetDomain.rng" uri="rng/semanticnetDomain.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnet.rng" uri="frameworks/termentry/rng/semanticnet.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnetMod.rng" uri="frameworks/termentry/rng/semanticnetMod.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnetDomain.rng" uri="frameworks/termentry/rng/semanticnetDomain.rng"/>
     
-    <uri name="urn:jung:dita:rng:termstats.rng" uri="rng/termstats.rng"/>
-    <uri name="urn:jung:dita:rng:termstatsMod.rng" uri="rng/termstatsMod.rng"/>
-    <uri name="urn:jung:dita:rng:termstatsDomain.rng" uri="rng/termstatsDomain.rng"/>
+    <uri name="urn:jung:dita:rng:termstats.rng" uri="frameworks/termentry/rng/termstats.rng"/>
+    <uri name="urn:jung:dita:rng:termstatsMod.rng" uri="frameworks/termentry/rng/termstatsMod.rng"/>
+    <uri name="urn:jung:dita:rng:termstatsDomain.rng" uri="frameworks/termentry/rng/termstatsDomain.rng"/>
     
-    <uri name="urn:jung:dita:rng:termentry.rng" uri="rng/termentry.rng"/>
-    <uri name="urn:jung:dita:rng:termentryMod.rng" uri="rng/termentryMod.rng"/>
+    <uri name="urn:jung:dita:rng:termentry.rng" uri="frameworks/termentry/rng/termentry.rng"/>
+    <uri name="urn:jung:dita:rng:termentryMod.rng" uri="frameworks/termentry/rng/termentryMod.rng"/>
     
-    <uri name="urn:jung:dita:rng:termmap.rng" uri="rng/termmap.rng"/>
-    <uri name="urn:jung:dita:rng:termmapMod.rng" uri="rng/termmapMod.rng"/>
+    <uri name="urn:jung:dita:rng:termmap.rng" uri="frameworks/termmap/rng/termmap.rng"/>
+    <uri name="urn:jung:dita:rng:termmapMod.rng" uri="frameworks/termmap/rng/termmapMod.rng"/>
     
-    <uri name="urn:jung:dita:rng:termdomainAttDomain.rng" uri="rng/termdomainAttDomain.rng"/>
+    <uri name="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termentry/rng/termdomainAttDomain.rng"/>
   </group>
   
 </catalog>

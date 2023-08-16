@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min.nvdl" type="application/xml"schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<tbx xmlns="urn:iso:std:iso:30042:ed-2" style="dct" type="TBX-Min" xml:lang="EN" xmlns:min="http://www.tbxinfo.net/ns/min">
+  <tbxHeader>
+    <fileDesc>
+      <sourceDesc>
+        <p>Muzerelle, "Vocabulaire Codicologique," 1985.</p>
+        <p>http://vocabulaire.irht.cnrs.fr/pages/vocab1.htm</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <p type="XCSURI">TBXXCSV02.xcs</p>
+    </encodingDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="eid-VocCod-211.01">
+        <min:subjectField>personnel</min:subjectField>
+        <langSec xml:lang="fr">
+          <termSec>
+            <term id="tid-voccod-211.01-fr1">copiste</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-fr2">scribe</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-fr3">écrivain</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="it">
+          <termSec>
+            <term id="tid-voccod-211.01-it1">scriba</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-it2">amanuense</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-it3">copista</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-it4">trascrittore</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term id="tid-voccod-211.01-es1">copista</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-es2">escriba</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-es3">escribano</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-es4">amanuense</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec>
+            <term id="tid-voccod-211.01-en1">scribe</term>
+          </termSec>
+          <termSec>
+            <term id="tid-voccod-211.01-en2">copyist</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

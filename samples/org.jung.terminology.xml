@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  
+  <context name="Terminology" id="terminology">
+    <input href="terminology.ditamap"/>
+  </context>
+  
+  <deliverable name="Termbrowser" id="termbrowser">
+    <context idref="terminology"/>
+    <output href="./termbrowser"/>
+    <publication transtype="termbrowser-responsive">
+      <param name="webhelp.publishing.template" path="../framework/publishing"/>
+      <param name="webhelp.publishing.template.descriptor" value="termbrowser.opt"/>
+      <param name="args.termstats" href="termstats.xml"/>
+    </publication>
+  </deliverable>
+  
+  <deliverable name="Termchecker DITA" id="termchecker-dita">
+    <context idref="terminology"/>
+    <output href="./termchecker-dita"/>
+    <publication transtype="termchecker-dita"/>
+  </deliverable>
+  
+  <deliverable name="Termchecker XLIFF" id="termchecker-xliff">
+    <context idref="terminology"/>
+    <output href="./termchecker-xliff"/>
+    <publication transtype="termchecker-xliff"/>
+  </deliverable>
+  
+  <deliverable name="TBX Basic" id="tbx-basic">
+    <context idref="terminology"/>
+    <output href="./tbx-basic"/>
+    <publication transtype="tbx-basic"/>
+  </deliverable>
+  
+  <deliverable name="TBX Min" id="tbx-min">
+    <context idref="terminology"/>
+    <output href="./tbx-min"/>
+    <publication transtype="tbx-min"/>
+  </deliverable>
+  
+  <deliverable name="Oxygen Termchecker" id="oxygen-termchecker">
+    <context idref="terminology"/>
+    <output href="./oxygen-termchecker"/>
+    <publication transtype="oxygen-termchecker"/>
+  </deliverable>
+  
+</project>

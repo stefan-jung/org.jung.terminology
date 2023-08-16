@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min.nvdl" type="application/xml"schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<tbx xmlns="urn:iso:std:iso:30042:ed-2" style="dct" type="TBX-Min" xml:lang="en" xmlns:min="http://www.tbxinfo.net/ns/min">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Oracle Terms</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>from an Oracle termbase</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <p type="XCSURI">TBXXCSV02.xcs</p>
+    </encodingDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="c1">
+        <min:subjectField>HR</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Provincial Reporting Establishment </term>
+          </termSec>
+          <termSec>
+            <term>PRE</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pt">
+          <note>Termo específico aos EUA.</note>
+          <termSec>
+            <term>Entidade de Supervisão de Província </term>
+          </termSec>
+          <termSec>
+            <term>PRE</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c2">
+        <min:subjectField>FI</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Target Value</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pt">
+          <note>Different from 'Valor Alvo' that exists in the glossary for POM</note>
+          <termSec>
+            <term>Valor a Atingir</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

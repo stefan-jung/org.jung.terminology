@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  
+  <import file="build_dita2tbx-min_template.xml"/>
+  <import file="build_dita2tbx-basic_template.xml"/>
+  <import file="build_dita2termchecker-dita_template.xml"/>
+  <import file="build_dita2termchecker-xliff_template.xml"/>
+  <import file="build_dita2termbrowser_template.xml"/>
+  <import file="build_dita2oxygen-termchecker_template.xml"/>
+  
+  <!-- Parameters for TBX-Min -->
+  <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
+  <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
+  
+  <!-- Parameters for termchecker and termchecker-xliff -->
+  <param name="language" expression="${args.language}" if="args.language"/>
+  
+  <!-- Parameters for html based transformations -->
+  <param name="termstats" expression="${args.termstats}" if="args.termstats"/>
+  
+</project>

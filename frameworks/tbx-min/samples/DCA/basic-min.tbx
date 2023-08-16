@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBXcoreStructV03_TBX-Min_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tbx xml:lang="en" style="dca" type="TBX-Min" xmlns="urn:iso:std:iso:30042:ed-2">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>TBX-Min Sample</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>A short sample file demonstrating TBX-Min</p>
+      </sourceDesc>
+    </fileDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="C002">
+        <descrip type="subjectField">biology</descrip>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Hund</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>dog</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+            <admin type="customerSubset">SAP</admin>
+          </termSec>
+          <termSec>
+            <term>hound</term>
+            <termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+            <termNote type="partOfSpeech">noun</termNote>
+            <admin type="customerSubset">SAP</admin>
+            <note>however bloodhound is used rather than blooddog</note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c008">
+        <descrip type="subjectField">biology</descrip>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Katze</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cat</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <admin type="customerSubset">SAP</admin>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C007">
+        <descrip type="subjectField">biology</descrip>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Maus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>mouse</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <admin type="customerSubset">PestGone</admin>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

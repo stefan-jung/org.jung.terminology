@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless">
+        
+    <!-- 
+        WORKAROUND: It is mandatory to call init-properties here.
+        Otherwise, the dita.temp.dir property would not be available
+        in the generate-termstats and semanticnet target
+        on some Linux OSes when using DITA-OT 2.4.3+
+    -->
+    <target name="dita2termbrowser-responsive"
+        depends="init-properties,
+                 -is-webhelp-responsive-available,
+                 dita2webhelp-responsive
+                 ">
+    </target>
+    
+    <!--
+        Check the availability of the plugin by checking the property.
+        We cannot make this a hard dependency in the plugin.xml,
+        otherwise the plugin might not work in specific environments.
+    -->
+    <target name="-is-webhelp-responsive-available">
+        <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive not found</fail>
+        <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive found</echo>
+    </target>
+    
+    <target name="-generate-termstats">
+        <description>
+            Helper target to determine if terminology statistics should be generated.
+            This target is looking for a &lt;termstatsref&gt; element on the terminology map.
+        </description>
+        <condition property="generate-termstats" value="true">
+            <and>
+                <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
+                <isset property="termstatsref"/>
+            </and>
+        </condition>
+        <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
+        <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
+    </target>
+    
+    <target name="generate-termstats"
+        description="Generate terminology statistics."
+        depends="-generate-termstats"
+        if="generate-termstats">
+        
+        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
+        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
+            <filterchain>       
+                <linecontainsregexp>          
+                    <regexp pattern="termmap/termstatsref "/>        
+                </linecontainsregexp>      
+            </filterchain> 
+        </loadfile>
+        
+        <echo level="info">termmap = "${termmap}"</echo>
+        
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        
+        <property name="dita.temp.dir.abs" location="${dita.temp.dir}"/>
+        <makeurl file="${dita.temp.dir.abs}" property="dita.temp.dir.abs.url"/>
+        <property name="dita.map.rel" value="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap" relative="no"/>
+        
+        <!-- Convert terminology statistics to termstats XML -->
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            in="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap"
+            out="${dita.temp.dir}${file.separator}terminology_stats.xml"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension="_check.xml"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-stats.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <param name="ditamap" expression="${dita.map.rel}"/>
+            <param name="ditamap.filename" expression="${basename}.ditamap"/>
+            <param name="temp.dir" expression="${dita.temp.dir}"/>
+            <param name="temp.dir.abs" expression="${dita.temp.dir.abs.url}"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
+        
+        
+        <!-- Merge recently gathered terminology statistics with old statistics from previous builds. -->
+        <echo unless:set="args.termstats">Property args.termstats is not set</echo>
+        <echo if:set="args.termstats" level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
+        <makeurl if:set="args.termstats" file="${args.termstats}" property="old.termstats.url"/>
+        <makeurl if:set="args.termstats" file="${dita.temp.dir}${file.separator}terminology_stats.xml" property="new.termstats.url"/>
+        <xslt if:set="args.termstats"
+            basedir="${dita.temp.dir}"
+            destdir="${dita.temp.dir}"
+            in="${dita.plugin.org.jung.terminology.dir}/templates/dummy.xml"
+            out="${dita.temp.dir}/termstats_merged.xml"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-stats-merge-xml.xsl">
+            <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>
+            <param name="old.termstats" expression="${old.termstats.url}"/>
+            <param name="new.termstats" expression="${new.termstats.url}"/>
+        </xslt>
+        <move unless:set="args.termstats"
+            file="${dita.temp.dir}${file.separator}terminology_stats.xml"
+            tofile="${dita.temp.dir}/termstats_merged.xml">
+        </move>
+        <!-- Set args.default.language, if it has not yet been set. -->
+        <property name="args.default.language" value="en-GB"/>
+        
+        
+        <!--
+            Convert the XML data to XHTML.
+            The content of the <head> element and the <body> element
+            will later be injected into the termstats topic.
+        -->
+        <fail>
+            File ${dita.temp.dir}/termstats_merged.xml is not available
+            <condition>
+                <and>
+                    <isset property="args.termstats"/>
+                    <not>
+                        <available file="${dita.temp.dir}/termstats_merged.xml"/>
+                    </not>
+                </and>
+            </condition>
+        </fail>
+        
+        <!--
+            Copy the XML file to the output dir.
+            It has to be shipped with the webhelp to be used as an input parameter for the next publication.
+        -->
+        <copy
+            file="${dita.temp.dir}/termstats_merged.xml"
+            tofile="${output.dir}/termstats.xml">
+        </copy>
+    </target>
+    
+</project>

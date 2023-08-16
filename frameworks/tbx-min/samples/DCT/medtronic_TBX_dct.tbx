@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min.nvdl" type="application/xml"schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<tbx xmlns="urn:iso:std:iso:30042:ed-2" style="dct" type="TBX-Min" xml:lang="en" xmlns:min="http://www.tbxinfo.net/ns/min">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Medtronic Data</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>from a Collection of Terminology Metadata</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <p type="XCSURI">TBXXCSV02.xcs</p>
+    </encodingDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="c7331">
+        <langSec xml:lang="en">
+          <termSec>
+            <term>patient identifier</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="da">
+          <termSec>
+            <term>patientidentifikator</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="nl">
+          <termSec>
+            <term>patiënt-identificatiecode</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="fi">
+          <termSec>
+            <term>potilastunniste</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="fr">
+          <termSec>
+            <term>identifiant patient</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="da">
+          <termSec>
+            <term>Patienten-Identifikator</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="hu">
+          <termSec>
+            <term>betegazonosító</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="it">
+          <termSec>
+            <term>identificativo paziente</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="no">
+          <termSec>
+            <term>pasient-ID</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pl">
+          <termSec>
+            <term>identyfikator pacjenta</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pt">
+          <termSec>
+            <term>identificador de doentes</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>identificador de paciente</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="sv">
+          <termSec>
+            <term>patient identifierare</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="el">
+          <termSec>
+            <term>αναγνωριστής ασθενούς</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="cs">
+          <termSec>
+            <term>identifikační karta pacienta</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c7332">
+        <note>An audible alert notifies the patient of a device-triggered event. A silent alert
+          notifies the clinician of a device-triggered event via the Medtornic CareLink® network.
+          With an audible alert, the patient still needs to notify the clinic.</note>
+        <note>See patient alert</note>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>audible alert</term>
+          </termSec>
+          <termSec>
+            <term>audible notification</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="da">
+          <termSec>
+            <term>hørbar alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="nl">
+          <termSec>
+            <term>hoorbaar alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="fi">
+          <termSec>
+            <term>hälytysääni</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="fr">
+          <termSec>
+            <term>signal sonore</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="da">
+          <termSec>
+            <term>akustischer Alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="hu">
+          <termSec>
+            <term>hallható riasztás</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="it">
+          <termSec>
+            <term>allarme udibile</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="no">
+          <termSec>
+            <term>lydsignal</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pl">
+          <termSec>
+            <term>alarm dźwiękowy</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pt">
+          <termSec>
+            <term>alerta sonoro</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>señal de aviso sonora</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="sv">
+          <termSec>
+            <term>ljudalarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="el">
+          <termSec>
+            <term>ηχητικό σήμα επαγρύπνησης</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="cs">
+          <termSec>
+            <term>zvukový výstražný signál</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c7333">
+        <langSec xml:lang="en">
+          <termSec>
+            <term>clinician notification</term>
+          </termSec>
+          <termSec>
+            <term>silent alert</term>
+          </termSec>
+          <termSec>
+            <term>wireless alert</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="da">
+          <termSec>
+            <term>meddelelse til lægen</term>
+          </termSec>
+          <termSec>
+            <term>lydløs alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="nl">
+          <termSec>
+            <term>bericht voor de arts</term>
+          </termSec>
+          <termSec>
+            <term>stil alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="fi">
+          <termSec>
+            <term>lääkärin ilmoitus</term>
+          </termSec>
+          <termSec>
+            <term>hälytysviesti</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="fr">
+          <termSec>
+            <term>notification médecin</term>
+          </termSec>
+          <termSec>
+            <term>alerte silencieuse</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="da">
+          <termSec>
+            <term>Benachrichtigung des Arztes</term>
+          </termSec>
+          <termSec>
+            <term>stiller Alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="hu">
+          <termSec>
+            <term>orvos értesítése</term>
+          </termSec>
+          <termSec>
+            <term>néma riasztás</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="it">
+          <termSec>
+            <term>notifica del medico</term>
+          </termSec>
+          <termSec>
+            <term>allarme silenzioso</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="no">
+          <termSec>
+            <term>melding til personale</term>
+          </termSec>
+          <termSec>
+            <term>stille alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pl">
+          <termSec>
+            <term>powiadomienie lekarza</term>
+          </termSec>
+          <termSec>
+            <term>alarm cichy</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="pt">
+          <termSec>
+            <term>notificação para o médico</term>
+          </termSec>
+          <termSec>
+            <term>alerta silencioso</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>notificación al facultativo</term>
+          </termSec>
+          <termSec>
+            <term>señal de aviso silenciosa</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="sv">
+          <termSec>
+            <term>läkarmeddelande</term>
+          </termSec>
+          <termSec>
+            <term>tyst alarm</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="el">
+          <termSec>
+            <term>γνωστοποίηση ιατρού</term>
+          </termSec>
+          <termSec>
+            <term>σιωπηλή επαναγρύπνηση</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="cs">
+          <termSec>
+            <term>upozornění pro lékaře</term>
+          </termSec>
+          <termSec>
+            <term>výstraha bez zvukového signálu</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

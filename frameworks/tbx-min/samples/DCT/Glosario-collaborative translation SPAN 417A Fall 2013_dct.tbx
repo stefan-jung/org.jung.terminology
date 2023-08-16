@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min.nvdl" type="application/xml"schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<tbx xmlns="urn:iso:std:iso:30042:ed-2" xml:lang="en" style="dct" type="TBX-Min" xmlns:min="http://www.tbxinfo.net/ns/min">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>D001</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>This is a sample glossary received by donation.</p>
+      </sourceDesc>
+    </fileDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="C001">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>admitting office</term>
+            <note> Source: Map for hospital:
+              http://intermountainhealthcare.org/hospitals/primarychildrens/maps/Documents/Floor%20Maps%20English%20and%20Spanish.pdf </note>
+            <note> Author of Entry: chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>La oficina de admision</term>
+            <note> Source: Map for hospital:
+              http://intermountainhealthcare.org/hospitals/primarychildrens/maps/Documents/Floor%20Maps%20English%20and%20Spanish.pdf </note>
+            <note> Author of Entry: chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C002">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>anti-viral medicine</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>medicamento anti-viral</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C003">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>acetaminophen</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>acetaminofeno, paracetamol</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C004">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>antibiotic</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>antiobiótico</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C005">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Absolute neutrophil count (ANC)</term>
+            <note> Comments by Author: I have found the word for neutrophil=neutrófilo, but
+              I&amp;apos;m not sure whether just to keep this in English, since they will probably
+              be measuring with English instruments </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el recuento absoluto de neutrófilos</term>
+            <note> Comments by Author: I have found the word for neutrophil=neutrófilo, but
+              I&amp;apos;m not sure whether just to keep this in English, since they will probably
+              be measuring with English instruments </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C006">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>active illness</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=active+disease </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>enfermedad activa</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=active+disease </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C007">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>AIDS</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el SIDA</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C008">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>baby teeth</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>dientes de leche</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C009">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>blood count</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/advertising_public_relations/1577102-blood_count.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>recuento sanguíneo</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/advertising_public_relations/1577102-blood_count.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C010">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>low blood count</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=low+blood+count </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Un conteo sanguíneo bajo,un recuento sanguíneo bajo</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=low+blood+count </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C011">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>blood work</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>analisis de sangre</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C012">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>breathe deeply</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>respirar profundamente</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C013">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>bone marrow aspirate</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/esp_imagepages/1129.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Aspiración de médula ósea</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/esp_imagepages/1129.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C014">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>bleeding disorders</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C015">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>bleeding (cause bleeding)</term>
+            <note> Source: http://www.wfh.org/es/page.aspx?pid=934 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>hemorragias (provocar hemorragias)</term>
+            <note> Source: http://www.wfh.org/es/page.aspx?pid=934 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C016">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>blood culture</term>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles/search?source=auto&amp;amp;query=blood+culture </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>cultivo de sangre</term>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles/search?source=auto&amp;amp;query=blood+culture </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C017">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>bloodstream</term>
+            <note> Comments by Author: Other options more common in Spanish texts:
+              &amp;quot;torrente sanguíneo&amp;quot; or &amp;quot;ciculación sanguínea&amp;quot;
+              (Navarro, 2005:119) </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>flujo sanguíneo</term>
+            <note> Comments by Author: Other options more common in Spanish texts:
+              &amp;quot;torrente sanguíneo&amp;quot; or &amp;quot;ciculación sanguínea&amp;quot;
+              (Navarro, 2005:119) </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C018">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>bac</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C019">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>broken, irritated &amp;amp; inflamed (lining)</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>ruptura/lesión</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C020">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>brother or sister</term>
+            <note> Author of Entry: Derek </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>hermano</term>
+            <note> Author of Entry: Derek </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C021">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>break through nausea</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>????????</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C022">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cavity</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la caries</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C023">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>care team members</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>miembros del equipo médico</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C024">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>chemotherapy</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la quimioterapia</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C025">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>clinic care</term>
+            <note> Author of Entry: chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>cuidado en la clinica</term>
+            <note> Author of Entry: chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C026">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>correct spacing (teeth)</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C027">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cat litter</term>
+            <note> Source:
+              https://www.google.com/search?q=arena+higienica&amp;amp;ie=utf-8&amp;amp;oe=utf-8&amp;amp;aq=t&amp;amp;rls=org.mozilla:en-US:official&amp;amp;client=firefox-a </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>arena higienica</term>
+            <note> Source:
+              https://www.google.com/search?q=arena+higienica&amp;amp;ie=utf-8&amp;amp;oe=utf-8&amp;amp;aq=t&amp;amp;rls=org.mozilla:en-US:official&amp;amp;client=firefox-a </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C028">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>check his/her temperature</term>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>comprobar/tomar la temperatura</term>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C029">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>child life specialist</term>
+            <note> Comments by Author: This refers to the members of staff in charge of play
+              therapy, ie, the set of activities, games and so on to assist children in getting used
+              to life as hospital patients and hopefully facilitate healing. In Spanish we have
+              several options: &amp;quot;ludoterapeuta infantil&amp;quot;, &amp;quot;especialista en
+              ludoterapia infantil&amp;quot;, &amp;quot;especialista en recreación
+              terapéutica&amp;quot;. In many translations one can find &amp;quot;especialista en
+              recreación terapéutica&amp;quot; and even &amp;quot;recreacionista&amp;quot; as well
+              as the calques &amp;quot;terapia/terapeuta recreacional&amp;quot; (Navarro
+              2005:178-179). The question is whether the target audience would benefit from the more
+              classical morphology of ludoterapeuta infantil. It is a more accurate and idiomatic
+              option, but might puzzle our readers. I discourage the literal &amp;quot;especialista
+              en vida infantil&amp;quot; because it is misleading. &amp;quot;especialista en
+              recreación psicoterapéutica&amp;quot; might be more descriptive and easy to understand
+              for our potential readers. </note>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>especialista en vida infantil</term>
+            <note> Comments by Author: This refers to the members of staff in charge of play
+              therapy, ie, the set of activities, games and so on to assist children in getting used
+              to life as hospital patients and hopefully facilitate healing. In Spanish we have
+              several options: &amp;quot;ludoterapeuta infantil&amp;quot;, &amp;quot;especialista en
+              ludoterapia infantil&amp;quot;, &amp;quot;especialista en recreación
+              terapéutica&amp;quot;. In many translations one can find &amp;quot;especialista en
+              recreación terapéutica&amp;quot; and even &amp;quot;recreacionista&amp;quot; as well
+              as the calques &amp;quot;terapia/terapeuta recreacional&amp;quot; (Navarro
+              2005:178-179). The question is whether the target audience would benefit from the more
+              classical morphology of ludoterapeuta infantil. It is a more accurate and idiomatic
+              option, but might puzzle our readers. I discourage the literal &amp;quot;especialista
+              en vida infantil&amp;quot; because it is misleading. &amp;quot;especialista en
+              recreación psicoterapéutica&amp;quot; might be more descriptive and easy to understand
+              for our potential readers. </note>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C030">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>childhood cancer</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>cáncer infantil</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C031">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cancer therapy</term>
+            <note> Source: http://www.cancer.gov/diccionario?cdrid=651179 </note>
+            <note> Author of Entry: Kari </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>terapia contra el cáncer</term>
+            <note> Source: http://www.cancer.gov/diccionario?cdrid=651179 </note>
+            <note> Author of Entry: Kari </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C032">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cancer treatment</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=cancer+treatment </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>tratamiento del cáncer</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=cancer+treatment </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C033">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>complete blood count (CBC)</term>
+            <note> Comments by Author: The most accurate translation for this is not the literal
+              conteo or computo sanguineo. The technical term is &amp;quot;hemorgrama&amp;quot;
+              (Navarro 2005:209). </note>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles/search?source=auto&amp;amp;query=complete+blood+count </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>hemograma</term>
+            <note> Comments by Author: The most accurate translation for this is not the literal
+              conteo or computo sanguineo. The technical term is &amp;quot;hemorgrama&amp;quot;
+              (Navarro 2005:209). </note>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles/search?source=auto&amp;amp;query=complete+blood+count </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C034">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cotton swab</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>cotonete</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C035">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>constipation</term>
+            <note> Comments by Author: It looks like estreñimiento is more common, but I&amp;apos;ve
+              also seen constipación (Constipacion in SP often refers to having a stuffy
+              nose--Morgan) constipación for constipation is a false friend. Avoid it. </note>
+            <note> Source: http://iate.europa.eu/iatediff/SearchByQuery.do </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>estreñimiento</term>
+            <note> Comments by Author: It looks like estreñimiento is more common, but I&amp;apos;ve
+              also seen constipación (Constipacion in SP often refers to having a stuffy
+              nose--Morgan) constipación for constipation is a false friend. Avoid it. </note>
+            <note> Source: http://iate.europa.eu/iatediff/SearchByQuery.do </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C036">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>constipated</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>estreñido</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C037">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>condoms</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=condoms </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>preservativo</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=condoms </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C038">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>condón</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=condoms </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C039">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>cancer survivors</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>personas que sobreviven al cáncer</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C040">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>diagnosed with (cancer)</term>
+            <note> Comments by Author: Hey! This is Dottie! Random question, have you been using
+              &amp;quot;niño&amp;quot; or &amp;quot;hijo&amp;quot; for the phrase, &amp;quot;your
+              child&amp;quot;? I wasn&amp;apos;t even really thinking about it until I got halfway
+              through. </note>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles?query=diagnosed+with+cancer&amp;amp;source=english </note>
+            <note> Comments 1- disputing terms: I would say &amp;apos;hijo&amp;apos; :) -
+              Sofia&amp;#10;Hijo. -Sarah </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>diagnosticarse un cáncer</term>
+            <note> Comments by Author: Hey! This is Dottie! Random question, have you been using
+              &amp;quot;niño&amp;quot; or &amp;quot;hijo&amp;quot; for the phrase, &amp;quot;your
+              child&amp;quot;? I wasn&amp;apos;t even really thinking about it until I got halfway
+              through. </note>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles?query=diagnosed+with+cancer&amp;amp;source=english </note>
+            <note> Comments 1- disputing terms: I would say &amp;apos;hijo&amp;apos; :) -
+              Sofia&amp;#10;Hijo. -Sarah </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C041">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>diagnosis</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>diagnóstico</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C042">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>delicate tissue lining</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C043">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>diaper rash</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/medical_general/1160172-developed_a_diaper_rash.html </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>rozadura/sarpullido producido por el pañal</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/medical_general/1160172-developed_a_diaper_rash.html </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C044">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>esophagitis</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/article/001153.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>esofagitis</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/article/001153.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C045">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>era wax</term>
+            <note> Source: http://www.medicalspanish.com/dictionary/english-spanish/e.html </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la cera</term>
+            <note> Source: http://www.medicalspanish.com/dictionary/english-spanish/e.html </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C046">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>End of life services</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C047">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>external catheter</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=external+catheter </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>catéter externo</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish/search?source=auto&amp;amp;query=external+catheter </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C048">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>fungal infection</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>infección de hongos</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C049">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>gonorrhea</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la gonorrea</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C050">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>harsh detergents</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>detergentes abrasivos</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C051">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>hides out in the skin</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>se oculta en la piel</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C052">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Hematology/Oncology and Bone Marrow Transplant (Hem/Onc/BMT) Outpatient Clinic and
+              Day Hospital</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C053">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>hard, difficult bowel movements</term>
+            <note> Source: http://www.cancer.gov/diccionario?cdrid=651179 </note>
+            <note> Author of Entry: Rory/Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>evacuacion intestinal=bowel movement, so maybe evacuaciones intestinales
+              dificiles? I also found &amp;quot;defecación&amp;quot;.</term>
+            <note> Source: http://www.cancer.gov/diccionario?cdrid=651179 </note>
+            <note> Author of Entry: Rory/Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C054">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>(frequent) hand washing</term>
+            <note> Comments by Author: Fijaos en que los habitos son frecuentes por definición, por
+              eso son hábitos. </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el habito frecuente de lavarse las manos</term>
+            <note> Comments by Author: Fijaos en que los habitos son frecuentes por definición, por
+              eso son hábitos. </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C055">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Homecare</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>cuidado domestico</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C056">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>HIV</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>VIH</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C057">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>IV fluid</term>
+            <note> Comments by Author: SLA: IV can mean different things but it normally refers to
+              &amp;quot;intravenous&amp;quot;, that is, &amp;quot;intravenoso&amp;quot; in Spanish.
+              A more literal option could be &amp;quot;fluido intravenoso/por vía
+              intravenosa&amp;quot;, as it is not specified what kind of fluid it is from what I
+              read. Should we know the time of fluid we could replace fluid with a more specific
+              term (suero, solución, formulación, etc.) </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>liquido de IV???</term>
+            <note> Comments by Author: SLA: IV can mean different things but it normally refers to
+              &amp;quot;intravenous&amp;quot;, that is, &amp;quot;intravenoso&amp;quot; in Spanish.
+              A more literal option could be &amp;quot;fluido intravenoso/por vía
+              intravenosa&amp;quot;, as it is not specified what kind of fluid it is from what I
+              read. Should we know the time of fluid we could replace fluid with a more specific
+              term (suero, solución, formulación, etc.) </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C058">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>ICS (Inhaled Corticosteroide)</term>
+            <note> Source: http://www.childrensmn.org/Manuals/PFS/Med/085540.pdf </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>corticosteroide inhalado</term>
+            <note> Source: http://www.childrensmn.org/Manuals/PFS/Med/085540.pdf </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C059">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Immunocompromised Unit</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>unidad de cuidados intensivos</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C060">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Intermountain Hemophilia and Thrombosis Center</term>
+            <note> Comments by Author: SLA: Please, verify if tranlating the name of a unit,
+              institute or center is warranted. Nornally, it should be treated as a name and left
+              untranslated, unless the target readers need an indication of the meaning of any key
+              words. In this case, it might be rendered unnecessary due to the common Greek
+              etymology of Medical terms. </note>
+            <note> Author of Entry: Sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Centro de Hemofilia y Trombosis Intermountain</term>
+            <note> Comments by Author: SLA: Please, verify if tranlating the name of a unit,
+              institute or center is warranted. Nornally, it should be treated as a name and left
+              untranslated, unless the target readers need an indication of the meaning of any key
+              words. In this case, it might be rendered unnecessary due to the common Greek
+              etymology of Medical terms. </note>
+            <note> Author of Entry: Sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C061">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>integrative medicine physician</term>
+            <note> Comments by Author: SLA: Sugiero Doctor en Medicina Integral o Integrada. Hay
+              numerosos textos paralelos sobre Medicina Integral, entendida como la atencion medica
+              en la que se combinan tecnicas convencionales y alternativas. </note>
+            <note> Source: Buscar Medicina Integral en Google.com </note>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>doctor de medicina integrativa</term>
+            <note> Comments by Author: SLA: Sugiero Doctor en Medicina Integral o Integrada. Hay
+              numerosos textos paralelos sobre Medicina Integral, entendida como la atencion medica
+              en la que se combinan tecnicas convencionales y alternativas. </note>
+            <note> Source: Buscar Medicina Integral en Google.com </note>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C062">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>I.M. injections</term>
+            <note> Source: Navarro 2005:486 </note>
+            <note> Author of Entry: SLA </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>inyección intramuscular</term>
+            <note> Source: Navarro 2005:486 </note>
+            <note> Author of Entry: SLA </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C063">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Joint Commission on the Accreditation of Health Care Organizations</term>
+            <note> Comments by Author: SLA: Ya hay una versión publicada en español de este
+              organismo o entidad. Se podría dejar en inglés la primera vez que aparezca con su
+              equivalente español entre paréntesis. A partir de esa primera vez se puede optar por
+              la versión en Lengua Meta. También puede hacerse a la inversa, es decir, emplear
+              siempre el nombre español, pero dejar entre paréntesis el nombre en inglés en el
+              primer caso o en un título de apartado o capítulo, índice, etc. </note>
+            <note> Source:
+              https://www.google.com/#q=comision+conjunta+de+acreditacion+de+organizaciones+de+salud&amp;amp;safe=off </note>
+            <note> Author of Entry: SLA </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Comisión Conjunta Acreditadora de Organizaciones de Salud</term>
+            <note> Comments by Author: SLA: Ya hay una versión publicada en español de este
+              organismo o entidad. Se podría dejar en inglés la primera vez que aparezca con su
+              equivalente español entre paréntesis. A partir de esa primera vez se puede optar por
+              la versión en Lengua Meta. También puede hacerse a la inversa, es decir, emplear
+              siempre el nombre español, pero dejar entre paréntesis el nombre en inglés en el
+              primer caso o en un título de apartado o capítulo, índice, etc. </note>
+            <note> Source:
+              https://www.google.com/#q=comision+conjunta+de+acreditacion+de+organizaciones+de+salud&amp;amp;safe=off </note>
+            <note> Author of Entry: SLA </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C064">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Joint Commission</term>
+            <note> Source: linguee </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>comision conjunta</term>
+            <note> Source: linguee </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C065">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Accreditation of Health Care Organizations</term>
+            <note> Comments by Author: Me gusta más atencion sanitaria/médica, pero ver el nombre
+              acuñado en la fila número 82 </note>
+            <note> Source: linguee </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Acreditación de Organizaciones de Atención Médica</term>
+            <note> Comments by Author: Me gusta más atencion sanitaria/médica, pero ver el nombre
+              acuñado en la fila número 82 </note>
+            <note> Source: linguee </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C066">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Kosher</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>kosher</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C067">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>lip sores</term>
+            <note> Comments by Author: SLA: Esta es la segunda acepción del término
+              &amp;quot;sore&amp;quot;. Hay términos concretos en español para traducir términos
+              ingleses en los que se combina &amp;quot;sore&amp;quot; con su ubicación, su causa
+              aparente o su estado: bed sore (úlcera/escara de decúbito), canker sore (afta,
+              estomatisis aftosa recurrente), hard sores (chancro, chancro duro), open sore (llaga),
+              running sore (llaga supurada), etc. Cf. Navarro 2005:936. En este caso sugiero
+              calentura. </note>
+            <note> Source: herpes labial, calentura </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>úlceras de los labios???</term>
+            <note> Comments by Author: SLA: Esta es la segunda acepción del término
+              &amp;quot;sore&amp;quot;. Hay términos concretos en español para traducir términos
+              ingleses en los que se combina &amp;quot;sore&amp;quot; con su ubicación, su causa
+              aparente o su estado: bed sore (úlcera/escara de decúbito), canker sore (afta,
+              estomatisis aftosa recurrente), hard sores (chancro, chancro duro), open sore (llaga),
+              running sore (llaga supurada), etc. Cf. Navarro 2005:936. En este caso sugiero
+              calentura. </note>
+            <note> Source: herpes labial, calentura </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C068">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>lozenges</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/medical%3A_pharmaceuticals/4177322-1_lozenge_2_waking_hours.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>pastilla para chupar</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/medical%3A_pharmaceuticals/4177322-1_lozenge_2_waking_hours.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C069">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>local anesthesia</term>
+            <note> Source: http://www.allinahealth.org/mdex_sp/SD6022G.HTM </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>anastesia local</term>
+            <note> Source: http://www.allinahealth.org/mdex_sp/SD6022G.HTM </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C070">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>lumbar puncture</term>
+            <note> Source: http://www.proz.com/?sp=gloss/term&amp;amp;id=2550673 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la punción lumbar</term>
+            <note> Source: http://www.proz.com/?sp=gloss/term&amp;amp;id=2550673 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C071">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>lining (of mouth, throat, etc.)</term>
+            <note> Comments by Author: SLA: I think it refers to the term
+              &amp;quot;mucosas&amp;quot; (fem. pl. or sing.) in the domain of Histology (the study
+              of microscopic structure of cells in tissues and plants). It is used in Spanish in the
+              plural or in the singular form when referred to in a generic way. It is the wet tissue
+              in those areas. </note>
+            <note> Source:
+              https://www.aecc.es/SobreElCancer/Tratamientos/efectossecundariosdeltratamiento/efectossecundariosmasfrecuentes/sintomasdigestivos/Paginas/inflamaciondelamucosadebocaygarganta.aspx </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>mucosa(s)</term>
+            <note> Comments by Author: SLA: I think it refers to the term
+              &amp;quot;mucosas&amp;quot; (fem. pl. or sing.) in the domain of Histology (the study
+              of microscopic structure of cells in tissues and plants). It is used in Spanish in the
+              plural or in the singular form when referred to in a generic way. It is the wet tissue
+              in those areas. </note>
+            <note> Source:
+              https://www.aecc.es/SobreElCancer/Tratamientos/efectossecundariosdeltratamiento/efectossecundariosmasfrecuentes/sintomasdigestivos/Paginas/inflamaciondelamucosadebocaygarganta.aspx </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C072">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>linens</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>sabanas or ropa de cama?</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C073">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>mountain biking</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>andar en bicicleta de montaña</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C074">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>mucositis</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/medical_general/829607-mucositis.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la mucositis</term>
+            <note> Source:
+              http://www.proz.com/kudoz/english_to_spanish/medical_general/829607-mucositis.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C075">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>mouth sores</term>
+            <note> Source: http://www.saludmedica.com/tema/ulceras-bucales-0 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>úlceras bucales</term>
+            <note> Source: http://www.saludmedica.com/tema/ulceras-bucales-0 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C076">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>medicines</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>medicamento</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C077">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>menses</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el menstruo</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C078">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>numbing mouthwash</term>
+            <note> Source: https://www.google.com/#q=enjuague+bucal+anest%C3%A9sico&amp;amp;safe=off </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>enjuague bucal anestésico</term>
+            <note> Source: https://www.google.com/#q=enjuague+bucal+anest%C3%A9sico&amp;amp;safe=off </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C079">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>nurse practitioner</term>
+            <note> Source: Navarro 2005:689 </note>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>enfermero practicante</term>
+            <note> Source: Navarro 2005:689 </note>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C080">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>oral herpes</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/article/000606.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>herpes oral</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/article/000606.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C081">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>over-the-counter medicine</term>
+            <note> Source:
+              https://espanol.humana.com/individual-and-family/pharmacy/understanding-meds/over-the-counter </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>medicamento de venta sin receta</term>
+            <note> Source:
+              https://espanol.humana.com/individual-and-family/pharmacy/understanding-meds/over-the-counter </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C082">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>on-call oncologist</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>oncologo de guardia?</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C083">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>ovaries</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el ovario</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C084">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Outpatient</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Ambulatorio o Cuidado externo</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C085">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>prescription</term>
+            <note> Source: http://www.cancer.gov/diccionario?CdrID=44711 </note>
+            <note> Author of Entry: Kari </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>receta</term>
+            <note> Source: http://www.cancer.gov/diccionario?CdrID=44711 </note>
+            <note> Author of Entry: Kari </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C086">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>prescribe</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish?query=prescribe+medicine&amp;amp;source=english </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>prescribir, recetar</term>
+            <note> Source:
+              http://www.linguee.com/english-spanish?query=prescribe+medicine&amp;amp;source=english </note>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C087">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>primary teeth</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>dientes primarios</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C088">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>permanent teeth</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>dientes permanentes</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C089">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>platelet count</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>recuento de plaquetas</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C090">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>pod</term>
+            <note> Comments by Author: these are areas of the hospital that have rooms and beds in
+              them </note>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>ala</term>
+            <note> Comments by Author: these are areas of the hospital that have rooms and beds in
+              them </note>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C091">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>pox</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>viruela</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C092">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>pet dander</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>caspa de mascota</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C093">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Port-a-cath</term>
+            <note> Comments by Author: Port-a-Cath seems to be a brand name for an implantable
+              venous access device, so there may be choices as to how you want to treat it.
+              Port-a-Cath may just need a parenthetical explanation of implantable dispositivo de
+              acceso venoso, but I don&amp;apos;t know how colloquial that is. (Chirstin) </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>Check comment on EN term</term>
+            <note> Comments by Author: Port-a-Cath seems to be a brand name for an implantable
+              venous access device, so there may be choices as to how you want to treat it.
+              Port-a-Cath may just need a parenthetical explanation of implantable dispositivo de
+              acceso venoso, but I don&amp;apos;t know how colloquial that is. (Chirstin) </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C094">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>patient representative</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>respresentatnte de pacientes</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C095">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>primary care physician</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>médico de atención primaria</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C096">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>puberty</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la pubertad</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C097">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>platelet count</term>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el recuento plaquetario</term>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C098">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Room service</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>servicios al cuarto</term>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C099">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>radiation therapy</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>radioterapia</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C100">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>rash</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C101">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>registered nurse</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>enfermero registrado</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C102">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>service line</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: Sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>linea de servicios</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: Sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C103">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>swish (mouthwash)</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>enjuagar</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C104">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>sore throat</term>
+            <note> Source: http://www.proz.com/?sp=gloss/term&amp;amp;id=21566038 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>dolor de garganta</term>
+            <note> Source: http://www.proz.com/?sp=gloss/term&amp;amp;id=21566038 </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C105">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>shingles</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>herpes zoster</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C106">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>SPF15 (sun protection factor of 15)</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>FPS 15 (factor de proteccion solar 15)</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C107">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>side effects</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>efectos secundarios</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C108">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>self-talk</term>
+            <note> Source: http://www.proz.com/kudoz/english_to_spanish/other/479374-self_talk.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>diálogo interno</term>
+            <note> Source: http://www.proz.com/kudoz/english_to_spanish/other/479374-self_talk.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C109">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>self-fulfilling prophecy</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C110">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>service line director</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>director general</term>
+            <note> Author of Entry: kathy </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C111">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>suppressed</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C112">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>state-of-the art</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C113">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>self-image</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>imagen propia</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C114">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>social worker</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>asistente social</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C115">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>sexually-active</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C116">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>stool softener</term>
+            <note> Source:
+              http://www.nlm.nih.gov/medlineplus/spanish/ency/patientinstructions/000120.htm </note>
+            <note> Author of Entry: Kari </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>ablandador de las heces</term>
+            <note> Source:
+              http://www.nlm.nih.gov/medlineplus/spanish/ency/patientinstructions/000120.htm </note>
+            <note> Author of Entry: Kari </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C117">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>supplements</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>pastillas</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C118">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>sexually transmitted disease (STD)</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>emfermedad de transmisión sexual (ETS)</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C119">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>syphilis</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>la sífilis</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C120">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>thick secretions</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>secreción espesa ???</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C121">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>throat-clearing cough</term>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C122">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>the common cold</term>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles/search?source=auto&amp;amp;query=the+common+cold </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el resfriado común</term>
+            <note> Source:
+              http://www.linguee.es/espanol-ingles/search?source=auto&amp;amp;query=the+common+cold </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C123">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>tight-knit long sleeve</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C124">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>thinners</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>diluyente</term>
+            <note> Source: linguee </note>
+            <note> Author of Entry: sofia </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C125">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>to draw blood</term>
+            <note> Source: http://www.medicalspanish.com/dictionary/english-spanish/d.html </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>sacar sangre</term>
+            <note> Source: http://www.medicalspanish.com/dictionary/english-spanish/d.html </note>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C126">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>teenage</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>adolescente</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C127">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>teenager</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>adolescente</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C128">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>treatment</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>tratamiento</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C129">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>testes</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>los testículos</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C130">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>unpasteurized</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>no pasteurizado</term>
+            <note> Author of Entry: Rory </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C131">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>venous catheter</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/esp_imagepages/19861.htm </note>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>catéter venoso also catéter venoso central</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/ency/esp_imagepages/19861.htm </note>
+            <note> Author of Entry: Chirstin </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C132">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>viral infections</term>
+            <note> Source: http://iate.europa.eu/iatediff/SearchByQuery.do </note>
+            <note> Author of Entry: Rory Haglund </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>infección viral</term>
+            <note> Source: http://iate.europa.eu/iatediff/SearchByQuery.do </note>
+            <note> Author of Entry: Rory Haglund </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C133">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>infección vírica</term>
+            <note> Source: http://iate.europa.eu/iatediff/SearchByQuery.do </note>
+            <note> Author of Entry: Rory Haglund </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C134">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>weakened immune system</term>
+            <note> Source:
+              http://www.health.ny.gov/es/diseases/communicable/chickenpox/fact_sheet.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>sistema inmunológico debilitado</term>
+            <note> Source:
+              http://www.health.ny.gov/es/diseases/communicable/chickenpox/fact_sheet.htm </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C135">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>Wish-Fulfillment Organizations</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>???</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C136">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>white bloodcell count</term>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>el recuento de glóbulos blancos</term>
+            <note> Author of Entry: Dottie </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C137">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>wake up (virus)</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C138">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>yeast infecions</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/fungalinfections.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>infecciones micóticas, o infecciones por hongos</term>
+            <note> Source: http://www.nlm.nih.gov/medlineplus/spanish/fungalinfections.html </note>
+            <note> Author of Entry: Morgan </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C139">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>young adult</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>joven adulto</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C140">
+        <min:subjectField>medicine</min:subjectField>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>young adulthood</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="es">
+          <termSec>
+            <term>juventud adulta</term>
+            <note> Author of Entry: Sarah </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

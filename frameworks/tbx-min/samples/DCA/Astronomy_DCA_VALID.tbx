@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBXcoreStructV03_TBX-Min_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tbx type="TBX-Min" style="dca" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2">
+	<tbxHeader>
+		<fileDesc>
+			<sourceDesc>
+				<p>TBX file, created via MultiTerm Export</p>
+			</sourceDesc>
+		</fileDesc>
+	</tbxHeader>
+	<text>
+		<body>
+			<conceptEntry id="c1">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://www.physics.drexel.edu/observatory/dump.shtml</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>open cluster</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>galactic cluster</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">supersededTerm-admn-sts</termNote>
+						<note>Another name for an open star cluster. They are often termed Galactic
+							Clusters because they are found mainly in the plane of our galaxy. If
+							you were to view our galaxy from afar, you would find that all the
+							open/galactic clusters lie within the spiral arms of the galaxy.</note>
+						<note>N-Source:
+							http://www.delscope.demon.co.uk/astronomy/glossary.htm#G</note>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>cúmulo abierto</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c2">
+				<descrip type="subjectField">Stellar Birth</descrip>
+				<note>G-Source:
+					http://www.cfht.hawaii.edu/Instruments/Spectroscopy/Espadons/www.ast.obs-mip.fr/users/donati/press/fuori_eng.html</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>circumstellar accretion disk</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>accretion disc</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>circumstellar disk</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>disco de acreción</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>disco de acrecimiento</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c3">
+				<descrip type="subjectField">Stellar Death</descrip>
+				<note>G-Source: http://wallpaper-s.org/12__Supermassive_Black_Hole.htm</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>black hole</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>agujero negro</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c4">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://nakedmaninthetree.wordpress.com/2009/02/22/galaxies-and-the-future/</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>gamma-ray burst</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>GRB</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>explosión de rayos gamma</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>brote de rayos gamma</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c5">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://www.astrographics.com/GalleryPrintsIndex/GP0046.html</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>globular cluster</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: star cluster</note>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>cúmulo globular</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: cúmulo estelar</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c6">
+				<descrip type="subjectField">General</descrip>
+				<langSec xml:lang="en">
+					<note>G-Source: http://www.skyofplenty.com/?page_id=374</note>
+					<termSec>
+						<term>main-sequence</term>
+						<termNote type="partOfSpeech">adjective</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>de secuencia principal</term>
+						<termNote type="partOfSpeech">adjective</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c7">
+				<descrip type="subjectField">Stellar Birth</descrip>
+				<note>G-Source: http://www.konkoly.hu/KISAG/Science/star/star_intro.html</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>protostar</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<note>G-Source:
+						http://geocities.ws/acarvajaltt/temas/estrellas_nacimiento_estelar.html</note>
+					<termSec>
+						<term>protoestrella</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c8">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://apod.nasa.gov/apod/ap060109.html</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>star cluster</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: globular cluster</note>
+						<note>Related Term: open cluster</note>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>cúmulo estelar</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>cúmulo de estrellas</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+						<note>Related Term: cúmulo globular</note>
+						<note>Related Term: cúmulo abierto</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c9">
+				<descrip type="subjectField">General</descrip>
+				<langSec xml:lang="en">
+					<note>G-Source: http://www.cfa.harvard.edu/~afrebel/milky-way-2.jpg</note>
+					<termSec>
+						<term>Galaxy</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>Milky Way Galaxy</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>Milky Way</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<note>G-Source: http://oacs-unah.edu.hn/an111/vrt/img/via_lactea.jpg</note>
+					<termSec>
+						<term>Galaxia</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>Vía Láctea</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>galaxia Vía Láctea</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c10">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://lh4.ggpht.com/_EuutPdvjcY0/SQ2jGBKWO7I/AAAAAAAAALM/gjDMVimDQc8/005Est.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>star</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>estrella</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c11">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://drdima.files.wordpress.com/2009/05/sun-rays.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>UV radiation</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>ultraviolet radiation</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>radiación UV</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>radiación ultravioleta</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c12">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://www.greatdreams.com/magnet1.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>magnetic field</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>campo magnético</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c13">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://images.spaceref.com/news/2009/ooBlue_Straggler09.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>blue straggler</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>estrella rezagada azul</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c14">
+				<descrip type="subjectField">General</descrip>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>gravitational collapse</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>colapso gravitacional</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c15">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://lh6.ggpht.com/_6hgSmco4R9M/SaqplXGqJfI/AAAAAAAAA1k/B3a43_O9VI8/56_Binary_Stars_thumb3.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>binary star</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>estrella binaria</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>estrella doble</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c16">
+				<descrip type="subjectField">Stellar Birth</descrip>
+				<note>G-Source:
+					http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html</note>
+				<note>This figure compares the IMFs by ploting mass fraction per dex versus mass,
+					i.e., normalized so that the integral under each curve is unity. They are
+					assumed to be valid from 0.1 to 120 solar masses.</note>
+				<note>N-Source:
+					http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>initial mass function</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>función inicial de masa</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c17">
+				<langSec xml:lang="zu">
+					<termSec>
+						<term>Bally2005</term>
+						<note>Author[s]: Bally, John and Hans Zinnecker</note>
+						<note>Journal Title: The Astronomical Journal</note>
+						<note>Article Title: The Birth of High-Mass Stars: Accertion and/or
+							Mergers?</note>
+						<note>Volume: 129</note>
+						<note>Publication Place: U.S.A.</note>
+						<note>Publisher: The American Astronomical Society</note>
+						<note>Publication Year: May 2005</note>
+						<note>Page(s): 2281-2293</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c18">
+				<langSec xml:lang="zu">
+					<termSec>
+						<term>Cambridge2007</term>
+						<note>Author[s]: Mitton, Jaqueline</note>
+						<note>Book Title: Cambridge Illustrated Dictionary of Astronomy</note>
+						<note>Publication Place: New York</note>
+						<note>Publisher: Cambridge University Press</note>
+						<note>Publication Year: 2007</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c19">
+				<langSec xml:lang="zu">
+					<termSec>
+						<term>Merriam-Webster2002</term>
+						<note>Book Title: Webster's Third New International Dictionary</note>
+						<note>Editor[s]: Gove, Philip Babcock</note>
+						<note>Volume: Third Edition</note>
+						<note>Publication Place: Springfield, Massachusetts</note>
+						<note>Publisher: Merriam-Webster INC.</note>
+						<note>Publication Year: 2002</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c20">
+				<langSec xml:lang="zu">
+					<termSec>
+						<term>Oxford2007</term>
+						<note>Book Title: Oxford Dictionary of Astronomy</note>
+						<note>Editor[s]: Ridpath, Ian</note>
+						<note>Volume: Second Edition</note>
+						<note>Publication Place: New York</note>
+						<note>Publisher: Oxford University Press</note>
+						<note>Publication Year: 2007</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c21">
+				<descrip type="subjectField">Stellar Death</descrip>
+				<note>G-Source:
+					http://jcconwell.wordpress.com/2009/07/24/top-10-ways-the-universe-could-kill-us/supernova/</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>supernova</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>supernova</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c22">
+				<langSec xml:lang="zu">
+					<termSec>
+						<term>Moore2003</term>
+						<note>Author[s]: Moore, Patrick</note>
+						<note>Book Title: Philip's Atlas of the Universe</note>
+						<note>Publication Place: Heron Quays, London</note>
+						<note>Publisher: Philip's</note>
+						<note>Publication Year: 2003</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c23">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://www.lcsd.gov.hk/CE/Museum/Space/EducationResource/Universe/framed_e/lecture/ch15/imgs/red_size.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>red giant</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>gigante roja</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c24">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://www.wolflodge.org/bluestar/h_red_dwarf_02.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>red dwarf</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>enana roja</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c25">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://www.astro.columbia.edu/~archung/labs/spring2002/images/spectral_type2.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>spectral type</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>tipo espectral</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c26">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://www.stsci.edu/~inr/thisweek1/thisweek/WhiteDwarf.gif</note>
+				<langSec xml:lang="en">
+					<note>This is the end-result of all but the most massive of stars.</note>
+					<note>N-Source: Oxford2007</note>
+					<termSec>
+						<term>white dwarf</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>enana blanca</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c27">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://www.phys.ncku.edu.tw/~astrolab/mirrors/apod_e/image/0901/ngc2818_hheritage_800.jpg</note>
+				<langSec xml:lang="en">
+					<note>As mass is gradually lost, the core of the star becomes more exposed,
+						ultimately becoming a white dwarf. Also, planetary nebulae have nothing to
+						do with planets, and are not true nebulae.</note>
+					<note>N-Source: Based on Oxford2007 and Moore2003, 186</note>
+					<termSec>
+						<term>planetary nebula</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>nebulosa planetaria</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c28">
+				<descrip type="subjectField">Stellar Birth</descrip>
+				<note>G-Source: http://apod.nasa.gov/apod/image/0612/NGC2174_lrg.jpg</note>
+				<langSec xml:lang="en">
+					<note>Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can
+						all cause the emission nebula to shine.</note>
+					<note>N-Source: Oxford2007</note>
+					<termSec>
+						<term>emission nebula</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>nebulosa de emisión</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c29">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://my-blackberry.net/wallpapers/49/m/NASA_-_The_Horsehead_Nebula%2C_B33%2C_Orion_Nebula.jpg</note>
+				<langSec xml:lang="en">
+					<note>The term was originally applied to any object with a fuzzy telescopic
+						appearance, but with the advent of larger instruments many 'nebulae' were
+						found to consist of faint stars.</note>
+					<note>N-Source: Oxford2007</note>
+					<termSec>
+						<term>nebula</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Grammatical Number: singular</note>
+					</termSec>
+					<termSec>
+						<term>nebulae</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Grammatical Number: plural</note>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>nebulosa</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c30">
+				<descrip type="subjectField">Stellar Birth</descrip>
+				<note>G-Source: http://www.mallorcaweb.net/masm/obstel/caballo.GIF</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>dark nebula</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>absorbtion nebula</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>nebulosa oscura</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>nebulosa de absorción</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c31">
+				<descrip type="subjectField">Stellar Birth</descrip>
+				<note>G-Source:
+					http://mm04.nasaimages.org/MediaManager/srvr?mediafile=/Size3/NVA2-8-NA/14107/full_tif.jpg&amp;userid=1&amp;username=admin&amp;resolution=3&amp;servertype=JVA&amp;cid=8&amp;iid=NVA2&amp;vcid=NA&amp;usergroup=HUBBLE&amp;profileid=39</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>reflection nebula</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>nebulosa de reflexión</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c32">
+				<descrip type="subjectField">General</descrip>
+				<langSec xml:lang="en">
+					<note>G-Source: http://nrumiano.free.fr/Images/Neutron_star_E.gif</note>
+					<termSec>
+						<term>neutron star</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<note>G-Source:
+						http://es.wikipedia.org/wiki/Archivo:Estrella_de_Neutrones.jpg</note>
+					<termSec>
+						<term>estrella de neutrones</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c33">
+				<descrip type="subjectField">Stellar Death</descrip>
+				<langSec xml:lang="en">
+					<note>For a star with no hydrogen content the limit is 1.44 solar masses, which
+						is thus the maximum possible for a white dwarf.</note>
+					<note>N-Source: Oxford2007</note>
+					<termSec>
+						<term>Chandrasekhar limit</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>límite de Chandrasekhar</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c34">
+				<descrip type="subjectField">Stellar Death</descrip>
+				<langSec xml:lang="en">
+					<note>Encountered on in neutron stars.</note>
+					<note>N-Source: Oxford2007</note>
+					<termSec>
+						<term>neutron degeneracy</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>degeneración de neutrones</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c35">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>Schwarzschild radius</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: event horizon</note>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>radio de Schwarzschild</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: horizonte de sucesos, horizonte de eventos</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c36">
+				<descrip type="subjectField">Stellar Death</descrip>
+				<note>G-Source:
+					http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>event horizon</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>horizonte de sucesos</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+					<termSec>
+						<term>horizonte de eventos</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c37">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://en.wikipedia.org/wiki/File:FusionintheSun.svg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>proton-proton chain reaction</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>PP chain</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>proton-proton reaction</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>cadena protón-protón</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c38">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://en.wikipedia.org/wiki/File:CNO_Cycle.svg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>carbon-nitrogen cycle</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>CNO cycle</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>carbon-nitrogen-oxygen cycle</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>Bethe-Weizsäcker-cycle</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>carbon cycle</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+						<note>The carbon cycle can also refer to the biogeochemical cycle by which
+							carbon is exchanged among the biosphere, pedosphere, geosphere,
+							hydrosphere, and atmosphere of the Earth.</note>
+						<note>N-Source: http://en.wikipedia.org/wiki/Carbon_cycle</note>
+					</termSec>
+					<termSec>
+						<term>CN cycle</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>ciclo CNO</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>ciclo del carbono-nitrógeno-oxígeno</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>ciclo del carbono</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+						<note>También este término puede referirse a la formación de las moléculas
+							de carbohidratos, lípidos, proteínas y ácidos nucleicos.</note>
+						<note>N-Source: http://es.wikipedia.org/wiki/Ciclo_del_carbono</note>
+					</termSec>
+					<termSec>
+						<term>ciclo del carbono-nitrógeno</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c39">
+				<descrip type="subjectField">General</descrip>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>degeneracy</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>degeneración</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c40">
+				<langSec xml:lang="zu">
+					<termSec>
+						<term>Oxford2003</term>
+						<note>Author[s]: Ridpath, Ian</note>
+						<note>Book Title: Astronomía</note>
+						<note>Publication Place: Spain</note>
+						<note>Publisher: Oxford University Press</note>
+						<note>Publication Year: 2003</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c41">
+				<descrip type="subjectField">Stellar Death</descrip>
+				<langSec xml:lang="en">
+					<note>Electron degeneracy supports white dwarf stars against further
+						collapse.</note>
+					<note>N-Source: Oxford2007</note>
+					<termSec>
+						<term>electron degeneracy</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>degeneración de electrones</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+					<termSec>
+						<term>degeneración electrónica</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c42">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>singularity</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: black hole, event horizon, Schwarzschild radius</note>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>singularidad</term>
+						<termNote type="partOfSpeech">noun</termNote>
+						<note>Related Term: agujero negro, horizonte de sucesos, radio de
+							Schwarzschild</note>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c43">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source: http://en.wikipedia.org/wiki/Solar_mass</note>
+				<note>In this graphic, the M with a subscript is the symbol for a solar mass.</note>
+				<note>N-Source: Jonathan Tomolonis</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>solar mass</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>masa solar</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c44">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Triple-Alpha_Process.svg/750px-Triple-Alpha_Process.svg.png</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>triple-alpha process</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>proceso triple-alfa</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+			<conceptEntry id="c45">
+				<descrip type="subjectField">General</descrip>
+				<note>G-Source:
+					http://www.dorlingkindersley-uk.co.uk/static/clipart/uk/dk/sci_space/image_sci_space013.jpg</note>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>black dwarf</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+				<langSec xml:lang="es">
+					<termSec>
+						<term>enana negra</term>
+						<termNote type="partOfSpeech">noun</termNote>
+					</termSec>
+				</langSec>
+			</conceptEntry>
+		</body>
+		<back>
+			<refObjectSec type="respPerson">
+				<refObject id="pe324as3-9615-4d41-a9c8-30c36bffe0e6">
+					<item type="fn">Tommy Tomolonis</item>
+				</refObject>
+			</refObjectSec>
+		</back>
+	</text>
+</tbx>

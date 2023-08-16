@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>  <?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Core_dialect/master/Schemas/TBXcoreStructV03_TBX-Core_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Core_dialect/master/Schemas/TBX-Core.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tbx xml:lang="en" style="dca" type="TBX-Core" xmlns="urn:iso:std:iso:30042:ed-2">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>D002</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>A TBX-Core example containing two concept entries with multiple terms in two languages
+          (English and Spanish)</p>
+      </sourceDesc>
+    </fileDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="C001">
+        <langSec xml:lang="en">
+          <termSec>
+            <term>money</term>
+            <note> may refer to physical or banked currency </note>
+          </termSec>
+          <termSec>
+            <term>cash</term>
+            <note> refers to physical currency </note>
+          </termSec>
+          <termSec>
+            <term>dough</term>
+            <note> a more recent slang synonym </note>
+          </termSec>
+          <termSec>
+            <term>bread</term>
+            <note> a older slang synonym </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Geld</term>
+            <note> may refer to physical or banked currency </note>
+          </termSec>
+          <termSec>
+            <term>Bargeld</term>
+            <note> refers to physical currency </note>
+          </termSec>
+          <termSec>
+            <term>Knete</term>
+            <note> a slang term for Geld, has no plural </note>
+          </termSec>
+          <termSec>
+            <term>Kohle</term>
+            <note> an older slang form used shortly after WW2 </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C002">
+        <langSec xml:lang="en">
+          <termSec>
+            <term>music</term>
+            <note> may mean music in general or may mean an instance of music ("Let's play music")
+            </note>
+          </termSec>
+          <termSec>
+            <term>jam</term>
+            <note> slang for music, specifically the making of, used mostly by musicians (i.e.
+              "Let's have a jam!") </note>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Musik</term>
+          </termSec>
+          <termSec>
+            <term>Mucke</term>
+            <note> slang term for music, specifically the making of, used mostly by musicians (i.e.
+              "Haben wir 'ne Mucke!") </note>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

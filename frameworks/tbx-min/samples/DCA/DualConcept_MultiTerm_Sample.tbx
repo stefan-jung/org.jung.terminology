@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBXcoreStructV03_TBX-Min_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>  
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tbx xml:lang="en" style="dca" type="TBX-Min" xmlns="urn:iso:std:iso:30042:ed-2">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>D002</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>A TBX-Min example containing two concept entries with multiple terms in two languages
+          (English and Spanish)</p>
+      </sourceDesc>
+    </fileDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="C001">
+        <descrip type="subjectField">Currency</descrip>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>money</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+            <note> may refer to physical or banked currency </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>cash</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+            <note> refers to physical currency </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>dough</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+            <note> a more recent slang synonym </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>bread</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+            <note> a older slang synonym </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Geld</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+            <note> may refer to physical or banked currency </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>Bargeld</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+            <note> refers to physical currency </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>Knete</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">admittedTerm-admn-sts</termNote>
+            <note> a slang term for Geld, has no plural </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>Kohle</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+            <note> an older slang form used shortly after WW2 </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="C002">
+        <descrip type="subjectField">Music</descrip>
+        <langSec xml:lang="en">
+          <termSec>
+            <term>music</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+            <note> may mean music in general or may mean an instance of music ("Let's play music") </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>jam</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+            <note> slang for music, specifically the making of, used mostly by musicians (i.e.
+              "Let's have a jam!") </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="de">
+          <termSec>
+            <term>Musik</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">preferredTerm-admn-sts</termNote>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+          <termSec>
+            <term>Mucke</term>
+            <termNote type="partOfSpeech">noun</termNote>
+            <termNote type="administrativeStatus">deprecatedTerm-admn-sts</termNote>
+            <note> slang term for music, specifically the making of, used mostly by musicians (i.e.
+              "Haben wir 'ne Mucke!") </note>
+            <admin type="customerSubset">TRG</admin>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>

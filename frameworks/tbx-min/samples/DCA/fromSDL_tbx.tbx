@@ -1,0 +1,2909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBXcoreStructV03_TBX-Min_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tbx style="dca" type="TBX-Min" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2">
+  <tbxHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Adobe Data</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>from an SDLX Termbase</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <p type="XCSURI">TBXXCSV02.xcs</p>
+    </encodingDesc>
+  </tbxHeader>
+  <text>
+    <body>
+      <conceptEntry id="c1">
+        <langSec xml:lang="de">
+          <termSec id="c1-de-t1">
+            <term>Zickzackfalz</term>
+          </termSec>
+          <termSec id="c1-de-t2">
+            <term>Harmonikafalz</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c1-en-t1">
+            <term>accordion fold</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c3">
+        <langSec xml:lang="de">
+          <termSec id="c3-de-t1">
+            <term>additive Farbmischung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c3-en-t1">
+            <term>additive mixing of color</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c4">
+        <langSec xml:lang="de">
+          <termSec id="c4-de-t1">
+            <term>Ausrichtung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c4-en-t1">
+            <term>alignment</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c5">
+        <langSec xml:lang="de">
+          <termSec id="c5-de-t1">
+            <term>Ankerpunkt</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c5-en-t1">
+            <term>anchor point</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c6">
+        <langSec xml:lang="de">
+          <termSec id="c6-de-t1">
+            <term>Oberlänge</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c6-en-t1">
+            <term>ascender</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c7">
+        <langSec xml:lang="de">
+          <termSec id="c7-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c7-en-t1">
+            <term>backslant</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c8">
+        <langSec xml:lang="de">
+          <termSec id="c8-de-t1">
+            <term>Grundlinie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c8-en-t1">
+            <term>baseline</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c9">
+        <langSec xml:lang="de">
+          <termSec id="c9-de-t1">
+            <term>Bézier-Kurve</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c9-en-t1">
+            <term>Bezier curve</term>
+          </termSec>
+          <termSec id="c9-en-t2">
+            <term>Bezier surface</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c10">
+        <langSec xml:lang="de">
+          <termSec id="c10-de-t1">
+            <term>Bindung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c10-en-t1">
+            <term>binding</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c12">
+        <langSec xml:lang="de">
+          <termSec id="c12-de-t1">
+            <term>Drucktuch</term>
+          </termSec>
+          <termSec id="c12-de-t2">
+            <term>Gummituch</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c12-en-t1">
+            <term>blanket</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c13">
+        <langSec xml:lang="de">
+          <termSec id="c13-de-t1">
+            <term>Gummizylinder</term>
+          </termSec>
+          <termSec id="c13-de-t2">
+            <term>Gummituchzylinder</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c13-en-t1">
+            <term>blanket cylinder</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c14">
+        <langSec xml:lang="de">
+          <termSec id="c14-de-t1">
+            <term>Blindprägung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c14-en-t1">
+            <term>blind embossing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c15">
+        <langSec xml:lang="de">
+          <termSec id="c15-de-t1">
+            <term>Musterkopie</term>
+          </termSec>
+          <termSec id="c15-de-t2">
+            <term>Blaupause</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c15-en-t1">
+            <term>blueline or blueprint</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c17">
+        <langSec xml:lang="de">
+          <termSec id="c17-de-t1">
+            <term>Grundtext</term>
+          </termSec>
+          <termSec id="c17-de-t2">
+            <term>Fließtext</term>
+          </termSec>
+          <termSec id="c17-de-t3">
+            <term>Textkörper</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c17-en-t1">
+            <term>body copy</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c18">
+        <langSec xml:lang="de">
+          <termSec id="c18-de-t1">
+            <term>Fettdruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c18-en-t1">
+            <term>boldface</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c19">
+        <langSec xml:lang="de">
+          <termSec id="c19-de-t1">
+            <term>Aufzählungszeichen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c19-en-t1">
+            <term>bullet</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c20">
+        <langSec xml:lang="de">
+          <termSec id="c20-de-t1">
+            <term>bündig aneinander stoßen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c20-en-t1">
+            <term>butt</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c21">
+        <langSec xml:lang="de">
+          <termSec id="c21-de-t1">
+            <term>Dicke</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c21-en-t1">
+            <term>caliper</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c23">
+        <langSec xml:lang="de">
+          <termSec id="c23-de-t1">
+            <term>kamerafertig</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c23-en-t1">
+            <term>camera ready</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c24">
+        <langSec xml:lang="de">
+          <termSec id="c24-de-t1">
+            <term>Großbuchstabenhöhe</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c24-en-t1">
+            <term>cap height</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c25">
+        <langSec xml:lang="de">
+          <termSec id="c25-de-t1">
+            <term>zentrierter Text</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c25-en-t1">
+            <term>centered text</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c26">
+        <langSec xml:lang="de">
+          <termSec id="c26-de-t1">
+            <term>Zeichen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c26-en-t1">
+            <term>character </term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c27">
+        <langSec xml:lang="de">
+          <termSec id="c27-de-t1">
+            <term>Schriftkodierung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c27-en-t1">
+            <term>character encoding</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c28">
+        <langSec xml:lang="de">
+          <termSec id="c28-de-t1">
+            <term>CMYK</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c28-en-t1">
+            <term>CMYK</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c29">
+        <langSec xml:lang="de">
+          <termSec id="c29-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c29-en-t1">
+            <term>cold-set ink</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c30">
+        <langSec xml:lang="de">
+          <termSec id="c30-de-t1">
+            <term>kollationieren</term>
+          </termSec>
+          <termSec id="c30-de-t2">
+            <term>sortieren</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c30-en-t1">
+            <term>collate</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c31">
+        <langSec xml:lang="de">
+          <termSec id="c31-de-t1">
+            <term>Farbfilter</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c31-en-t1">
+            <term>color filter</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c32">
+        <langSec xml:lang="de">
+          <termSec id="c32-de-t1">
+            <term>Farbanpassungssystem</term>
+          </termSec>
+          <termSec id="c32-de-t2">
+            <term>Farbabgleichsystem</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c32-en-t1">
+            <term>color-matching system</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c33">
+        <langSec xml:lang="de">
+          <termSec id="c33-de-t1">
+            <term>Farbseparation</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c33-en-t1">
+            <term>color separation</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c34">
+        <langSec xml:lang="de">
+          <termSec id="c34-de-t1">
+            <term>Farbfolge</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c34-en-t1">
+            <term>color sequence</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c35">
+        <langSec xml:lang="de">
+          <termSec id="c35-de-t1">
+            <term>Farbwert</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c35-en-t1">
+            <term>color value</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c36">
+        <langSec xml:lang="de">
+          <termSec id="c36-de-t1">
+            <term>vollständiges Layout</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c36-en-t1">
+            <term>comprehensive</term>
+          </termSec>
+          <termSec id="c36-en-t2">
+            <term>comp</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c37">
+        <langSec xml:lang="de">
+          <termSec id="c37-de-t1">
+            <term>Schmalschrift</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c37-en-t1">
+            <term>condensed font</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c38">
+        <langSec xml:lang="de">
+          <termSec id="c38-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c38-en-t1">
+            <term>connected dots</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c39">
+        <langSec xml:lang="de">
+          <termSec id="c39-de-t1">
+            <term>Halbtonvorlagen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c39-en-t1">
+            <term>continuous-tone art</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c40">
+        <langSec xml:lang="de">
+          <termSec id="c40-de-t1">
+            <term>Kontrast</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c40-en-t1">
+            <term>contrast</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c41">
+        <langSec xml:lang="de">
+          <termSec id="c41-de-t1">
+            <term>Einpassen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c41-en-t1">
+            <term>copyfitting</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c42">
+        <langSec xml:lang="de">
+          <termSec id="c42-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c42-en-t1">
+            <term>cover stock</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c43">
+        <langSec xml:lang="de">
+          <termSec id="c43-de-t1">
+            <term>Beschneiden</term>
+          </termSec>
+          <termSec id="c43-de-t2">
+            <term>Schnittmarken</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c43-en-t1">
+            <term>cropping</term>
+          </termSec>
+          <termSec id="c43-en-t2">
+            <term>crop marks</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c44">
+        <langSec xml:lang="de">
+          <termSec id="c44-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c44-en-t1">
+            <term>crossover</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c45">
+        <langSec xml:lang="de">
+          <termSec id="c45-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c45-en-t1">
+            <term>curing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c46">
+        <langSec xml:lang="de">
+          <termSec id="c46-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c46-en-t1">
+            <term>dampening</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c47">
+        <langSec xml:lang="de">
+          <termSec id="c47-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c47-en-t1">
+            <term>deckle edge</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c48">
+        <langSec xml:lang="de">
+          <termSec id="c48-de-t1">
+            <term>Densitometer</term>
+          </termSec>
+          <termSec id="c48-de-t2">
+            <term>Schwärzungsmesser</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c48-en-t1">
+            <term>densitometer</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c49">
+        <langSec xml:lang="de">
+          <termSec id="c49-de-t1">
+            <term>Unterlänge</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c49-en-t1">
+            <term>descender</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c50">
+        <langSec xml:lang="de">
+          <termSec id="c50-de-t1">
+            <term>Stempel</term>
+          </termSec>
+          <termSec id="c50-de-t2">
+            <term>Prägestempel</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c50-en-t1">
+            <term>die</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c51">
+        <langSec xml:lang="de">
+          <termSec id="c51-de-t1">
+            <term>digitale Grafikeffekte</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c51-en-t1">
+            <term>digital graphic effects</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c52">
+        <langSec xml:lang="de">
+          <termSec id="c52-de-t1">
+            <term>Dimensionsstabilität</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c52-en-t1">
+            <term>dimensional stability</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c53">
+        <langSec xml:lang="de">
+          <termSec id="c53-de-t1">
+            <term>Dingbats</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c53-en-t1">
+            <term>dingbats</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c54">
+        <langSec xml:lang="de">
+          <termSec id="c54-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c54-en-t1">
+            <term>direct color process</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c55">
+        <langSec xml:lang="de">
+          <termSec id="c55-de-t1">
+            <term>Anzeigegröße</term>
+          </termSec>
+          <termSec id="c55-de-t2">
+            <term>Akzidenzschrift</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c55-en-t1">
+            <term>display type</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c56">
+        <langSec xml:lang="de">
+          <termSec id="c56-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c56-en-t1">
+            <term>dot-for-dot reproduction</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c57">
+        <langSec xml:lang="de">
+          <termSec id="c57-de-t1">
+            <term>Tonwertzuwachs</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c57-en-t1">
+            <term>dot gain</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c58">
+        <langSec xml:lang="de">
+          <termSec id="c58-de-t1">
+            <term>dpi</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c58-en-t1">
+            <term>dpi</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c59">
+        <langSec xml:lang="de">
+          <termSec id="c59-de-t1">
+            <term>Initiale</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c59-en-t1">
+            <term>drop cap</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c60">
+        <langSec xml:lang="de">
+          <termSec id="c60-de-t1">
+            <term>Trockendruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c60-en-t1">
+            <term>dry litho or waterless printing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c61">
+        <langSec xml:lang="de">
+          <termSec id="c61-de-t1">
+            <term>Trockenofen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c61-en-t1">
+            <term>drying oven</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c62">
+        <langSec xml:lang="de">
+          <termSec id="c62-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c62-en-t1">
+            <term>duplex stock</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c63">
+        <langSec xml:lang="de">
+          <termSec id="c63-de-t1">
+            <term>Auslassungszeichen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c63-en-t1">
+            <term>ellipsis</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c64">
+        <langSec xml:lang="de">
+          <termSec id="c64-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c64-en-t1">
+            <term>elliptical halftone dots</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c65">
+        <langSec xml:lang="de">
+          <termSec id="c65-de-t1">
+            <term>Prägung</term>
+          </termSec>
+          <termSec id="c65-de-t2">
+            <term>Gravierung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c65-en-t1">
+            <term>embossing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c66">
+        <langSec xml:lang="de">
+          <termSec id="c66-de-t1">
+            <term>Geviert</term>
+          </termSec>
+          <termSec id="c66-de-t2">
+            <term>em</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c66-en-t1">
+            <term>em</term>
+          </termSec>
+          <termSec id="c66-en-t2">
+            <term>em space</term>
+          </termSec>
+          <termSec id="c66-en-t3">
+            <term>em quad</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c67">
+        <langSec xml:lang="de">
+          <termSec id="c67-de-t1">
+            <term>langer Gedankenstrich</term>
+          </termSec>
+          <termSec id="c67-de-t2">
+            <term>Geviertstrich</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c67-en-t1">
+            <term>em dash</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c68">
+        <langSec xml:lang="de">
+          <termSec id="c68-de-t1">
+            <term>en</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c68-en-t1">
+            <term>en</term>
+          </termSec>
+          <termSec id="c68-en-t2">
+            <term>en space</term>
+          </termSec>
+          <termSec id="c68-en-t3">
+            <term>en quad</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c69">
+        <langSec xml:lang="de">
+          <termSec id="c69-de-t1">
+            <term>Bindestrich</term>
+          </termSec>
+          <termSec id="c69-de-t2">
+            <term>Gedankenstrich</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c69-en-t1">
+            <term>en dash</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c70">
+        <langSec xml:lang="de">
+          <termSec id="c70-de-t1">
+            <term>Vorsatz</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c70-en-t1">
+            <term>endpapers</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c71">
+        <langSec xml:lang="de">
+          <termSec id="c71-de-t1">
+            <term>"angefressener" Druck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c71-en-t1">
+            <term>feathering</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c72">
+        <langSec xml:lang="de">
+          <termSec id="c72-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c72-en-t1">
+            <term>filling in</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c73">
+        <langSec xml:lang="de">
+          <termSec id="c73-de-t1">
+            <term>Flexodruck</term>
+          </termSec>
+          <termSec id="c73-de-t2">
+            <term>Flexographie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c73-en-t1">
+            <term>flexography</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c74">
+        <langSec xml:lang="de">
+          <termSec id="c74-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c74-en-t1">
+            <term>flush cover </term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c75">
+        <langSec xml:lang="de">
+          <termSec id="c75-de-t1">
+            <term>linksbündig</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c75-en-t1">
+            <term>flush left ragged right</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c76">
+        <langSec xml:lang="de">
+          <termSec id="c76-de-t1">
+            <term>rechtsbündig</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c76-en-t1">
+            <term>flush right ragged left</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c77">
+        <langSec xml:lang="de">
+          <termSec id="c77-de-t1">
+            <term>Schrift</term>
+          </termSec>
+          <termSec id="c77-de-t2">
+            <term>Schriftart</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c77-en-t1">
+            <term>font</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c78">
+        <langSec xml:lang="de">
+          <termSec id="c78-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c78-en-t1">
+            <term>font contrast</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c79">
+        <langSec xml:lang="de">
+          <termSec id="c79-de-t1">
+            <term>Schriftfamilie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c79-en-t1">
+            <term>font family</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c80">
+        <langSec xml:lang="de">
+          <termSec id="c80-de-t1">
+            <term>Farbwerk</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c80-en-t1">
+            <term>fountain</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c81">
+        <langSec xml:lang="de">
+          <termSec id="c81-de-t1">
+            <term>Fahnenabzug</term>
+          </termSec>
+          <termSec id="c81-de-t2">
+            <term>Fahnenkorrektur</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c81-en-t1">
+            <term>galley proof</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c82">
+        <langSec xml:lang="de">
+          <termSec id="c82-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c82-en-t1">
+            <term>gang run</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c83">
+        <langSec xml:lang="de">
+          <termSec id="c83-de-t1">
+            <term>Glanzdruckfarbe</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c83-en-t1">
+            <term>gloss ink</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c84">
+        <langSec xml:lang="de">
+          <termSec id="c84-de-t1">
+            <term>Klebebindung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c84-en-t1">
+            <term>glue binding</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c85">
+        <langSec xml:lang="de">
+          <termSec id="c85-de-t1">
+            <term>Glyphe</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c85-en-t1">
+            <term>glyph</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c86">
+        <langSec xml:lang="de">
+          <termSec id="c86-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c86-en-t1">
+            <term>goldenrod</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c87">
+        <langSec xml:lang="de">
+          <termSec id="c87-de-t1">
+            <term>Körnung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c87-en-t1">
+            <term>grain</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c88">
+        <langSec xml:lang="de">
+          <termSec id="c88-de-t1">
+            <term>Schmalbahnpapier/Breitbahnpapier</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c88-en-t1">
+            <term>grain long/grain short</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c89">
+        <langSec xml:lang="de">
+          <termSec id="c89-de-t1">
+            <term>Reprokamera</term>
+          </termSec>
+          <termSec id="c89-de-t2">
+            <term>Reproduktionskamera</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c89-en-t1">
+            <term>graphics arts camera</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c90">
+        <langSec xml:lang="de">
+          <termSec id="c90-de-t1">
+            <term>Rotationstiefdruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c90-en-t1">
+            <term>gravure printing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c91">
+        <langSec xml:lang="de">
+          <termSec id="c91-de-t1">
+            <term>GCR</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c91-en-t1">
+            <term>gray-component replacement</term>
+          </termSec>
+          <termSec>
+            <term>GCR</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c92">
+        <langSec xml:lang="de">
+          <termSec id="c92-de-t1">
+            <term>Blindsatz</term>
+          </termSec>
+          <termSec id="c92-de-t2">
+            <term>Blindtext</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c92-en-t1">
+            <term>greeking</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c93">
+        <langSec xml:lang="de">
+          <termSec id="c93-de-t1">
+            <term>Greiferkante</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c93-en-t1">
+            <term>gripper edge</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c94">
+        <langSec xml:lang="de">
+          <termSec id="c94-de-t1">
+            <term>Greiferrand</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c94-en-t1">
+            <term>gripper margin</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c95">
+        <langSec xml:lang="de">
+          <termSec id="c95-de-t1">
+            <term>Steg</term>
+          </termSec>
+          <termSec id="c95-de-t2">
+            <term>Bundsteg</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c95-en-t1">
+            <term>gutter</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c96">
+        <langSec xml:lang="de">
+          <termSec id="c96-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c96-en-t1">
+            <term>gutter bleed</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c97">
+        <langSec xml:lang="de">
+          <termSec id="c97-de-t1">
+            <term>Haarlinie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c97-en-t1">
+            <term>hairline</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c98">
+        <langSec xml:lang="de">
+          <termSec id="c98-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c98-en-t1">
+            <term>hairline registration</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c99">
+        <langSec xml:lang="de">
+          <termSec id="c99-de-t1">
+            <term>Autotypie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c99-en-t1">
+            <term>halftone process</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c100">
+        <langSec xml:lang="de">
+          <termSec id="c100-de-t1">
+            <term>Haloeffekt</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c100-en-t1">
+            <term>halo effect</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c101">
+        <langSec xml:lang="de">
+          <termSec id="c101-de-t1">
+            <term>hängender Einzug</term>
+          </termSec>
+          <termSec id="c101-de-t2">
+            <term>negativer Erstzeileneinzug</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c101-en-t1">
+            <term>hanging indent</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c102">
+        <langSec xml:lang="de">
+          <termSec id="c102-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c102-en-t1">
+            <term>head trim</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c103">
+        <langSec xml:lang="de">
+          <termSec id="c103-de-t1">
+            <term>Überschrift</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c103-en-t1">
+            <term>headline</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c104">
+        <langSec xml:lang="de">
+          <termSec id="c104-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c104-en-t1">
+            <term>headline font</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c105">
+        <langSec xml:lang="de">
+          <termSec id="c105-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c105-en-t1">
+            <term>hickey</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c106">
+        <langSec xml:lang="de">
+          <termSec id="c106-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c106-en-t1">
+            <term>highlight</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c107">
+        <langSec xml:lang="de">
+          <termSec id="c107-de-t1">
+            <term>HInts</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c107-en-t1">
+            <term>hints</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c108">
+        <langSec xml:lang="de">
+          <termSec id="c108-de-t1">
+            <term>Grafikeditor</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c108-en-t1">
+            <term>image-editor</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c109">
+        <langSec xml:lang="de">
+          <termSec id="c109-de-t1">
+            <term>Bildverarbeitung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c109-en-t1">
+            <term>imaging</term>
+          </termSec>
+          <termSec id="c109-en-t2">
+            <term>imagesetting</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c110">
+        <langSec xml:lang="de">
+          <termSec id="c110-de-t1">
+            <term>Ausschießen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c110-en-t1">
+            <term>imposition</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c111">
+        <langSec xml:lang="de">
+          <termSec id="c111-de-t1">
+            <term>Druckzylinder</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c111-en-t1">
+            <term>impression cylinder</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c112">
+        <langSec xml:lang="de">
+          <termSec id="c112-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c112-en-t1">
+            <term>indirect color process</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c113">
+        <langSec xml:lang="de">
+          <termSec id="c113-de-t1">
+            <term>Deckungsbereich</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c113-en-t1">
+            <term>ink coverage</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c114">
+        <langSec xml:lang="de">
+          <termSec id="c114-de-t1">
+            <term>Inkometer</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c114-en-t1">
+            <term>inkometer</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c115">
+        <langSec xml:lang="de">
+          <termSec id="c115-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c115-en-t1">
+            <term>inner form</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c116">
+        <langSec xml:lang="de">
+          <termSec id="c116-de-t1">
+            <term>Flachschliff</term>
+          </termSec>
+          <termSec id="c116-de-t2">
+            <term>Flachschnitt</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c116-en-t1">
+            <term>intaglio</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c117">
+        <langSec xml:lang="de">
+          <termSec id="c117-de-t1">
+            <term>Interpolation</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c117-en-t1">
+            <term>interpolation</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c118">
+        <langSec xml:lang="de">
+          <termSec id="c118-de-t1">
+            <term>kursiv</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c118-en-t1">
+            <term>italic</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c119">
+        <langSec xml:lang="de">
+          <termSec id="c119-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c119-en-t1">
+            <term>jogging</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c120">
+        <langSec xml:lang="de">
+          <termSec id="c120-de-t1">
+            <term>Blocksatz</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c120-en-t1">
+            <term>justified</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c121">
+        <langSec xml:lang="de">
+          <termSec id="c121-de-t1">
+            <term>Kerning</term>
+          </termSec>
+          <termSec id="c121-de-t2">
+            <term>Unterschneiden</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c121-en-t1">
+            <term>kerning</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c122">
+        <langSec xml:lang="de">
+          <termSec id="c122-de-t1">
+            <term>Tastaturlayout</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c122-en-t1">
+            <term>keyboard layout</term>
+          </termSec>
+          <termSec id="c122-en-t2">
+            <term>keyboard mapping</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c123">
+        <langSec xml:lang="de">
+          <termSec id="c123-de-t1">
+            <term>Lack</term>
+          </termSec>
+          <termSec id="c123-de-t2">
+            <term>Kopierlack</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c123-en-t1">
+            <term>lacquer</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c124">
+        <langSec xml:lang="de">
+          <termSec id="c124-de-t1">
+            <term>Überlappung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c124-en-t1">
+            <term>lap</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c125">
+        <langSec xml:lang="de">
+          <termSec id="c125-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c125-en-t1">
+            <term>laydown sequence</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c126">
+        <langSec xml:lang="de">
+          <termSec id="c126-de-t1">
+            <term>Zeilenabstand</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c126-en-t1">
+            <term>leading</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c127">
+        <langSec xml:lang="de">
+          <termSec id="c127-de-t1">
+            <term>Hochdruck</term>
+          </termSec>
+          <termSec id="c127-de-t2">
+            <term>Buchdruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c127-en-t1">
+            <term>letterpress</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c128">
+        <langSec xml:lang="de">
+          <termSec id="c128-de-t1">
+            <term>Trockenoffset</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c128-en-t1">
+            <term>letterset</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c129">
+        <langSec xml:lang="de">
+          <termSec id="c129-de-t1">
+            <term>Laufweite</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c129-en-t1">
+            <term>letterspacing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c130">
+        <langSec xml:lang="de">
+          <termSec id="c130-de-t1">
+            <term>Ligatur</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c130-en-t1">
+            <term>ligature</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c131">
+        <langSec xml:lang="de">
+          <termSec id="c131-de-t1">
+            <term>Strichkopie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c131-en-t1">
+            <term>line copy</term>
+          </termSec>
+          <termSec id="c131-en-t2">
+            <term>line art</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c132">
+        <langSec xml:lang="de">
+          <termSec id="c132-de-t1">
+            <term>Lithographie</term>
+          </termSec>
+          <termSec id="c132-de-t2">
+            <term>Steindruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c132-en-t1">
+            <term>lithography</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c133">
+        <langSec xml:lang="de">
+          <termSec id="c133-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c133-en-t1">
+            <term>makeready or set</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c134">
+        <langSec xml:lang="de">
+          <termSec id="c134-de-t1">
+            <term>Rand</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c134-en-t1">
+            <term>margin</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c135">
+        <langSec xml:lang="de">
+          <termSec id="c135-de-t1">
+            <term>Bronzefarbe</term>
+          </termSec>
+          <termSec id="c135-de-t2">
+            <term>Metallbronzefarbe</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c135-en-t1">
+            <term>metallic inks</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c136">
+        <langSec xml:lang="de">
+          <termSec id="c136-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c136-en-t1">
+            <term>multilith</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c137">
+        <langSec xml:lang="de">
+          <termSec id="c137-de-t1">
+            <term>schräg</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c137-en-t1">
+            <term>oblique</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c138">
+        <langSec xml:lang="de">
+          <termSec id="c138-de-t1">
+            <term>Offsetdruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c138-en-t1">
+            <term>offset</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c139">
+        <langSec xml:lang="de">
+          <termSec id="c139-de-t1">
+            <term>Überdrucken</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c139-en-t1">
+            <term>overprinting</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c140">
+        <langSec xml:lang="de">
+          <termSec id="c140-de-t1">
+            <term>Paginierung</term>
+          </termSec>
+          <termSec id="c140-de-t2">
+            <term>Seitenzählung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c140-en-t1">
+            <term>pagination</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c141">
+        <langSec xml:lang="de">
+          <termSec id="c141-de-t1">
+            <term>Pantone</term>
+          </termSec>
+          <termSec id="c141-de-t2">
+            <term>Pantone Matching System</term>
+          </termSec>
+          <termSec id="c141-de-t3">
+            <term>PMS</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c141-en-t1">
+            <term>Pantone Matching System</term>
+          </termSec>
+          <termSec>
+            <term>PMS</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c142">
+        <langSec xml:lang="de">
+          <termSec id="c142-de-t1">
+            <term>Absatzlinien</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c142-en-t1">
+            <term>paragraph rules</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c143">
+        <langSec xml:lang="de">
+          <termSec id="c143-de-t1">
+            <term>Montage</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c143-en-t1">
+            <term>paste up</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c144">
+        <langSec xml:lang="de">
+          <termSec id="c144-de-t1">
+            <term>Klebebindung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c144-en-t1">
+            <term>perfect binding</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c145">
+        <langSec xml:lang="de">
+          <termSec id="c145-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c145-en-t1">
+            <term>perfecting press</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c146">
+        <langSec xml:lang="de">
+          <termSec id="c146-de-t1">
+            <term>Sonderzeichen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c146-en-t1">
+            <term>pi characters</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c147">
+        <langSec xml:lang="de">
+          <termSec id="c147-de-t1">
+            <term>Pica</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c147-en-t1">
+            <term>pica</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c148">
+        <langSec xml:lang="de">
+          <termSec id="c148-de-t1">
+            <term>Aufbauen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c148-en-t1">
+            <term>piling</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c149">
+        <langSec xml:lang="de">
+          <termSec id="c149-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c149-en-t1">
+            <term>pinhole flaw</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c150">
+        <langSec xml:lang="de">
+          <termSec id="c150-de-t1">
+            <term>Druckwalze</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c150-en-t1">
+            <term>platen</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c151">
+        <langSec xml:lang="de">
+          <termSec id="c151-de-t1">
+            <term>Punkt</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c151-en-t1">
+            <term>point</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c152">
+        <langSec xml:lang="de">
+          <termSec id="c152-de-t1">
+            <term>Punktgröße</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c152-en-t1">
+            <term>point size</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c153">
+        <langSec xml:lang="de">
+          <termSec id="c153-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c153-en-t1">
+            <term>press proof</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c154">
+        <langSec xml:lang="de">
+          <termSec id="c154-de-t1">
+            <term>Auflage</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c154-en-t1">
+            <term>press run</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c155">
+        <langSec xml:lang="de">
+          <termSec id="c155-de-t1">
+            <term>Reprokamera</term>
+          </termSec>
+          <termSec id="c155-de-t2">
+            <term>Reproduktionskamera</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c155-en-t1">
+            <term>process camera</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c156">
+        <langSec xml:lang="de">
+          <termSec id="c156-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c156-en-t1">
+            <term>progressive proofs or progs</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c157">
+        <langSec xml:lang="de">
+          <termSec id="c157-de-t1">
+            <term>Quadrat</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c157-en-t1">
+            <term>quad</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c158">
+        <langSec xml:lang="de">
+          <termSec id="c158-de-t1">
+            <term>Flattersatz</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c158-en-t1">
+            <term>ragged right/ragged left</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c159">
+        <langSec xml:lang="de">
+          <termSec id="c159-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c159-en-t1">
+            <term>raised cap</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c160">
+        <langSec xml:lang="de">
+          <termSec id="c160-de-t1">
+            <term>Pixelbild</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c160-en-t1">
+            <term>raster image</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c161">
+        <langSec xml:lang="de">
+          <termSec id="c161-de-t1">
+            <term>Fahnenabzug</term>
+          </termSec>
+          <termSec id="c161-de-t2">
+            <term>Fahnenkorrektur</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c161-en-t1">
+            <term>reader's proof</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c162">
+        <langSec xml:lang="de">
+          <termSec id="c162-de-t1">
+            <term>Ries</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c162-en-t1">
+            <term>ream</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c163">
+        <langSec xml:lang="de">
+          <termSec id="c163-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c163-en-t1">
+            <term>register</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c164">
+        <langSec xml:lang="de">
+          <termSec id="c164-de-t1">
+            <term>Passkreuz</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c164-en-t1">
+            <term>register mark</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c165">
+        <langSec xml:lang="de">
+          <termSec id="c165-de-t1">
+            <term>Hochdruckplatte</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c165-en-t1">
+            <term>relief plate</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c166">
+        <langSec xml:lang="de">
+          <termSec id="c166-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c166-en-t1">
+            <term>reverse type</term>
+          </termSec>
+          <termSec id="c166-en-t2">
+            <term>reverse text</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c167">
+        <langSec xml:lang="de">
+          <termSec id="c167-de-t1">
+            <term>Antiqua</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c167-en-t1">
+            <term>roman</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c168">
+        <langSec xml:lang="de">
+          <termSec id="c168-de-t1">
+            <term>Rotationsdruck</term>
+          </termSec>
+          <termSec id="c168-de-t2">
+            <term>Zylinder gegen Zylinder</term>
+          </termSec>
+          <termSec id="c168-de-t3">
+            <term>rotativer Druck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c168-en-t1">
+            <term>rotary printing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c169">
+        <langSec xml:lang="de">
+          <termSec id="c169-de-t1">
+            <term>Rotationstiefdruck</term>
+          </termSec>
+          <termSec id="c169-de-t2">
+            <term>Tiefdruck</term>
+          </termSec>
+          <termSec id="c169-de-t3">
+            <term>Kupfertiefdruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c169-en-t1">
+            <term>rotogravure</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c170">
+        <langSec xml:lang="de">
+          <termSec id="c170-de-t1">
+            <term>Gummidruckplatte</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c170-en-t1">
+            <term>rubber plate</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c171">
+        <langSec xml:lang="de">
+          <termSec id="c171-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c171-en-t1">
+            <term>rule</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c172">
+        <langSec xml:lang="de">
+          <termSec id="c172-de-t1">
+            <term>Rückenstichheftung</term>
+          </termSec>
+          <termSec id="c172-de-t2">
+            <term>Sattelstich</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c172-en-t1">
+            <term>saddle-stitching</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c173">
+        <langSec xml:lang="de">
+          <termSec id="c173-de-t1">
+            <term>Groteskschrift</term>
+          </termSec>
+          <termSec id="c173-de-t2">
+            <term>serifenlose Schrift</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c173-en-t1">
+            <term>sans serif font</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c174">
+        <langSec xml:lang="de">
+          <termSec id="c174-de-t1">
+            <term>Scanner</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c174-en-t1">
+            <term>scanner</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c175">
+        <langSec xml:lang="de">
+          <termSec id="c175-de-t1">
+            <term>Sekundärfarbe</term>
+          </termSec>
+          <termSec id="c175-de-t2">
+            <term>Mischfarbe</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c175-en-t1">
+            <term>secondary color</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c176">
+        <langSec xml:lang="de">
+          <termSec id="c176-de-t1">
+            <term>Auswahlwerkzeuge</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c176-en-t1">
+            <term>selection tools</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c177">
+        <langSec xml:lang="de">
+          <termSec id="c177-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c177-en-t1">
+            <term>self-cover</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c178">
+        <langSec xml:lang="de">
+          <termSec id="c178-de-t1">
+            <term>Serif</term>
+          </termSec>
+          <termSec id="c178-de-t2">
+            <term>Serife</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c178-en-t1">
+            <term>serif</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c179">
+        <langSec xml:lang="de">
+          <termSec id="c179-de-t1">
+            <term>Bogendruckmaschine</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c179-en-t1">
+            <term>sheet-fed press</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c180">
+        <langSec xml:lang="de">
+          <termSec id="c180-de-t1">
+            <term>Durchscheinen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c180-en-t1">
+            <term>show-through</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c181">
+        <langSec xml:lang="de">
+          <termSec id="c181-de-t1">
+            <term>Blockheftung</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c181-en-t1">
+            <term>side-stitching</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c182">
+        <langSec xml:lang="de">
+          <termSec id="c182-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c182-en-t1">
+            <term>signature</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c183">
+        <langSec xml:lang="de">
+          <termSec id="c183-de-t1">
+            <term>Verzerren</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c183-en-t1">
+            <term>skewing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c184">
+        <langSec xml:lang="de">
+          <termSec id="c184-de-t1">
+            <term>Schmieren</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c184-en-t1">
+            <term>slurring</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c185">
+        <langSec xml:lang="de">
+          <termSec id="c185-de-t1">
+            <term>Rücken</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c185-en-t1">
+            <term>spine</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c186">
+        <langSec xml:lang="de">
+          <termSec id="c186-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c186-en-t1">
+            <term>splice</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c187">
+        <langSec xml:lang="de">
+          <termSec id="c187-de-t1">
+            <term>Makulatur</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c187-en-t1">
+            <term>spoils</term>
+          </termSec>
+          <termSec id="c187-en-t2">
+            <term>spoilage</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c188">
+        <langSec xml:lang="de">
+          <termSec id="c188-de-t1">
+            <term>Druckbogen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c188-en-t1">
+            <term>spread</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c189">
+        <langSec xml:lang="de">
+          <termSec id="c189-de-t1">
+            <term>bleibt</term>
+          </termSec>
+          <termSec id="c189-de-t2">
+            <term>gut</term>
+          </termSec>
+          <termSec id="c189-de-t3">
+            <term>stehenlassen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c189-en-t1">
+            <term>stet</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c190">
+        <langSec xml:lang="de">
+          <termSec id="c190-de-t1">
+            <term>Durchscheinen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c190-en-t1">
+            <term>strike-through</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c191">
+        <langSec xml:lang="de">
+          <termSec id="c191-de-t1">
+            <term>Montage</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c191-en-t1">
+            <term>stripping</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c192">
+        <langSec xml:lang="de">
+          <termSec id="c192-de-t1">
+            <term>Art</term>
+          </termSec>
+          <termSec id="c192-de-t2">
+            <term>Format</term>
+          </termSec>
+          <termSec id="c192-de-t3">
+            <term>Stil</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c192-en-t1">
+            <term>style</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c193">
+        <langSec xml:lang="de">
+          <termSec id="c193-de-t1">
+            <term>SWOP</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c193-en-t1">
+            <term>SWOP</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c194">
+        <langSec xml:lang="de">
+          <termSec id="c194-de-t1">
+            <term>Symbolschrift</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c194-en-t1">
+            <term>symbol font</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c195">
+        <langSec xml:lang="de">
+          <termSec id="c195-de-t1">
+            <term>Versalziffern</term>
+          </termSec>
+          <termSec id="c195-de-t2">
+            <term>Tabellenziffern</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c195-en-t1">
+            <term>tabular figures</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c196">
+        <langSec xml:lang="de">
+          <termSec id="c196-de-t1">
+            <term>Klebrigkeit</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c196-en-t1">
+            <term>tack</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c197">
+        <langSec xml:lang="de">
+          <termSec id="c197-de-t1">
+            <term>Thermographie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c197-en-t1">
+            <term>thermography</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c198">
+        <langSec xml:lang="de">
+          <termSec id="c198-de-t1">
+            <term>Verdünner</term>
+          </termSec>
+          <termSec id="c198-de-t2">
+            <term>Verdünnungsmittel</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c198-en-t1">
+            <term>thinners</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c199">
+        <langSec xml:lang="de">
+          <termSec id="c199-de-t1">
+            <term>Dreifarbendruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c199-en-t1">
+            <term>three-color process</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c200">
+        <langSec xml:lang="de">
+          <termSec id="c200-de-t1">
+            <term>Farbton</term>
+          </termSec>
+          <termSec id="c200-de-t2">
+            <term>Tonwert</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c200-en-t1">
+            <term>tint</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c201">
+        <langSec xml:lang="de">
+          <termSec id="c201-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c201-en-t1">
+            <term>tissue overlay</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c202">
+        <langSec xml:lang="de">
+          <termSec id="c202-de-t1">
+            <term>Laufweite</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c202-en-t1">
+            <term>tracking</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c203">
+        <langSec xml:lang="de">
+          <termSec id="c203-de-t1">
+            <term>Überfüllen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c203-en-t1">
+            <term>trapping</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c204">
+        <langSec xml:lang="de">
+          <termSec id="c204-de-t1">
+            <term>Objektschnittmarken</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c204-en-t1">
+            <term>trim marks</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c205">
+        <langSec xml:lang="de">
+          <termSec id="c205-de-t1">
+            <term>TrueType</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c205-en-t1">
+            <term>TrueType</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c206">
+        <langSec xml:lang="de">
+          <termSec id="c206-de-t1">
+            <term>Durchlaufzeit</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c206-en-t1">
+            <term>turnaround</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c207">
+        <langSec xml:lang="de">
+          <termSec id="c207-de-t1">
+            <term>Type 1</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c207-en-t1">
+            <term>Type 1</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c208">
+        <langSec xml:lang="de">
+          <termSec id="c208-de-t1">
+            <term>Schrift</term>
+          </termSec>
+          <termSec id="c208-de-t2">
+            <term>Schriftart</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c208-en-t1">
+            <term>typeface</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c210">
+        <langSec xml:lang="de">
+          <termSec id="c210-de-t1">
+            <term>Schriftschnitt</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c210-en-t1">
+            <term>typeface styles</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c211">
+        <langSec xml:lang="de">
+          <termSec id="c211-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c211-en-t1">
+            <term>typeface weights</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c212">
+        <langSec xml:lang="de">
+          <termSec id="c212-de-t1">
+            <term>Schriftzeichenbreite</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c212-en-t1">
+            <term>typeface widths</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c213">
+        <langSec xml:lang="de">
+          <termSec id="c213-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c213-en-t1">
+            <term>typographic color</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c214">
+        <langSec xml:lang="de">
+          <termSec id="c214-de-t1">
+            <term>UCR</term>
+          </termSec>
+          <termSec id="c214-de-t2">
+            <term>Unterfarbreduktion</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c214-en-t1">
+            <term>undercolor removal</term>
+          </termSec>
+          <termSec>
+            <term>UCR</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c215">
+        <langSec xml:lang="de">
+          <termSec id="c215-de-t1">
+            <term>Vektorgrafiken</term>
+          </termSec>
+          <termSec id="c215-de-t2">
+            <term>Objektgrafiken</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c215-en-t1">
+            <term>vector graphics</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c216">
+        <langSec xml:lang="de">
+          <termSec id="c216-de-t1">
+            <term>Wasserzeichen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c216-en-t1">
+            <term>watermark</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c217">
+        <langSec xml:lang="de">
+          <termSec id="c217-de-t1">
+            <term>Rollendruckmaschine</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c217-en-t1">
+            <term>web-fed press</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c218">
+        <langSec xml:lang="de">
+          <termSec id="c218-de-t1">
+            <term>nass auf nass</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c218-en-t1">
+            <term>wet-on-wet</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c219">
+        <langSec xml:lang="de">
+          <termSec id="c219-de-t1">
+            <term>Leerfläche</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c219-en-t1">
+            <term>white space</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c220">
+        <langSec xml:lang="de">
+          <termSec id="c220-de-t1">
+            <term>Hurenkind</term>
+          </termSec>
+          <termSec id="c220-de-t2">
+            <term>Überhangszeile</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c220-en-t1">
+            <term>widow</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c221">
+        <langSec xml:lang="de">
+          <termSec id="c221-de-t1">
+            <term>Wortabstand</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c221-en-t1">
+            <term>word spacing</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c222">
+        <langSec xml:lang="de">
+          <termSec id="c222-de-t1">
+            <term>Umstülpen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c222-en-t1">
+            <term>work-and-tumble</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c223">
+        <langSec xml:lang="de">
+          <termSec id="c223-de-t1">
+            <term>Umschlagen</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c223-en-t1">
+            <term>work-and-turn</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c224">
+        <langSec xml:lang="de">
+          <termSec id="c224-de-t1">
+            <term>spiegelverkehrt</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c224-en-t1">
+            <term>wrong-reading</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c225">
+        <langSec xml:lang="de">
+          <termSec id="c225-de-t1">
+            <term>WYSIWYG</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c225-en-t1">
+            <term>WYSIWYG</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c226">
+        <langSec xml:lang="de">
+          <termSec id="c226-de-t-1">
+            <term/>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c226-en-t1">
+            <term>x-height</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c227">
+        <langSec xml:lang="de">
+          <termSec id="c227-de-t1">
+            <term>Zinkographie</term>
+          </termSec>
+          <termSec id="c227-de-t2">
+            <term>Zinkflachdruck</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c227-en-t1">
+            <term>zinc engraving</term>
+          </termSec>
+          <termSec id="c227-en-t2">
+            <term>zincs</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+      <conceptEntry id="c228">
+        <langSec xml:lang="de">
+          <termSec id="c228-de-t1">
+            <term>Schriftfamilie</term>
+          </termSec>
+        </langSec>
+        <langSec xml:lang="en">
+          <termSec id="c228-en-t1">
+            <term>typeface family</term>
+          </termSec>
+        </langSec>
+      </conceptEntry>
+    </body>
+  </text>
+</tbx>
