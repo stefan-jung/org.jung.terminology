@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="3.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-    xmlns:math="http://exslt.org/math" extension-element-prefixes="math"
-    xmlns:doctales="http://doctales.github.io"
-    exclude-result-prefixes="xs" version="2.0">
+    xmlns:sj="https://stefan-jung.org"
+    exclude-result-prefixes="xs">
     
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
@@ -17,7 +17,7 @@
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <xsl:variable name="termentryId" select="@id"/>
-        <xsl:variable name="languageCode" select="doctales:getLanguageCodeFromLanguageRegionCode($language)"/>
+        <xsl:variable name="languageCode" select="sj:getLanguageCodeFromLanguageRegionCode($language)"/>
         <xsl:variable name="definition">
             <xsl:choose>
                 <xsl:when test="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]">
@@ -30,7 +30,7 @@
             
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="doctales:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>
+            <xsl:variable name="sqfGroupName" select="sj:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>
             <xsl:variable name="parent">
                 <xsl:choose>
                     <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
@@ -64,13 +64,13 @@
                 </xsl:attribute>
                 <xsl:attribute name="role">warning</xsl:attribute>
                 <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
-                <xsl:value-of select="doctales:getString($language, 'TheTerm')"/>
+                <xsl:value-of select="sj:getString($language, 'TheTerm')"/>
                 <xsl:text> '</xsl:text>
                 <xsl:value-of select="$notRecommendedTerm"/>
                 <xsl:text>' </xsl:text>
-                <xsl:value-of select="doctales:getString($language, 'IsNotAllowed')"/>
+                <xsl:value-of select="sj:getString($language, 'IsNotAllowed')"/>
                 <xsl:text>. </xsl:text>
-                <xsl:value-of select="doctales:getString($language, 'ReplaceWithAllowedTerm')"/>
+                <xsl:value-of select="sj:getString($language, 'ReplaceWithAllowedTerm')"/>
                 <xsl:text>: </xsl:text>
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
                     <xsl:choose>

@@ -17,7 +17,7 @@
             <martifHeader>
                 <fileDesc>
                     <sourceDesc>
-                        <p>Has been generated using the DITA DOCTALES Terminology plugin.</p>
+                        <p>Has been generated using the DITA Jung Terminology plugin.</p>
                     </sourceDesc>
                 </fileDesc>
             </martifHeader>
