@@ -16,7 +16,7 @@
     <!-- Import the sj:getString function -->
     <xsl:import href="get-string.xsl"/>
     
-    <xsl:param name="checkElements" required="yes"/>
+    <xsl:param name="checkElements" as="xs:string" select="'source'"/>
     
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">

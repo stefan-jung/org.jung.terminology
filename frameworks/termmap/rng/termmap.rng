@@ -95,7 +95,7 @@
     <a:documentation>MODULE INCLUSIONS</a:documentation>
     <include href="urn:oasis:names:tc:dita:rng:mapMod.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:mapGroupMod.rng"/>
-    <include href="termmapMod.rng"/>
+    <include href="urn:jung:dita:rng:termmapMod.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:abbreviateDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:deliveryTargetAttDomain.rng" dita:since="1.3"/>
     <include href="urn:oasis:names:tc:dita:rng:equationDomain.rng" dita:since="1.3"/>
@@ -108,7 +108,7 @@
     <include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
     <include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
     <!--<include href="urn:oasis:names:tc:dita:rng:svgDomain.rng" dita:since="1.3"/>-->
-    <include href="termdomainAttDomain.rng"/>
+    <include href="urn:jung:dita:rng:termdomainAttDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:utilitiesDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:xmlDomain.rng"/>

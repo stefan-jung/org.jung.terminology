@@ -97,7 +97,7 @@
     <a:documentation>MODULE INCLUSIONS</a:documentation>
     <include href="urn:oasis:names:tc:dita:rng:topicMod.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:conceptMod.rng"/>
-    <include href="termentryMod.rng">
+    <include href="urn:jung:dita:rng:termentryMod.rng">
       <define name="termentry-info-types">
         <ref name="termentry.element"/>
       </define>
@@ -114,7 +114,7 @@
     <include href="urn:oasis:names:tc:dita:rng:releaseManagementDomain.rng" dita:since="1.3"/>
     <include href="urn:oasis:names:tc:dita:rng:softwareDomain.rng"/>
     <!--<include href="urn:oasis:names:tc:dita:rng:svgDomain.rng" dita:since="1.3"/>-->
-    <include href="termdomainAttDomain.rng"/>
+    <include href="urn:jung:dita:rng:termdomainAttDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:uiDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:utilitiesDomain.rng"/>
     <include href="urn:oasis:names:tc:dita:rng:xmlDomain.rng"/>
