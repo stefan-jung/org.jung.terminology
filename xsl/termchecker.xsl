@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
     xmlns:math="java.lang.Math"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sj="https://stefan-jung.org"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="sj xs xd math">
 

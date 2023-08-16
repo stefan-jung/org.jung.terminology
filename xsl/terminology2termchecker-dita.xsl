@@ -13,6 +13,9 @@
     <!-- Import the generic termchecker templates -->
     <xsl:import href="termchecker.xsl"/>
     
+    <!-- Import the sj:getString function -->
+    <xsl:import href="get-string.xsl"/>
+    
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <xsl:variable name="termentryId" select="@id"/>

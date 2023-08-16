@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:sj="https://stefan-jung.org"
-    exclude-result-prefixes="xs">
+    exclude-result-prefixes="sj xs">
     
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
     
     <!-- Import the generic termchecker templates -->
     <xsl:import href="termchecker.xsl"/>
+    
+    <!-- Import the sj:getString function -->
+    <xsl:import href="get-string.xsl"/>
     
     <xsl:param name="checkElements" required="yes"/>
     

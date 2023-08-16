@@ -19,7 +19,7 @@
     <xsl:function name="sj:getString" as="xs:string" visibility="public">
         <xsl:param name="language"/>
         <xsl:param name="string"/>
-        <xsl:variable name="file" select="concat(concat('termbrowser-strings-', $language), '.xml')"/>
+        <xsl:variable name="file" select="concat(concat('../i18n/termbrowser-strings-', $language), '.xml')"/>
         <xsl:sequence select="document($file)/descendant::str[@name = $string][1]"/>
     </xsl:function>
     
