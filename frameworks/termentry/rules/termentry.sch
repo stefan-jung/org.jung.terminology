@@ -2,13 +2,13 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <sch:ns uri="http://doctales.github.io" prefix="doctales"/>
+    <sch:ns uri="https://stefan-jung.org" prefix="sj"/>
     <sch:extends href="terminology.sch"/>
     
     <sch:title>Style Guide for Termentry Topics</sch:title>
     
     <sch:pattern id="validate-language-codes">
-        <sch:let name="codes" value="document('../../codes.xml')" />
+        <sch:let name="codes" value="document('../resources/codes.xml')" />
         <sch:rule context="*[contains(@class, ' termentry/termNotation ')]" role="warning">
             <sch:let name="this" value="normalize-space(@language)" />
             <sch:assert test="$codes//code[normalize-space(.) = $this]" 
@@ -28,7 +28,7 @@
 
     <sch:pattern id="termentry-topic-id">
         <sch:rule context="*[contains(@class, 'termentry/termentry')]">
-            <sch:let name="new-id" value="doctales:getIdFromPath(base-uri())"/>
+            <sch:let name="new-id" value="sj:getIdFromPath(base-uri())"/>
             <sch:assert test="@id eq $new-id" sqf:fix="fix-id" role="warning"
                 diagnostics="termentry-topic-id-en termentry-topic-id-de">
                 The ID of the termentry topic must be equal to its filename without file extension.
@@ -62,7 +62,7 @@
     
     <!--<sch:pattern id="duplicate-termrelation">
         <sch:rule context="*[contains(@class, ' termentry/termRelation ')]">
-            <sch:let name="new-id" value="doctales:getIdFromPath(base-uri())"/>
+            <sch:let name="new-id" value="sj:getIdFromPath(base-uri())"/>
             <sch:assert test="(@keyref eq preceding-sibling::*[contains(@class, ' termentry/termRelation ')]/@keyref)
                 or (@keyref eq following-sibling::*[contains(@class, ' termentry/termRelation ')]/@keyref)" role="error"
                 diagnostics="termentry-topic-id-en termentry-topic-id-de">

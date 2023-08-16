@@ -7,10 +7,10 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="related-links sj xd xs">
     
-    <xsl:include href="../framework/termenty/xsl/flagicon.xsl"/>
+    <xsl:include href="flagicon.xsl"/>
     <xsl:include href="termbrowser-utility.xsl"/>
     <xsl:include href="termentry.xsl"/>
-    <xsl:include href="../framework/termenty/xsl/semantic-net.xsl"/>
+    <xsl:include href="semantic-net.xsl"/>
     <xsl:include href="termstats.xsl"/>
     
     <xsl:param name="temp.dir"/>

@@ -3559,7 +3559,7 @@
 																		<Integer>7</Integer>
 																	</field>
 																	<field name="uri">
-																		<String>${framework}/framework/rules/termmap.sch</String>
+																		<String>${framework}/rules/termmap.sch</String>
 																	</field>
 																</validationUnitSchema>
 															</field>
@@ -3573,7 +3573,7 @@
 													<String>Validation_scenario</String>
 												</field>
 												<field name="name">
-													<String>DOCTALES Terminology Map</String>
+													<String>Terminology Map</String>
 												</field>
 											</validationScenario>
 										</field>
@@ -3609,7 +3609,7 @@
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
-											<String>DOCTALES Terminology Map</String>
+											<String>Terminology Map</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>

@@ -2,14 +2,14 @@
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <sch:ns uri="http://doctales.github.io" prefix="doctales"/>
-    <sch:extends href="terminology.sch"/>
+    <sch:ns uri="https://stefan-jung.org" prefix="sj"/>
+    <sch:extends href="../../termentry/rules/terminology.sch"/>
     
     <sch:title>Style Guide for Termentry Maps</sch:title>
     
     <sch:pattern id="validate-topicref">
         <sch:rule context="*[contains(@class, ' termmap/termref ')]">
-            <sch:let name="key" value="doctales:getIdFromPath(@href)"/>
+            <sch:let name="key" value="sj:getIdFromPath(@href)"/>
             <sch:assert test="contains(@keys, $key)" sqf:fix="fix-id" role="warning"
                 diagnostics="validate-topicref-en validate-topicref-de">
                 The key of a topicref should contain the filename of the termentry topic without file extension.

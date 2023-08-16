@@ -16,7 +16,7 @@
     <public publicId="urn:jung:dita:rng:termmap.rng" uri="frameworks/termmap/rng/termmap.rng"/>
     <public publicId="urn:jung:dita:rng:termmapMod.rng" uri="frameworks/termmap/rng/termmapMod.rng"/>
     
-    <public publicId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termentry/rng/termdomainAttDomain.rng"/>
+    <public publicId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termmap/rng/termdomainAttDomain.rng"/>
   </group>
   
   <group id="rng-system-id">
@@ -34,7 +34,7 @@
     <system systemId="urn:jung:dita:rng:termmap.rng" uri="frameworks/termmap/rng/termmap.rng"/>
     <system systemId="urn:jung:dita:rng:termmapMod.rng" uri="frameworks/termmap/rng/termmapMod.rng"/>
     
-    <system systemId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termentry/rng/termdomainAttDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termmap/rng/termdomainAttDomain.rng"/>
   </group>
   
   <group id="rng-uri">
@@ -52,7 +52,7 @@
     <uri name="urn:jung:dita:rng:termmap.rng" uri="frameworks/termmap/rng/termmap.rng"/>
     <uri name="urn:jung:dita:rng:termmapMod.rng" uri="frameworks/termmap/rng/termmapMod.rng"/>
     
-    <uri name="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termentry/rng/termdomainAttDomain.rng"/>
+    <uri name="urn:jung:dita:rng:termdomainAttDomain.rng" uri="frameworks/termmap/rng/termdomainAttDomain.rng"/>
   </group>
   
 </catalog>
