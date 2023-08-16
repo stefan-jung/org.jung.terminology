@@ -37,7 +37,7 @@
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/framework/i18n/</String>
+											<String>${framework}/i18n/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -54,7 +54,7 @@
 											<Integer>7</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/framework/resources/</String>
+											<String>${framework}/resources/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -73,7 +73,7 @@
 										<field name="value">
 											<cssFile>
 												<field name="href">
-													<String>${framework}/framework/css/termentry.css</String>
+													<String>${framework}/css/termentry.css</String>
 												</field>
 												<field name="title">
 													<String>Termentry</String>
@@ -8867,7 +8867,7 @@
 																		<Integer>7</Integer>
 																	</field>
 																	<field name="uri">
-																		<String>${framework}/framework/rules/termentry.sch</String>
+																		<String>${framework}/rules/termentry.sch</String>
 																	</field>
 																</validationUnitSchema>
 															</field>
@@ -8881,7 +8881,7 @@
 													<String>Validation_scenario</String>
 												</field>
 												<field name="name">
-													<String>DOCTALES Termentry</String>
+													<String>Termentry</String>
 												</field>
 											</validationScenario>
 										</field>
@@ -8917,7 +8917,7 @@
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
-											<String>DOCTALES Termentry</String>
+											<String>Termentry</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>

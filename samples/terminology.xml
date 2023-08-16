@@ -9,7 +9,7 @@
     <context idref="terminology"/>
     <output href="./termbrowser"/>
     <publication transtype="termbrowser-responsive">
-      <param name="webhelp.publishing.template" path="../framework/publishing"/>
+      <param name="webhelp.publishing.template" path="../publishing"/>
       <param name="webhelp.publishing.template.descriptor" value="termbrowser.opt"/>
       <param name="args.termstats" href="termstats.xml"/>
     </publication>

@@ -17,11 +17,9 @@
         <exclude name="build_install.xml"/>
         <exclude name="**/*.xpr"/>
         <exclude name="**/*.zip"/>
-        <exclude name="**/*out*"/>
-        <exclude name="**/*temp*"/>
-        <exclude name="temp/"/>
-        <exclude name="out/"/>
-        <exclude name="samples/"/>
+        <exclude name="**/out"/>
+        <exclude name="**/temp"/>
+        <exclude name="**/samples"/>
       </fileset>
     </copy>
     <exec executable="${dita.dir}${file.separator}bin${file.separator}${dita.cmd}">

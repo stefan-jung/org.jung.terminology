@@ -6,7 +6,7 @@
   <require plugin="org.dita.base"/>
   <require plugin="org.dita.xhtml"/>
 
-  <feature extension="dita.specialization.catalog.relative" type="file" value="catalog-dita.xml"/>
+  <feature extension="dita.specialization.catalog.relative" file="catalog-dita.xml"/>
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
@@ -14,8 +14,9 @@
   <!-- Use the preprocess.post extension point to merge the terminology statistics. -->
   <feature extension="depend.preprocess.post" value="generate-termstats"/>
   
-  <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min"/>
+  <!-- Add new transtypes. -->
+  <feature extension="dita.conductor.transtype.check" value="tbx-min,termchecker-dita,termchecker-xliff,tbx-basic,oxygen-termchecker,termbrowser-responsive"/>
+  
   <transtype name="tbx-min" extends="html5" desc="TBX-Min">
     <param name="args.source.language" desc="Source language of terminology" type="string">
       <val>af-ZA</val>
@@ -296,7 +297,6 @@
   </transtype>
 
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
-  <feature extension="dita.conductor.transtype.check" value="termchecker-dita"/>
   <transtype name="termchecker-dita" extends="html5" desc="Termchecker for DITA">
     <param name="args.language" desc="Language of the terminology check rules" type="string">
       <val>af-ZA</val>
@@ -439,7 +439,6 @@
   </transtype>
   
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
-  <feature extension="dita.conductor.transtype.check" value="termchecker-xliff"/>
   <transtype name="termchecker-xliff" extends="html5" desc="Termchecker for XLIFF">
     <param name="args.check.elements" desc="Choose whether terms should be checked only in source elements or target elements or in both of them." type="string">
       <val default="true">source</val>
@@ -587,7 +586,6 @@
   </transtype>
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-basic"/>
   <transtype name="tbx-basic" extends="html5" desc="TBX-Basic">
     <param name="args.source.language" desc="Source language of terminology" type="string">
       <val>af-ZA</val>
@@ -868,24 +866,22 @@
   </transtype>
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
-  <feature extension="dita.conductor.transtype.check" value="oxygen-termchecker"/>
   <transtype name="oxygen-termchecker" extends="html5" desc="Oxygen Termchecker"/>
   
-  <!--
-    The contents of the 'build.xml' build file are added to the
-    'dita.conductor.target.relative' extension point.
-    Because the value of @type is 'file', the value of @value is used
-    as a filename. It is also possible to use @file instead of @value.
-  -->
-  <feature extension="dita.conductor.target.relative" value="build.xml" type="file"/>
+  <!-- Import Ant script -->
+  <feature extension="ant.import" file="ant/build_dita2oxygen-termchecker_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2tbx-basic_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2tbx-min_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2termbrowser_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2termchecker-dita_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2termchecker-xliff_template.xml"/>
 
   <!-- Overriding XSLT -->
   <feature extension="dita.xsl.html5" file="xsl/termbrowser.xsl"/>
   
   <!-- New strings -->
-  <feature extension="dita.xsl.strings" file="xsl/termbrowser-strings.xml"/>
+  <feature extension="dita.xsl.strings" file="i18n/termbrowser-strings.xml"/>
   
-  <feature extension="dita.conductor.transtype.check" value="termbrowser-responsive"/>
   <transtype name="termbrowser-responsive" extends="webhelp-responsive-common" desc="Termbrowser Responsive">
     <param name="debugging.mode" desc="Activate debugging mode" type="enum">
       <val default="true">false</val>

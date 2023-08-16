@@ -37,7 +37,7 @@
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/framework/i18n/</String>
+											<String>${framework}/resources/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -54,7 +54,7 @@
 											<Integer>7</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/framework/resources/</String>
+											<String>${framework}/i18n/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -226,7 +226,7 @@
 										<field name="value">
 											<cssFile>
 												<field name="href">
-													<String>${framework}/framework/css/termmap.css</String>
+													<String>${framework}/css/termmap.css</String>
 												</field>
 												<field name="title">
 													<String>Terminology Map</String>
