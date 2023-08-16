@@ -11,8 +11,9 @@ html * {
   font-family: 'Nunito', sans-serif !important;
 }
 
-.wh_publication_title {
-  
+.wh_logo_and_publication_title_container > .wh_logo_and_publication_title > .wh_publication_title > a > .title {
+  font-size: 2.0em;
+  font-weight: bold;  
 }
  
 #header .navheader_parent_path:hover, #header .link:hover, #splitterContainer .menuItemSelected:hover, #splitterContainer .topic:not(.menuItemSelected):hover, #splitterContainer .hasSubMenuClosed:hover, #splitterContainer .hasSubMenuOpened:hover {
