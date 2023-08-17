@@ -20,17 +20,6 @@
         </xsl:for-each>
     </xsl:variable>
     
-    
-    <!--<?xml version="1.0" encoding="UTF-8"?>
-    <incorrect-terms>
-        <incorrect-term ignorecase="true">
-            <match type="whole-word">match this</match>
-            <suggestion format="text">replace with this</suggestion>
-            <message>present as tooltip message</message>
-            <link>https://www.example.com</link>
-        </incorrect-term>
-    </incorrect-terms>-->
-    
     <xsl:template match="/">
         <xsl:variable name="root" select="." as="node()"/>
         <xsl:for-each select="tokenize($languages, ',')">

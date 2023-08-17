@@ -11,10 +11,10 @@
     <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
     
     <!-- Import the generic termchecker templates -->
-    <xsl:import href="termchecker.xsl"/>
+    <xsl:import href="../common/termchecker.xsl"/>
     
     <!-- Import the sj:getString function -->
-    <xsl:import href="get-string.xsl"/>
+    <xsl:import href="../common/get-string.xsl"/>
     
     <xsl:param name="checkElements" as="xs:string" select="'source'"/>
     

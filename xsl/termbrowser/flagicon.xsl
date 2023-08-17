@@ -6,7 +6,10 @@
     exclude-result-prefixes="xs xd">
     
     <xd:doc>
-        <xd:p>Return the corresponding flag</xd:p>
+        <xd:p>
+            This function creates a &lt;span> element representing a country flag.
+            The function is using https://github.com/lipis/flag-icons
+        </xd:p>
         <xd:p>
             Usually this should be: <xd:i>ISO-639-1 Language Code</xd:i> + "-" + <xd:i>ISO-3166 Country Code</xd:i>,
             as explained in https://tools.ietf.org/html/bcp47

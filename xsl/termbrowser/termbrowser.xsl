@@ -8,7 +8,7 @@
     exclude-result-prefixes="related-links sj xd xs">
     
     <xsl:include href="flagicon.xsl"/>
-    <xsl:include href="get-string.xsl"/>
+    <xsl:include href="../common/get-string.xsl"/>
     <xsl:include href="termentry.xsl"/>
     <xsl:include href="semantic-net.xsl"/>
     <xsl:include href="termstats.xsl"/>

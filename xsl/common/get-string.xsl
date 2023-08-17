@@ -6,10 +6,6 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="sj xs xd">
     
-    <!-- ****************************************************************************** -->
-    <!--                                   FUNCTIONS                                    -->
-    <!-- ****************************************************************************** -->
-    
     <xd:doc>
         <xd:desc><xd:p>Function to get string from translation file.</xd:p></xd:desc>
         <xd:param name="language"><xd:p>Language to be used.</xd:p></xd:param>
@@ -19,7 +15,7 @@
     <xsl:function name="sj:getString" as="xs:string" visibility="public">
         <xsl:param name="language"/>
         <xsl:param name="string"/>
-        <xsl:variable name="file" select="concat(concat('../i18n/termbrowser-strings-', $language), '.xml')"/>
+        <xsl:variable name="file" select="concat(concat('../../i18n/termbrowser-strings-', $language), '.xml')"/>
         <xsl:sequence select="document($file)/descendant::str[@name = $string][1]"/>
     </xsl:function>
     
