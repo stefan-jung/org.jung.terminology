@@ -101,27 +101,49 @@ task downloadDitaOt(type: Download) {
     overwrite false
 }
 
+task downloadTerminologyPlugin(type: Download) {
+    src "https://github.com/stefan-jung/org.jung.terminology/archive/refs/heads/main.zip"
+    dest new File(buildDir, "org.jung.terminology.zip")
+    overwrite true
+}
+
 task extract(dependsOn: downloadDitaOt, type: Copy) {
     from zipTree(downloadDitaOt.dest)
     into buildDir
 }
 
 def ditaHome = "${buildDir}/dita-ot-${ditaOtVersion}"
+def pluginDir = "${buildDir}/dita-ot-${ditaOtVersion}/plugins/org.jung.terminology"
 
 // Install DITA-OT plugins from DITA-OT Plugin Registry
-def plugins = ['org.jung.terminology']
+// This is useful, but not needed here
+// def plugins = ['org.doctales.terminology']
+// def plugins = []
 
-plugins.each { id ->
-    tasks.create(id, Exec) {
-        // Install plugin if not already installed, otherwise build will fail
-        onlyIf { !file("$ditaHome/plugins/$id").exists() }
-        outputs.dir("$ditaHome/plugins/$id")
-        workingDir ditaHome
-        commandLine 'bin/dita', '--install', id
-    }
+// plugins.each { id ->
+//     tasks.create(id, Exec) {
+//         // Install plugin if not already installed, otherwise build will fail
+//         onlyIf { !file("$ditaHome/plugins/$id").exists() }
+//         outputs.dir("$ditaHome/plugins/$id")
+//         workingDir ditaHome
+//         commandLine 'bin/dita', '--install', id
+//     }
+// }
+// 
+// task install(dependsOn: [extract, plugins])
+
+task deletePreviousPlugin(type: Delete) {
+    delete '${pluginDir}'
+    println 'hello'
 }
 
-task install(dependsOn: [extract, plugins])
+task installTerminologyPlugin(type: Exec) {
+    workingDir ditaHome
+    commandLine 'bin/dita', '--install', '../org.jung.terminology.zip'
+}
+
+task install(dependsOn: [extract, deletePreviousPlugin, installTerminologyPlugin])
+
 
 // task pdf(type: DitaOtTask, dependsOn: autoGenerate) {
 //     input "${projectDir}/userguide-book.ditamap"
@@ -143,7 +165,8 @@ task oxygenTermchecker(type: DitaOtTask) {
     ditaOt ditaHome
     input "${projectDir}/samples/terminology.ditamap"
 //    output outputDir
-    transtype 'oxygen-termchecker'
+    // transtype 'oxygen-termchecker'
+    transtype 'pdf2'
 }
 
 // task html(type: DitaOtTask, dependsOn: autoGenerate) {
@@ -227,6 +250,6 @@ task oxygenTermchecker(type: DitaOtTask) {
 
 // task all(dependsOn: [downloadAndUnzipDitaOt, pdf, html, htmlhelp])
 // task dist(dependsOn: [downloadAndUnzipDitaOt, pdf, html])
-task all(dependsOn: [install, oxygenTermchecker])
+task all(dependsOn: [install, downloadTerminologyPlugin, deletePreviousPlugin, installTerminologyPlugin, oxygenTermchecker])
 
 defaultTasks 'all'
