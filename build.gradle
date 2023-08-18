@@ -132,8 +132,8 @@ def pluginDir = "${buildDir}/dita-ot-${ditaOtVersion}/plugins/org.jung.terminolo
 // 
 // task install(dependsOn: [extract, plugins])
 
-task deletePreviousPlugin(type: Delete) {
-    delete '${pluginDir}'
+task deleteDitaOt(type: Delete) {
+    delete '${ditaHome}'
     println 'hello'
 }
 
@@ -142,7 +142,7 @@ task installTerminologyPlugin(type: Exec) {
     commandLine 'bin/dita', '--install', '../org.jung.terminology.zip'
 }
 
-task install(dependsOn: [extract, deletePreviousPlugin, installTerminologyPlugin])
+task install(dependsOn: [extract, deleteDitaOt, installTerminologyPlugin])
 
 
 // task pdf(type: DitaOtTask, dependsOn: autoGenerate) {
@@ -165,8 +165,7 @@ task oxygenTermchecker(type: DitaOtTask) {
     ditaOt ditaHome
     input "${projectDir}/samples/terminology.ditamap"
 //    output outputDir
-    // transtype 'oxygen-termchecker'
-    transtype 'pdf2'
+    transtype 'oxygen-termchecker'
 }
 
 // task html(type: DitaOtTask, dependsOn: autoGenerate) {
@@ -250,6 +249,6 @@ task oxygenTermchecker(type: DitaOtTask) {
 
 // task all(dependsOn: [downloadAndUnzipDitaOt, pdf, html, htmlhelp])
 // task dist(dependsOn: [downloadAndUnzipDitaOt, pdf, html])
-task all(dependsOn: [install, downloadTerminologyPlugin, deletePreviousPlugin, installTerminologyPlugin, oxygenTermchecker])
+task all(dependsOn: [install, downloadTerminologyPlugin, deleteDitaOt, installTerminologyPlugin, oxygenTermchecker])
 
 defaultTasks 'all'

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="urn:jung:dita:rng:termmap.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<termmap xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/">
+<termmap>
   <title>Termbrowser</title>
   <termgroup>
     <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem" class="- map/topicref termmap/termref "/>
