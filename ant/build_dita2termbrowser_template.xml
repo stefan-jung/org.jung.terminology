@@ -10,8 +10,17 @@
     <target name="dita2termbrowser-responsive"
         depends="init-properties,
                  -is-webhelp-responsive-available,
-                 dita2webhelp-responsive
+                 callwebhelp
                  ">
+    </target>
+    
+    <!-- 
+        This is not very elegant, but we cannot simply call dita2webhelp-responsive
+        as a dependency, because it does not exist in the DITA-OT, only in the 
+        Oxygen XML Publishing Engine.
+    -->
+    <target name="callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
+        <antcall target="dita2webhelp-responsive" inheritall="true"/>
     </target>
     
     <!--
