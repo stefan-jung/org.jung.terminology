@@ -3,11 +3,7 @@
     
     <target name="dita2tbx-min"
         depends="tbx-min.init,
-        html5.init,
-        build-init,
         preprocess,
-        html5.topic,
-        html5.map,
         dita.topics.html.tbx-min"/>
     
     <target name="tbx-min.init">
@@ -20,7 +16,7 @@
                 destdir="${output.dir}"
                 reloadstylesheet="${dita.xhtml.reloadstylesheet}"
                 extension=".tbxm"
-                style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology2tbx-min.xsl">
+                style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min/terminology2tbx-min.xsl">
                 <ditafileset format="dita" processingRole="normal"/>
                 <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
                 <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>

@@ -28,6 +28,8 @@ def getPropertyOrDefault(String name, def defaultValue) {
     hasProperty(name) ? findProperty(name) : defaultValue
 }
 
+
+
 // String ditaHome = "${projectDir}/dita-ot"
 // String ditaHomeSrc = getPropertyOrDefault('ditaHomeSrc', ditaHome)
 // String configDir = "${ditaHomeSrc}/config"
@@ -285,15 +287,32 @@ task installTerminologyPlugin(type: Exec) {
 }
 task initEnv(dependsOn: [cleanUp, downloadDitaOt, extract, zipPlugin, installTerminologyPlugin])
 
-// task oxygenTermchecker(type: DitaOtTask, dependsOn: [prepareDitaOt, downloadTerminologyPlugin, installTerminologyPlugin]) {
-task oxygenTermchecker(type: DitaOtTask, dependsOn: initEnv) {
-    // dependsOn install
+// task oxygenTermchecker(type: DitaOtTask, dependsOn: initEnv) {
+tasks.register('oxygenTermchecker', DitaOtTask) {
+    dependsOn('initEnv')
+    mustRunAfter('initEnv')
     ditaOt ditaHome
     input "${projectDir}/samples/terminology.ditamap"
-//    output outputDir
     transtype 'oxygen-termchecker'
 }
+tasks.named("oxygenTermchecker").configure {
+    dependsOn("initEnv")
+}
+tasks.register('tbxMin', DitaOtTask) {
+    dependsOn('initEnv')
+    mustRunAfter('oxygenTermchecker')
+    ditaOt ditaHome
+    input "${projectDir}/samples/terminology.ditamap"
+    transtype 'tbx-min'
+}
+tasks.register('tbxBasic', DitaOtTask) {
+    dependsOn('initEnv')
+    mustRunAfter('tbxMin')
+    ditaOt ditaHome
+    input "${projectDir}/samples/terminology.ditamap"
+    transtype 'tbx-basic'
+}
 
-task all(dependsOn: [initEnv, oxygenTermchecker])
+task all(dependsOn: [initEnv, oxygenTermchecker, tbxMin, tbxBasic])
 
 defaultTasks 'all'
