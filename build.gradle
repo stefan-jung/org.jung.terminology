@@ -95,21 +95,24 @@ String toURI(String path) {
 //     description 'Run tasks that generate content from resource files and the build environment.'
 // }
 
+def ditaZip = "${buildDir}/dita-ot-${ditaOtVersion}.zip"
+
+
 task downloadDitaOt(type: Download) {
     src "https://github.com/dita-ot/dita-ot/releases/download/${ditaOtVersion}/dita-ot-${ditaOtVersion}.zip"
     dest new File(buildDir, "dita-ot-${ditaOtVersion}.zip")
     overwrite false
 }
 
+task extract(dependsOn: downloadDitaOt, type: Copy) {
+    from zipTree(downloadDitaOt.dest)
+    into buildDir
+}
+
 task downloadTerminologyPlugin(type: Download) {
     src "https://github.com/stefan-jung/org.jung.terminology/archive/refs/heads/main.zip"
     dest new File(buildDir, "org.jung.terminology.zip")
     overwrite true
-}
-
-task extract(dependsOn: downloadDitaOt, type: Copy) {
-    from zipTree(downloadDitaOt.dest)
-    into buildDir
 }
 
 def ditaHome = "${buildDir}/dita-ot-${ditaOtVersion}"
@@ -130,19 +133,15 @@ def pluginDir = "${buildDir}/dita-ot-${ditaOtVersion}/plugins/org.jung.terminolo
 //     }
 // }
 // 
-// task install(dependsOn: [extract, plugins])
+// task install(dependsOn: [extractDitaOtZip, plugins])
 
 task deleteDitaOt(type: Delete) {
-    delete '${ditaHome}'
-    println 'hello'
+    delete files("${ditaHome}")
+    // delete "$buildDir/dita-ot-$ditaOtVersion"
+    // println 'Delete ' + ditaHome
 }
 
-task installTerminologyPlugin(type: Exec) {
-    workingDir ditaHome
-    commandLine 'bin/dita', '--install', '../org.jung.terminology.zip'
-}
-
-task install(dependsOn: [extract, deleteDitaOt, installTerminologyPlugin])
+// task install(dependsOn: [extractDitaOtZip, deleteDitaOt, installTerminologyPlugin])
 
 
 // task pdf(type: DitaOtTask, dependsOn: autoGenerate) {
@@ -160,13 +159,7 @@ task install(dependsOn: [extract, deleteDitaOt, installTerminologyPlugin])
 //     }
 // }
 
-task oxygenTermchecker(type: DitaOtTask) {
-    dependsOn install
-    ditaOt ditaHome
-    input "${projectDir}/samples/terminology.ditamap"
-//    output outputDir
-    transtype 'oxygen-termchecker'
-}
+
 
 // task html(type: DitaOtTask, dependsOn: autoGenerate) {
 //     input "${projectDir}/userguide.ditamap"
@@ -249,6 +242,22 @@ task oxygenTermchecker(type: DitaOtTask) {
 
 // task all(dependsOn: [downloadAndUnzipDitaOt, pdf, html, htmlhelp])
 // task dist(dependsOn: [downloadAndUnzipDitaOt, pdf, html])
-task all(dependsOn: [install, downloadTerminologyPlugin, deleteDitaOt, installTerminologyPlugin, oxygenTermchecker])
+
+task installTerminologyPlugin(type: Exec) {
+    workingDir ditaHome
+    commandLine 'bin/dita', '--install', '../org.jung.terminology.zip'
+}
+task initEnv(dependsOn: [deleteDitaOt, downloadDitaOt, extract,downloadTerminologyPlugin, installTerminologyPlugin])
+
+// task oxygenTermchecker(type: DitaOtTask, dependsOn: [prepareDitaOt, downloadTerminologyPlugin, installTerminologyPlugin]) {
+task oxygenTermchecker(type: DitaOtTask, dependsOn: initEnv) {
+    // dependsOn install
+    ditaOt ditaHome
+    input "${projectDir}/samples/terminology.ditamap"
+//    output outputDir
+    transtype 'oxygen-termchecker'
+}
+
+task all(dependsOn: [initEnv, oxygenTermchecker])
 
 defaultTasks 'all'
