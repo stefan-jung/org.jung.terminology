@@ -877,7 +877,7 @@
   <feature extension="ant.import" file="ant/build_dita2termchecker-xliff_template.xml"/>
 
   <!-- Overriding XSLT -->
-  <feature extension="dita.xsl.html5" file="xsl/termbrowser.xsl"/>
+  <feature extension="dita.xsl.html5" file="xsl/termbrowser/termbrowser.xsl"/>
   
   <!-- New strings -->
   <feature extension="dita.xsl.strings" file="i18n/termbrowser-strings.xml"/>
