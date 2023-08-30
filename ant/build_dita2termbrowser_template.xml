@@ -126,7 +126,7 @@
         <xslt if:set="args.termstats"
             basedir="${dita.temp.dir}"
             destdir="${dita.temp.dir}"
-            in="${dita.plugin.org.jung.terminology.dir}/templates/dummy.xml"
+            in="${dita.plugin.org.jung.terminology.dir}/xsl/termbrowser/dummy.xml"
             out="${dita.temp.dir}/termstats_merged.xml"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/termbrowser/terminology-stats-merge-xml.xsl">
             <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>
