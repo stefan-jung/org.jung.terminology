@@ -106,9 +106,17 @@
         <echo if:set="termstats.http">The "args.termstats" property is pointing to an external URL. Download file ...</echo>
         <echo if:set="termstats.http">  URL:    "${args.termstats}"</echo>
         <echo if:set="termstats.http">  TARGET: "${dita.temp.dir}/terminology_stats_old.xml"</echo>
+        <echo if:set="termstats.http">curl --insecure ${args.termstats} -o ${dita.temp.dir}/terminology_stats_old.xml</echo>
 
         <!-- If "args.termstats" contains the substring "http", treat it as an external URL and try to download the termstats file. -->
-        <get if:set="termstats.http" src="${args.termstats}" dest="${dita.temp.dir}/terminology_stats_old.xml"/>
+        <!-- The Apache Ant get task does not work with self-signed certificates, therefore we use curl. -->
+        <!--<get if:set="termstats.http" src="${args.termstats}" dest="${dita.temp.dir}/terminology_stats_old.xml"/>-->
+        
+        <exec executable="curl" errorproperty="curl.error">
+            <arg line="--insecure ${args.termstats} -o ${dita.temp.dir}/terminology_stats_old.xml"/>
+        </exec>
+        
+        
         <makeurl if:set="termstats.http" file="${dita.temp.dir}/terminology_stats_old.xml" property="old.termstats.url"/>
 
         <makeurl if:set="args.termstats" file="${args.termstats}" property="old.termstats.url"/>
