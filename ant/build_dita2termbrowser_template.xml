@@ -99,6 +99,15 @@
         <!-- Merge recently gathered terminology statistics with old statistics from previous builds. -->
         <echo unless:set="args.termstats">Property args.termstats is not set</echo>
         <echo if:set="args.termstats" level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
+        
+        <condition property="termstats.http" value="true">
+            <contains string="${args.termstats}" substring="http"/>
+        </condition>
+
+        <!-- If "args.termstats" contains the substring "http", treat it as an external URL and try to download the termstats file. -->
+        <get if:set="termstats.http" src="${args.termstats}" dest="${dita.temp.dir}/terminology_stats_old.xml"/>
+        <makeurl if:set="termstats.http" file="${dita.temp.dir}/terminology_stats_old.xml" property="old.termstats.url"/>
+
         <makeurl if:set="args.termstats" file="${args.termstats}" property="old.termstats.url"/>
         <makeurl if:set="args.termstats" file="${dita.temp.dir}${file.separator}terminology_stats.xml" property="new.termstats.url"/>
         <xslt if:set="args.termstats"
