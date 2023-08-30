@@ -12,7 +12,8 @@
   <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
   
   <!-- Use the preprocess.post extension point to merge the terminology statistics. -->
-  <feature extension="depend.preprocess.post" value="generate-termstats"/>
+  <!-- No, this needs the be called via the target dependency chain, otherwise this is always firing, also for PDF publications. -->
+  <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
   <feature extension="dita.conductor.transtype.check" value="tbx-min,termchecker-dita,termchecker-xliff,tbx-basic,oxygen-termchecker,termbrowser-responsive"/>
