@@ -887,6 +887,10 @@
       <val default="true">false</val>
       <val>true</val>
     </param>
+    <param name="generate-termstats" required="false" desc="Set this parameter to force the generation of a terminology statistics XML file. Usually the transtype tries to auto-detect if this should be done. The condition is fulfilled, if the transtype is 'termbrowser-responsive' and a &lt;termstatsref&gt; element needs to be available on the terminology map. But this does not work, if the transtype has been extended." type="enum">
+      <val>true</val>
+      <val>false</val>
+    </param>
     <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
     <param name="term.semantic-net.layout.improvedLayout" desc="When enabled, the network will use the Kamada Kawai algorithm for initial layout. For networks larger than 100 nodes, clustering will be performed automatically to reduce the amount of nodes. This can greatly improve the stabilization times. If the network is very interconnected (no or few leaf nodes), this may not work and it will revert back to the old method. Performance will be improved in the future." type="enum">
       <val default="true">true</val>

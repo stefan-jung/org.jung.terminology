@@ -37,15 +37,18 @@
         <description>
             Helper target to determine if terminology statistics should be generated.
             This target is looking for a &lt;termstatsref&gt; element on the terminology map.
+            The property "generate-termstats" can also be set manually. This could make sense,
+            for example, if the user has extended the transtype "termbrowser-responsive",
+            so the transtype is no longer "termbrowser-responsive" and the condition of this
+            target will not be met.
         </description>
-        <condition property="generate-termstats" value="true">
+        <condition unless:set="generate-termstats" property="generate-termstats" value="true" else="false">
             <and>
                 <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
                 <isset property="termstatsref"/>
             </and>
         </condition>
-        <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
-        <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
+        <echo if:set="generate-termstats" level="info">Generate terminology statistics: ${generate-termstats}</echo>
     </target>
     
     <target name="generate-termstats"
