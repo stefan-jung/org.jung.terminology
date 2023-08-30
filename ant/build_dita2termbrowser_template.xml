@@ -103,6 +103,9 @@
         <condition property="termstats.http" value="true">
             <contains string="${args.termstats}" substring="http"/>
         </condition>
+        <echo if:set="termstats.http">The "args.termstats" property is pointing to an external URL. Download file ...</echo>
+        <echo if:set="termstats.http">  URL:    "${args.termstats}"</echo>
+        <echo if:set="termstats.http">  TARGET: "${dita.temp.dir}/terminology_stats_old.xml"</echo>
 
         <!-- If "args.termstats" contains the substring "http", treat it as an external URL and try to download the termstats file. -->
         <get if:set="termstats.http" src="${args.termstats}" dest="${dita.temp.dir}/terminology_stats_old.xml"/>
@@ -110,6 +113,8 @@
 
         <makeurl if:set="args.termstats" file="${args.termstats}" property="old.termstats.url"/>
         <makeurl if:set="args.termstats" file="${dita.temp.dir}${file.separator}terminology_stats.xml" property="new.termstats.url"/>
+        <echo>old.termstats.url = "${old.termstats.url}"</echo>
+        <echo>new.termstats.url = "${new.termstats.url}"</echo>
         <xslt if:set="args.termstats"
             basedir="${dita.temp.dir}"
             destdir="${dita.temp.dir}"
