@@ -42,13 +42,15 @@
             so the transtype is no longer "termbrowser-responsive" and the condition of this
             target will not be met.
         </description>
-        <condition unless:set="generate-termstats" property="generate-termstats" value="true" else="false">
+        <!-- We must not set this property to 'false', because this would activate the 'generate-termstats' target. -->
+        <condition unless:set="generate-termstats" property="generate-termstats" value="true">
             <and>
                 <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
                 <isset property="termstatsref"/>
             </and>
         </condition>
         <echo if:set="generate-termstats" level="info">Generate terminology statistics: ${generate-termstats}</echo>
+        <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
     </target>
     
     <target name="generate-termstats"
