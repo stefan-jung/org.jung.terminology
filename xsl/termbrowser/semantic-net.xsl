@@ -241,6 +241,10 @@
     </xsl:template>
     
     <!-- Generate data set for autocomplete search box -->
+    <!--
+        TODO: Populate also the @keys (which are used as term node IDs) to the search function, otherwise the search does not work.
+        See how to do that here: https://jqueryui.com/autocomplete/#custom-data
+    -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
@@ -332,4 +336,5 @@
         </xsl:if>
         <xsl:sequence select="$out"/>
     </xsl:function>
+    
 </xsl:stylesheet>
