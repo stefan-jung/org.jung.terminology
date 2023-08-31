@@ -64,13 +64,13 @@
         </div>
         
         <!-- New search function -->
-        <div id="new-search">
+        <!--<div id="new-search">
             <div id="project-label">Select a project (type &quot;j&quot; for a start):</div>
             <img id="project-icon" class="ui-state-default"/>
             <input id="project"/>
             <input type="hidden" id="project-id"/>
             <p id="project-description"></p>
-        </div>
+        </div>-->
         
         <div id="wrapper">
             <div id="mynetwork">
@@ -251,7 +251,7 @@
         </script>
         
         <!-- New search function -->
-        <script>
+        <!--<script>
             $( function() {
             var projects = [<xsl:apply-templates select="document($ditamap)" mode="new-semantic-net-search"/>];
             
@@ -277,7 +277,7 @@
                 .appendTo( ul );
                 };
                 } );
-        </script>
+        </script>-->
     </xsl:template>
     
     <!-- Generate data set for autocomplete search box -->
@@ -293,24 +293,24 @@
         <xsl:value-of select="'''' || $label || '''' || $delim || ' '"/>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="new-semantic-net-search">
+    <!--<xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="new-semantic-net-search">
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="value" select="sj:termId(@keys)" as="xs:string"/>
         <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])" as="xs:string"/>
         <xsl:variable name="desc" select="sj:jsonEscape(document($filepath)/termentry/definition[1]/definitionText[1]/text()[1])" as="xs:string"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
-        <!--
+        <!-\-
             {
                 value: "jquery",
                 label: "jQuery",
                 desc: "the write less, do more, JavaScript library",
                 icon: "jquery_32x32.png"
             },
-        -->
+        -\->
         
         <xsl:value-of select="'{value: ''' || $value || ''', label: ''' || $label || ''', desc: ' || $desc || ''', icon: '''}' || $delim"/>
-    </xsl:template>
+    </xsl:template>-->
     
     <!-- Generate nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-nodes">
