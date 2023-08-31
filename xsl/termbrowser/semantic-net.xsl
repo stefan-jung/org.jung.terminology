@@ -272,7 +272,7 @@
                 }
             })
             .autocomplete( "instance" )._renderItem = function( ul, item ) {
-            return $( "<li>" )
+            return $( "&lt;li>" )
                 .append( "<div>" + item.label + "<br/>" + item.desc + "</div>" )
                 .appendTo( ul );
                 };
@@ -296,7 +296,7 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="new-semantic-net-search">
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
-        <xsl:variable name="value" select="sj:termId(@keys)" as="xs:string" as="xs:string"/>
+        <xsl:variable name="value" select="sj:termId(@keys)" as="xs:string"/>
         <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])" as="xs:string"/>
         <xsl:variable name="desc" select="sj:jsonEscape(document($filepath)/termentry/definition[1]/definitionText[1]/text()[1])" as="xs:string"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
