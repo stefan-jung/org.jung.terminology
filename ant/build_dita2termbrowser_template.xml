@@ -37,14 +37,19 @@
         <description>
             Helper target to determine if terminology statistics should be generated.
             This target is looking for a &lt;termstatsref&gt; element on the terminology map.
+            The property "generate-termstats" can also be set manually. This could make sense,
+            for example, if the user has extended the transtype "termbrowser-responsive",
+            so the transtype is no longer "termbrowser-responsive" and the condition of this
+            target will not be met.
         </description>
-        <condition property="generate-termstats" value="true">
+        <!-- We must not set the property 'generate-termstats' to 'false', otherwise the 'generate-termstats' target is always triggered. -->
+        <condition unless:set="generate-termstats" property="generate-termstats" value="true">
             <and>
                 <equals arg1="${transtype}" arg2="termbrowser-responsive"/>
                 <isset property="termstatsref"/>
             </and>
         </condition>
-        <echo if:set="generate-termstats" level="info">Generate terminology statistics: true</echo>
+        <echo if:set="generate-termstats" level="info">Generate terminology statistics: ${generate-termstats}</echo>
         <echo unless:set="generate-termstats" level="info">Generate terminology statistics: false</echo>
     </target>
     
@@ -96,12 +101,34 @@
         <!-- Merge recently gathered terminology statistics with old statistics from previous builds. -->
         <echo unless:set="args.termstats">Property args.termstats is not set</echo>
         <echo if:set="args.termstats" level="info">Merge termstats files: '${args.termstats}' and '${dita.temp.dir}${file.separator}terminology_stats.xml'</echo>
+        
+        <condition property="termstats.http" value="true">
+            <contains string="${args.termstats}" substring="http"/>
+        </condition>
+        <echo if:set="termstats.http">The "args.termstats" property is pointing to an external URL. Download file ...</echo>
+        <echo if:set="termstats.http">  URL:    "${args.termstats}"</echo>
+        <echo if:set="termstats.http">  TARGET: "${dita.temp.dir}/terminology_stats_old.xml"</echo>
+        <echo if:set="termstats.http">curl --insecure ${args.termstats} -o ${dita.temp.dir}/terminology_stats_old.xml</echo>
+
+        <!-- If "args.termstats" contains the substring "http", treat it as an external URL and try to download the termstats file. -->
+        <!-- The Apache Ant get task does not work with self-signed certificates, therefore we use curl. -->
+        <!--<get if:set="termstats.http" src="${args.termstats}" dest="${dita.temp.dir}/terminology_stats_old.xml"/>-->
+        
+        <exec executable="curl" errorproperty="curl.error">
+            <arg line="--insecure ${args.termstats} -o ${dita.temp.dir}/terminology_stats_old.xml"/>
+        </exec>
+        
+        
+        <makeurl if:set="termstats.http" file="${dita.temp.dir}/terminology_stats_old.xml" property="old.termstats.url"/>
+
         <makeurl if:set="args.termstats" file="${args.termstats}" property="old.termstats.url"/>
         <makeurl if:set="args.termstats" file="${dita.temp.dir}${file.separator}terminology_stats.xml" property="new.termstats.url"/>
+        <echo>old.termstats.url = "${old.termstats.url}"</echo>
+        <echo>new.termstats.url = "${new.termstats.url}"</echo>
         <xslt if:set="args.termstats"
             basedir="${dita.temp.dir}"
             destdir="${dita.temp.dir}"
-            in="${dita.plugin.org.jung.terminology.dir}/templates/dummy.xml"
+            in="${dita.plugin.org.jung.terminology.dir}/xsl/termbrowser/dummy.xml"
             out="${dita.temp.dir}/termstats_merged.xml"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/termbrowser/terminology-stats-merge-xml.xsl">
             <param name="new.termstats" expression="${dita.temp.dir}${file.separator}terminology_stats.xml"/>
