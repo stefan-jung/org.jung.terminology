@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless">
+    
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="../lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+    
+    
+    <target name="importTermentries" description="Import term notations from a set of termentry topics.
+        This target is iterating over the base terminology directory and a second directory containing 
+        the localized termentry topics.">
+        
+        <echo>******************************</echo>
+        <echo> Import &lt;termentry> topics </echo>
+        <echo>******************************</echo>
+        
+        <condition property="terminology.dir.set" value="true">
+            <isset property="terminology.dir"/>
+        </condition>
+        <fail unless="terminology.dir.set">Property terminology.dir is not set</fail>
+        
+        <basename file="${terminology.dir}" property="filename"/>
+        <echo>filename = "${filename}"</echo>
+        
+        <propertyregex property="terminology.dir.path"
+            input="${terminology.dir}"
+            regexp="${filename}"
+            replace=""
+            casesensitive="false"/>
+        <echo>terminology.dir.path = "${terminology.dir.path}"</echo>
+        
+        <foreach target="mergeTermentry" param="termentry" inheritall="true">
+            <path>
+                <dirset dir="${terminology.dir.path}">
+                    <include name="*"/>
+                </dirset>
+            </path>
+        </foreach>
+        
+        <!--<makeurl file="${terminology.dir}" property="terminology.dir.url"/>-->
+        <dirname property="terminology.dir.path" file="${terminology.dir}"/>
+        <!--<loadresource property="terminology">
+            <concat>${sourceProperty}</concat>
+            <filterchain>
+                <replaceregex pattern="regexToMatchSubstring" replace="\1" />
+            </filterchain>
+        </loadresource>-->
+        
+        <echo>terminology.dir = "${terminology.dir}"</echo>
+        <echo>terminology.dir.set = "${terminology.dir.set}"</echo>
+        <echo>terminology.dir.path = "${terminology.dir.path}"</echo>
+        <echo>terminology.dir.url = "${terminology.dir.path}"</echo>
+        
+    </target>
+    
+    <target name="mergeTermentry">
+        <echo>@{termentry}</echo>
+    </target>
+</project>
