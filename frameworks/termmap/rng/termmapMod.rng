@@ -115,6 +115,9 @@
         <optional>
           <ref name="termstatsref"/>
         </optional>
+        <optional>
+          <ref name="mapref.element"/>
+        </optional>
       </define>
       <define name="termmap.attributes">
         <optional>

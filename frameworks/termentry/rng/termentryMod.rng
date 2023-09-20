@@ -768,7 +768,7 @@
         <empty/>
       </define>
       <define name="domain.attributes">
-        <attribute name="value"/>
+        <attribute name="domain-name"/>
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
