@@ -235,6 +235,7 @@
             
             function termFocus(term) {
                 console.log("termFocus");
+                var t = "trm_" + term;
                 network.fit();
                 var focusOptions = {
                     scale: 0.7,
@@ -244,8 +245,8 @@
                         easingFunction: 'easeInQuad'
                     }
                 };
-                network.focus(term, focusOptions);
-                network.selectNodes([term])
+                network.focus(t, focusOptions);
+                network.selectNodes([t])
             }
 
         </script>
