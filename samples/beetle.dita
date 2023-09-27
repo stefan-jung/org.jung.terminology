@@ -12,7 +12,7 @@
   </definition>
  <termBody>
   <domains>
-   <domain value="VW"/>
+   <domain domain-name="VW"/>
   </domains>
   <agreedWith>
    <termCommitteeMember>Martin Winterkorn</termCommitteeMember>

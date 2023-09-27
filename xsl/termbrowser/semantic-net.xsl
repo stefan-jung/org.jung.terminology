@@ -233,9 +233,16 @@
                 $( "#search-input" ).autocomplete({source: data});
             });
             
+            /* Found on https://stackoverflow.com/a/2970667 */
+            function camelize(str) {
+                return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+                    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+                }).replace(/\s+/g, '');
+            }
+            
             function termFocus(term) {
                 console.log("termFocus");
-                var t = "trm_" + term;
+                var t = "TRM_" + camelize(term);
                 network.fit();
                 var focusOptions = {
                     scale: 0.7,

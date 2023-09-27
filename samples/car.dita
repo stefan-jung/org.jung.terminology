@@ -18,7 +18,7 @@
    </image>
   </fig>
   <domains>
-   <domain value="Car"/>
+   <domain domain-name="Car"/>
   </domains>
   <partOfSpeech/>
   <fullForm usage="preferred" language="en-GB">
