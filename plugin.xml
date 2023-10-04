@@ -18,6 +18,10 @@
   <feature extension="dita.conductor.transtype.check" value="tbx-min,termchecker-dita,termchecker-xliff,tbx-basic,oxygen-termchecker,termbrowser-responsive"/>
   
   <transtype name="tbx-min" extends="html5" desc="TBX-Min">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
     <param name="args.source.language" desc="Source language of terminology" type="string">
       <val>af-ZA</val>
       <val>ar-AE</val>
@@ -298,6 +302,10 @@
 
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
   <transtype name="termchecker-dita" extends="html5" desc="Termchecker for DITA">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
     <param name="args.language" desc="Language of the terminology check rules" type="string">
       <val>af-ZA</val>
       <val>ar-AE</val>
@@ -440,6 +448,10 @@
   
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
   <transtype name="termchecker-xliff" extends="html5" desc="Termchecker for XLIFF">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
     <param name="args.check.elements" desc="Choose whether terms should be checked only in source elements or target elements or in both of them." type="string">
       <val default="true">source</val>
       <val>target</val>
@@ -587,6 +599,10 @@
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
   <transtype name="tbx-basic" extends="html5" desc="TBX-Basic">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
     <param name="args.source.language" desc="Source language of terminology" type="string">
       <val>af-ZA</val>
       <val>ar-AE</val>
@@ -866,7 +882,12 @@
   </transtype>
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
-  <transtype name="oxygen-termchecker" extends="html5" desc="Oxygen Termchecker"/>
+  <transtype name="oxygen-termchecker" extends="html5" desc="Oxygen Termchecker">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
+  </transtype>
   
   <!-- Import Ant script -->
   <feature extension="ant.import" file="ant/build_dita2oxygen-termchecker_template.xml"/>

@@ -25,7 +25,7 @@
     <xsl:function name="sj:getTermCheckerString" as="xs:string">
         <xsl:param name="language"/>
         <xsl:param name="string"/>
-        <xsl:variable name="file" select="'termchecker-strings-' || $language || '.xml'"/>
+        <xsl:variable name="file" select="'../../i18n/termchecker-strings-' || $language || '.xml'"/>
         <xsl:sequence select="document($file)/descendant::str[@name = $string]"/>
     </xsl:function>
     
