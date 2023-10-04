@@ -6,7 +6,7 @@
         html5.init,
         build-init,
         preprocess,
-        termchecker-dita.create-schematron"/>
+        termchecker-dita"/>
     
     <target name="termchecker-dita.init">
         <property name="root-chunk-override" value="to-content"/>
@@ -17,25 +17,23 @@
         </condition>
     </target>
     
-    <target name="termchecker-dita.create-schematron" description="Create a Schematron termchecker for XLIFF">
+    <target name="termchecker-dita" description="Create a Schematron termchecker for XLIFF">
         <pipeline>
-        <xslt 
-            destdir="${output.dir}"
-            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
-            extension="-DITA-${args.language}.sch"
-            style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-dita/terminology2termchecker-dita.xsl">
-            <ditafileset format="dita" processingRole="normal"/>
-            <param name="language" expression="${args.language}" if="args.language"/>
-            <xmlcatalog refid="dita.catalog"/>
-        </xslt>
+            <xslt style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-dita/terminology2termchecker-dita.xsl"
+                destdir="${output.dir}"
+                extension="-DITA-${args.language}.sch">
+                <ditafileset format="dita" processingRole="normal"/>
+                <param name="language" expression="${args.language}" if="args.language"/>
+                <xmlcatalog refid="dita.catalog"/>
+            </xslt>
         </pipeline>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
-        <delete>
+        <!--<delete>
             <fileset dir="${output.dir}" >
                 <exclude name="**/${schematronFile}*.sch"/>
             </fileset>
             <dirset dir="${output.dir}"/>
-        </delete>
+        </delete>-->
         <!-- Replace conflicting DOCTYPE declarations -->
         <replaceregexp match="&lt;!DOCTYPE[\s\S]*dtd&quot;[\s]*&gt;" replace="" byline="false">
             <fileset dir="${output.dir}">

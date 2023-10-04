@@ -8,7 +8,7 @@
     exclude-result-prefixes="xs">
     
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
-    <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
+    <!--<xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>-->
     
     <!-- Import the generic termchecker templates -->
     <xsl:import href="../common/termchecker.xsl"/>
@@ -20,14 +20,11 @@
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
         <xsl:variable name="termentryId" select="@id"/>
         <xsl:variable name="languageCode" select="sj:getLanguageCodeFromLanguageRegionCode($language)"/>
-        <xsl:variable name="definition">
-            <xsl:choose>
-                <xsl:when test="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]">
-                    <xsl:value-of select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
-                </xsl:when>
-                <xsl:otherwise><xsl:text/></xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
+        <xsl:variable name="definition" select="
+            if (*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]) 
+            then *[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]
+            else ''
+            "/>
         <xsl:for-each select="*[contains(@class, ' termentry/termBody ')]/*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended'][@language = $languageCode or @language = $language]">
 
             <!-- The context text() matches the text content of all nodes. -->
@@ -40,30 +37,15 @@
                 - contains a notRecommended term
                 - the xml:lang attribute of the tested topic has the same value as the language attribute of the notRecommended term
             -->
-            <xsl:element name="sch:report">
-                <xsl:attribute name="test">
-                    <xsl:text>contains(/*/@xml:lang, '</xsl:text>
-                    <xsl:value-of select="$termLanguageRegionCode"/>
-                    <xsl:text>') and matches(., '((\W|^)</xsl:text>
-                    <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>(\W|$))', 'i')</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="role">warning</xsl:attribute>
-                <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
-                <xsl:value-of select="sj:getString($language, 'TheTerm')"/>
-                <xsl:text> '</xsl:text>
-                <xsl:value-of select="$notRecommendedTerm"/>
-                <xsl:text>' </xsl:text>
-                <xsl:value-of select="sj:getString($language, 'IsNotAllowed')"/>
-                <xsl:text>. </xsl:text>
-                <xsl:value-of select="sj:getString($language, 'ReplaceWithAllowedTerm')"/>
-                <xsl:text>: </xsl:text>
+            <sch:report 
+                test="{'contains(/*/@xml:lang, &apos;' || $termLanguageRegionCode || '&apos;) and matches(., &apos;((\W|^)' || $notRecommendedTerm || '(\W|$))&apos;, &apos;i&apos;)'}" 
+                role="warning"
+                sqf:fix="{$sqfGroupName}">
+                <xsl:value-of select="sj:getString($language, 'TheTerm') || ' &apos;' || sj:getString($language, 'IsNotAllowed') || '. ' || sj:getString($language, 'ReplaceWithAllowedTerm') || ': '"/>
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
                     <xsl:choose>
                         <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:text>'</xsl:text>
-                            <xsl:value-of select="*[contains(@class, 'termentry/termVariant')]"/>
-                            <xsl:text>'</xsl:text>
+                            <xsl:value-of select="'&apos;' || *[contains(@class, 'termentry/termVariant')] || '&apos;'"/>
                             <xsl:choose>
                                 <xsl:when test="following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')]">
                                     <xsl:text>, </xsl:text>
@@ -72,7 +54,7 @@
                         </xsl:when>
                     </xsl:choose>
                 </xsl:for-each>
-            </xsl:element>
+            </sch:report>
 
             <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
             <xsl:element name="sqf:group">
