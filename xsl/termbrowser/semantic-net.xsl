@@ -7,10 +7,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="related-links sj xd xs">
     
-    
     <xsl:param name="ditamap"/>
-    
-    <xsl:param name="debugging.mode" as="xs:string"/>
     
     <xsl:output method="xml" encoding="UTF-8" indent="true"/>
     

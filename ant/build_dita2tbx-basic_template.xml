@@ -4,17 +4,24 @@
     <target name="dita2tbx-basic"
         depends="tbx-basic.init,
         preprocess,
-        dita.topics.html.tbx-basic"/>
+        tbx-basic"/>
     
     <target name="tbx-basic.init">
         <property name="root-chunk-override" value="to-content"/>
     </target>
     
-    <target name="dita.topics.html.tbx-basic" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
+    <target name="tbx-basic" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
+        <echo>test</echo>
         <pipeline>
+            <xslt style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-basic/terminology2tbx-basic.xsl"
+                destdir="${dita.output.dir}">
+                <ditafileset format="dita" />
+            </xslt>
+        </pipeline>
+        <!--<pipeline>
             <xslt 
                 destdir="${output.dir}"
-                reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+                reloadstylesheet="$tbx-basic.init{dita.xhtml.reloadstylesheet}"
                 extension=".tbx"
                 style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-basic/terminology2tbx-basic.xsl">
                 <ditafileset format="dita" processingRole="normal"/>
@@ -22,7 +29,7 @@
                 <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
                 <xmlcatalog refid="dita.catalog"/>
             </xslt>
-        </pipeline>
+        </pipeline>-->
         <basename property="tbx-basic" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >

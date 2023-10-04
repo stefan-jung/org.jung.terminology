@@ -18,7 +18,10 @@
   <deliverable name="Termchecker DITA" id="termchecker-dita">
     <context idref="terminology"/>
     <output href="./termchecker-dita"/>
-    <publication transtype="termchecker-dita"/>
+    <publication transtype="termchecker-dita">
+      <param name="clean.temp" value="no"/>
+      <param name="dita.temp.dir" href="./temp/termchecker-dita"/>
+    </publication>
   </deliverable>
   
   <deliverable name="Termchecker XLIFF" id="termchecker-xliff">
@@ -30,7 +33,10 @@
   <deliverable name="TBX Basic" id="tbx-basic">
     <context idref="terminology"/>
     <output href="./tbx-basic"/>
-    <publication transtype="tbx-basic"/>
+    <publication transtype="tbx-basic">
+      <param name="debugging.mode" value="true"/>
+      <param name="clean.temp" value="no"/>
+    </publication>
   </deliverable>
   
   <deliverable name="TBX Min" id="tbx-min">
