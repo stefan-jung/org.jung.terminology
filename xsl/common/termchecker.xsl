@@ -82,7 +82,10 @@
         <xsl:sequence select="$languageMatchRule"/>
     </xsl:function>
 
-    <!-- Match the root node of the DITA Map and create a Schematron root node -->
+    
+    <xd:doc>
+        <xd:desc> Match the root node of the DITA Map and create a Schematron root node </xd:desc>
+    </xd:doc>
     <xsl:template match="/">
         <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             xmlns:sqf="http://www.schematron-quickfix.com/validator/process" queryBinding="xslt2">
@@ -97,6 +100,13 @@
         </sch:schema>
     </xsl:template>
 
+    <xd:doc>
+        <xd:desc/>
+        <xd:param name="notRecommendedTerm"/>
+        <xd:param name="preferredTerm"/>
+        <xd:param name="termLanguage"/>
+        <xd:param name="definition"/>
+    </xd:doc>
     <xsl:template name="createSqfFix">
         <xsl:param name="notRecommendedTerm" as="xs:string"/>
         <xsl:param name="preferredTerm" as="xs:string"/>
@@ -183,16 +193,25 @@
         </xsl:element>
     </xsl:template>
 
-    <!-- Remove HTML clutter -->
+    
+    <xd:doc>
+        <xd:desc> Remove HTML clutter </xd:desc>
+    </xd:doc>
     <xsl:template name="chapter-setup">
         <xsl:call-template name="chapterBody"/>
     </xsl:template>
 
+    <xd:doc>
+        <xd:desc/>
+    </xd:doc>
     <xsl:template name="chapterBody">
         <xsl:apply-templates select="." mode="chapterBody"/>
         <xsl:apply-templates/>
     </xsl:template>
 
+    <xd:doc>
+        <xd:desc/>
+    </xd:doc>
     <xsl:template match="*" mode="chapterBody"/>
     
     <xd:doc>

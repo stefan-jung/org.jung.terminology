@@ -68,7 +68,7 @@
                 </xsl:attribute>
                 <xsl:attribute name="role">warning</xsl:attribute>
                 <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>
-                <xsl:value-of select="sj:getString($language, 'TheTerm')"/>
+                <xsl:value-of select="sj:getString($language, 'The term')"/>
                 <xsl:text> '</xsl:text>
                 <xsl:value-of select="$notRecommendedTerm"/>
                 <xsl:text>' </xsl:text>

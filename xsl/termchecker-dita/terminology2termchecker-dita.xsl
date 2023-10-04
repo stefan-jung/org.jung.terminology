@@ -7,6 +7,8 @@
     xmlns:sj="https://stefan-jung.org"
     exclude-result-prefixes="xs">
     
+    <xsl:param name="language" as="xs:string"/>
+    
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
     <!--<xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>-->
     
@@ -38,14 +40,14 @@
                 - the xml:lang attribute of the tested topic has the same value as the language attribute of the notRecommended term
             -->
             <sch:report 
-                test="{'contains(/*/@xml:lang, &apos;' || $termLanguageRegionCode || '&apos;) and matches(., &apos;((\W|^)' || $notRecommendedTerm || '(\W|$))&apos;, &apos;i&apos;)'}" 
+                test="{sj:getTest($termLanguageRegionCode, $notRecommendedTerm)}" 
                 role="warning"
                 sqf:fix="{$sqfGroupName}">
-                <xsl:value-of select="sj:getString($language, 'TheTerm') || ' &apos;' || sj:getString($language, 'IsNotAllowed') || '. ' || sj:getString($language, 'ReplaceWithAllowedTerm') || ': '"/>
+                <xsl:value-of select="sj:getString($language, 'The term') || ' &amp;apos;' || sj:getString($language, 'IsNotAllowed') || '. ' || sj:getString($language, 'ReplaceWithAllowedTerm') || ': '"/>
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
                     <xsl:choose>
                         <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:value-of select="'&apos;' || *[contains(@class, 'termentry/termVariant')] || '&apos;'"/>
+                            <xsl:value-of select="'&amp;apos;' || *[contains(@class, 'termentry/termVariant')] || '&amp;apos;'"/>
                             <xsl:choose>
                                 <xsl:when test="following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')]">
                                     <xsl:text>, </xsl:text>
@@ -65,7 +67,7 @@
                             <xsl:message use-when="system-property('debug_on') = 'yes'">Generate SQF for term notation '<xsl:value-of select="$notRecommendedTerm"/>'</xsl:message>
                             <xsl:if test="not(*[contains(@class, 'termentry/termVariant')]) or *[contains(@class, 'termentry/termVariant')] = ''">
                                 <xsl:message terminate="yes">ERROR: Could not create SQF for not recommended term '<xsl:value-of select="$notRecommendedTerm"/>', because the preferred term is empty.</xsl:message>
-                            </xsl:if>
+                  $          </xsl:if>
                             <xsl:call-template name="createSqfFix">
                                 <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
                                 <xsl:with-param name="preferredTerm" select="*[contains(@class, 'termentry/termVariant')]"/>
@@ -78,6 +80,12 @@
             </xsl:element>
         </xsl:for-each>
     </xsl:template>
+    
+    <xsl:function name="sj:getTest" as="xs:string">
+        <xsl:param name="termLanguageRegionCode" as="xs:string"/>
+        <xsl:param name="notRecommendedTerm" as="xs:string"/>
+        <xsl:sequence select="'contains(/*/@xml:lang, &amp;apos;' || $termLanguageRegionCode || '&amp;apos;) and matches(., &amp;apos;((\W|^)' || $notRecommendedTerm || '(\W|$))&amp;apos;, &amp;apos;i&amp;apos;)'"/>
+    </xsl:function>
     
     <!-- Empty fall-through template for non-termentry topics -->
     <xsl:template match="*[contains(@class, ' topic/topic ')][not(contains(@class, ' termentry/termentry '))]"/>

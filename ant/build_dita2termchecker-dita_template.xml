@@ -22,9 +22,9 @@
             <xslt style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-dita/terminology2termchecker-dita.xsl"
                 destdir="${output.dir}"
                 extension="-DITA-${args.language}.sch">
-                <ditafileset format="dita" processingRole="normal"/>
+                <ditafileset format="dita"/>
                 <param name="language" expression="${args.language}" if="args.language"/>
-                <xmlcatalog refid="dita.catalog"/>
+                <param name="debugging.mode" expression="${debugging.mode}" if="debugging.mode"/>
             </xslt>
         </pipeline>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>

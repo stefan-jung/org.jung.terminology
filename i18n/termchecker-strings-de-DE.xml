@@ -6,6 +6,6 @@
     <str name="ReplaceWithAllowedAcronym">Ersetze mit einem erlaubten Akronym</str>
     <str name="ReplaceWithAllowedVerb">Ersetze mit einem erlaubten Verb</str>
     <str name="Definition">Definition</str>
-    <str name="TheTerm">Die Benennung</str>
+    <str name="The term">Die Benennung</str>
     <str name="IsNotAllowed">ist nicht erlaubt</str>
 </strings>

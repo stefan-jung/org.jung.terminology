@@ -57,6 +57,7 @@
     <str name="Term Type">Type</str>
     <str name="Term Usage">Usage</str>
     <str name="Term">Term</str>
+    <str name="The term">The term</str>
     <str name="Usage Admitted">admitted</str>
     <str name="Usage Allowed">allowed</str>
     <str name="Usage Deprecated">deprecated</str>
