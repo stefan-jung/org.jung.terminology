@@ -15,8 +15,9 @@
     <!-- Import the generic termchecker templates -->
     <xsl:import href="../common/termchecker.xsl"/>
     
-    <!-- Import the sj:getString function -->
+    <!-- Import the sj:getTermcheckerString function -->
     <xsl:import href="../common/get-string.xsl"/>
+    
     
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]">
@@ -43,11 +44,11 @@
                 test="{sj:getTest($termLanguageRegionCode, $notRecommendedTerm)}" 
                 role="warning"
                 sqf:fix="{$sqfGroupName}">
-                <xsl:value-of select="sj:getString($language, 'The term') || ' &amp;apos;' || sj:getString($language, 'IsNotAllowed') || '. ' || sj:getString($language, 'ReplaceWithAllowedTerm') || ': '"/>
+                <xsl:value-of select="sj:getTermcheckerString($language, 'The term') || '''' || sj:getTermcheckerString($language, 'Is Not Allowed') || '. ' || sj:getTermcheckerString($language, 'ReplaceWithAllowedTerm') || ': '"/>
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
                     <xsl:choose>
                         <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:value-of select="'&amp;apos;' || *[contains(@class, 'termentry/termVariant')] || '&amp;apos;'"/>
+                            <xsl:value-of select="'''' || *[contains(@class, 'termentry/termVariant')] || ''''"/>
                             <xsl:choose>
                                 <xsl:when test="following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')]">
                                     <xsl:text>, </xsl:text>
@@ -84,7 +85,7 @@
     <xsl:function name="sj:getTest" as="xs:string">
         <xsl:param name="termLanguageRegionCode" as="xs:string"/>
         <xsl:param name="notRecommendedTerm" as="xs:string"/>
-        <xsl:sequence select="'contains(/*/@xml:lang, &amp;apos;' || $termLanguageRegionCode || '&amp;apos;) and matches(., &amp;apos;((\W|^)' || $notRecommendedTerm || '(\W|$))&amp;apos;, &amp;apos;i&amp;apos;)'"/>
+        <xsl:sequence select="'contains(/*/@xml:lang, ' || $termLanguageRegionCode || ') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'')'"/>
     </xsl:function>
     
     <!-- Empty fall-through template for non-termentry topics -->

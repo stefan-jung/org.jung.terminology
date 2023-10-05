@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+<project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless" name="dita2termchecker-dita">
     
     <target name="dita2termchecker-dita"
         depends="termchecker-dita.init,
         html5.init,
         build-init,
         preprocess,
-        termchecker-dita"/>
+        termchecker-dita.create-schematron"/>
     
     <target name="termchecker-dita.init">
         <property name="root-chunk-override" value="to-content"/>
@@ -17,23 +17,31 @@
         </condition>
     </target>
     
-    <target name="termchecker-dita" description="Create a Schematron termchecker for XLIFF">
-        <pipeline>
-            <xslt style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-dita/terminology2termchecker-dita.xsl"
-                destdir="${output.dir}"
-                extension="-DITA-${args.language}.sch">
-                <ditafileset format="dita"/>
-                <param name="language" expression="${args.language}" if="args.language"/>
-                <param name="debugging.mode" expression="${debugging.mode}" if="debugging.mode"/>
-            </xslt>
-        </pipeline>
+    <target name="termchecker-dita.create-schematron" description="Create a Schematron termchecker for XLIFF">
+        <delete dir="${dita.temp.dir}">
+            <include name="**/*.list"/>
+        </delete>
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension="-DITA-${args.language}.sch"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-dita/terminology2termchecker-dita.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <ditafileset format="dita" />
+            <param name="language" expression="${args.language}" if="args.language"/>
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
-        <!--<delete>
+        <delete>
             <fileset dir="${output.dir}" >
                 <exclude name="**/${schematronFile}*.sch"/>
             </fileset>
             <dirset dir="${output.dir}"/>
-        </delete>-->
+        </delete>
         <!-- Replace conflicting DOCTYPE declarations -->
         <replaceregexp match="&lt;!DOCTYPE[\s\S]*dtd&quot;[\s]*&gt;" replace="" byline="false">
             <fileset dir="${output.dir}">

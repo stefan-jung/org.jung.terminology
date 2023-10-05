@@ -26,6 +26,7 @@
     <str name="Is Hypernym Of">ist Oberbegriff von</str>
     <str name="Is Hyponym Of">ist Unterbegriff von</str>
     <str name="Is Instance Of">ist Instanz von</str>
+    <str name="Is Not Allowed">ist nicht erlaubt</str>
     <str name="Is Not Recommended In">ist nicht empfohlen in</str>
     <str name="Is Part Of">ist Teil von</str>
     <str name="Is Preferred In">ist bevorzugt in</str>

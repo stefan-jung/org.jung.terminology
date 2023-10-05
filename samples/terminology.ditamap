@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="urn:jung:dita:rng:termmap.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<termmap chunk="to-content">
+<termmap>
   <title>Termbrowser</title>
   <termgroup>
     <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem" class="- map/topicref termmap/termref "/>
@@ -40,7 +40,7 @@
     <termref href="vehicle.dita" keys="vehicle"/>
     <termref href="wheel.dita" keys="wheel"/>
   </termgroup>
-  <topicref href="terminology-ssm.ditamap" format="ditamap"/>
+  <topicref href="subjectScheme.ditamap" format="ditamap"/>
   <semanticnetref href="semantic-net.dita"/>
   <termstatsref href="termstats.dita"/>
 </termmap>

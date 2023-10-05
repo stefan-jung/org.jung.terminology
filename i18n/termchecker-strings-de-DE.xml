@@ -7,5 +7,5 @@
     <str name="ReplaceWithAllowedVerb">Ersetze mit einem erlaubten Verb</str>
     <str name="Definition">Definition</str>
     <str name="The term">Die Benennung</str>
-    <str name="IsNotAllowed">ist nicht erlaubt</str>
+    <str name="Is Not Allowed">ist nicht erlaubt</str>
 </strings>

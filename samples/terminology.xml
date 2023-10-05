@@ -21,7 +21,7 @@
     <publication transtype="termchecker-dita">
       <param name="debugging.mode" value="true"/>
       <param name="clean.temp" value="no"/>
-      <param name="dita.temp.dir" href="./temp/termchecker-dita"/>
+      <param name="dita.temp.dir" href="temp/termchecker-dita/"/>
     </publication>
   </deliverable>
   

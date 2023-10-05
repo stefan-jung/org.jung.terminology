@@ -225,7 +225,7 @@
     </xsl:function>
 
     <xd:doc>
-        <xd:desc><xd:p>Escape conflicting characters and return a normalized term</xd:p></xd:desc>
+        <xd:desc><xd:p>Escape conflictin        <xd:param name="recommendedTerm">Second string</xd:param>g characters and return a normalized term</xd:p></xd:desc>
         <xd:param name="string"><xd:p>String to be normalized</xd:p></xd:param>
         <xd:return><xd:p>Return the normalized string.</xd:p></xd:return>
     </xd:doc>
@@ -249,8 +249,8 @@
         <xsl:param name="id" as="xs:string"/>
         <xsl:param name="languageCode" as="xs:string"/>
         <!-- The ID has to be a unique valid NMTOKEN -->
-        <xsl:variable name="newID" select="replace(concat(concat($notRecommendedTerm, $id), $languageCode), '[^A-Za-z0-9,.-]','')"/>
-        <xsl:sequence select="$newID"/>
+        <!--<xsl:variable name="newID" select="replace(concat(concat($notRecommendedTerm, $id), $languageCode), '[^A-Za-z0-9,.-]','')"/>-->
+        <xsl:sequence select="replace($notRecommendedTerm || '-' || $id || '-' || $languageCode, '[^A-Za-z0-9,.-]','')"/>
     </xsl:function>
 
 </xsl:stylesheet>
