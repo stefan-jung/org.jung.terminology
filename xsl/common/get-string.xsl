@@ -43,7 +43,7 @@
         <xsl:param name="output" as="xs:string"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:param name="string" as="xs:string"/>
-        <xsl:variable name="file" select="'../../i18n/termchecker-strings-' || $language || '.xml'"/>
+        <xsl:variable name="file" select="'../../i18n/' || $output || '-strings-' || $language || '.xml'"/>
         <xsl:variable name="result" select="document($file)/descendant::str[@name = $string][1]"/>
         <xsl:if test="$debugging.mode = 'true'">
             <xsl:message select="'[DEBUG] sj:getString(' || $language || ', ' || $string || ') returns &quot;' || $result || '&quot; Read from file: ' || $file"/>

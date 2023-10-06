@@ -42,6 +42,24 @@
             so the transtype is no longer "termbrowser-responsive" and the condition of this
             target will not be met.
         </description>
+        
+        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
+        <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
+        <echo level="info">termmap = "${termmap}"</echo>
+
+        <!-- Check if the <termmap> contains a <termstatsref> element -->
+        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
+            <filterchain>       
+                <linecontainsregexp>          
+                    <regexp pattern="termmap/termstatsref "/>        
+                </linecontainsregexp>      
+            </filterchain> 
+        </loadfile>
+        <echo if:set="termstatsref">&lt;termstatsref> element found</echo>
+        <echo unless:set="termstatsref">&lt;termstatsref> element not found</echo>
+
         <!-- We must not set the property 'generate-termstats' to 'false', otherwise the 'generate-termstats' target is always triggered. -->
         <condition unless:set="generate-termstats" property="generate-termstats" value="true">
             <and>
@@ -58,22 +76,13 @@
         depends="-generate-termstats"
         if="generate-termstats">
         
-        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
+<!--        <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
         <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
-        <loadfile property="termstatsref" srcfile="${dita.temp.dir}${file.separator}${termmap.basename}.ditamap">
-            <filterchain>       
-                <linecontainsregexp>          
-                    <regexp pattern="termmap/termstatsref "/>        
-                </linecontainsregexp>      
-            </filterchain> 
-        </loadfile>
         
-        <echo level="info">termmap = "${termmap}"</echo>
+        <echo level="info">termmap = "${termmap}"</echo>-->
         
-        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
-        <basename property="termmap.basename" file="${termmap}" suffix=".ditamap"/>
         
         <property name="dita.temp.dir.abs" location="${dita.temp.dir}"/>
         <makeurl file="${dita.temp.dir.abs}" property="dita.temp.dir.abs.url"/>
@@ -114,7 +123,7 @@
         <!-- The Apache Ant get task does not work with self-signed certificates, therefore we use curl. -->
         <!--<get if:set="termstats.http" src="${args.termstats}" dest="${dita.temp.dir}/terminology_stats_old.xml"/>-->
         
-        <exec executable="curl" errorproperty="curl.error">
+        <exec if:set="termstats.http" executable="curl" errorproperty="curl.error">
             <arg line="--insecure ${args.termstats} -o ${dita.temp.dir}/terminology_stats_old.xml"/>
         </exec>
         

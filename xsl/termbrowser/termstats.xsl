@@ -15,7 +15,9 @@
     </xd:doc>
     <xsl:template match="*[contains(@class, 'termstats-d/stats')]">
         <xsl:variable name="termstats.uri" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/termstats_merged.xml'"/>
-        <xsl:apply-templates select="document($termstats.uri, /)" mode="termstats"/>
+        <xsl:if test="doc-available($termstats.uri)">
+            <xsl:apply-templates select="document($termstats.uri, /)" mode="termstats"/>
+        </xsl:if>
     </xsl:template>
     
     
