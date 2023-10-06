@@ -151,7 +151,7 @@
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
         <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="sj:generateId($notRecommendedTermNormalized, 'id', $preferredTerm)"/>
+            <xsl:attribute name="id" select="translate($notRecommendedTermNormalized, ' ', '_') || '-' || translate($preferredTerm, ' ', '_')"/>
             <xsl:element name="sqf:description">
                 <xsl:element name="sqf:title">
                     <xsl:value-of select="normalize-space($sqfTitle)"/>

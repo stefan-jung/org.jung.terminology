@@ -33,7 +33,9 @@
             <!-- The context text() matches the text content of all nodes. -->
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
-            <xsl:variable name="sqfGroupName" select="sj:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>
+            <xsl:variable name="firstRecommendedTerm" select="normalize-space((preceding-sibling::* | following-sibling::*))"/>
+            <!--<xsl:variable name="sqfGroupName" select="sj:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>-->
+            <xsl:variable name="sqfGroupName" select="$termentryId || '-' || translate($notRecommendedTerm, ' ', '_') || '-' || generate-id()"/>
             
             <!-- 
                 Create a report that will be reported if the tested topic: 
