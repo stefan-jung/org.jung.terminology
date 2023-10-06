@@ -50,11 +50,11 @@
             <div class="form">
                 <div class="form-group row">
                     <label for="search-input" class="col-form-label">
-                        <xsl:value-of select="sj:getString($language, 'Term Notation')"/>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Term Notation')"/>
                     </label>
                     <input id="search-input" class="form-control autocomplete" type="text"><!-- --></input>
                     <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus(document.getElementById('search-input').value.toLowerCase());">
-                        <xsl:value-of select="sj:getString($language, 'Search')"/>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Search')"/>
                     </button>
                 </div>
             </div>
@@ -89,7 +89,7 @@
             <table class="table table-striped table-bordered table-hover table-condensed">
                 <tr>
                     <td class="legend_col1">
-                        <xsl:value-of select="sj:getString($language, 'Term')"/>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Term')"/>
                     </td>
                     <td class="legend_col2">
                         <div id="t_term">
@@ -99,7 +99,7 @@
                 </tr>
                 <tr>
                     <td class="legend_col1">
-                        <xsl:value-of select="sj:getString($language, 'Definition')"/>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Definition')"/>
                     </td>
                     <td class="legend_col2">
                         <div id="t_definition"/>
@@ -361,7 +361,7 @@
                     "/>
                 <xsl:variable name="sourceTermId" select="lower-case(@keyref)" as="xs:string"/>
                 <xsl:if test="$sourceTermId != '' and $targetTermId != ''">
-                    <xsl:value-of select="'{id: ''' || $sourceTermId || $targetTermId || ''', from: ''' || $sourceTermId || ''', to : ''' || $targetTermId || ''', arrows: ''to'', label: ''' || sj:getString($language, $labelString) || '''}, '"/>
+                    <xsl:value-of select="'{id: ''' || $sourceTermId || $targetTermId || ''', from: ''' || $sourceTermId || ''', to : ''' || $targetTermId || ''', arrows: ''to'', label: ''' || sj:getTermbrowserString($language, $labelString) || '''}, '"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:if>

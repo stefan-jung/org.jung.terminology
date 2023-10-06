@@ -12,9 +12,7 @@
         <div class="card definition">
             <div class="card-body">
                 <h5 class="card-title">
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Definition'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Definition')"/>
                 </h5>
                 <xsl:apply-templates/>
             </div>
@@ -31,12 +29,7 @@
     <!-- Definition Source -->
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
         <blockquote class="blockquote">
-            <xsl:call-template name="getVariable">
-                <xsl:with-param name="id" select="'Definition Source'"/>
-            </xsl:call-template>
-            <xsl:call-template name="getVariable">
-                <xsl:with-param name="id" select="'Delimiter String'"/>
-            </xsl:call-template>
+            <xsl:value-of select="sj:getTermbrowserString($language, 'Definition Source') || sj:getTermbrowserString($language, 'Delimiter String')"/>
             <xsl:apply-templates/>
         </blockquote>
     </xsl:template>
@@ -46,9 +39,7 @@
         <div class="card definition">
             <div class="card-body">
                 <h5 class="card-title">
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Alternative Definition'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Alternative Definition')"/>
                 </h5>
                 <xsl:apply-templates/>
             </div>
@@ -67,9 +58,7 @@
         <div class="panel panel-default annotation">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Annotation'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Annotation')"/>
                 </h3>
             </div>
             <div class="panel-body">
@@ -85,44 +74,28 @@
                 <thead class="thead-light">
                     <tr>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Type'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Type')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Language'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Language')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Usage'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Usage')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Domain'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Domain')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Source'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Source')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Context'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Context')"/>
                         </th>
                         <th class="termTable" scope="col">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Term Annotations'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Annotations')"/>
                         </th>
                     </tr>
                 </thead>
@@ -143,24 +116,16 @@
             <td class="termTable">
                 <xsl:choose>
                     <xsl:when test="contains(@class, ' termentry/fullForm ')">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Full Form'"/>
-                        </xsl:call-template>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Full Form')"/>
                     </xsl:when>
                     <xsl:when test="contains(@class, ' termentry/abbreviation ')">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Abbreviation'"/>
-                        </xsl:call-template>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Abbreviation')"/>
                     </xsl:when>
                     <xsl:when test="contains(@class, ' termentry/acronym ')">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Acronym'"/>
-                        </xsl:call-template>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Acronym')"/>
                     </xsl:when>
                     <xsl:when test="contains(@class, ' termentry/verb ')">
-                        <xsl:call-template name="getVariable">
-                            <xsl:with-param name="id" select="'Verb'"/>
-                        </xsl:call-template>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'Verb')"/>
                     </xsl:when>
                 </xsl:choose>
             </td>
@@ -176,30 +141,22 @@
                 <xsl:choose>
                     <xsl:when test="contains(@usage, 'preferred')">
                         <div class="alert alert-success">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Usage Allowed'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Allowed')"/>
                         </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'notRecommended')">
                         <div class="alert alert-danger">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Usage Deprecated'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Deprecated')"/>
                         </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'admitted')">
                         <div class="alert alert-warning">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Usage Admitted'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Admitted')"/>
                         </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'obsolete')">
                         <div class="alert alert-info">
-                            <xsl:call-template name="getVariable">
-                                <xsl:with-param name="id" select="'Usage Obsolete'"/>
-                            </xsl:call-template>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Obsolete')"/>
                         </div>
                     </xsl:when>
                 </xsl:choose>
@@ -232,9 +189,7 @@
         <div class="panel panel-default agreedWith">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Agreed With'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Agreed With')"/>
                 </h3>
             </div>
             <div class="panel-body">
@@ -269,9 +224,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Annotation'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Annotation')"/>
                 </h3>
             </div>
             <div class="panel-body">
@@ -332,9 +285,7 @@
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Antonyms'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Antonyms')"/>
                 </strong>
             </div>
             <div class="linklist">
@@ -347,9 +298,7 @@
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Hypernyms'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Hypernyms')"/>
                 </strong>
             </div>
             <div class="linklist">
@@ -362,9 +311,7 @@
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Hyponyms'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Hyponyms')"/>
                 </strong>
             </div>
             <div class="linklist">
@@ -377,9 +324,7 @@
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Instances Of'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Instances Of')"/>
                 </strong>
             </div>
             <div class="linklist">
@@ -392,9 +337,7 @@
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Parts Of'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Parts Of')"/>
                 </strong>
             </div>
             <div class="linklist">
@@ -407,9 +350,7 @@
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:call-template name="getVariable">
-                        <xsl:with-param name="id" select="'Related Terms'"/>
-                    </xsl:call-template>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Related Terms')"/>
                 </strong>
             </div>
             <div class="linklist">

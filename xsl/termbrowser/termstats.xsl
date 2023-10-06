@@ -28,20 +28,20 @@
     </xd:doc>
     <xsl:template match="termconflicts" mode="termstats">
         <div class="termstats-div termconflicts">
-            <h2><xsl:value-of select="sj:getString($language, 'Term Conflicts')"/></h2>
+            <h2><xsl:value-of select="sj:getTermbrowserString($language, 'Term Conflicts')"/></h2>
             <xsl:choose>
                 <xsl:when test="termconflict">
                     <table class="termconflicts-table">
                         <thead class="termconflicts-thead">
                             <tr>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="sj:getString($language, 'Term Notation')"/>
+                                    <xsl:value-of select="sj:getTermbrowserString($language, 'Term Notation')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="sj:getString($language, 'Is Preferred In')"/>
+                                    <xsl:value-of select="sj:getTermbrowserString($language, 'Is Preferred In')"/>
                                 </th>
                                 <th class="termconflicts-th">
-                                    <xsl:value-of select="sj:getString($language, 'Is Not Recommended In')"/>
+                                    <xsl:value-of select="sj:getTermbrowserString($language, 'Is Not Recommended In')"/>
                                 </th>
                             </tr>
                         </thead>
@@ -50,7 +50,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <p>
-                        <xsl:value-of select="sj:getString($language, 'No Termconflicts Found')"/>
+                        <xsl:value-of select="sj:getTermbrowserString($language, 'No Termconflicts Found')"/>
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
@@ -59,7 +59,7 @@
     
     <xsl:template match="termNotationsPerLanguage" mode="termstats">
         <div class="termstats-div termNotationsPerLanguageList">
-            <h2><xsl:value-of select="sj:getString($language, 'Number of Terms')"/></h2>
+            <h2><xsl:value-of select="sj:getTermbrowserString($language, 'Number of Terms')"/></h2>
             <ul>
                 <xsl:for-each select="language">
                     <li>
@@ -67,7 +67,7 @@
                             <xsl:with-param name="language" select="@lang"/>
                             <xsl:with-param name="languageCode" select="true()"/>
                         </xsl:call-template>
-                        <xsl:value-of select="': ' || . ||' ' || sj:getString($language, 'Term Notations')"/>
+                        <xsl:value-of select="': ' || . ||' ' || sj:getTermbrowserString($language, 'Term Notations')"/>
                     </li>
                 </xsl:for-each>
             </ul>
@@ -151,7 +151,7 @@
     
     <xsl:template match="chronologicalStatistics" mode="termstats">
         <div class="termstats-div termNotations" style="width:900px; height:900px;">
-            <h2><xsl:value-of select="sj:getString($language, 'Chronological Sequence')"/></h2>
+            <h2><xsl:value-of select="sj:getTermbrowserString($language, 'Chronological Sequence')"/></h2>
             <xsl:value-of select="$newline"/>
             <script>
                 function displayLineCharts() {
@@ -165,7 +165,7 @@
                             </xsl:for-each>
                         ],
                         datasets: [{
-                            label: "<xsl:value-of select="sj:getString($language, 'Preferred Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getTermbrowserString($language, 'Preferred Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(90,130,80,0.9)",
@@ -194,7 +194,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:value-of select="sj:getString($language, 'Admitted Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getTermbrowserString($language, 'Admitted Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(75,192,192,0.1)",
@@ -223,7 +223,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:value-of select="sj:getString($language, 'Not Recommended Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getTermbrowserString($language, 'Not Recommended Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(255,163,98,1.0)",
@@ -252,7 +252,7 @@
                             spanGaps: false,
                         }, 
                         {
-                            label: "<xsl:value-of select="sj:getString($language, 'Obsolete Term Notations')"/>",
+                            label: "<xsl:value-of select="sj:getTermbrowserString($language, 'Obsolete Term Notations')"/>",
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(232, 204, 78, 1)",
@@ -289,7 +289,7 @@
                             options: {
                                 title: {
                                     display: true,
-                                    text: '<xsl:value-of select="sj:getString($language, 'Term Notations')"/>'
+                                    text: '<xsl:value-of select="sj:getTermbrowserString($language, 'Term Notations')"/>'
                                 },
                                 scales: {
                                     xAxes: [{
