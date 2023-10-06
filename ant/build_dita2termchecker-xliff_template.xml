@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+<project xmlns:dita="http://dita-ot.sourceforge.net" xmlns:if="ant:if" xmlns:unless="ant:unless" name="dita2termchecker-xliff">
     
     <target name="dita2termchecker-xliff"
         depends="termchecker-xliff.init,
@@ -18,18 +18,23 @@
     </target>
     
     <target name="termchecker-xliff.create-schematron" description="Create a Schematron termchecker for XLIFF">
-        <pipeline>
-            <xslt 
-                destdir="${output.dir}"
-                reloadstylesheet="${dita.xhtml.reloadstylesheet}"
-                extension="-XLIFF-${args.language}.sch"
-                style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-xliff/terminology2termchecker-xliff.xsl">
-                <ditafileset format="dita" processingRole="normal"/>
-                <param name="language" expression="${args.language}" if="args.language"/>
-                <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
-                <xmlcatalog refid="dita.catalog"/>
-            </xslt>
-        </pipeline>
+        <delete dir="${dita.temp.dir}">
+            <include name="**/*.list"/>
+        </delete>
+        <xslt basedir="${dita.temp.dir}"
+            destdir="${output.dir}"
+            reloadstylesheet="${dita.xhtml.reloadstylesheet}"
+            classpathref="dost.class.path"
+            extension="-XLIFF-${args.language}.sch"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/termchecker-xliff/terminology2termchecker-xliff.xsl"
+            filenameparameter="FILENAME" 
+            filedirparameter="FILEDIR">
+            <ditafileset format="dita" />
+            <param name="language" expression="${args.language}" if="args.language"/>
+            <excludesfile name="${dita.temp.dir}${file.separator}${resourceonlyfile}" if="resourceonlyfile"/>
+            <includesfile name="${dita.temp.dir}${file.separator}${chunkedtopicfile}" if="chunkedtopicfile"/>
+            <xmlcatalog refid="dita.catalog"/>
+        </xslt>
         <basename property="schematronFile" file="${args.input}" suffix=".ditamap"/>
         <delete>
             <fileset dir="${output.dir}" >
