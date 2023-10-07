@@ -702,3 +702,8 @@ div.outerBorder {
     width: 200px;
     border: 1pt solid gray;
 }
+
+/* Button tools, print this page button, highlight removal buttin */
+.wh_right_tools {
+    margin-left: 0.5em;
+}
