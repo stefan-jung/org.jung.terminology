@@ -33,12 +33,22 @@
     <publication transtype="termchecker-xliff"/>
   </deliverable>
   
-  <deliverable name="TBX Basic" id="tbx-basic">
+  <deliverable name="TBX Basic v2" id="tbx-basic-v2">
     <context idref="terminology"/>
-    <output href="./tbx-basic"/>
-    <publication transtype="tbx-basic">
+    <output href="./tbx-basic-v2"/>
+    <publication transtype="tbx-basic-v2">
       <param name="debugging.mode" value="true"/>
       <param name="clean.temp" value="no"/>
+    </publication>
+  </deliverable>
+  
+  <deliverable name="TBX Basic v3" id="tbx-basic-v3">
+    <context idref="terminology"/>
+    <output href="./tbx-basic-v3"/>
+    <publication transtype="tbx-basic-v3">
+      <param name="debugging.mode" value="true"/>
+      <param name="clean.temp" value="no"/>
+      <param name="main.language" value="en-GB"/>
     </publication>
   </deliverable>
   

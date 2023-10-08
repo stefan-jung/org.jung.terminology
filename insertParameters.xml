@@ -10,6 +10,9 @@
     <!-- Debugging mode -->
     <param name="debugging.mode" expression="${debugging.mode}"/>
     
+    <!-- Parameters for TBX-Basic -->
+    <param name="main.language" expression="${main.language}" if="main.language"/>
+    
     <!-- Parameters for TBX-Min -->
     <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
     <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>

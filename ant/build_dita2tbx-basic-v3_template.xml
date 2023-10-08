@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+    
+    <target name="dita2tbx-basic-v3"
+        depends="
+        html5.init,
+        build-init,
+        preprocess,
+        tbx-basic-v3"/>
+    
+    <target name="tbx-basic-v3" description="Create a Termbase Exchange (TBX) file">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <makeurl property="output.dir.url" file="${output.dir}"/>
+        <xslt 
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${output.dir}${file.separator}${basename}.tbx"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-basic-v3/tbx-basic-v3.xsl"
+            destdir="${output.dir}">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="main.language" expression="${main.language}"/>
+            <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+            <param name="output.dir.url" expression="${output.dir.url}"/>
+        </xslt>
+    </target>
+    
+</project>

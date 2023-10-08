@@ -12,10 +12,17 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>Jung Terminology TBX-Basic 3</String>
+						<String>Jung Terminology TBX-Basic 2</String>
 					</field>
 					<field name="schemaDescriptor">
-						<null/>
+						<docTypeSchema>
+							<field name="type">
+								<Integer>4</Integer>
+							</field>
+							<field name="uri">
+								<String>${framework}/rng/TBXBasicRNGV02.rng</String>
+							</field>
+						</docTypeSchema>
 					</field>
 					<field name="classpath">
 						<String-array/>
@@ -158,7 +165,34 @@
 						<String></String>
 					</field>
 					<field name="doctypeRules">
-						<documentTypeRule-array/>
+						<documentTypeRule-array>
+							<documentTypeRule>
+								<field name="namespace">
+									<String>*</String>
+								</field>
+								<field name="rootElem">
+									<String>*martif*</String>
+								</field>
+								<field name="fileName">
+									<String>*</String>
+								</field>
+								<field name="publicID">
+									<String>*</String>
+								</field>
+								<field name="javaRuleClass">
+									<String></String>
+								</field>
+								<field name="attributeLocalName">
+									<String>*</String>
+								</field>
+								<field name="attributeNamespace">
+									<String>*</String>
+								</field>
+								<field name="attributeValue">
+									<String>*</String>
+								</field>
+							</documentTypeRule>
+						</documentTypeRule-array>
 					</field>
 					<field name="scenarios">
 						<scenario-array/>

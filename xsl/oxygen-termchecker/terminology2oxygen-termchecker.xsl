@@ -20,6 +20,7 @@
         </xsl:for-each>
     </xsl:variable>
     
+    <!-- Match on the input terminology DITA Map. -->
     <xsl:template match="/">
         <xsl:variable name="root" select="." as="node()"/>
         <xsl:for-each select="tokenize($languages, ',')">
