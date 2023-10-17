@@ -4,7 +4,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     exclude-result-prefixes="xs">
 
-    <xsl:output encoding="UTF-8" indent="yes" doctype-system="TBXBasiccoreStructV02.dtd"/>
+    <xsl:output encoding="UTF-8" indent="yes"/>
     
     <xsl:param name="dita.temp.dir.url" as="xs:string"/>
     

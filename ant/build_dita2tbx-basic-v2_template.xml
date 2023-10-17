@@ -8,20 +8,24 @@
         preprocess,
         tbx-basic-v2"/>
     
+    <taskdef name="jing" classname="com.thaiopensource.relaxng.util.JingTask"/>
+    
     <target name="tbx-basic-v2" description="Create a Termbase Exchange (TBX) file">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
         <makeurl property="output.dir.url" file="${output.dir}"/>
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
-            out="${output.dir}${file.separator}${basename}.xml"
+            out="${output.dir}${file.separator}${basename}.tbx"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-basic-v2/tbx-basic-v2.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
             <param name="output.dir.url" expression="${output.dir.url}"/>
         </xslt>
-        <!--<delete file="${output.dir}${file.separator}${basename}.xml"/>-->
+        <echo>Validate TBX with JING...</echo>
+        <jing file="${output.dir}${file.separator}${basename}.tbx"
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-basic-v2/rng/TBXBasicRNGV02.rng"/>
     </target>
     
 </project>

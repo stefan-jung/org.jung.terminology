@@ -22,6 +22,9 @@
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
             <param name="output.dir.url" expression="${output.dir.url}"/>
         </xslt>
+        <echo>Validate TBX with JING...</echo>
+        <jing file="${output.dir}${file.separator}${basename}.tbx"
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-basic-v3/rng/TBXcoreStructV03.rng"/>
     </target>
     
 </project>

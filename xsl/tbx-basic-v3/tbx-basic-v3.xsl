@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
+    xmlns="urn:iso:std:iso:30042:ed-2"
     xmlns:basic="http://www.tbxinfo.net/ns/basic"
+    xmlns:min="http://www.tbxinfo.net/ns/min"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xpath-default-namespace="urn:iso:std:iso:30042:ed-2"
     exclude-result-prefixes="xs">
 
     <xsl:output method="xml" indent="true"/>
@@ -11,10 +14,13 @@
     <xsl:param name="main.language" as="xs:string"/>
     <xsl:param name="dita.temp.dir.url" as="xs:string"/>
     
-    
+    <xsl:mode name="termNotation" on-no-match="shallow-skip"/>
     <xsl:mode name="termref" on-no-match="shallow-skip"/>
     <xsl:mode name="termentry" on-no-match="shallow-skip"/>
     <xsl:mode name="definition" on-no-match="shallow-skip"/>
+    <xsl:mode name="annotation" on-no-match="shallow-skip"/>
+    <xsl:mode name="termContextText" on-no-match="shallow-skip"/>
+    <xsl:mode name="part-of-speech" on-no-match="shallow-skip"/>
     
     <xsl:variable name="xml-model1" select="'&lt;?xml-model href=&quot;https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic_DCT.sch&quot; type=&quot;application/xml&quot; schematypens=&quot;http://purl.oclc.org/dsdl/schematron&quot;?>'"/>
     <xsl:variable name="xml-model2" select="'&lt;?xml-model href=&quot;https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic.nvdl&quot; type=&quot;application/xml&quot; schematypens=&quot;http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0&quot;?>'"/>
@@ -48,14 +54,10 @@
         <xsl:apply-templates select="document($t)" mode="termentry"/>
     </xsl:template>
   
-    <xsl:template name="add-doctype">
-        <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE martif SYSTEM "TBXBasiccoreStructV02.dtd"&gt;</xsl:text>
-    </xsl:template>
-
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry">
         <xsl:variable name="termentry-root" select="." as="node()"/>
-        <conceptEntry id="{generate-id()}" xmlns="urn:iso:std:iso:30042:ed-2">
+        <conceptEntry id="{generate-id()}">
             <xsl:variable name="definition" select="*[contains(@class, ' termentry/definition ')]"/>
             <xsl:variable name="definitionText" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionText ')]"/>
             <xsl:variable name="definitionSourceName" select="*[contains(@class, ' termentry/definition ')]/*[contains(@class, ' termentry/definitionSource ')]/*[contains(@class, ' termentry/sourceName ')]"/>
@@ -96,6 +98,40 @@
                 &lt;A=c175:c175-en-t1&gt;secondary
                 color&lt;/A&gt;.</basic:definition>
         </descripGrp>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')]" mode="termNotation">
+        <termSec>
+            <term><xsl:value-of select="normalize-space(*[contains(@class, ' termentry/termVariant ')]/text())"/></term>
+            <xsl:apply-templates mode="part-of-speech"/>
+            <xsl:apply-templates select="*[contains(@class, ' termentry/termContext ')]" mode="#current"/>
+            <xsl:apply-templates mode="annotation"/>
+            <xsl:choose>
+                <xsl:when test="@usage = 'preferred'">
+                    <min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+                </xsl:when>
+                <xsl:when test="@usage = 'admitted'">
+                    <min:administrativeStatus>admittedTerm-admn-sts</min:administrativeStatus>
+                </xsl:when>
+                <xsl:when test="@usage = 'deprecated' or @usage = 'notRecommended'">
+                    <min:administrativeStatus>deprecatedTerm-admn-sts</min:administrativeStatus>
+                </xsl:when>
+            </xsl:choose>
+        </termSec>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termContext ')]" mode="#all">
+        <descrip type="context">
+            <xsl:apply-templates mode="termContextText"/>
+        </descrip>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termContextText ')]" mode="termContextText">
+        <xsl:value-of select="."/>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/partOfSpeech ')]">
+        <termNote type="partOfSpeech"><xsl:value-of select="@value"/></termNote>
     </xsl:template>
         
                         
