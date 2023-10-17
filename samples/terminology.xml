@@ -55,7 +55,9 @@
   <deliverable name="TBX Min" id="tbx-min">
     <context idref="terminology"/>
     <output href="./tbx-min"/>
-    <publication transtype="tbx-min"/>
+    <publication transtype="tbx-min">
+      <param name="source.language" value="en-US"/>
+    </publication>
   </deliverable>
   
   <deliverable name="Oxygen Termchecker" id="oxygen-termchecker">

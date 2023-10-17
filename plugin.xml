@@ -23,7 +23,7 @@
       <val default="true">false</val>
       <val>true</val>
     </param>
-    <param name="args.source.language" desc="Source language of terminology" type="string">
+    <param name="source.language" desc="Source language of terminology" type="string">
       <val>af-ZA</val>
       <val>ar-AE</val>
       <val>ar-BH</val>
@@ -161,7 +161,7 @@
       <val>zh-SG</val>
       <val>zh-TW</val>
     </param>
-    <param name="args.target.language" desc="Target language of terminology" type="string">
+    <param name="target.language" desc="Target language of terminology" type="string">
       <val>af-ZA</val>
       <val>ar-AE</val>
       <val>ar-BH</val>

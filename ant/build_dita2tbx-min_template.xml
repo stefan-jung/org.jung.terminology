@@ -2,36 +2,37 @@
 <project xmlns:if="ant:if" xmlns:unless="ant:unless">
     
     <target name="dita2tbx-min"
-        depends="tbx-min.init,
+        depends="
+        tbx-min.init,
+        html5.init,
+        build-init,
         preprocess,
-        dita.topics.html.tbx-min"/>
+        tbx-min"/>
     
     <target name="tbx-min.init">
-        <property name="root-chunk-override" value="to-content"/>
+        <fail unless="source.language">The mandatory property "source.language" is not set.</fail>
+        <echo if:set="source.language">source.language = "${source.language}"</echo>
+        <echo if:set="target.language">target.language = "${target.language}"</echo>
     </target>
     
-    <target name="dita.topics.html.tbx-min" description="Build XHTML output from dita inner and outer topics,which will adjust the directory.">
-        <pipeline>
-            <xslt 
-                destdir="${output.dir}"
-                reloadstylesheet="${dita.xhtml.reloadstylesheet}"
-                extension=".tbxm"
-                style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min/tbx-min.xsl">
-                <ditafileset format="dita" processingRole="normal"/>
-                <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
-                <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
-                <xmlcatalog refid="dita.catalog"/>
-            </xslt>
-        </pipeline>
-        <basename property="tbx-min" file="${args.input}" suffix=".ditamap"/>
-        <delete>
-            <fileset dir="${output.dir}" >
-                <exclude name="**/${tbx-min}.tbxm"/>
-            </fileset>
-            <dirset dir="${output.dir}"/>
-        </delete>
-        <copy file="${dita.plugin.org.jung.terminology.dir}${file.separator}dtd${file.separator}TBX-Min.rng" todir="${output.dir}"/>
-        <replaceregexp file="${output.dir}${file.separator}${tbx-min}.tbxm" match="&lt;!DOCTYPE TBX\s+PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" replace=""/>
+    <target name="tbx-min" description="Create a Termbase Exchange (TBX) file">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <makeurl property="output.dir.url" file="${output.dir}"/>
+        <xslt 
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${output.dir}${file.separator}${basename}.tbx"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min/tbx-min.xsl"
+            destdir="${output.dir}">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="source.language" expression="${source.language}" if="source.language"/>
+            <param name="target.language" expression="${target.language}" if="target.language"/>
+            <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+            <param name="output.dir.url" expression="${output.dir.url}"/>
+        </xslt>
+        <echo>Validate TBX with JING...</echo>
+        <jing file="${output.dir}${file.separator}${basename}.tbx"
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min/rng/TBX-Min.rng"/>
     </target>
     
 </project>

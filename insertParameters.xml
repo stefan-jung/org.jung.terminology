@@ -14,8 +14,8 @@
     <param name="main.language" expression="${main.language}" if="main.language"/>
     
     <!-- Parameters for TBX-Min -->
-    <param name="sourceLanguage" expression="${args.source.language}" if="args.source.language"/>
-    <param name="targetLanguage" expression="${args.target.language}" if="args.target.language"/>
+    <param name="source.language" expression="${source.language}" if="source.language"/>
+    <param name="target.language" expression="${target.language}" if="target.language"/>
     
     <!-- Parameters for Termchecker-DITA and Termchecker-XLIFF -->
     <param name="language" expression="${args.language}" if="args.language"/>
