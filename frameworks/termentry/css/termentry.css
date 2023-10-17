@@ -1143,10 +1143,9 @@
 }
 *[class~="termentry/domain"] {
 content:
-    oxy_textfield(
-        edit, '@value',
-        columns, 50,
-        tooltip, '${i18n(term.domain.placeholder)}'
+    oxy_combobox( 
+            edit, '@domain-name',
+            editable, true
     ) !important;
     width: 75%;
     display: inline;

@@ -48,6 +48,12 @@ Please refer to the [documentation](https://doctales.atlassian.net/wiki/x/AoAy).
 * The plugin contains SVG flags taken from the [flag-icon-css](https://github.com/lipis/flag-icon-css) project, which is available under the [MIT license](https://opensource.org/licenses/MIT).
 * All TBX samples and grammar files are available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The grammar files are provided in the repository [github.com/LTAC-Global](https://github.com/LTAC-Global). The sample files can be obtained from [tbx-info.net](https://www.tbxinfo.net).
 
+# TBX-Core
+
+**TBX-Core** is a TBX dialect and licensed under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+
+The **TBXcoreStructV03.rng** is maintained in the GitHub repository [github.com/LTAC-Global/TBX_Core_RNG](https://github.com/LTAC-Global/TBX_Core_RNG). The grammar file(s) represent TBX core as described in ISO 30042. 
+
 ## Contribution
 
 People who contribute to **org.doctales.terminology**:
