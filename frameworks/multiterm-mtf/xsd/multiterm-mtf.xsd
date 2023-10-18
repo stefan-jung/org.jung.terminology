@@ -1,0 +1,93 @@
+<!-- SOURCE: https://developers.rws.com/multiterm-api-docs/apiconcepts/MTF/xsd_schema.html -->
+<xs:schema id="Schema" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="transacGrp">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="date" type="xs:dateTime" />
+                <xs:element name="transac" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="type" type="xs:string" />
+                        <xs:attribute name="Plink" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="descripGrp">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="descrip" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="xref" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="Tlink" type="xs:string" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="type" type="xs:string" />
+                        <xs:attribute name="Clink" type="xs:string" />
+                        <xs:attribute name="Glink" type="xs:string" />
+                        <xs:attribute name="Plink" type="xs:string" />
+                        <xs:attribute name="Slink" type="xs:string" />
+                        <xs:attribute name="Tlink" type="xs:string" />
+                        <xs:attribute name="Ulink" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="transacGrp" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="descripGrp" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Schema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="transacGrp" />
+                <xs:element ref="descripGrp" />
+                <xs:element name="mtf">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="conceptGrp" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="concept" type="xs:unsignedInt" />
+                                        <xs:element name="system" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="type" type="xs:string" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element ref="transacGrp" minOccurs="0" maxOccurs="unbounded" />
+                                        <xs:element ref="descripGrp" minOccurs="0" maxOccurs="unbounded" />
+                                        <xs:element name="languageGrp" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="language" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="type" type="xs:string" />
+                                                            <xs:attribute name="lang" type="xs:string" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element ref="transacGrp" minOccurs="0" maxOccurs="unbounded" />
+                                                    <xs:element ref="descripGrp" minOccurs="0" maxOccurs="unbounded" />
+                                                    <xs:element name="termGrp" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="term" type="xs:string" />
+                                                                <xs:element ref="transacGrp" minOccurs="0" maxOccurs="unbounded" />
+                                                                <xs:element ref="descripGrp" minOccurs="0" maxOccurs="unbounded" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

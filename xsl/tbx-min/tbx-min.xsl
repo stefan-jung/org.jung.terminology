@@ -19,14 +19,9 @@
     <xsl:param name="target.language" as="xs:string" required="false" select="''"/>
 
     <!-- The parameter $newline defines a line break. -->
-    <xsl:variable name="newline">
-        <xsl:text>
-        </xsl:text>
-    </xsl:variable>
+    <xsl:variable name="newline" select="'&#xa;'" as="xs:string"/>
     
 
-    <!-- Match the root node of the DITA Map and create a Schematron root node -->
-  
     <xsl:template match="/">
         <xsl:processing-instruction name="xml-model">
             <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch</xsl:attribute>

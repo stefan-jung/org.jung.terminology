@@ -16,7 +16,7 @@
   <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,oxygen-termchecker,termbrowser-responsive"/>
+  <feature extension="dita.conductor.transtype.check" value="tbx-min,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm-mtf,oxygen-termchecker,termbrowser-responsive"/>
   
   <transtype name="tbx-min" extends="html5" desc="TBX-Min">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
@@ -298,6 +298,13 @@
       <val>zh-MO</val>
       <val>zh-SG</val>
       <val>zh-TW</val>
+    </param>
+  </transtype>
+  
+  <transtype name="multiterm-mtf" extends="html5" desc="RWS Multiterm MTF">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
     </param>
   </transtype>
 
@@ -623,6 +630,7 @@
   </transtype>
   
   <!-- Import Ant script -->
+  <feature extension="ant.import" file="ant/build_dita2multiterm-mtf.xml"/>
   <feature extension="ant.import" file="ant/build_dita2oxygen-termchecker_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v2_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v3_template.xml"/>
