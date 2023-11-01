@@ -15,13 +15,13 @@
         <echo if:set="target.language">target.language = "${target.language}"</echo>
     </target>
     
-    <target name="tbx-min" description="Create a Termbase Exchange (TBX) file">
+    <target name="tbx-min" description="Create a Termbase Exchange Minimal (TBX-Min) file">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
         <makeurl property="output.dir.url" file="${output.dir}"/>
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
-            out="${output.dir}${file.separator}${basename}.tbx"
+            out="${output.dir}${file.separator}${basename}.tbxm"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min/tbx-min.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
@@ -30,8 +30,8 @@
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
             <param name="output.dir.url" expression="${output.dir.url}"/>
         </xslt>
-        <echo>Validate TBX with JING...</echo>
-        <jing file="${output.dir}${file.separator}${basename}.tbx"
+        <echo>Validate TBXM with JING...</echo>
+        <jing file="${output.dir}${file.separator}${basename}.tbxm"
             rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min/rng/TBX-Min.rng"/>
     </target>
     
