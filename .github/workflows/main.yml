@@ -7,19 +7,22 @@ on:
     branches: [ "main" ]
 
   workflow_dispatch:
+  
+env:
+  DITA_OT_VERSION: $DITA_OT_VERSION
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: DITA-OT
+      - name: DITA-OT $DITA_OT_VERSION
         run: |
-          curl -L https://github.com/dita-ot/dita-ot/releases/download/4.1.2/dita-ot-4.1.2.zip -s
-          unzip dita-ot-4.1.2
-          chmod +x dita-ot-4.1.2/bin/dita
-          chmod +x dita-ot-4.1.2/bin/ant
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT_VERSION/dita-ot-$DITA_OT_VERSION.zip
+          unzip dita-ot-$DITA_OT_VERSION
+          chmod +x dita-ot-$DITA_OT_VERSION/bin/dita
+          chmod +x dita-ot-$DITA_OT_VERSION/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          dita-ot-4.1.2/bin/dita install org.jung.terminology.zip --force
+          dita-ot-$DITA_OT_VERSION/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
         run: dita-ot/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
