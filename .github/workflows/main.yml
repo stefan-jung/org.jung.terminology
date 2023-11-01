@@ -60,6 +60,15 @@ jobs:
           dita-ot-4.0.2/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
         run: dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts-4-0-2
+          path: |
+            4.0.2
+            !4.0.2/**/*.html
+            !4.0.2/**/*.js
+            !4.0.2/**/*.css
 
   dita-ot_3-7-4:
     runs-on: ubuntu-latest
@@ -80,3 +89,12 @@ jobs:
           dita-ot-3.7.4/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
         run: dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts-3-7-4
+          path: |
+            3.7.4
+            !3.7.4/**/*.html
+            !3.7.4/**/*.js
+            !3.7.4/**/*.css
