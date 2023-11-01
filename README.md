@@ -4,6 +4,7 @@ org.jung.terminology
 [![DITA-OT 3.x](https://img.shields.io/badge/DITA--OT-3.x-green.svg)](http://www.dita-ot.org) 
 [![DITA-OT 4.x](https://img.shields.io/badge/DITA--OT-4.x-green.svg)](http://www.dita-ot.org)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![CI](https://github.com/stefan-jung/org.jung.terminology/actions/workflows/main.yml/badge.svg)](https://github.com/stefan-jung/org.jung.terminology/actions/workflows/main.yml)
 
 **org.jung.terminology** is a plugin for the [DITA-OT](http://dita-ot.github.io) for creating a DITA-based terminology database.
 
