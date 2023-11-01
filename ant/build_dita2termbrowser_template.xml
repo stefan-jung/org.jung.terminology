@@ -29,7 +29,7 @@
         otherwise the plugin might not work in specific environments.
     -->
     <target name="-is-webhelp-responsive-available">
-        <fail unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive not found</fail>
+        <echo unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive not found</echo>
         <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive found</echo>
     </target>
     
