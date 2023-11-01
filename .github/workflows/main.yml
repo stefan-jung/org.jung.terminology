@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: DITA-OT $DITA_OT_VERSION
+      - name: DITA-OT
         run: |
           curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT_VERSION/dita-ot-$DITA_OT_VERSION.zip
           unzip dita-ot-$DITA_OT_VERSION
