@@ -3,7 +3,7 @@ description: 'Publish the org.jung.terminology DITA sample files using the provi
 inputs:
   PLUGIN_BRANCH:
     description: 'Git branch of the plugin'
-    default: 'master'
+    default: 'main'
   DITA_OT_VERSION:
     description: 'DITA-OT version used for rendering'
     default: '4.0.1'
