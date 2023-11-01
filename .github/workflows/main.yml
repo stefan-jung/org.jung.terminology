@@ -16,5 +16,6 @@ jobs:
       - name: Run DITA-OT Unit Test
         uses: jason-fox/dita-unit-test-action@master
         with:
+          dita-ot-version: 4.1.2
           plugin: 'org.jung.terminology'
-          setup-script: 'build_setup-testsuite.xml'
+          setup-script: 'test-setup.sh'
