@@ -34,7 +34,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: artifacts-4-1-2
+          name: org.jung.terminology-4-1-2
           path: |
             4.1.2
             !4.1.2/**/*.html
@@ -63,7 +63,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: artifacts-4-0-2
+          name: org.jung.terminology-4-0-2
           path: |
             4.0.2
             !4.0.2/**/*.html
@@ -92,7 +92,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: artifacts-3-7-4
+          name: org.jung.terminology-3-7-4
           path: |
             3.7.4
             !3.7.4/**/*.html
