@@ -12,7 +12,7 @@ env:
 
 jobs:
 
-  dita-ot-4:
+  dita-ot_4-1-2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,16 +23,36 @@ jobs:
           distribution: 'zulu'
       - name: DITA-OT
         run: |
-          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT_VERSION/dita-ot-$DITA_OT_VERSION.zip
-          unzip dita-ot-$DITA_OT_VERSION
-          chmod +x dita-ot-$DITA_OT_VERSION/bin/dita
-          chmod +x dita-ot-$DITA_OT_VERSION/bin/ant
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.1.2/dita-ot-4.1.2.zip
+          unzip dita-ot-4.1.2
+          chmod +x dita-ot-4.1.2/bin/dita
+          chmod +x dita-ot-4.1.2/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          dita-ot-$DITA_OT_VERSION/bin/dita install org.jung.terminology.zip --force
+          dita-ot-4.1.2/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
-        run: dita-ot-$DITA_OT_VERSION/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
+        run: dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
+        
+  dita-ot_4-0-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'zulu'
+      - name: DITA-OT
+        run: |
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.0.2/dita-ot-4.0.2.zip
+          unzip dita-ot-4.0.2
+          chmod +x dita-ot-4.0.2/bin/dita
+          chmod +x dita-ot-4.0.2/bin/ant
+          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          dita-ot-4.0.2/bin/dita install org.jung.terminology.zip --force
+      - name: Build test files
+        run: dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
 
-  dita-ot-3:
+  dita-ot_3-7-4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
