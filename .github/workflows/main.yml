@@ -11,7 +11,8 @@ env:
   DITA_OT_VERSION: 4.1.2
 
 jobs:
-  build:
+
+  dita-ot-4:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,3 +31,23 @@ jobs:
           dita-ot-$DITA_OT_VERSION/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
         run: dita-ot-$DITA_OT_VERSION/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
+
+  dita-ot-3.7.4:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'zulu'
+      - name: DITA-OT
+        run: |
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/3.7.4/dita-ot-3.7.4.zip
+          unzip dita-ot-3.7.4
+          chmod +x dita-ot-3.7.4/bin/dita
+          chmod +x dita-ot-3.7.4/bin/ant
+          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          dita-ot-3.7.4/bin/dita install org.jung.terminology.zip --force
+      - name: Build test files
+        run: dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --processing-mode=strict --verbose
