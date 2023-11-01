@@ -5,10 +5,10 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch
+  workflow_dispatch:
   
 env:
-  DITA_OT_VERSION: $DITA_OT_VERSION
+  DITA_OT_VERSION: 4.1.2
 
 jobs:
   build:
