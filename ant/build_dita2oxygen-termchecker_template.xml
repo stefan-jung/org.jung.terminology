@@ -15,7 +15,7 @@
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
             out="${output.dir}${file.separator}${basename}.xml"
-            style="${dita.plugin.org.jung.terminology.dir}/xsl/oxygen-termchecker/terminology2oxygen-termchecker.xsl"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/oxygen-termchecker/oxygen-termchecker.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
