@@ -32,17 +32,16 @@
         <echo unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive not found</echo>
         <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive found</echo>
     </target>
-    
+
+    <!-- 
+        Helper target to determine if terminology statistics should be generated.
+        This target is looking for a &lt;termstatsref&gt; element on the terminology map.
+        The property "generate-termstats" can also be set manually. This could make sense,
+        for example, if the user has extended the transtype "termbrowser-responsive",
+        so the transtype is no longer "termbrowser-responsive" and the condition of this
+        target will not be met.
+    -->
     <target name="-generate-termstats">
-        <description>
-            Helper target to determine if terminology statistics should be generated.
-            This target is looking for a &lt;termstatsref&gt; element on the terminology map.
-            The property "generate-termstats" can also be set manually. This could make sense,
-            for example, if the user has extended the transtype "termbrowser-responsive",
-            so the transtype is no longer "termbrowser-responsive" and the condition of this
-            target will not be met.
-        </description>
-        
         <property if:set="args.term.containermap" name="termmap" value="${args.term.containermap}"/>
         <property unless:set="args.term.containermap" name="termmap" value="${args.input}"/>
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
