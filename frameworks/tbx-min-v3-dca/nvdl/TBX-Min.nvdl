@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" startMode="core">
+    <mode name="core">
+        <namespace ns="urn:iso:std:iso:30042:ed-2">
+            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX_Core_RNG/master/TBXcoreStructV03.rng" useMode="RNG"/>
+            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" useMode="SCH"/>
+            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX_min_module/master/Min.sch" useMode="SCH"/>
+        </namespace>
+        <anyNamespace>
+            <reject/>
+        </anyNamespace>
+    </mode>
+    <mode name="RNG">
+        <namespace ns="http://www.tbxinfo.net/ns/min">
+            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX_min_module/master/Min.rng"/>
+            <attach/>
+        </namespace>
+    </mode>
+    <mode name="SCH">
+        <namespace ns="http://www.tbxinfo.net/ns/min">
+            <attach/>
+        </namespace>
+    </mode>
+</rules>

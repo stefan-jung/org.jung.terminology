@@ -52,11 +52,21 @@
     </publication>
   </deliverable>
   
-  <deliverable name="TBX Min" id="tbx-min">
+  <deliverable name="TBX Min v3 DCA" id="tbx-min-v3-dca">
     <context idref="terminology"/>
-    <output href="./tbx-min"/>
-    <publication transtype="tbx-min">
+    <output href="./tbx-min-v3-dca"/>
+    <publication transtype="tbx-min-v3-dca">
       <param name="source.language" value="en-US"/>
+      <param name="license" value="APL2"/>
+    </publication>
+  </deliverable>
+  
+  <deliverable name="TBX Min v3 DCT" id="tbx-min-v3-dct">
+    <context idref="terminology"/>
+    <output href="./tbx-min-v3-dct"/>
+    <publication transtype="tbx-min-v3-dct">
+      <param name="source.language" value="en-US"/>
+      <param name="license" value="APL2"/>
     </publication>
   </deliverable>
   

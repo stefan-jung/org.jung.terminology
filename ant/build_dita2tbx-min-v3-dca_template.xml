@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:if="ant:if" xmlns:unless="ant:unless">
     
-    <target name="dita2tbx-min"
+    <target name="dita2tbx-min-v3-dca"
         depends="
-        tbx-min.init,
+        tbx-min-v3-dca.init,
         html5.init,
         build-init,
         preprocess,
-        tbx-min"/>
+        tbx-min-v3-dca"/>
     
-    <target name="tbx-min.init">
+    <target name="tbx-min-v3-dca.init">
         <fail unless="source.language">The mandatory property "source.language" is not set.</fail>
         <echo if:set="source.language">source.language = "${source.language}"</echo>
         <echo if:set="target.language">target.language = "${target.language}"</echo>
     </target>
     
-    <target name="tbx-min" description="Create a Termbase Exchange Minimal (TBX-Min) file">
+    <target name="tbx-min-v3-dca" description="Create a Termbase Exchange Minimal (TBX-Min) v3 DCA file">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
         <makeurl property="output.dir.url" file="${output.dir}"/>
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
             out="${output.dir}${file.separator}${basename}.tbxm"
-            style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min/tbx-min.xsl"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min-v3-dca/tbx-min-v3-dca.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
             <param name="source.language" expression="${source.language}" if="source.language"/>
@@ -30,9 +30,13 @@
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
             <param name="output.dir.url" expression="${output.dir.url}"/>
         </xslt>
-        <echo>Validate TBXM with JING...</echo>
+        <!--
+            It seems this was an outdated grammar file, probably TBX-Min 2. The TBX-Min 3 grammars
+            are provided as NVDL, but <jing> cannot (yet) validate NVDL.
+        -->
+        <!--<echo>Validate TBXM with JING...</echo>
         <jing file="${output.dir}${file.separator}${basename}.tbxm"
-            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min/rng/TBX-Min.rng"/>
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min/rng/TBX-Min.rng"/>-->
     </target>
     
 </project>

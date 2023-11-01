@@ -23,9 +23,10 @@
     <!-- Parameters for Termchecker-XLIFF -->
     <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
     
+    <!-- Parameters for TBX-Min -->
+    <param name="license" expression="${args.license}" if="args.license"/>
+    
     <!-- Parameters for Termbrowser -->
-    
-    
     <param name="term.semantic-net.edges.color"
         expression="${term.semantic-net.edges.color}"
         if="term.semantic-net.edges.color"/>

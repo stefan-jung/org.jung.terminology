@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBXcoreStructV03_TBX-Min_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX_Core_RNG/master/TBXcoreStructV03.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <tbx type="TBX-Min" style="dca" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2">
 	<tbxHeader>
 		<fileDesc>
@@ -12,9 +11,15 @@
 	</tbxHeader>
 	<text>
 		<body>
+			<conceptEntry id="">
+				<langSec xml:lang="">
+					<termSec>
+						<term></term>
+					</termSec>
+				</langSec>
+			</conceptEntry>
 			<conceptEntry id="c1">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://www.physics.drexel.edu/observatory/dump.shtml</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>open cluster</term>
@@ -42,8 +47,6 @@
 			</conceptEntry>
 			<conceptEntry id="c2">
 				<descrip type="subjectField">Stellar Birth</descrip>
-				<note>G-Source:
-					http://www.cfht.hawaii.edu/Instruments/Spectroscopy/Espadons/www.ast.obs-mip.fr/users/donati/press/fuori_eng.html</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>circumstellar accretion disk</term>
@@ -76,7 +79,6 @@
 			</conceptEntry>
 			<conceptEntry id="c3">
 				<descrip type="subjectField">Stellar Death</descrip>
-				<note>G-Source: http://wallpaper-s.org/12__Supermassive_Black_Hole.htm</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>black hole</term>
@@ -92,8 +94,6 @@
 			</conceptEntry>
 			<conceptEntry id="c4">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://nakedmaninthetree.wordpress.com/2009/02/22/galaxies-and-the-future/</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>gamma-ray burst</term>
@@ -117,7 +117,6 @@
 			</conceptEntry>
 			<conceptEntry id="c5">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://www.astrographics.com/GalleryPrintsIndex/GP0046.html</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>globular cluster</term>
@@ -136,7 +135,6 @@
 			<conceptEntry id="c6">
 				<descrip type="subjectField">General</descrip>
 				<langSec xml:lang="en">
-					<note>G-Source: http://www.skyofplenty.com/?page_id=374</note>
 					<termSec>
 						<term>main-sequence</term>
 						<termNote type="partOfSpeech">adjective</termNote>
@@ -151,7 +149,6 @@
 			</conceptEntry>
 			<conceptEntry id="c7">
 				<descrip type="subjectField">Stellar Birth</descrip>
-				<note>G-Source: http://www.konkoly.hu/KISAG/Science/star/star_intro.html</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>protostar</term>
@@ -159,8 +156,6 @@
 					</termSec>
 				</langSec>
 				<langSec xml:lang="es">
-					<note>G-Source:
-						http://geocities.ws/acarvajaltt/temas/estrellas_nacimiento_estelar.html</note>
 					<termSec>
 						<term>protoestrella</term>
 						<termNote type="partOfSpeech">noun</termNote>
@@ -169,7 +164,6 @@
 			</conceptEntry>
 			<conceptEntry id="c8">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://apod.nasa.gov/apod/ap060109.html</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>star cluster</term>
@@ -196,7 +190,6 @@
 			<conceptEntry id="c9">
 				<descrip type="subjectField">General</descrip>
 				<langSec xml:lang="en">
-					<note>G-Source: http://www.cfa.harvard.edu/~afrebel/milky-way-2.jpg</note>
 					<termSec>
 						<term>Galaxy</term>
 						<termNote type="partOfSpeech">noun</termNote>
@@ -211,7 +204,6 @@
 					</termSec>
 				</langSec>
 				<langSec xml:lang="es">
-					<note>G-Source: http://oacs-unah.edu.hn/an111/vrt/img/via_lactea.jpg</note>
 					<termSec>
 						<term>Galaxia</term>
 						<termNote type="partOfSpeech">noun</termNote>
@@ -228,8 +220,6 @@
 			</conceptEntry>
 			<conceptEntry id="c10">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://lh4.ggpht.com/_EuutPdvjcY0/SQ2jGBKWO7I/AAAAAAAAALM/gjDMVimDQc8/005Est.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>star</term>
@@ -245,7 +235,6 @@
 			</conceptEntry>
 			<conceptEntry id="c11">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://drdima.files.wordpress.com/2009/05/sun-rays.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>UV radiation</term>
@@ -269,7 +258,6 @@
 			</conceptEntry>
 			<conceptEntry id="c12">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://www.greatdreams.com/magnet1.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>magnetic field</term>
@@ -285,7 +273,6 @@
 			</conceptEntry>
 			<conceptEntry id="c13">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://images.spaceref.com/news/2009/ooBlue_Straggler09.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>blue straggler</term>
@@ -317,8 +304,6 @@
 			</conceptEntry>
 			<conceptEntry id="c15">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://lh6.ggpht.com/_6hgSmco4R9M/SaqplXGqJfI/AAAAAAAAA1k/B3a43_O9VI8/56_Binary_Stars_thumb3.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>binary star</term>
@@ -340,8 +325,6 @@
 			</conceptEntry>
 			<conceptEntry id="c16">
 				<descrip type="subjectField">Stellar Birth</descrip>
-				<note>G-Source:
-					http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html</note>
 				<note>This figure compares the IMFs by ploting mass fraction per dex versus mass,
 					i.e., normalized so that the integral under each curve is unity. They are
 					assumed to be valid from 0.1 to 120 solar masses.</note>
@@ -416,8 +399,6 @@
 			</conceptEntry>
 			<conceptEntry id="c21">
 				<descrip type="subjectField">Stellar Death</descrip>
-				<note>G-Source:
-					http://jcconwell.wordpress.com/2009/07/24/top-10-ways-the-universe-could-kill-us/supernova/</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>supernova</term>
@@ -445,8 +426,6 @@
 			</conceptEntry>
 			<conceptEntry id="c23">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://www.lcsd.gov.hk/CE/Museum/Space/EducationResource/Universe/framed_e/lecture/ch15/imgs/red_size.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>red giant</term>
@@ -462,7 +441,6 @@
 			</conceptEntry>
 			<conceptEntry id="c24">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://www.wolflodge.org/bluestar/h_red_dwarf_02.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>red dwarf</term>
@@ -478,8 +456,6 @@
 			</conceptEntry>
 			<conceptEntry id="c25">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://www.astro.columbia.edu/~archung/labs/spring2002/images/spectral_type2.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>spectral type</term>
@@ -495,7 +471,6 @@
 			</conceptEntry>
 			<conceptEntry id="c26">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://www.stsci.edu/~inr/thisweek1/thisweek/WhiteDwarf.gif</note>
 				<langSec xml:lang="en">
 					<note>This is the end-result of all but the most massive of stars.</note>
 					<note>N-Source: Oxford2007</note>
@@ -513,8 +488,6 @@
 			</conceptEntry>
 			<conceptEntry id="c27">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://www.phys.ncku.edu.tw/~astrolab/mirrors/apod_e/image/0901/ngc2818_hheritage_800.jpg</note>
 				<langSec xml:lang="en">
 					<note>As mass is gradually lost, the core of the star becomes more exposed,
 						ultimately becoming a white dwarf. Also, planetary nebulae have nothing to
@@ -534,7 +507,6 @@
 			</conceptEntry>
 			<conceptEntry id="c28">
 				<descrip type="subjectField">Stellar Birth</descrip>
-				<note>G-Source: http://apod.nasa.gov/apod/image/0612/NGC2174_lrg.jpg</note>
 				<langSec xml:lang="en">
 					<note>Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can
 						all cause the emission nebula to shine.</note>
@@ -554,8 +526,6 @@
 			</conceptEntry>
 			<conceptEntry id="c29">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://my-blackberry.net/wallpapers/49/m/NASA_-_The_Horsehead_Nebula%2C_B33%2C_Orion_Nebula.jpg</note>
 				<langSec xml:lang="en">
 					<note>The term was originally applied to any object with a fuzzy telescopic
 						appearance, but with the advent of larger instruments many 'nebulae' were
@@ -581,7 +551,6 @@
 			</conceptEntry>
 			<conceptEntry id="c30">
 				<descrip type="subjectField">Stellar Birth</descrip>
-				<note>G-Source: http://www.mallorcaweb.net/masm/obstel/caballo.GIF</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>dark nebula</term>
@@ -609,8 +578,6 @@
 			</conceptEntry>
 			<conceptEntry id="c31">
 				<descrip type="subjectField">Stellar Birth</descrip>
-				<note>G-Source:
-					http://mm04.nasaimages.org/MediaManager/srvr?mediafile=/Size3/NVA2-8-NA/14107/full_tif.jpg&amp;userid=1&amp;username=admin&amp;resolution=3&amp;servertype=JVA&amp;cid=8&amp;iid=NVA2&amp;vcid=NA&amp;usergroup=HUBBLE&amp;profileid=39</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>reflection nebula</term>
@@ -627,15 +594,12 @@
 			<conceptEntry id="c32">
 				<descrip type="subjectField">General</descrip>
 				<langSec xml:lang="en">
-					<note>G-Source: http://nrumiano.free.fr/Images/Neutron_star_E.gif</note>
 					<termSec>
 						<term>neutron star</term>
 						<termNote type="partOfSpeech">noun</termNote>
 					</termSec>
 				</langSec>
 				<langSec xml:lang="es">
-					<note>G-Source:
-						http://es.wikipedia.org/wiki/Archivo:Estrella_de_Neutrones.jpg</note>
 					<termSec>
 						<term>estrella de neutrones</term>
 						<termNote type="partOfSpeech">noun</termNote>
@@ -679,8 +643,6 @@
 			</conceptEntry>
 			<conceptEntry id="c35">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>Schwarzschild radius</term>
@@ -698,8 +660,6 @@
 			</conceptEntry>
 			<conceptEntry id="c36">
 				<descrip type="subjectField">Stellar Death</descrip>
-				<note>G-Source:
-					http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>event horizon</term>
@@ -719,7 +679,6 @@
 			</conceptEntry>
 			<conceptEntry id="c37">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://en.wikipedia.org/wiki/File:FusionintheSun.svg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>proton-proton chain reaction</term>
@@ -746,7 +705,6 @@
 			</conceptEntry>
 			<conceptEntry id="c38">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://en.wikipedia.org/wiki/File:CNO_Cycle.svg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>carbon-nitrogen cycle</term>
@@ -862,8 +820,6 @@
 			</conceptEntry>
 			<conceptEntry id="c42">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>singularity</term>
@@ -882,7 +838,6 @@
 			</conceptEntry>
 			<conceptEntry id="c43">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source: http://en.wikipedia.org/wiki/Solar_mass</note>
 				<note>In this graphic, the M with a subscript is the symbol for a solar mass.</note>
 				<note>N-Source: Jonathan Tomolonis</note>
 				<langSec xml:lang="en">
@@ -900,8 +855,6 @@
 			</conceptEntry>
 			<conceptEntry id="c44">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Triple-Alpha_Process.svg/750px-Triple-Alpha_Process.svg.png</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>triple-alpha process</term>
@@ -917,8 +870,6 @@
 			</conceptEntry>
 			<conceptEntry id="c45">
 				<descrip type="subjectField">General</descrip>
-				<note>G-Source:
-					http://www.dorlingkindersley-uk.co.uk/static/clipart/uk/dk/sci_space/image_sci_space013.jpg</note>
 				<langSec xml:lang="en">
 					<termSec>
 						<term>black dwarf</term>

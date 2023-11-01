@@ -2,7 +2,7 @@
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
 <plugin id="org.jung.terminology">
   
-  <!-- Workaroung for #2146 -->
+  <!-- Workaround for #2146 -->
   <require plugin="org.dita.base"/>
   <require plugin="org.dita.xhtml"/>
 
@@ -16,9 +16,9 @@
   <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm-mtf,oxygen-termchecker,termbrowser-responsive"/>
+  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm-mtf,oxygen-termchecker,termbrowser-responsive"/>
   
-  <transtype name="tbx-min" extends="html5" desc="TBX-Min">
+  <transtype name="tbx-min-v3-dca" extends="html5" desc="TBX-Min v3 DCA">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
       <val default="true">false</val>
       <val>true</val>
@@ -299,6 +299,291 @@
       <val>zh-SG</val>
       <val>zh-TW</val>
     </param>
+    <param name="license" desc="License information to be added in the header" required="false" type="string"/>
+  </transtype>
+  
+  <transtype name="tbx-min-v3-dct" extends="html5" desc="TBX-Min v3 DCT">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
+    <param name="source.language" desc="Source language of terminology" type="string">
+      <val>af-ZA</val>
+      <val>ar-AE</val>
+      <val>ar-BH</val>
+      <val>ar-DZ</val>
+      <val>ar-EG</val>
+      <val>ar-IQ</val>
+      <val>ar-JO</val>
+      <val>ar-KW</val>
+      <val>ar-LB</val>
+      <val>ar-LY</val>
+      <val>ar-MA</val>
+      <val>ar-OM</val>
+      <val>ar-QA</val>
+      <val>ar-SA</val>
+      <val>ar-SY</val>
+      <val>ar-TN</val>
+      <val>ar-YE</val>
+      <val>be-BY</val>
+      <val>bg-BG</val>
+      <val>ca-ES</val>
+      <val>cs-CZ</val>
+      <val>Cy-az-AZ</val>
+      <val>Cy-sr-SP</val>
+      <val>Cy-uz-UZ</val>
+      <val>da-DK</val>
+      <val>de-AT</val>
+      <val>de-CH</val>
+      <val>de-DE</val>
+      <val>de-LI</val>
+      <val>de-LU</val>
+      <val>div-MV</val>
+      <val>el-GR</val>
+      <val>en-AU</val>
+      <val>en-BZ</val>
+      <val>en-CA</val>
+      <val>en-CB</val>
+      <val>en-GB</val>
+      <val>en-IE</val>
+      <val>en-JM</val>
+      <val>en-NZ</val>
+      <val>en-PH</val>
+      <val>en-TT</val>
+      <val>en-US</val>
+      <val>en-ZA</val>
+      <val>en-ZW</val>
+      <val>es-AR</val>
+      <val>es-BO</val>
+      <val>es-CL</val>
+      <val>es-CO</val>
+      <val>es-CR</val>
+      <val>es-DO</val>
+      <val>es-EC</val>
+      <val>es-ES</val>
+      <val>es-GT</val>
+      <val>es-HN</val>
+      <val>es-MX</val>
+      <val>es-NI</val>
+      <val>es-PA</val>
+      <val>es-PE</val>
+      <val>es-PR</val>
+      <val>es-PY</val>
+      <val>es-SV</val>
+      <val>es-UY</val>
+      <val>es-VE</val>
+      <val>et-EE</val>
+      <val>eu-ES</val>
+      <val>fa-IR</val>
+      <val>fi-FI</val>
+      <val>fo-FO</val>
+      <val>fr-BE</val>
+      <val>fr-CA</val>
+      <val>fr-CH</val>
+      <val>fr-FR</val>
+      <val>fr-LU</val>
+      <val>fr-MC</val>
+      <val>gl-ES</val>
+      <val>gu-IN</val>
+      <val>he-IL</val>
+      <val>hi-IN</val>
+      <val>hr-HR</val>
+      <val>hu-HU</val>
+      <val>hy-AM</val>
+      <val>id-ID</val>
+      <val>is-IS</val>
+      <val>it-CH</val>
+      <val>it-IT</val>
+      <val>ja-JP</val>
+      <val>ka-GE</val>
+      <val>kk-KZ</val>
+      <val>kn-IN</val>
+      <val>ko-KR</val>
+      <val>kok-IN</val>
+      <val>ky-KZ</val>
+      <val>Lt-az-AZ</val>
+      <val>lt-LT</val>
+      <val>Lt-sr-SP</val>
+      <val>Lt-uz-UZ</val>
+      <val>lv-LV</val>
+      <val>mk-MK</val>
+      <val>mn-MN</val>
+      <val>mr-IN</val>
+      <val>ms-BN</val>
+      <val>ms-MY</val>
+      <val>nb-NO</val>
+      <val>nl-BE</val>
+      <val>nl-NL</val>
+      <val>nn-NO</val>
+      <val>pa-IN</val>
+      <val>pl-PL</val>
+      <val>pt-BR</val>
+      <val>pt-PT</val>
+      <val>ro-RO</val>
+      <val>ru-RU</val>
+      <val>sa-IN</val>
+      <val>sk-SK</val>
+      <val>sl-SI</val>
+      <val>sq-AL</val>
+      <val>sv-FI</val>
+      <val>sv-SE</val>
+      <val>sw-KE</val>
+      <val>syr-SY</val>
+      <val>ta-IN</val>
+      <val>te-IN</val>
+      <val>th-TH</val>
+      <val>tr-TR</val>
+      <val>tt-RU</val>
+      <val>uk-UA</val>
+      <val>ur-PK</val>
+      <val>vi-VN</val>
+      <val>zh-CHS</val>
+      <val>zh-CHT</val>
+      <val>zh-CN</val>
+      <val>zh-HK</val>
+      <val>zh-MO</val>
+      <val>zh-SG</val>
+      <val>zh-TW</val>
+    </param>
+    <param name="target.language" desc="Target language of terminology" type="string">
+      <val>af-ZA</val>
+      <val>ar-AE</val>
+      <val>ar-BH</val>
+      <val>ar-DZ</val>
+      <val>ar-EG</val>
+      <val>ar-IQ</val>
+      <val>ar-JO</val>
+      <val>ar-KW</val>
+      <val>ar-LB</val>
+      <val>ar-LY</val>
+      <val>ar-MA</val>
+      <val>ar-OM</val>
+      <val>ar-QA</val>
+      <val>ar-SA</val>
+      <val>ar-SY</val>
+      <val>ar-TN</val>
+      <val>ar-YE</val>
+      <val>be-BY</val>
+      <val>bg-BG</val>
+      <val>ca-ES</val>
+      <val>cs-CZ</val>
+      <val>Cy-az-AZ</val>
+      <val>Cy-sr-SP</val>
+      <val>Cy-uz-UZ</val>
+      <val>da-DK</val>
+      <val>de-AT</val>
+      <val>de-CH</val>
+      <val>de-DE</val>
+      <val>de-LI</val>
+      <val>de-LU</val>
+      <val>div-MV</val>
+      <val>el-GR</val>
+      <val>en-AU</val>
+      <val>en-BZ</val>
+      <val>en-CA</val>
+      <val>en-CB</val>
+      <val>en-GB</val>
+      <val>en-IE</val>
+      <val>en-JM</val>
+      <val>en-NZ</val>
+      <val>en-PH</val>
+      <val>en-TT</val>
+      <val>en-US</val>
+      <val>en-ZA</val>
+      <val>en-ZW</val>
+      <val>es-AR</val>
+      <val>es-BO</val>
+      <val>es-CL</val>
+      <val>es-CO</val>
+      <val>es-CR</val>
+      <val>es-DO</val>
+      <val>es-EC</val>
+      <val>es-ES</val>
+      <val>es-GT</val>
+      <val>es-HN</val>
+      <val>es-MX</val>
+      <val>es-NI</val>
+      <val>es-PA</val>
+      <val>es-PE</val>
+      <val>es-PR</val>
+      <val>es-PY</val>
+      <val>es-SV</val>
+      <val>es-UY</val>
+      <val>es-VE</val>
+      <val>et-EE</val>
+      <val>eu-ES</val>
+      <val>fa-IR</val>
+      <val>fi-FI</val>
+      <val>fo-FO</val>
+      <val>fr-BE</val>
+      <val>fr-CA</val>
+      <val>fr-CH</val>
+      <val>fr-FR</val>
+      <val>fr-LU</val>
+      <val>fr-MC</val>
+      <val>gl-ES</val>
+      <val>gu-IN</val>
+      <val>he-IL</val>
+      <val>hi-IN</val>
+      <val>hr-HR</val>
+      <val>hu-HU</val>
+      <val>hy-AM</val>
+      <val>id-ID</val>
+      <val>is-IS</val>
+      <val>it-CH</val>
+      <val>it-IT</val>
+      <val>ja-JP</val>
+      <val>ka-GE</val>
+      <val>kk-KZ</val>
+      <val>kn-IN</val>
+      <val>ko-KR</val>
+      <val>kok-IN</val>
+      <val>ky-KZ</val>
+      <val>Lt-az-AZ</val>
+      <val>lt-LT</val>
+      <val>Lt-sr-SP</val>
+      <val>Lt-uz-UZ</val>
+      <val>lv-LV</val>
+      <val>mk-MK</val>
+      <val>mn-MN</val>
+      <val>mr-IN</val>
+      <val>ms-BN</val>
+      <val>ms-MY</val>
+      <val>nb-NO</val>
+      <val>nl-BE</val>
+      <val>nl-NL</val>
+      <val>nn-NO</val>
+      <val>pa-IN</val>
+      <val>pl-PL</val>
+      <val>pt-BR</val>
+      <val>pt-PT</val>
+      <val>ro-RO</val>
+      <val>ru-RU</val>
+      <val>sa-IN</val>
+      <val>sk-SK</val>
+      <val>sl-SI</val>
+      <val>sq-AL</val>
+      <val>sv-FI</val>
+      <val>sv-SE</val>
+      <val>sw-KE</val>
+      <val>syr-SY</val>
+      <val>ta-IN</val>
+      <val>te-IN</val>
+      <val>th-TH</val>
+      <val>tr-TR</val>
+      <val>tt-RU</val>
+      <val>uk-UA</val>
+      <val>ur-PK</val>
+      <val>vi-VN</val>
+      <val>zh-CHS</val>
+      <val>zh-CHT</val>
+      <val>zh-CN</val>
+      <val>zh-HK</val>
+      <val>zh-MO</val>
+      <val>zh-SG</val>
+      <val>zh-TW</val>
+    </param>
+    <param name="license" desc="License information to be added in the header" required="false" type="string"/>
   </transtype>
   
   <transtype name="multiterm-mtf" extends="html5" desc="RWS Multiterm MTF">
@@ -606,14 +891,14 @@
   </transtype>
   
   <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
-  <transtype name="tbx-basic-v2" extends="html5" desc="TBX-Basic">
+  <transtype name="tbx-basic-v2" extends="html5" desc="TBX-Basic v2">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
       <val default="true">false</val>
       <val>true</val>
     </param>
   </transtype>
   
-  <transtype name="tbx-basic-v3" extends="html5" desc="TBX-Basic">
+  <transtype name="tbx-basic-v3" extends="html5" desc="TBX-Basic v3">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
       <val default="true">false</val>
       <val>true</val>
@@ -634,7 +919,8 @@
   <feature extension="ant.import" file="ant/build_dita2oxygen-termchecker_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v2_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v3_template.xml"/>
-  <feature extension="ant.import" file="ant/build_dita2tbx-min_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2tbx-min-v3-dca_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2tbx-min-v3-dct_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2termbrowser_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2termchecker-dita_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2termchecker-xliff_template.xml"/>

@@ -10,47 +10,61 @@
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="true"/>
     
     <!-- ================================================== -->
-    <!-- PARAMETERS -->
+    <!-- PARAMETERS                                         -->
     <!-- ================================================== -->
     <xsl:param name="dita.temp.dir.url" as="xs:string"/>
     <xsl:param name="source.language" as="xs:string" required="true"/>
     
     <!-- By default (if it is not set), the string is empty. -->
     <xsl:param name="target.language" as="xs:string" required="false" select="''"/>
+    
+    <!-- License info to be added to the header -->
+    <xsl:param name="license" as="xs:string" required="false" select="''"/>
 
     <!-- The parameter $newline defines a line break. -->
     <xsl:variable name="newline" select="'&#xa;'" as="xs:string"/>
+
+
+    <!-- ================================================== -->
+    <!-- MODES                                              -->
+    <!-- ================================================== -->
+    <xsl:mode name="termref" on-no-match="shallow-skip"/>
+    <xsl:mode name="termentry" on-no-match="shallow-skip"/>
+    <xsl:mode name="termNotation" on-no-match="shallow-skip"/>
+    <xsl:mode name="termVariant" on-no-match="shallow-skip"/>
+    <xsl:mode name="definition" on-no-match="shallow-skip"/>
     
+    
+    <!-- ================================================== -->
+    <!-- TEMPLATES                                          -->
+    <!-- ================================================== -->
 
     <xsl:template match="/">
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch</xsl:attribute>
+            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch</xsl:attribute>
             <xsl:attribute name="type">application/xml</xsl:attribute>
             <xsl:attribute name="schematypens">http://purl.oclc.org/dsdl/schematron</xsl:attribute>
         </xsl:processing-instruction>
+        <xsl:value-of select="$newline"/>
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min.nvdl</xsl:attribute>
+            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX_Core_RNG/master/TBXcoreStructV03.rng</xsl:attribute>
             <xsl:attribute name="type">application/xml</xsl:attribute>
-            <xsl:attribute name="schematypens">http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0</xsl:attribute>
+            <xsl:attribute name="schematypens">http://relaxng.org/ns/structure/1.0</xsl:attribute>
         </xsl:processing-instruction>
-        
-        <tbx dialect="TBX-Min">
-            <header>
-                <id>Terminology</id>
-                <xsl:element name="languages">
-                    <xsl:attribute name="source">
-                        <xsl:value-of select="$source.language"/>
-                    </xsl:attribute>
-                    <xsl:if test="$target.language != ''">
-                        <xsl:attribute name="target">
-                            <xsl:value-of select="$target.language"/>
-                        </xsl:attribute>
-                    </xsl:if>
-                </xsl:element>
-            </header>
-            <body>
-                <xsl:apply-templates mode="termref"/>
-            </body>
+        <xsl:value-of select="$newline"/>
+        <tbx type="TBX-Min" style="dct" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2" xmlns:min="http://www.tbxinfo.net/ns/min">
+            <tbxHeader>
+                <fileDesc>
+                    <sourceDesc>
+                        <p>Generated with Stefan Jung Terminology</p>
+                    </sourceDesc>
+                </fileDesc>
+            </tbxHeader>
+            <text>
+                <body>
+                    <xsl:apply-templates mode="termref"/>
+                </body>
+            </text>
         </tbx>
     </xsl:template>
 
@@ -67,7 +81,7 @@
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry">
         <xsl:variable name="termentry-root" select="." as="node()"/>
-        <conceptEntry id="{generate-id()}">
+        <conceptEntry xmlns="urn:iso:std:iso:30042:ed-2" id="{generate-id()}">
       
             <xsl:variable name="languages">
                 <xsl:for-each select="distinct-values(//@language)">
@@ -88,5 +102,15 @@
             </xsl:for-each>
         </conceptEntry>
     </xsl:template>
-
+    
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')]" mode="termNotation">
+        <termSec xmlns="urn:iso:std:iso:30042:ed-2">
+            <xsl:apply-templates mode="termVariant"/>
+        </termSec>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termVariant ')]" mode="termVariant">
+        <term xmlns="urn:iso:std:iso:30042:ed-2"><xsl:value-of select="."/></term>
+    </xsl:template>
+    
 </xsl:stylesheet>

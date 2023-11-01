@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+    
+    <target name="dita2tbx-min-v3-dct"
+        depends="
+        tbx-min-v3-dct.init,
+        html5.init,
+        build-init,
+        preprocess,
+        tbx-min-v3-dct"/>
+    
+    <target name="tbx-min-v3-dct.init">
+        <fail unless="source.language">The mandatory property "source.language" is not set.</fail>
+        <echo if:set="source.language">source.language = "${source.language}"</echo>
+        <echo if:set="target.language">target.language = "${target.language}"</echo>
+    </target>
+    
+    <target name="tbx-min-v3-dct" description="Create a Termbase Exchange Minimal (TBX-Min) v3 DCT file">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <makeurl property="output.dir.url" file="${output.dir}"/>
+        <xslt 
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${output.dir}${file.separator}${basename}.tbxm"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/tbx-min-v3-dct/tbx-min-v3-dct.xsl"
+            destdir="${output.dir}">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="source.language" expression="${source.language}" if="source.language"/>
+            <param name="target.language" expression="${target.language}" if="target.language"/>
+            <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+            <param name="output.dir.url" expression="${output.dir.url}"/>
+        </xslt>
+        <!--
+            It seems this was an outdated grammar file, probably TBX-Min 2. The TBX-Min 3 grammars
+            are provided as NVDL, but <jing> cannot (yet) validate NVDL.
+        -->
+        <!--<echo>Validate TBXM with JING...</echo>
+        <jing file="${output.dir}${file.separator}${basename}.tbxm"
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min/rng/TBX-Min.rng"/>-->
+    </target>
+    
+</project>
