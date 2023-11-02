@@ -14,7 +14,7 @@
         <makeurl property="output.dir.url" file="${output.dir}"/>
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
-            out="${output.dir}${file.separator}${basename}.tbx"
+            out="${output.dir}${file.separator}${basename}.xml"
             style="${dita.plugin.org.jung.terminology.dir}/xsl/multiterm/multiterm.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>

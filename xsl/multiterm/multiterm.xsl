@@ -5,9 +5,17 @@
     exclude-result-prefixes="xs">
 
     <!-- ================================================== -->
-    <!-- OUTPUT -->
+    <!-- OUTPUT                                             -->
     <!-- ================================================== -->
     <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="true"/>
+
+
+    <!-- ================================================== -->
+    <!-- IMPORTS                                            -->
+    <!-- ================================================== -->
+    <xsl:import href="multiterm-language-name.xsl"/>
+    <xsl:import href="multiterm-language-code.xsl"/>
+    
     
     <!-- ================================================== -->
     <!-- PARAMETERS                                         -->
@@ -29,7 +37,8 @@
     <xsl:mode name="termNotation" on-no-match="shallow-skip"/>
     <xsl:mode name="termVariant" on-no-match="shallow-skip"/>
     <xsl:mode name="definition" on-no-match="shallow-skip"/>
-    
+    <xsl:mode name="definitionText" on-no-match="shallow-skip"/>
+    <xsl:mode name="definitionSource" on-no-match="shallow-skip"/>
     
     <!-- ================================================== -->
     <!-- TEMPLATES                                          -->
@@ -50,15 +59,26 @@
     <xsl:template match="*[contains(@class, ' termmap/termref ')][@href][@keys]" mode="termref">
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="t" select="xs:anyURI($dita.temp.dir.url || $filename)" as="xs:anyURI"/>
-        <xsl:apply-templates select="document($t)" mode="termentry"/>
+        <xsl:variable name="conceptNumber" select="count(preceding-sibling::*[contains(@class, ' termmap/termref ')]) + 1" as="xs:integer"/>
+        <xsl:apply-templates select="document($t)" mode="termentry">
+            <xsl:with-param name="conceptNumber" select="$conceptNumber" as="xs:integer"/>
+        </xsl:apply-templates>
     </xsl:template>
     
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry">
+        <xsl:param name="conceptNumber" as="xs:integer" required="true"/>
         <xsl:variable name="termentry-root" select="." as="node()"/>
-        <conceptEntry xmlns="urn:iso:std:iso:30042:ed-2" id="{generate-id()}">
+        <conceptGrp>
+            <concept><xsl:value-of select="$conceptNumber"/></concept>
+            <system type="entryClass"/>
+            <transacGrp>
+                <!--<transac type="origination">ST</transac>-->
+                <date><xsl:value-of select="current-dateTime()"/></date>
+            </transacGrp>
+            <xsl:apply-templates mode="definition"/>
             
-            <xsl:variable name="languages">
+            <!--<xsl:variable name="languages">
                 <xsl:for-each select="distinct-values(//@language)">
                     <xsl:value-of select="distinct-values(.) || ','"/>
                 </xsl:for-each>
@@ -68,24 +88,33 @@
                 <xsl:variable name="language" select="normalize-space(.)"/>
                 <xsl:if test="$language != ''">
                     <langSec xml:lang="{$language}">
-                        <!--<xsl:if test="$language = $source.language">
-                            <xsl:apply-templates select="$termentry-root//*[contains(@class, '  termentry/definition ')]" mode="definition"/>
-                        </xsl:if>-->
                         <xsl:apply-templates select="$termentry-root//*[contains(@class, ' termentry/termNotation ')][@language = $language]" mode="termNotation"/>
                     </langSec>
                 </xsl:if>
-            </xsl:for-each>
-        </conceptEntry>
+            </xsl:for-each>-->
+        </conceptGrp>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/termNotation ')]" mode="termNotation">
-        <termSec xmlns="urn:iso:std:iso:30042:ed-2">
-            <xsl:apply-templates mode="termVariant"/>
-        </termSec>
+    <xsl:template match="*[contains(@class, ' termentry/definition ')]" mode="definition">
+        <descripGrp>
+            <xsl:apply-templates mode="definitionText"/>
+            <xsl:apply-templates mode="definitionSource"/>
+        </descripGrp>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/termVariant ')]" mode="termVariant">
-        <term xmlns="urn:iso:std:iso:30042:ed-2"><xsl:value-of select="."/></term>
+    <xsl:template match="*[contains(@class, ' termentry/definitionText ')]" mode="definitionText">
+        <descrip type="Definition">
+            <xsl:value-of select="."/>
+        </descrip>
     </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]" mode="definitionSource">
+        <descripGrp>
+            <descrip type="Source">
+                <xsl:value-of select="."/>
+            </descrip>
+        </descripGrp>
+    </xsl:template>
+    
     
 </xsl:stylesheet>
