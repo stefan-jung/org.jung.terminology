@@ -9,7 +9,6 @@
     -->
     <target name="dita2termbrowser-responsive"
         depends="init-properties,
-                 -webhelp-responsive-not-available,
                  -is-webhelp-responsive-available,
                  callwebhelp
                  ">
