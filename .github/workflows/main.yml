@@ -28,7 +28,9 @@ jobs:
           chmod +x dita-ot-4.1.2/bin/dita
           chmod +x dita-ot-4.1.2/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           dita-ot-4.1.2/bin/dita install org.jung.terminology.zip --force
+          dita-ot-4.1.2/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
       - name: Build test files
         run: |
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.1.2 --processing-mode=strict --verbose
@@ -64,7 +66,9 @@ jobs:
           chmod +x dita-ot-4.0.2/bin/dita
           chmod +x dita-ot-4.0.2/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           dita-ot-4.0.2/bin/dita install org.jung.terminology.zip --force
+          dita-ot-4.0.2/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
       - name: Build test files
         run: |
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.0.2 --processing-mode=strict --verbose
@@ -100,7 +104,9 @@ jobs:
           chmod +x dita-ot-3.7.4/bin/dita
           chmod +x dita-ot-3.7.4/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           dita-ot-3.7.4/bin/dita install org.jung.terminology.zip --force
+          dita-ot-3.7.4/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
       - name: Build test files
         run: |
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=3.7.4 --processing-mode=strict --verbose

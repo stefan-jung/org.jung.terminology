@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
+<plugin id="org.jung.terminology-webhelp-dummy-plugin">
+  
+  <!--
+    This is a dummy plugin to define empty Ant targets when the Oxygen webhelp responsive plugin
+    is not available, for example on normal DITA-OTs (not Oxygen XML Publishing Engines).
+    Otherwise the build might fail, because the DITA-OT/Ant is checking the existence of these
+    targets.
+  -->
+  <feature extension="ant.import" file="ant/build_webhelp-dummy-targets.xml"/>
+  
+</plugin>
