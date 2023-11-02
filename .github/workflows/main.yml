@@ -118,7 +118,7 @@ jobs:
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=3.7.4 --processing-mode=strict --verbose
-          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=muliterm --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm --output=3.7.4 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
