@@ -22,32 +22,6 @@
         com.oxygenxml.webhelp.responsive\build_dita.xml, manually. The only difference is,
         that we call "generate-termstats" after the preprocess.
     -->
-    <!--<target name="callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-        <antcall target="-callwebhelp" inheritall="true"/>
-        <!-\- Maybe we can import a dummy Ant template, if the other approach does not work. -\->
-        <!-\-<import></import>-\->
-    </target>
-    <target name="-callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir" depends="
-       whr-init,
-       preprocess,
-       generate-termstats,
-       html5.init,
-       html5.image-metadata,
-       whr-detect-lang,
-       whr-collect-indexterms,
-       whr-create-props-file,
-       whr-toc-xml,
-       whr-nav-links,
-       whr-context-help-map,
-       whr-sitemap,
-       whr-copy-resources,
-       html5.css,
-       whr-clean-css,
-       dita.topics.html.common,
-       whr-create-topic-pages,
-       whr-create-main-files,
-       whr-search-index
-        "/>-->
     <target name="callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir" depends="
         whr-init,
         preprocess,
