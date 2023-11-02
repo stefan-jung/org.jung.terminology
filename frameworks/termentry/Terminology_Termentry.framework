@@ -275,7 +275,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>92</Integer>
+											<Integer>94</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -345,7 +345,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>93</Integer>
+											<Integer>95</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -415,7 +415,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>94</Integer>
+											<Integer>96</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -477,7 +477,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>95</Integer>
+											<Integer>97</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -547,7 +547,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>96</Integer>
+											<Integer>98</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -697,7 +697,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>97</Integer>
+											<Integer>99</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -847,7 +847,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>98</Integer>
+											<Integer>100</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -997,7 +997,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>99</Integer>
+											<Integer>101</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1147,7 +1147,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>100</Integer>
+											<Integer>102</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1209,7 +1209,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>101</Integer>
+											<Integer>103</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1271,7 +1271,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>102</Integer>
+											<Integer>104</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1333,7 +1333,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>103</Integer>
+											<Integer>105</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1395,7 +1395,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>104</Integer>
+											<Integer>106</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1469,7 +1469,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>105</Integer>
+											<Integer>107</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1543,7 +1543,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>106</Integer>
+											<Integer>108</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1605,7 +1605,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>107</Integer>
+											<Integer>109</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1699,7 +1699,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>108</Integer>
+											<Integer>110</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1772,7 +1772,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>109</Integer>
+											<Integer>111</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1844,7 +1844,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>110</Integer>
+											<Integer>112</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -1966,7 +1966,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>111</Integer>
+											<Integer>113</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2086,7 +2086,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>112</Integer>
+											<Integer>114</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2206,7 +2206,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>113</Integer>
+											<Integer>115</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2326,7 +2326,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>114</Integer>
+											<Integer>116</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2446,7 +2446,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>115</Integer>
+											<Integer>117</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2522,7 +2522,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>116</Integer>
+											<Integer>118</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2584,7 +2584,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>117</Integer>
+											<Integer>119</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2674,7 +2674,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>118</Integer>
+											<Integer>120</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2744,7 +2744,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>119</Integer>
+											<Integer>121</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2814,7 +2814,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>120</Integer>
+											<Integer>122</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2887,7 +2887,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>121</Integer>
+											<Integer>123</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -2959,7 +2959,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>122</Integer>
+											<Integer>124</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3032,7 +3032,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>123</Integer>
+											<Integer>125</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3102,7 +3102,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>124</Integer>
+											<Integer>126</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3196,7 +3196,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>125</Integer>
+											<Integer>127</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3290,7 +3290,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>126</Integer>
+											<Integer>128</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3384,7 +3384,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>127</Integer>
+											<Integer>129</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3456,7 +3456,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>128</Integer>
+											<Integer>130</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3526,7 +3526,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>129</Integer>
+											<Integer>131</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3588,7 +3588,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>130</Integer>
+											<Integer>132</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3650,7 +3650,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>131</Integer>
+											<Integer>133</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3712,7 +3712,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>132</Integer>
+											<Integer>134</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3774,7 +3774,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>133</Integer>
+											<Integer>135</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3852,7 +3852,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>134</Integer>
+											<Integer>136</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3914,7 +3914,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>135</Integer>
+											<Integer>137</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -3976,7 +3976,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>136</Integer>
+											<Integer>138</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4038,7 +4038,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>137</Integer>
+											<Integer>139</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4100,7 +4100,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>138</Integer>
+											<Integer>140</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4162,7 +4162,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>139</Integer>
+											<Integer>141</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4219,7 +4219,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>140</Integer>
+											<Integer>142</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4276,7 +4276,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>141</Integer>
+											<Integer>143</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4333,7 +4333,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>142</Integer>
+											<Integer>144</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4390,7 +4390,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>143</Integer>
+											<Integer>145</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4447,7 +4447,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>144</Integer>
+											<Integer>146</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4509,7 +4509,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>145</Integer>
+											<Integer>147</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4603,7 +4603,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>146</Integer>
+											<Integer>148</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4665,7 +4665,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>147</Integer>
+											<Integer>149</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4727,7 +4727,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>148</Integer>
+											<Integer>150</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4821,7 +4821,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>149</Integer>
+											<Integer>151</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4883,7 +4883,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>150</Integer>
+											<Integer>152</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -4945,7 +4945,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>151</Integer>
+											<Integer>153</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5007,7 +5007,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>152</Integer>
+											<Integer>154</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5069,7 +5069,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>153</Integer>
+											<Integer>155</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5131,7 +5131,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>154</Integer>
+											<Integer>156</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5193,7 +5193,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>155</Integer>
+											<Integer>157</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5250,7 +5250,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>156</Integer>
+											<Integer>158</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5307,7 +5307,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>157</Integer>
+											<Integer>159</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5369,7 +5369,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>158</Integer>
+											<Integer>160</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5435,7 +5435,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>159</Integer>
+											<Integer>161</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5501,7 +5501,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>160</Integer>
+											<Integer>162</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5567,7 +5567,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>161</Integer>
+											<Integer>163</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5633,7 +5633,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>162</Integer>
+											<Integer>164</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5753,7 +5753,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>163</Integer>
+											<Integer>165</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5810,7 +5810,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>164</Integer>
+											<Integer>166</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5872,7 +5872,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>165</Integer>
+											<Integer>167</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5929,7 +5929,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>166</Integer>
+											<Integer>168</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5995,7 +5995,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>167</Integer>
+											<Integer>169</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6052,7 +6052,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>168</Integer>
+											<Integer>170</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6114,7 +6114,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>169</Integer>
+											<Integer>171</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6176,7 +6176,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>170</Integer>
+											<Integer>172</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6238,7 +6238,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>171</Integer>
+											<Integer>173</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6300,7 +6300,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>172</Integer>
+											<Integer>174</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6362,7 +6362,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>173</Integer>
+											<Integer>175</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6424,7 +6424,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>174</Integer>
+											<Integer>176</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6486,7 +6486,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>175</Integer>
+											<Integer>177</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6548,7 +6548,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>176</Integer>
+											<Integer>178</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6618,7 +6618,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>177</Integer>
+											<Integer>179</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6696,7 +6696,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>178</Integer>
+											<Integer>180</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6758,7 +6758,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>179</Integer>
+											<Integer>181</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6828,7 +6828,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>180</Integer>
+											<Integer>182</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6885,7 +6885,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>181</Integer>
+											<Integer>183</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6947,7 +6947,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>182</Integer>
+											<Integer>184</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7023,7 +7023,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>183</Integer>
+											<Integer>185</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7085,7 +7085,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>184</Integer>
+											<Integer>186</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7147,7 +7147,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>185</Integer>
+											<Integer>187</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7209,7 +7209,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>186</Integer>
+											<Integer>188</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7283,7 +7283,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>22</Integer>
+											<Integer>24</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7300,7 +7300,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>20</Integer>
+											<Integer>22</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7317,7 +7317,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>19</Integer>
+											<Integer>21</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7334,7 +7334,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>18</Integer>
+											<Integer>20</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7351,7 +7351,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>17</Integer>
+											<Integer>19</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7368,7 +7368,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>16</Integer>
+											<Integer>18</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7385,7 +7385,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>15</Integer>
+											<Integer>17</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7402,7 +7402,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>14</Integer>
+											<Integer>16</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7419,7 +7419,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>13</Integer>
+											<Integer>15</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7436,7 +7436,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>12</Integer>
+											<Integer>14</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -7453,7 +7453,7 @@
 											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
-											<Integer>11</Integer>
+											<Integer>13</Integer>
 										</field>
 										<field name="value">
 											<null/>
@@ -8169,13 +8169,13 @@
 											<String>templatesLocations</String>
 										</field>
 										<field name="index">
-											<Integer>0</Integer>
+											<Integer>2</Integer>
 										</field>
 										<field name="value">
-											<null/>
+											<String>${frameworkDir}/templates</String>
 										</field>
 										<field name="patchHandling">
-											<String>removeIndex</String>
+											<String>addIndex</String>
 										</field>
 										<field name="anchor">
 											<null/>
@@ -8189,10 +8189,10 @@
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
-											<String>${frameworkDir}/framework/templates</String>
+											<null/>
 										</field>
 										<field name="patchHandling">
-											<String>addIndex</String>
+											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
 											<null/>
@@ -14867,6 +14867,169 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>create.topic.from.selection</String>
+										</field>
+										<field name="name">
+											<String>${i18n(Extract_Topic_From_Selection)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(Extract_Topic_From_Selection_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap/>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.dita.topic.CreateNewTopicFromSelectionOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>insert.keyword.label</String>
+										</field>
+										<field name="name">
+											<String>${i18n(insert.keyword.label)}</String>
+										</field>
+										<field name="description">
+											<String>${i18n(insert.keyword.label_description)}</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[contains(@class, ' topic/topic ')] and not(ancestor-or-self::*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/prolog ')])</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;prolog>
+  &lt;metadata>
+    &lt;keywords>
+      &lt;keyword outputclass="label"/>
+    &lt;/keywords>    
+  &lt;/metadata>
+&lt;/prolog></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::*[contains(@class, ' topic/topic ')]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[contains(@class, ' topic/topic ')][*[contains(@class, ' topic/prolog ')]] and not(ancestor-or-self::*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/prolog ')]/*[contains(@class, ' topic/metadata ')])</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;metadata>
+    &lt;keywords>
+        &lt;keyword outputclass="label"/>
+    &lt;/keywords>
+&lt;/metadata></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/prolog ')]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[contains(@class, ' topic/topic ')][*[contains(@class, ' topic/prolog ')][*[contains(@class, ' topic/metadata ')]]] and not(ancestor-or-self::*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/prolog ')]/*[contains(@class, ' topic/metadata ')]/*[contains(@class, ' topic/keywords ')])</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;keywords>
+    &lt;keyword outputclass="label"/>
+&lt;/keywords></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/prolog ')]/*[contains(@class, ' topic/metadata ')]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*[contains(@class, ' topic/topic ')][*[contains(@class, ' topic/prolog ')][*[contains(@class, ' topic/metadata ')][*[contains(@class, ' topic/keywords ')]]]]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;keyword outputclass="label"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/prolog ')]/*[contains(@class, ' topic/metadata ')]/*[contains(@class, ' topic/keywords ')]</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -14922,6 +15085,12 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 											<menuItem>
 												<field name="actionID">
 													<String>insert_reusable_component</String>
+												</field>
+											</menuItem>
+											<menuSeparator/>
+											<menuItem>
+												<field name="actionID">
+													<String>create.topic.from.selection</String>
 												</field>
 											</menuItem>
 											<menuSeparator/>
@@ -15023,6 +15192,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 															</field>
 														</menuItem>
 														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>insert.keyword.label</String>
+															</field>
+														</menuItem>
 														<menuItem>
 															<field name="actionID">
 																<String>insert.intent.question</String>
@@ -15511,6 +15685,11 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
+																<String>insert.keyword.label</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
 																<String>insert.intent.question</String>
 															</field>
 														</menuItem>
@@ -15732,6 +15911,12 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 													<null/>
 												</field>
 											</menu>
+											<menuItem>
+												<field name="actionID">
+													<String>create.topic.from.selection</String>
+												</field>
+											</menuItem>
+											<menuSeparator/>
 											<menuItem>
 												<field name="actionID">
 													<String>search.references</String>
