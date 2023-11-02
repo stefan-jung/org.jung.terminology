@@ -13,10 +13,6 @@
     <!-- PARAMETERS                                         -->
     <!-- ================================================== -->
     <xsl:param name="dita.temp.dir.url" as="xs:string"/>
-    <xsl:param name="source.language" as="xs:string" required="true"/>
-    
-    <!-- By default (if it is not set), the string is empty. -->
-    <xsl:param name="target.language" as="xs:string" required="false" select="''"/>
     
     <!-- License info to be added to the header -->
     <xsl:param name="license" as="xs:string" required="false" select="''"/>
@@ -72,9 +68,9 @@
                 <xsl:variable name="language" select="normalize-space(.)"/>
                 <xsl:if test="$language != ''">
                     <langSec xml:lang="{$language}">
-                        <xsl:if test="$language = $source.language">
+                        <!--<xsl:if test="$language = $source.language">
                             <xsl:apply-templates select="$termentry-root//*[contains(@class, '  termentry/definition ')]" mode="definition"/>
-                        </xsl:if>
+                        </xsl:if>-->
                         <xsl:apply-templates select="$termentry-root//*[contains(@class, ' termentry/termNotation ')][@language = $language]" mode="termNotation"/>
                     </langSec>
                 </xsl:if>
