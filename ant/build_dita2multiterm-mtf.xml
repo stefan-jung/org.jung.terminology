@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:if="ant:if" xmlns:unless="ant:unless">
     
-    <target name="dita2multiterm-mtf"
+    <target name="dita2multiterm"
         depends="
         html5.init,
         build-init,
         preprocess,
-        multiterm-mtf"/>
+        multiterm"/>
     
-    <target name="multiterm-mtf" description="Create a Termbase Exchange (TBX) file">
+    <target name="multiterm" description="Create a Multiterm XML file">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
         <makeurl property="output.dir.url" file="${output.dir}"/>
         <xslt 
             in="${dita.temp.dir}${file.separator}${basename}.ditamap"
             out="${output.dir}${file.separator}${basename}.tbx"
-            style="${dita.plugin.org.jung.terminology.dir}/xsl/multiterm-mtf/multiterm-mtf.xsl"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/multiterm/multiterm.xsl"
             destdir="${output.dir}">
             <xmlcatalog refid="dita.catalog"/>
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
