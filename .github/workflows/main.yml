@@ -30,7 +30,14 @@ jobs:
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
           dita-ot-4.1.2/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
-        run: dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --output=4.1.2 --processing-mode=strict --verbose
+        run: |
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.1.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -59,7 +66,14 @@ jobs:
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
           dita-ot-4.0.2/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
-        run: dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --output=4.0.2 --processing-mode=strict --verbose
+        run: |
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.0.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -88,7 +102,14 @@ jobs:
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
           dita-ot-3.7.4/bin/dita install org.jung.terminology.zip --force
       - name: Build test files
-        run: dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --output=3.7.4 --processing-mode=strict --verbose
+        run: |
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=3.7.4 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:

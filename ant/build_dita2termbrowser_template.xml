@@ -59,11 +59,6 @@
         <echo unless:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive not found</echo>
         <echo if:set="dita.plugin.com.oxygenxml.webhelp.responsive.dir">com.oxygenxml.webhelp.responsive found</echo>
     </target>
-    
-    <target name="-webhelp-responsive-not-available" unless="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-        <echo>com.oxygenxml.webhelp.responsive is not found, importing dummy targets</echo>
-        <import file="build_webhelp-dummy-targets.xml"/>
-    </target>
 
     <!-- 
         Helper target to determine if terminology statistics should be generated.
