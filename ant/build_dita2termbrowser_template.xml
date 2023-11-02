@@ -22,10 +22,10 @@
         com.oxygenxml.webhelp.responsive\build_dita.xml, manually. The only difference is,
         that we call "generate-termstats" after the preprocess.
     -->
-    <!--<target name="callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
-        <antcall target="dita2webhelp-responsive" inheritall="true"/>
-    </target>-->
-    <target name="callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir" depends="
+    <target name="callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir">
+        <antcall target="-callwebhelp" inheritall="true"/>
+    </target>
+    <target name="-callwebhelp" if="dita.plugin.com.oxygenxml.webhelp.responsive.dir" depends="
        whr-init,
        preprocess,
        generate-termstats,
