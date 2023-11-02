@@ -8,10 +8,14 @@
     <xsl:output indent="true" encoding="UTF-8"/>
     <xsl:param name="dita.temp.dir.url" as="xs:anyURI"/>
     <xsl:param name="output.dir.url" as="xs:anyURI"/>
+    <xsl:param name="include-preferred-terms" as="xs:string" select="'true'"/>
+    <xsl:param name="include-admitted-terms" as="xs:string" select="'true'"/>
     
     <xsl:mode name="termref" on-no-match="shallow-skip"/>
     <xsl:mode name="termentry" on-no-match="shallow-skip"/>
     <xsl:mode name="deprecated-term" on-no-match="shallow-skip"/>
+    <xsl:mode name="preferred-term" on-no-match="shallow-skip"/>
+    <xsl:mode name="admitted-term" on-no-match="shallow-skip"/>
     
     <xsl:variable name="termentry-topics" select="collection($dita.temp.dir.url || '?select=*.dita;recurse=yes')"/>
     <xsl:variable name="languages">
@@ -55,10 +59,46 @@
     <xsl:template match="termentry" mode="termentry">
         <xsl:param name="language" as="xs:string"/>
         <xsl:variable name="root" as="node()" select="."/>
+        <xsl:if test="$include-preferred-terms = 'true'">
+            <xsl:apply-templates mode="preferred-term">
+                <xsl:with-param name="root" select="$root"/>
+                <xsl:with-param name="language" select="$language"/>
+            </xsl:apply-templates>
+        </xsl:if>
+        <xsl:if test="$include-admitted-terms = 'true'">
+            <xsl:apply-templates mode="admitted-term">
+                <xsl:with-param name="root" select="$root"/>
+                <xsl:with-param name="language" select="$language"/>
+            </xsl:apply-templates>
+        </xsl:if>
         <xsl:apply-templates mode="deprecated-term">
             <xsl:with-param name="root" select="$root"/>
             <xsl:with-param name="language" select="$language"/>
         </xsl:apply-templates>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'preferred']" mode="preferred-term">
+        <xsl:param name="root" as="node()"/>
+        <xsl:param name="language" as="xs:string"/>
+        <xsl:if test="@language = $language">
+            <incorrect-term ignorecase="true">
+                <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
+                <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
+                <!--<link>https://www.example.com</link>-->
+            </incorrect-term>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted']" mode="preferred-term">
+        <xsl:param name="root" as="node()"/>
+        <xsl:param name="language" as="xs:string"/>
+        <xsl:if test="@language = $language">
+            <incorrect-term ignorecase="true">
+                <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
+                <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
+                <!--<link>https://www.example.com</link>-->
+            </incorrect-term>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended']" mode="deprecated-term">

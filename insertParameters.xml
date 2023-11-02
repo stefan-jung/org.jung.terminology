@@ -26,6 +26,10 @@
     <!-- Parameters for TBX-Min -->
     <param name="license" expression="${args.license}" if="args.license"/>
     
+    <!-- Parameters for Oxygen Termchecker -->
+    <param name="include-preferred-terms" expression="${args.include-preferred-terms}" if="args.include-preferred-terms"/>
+    <param name="include-admitted-terms" expression="${args.include-admitted-terms}" if="args.include-admitted-terms"/>
+    
     <!-- Parameters for Termbrowser -->
     <param name="term.semantic-net.edges.color"
         expression="${term.semantic-net.edges.color}"

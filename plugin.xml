@@ -912,6 +912,14 @@
       <val default="true">false</val>
       <val>true</val>
     </param>
+    <param name="include-preferred-terms" desc="When preferred terms are included, they will be highlighted by the Oxygen Termchecker and you will see the definition" type="enum">
+      <val default="true">true</val>
+      <val>false</val>
+    </param>
+    <param name="include-admitted-terms" desc="When admitted terms are included, they will be highlighted by the Oxygen Termchecker and you will see the definition" type="enum">
+      <val default="true">true</val>
+      <val>false</val>
+    </param>
   </transtype>
   
   <!-- Import Ant script -->

@@ -20,6 +20,8 @@
             <xmlcatalog refid="dita.catalog"/>
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
             <param name="output.dir.url" expression="${output.dir.url}"/>
+            <param name="include-preferred-terms" expression="${args.include-preferred-terms}" if="args.include-preferred-terms"/>
+            <param name="include-admitted-terms" expression="${args.include-admitted-terms}" if="args.include-admitted-terms"/>
         </xslt>
         
         <!-- We can safely delete this file, because we get one termchecker file per language-code. -->
