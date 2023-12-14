@@ -6893,7 +6893,7 @@
 													<String>term.open.url</String>
 												</field>
 												<field name="name">
-													<String>term.open.url</String>
+													<String>${i18n(term.open.url)}</String>
 												</field>
 												<field name="description">
 													<String></String>
@@ -7262,6 +7262,76 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.dita.link.InsertXrefOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>189</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.generate-ai-definition</String>
+												</field>
+												<field name="name">
+													<String>term.generate-ai-definition</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>script</String>
+																		<String>a</String>
+																	</entry>
+																	<entry>
+																		<String>sourceLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>targetLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>
