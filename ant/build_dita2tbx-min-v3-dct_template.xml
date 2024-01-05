@@ -35,9 +35,10 @@
             It seems that the <jing> task does successfully validate with an NVDL file,
             when it is provided via the rngfile attribute.
         -->
-        <echo>Validate TBXM with JING...</echo>
+        <!-- Does not work, GitHub Action fails. -->
+        <!--<echo>Validate TBXM with JING...</echo>
         <jing file="${output.dir}${file.separator}${basename}.tbxm"
-            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min-v3-dct/nvdl/TBX-Min-DCT.nvdl"/>
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min-v3-dct/nvdl/TBX-Min-DCT.nvdl"/>-->
     </target>
     
 </project>
