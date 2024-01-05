@@ -4,8 +4,7 @@
     <mode name="core">
         <namespace ns="urn:iso:std:iso:30042:ed-2">
             <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX_Core_RNG/master/TBXcoreStructV03.rng" useMode="RNG"/>
-            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" useMode="SCH"/>
-            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX_min_module/master/Min.sch" useMode="SCH"/>
+            <validate schema="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch" useMode="SCH"/>
         </namespace>
         <anyNamespace>
             <reject/>

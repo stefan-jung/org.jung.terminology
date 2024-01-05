@@ -30,13 +30,14 @@
             <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
             <param name="output.dir.url" expression="${output.dir.url}"/>
         </xslt>
+        
         <!--
-            It seems this was an outdated grammar file, probably TBX-Min 2. The TBX-Min 3 grammars
-            are provided as NVDL, but <jing> cannot (yet) validate NVDL.
+            It seems that the <jing> task does successfully validate with an NVDL file,
+            when it is provided via the rngfile attribute.
         -->
-        <!--<echo>Validate TBXM with JING...</echo>
+        <echo>Validate TBXM with JING...</echo>
         <jing file="${output.dir}${file.separator}${basename}.tbxm"
-            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min/rng/TBX-Min.rng"/>-->
+            rngfile="${dita.plugin.org.jung.terminology.dir}/frameworks/tbx-min-v3-dca/nvdl/TBX-Min-DCA.nvdl"/>
     </target>
     
 </project>
