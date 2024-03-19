@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dummy>
+<dummy xmlns:if="ant:if" xmlns:unless="ant:unless">
     
     <!-- DITA-Map -->
-    <param name="ditamap" expression="${args.input}" if="args.input"/>
+    <param name="ditamap" expression="${args.input}" if:set="args.input"/>
     
     <!-- Temporary Directory -->
     <param name="temp.dir" expression="${dita.temp.dir}"/>
@@ -11,64 +11,64 @@
     <param name="debugging.mode" expression="${debugging.mode}"/>
     
     <!-- Parameters for TBX-Basic -->
-    <param name="main.language" expression="${main.language}" if="main.language"/>
+    <param name="main.language" expression="${main.language}" if:set="main.language"/>
     
     <!-- Parameters for TBX-Min -->
-    <param name="source.language" expression="${source.language}" if="source.language"/>
-    <param name="target.language" expression="${target.language}" if="target.language"/>
+    <param name="source.language" expression="${source.language}" if:set="source.language"/>
+    <param name="target.language" expression="${target.language}" if:set="target.language"/>
     
     <!-- Parameters for Termchecker-DITA and Termchecker-XLIFF -->
-    <param name="language" expression="${args.language}" if="args.language"/>
+    <param name="language" expression="${args.language}" if:set="args.language"/>
     
     <!-- Parameters for Termchecker-XLIFF -->
-    <param name="checkElements" expression="${args.check.elements}" if="args.check.elements"/>
+    <param name="checkElements" expression="${args.check.elements}" if:set="args.check.elements"/>
     
     <!-- Parameters for TBX-Min -->
-    <param name="license" expression="${args.license}" if="args.license"/>
+    <param name="license" expression="${args.license}" if:set="args.license"/>
     
     <!-- Parameters for Oxygen Termchecker -->
-    <param name="include-preferred-terms" expression="${args.include-preferred-terms}" if="args.include-preferred-terms"/>
-    <param name="include-admitted-terms" expression="${args.include-admitted-terms}" if="args.include-admitted-terms"/>
+    <param name="include-preferred-terms" expression="${args.include-preferred-terms}" if:set="args.include-preferred-terms"/>
+    <param name="include-admitted-terms" expression="${args.include-admitted-terms}" if:set="args.include-admitted-terms"/>
     
     <!-- Parameters for Termbrowser -->
     <param name="term.semantic-net.edges.color"
         expression="${term.semantic-net.edges.color}"
-        if="term.semantic-net.edges.color"/>
+        if:set="term.semantic-net.edges.color"/>
     <param name="term.semantic-net.edges.width"
         expression="${term.semantic-net.edges.width}"
-        if="term.semantic-net.edges.width"/>
+        if:set="term.semantic-net.edges.width"/>
     <param name="term.semantic-net.layout.improvedLayout"
         expression="${term.semantic-net.layout.improvedLayout}"
-        if="term.semantic-net.layout.improvedLayout"/>
+        if:set="term.semantic-net.layout.improvedLayout"/>
     <param name="term.semantic-net.physics.stabilization.enabled"
         expression="${term.semantic-net.physics.stabilization.enabled}"
-        if="term.semantic-net.physics.stabilization.enabled"/>
+        if:set="term.semantic-net.physics.stabilization.enabled"/>
     <param name="term.semantic-net.physics.stabilization.iterations"
         expression="${term.semantic-net.physics.stabilization.iterations}"
-        if="term.semantic-net.physics.stabilization.iterations"/>
+        if:set="term.semantic-net.physics.stabilization.iterations"/>
     <param name="term.semantic-net.physics.stabilization.updateInterval"
         expression="${term.semantic-net.physics.stabilization.updateInterval}"
-        if="term.semantic-net.physics.stabilization.updateInterval"/>
+        if:set="term.semantic-net.physics.stabilization.updateInterval"/>
     <param name="term.semantic-net.term.border"
         expression="${term.semantic-net.term.border}"
-        if="term.semantic-net.term.border"/>
+        if:set="term.semantic-net.term.border"/>
     <param name="term.semantic-net.term.background"
         expression="${term.semantic-net.term.background}"
-        if="term.semantic-net.term.background"/>
+        if:set="term.semantic-net.term.background"/>
     <param name="term.semantic-net.term.fontColor" 
         expression="${term.semantic-net.term.fontColor}"
-        if="term.semantic-net.term.fontColor"/>
+        if:set="term.semantic-net.term.fontColor"/>
     <param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant"
         expression="${term.semantic-net.physics.forceAtlas2Based.gravitationalConstant}"
-        if="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant"/>
+        if:set="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant"/>
     <param name="term.semantic-net.physics.forceAtlas2Based.centralGravity"
         expression="${term.semantic-net.physics.forceAtlas2Based.centralGravity}"
-        if="term.semantic-net.physics.forceAtlas2Based.centralGravity"/>
+        if:set="term.semantic-net.physics.forceAtlas2Based.centralGravity"/>
     <param name="term.semantic-net.physics.forceAtlas2Based.springLength"
         expression="${term.semantic-net.physics.forceAtlas2Based.springLength}"
-        if="term.semantic-net.physics.forceAtlas2Based.springLength"/>
+        if:set="term.semantic-net.physics.forceAtlas2Based.springLength"/>
     <param name="term.semantic-net.physics.forceAtlas2Based.springConstant"
         expression="${term.semantic-net.physics.forceAtlas2Based.springConstant}"
-        if="term.semantic-net.physics.forceAtlas2Based.springConstant"/>
+        if:set="term.semantic-net.physics.forceAtlas2Based.springConstant"/>
     
 </dummy>
