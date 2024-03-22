@@ -141,7 +141,7 @@
                 <xsl:choose>
                     <xsl:when test="contains(@usage, 'preferred')">
                         <div class="alert alert-success">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Allowed')"/>
+                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Preferred')"/>
                         </div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'notRecommended')">

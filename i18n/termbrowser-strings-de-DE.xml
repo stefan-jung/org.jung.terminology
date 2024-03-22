@@ -60,7 +60,7 @@
     <str name="Term">Benennung</str>
     <str name="Term">Term</str>
     <str name="Usage Admitted">zulässig</str>
-    <str name="Usage Allowed">erlaubt</str>
+    <str name="Usage Preferred">erlaubt</str>
     <str name="Usage Deprecated">verboten</str>
     <str name="Usage Obsolete">obsolet</str>
     <str name="Verb">Verb</str>
