@@ -239,18 +239,18 @@
         </li>
     </xsl:template>
     
-    <!-- Hypernyms have their own group. -->
-    <xsl:template match="*[contains(@class, ' termentry/hypernym ')]" mode="related-links:get-group"
-                  name="related-links:group.hypernyms"
+    <!-- Superordinate Concepts have their own group. -->
+    <xsl:template match="*[contains(@class, ' termentry/superordinateConcept ')]" mode="related-links:get-group"
+                  name="related-links:group.superordinateConcepts"
                   as="xs:string">
-         <xsl:text>hypernym</xsl:text>
+         <xsl:text>superordinateConcept</xsl:text>
     </xsl:template>
     
-    <!-- Hyponyms have their own group. -->
-    <xsl:template match="*[contains(@class, ' termentry/hyponym ')]" mode="related-links:get-group"
-                  name="related-links:group.hyponyms"
+    <!-- Subordinate Concepts have their own group. -->
+    <xsl:template match="*[contains(@class, ' termentry/subordinateConcept ')]" mode="related-links:get-group"
+                  name="related-links:group.subordinateConcepts"
                   as="xs:string">
-         <xsl:text>hyponym</xsl:text>
+         <xsl:text>subordinateConcept</xsl:text>
     </xsl:template>
     
     <!-- Related Terms have their own group. -->
@@ -260,16 +260,16 @@
          <xsl:text>relatedTerm</xsl:text>
     </xsl:template>
     
-    <!-- Priority of hypernym group. -->
-    <xsl:template match="*[contains(@class, ' termentry/hypernym ')]" mode="related-links:get-group-priority"
-                  name="related-links:group-priority.hypernyms"
+    <!-- Priority of superordinateConcept group. -->
+    <xsl:template match="*[contains(@class, ' termentry/superordinateConcept ')]" mode="related-links:get-group-priority"
+                  name="related-links:group-priority.superordinateConcepts"
                   as="xs:integer">
         <xsl:sequence select="3"/>
     </xsl:template>
     
-    <!-- Priority of hyponym group. -->
-    <xsl:template match="*[contains(@class, ' termentry/hyponym ')]" mode="related-links:get-group-priority"
-                  name="related-links:group-priority.hyponyms"
+    <!-- Priority of subordinateConcept group. -->
+    <xsl:template match="*[contains(@class, ' termentry/subordinateConcept ')]" mode="related-links:get-group-priority"
+                  name="related-links:group-priority.subordinateConcepts"
                   as="xs:integer">
         <xsl:sequence select="3"/>
     </xsl:template>
@@ -294,11 +294,11 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/hypernyms ')]">
+    <xsl:template match="*[contains(@class, ' termentry/superordinateConcepts ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Hypernyms')"/>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Superordinate Concepts')"/>
                 </strong>
             </div>
             <div class="linklist">
@@ -307,11 +307,11 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/hyponyms ')]">
+    <xsl:template match="*[contains(@class, ' termentry/subordinateConcepts ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
                 <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Hyponyms')"/>
+                    <xsl:value-of select="sj:getTermbrowserString($language, 'Subordinate Concepts')"/>
                 </strong>
             </div>
             <div class="linklist">

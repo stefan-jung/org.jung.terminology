@@ -941,92 +941,92 @@
         <val lang="de_DE">Links auf Bestandteile löschen</val>
     </key>
 
-    <!-- Hypernym -->
-    <key value="term.hypernym">
-        <val lang="en_US">Hypernym</val>
-        <val lang="de_DE">Hypernym</val>
+    <!-- Superordinate Concept -->
+    <key value="term.superordinateConcept">
+        <val lang="en_US">Superordinate Concept</val>
+        <val lang="de_DE">Übergeordneter Begriff</val>
     </key>
-    <key value="term.hypernym.add">
-        <val lang="en_US">Link a hypernym</val>
-        <val lang="de_DE">Hypernym verlinken</val>
+    <key value="term.superordinateConcept.add">
+        <val lang="en_US">Link a superordinate concept</val>
+        <val lang="de_DE">Übergeordneten Begriff verlinken</val>
     </key>
-    <key value="term.hypernym.add_description">
-        <val lang="en_US">Add link to a hypernym to model a semantic net</val>
-        <val lang="de_DE">Verlinke ein Hypernym, um ein semantisches Netz zu bilden.</val>
+    <key value="term.superordinateConcept.add_description">
+        <val lang="en_US">Add link to a superordinate concept to model a semantic net</val>
+        <val lang="de_DE">Verlinke einen übergeordneten Begriff, um ein semantisches Netz zu bilden.</val>
     </key>
-    <key value="term.hypernym.delete">
-        <val lang="en_US">Delete link to hypernym</val>
-        <val lang="de_DE">Link auf Hypernym löschen</val>
+    <key value="term.superordinateConcept.delete">
+        <val lang="en_US">Delete link to superordinate concept</val>
+        <val lang="de_DE">Link auf übergeordneten Begriff löschen</val>
     </key>
-    <key value="term.hypernym.delete_description">
-        <val lang="en_US">Delete link to hypernym</val>
-        <val lang="de_DE">Link auf Hypernym löschen</val>
-    </key>
-
-    <!-- Hypernyms -->
-    <key value="term.hypernyms">
-        <val lang="en_US">Hypernyms</val>
-        <val lang="de_DE">Hypernyme</val>
-    </key>
-    <key value="term.hypernyms.add">
-        <val lang="en_US">Add hypernyms</val>
-        <val lang="de_DE">Hypernyme einfügen</val>
-    </key>
-    <key value="term.hypernyms.add_description">
-        <val lang="en_US">A hypernyms element contains references to hypernyms.</val>
-        <val lang="de_DE">Ein hypernyms Element enthält Referenzen zu Hypernymen des aktuellen Begriffs.</val>
-    </key>
-    <key value="term.hypernyms.delete">
-        <val lang="en_US">Delete links to hypernyms</val>
-        <val lang="de_DE">Links auf Hypernyme löschen</val>
-    </key>
-    <key value="term.hypernyms.delete_description">
-        <val lang="en_US">Delete links to hypernyms</val>
-        <val lang="de_DE">Links auf Hypernyme löschen</val>
+    <key value="term.superordinateConcept.delete_description">
+        <val lang="en_US">Delete link to superordinate concept</val>
+        <val lang="de_DE">Link auf übergeordneten Begriff löschen</val>
     </key>
 
-    <!-- Hyponym -->
-    <key value="term.hyponym">
-        <val lang="en_US">Hyponym</val>
-        <val lang="de_DE">Hyponym</val>
+    <!-- Superordinate Concepts -->
+    <key value="term.superordinateConcepts">
+        <val lang="en_US">Superordinate Concepts</val>
+        <val lang="de_DE">Übergeordnete Begriffe</val>
     </key>
-    <key value="term.hyponym.add">
-        <val lang="en_US">Link a hyponym</val>
-        <val lang="de_DE">Hyponym verlinken</val>
+    <key value="term.superordinateConcepts.add">
+        <val lang="en_US">Add superordinate concepts</val>
+        <val lang="de_DE">Übergeordnete Begriffe einfügen</val>
     </key>
-    <key value="term.hyponym.add_description">
-        <val lang="en_US">Add link to a hyponym to model a semantic net</val>
-        <val lang="de_DE">Verlinke ein Hyponym, um ein semantisches Netz zu bilden.</val>
+    <key value="term.superordinateConcepts.add_description">
+        <val lang="en_US">A superordinateConcepts element contains references to superordinate concepts.</val>
+        <val lang="de_DE">Ein superordinateConcepts Element enthält Referenzen zu übergerodneten Begriffen des aktuellen Begriffs.</val>
     </key>
-    <key value="term.hyponym.delete">
-        <val lang="en_US">Delete link to hyponym</val>
-        <val lang="de_DE">Link auf Hyponym löschen</val>
+    <key value="term.superordinateConcepts.delete">
+        <val lang="en_US">Delete links to superordinate concepts</val>
+        <val lang="de_DE">Links auf übergeordnete Begriffe löschen</val>
     </key>
-    <key value="term.hyponym.delete_description">
-        <val lang="en_US">Delete link to hyponym</val>
-        <val lang="de_DE">Link auf Hyponym löschen</val>
+    <key value="term.superordinateConcepts.delete_description">
+        <val lang="en_US">Delete links to superordinate concepts</val>
+        <val lang="de_DE">Links auf übergeordnete Begriffe löschen</val>
     </key>
 
-    <!-- Hyponyms -->
-    <key value="term.hyponyms">
-        <val lang="en_US">Hyponyms</val>
-        <val lang="de_DE">Hyponyme</val>
+    <!-- Subordinate concept -->
+    <key value="term.subordinateConcept">
+        <val lang="en_US">Subordinate concept</val>
+        <val lang="de_DE">Untergeordneter Begriff</val>
     </key>
-    <key value="term.hyponyms.add">
-        <val lang="en_US">Add hyponyms</val>
-        <val lang="de_DE">Hyponyme einfügen</val>
+    <key value="term.subordinateConcept.add">
+        <val lang="en_US">Link a subordinate concept</val>
+        <val lang="de_DE">Untergeordneten Begriff verlinken</val>
     </key>
-    <key value="term.hyponyms.add_description">
-        <val lang="en_US">A hyponyms element contains references to hyponyms.</val>
-        <val lang="de_DE">Ein hyponyms Element enthält Referenzen zu Hyponymen des aktuellen Begriffs.</val>
+    <key value="term.subordinateConcept.add_description">
+        <val lang="en_US">Add link to a subordinate concept to model a semantic net</val>
+        <val lang="de_DE">Verlinke einen untergeordneten Begriff, um ein semantisches Netz zu bilden.</val>
     </key>
-    <key value="term.hyponyms.delete">
-        <val lang="en_US">Delete links to hyponym</val>
-        <val lang="de_DE">Links auf Hyponyme löschen</val>
+    <key value="term.subordinateConcept.delete">
+        <val lang="en_US">Delete link to a subordinate concept</val>
+        <val lang="de_DE">Link auf untergeordneten Begriff löschen</val>
     </key>
-    <key value="term.hyponyms.delete_description">
-        <val lang="en_US">Delete links to hyponyms</val>
-        <val lang="de_DE">Links auf Hyponyme löschen</val>
+    <key value="term.subordinateConcept.delete_description">
+        <val lang="en_US">Delete link to a subordinate concept</val>
+        <val lang="de_DE">Link auf untergeordneten Begriff löschen</val>
+    </key>
+
+    <!-- Subordinate concepts -->
+    <key value="term.subordinateConcepts">
+        <val lang="en_US">Subordinate concepts</val>
+        <val lang="de_DE">Untergeordnete Begriffe</val>
+    </key>
+    <key value="term.subordinateConcepts.add">
+        <val lang="en_US">Add subordinate concepts</val>
+        <val lang="de_DE">Untergeordnete Begriffe einfügen</val>
+    </key>
+    <key value="term.subordinateConcepts.add_description">
+        <val lang="en_US">A subordinateConcepts element contains references to subordinate concepts.</val>
+        <val lang="de_DE">Ein subordinateConcepts Element enthält Referenzen zu untergeordneten Begriffen des aktuellen Begriffs.</val>
+    </key>
+    <key value="term.subordinateConcepts.delete">
+        <val lang="en_US">Delete links to subordinate concept</val>
+        <val lang="de_DE">Links auf untergeordnete Begriffe löschen</val>
+    </key>
+    <key value="term.subordinateConcepts.delete_description">
+        <val lang="en_US">Delete links to subordinate concept</val>
+        <val lang="de_DE">Links auf untergeordnete Begriffe löschen</val>
     </key>
 
     <!-- relatedTerm -->

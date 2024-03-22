@@ -336,24 +336,24 @@
         <xsl:if test="document($filepath)/descendant::*[contains(@class, ' termentry/termRelation ')]">
             <xsl:for-each select="document($filepath)/descendant::*[
                 contains(@class, 'termentry/antonym') 
-                or contains(@class, 'termentry/hypernym')
-                or contains(@class, 'termentry/hyponym')
+                or contains(@class, 'termentry/superordinateConcept')
+                or contains(@class, 'termentry/subordinateConcept')
                 or contains(@class, 'termentry/instaceOf')
                 or contains(@class, 'termentry/partOf')
                 or contains(@class, 'termentry/relatedTerm')]">
-                <xsl:variable name="relationString" select="
+                <!--<xsl:variable name="relationString" select="
                     if (contains(@class, 'antonym')) then 'IsAntonymOf'
-                    else if (contains(@class, 'hypernym')) then 'IsHypernymOf'
+                    else if (contains(@class, 'superordinateConcept')) then 'IsHypernymOf'
                     else if (contains(@class, 'hyponym')) then 'IsHyponymOf'
                     else if (contains(@class, 'instanceOf')) then 'IsInstanceOf'
                     else if (contains(@class, 'partOf')) then 'IsPartOf'
                     else if (contains(@class, 'relatedTerm')) then 'IsRelatedTo'
                     else 'IsRelatedTo'
-                    "/>
+                    "/>-->
                 <xsl:variable name="labelString" select="
                     if (contains(@class, 'antonym')) then 'Is Antonym Of'
-                    else if (contains(@class, 'hypernym')) then 'Is Hypernym Of'
-                    else if (contains(@class, 'hyponym')) then 'Is Hyponym Of'
+                    else if (contains(@class, 'superordinateConcept')) then 'Is Superordinate Concept Of'
+                    else if (contains(@class, 'subordinateConcept')) then 'Is Subordinate Concept Of'
                     else if (contains(@class, 'instanceOf')) then 'Is Instance Of'
                     else if (contains(@class, 'partOf')) then 'Is Part Of'
                     else if (contains(@class, 'relatedTerm')) then 'Is Related To'

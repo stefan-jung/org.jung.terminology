@@ -102,11 +102,11 @@
     <define name="antonyms">
       <ref name="antonyms.element"/>
     </define>
-    <define name="hypernyms">
-      <ref name="hypernyms.element"/>
+    <define name="superordinateConcepts">
+      <ref name="superordinateConcepts.element"/>
     </define>
-    <define name="hyponyms">
-      <ref name="hyponyms.element"/>
+    <define name="subordinateConcepts">
+      <ref name="subordinateConcepts.element"/>
     </define>
     <define name="instancesOf">
       <ref name="instancesOf.element"/>
@@ -156,11 +156,11 @@
     <define name="antonym">
       <ref name="antonym.element"/>
     </define>
-    <define name="hypernym">
-      <ref name="hypernym.element"/>
+    <define name="superordinateConcept">
+      <ref name="superordinateConcept.element"/>
     </define>
-    <define name="hyponym">
-      <ref name="hyponym.element"/>
+    <define name="subordinateConcept">
+      <ref name="subordinateConcept.element"/>
     </define>
     <define name="instanceOf">
       <ref name="instanceOf.element"/>
@@ -883,10 +883,10 @@
           <ref name="antonyms"/>
         </optional>
         <optional>
-          <ref name="hypernyms"/>
+          <ref name="superordinateConcepts"/>
         </optional>
         <optional>
-          <ref name="hyponyms"/>
+          <ref name="subordinateConcepts"/>
         </optional>
         <optional>
           <ref name="instancesOf"/>
@@ -937,55 +937,55 @@
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Hypernyms </a:documentation>
-      <define name="hypernyms.content">
+      <a:documentation> LONG NAME: superordinateConcepts </a:documentation>
+      <define name="superordinateConcepts.content">
         <oneOrMore>
-          <ref name="hypernym"/>
+          <ref name="superordinateConcept"/>
         </oneOrMore>
       </define>
-      <define name="hypernyms.attributes">
+      <define name="superordinateConcepts.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="hypernyms.element">
-        <element name="hypernyms" dita:longName="Hypernyms">
-          <a:documentation>The &lt;hypernyms> element contains references to &lt;hypernym> elements.
+      <define name="superordinateConcepts.element">
+        <element name="superordinateConcepts" dita:longName="superordinateConcepts">
+          <a:documentation>The &lt;superordinateConcepts> element contains references to &lt;superordinateConcept> elements.
             Category: Termentry elements</a:documentation>
-          <ref name="hypernyms.attlist"/>
-          <ref name="hypernyms.content"/>
+          <ref name="superordinateConcepts.attlist"/>
+          <ref name="superordinateConcepts.content"/>
         </element>
       </define>
-      <define name="hypernyms.attlist" combine="interleave">
-        <ref name="hypernyms.attributes"/>
+      <define name="superordinateConcepts.attlist" combine="interleave">
+        <ref name="superordinateConcepts.attributes"/>
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Hyponyms </a:documentation>
-      <define name="hyponyms.content">
+      <a:documentation> LONG NAME: subordinateConcepts </a:documentation>
+      <define name="subordinateConcepts.content">
         <oneOrMore>
-          <ref name="hyponym"/>
+          <ref name="subordinateConcept"/>
         </oneOrMore>
       </define>
-      <define name="hyponyms.attributes">
+      <define name="subordinateConcepts.attributes">
         <ref name="termLinkGroup-atts"/>
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="hyponyms.element">
-        <element name="hyponyms" dita:longName="Hyponyms">
-          <a:documentation>The &lt;hyponyms> element contains references to &lt;hyponym> elements.
+      <define name="subordinateConcepts.element">
+        <element name="subordinateConcepts" dita:longName="subordinateConcepts">
+          <a:documentation>The &lt;subordinateConcepts> element contains references to &lt;subordinateConcept> elements.
             Category: Termentry elements</a:documentation>
-          <ref name="hyponyms.attlist"/>
-          <ref name="hyponyms.content"/>
+          <ref name="subordinateConcepts.attlist"/>
+          <ref name="subordinateConcepts.content"/>
         </element>
       </define>
-      <define name="hyponyms.attlist" combine="interleave">
-        <ref name="hyponyms.attributes"/>
+      <define name="subordinateConcepts.attlist" combine="interleave">
+        <ref name="subordinateConcepts.attributes"/>
       </define>
     </div>
     <div>
@@ -1424,43 +1424,43 @@
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Hypernym </a:documentation>
-      <define name="hypernym.content">
+      <a:documentation> LONG NAME: superordinateConcept </a:documentation>
+      <define name="superordinateConcept.content">
         <empty/>
       </define>
-      <define name="hypernym.attributes">
+      <define name="superordinateConcept.attributes">
         <ref name="termLink-atts"/>
       </define>
-      <define name="hypernym.element">
-        <element name="hypernym" dita:longName="Hypernym">
-          <a:documentation>The &lt;hypernym> element refers to the hypernym of a term.
+      <define name="superordinateConcept.element">
+        <element name="superordinateConcept" dita:longName="superordinateConcept">
+          <a:documentation>The &lt;superordinateConcept> element refers to the superordinateConcept of a term.
             Category: Termentry elements</a:documentation>
-          <ref name="hypernym.attlist"/>
-          <ref name="hypernym.content"/>
+          <ref name="superordinateConcept.attlist"/>
+          <ref name="superordinateConcept.content"/>
         </element>
       </define>
-      <define name="hypernym.attlist" combine="interleave">
-        <ref name="hypernym.attributes"/>
+      <define name="superordinateConcept.attlist" combine="interleave">
+        <ref name="superordinateConcept.attributes"/>
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Hyponym </a:documentation>
-      <define name="hyponym.content">
+      <a:documentation> LONG NAME: subordinateConcept </a:documentation>
+      <define name="subordinateConcept.content">
         <empty/>
       </define>
-      <define name="hyponym.attributes">
+      <define name="subordinateConcept.attributes">
         <ref name="termLink-atts"/>
       </define>
-      <define name="hyponym.element">
-        <element name="hyponym" dita:longName="Hyponym">
-          <a:documentation>The &lt;hyponym> element refers to the hyponym of a term.
+      <define name="subordinateConcept.element">
+        <element name="subordinateConcept" dita:longName="subordinateConcept">
+          <a:documentation>The &lt;subordinateConcept> element refers to the subordinateConcept of a term.
             Category: Termentry elements</a:documentation>
-          <ref name="hyponym.attlist"/>
-          <ref name="hyponym.content"/>
+          <ref name="subordinateConcept.attlist"/>
+          <ref name="subordinateConcept.content"/>
         </element>
       </define>
-      <define name="hyponym.attlist" combine="interleave">
-        <ref name="hyponym.attributes"/>
+      <define name="subordinateConcept.attlist" combine="interleave">
+        <ref name="subordinateConcept.attributes"/>
       </define>
     </div>
     <div>
@@ -1612,28 +1612,28 @@
         <attribute name="class" a:defaultValue="- topic/section concept/section termentry/termNotation termentry/fullForm "/>
       </optional>
     </define>
-    <define name="hypernym.attlist" combine="interleave">
+    <define name="superordinateConcept.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/hypernym "/>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/superordinateConcept "/>
       </optional>
     </define>
-    <define name="hypernyms.attlist" combine="interleave">
+    <define name="superordinateConcepts.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/hypernyms "/>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/superordinateConcepts "/>
       </optional>
     </define>
-    <define name="hyponym.attlist" combine="interleave">
+    <define name="subordinateConcept.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/hyponym "/>
+        <attribute name="class" a:defaultValue="- topic/link termentry/termRelation termentry/subordinateConcept "/>
       </optional>
     </define>
-    <define name="hyponyms.attlist" combine="interleave">
+    <define name="subordinateConcepts.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/hyponyms "/>
+        <attribute name="class" a:defaultValue="- topic/linklist termentry/relations-linklist termentry/subordinateConcepts "/>
       </optional>
     </define>
     <define name="instanceOf.attlist" combine="interleave">

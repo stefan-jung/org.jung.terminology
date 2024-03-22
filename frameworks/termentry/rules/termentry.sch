@@ -129,8 +129,8 @@
         </sch:diagnostic>
     </sch:diagnostics>
     
-    <xsl:key name="hypernyms" match="//*[contains(@class, ' termentry/hypernym ')][@keyref]" use="@keyref"/>
-    <xsl:key name="hyponyms" match="//*[contains(@class, ' termentry/hyponym ')][@keyref]" use="@keyref"/>
+    <xsl:key name="superordinateConcepts" match="//*[contains(@class, ' termentry/superordinateConcept ')][@keyref]" use="@keyref"/>
+    <xsl:key name="subordinateConcepts" match="//*[contains(@class, ' termentry/subordinateConcept ')][@keyref]" use="@keyref"/>
     <xsl:key name="relatedterms" match="//*[contains(@class, ' termentry/relatedTerm ')][@keyref]" use="@keyref"/>
     <xsl:key name="antonyms" match="//*[contains(@class, ' termentry/antonym ')][@keyref]" use="@keyref"/>
     <xsl:key name="instancesOf" match="//*[contains(@class, 'termentry/instanceOf ')][@keyref]" use="@keyref"/>
@@ -139,13 +139,13 @@
     <sch:pattern id="duplicate-termrelation">
         <sch:rule context="*[contains(@class, ' termentry/termRelation ')]">
             <sch:let name="keyref" value="@keyref"/>
-            <sch:let name="counthypernymskeys" value="count(key('hypernyms', $keyref))"/>
-            <sch:report test="$counthypernymskeys > 1" diagnostics="duplicate-hypernyms-en duplicate-hypernyms-de">
-                Duplicate &lt;hypernym&gt; key references: @<sch:value-of select="@keyref"/>
+            <sch:let name="countSuperordinateConceptsKeys" value="count(key('superordinateConcepts', $keyref))"/>
+            <sch:report test="$countSuperordinateConceptsKeys > 1" diagnostics="duplicate-superordinateConcepts-en duplicate-superordinateConcepts-de">
+                Duplicate &lt;superordinateConcept&gt; key references: @<sch:value-of select="@keyref"/>
             </sch:report>
-            <sch:let name="counthyponymskeys" value="count(key('hyponyms', $keyref))"/>
-            <sch:report test="$counthyponymskeys > 1" diagnostics="duplicate-hyponyms-en duplicate-hyponyms-de">
-                Duplicate &lt;hyponym&gt; key references: @<sch:value-of select="@keyref"/>
+            <sch:let name="countSubordinateKeys" value="count(key('subordinateConcepts', $keyref))"/>
+            <sch:report test="$countSubordinateKeys > 1" diagnostics="duplicate-subordinateConcepts-en duplicate-subordinateConcepts-de">
+                Duplicate &lt;subordinateConcept&gt; key references: @<sch:value-of select="@keyref"/>
             </sch:report>
             <sch:let name="countrelatedtermkeys" value="count(key('relatedterms', $keyref))"/>
             <sch:report test="$countrelatedtermkeys > 1" diagnostics="duplicate-relatedterms-en duplicate-relatedterms-de">
@@ -165,22 +165,22 @@
             </sch:report>
         </sch:rule>
     </sch:pattern>
-    <!-- hypernyms -->
+    <!-- superordinateConcepts -->
     <sch:diagnostics>
-        <sch:diagnostic id="duplicate-hypernyms-en" xml:lang="en">
-            Duplicate hypernyms termrelation
+        <sch:diagnostic id="duplicate-superordinateConcepts-en" xml:lang="en">
+            Duplicate superordinate concepts termrelation
         </sch:diagnostic>
-        <sch:diagnostic id="duplicate-hypernyms-de" xml:lang="de">
-            Doppelte Hypernym-Termbeziehung
+        <sch:diagnostic id="duplicate-superordinateConcepts-de" xml:lang="de">
+            Doppelte übergeordneter Begriff-Termbeziehung
         </sch:diagnostic>
     </sch:diagnostics>
-    <!-- hyponyms -->
+    <!-- subordinateConcepts -->
     <sch:diagnostics>
-        <sch:diagnostic id="duplicate-hyponyms-en" xml:lang="en">
-            Duplicate hyponyms termrelation
+        <sch:diagnostic id="duplicate-subordinateConcepts-en" xml:lang="en">
+            Duplicate subordinateConcepts termrelation
         </sch:diagnostic>
-        <sch:diagnostic id="duplicate-hyponyms-de" xml:lang="de">
-            Doppelte Hyponym-Termbeziehung
+        <sch:diagnostic id="duplicate-subordinateConcepts-de" xml:lang="de">
+            Doppelte untergeordneter Begriff-Termbeziehung
         </sch:diagnostic>
     </sch:diagnostics>
     <!-- relatedTerms -->
