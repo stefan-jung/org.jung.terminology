@@ -32,9 +32,9 @@
     </fullForm>
   </termBody>
   <relations>
-    <hyponyms>
-      <hyponym keyref="internalCombustionEngine"/>
-    </hyponyms>
+    <subordinateConcepts>
+      <subordinateConcept keyref="internalCombustionEngine"/>
+    </subordinateConcepts>
     <partsOf>
       <partOf keyref="truck"/>
       <partOf keyref="car"/>

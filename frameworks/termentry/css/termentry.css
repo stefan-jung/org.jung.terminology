@@ -26,8 +26,8 @@
     *[class~="termentry/antonyms"],
     *[class~="termentry/instancesOf"],
     *[class~="termentry/partsOf"],
-    *[class~="termentry/hypernyms"],
-    *[class~="termentry/hyponyms"],
+    *[class~="termentry/superdinateConcepts"],
+    *[class~="termentry/subordinateConcepts"],
     *[class~="termentry/relatedTerms"],
     *[class~="termentry/relations-linklist"],
     *[class~="termentry/termRelation"] {
@@ -118,8 +118,8 @@
             oxy_action(id, 'term.antonyms.add'),
             oxy_action(id, 'term.partsOf.add'),
             oxy_action(id, 'term.instancesOf.add'),
-            oxy_action(id, 'term.hypernyms.add'),
-            oxy_action(id, 'term.hyponyms.add'),
+            oxy_action(id, 'term.superdinateConcepts.add'),
+            oxy_action(id, 'term.subordinateConcepts.add'),
             oxy_action(id, 'term.relatedTerms.add'),
             oxy_action(id, 'term.relations.delete')
         )
@@ -1715,18 +1715,18 @@ content:
 }
 
 /*********************************************
- * HYPERNYMS
+ * SUPERORDINATE CONCEPTS
  *********************************************/
-*[class~="termentry/hypernyms"]:before(10) {
+*[class~="termentry/superdinateConcepts"]:before(10) {
     content:
     oxy_buttonGroup(
-        label, '${i18n(term.hypernyms)}',
+        label, '${i18n(term.superdinateConcepts)}',
         transparent, 'true',
         fontInherit, 'false',
         actions,
         oxy_action_list(
-            oxy_action(id, 'term.hypernym.add'),
-            oxy_action(id, 'term.hypernyms.delete')
+            oxy_action(id, 'term.superdinateConcept.add'),
+            oxy_action(id, 'term.superdinateConcepts.delete')
         )
     );
     border-bottom: 0.05rem solid #767676;
@@ -1734,7 +1734,7 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="termentry/hypernyms"] {
+*[class~="termentry/superdinateConcepts"] {
     visibility: -oxy-collapse-text;
     display: block;
     font-family: Arial, sans-serif;
@@ -1749,18 +1749,18 @@ content:
 }
 
 /*********************************************
- * HYPERNYM
+ * SUPERORDINATE CONCEPT
  *********************************************/
-*[class~="termentry/hypernym"]:before(20) {
+*[class~="termentry/superdinateConcept"]:before(20) {
     content:
     oxy_buttonGroup(
-        label, '${i18n(term.hypernym)}',
+        label, '${i18n(term.superdinateConcept)}',
         transparent, 'true',
         fontInherit, 'false',
         actions,
         oxy_action_list(
-            oxy_action(id, 'term.hypernym.add'),
-            oxy_action(id, 'term.hypernym.delete')
+            oxy_action(id, 'term.superdinateConcept.add'),
+            oxy_action(id, 'term.superdinateConcept.delete')
         )
     );
     width: 20%;
@@ -1772,18 +1772,18 @@ content:
 }
 
 /*********************************************
- * HYPONYMS
+ * SUBORDINATE CONCEPTS
  *********************************************/
-*[class~="termentry/hyponyms"]:before(10) {
+*[class~="termentry/subordinateConcepts"]:before(10) {
     content:
     oxy_buttonGroup(
-        label, '${i18n(term.hyponyms)}',
+        label, '${i18n(term.subordinateConcepts)}',
         transparent, 'true',
         fontInherit, 'false',
         actions,
         oxy_action_list(
-            oxy_action(id, 'term.hyponym.add'),
-            oxy_action(id, 'term.hyponyms.delete')
+            oxy_action(id, 'term.subordinateConcept.add'),
+            oxy_action(id, 'term.subordinateConcepts.delete')
         )
     );
     border-bottom: 0.05rem solid #767676;
@@ -1791,7 +1791,7 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="termentry/hyponyms"] {
+*[class~="termentry/subordinateConcepts"] {
     visibility: -oxy-collapse-text;
     display: block;
     font-family: Arial, sans-serif;
@@ -1806,18 +1806,18 @@ content:
 }
 
 /*********************************************
- * HYPONYM
+ * SUBORDINATE CONCEPT
  *********************************************/
-*[class~="termentry/hyponym"]:before(20) {
+*[class~="termentry/subordinateConcept"]:before(20) {
     content:
     oxy_buttonGroup(
-        label, '${i18n(term.hyponym)}',
+        label, '${i18n(term.subordinateConcept)}',
         transparent, 'true',
         fontInherit, 'false',
         actions,
         oxy_action_list(
-            oxy_action(id, 'term.hyponym.add'),
-            oxy_action(id, 'term.hyponym.delete')
+            oxy_action(id, 'term.subordinateConcept.add'),
+            oxy_action(id, 'term.subordinateConcept.delete')
         )
     );
     width: 20%;

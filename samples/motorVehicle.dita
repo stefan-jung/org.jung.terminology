@@ -26,13 +26,13 @@
   </fullForm>
  </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="vehicle"/>
-    </hypernyms>
-    <hyponyms>
-      <hyponym keyref="truck"/>
-      <hyponym keyref="bus"/>
-      <hyponym keyref="car"/>
-    </hyponyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="vehicle"/>
+    </superordinateConcepts>
+    <subordinateConcepts>
+      <subordinateConcept keyref="truck"/>
+      <subordinateConcept keyref="bus"/>
+      <subordinateConcept keyref="car"/>
+    </subordinateConcepts>
   </relations>
 </termentry>

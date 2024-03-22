@@ -30,8 +30,8 @@
     </fullForm>
   </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="chassis"/>
-    </hypernyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="chassis"/>
+    </superordinateConcepts>
   </relations>
 </termentry>

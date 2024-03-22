@@ -29,8 +29,8 @@
     </fullForm>
   </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="powertrain"/>
-    </hypernyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="powertrain"/>
+    </superordinateConcepts>
   </relations>
 </termentry>

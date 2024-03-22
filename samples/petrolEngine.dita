@@ -39,9 +39,9 @@
     </fullForm>
  </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="internalCombustionEngine"/>
-    </hypernyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="internalCombustionEngine"/>
+    </superordinateConcepts>
     <partsOf>
       <partOf keyref="car"/>
     </partsOf>

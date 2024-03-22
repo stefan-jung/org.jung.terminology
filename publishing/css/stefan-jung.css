@@ -554,12 +554,12 @@ p.shortdesc {
 ul.linklist.related_link {
   display: none;
 }
-.antonyms     > .linklist.related_link,
-.hyponyms     > .linklist.related_link,
-.hypernyms    > .linklist.related_link,
-.instancesOf  > .linklist.related_link,
-.partsOf      > .linklist.related_link,
-.relatedTerms >  .linklist.related_link {
+.antonyms              > .linklist.related_link,
+.subordinateConcepts   > .linklist.related_link,
+.superordinateConcepts > .linklist.related_link,
+.instancesOf           > .linklist.related_link,
+.partsOf               > .linklist.related_link,
+.relatedTerms          > .linklist.related_link {
   display: block;
 }
 

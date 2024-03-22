@@ -35,9 +35,9 @@
     </fullForm>
   </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="motorHome"/>
-    </hypernyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="motorHome"/>
+    </superordinateConcepts>
     <relatedTerms>
       <relatedTerm keyref="classBPlusMotorHome"/>
     </relatedTerms>

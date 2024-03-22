@@ -35,9 +35,9 @@
     </fullForm>
  </termBody>
   <relations>
-    <hyponyms>
-      <hyponym keyref="classBMotorHome"/>
-      <hyponym keyref="classBPlusMotorHome"/>
-    </hyponyms>
+    <subordinateConcepts>
+      <subordinateConcept keyref="classBMotorHome"/>
+      <subordinateConcept keyref="classBPlusMotorHome"/>
+    </subordinateConcepts>
   </relations>
 </termentry>

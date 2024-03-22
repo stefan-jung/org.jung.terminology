@@ -22,8 +22,8 @@
     </fullForm>
   </termBody>
   <relations>
-    <hyponyms>
-      <hyponym keyref="motorVehicle"/>
-    </hyponyms>
+    <subordinateConcepts>
+      <subordinateConcept keyref="motorVehicle"/>
+    </subordinateConcepts>
   </relations>
 </termentry>

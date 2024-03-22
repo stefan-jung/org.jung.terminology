@@ -2091,13 +2091,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hypernyms.add</String>
+													<String>term.superordinateConcepts.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hypernyms.add)}</String>
+													<String>${i18n(term.superordinateConcepts.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hypernyms.add_description)}</String>
+													<String>${i18n(term.superordinateConcepts.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -2115,13 +2115,13 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/hypernyms ')])</String>
+																<String>self::*[contains(@class, ' termentry/relations ')][1] and not(*[contains(@class, ' termentry/superordinateConcepts ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hypernyms/></String>
+																		<String>&lt;superordinateConcepts/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2146,7 +2146,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;hypernyms/>
+  &lt;superordinateConcepts/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -2165,13 +2165,13 @@
 														</actionMode>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')] and following::*[contains(@class, ' termentry/relations ')] and not(following::*[contains(@class, ' termentry/hypernyms ')])</String>
+																<String>self::*[contains(@class, ' termentry/termBody ')] and following::*[contains(@class, ' termentry/relations ')] and not(following::*[contains(@class, ' termentry/superordinateConcepts ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hypernyms/></String>
+																		<String>&lt;superordinateConcepts/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2211,13 +2211,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hyponyms.add</String>
+													<String>term.subordinateConcepts.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hyponyms.add)}</String>
+													<String>${i18n(term.subordinateConcepts.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hyponyms.add_description)}</String>
+													<String>${i18n(term.subordinateConcepts.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -2235,13 +2235,13 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/relations ')] and not(*[contains(@class, ' termentry/hyponyms ')])</String>
+																<String>self::*[contains(@class, ' termentry/relations ')] and not(*[contains(@class, ' termentry/subordinateConcepts ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hyponyms/></String>
+																		<String>&lt;subordinateConcepts/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -2266,7 +2266,7 @@
 																	<entry>
 																		<String>fragment</String>
 																		<String>&lt;relations>
-  &lt;hyponyms/>
+  &lt;subordinateConcepts/>
 &lt;/relations></String>
 																	</entry>
 																	<entry>
@@ -2285,13 +2285,13 @@
 														</actionMode>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/termBody ')] and following::*[contains(@class, ' termentry/relations ')] and not(following::*[contains(@class, ' termentry/hyponyms ')])</String>
+																<String>self::*[contains(@class, ' termentry/termBody ')] and following::*[contains(@class, ' termentry/relations ')] and not(following::*[contains(@class, ' termentry/subordinateConcepts ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;hyponyms/></String>
+																		<String>&lt;subordinateConcepts/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -3981,13 +3981,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hypernyms.delete</String>
+													<String>term.superordinateConcepts.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hypernyms.delete)}</String>
+													<String>${i18n(term.superordinateConcepts.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hypernyms.delete_description)}</String>
+													<String>${i18n(term.superordinateConcepts.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/delete_20.png</String>
@@ -4005,7 +4005,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/hypernyms ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/superordinateConcepts ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -4043,13 +4043,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hyponyms.delete</String>
+													<String>term.subordinateConcepts.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hyponyms.delete)}</String>
+													<String>${i18n(term.subordinateConcepts.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hyponyms.delete_description)}</String>
+													<String>${i18n(term.subordinateConcepts.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/delete_20.png</String>
@@ -4067,7 +4067,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/hyponyms ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/subordinateConcepts ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -4281,13 +4281,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hypernym.add</String>
+													<String>term.superordinateConcept.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hypernym.add)}</String>
+													<String>${i18n(term.superordinateConcept.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hypernym.add_description)}</String>
+													<String>${i18n(term.superordinateConcept.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -4338,13 +4338,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hyponym.add</String>
+													<String>term.subordinateConcept.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hyponym.add)}</String>
+													<String>${i18n(term.subordinateConcept.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hyponym.add_description)}</String>
+													<String>${i18n(term.subordinateConcept.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -6057,13 +6057,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hypernym.delete</String>
+													<String>term.superordinateConcept.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hypernym.delete)}</String>
+													<String>${i18n(term.superordinateConcept.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hypernym.delete_description)}</String>
+													<String>${i18n(term.superordinateConcept.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/delete_20.png</String>
@@ -6081,7 +6081,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/hypernym ')]</String>
+																<String>self::*[contains(@class, ' termentry/superordinateConcept ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -6305,13 +6305,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.hyponym.delete</String>
+													<String>term.subordinateConcept.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.hyponym.delete)}</String>
+													<String>${i18n(term.subordinateConcept.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.hyponym.delete_description)}</String>
+													<String>${i18n(term.subordinateConcept.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/delete_20.png</String>
@@ -6329,7 +6329,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/hyponym ')]</String>
+																<String>self::*[contains(@class, ' termentry/subordinateConcept ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>

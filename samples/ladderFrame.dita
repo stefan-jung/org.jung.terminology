@@ -30,8 +30,8 @@
     <antonyms>
       <antonym keyref="unitizedBody"/>
     </antonyms>
-    <hyponyms>
-      <hyponym keyref="chassis"/>
-    </hyponyms>
+    <subordinateConcepts>
+      <subordinateConcept keyref="chassis"/>
+    </subordinateConcepts>
   </relations>
 </termentry>

@@ -31,8 +31,8 @@
     <antonyms>
       <antonym keyref="ladderFrame"/>
     </antonyms>
-    <hypernyms>
-      <hypernym keyref="chassis"/>
-    </hypernyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="chassis"/>
+    </superordinateConcepts>
   </relations>
 </termentry>

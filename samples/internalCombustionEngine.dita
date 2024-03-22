@@ -36,13 +36,13 @@
     </fullForm>
   </termBody>
   <relations>
-    <hypernyms>
-      <hypernym keyref="engine"/>
-    </hypernyms>
-    <hyponyms>
-      <hyponym keyref="gasengine"/>
-      <hyponym keyref="dieselEngine"/>
-      <hyponym keyref="petrolEngine"/>
-    </hyponyms>
+    <superordinateConcepts>
+      <superordinateConcept keyref="engine"/>
+    </superordinateConcepts>
+    <subordinateConcepts>
+      <subordinateConcept keyref="gasengine"/>
+      <subordinateConcept keyref="dieselEngine"/>
+      <subordinateConcept keyref="petrolEngine"/>
+    </subordinateConcepts>
   </relations>
 </termentry>
