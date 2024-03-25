@@ -26,7 +26,7 @@
     *[class~="termentry/antonyms"],
     *[class~="termentry/instancesOf"],
     *[class~="termentry/partsOf"],
-    *[class~="termentry/superdinateConcepts"],
+    *[class~="termentry/superordinateConcepts"],
     *[class~="termentry/subordinateConcepts"],
     *[class~="termentry/relatedTerms"],
     *[class~="termentry/relations-linklist"],
@@ -108,6 +108,7 @@
     display: block;
     padding-bottom: 5px;
     margin-bottom: 2px;
+    font-weight: bold;
     content:
     oxy_buttonGroup(
         label, '${i18n(term.relations)}',
@@ -118,7 +119,7 @@
             oxy_action(id, 'term.antonyms.add'),
             oxy_action(id, 'term.partsOf.add'),
             oxy_action(id, 'term.instancesOf.add'),
-            oxy_action(id, 'term.superdinateConcepts.add'),
+            oxy_action(id, 'term.superordinateConcepts.add'),
             oxy_action(id, 'term.subordinateConcepts.add'),
             oxy_action(id, 'term.relatedTerms.add'),
             oxy_action(id, 'term.relations.delete')
@@ -302,11 +303,13 @@
     display: block;
     padding-bottom: 5px;
     margin-bottom: 2px;
+    font-size: 0.9rem;
+    font-weight: bold;
     content:
     oxy_buttonGroup(
         label, '${i18n(term.fig)}',
         transparent, 'true',
-        fontInherit, 'false',
+        fontInherit, 'true',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.fig.delete')
@@ -333,9 +336,9 @@
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    border-color: #3d3d3d;
+    /*border-color: #3d3d3d;
     border-style: solid;
-    border-width: 0.05rem;
+    border-width: 0.05rem;*/
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -380,7 +383,6 @@
  * IMAGE
  *********************************************/
 *[class~="topic/image"]:before(10) {
-    border-bottom: 0.05rem solid #767676;
     display: block;
     padding-bottom: 5px;
     margin-bottom: 2px;
@@ -402,9 +404,9 @@
    -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    border-color: #3d3d3d;
+    /*border-color: #3d3d3d;
     border-style: solid;
-    border-width: 0.05rem;
+    border-width: 0.05rem;*/
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -420,62 +422,7 @@
 *[class~="topic/image"][keyref]:not([href]) {
     content: attr(keyref, keyref);
 }
-/**[class~="topic/image"]:after(1) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="topic/image"]:after(2) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="topic/image"]:after(3) {
-    content: "href";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-}
-*[class~="topic/image"]:after(4) {
-    content:
-    oxy_urlChooser(
-        edit, '@href',
-        columns, 60
-    );
-}
-*[class~="topic/image"]:after(5) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}*/
-/**[class~="topic/image"]:after(6) {
-    content: "width";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-}
-*[class~="topic/image"]:after(7) {
-    content:
-    oxy_textfield(
-        edit, '@width',
-        columns, 10
-    );
-}
-*[class~="topic/image"]:after(8) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}*/
+
 
 /*********************************************
  * ALT
@@ -618,7 +565,19 @@
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.sourceReference.placeholder)}";
     -oxy-show-placeholder: always;
-    /*width: 99% !important;*/
+    display: block;
+    font-family: Arial, sans-serif;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+*[class~="termentry/sourceReference"][href]:focus {
+    content: attr(href);
+    -oxy-display-tags: none;
+    -oxy-editable: true;
+    -oxy-placeholder-content: "${i18n(term.sourceReference.placeholder)}";
+    -oxy-show-placeholder: always;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -981,15 +940,12 @@
     -oxy-editable: true;
     -oxy-show-placeholder: always;
     -oxy-show-placeholder: no !important;
-    border-color: #3d3d3d;
-    border-style: solid;
-    border-width: 0.05rem;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 *[class~="termentry/partOfSpeech"]:after {
     content: " ";
@@ -998,11 +954,12 @@
     width: 100%;
 }
 *[class~="termentry/partOfSpeech"]:after(100) {
+    border-left: none;
+    border-right: none;
+    border-top: none;
     border-bottom: 0.05rem solid #767676;
-    border-bottom: 1px solid transparent !important;
-    border-left: 1px solid transparent !important;
-    border-right: 1px solid transparent !important;
-    border-top: 1px solid #3d3d3d !important;
+    font-size: 1.0rem;
+    font-weight: bold;
     content:
         oxy_buttonGroup(
             label, '${i18n(term.termLevel)}',
@@ -1017,10 +974,8 @@
             )
         );
     display: block;
-    margin-bottom: 2px;
     margin-right: -1px;
     margin-top: -2px;
-    padding-bottom: 5px;
     padding-top: 2.0em;
     width: 100%;
 }
@@ -1283,9 +1238,11 @@ content:
     margin-bottom: 2px;
 }*/
 *[class~="termentry/termNotation"]:before(21) {
-    content:
-    "${i18n(term.language)}"
-    "   "
+    content: oxy_label(text, "${i18n(term.language)} ", styles, "font-weight: 600;") attr(language);
+    font-size: 0.8em;
+}
+*[class~="termentry/termNotation"]:focus:before(21) {
+    content: "${i18n(term.language)}: "
     oxy_combobox(
         edit, '@language',
         editable, 'false',
@@ -1294,9 +1251,29 @@ content:
 }
 *[class~="termentry/termNotation"]:before(19) {
     content:
-    "      "
-    "${i18n(term.usage)}"
-    "   "
+    oxy_label(text, "  ${i18n(term.usage)} ", styles, "font-weight: 600;")
+    oxy_xpath(" \
+        if (@usage = 'preferred') then '${i18n(term.usage.preferred)}' \
+        else if (@usage = 'admitted') then '${i18n(term.usage.admitted)}' \
+        else if (@usage = 'notRecommended') then '${i18n(term.usage.notRecommended)}' \
+        else if (@usage = 'obsolete') then '${i18n(term.usage.obsolete)}' \
+        else '' \
+        ");
+    font-size: 0.8em;
+}
+*[class~="termentry/termNotation"]:focus:before(19) {
+    content: oxy_label(text, "  ${i18n(term.usage)} ", styles, "font-weight: 600;")
+    oxy_combobox(
+        edit, '@usage',
+        editable, false,
+        values, 'admitted, notRecommended, obsolete, preferred',
+        labels, '${i18n(term.usage.admitted)}, ${i18n(term.usage.notRecommended)}, ${i18n(term.usage.obsolete)}, ${i18n(term.usage.preferred)}'
+        columns, 15
+    );
+    font-size: 0.8em;
+}
+*[class~="termentry/termNotation"]:focus:before(19) {
+    content: "  ${i18n(term.usage)} "
     oxy_combobox(
         edit, '@usage',
         editable, false,
@@ -1357,6 +1334,7 @@ content:
 *[class~="termentry/termNotation"][usage~="notRecommended"] {
     background-color: #ffbfbf;
 }
+
 
 /*********************************************
  * FULL FORM
@@ -1717,16 +1695,16 @@ content:
 /*********************************************
  * SUPERORDINATE CONCEPTS
  *********************************************/
-*[class~="termentry/superdinateConcepts"]:before(10) {
+*[class~="termentry/superordinateConcepts"]:before(10) {
     content:
     oxy_buttonGroup(
-        label, '${i18n(term.superdinateConcepts)}',
+        label, '${i18n(term.superordinateConcepts)}',
         transparent, 'true',
         fontInherit, 'false',
         actions,
         oxy_action_list(
-            oxy_action(id, 'term.superdinateConcept.add'),
-            oxy_action(id, 'term.superdinateConcepts.delete')
+            oxy_action(id, 'term.superordinateConcept.add'),
+            oxy_action(id, 'term.superordinateConcepts.delete')
         )
     );
     border-bottom: 0.05rem solid #767676;
@@ -1734,7 +1712,7 @@ content:
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="termentry/superdinateConcepts"] {
+*[class~="termentry/superordinateConcepts"] {
     visibility: -oxy-collapse-text;
     display: block;
     font-family: Arial, sans-serif;
@@ -1751,16 +1729,16 @@ content:
 /*********************************************
  * SUPERORDINATE CONCEPT
  *********************************************/
-*[class~="termentry/superdinateConcept"]:before(20) {
+*[class~="termentry/superordinateConcept"]:before(20) {
     content:
     oxy_buttonGroup(
-        label, '${i18n(term.superdinateConcept)}',
+        label, '${i18n(term.superordinateConcept)}',
         transparent, 'true',
         fontInherit, 'false',
         actions,
         oxy_action_list(
-            oxy_action(id, 'term.superdinateConcept.add'),
-            oxy_action(id, 'term.superdinateConcept.delete')
+            oxy_action(id, 'term.superordinateConcept.add'),
+            oxy_action(id, 'term.superordinateConcept.delete')
         )
     );
     width: 20%;
