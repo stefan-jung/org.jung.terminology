@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  
+  <group>
+    <!-- Topics -->
+    <system systemId="urn:jung:dita:rng:termentry.rng" uri="termentry.rng"/>
+    <system systemId="urn:jung:dita:rng:termentryMod.rng" uri="termentryMod.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnet.rng" uri="semanticnet.rng"/>
+    <system systemId="urn:jung:dita:rng:semanticnetMod.rng" uri="semanticnetMod.rng"/>
+    <system systemId="urn:jung:dita:rng:termstats.rng" uri="termstats.rng"/>
+    <system systemId="urn:jung:dita:rng:termstatsMod.rng" uri="termstatsMod.rng"/>
+    
+    <!-- Element Domains -->
+    <system systemId="urn:jung:dita:rng:semanticnetDomain.rng" uri="semanticnetDomain.rng"/>
+    <system systemId="urn:jung:dita:rng:termstatsDomain.rng" uri="termstatsDomain.rng"/>
+  </group>
+  
+  <group>
+    <!-- Topics -->
+    <uri name="urn:jung:dita:rng:termentry.rng" uri="termentry.rng"/>
+    <uri name="urn:jung:dita:rng:termentryMod.rng" uri="termentryMod.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnet.rng" uri="semanticnet.rng"/>
+    <uri name="urn:jung:dita:rng:semanticnetMod.rng" uri="semanticnetMod.rng"/>
+    <uri name="urn:jung:dita:rng:termstats.rng" uri="termstats.rng"/>
+    <uri name="urn:jung:dita:rng:termstatsMod.rng" uri="termstatsMod.rng"/>
+    
+    <!-- Element Domains -->
+    <uri name="urn:jung:dita:rng:semanticnetDomain.rng" uri="semanticnetDomain.rng"/>
+    <uri name="urn:jung:dita:rng:termstatsDomain.rng" uri="termstatsDomain.rng"/>
+  </group>
+  
+</catalog>

@@ -214,7 +214,7 @@
     </meta>
     <projectTree name="org.jung.terminology.xpr">
         <folder masterFiles="true" name="Main Files">
-            <file name="catalog-dita.xml"/>
+            <file name="frameworks/termentry/rng/catalog.xml"/>
             <file name="samples/terminology.ditamap"/>
             <file name="samples/terminology.xml"/>
         </folder>

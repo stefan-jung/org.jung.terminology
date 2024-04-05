@@ -1100,10 +1100,11 @@
 content:
     oxy_combobox( 
             edit, '@domain-name',
+            columns, 30,
             editable, true
     ) !important;
     width: 75%;
-    display: inline;
+    display: block;
     float: right;
     -oxy-display-tags: none;
     visibility: -oxy-collapse-text;
@@ -1283,7 +1284,7 @@ content:
     );
     font-size: 0.8em;
 }
-*[class~="termentry/termNotation"]:edit-mode:before(4) {
+/**[class~="termentry/termNotation"]:edit-mode:before(4) {
     content: " ";
     font-size: 3pt;
     display: block;
@@ -1305,7 +1306,7 @@ content:
     float: right;
     padding-left: 1.0em;
     width: 75%;
-}
+}*/
 *[class~="termentry/termNotation"]:first-of-type {
     margin-top: 2.0em;
 }

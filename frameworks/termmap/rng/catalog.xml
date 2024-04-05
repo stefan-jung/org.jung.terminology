@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <group>
+        <!-- Maps -->
+        <system systemId="urn:jung:dita:rng:termmap.rng" uri="termmap.rng"/>
+        <system systemId="urn:jung:dita:rng:termmapMod.rng" uri="termmapMod.rng"/>
+        
+        <!-- Attribute Domains -->
+        <system systemId="urn:jung:dita:rng:termdomainAttDomain.rng" uri="termdomainAttDomain.rng"/>
+    </group>
+    
+    <group>
+        <!-- Maps -->
+        <uri name="urn:jung:dita:rng:termmap.rng" uri="termmap.rng"/>
+        <uri name="urn:jung:dita:rng:termmapMod.rng" uri="termmapMod.rng"/>
+        
+        <!-- Attribute Domains -->
+        <uri name="urn:jung:dita:rng:termdomainAttDomain.rng" uri="termdomainAttDomain.rng"/>
+    </group>
+    
+</catalog>

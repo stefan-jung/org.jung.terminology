@@ -6,7 +6,7 @@
   <require plugin="org.dita.base"/>
   <require plugin="org.dita.xhtml"/>
 
-  <feature extension="dita.specialization.catalog.relative" file="catalog-dita.xml"/>
+  <feature extension="dita.specialization.catalog.relative" file="catalog.xml"/>
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
