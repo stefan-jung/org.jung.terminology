@@ -774,7 +774,7 @@
         <empty/>
       </define>
       <define name="concept-domain.attributes">
-        <attribute name="concept-domain-name"/>
+        <attribute name="concept-domain"/>
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -823,7 +823,7 @@
         <empty/>
       </define>
       <define name="term-domain.attributes">
-        <attribute name="term-domain-name"/>
+        <attribute name="term-domain"/>
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
@@ -1653,25 +1653,25 @@
     <define name="concept-domain.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/concept-domain "/>
+        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/domain termentry/concept-domain "/>
       </optional>
     </define>
     <define name="concept-domains.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/div termentry/concept-domains "/>
+        <attribute name="class" a:defaultValue="- topic/div termentry/domains termentry/domains termentry/concept-domains "/>
       </optional>
     </define>
     <define name="term-domain.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/term-domain "/>
+        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/domain termentry/term-domain "/>
       </optional>
     </define>
     <define name="term-domains.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/div termentry/term-domains "/>
+        <attribute name="class" a:defaultValue="- topic/div termentry/domains termentry/term-domains "/>
       </optional>
     </define>
     <define name="fullForm.attlist" combine="interleave">

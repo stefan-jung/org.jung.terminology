@@ -1052,12 +1052,6 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-*[class~="termentry/domains"]:before(8) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
 *[class~="termentry/domains"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1096,19 +1090,29 @@
     padding-left: 5px;
     width: 20%;
 }
-*[class~="termentry/domain"] {
-content:
-    oxy_combobox( 
-            edit, '@domain-name',
-            columns, 30,
-            editable, true
-    ) !important;
+*[class~="termentry/domain"][class~="termentry/concept-domain"] {
     width: 75%;
     display: block;
     float: right;
     -oxy-display-tags: none;
     visibility: -oxy-collapse-text;
     -oxy-show-placeholder: no !important; 
+}
+*[class~="termentry/domain"][class~="termentry/concept-domain"] {
+    content:
+        oxy_combobox( 
+            edit, '@concept-domain',
+            columns, 30,
+            editable, true
+        ) !important;
+}
+*[class~="termentry/domain"][class~="termentry/term-domain"] {
+    content:
+        oxy_combobox( 
+            edit, '@term-domain',
+            columns, 30,
+            editable, true
+        ) !important;
 }
 
 /*********************************************
