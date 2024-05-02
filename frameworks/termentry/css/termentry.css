@@ -573,7 +573,8 @@
     margin-top: 5px;
 }
 *[class~="termentry/sourceReference"][href]:focus {
-    content: attr(href);
+    link: attr(href);
+    text-decoration: underline;
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.sourceReference.placeholder)}";
@@ -585,7 +586,8 @@
     margin-right: 5px;
     margin-top: 5px;
 }
-*[class~="termentry/sourceReference"]:after(1) {
+/* The reference name itself is now clickable. */
+/**[class~="termentry/sourceReference"]:after(1) {
     display: inline;
     content:
     oxy_button(
@@ -593,7 +595,7 @@
         showIcon, true,
         transparent, true
     );
-}
+}*/
 /**[class~="termentry/sourceReference"]:after(2) {
     content: " ";
     font-size: 3pt;
@@ -885,6 +887,8 @@
         fontInherit, 'false',
         actions,
         oxy_action_list(
+            oxy_action(id, 'term.sourceName.add'),
+            oxy_action(id, 'term.sourceReference.add'),
             oxy_action(id, 'term.termContextSource.delete')
         )
     );

@@ -21,9 +21,11 @@
           (http://creativecommons.org/licenses/by-sa/2.5)], via Wikimedia Commons</alt>
       </image>
     </fig>
+    <domains/>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
       <termVariant>motor vehicle chassis</termVariant>
+      <domains/>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
       <termVariant>chassis</termVariant>
@@ -31,7 +33,8 @@
     <fullForm language="en-GB" usage="notRecommended">
       <termVariant>vehicle frame</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred">
+    <fullForm language="de-DE" usage="preferred"
+      class="- topic/section concept/section termentry/termNotation termentry/fullForm ">
       <termVariant>Fahrgestell</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="admitted">
