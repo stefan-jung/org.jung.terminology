@@ -1,4 +1,9 @@
 @import url("flags.css");
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans+SC&family=Noto+Serif+TC&display=swap');
+
+
+@namespace xml "http://www.w3.org/XML/1998/namespace";
 
 @media oxygen-high-contrast-black, oxygen-dark-theme {
     *[class~="termentry/definition"],
@@ -233,10 +238,10 @@
 }*/
 
 *[class~="termentry/definitionSource"] {
-    -oxy-display-tags: none;
+    /*-oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.definitionSource.placeholder)}";
-    -oxy-show-placeholder: always;
+    -oxy-show-placeholder: always;*/
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
@@ -247,6 +252,17 @@
     margin-right: 5px;
     margin-top: 5px;
     width: 99% !important;
+}
+*[class~="termentry/definitionSource"]:empty {
+    content:
+        oxy_button(
+            actionID, 'term.sourceName.add',
+            showIcon, false
+        )
+        oxy_button(
+            actionID, 'term.sourceReference.add',
+            showIcon, false
+        )
 }
 
 /*********************************************
@@ -423,7 +439,6 @@
     content: attr(keyref, keyref);
 }
 
-
 /*********************************************
  * ALT
  *********************************************/
@@ -557,6 +572,13 @@
 *[class~="termentry/sourceReference"]:before {
     display: none !important;
 }
+*[class~="termentry/sourceReference"][format='html']:not([href]):empty {
+    content:
+        oxy_urlChooser(
+            edit, '@href',
+            columns, 40
+        );
+}
 *[class~="termentry/sourceReference"][href][format='html']:empty {
     content: "" !important;
 }
@@ -572,9 +594,11 @@
     margin-right: 5px;
     margin-top: 5px;
 }
-*[class~="termentry/sourceReference"][href]:focus {
-    link: attr(href);
+*[class~="termentry/sourceReference"][href] {
     text-decoration: underline;
+    link: attr(href);
+}
+*[class~="termentry/sourceReference"][href]:focus {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.sourceReference.placeholder)}";
@@ -585,6 +609,14 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
+    text-decoration: none;
+}
+*[class~="termentry/sourceReference"][href]:focus:after {
+    content: "   "
+        oxy_urlChooser(
+            edit, '@href',
+            columns, 40
+        );
 }
 /* The reference name itself is now clickable. */
 /**[class~="termentry/sourceReference"]:after(1) {
@@ -1281,7 +1313,24 @@
     );
     font-size: 0.8em;
 }
-*[class~="termentry/termNotation"]:focus:before(19) {
+*[class~="termentry/termNotation"]:focus:before(17) {
+    content: 
+        "               "
+        oxy_button(
+            actionID, 'term.move.element.up',
+            showIcon, true,
+            showText, false,
+            transparent, true
+        )
+        "   "
+        oxy_button(
+            actionID, 'term.move.element.down',
+            showIcon, true,
+            showText, false,
+            transparent, true
+        );
+}
+/**[class~="termentry/termNotation"]:focus:before(19) {
     content: "  ${i18n(term.usage)} "
     oxy_combobox(
         edit, '@usage',
@@ -1291,33 +1340,10 @@
         columns, 15
     );
     font-size: 0.8em;
-}
-/**[class~="termentry/termNotation"]:edit-mode:before(4) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="termentry/termNotation"]:edit-mode:before(3) {
-    content: "${i18n(term.termdomain)}";
-    display: inline;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-    font-weight: normal;
-    padding-left: 5px;
-    width: 20%;
-}
-*[class~="termentry/termNotation"]:edit-mode:before(2) {
-    -oxy-display-tags: none;
-    content: oxy_textfield(edit, "@termdomain", columns, 50);
-    display: inline;
-    float: right;
-    padding-left: 1.0em;
-    width: 75%;
 }*/
-*[class~="termentry/termNotation"]:first-of-type {
+/**[class~="termentry/termNotation"]:first-of-type {
     margin-top: 2.0em;
-}
+}*/
 *[class~="termentry/termNotation"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1948,6 +1974,38 @@
     -oxy-editable: true;
     -oxy-show-placeholder: no !important;
     visibility: -oxy-collapse-text;
+}
+
+/* Korean */
+*[xml|lang~="ko-KR"],
+*[language~="ko-KR"] > termVariant {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Chinese (Simplified) */
+*[xml|lang~="zh-CN"],
+*[language~="zh-CN"] > termVariant {
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Chinese (Traditional) */
+*[xml|lang~="zh-TW"],
+*[language~="zh-TW"] > termVariant {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Japanese */
+*[xml|lang~="ja-JP"],
+*[language~="ja-JP"] > termVariant {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*********************************************
