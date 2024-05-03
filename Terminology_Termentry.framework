@@ -37,7 +37,7 @@
 											<Integer>6</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/i18n/</String>
+											<String>${framework}/resources/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -54,7 +54,7 @@
 											<Integer>7</Integer>
 										</field>
 										<field name="value">
-											<String>${framework}/resources/</String>
+											<String>${framework}/frameworks/termentry/i18n/</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -69,33 +69,6 @@
 										</field>
 										<field name="index">
 											<Integer>13</Integer>
-										</field>
-										<field name="value">
-											<cssFile>
-												<field name="href">
-													<String>${framework}/css/termentry.css</String>
-												</field>
-												<field name="title">
-													<String>Termentry</String>
-												</field>
-												<field name="alternate">
-													<Boolean>false</Boolean>
-												</field>
-											</cssFile>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/cssDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>14</Integer>
 										</field>
 										<field name="value">
 											<cssFile>
@@ -268,6 +241,33 @@
 										</field>
 										<field name="anchor">
 											<String>${baseFramework}/css/edit/style-basic.css</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<cssFile>
+												<field name="href">
+													<String>${framework}/frameworks/termentry/css/termentry.css</String>
+												</field>
+												<field name="title">
+													<String>Termentry</String>
+												</field>
+												<field name="alternate">
+													<Boolean>false</Boolean>
+												</field>
+											</cssFile>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -8314,7 +8314,7 @@
 											<Integer>2</Integer>
 										</field>
 										<field name="value">
-											<String>${frameworkDir}/templates</String>
+											<String>${frameworkDir}/frameworks/termentry/templates</String>
 										</field>
 										<field name="patchHandling">
 											<String>addIndex</String>
@@ -8913,6 +8913,23 @@
 											<String>validationScenarios</String>
 										</field>
 										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>Accessibility</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>validationScenarios</String>
+										</field>
+										<field name="index">
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
@@ -8975,7 +8992,7 @@
 																		<Integer>7</Integer>
 																	</field>
 																	<field name="uri">
-																		<String>${framework}/rules/termentry.sch</String>
+																		<String>${framework}/frameworks/termentry/rules/termentry.sch</String>
 																	</field>
 																</validationUnitSchema>
 															</field>

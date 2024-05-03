@@ -226,7 +226,7 @@
 										<field name="value">
 											<cssFile>
 												<field name="href">
-													<String>${framework}/css/termmap.css</String>
+													<String>${framework}/frameworks/termmap/css/termmap.css</String>
 												</field>
 												<field name="title">
 													<String>Terminology Map</String>
@@ -3601,6 +3601,23 @@
 											<String>validationScenarios</String>
 										</field>
 										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>DITA Map Validation and Completeness Check</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>validationScenarios</String>
+										</field>
+										<field name="index">
 											<Integer>0</Integer>
 										</field>
 										<field name="value">
@@ -3663,7 +3680,7 @@
 																		<Integer>7</Integer>
 																	</field>
 																	<field name="uri">
-																		<String>${framework}/rules/termmap.sch</String>
+																		<String>${framework}/frameworks/termmap/rules/termmap.sch</String>
 																	</field>
 																</validationUnitSchema>
 															</field>
