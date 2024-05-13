@@ -1,6 +1,6 @@
 @import url("flags.css");
 /*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans+SC&family=Noto+Serif+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=Noto+Sans+SC&family=Noto+Serif+TC&family=Noto+Sans+Thai&display=swap');
 
 
 @namespace xml "http://www.w3.org/XML/1998/namespace";
@@ -1278,11 +1278,15 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }*/
-*[class~="termentry/termNotation"]:before(21) {
-    content: oxy_label(text, "${i18n(term.language)} ", styles, "font-weight: 600;") attr(language);
+*[class~="termentry/termNotation"]:before(31) {
+    content: oxy_label(text, "${i18n(term.language)} ", styles, "font-weight: 600;");
     font-size: 0.8em;
 }
-*[class~="termentry/termNotation"]:focus:before(21) {
+*[class~="termentry/termNotation"]:before(22) {
+    content: attr(language);
+    font-size: 0.8em;
+}
+*[class~="termentry/termNotation"]:focus:before(31) {
     content: "${i18n(term.language)}: "
     oxy_combobox(
         edit, '@language',
@@ -1497,7 +1501,7 @@
     -oxy-placeholder-content: "${i18n(term.termVariant.placeholder)}";
     -oxy-show-placeholder: always;
     display: block;
-    font-family: Arial, sans-serif;
+    font-family: Arial, "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Serif TC", "Noto Sans Thai", sans-serif;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
