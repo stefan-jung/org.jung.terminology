@@ -5,7 +5,7 @@
     <input href="terminology.ditamap"/>
   </context>
   
-  <deliverable name="Termbrowser" id="termbrowser">
+  <deliverable name="Termbrowser" id="tmb">
     <context idref="terminology"/>
     <output href="./termbrowser"/>
     <publication transtype="termbrowser-responsive">
@@ -74,6 +74,14 @@
     <context idref="terminology"/>
     <output href="./multiterm"/>
     <publication transtype="multiterm">
+      <param name="debugging.mode" value="true"/>
+    </publication>
+  </deliverable>
+
+  <deliverable name="Multiterm XML Custom" id="multiterm-custom">
+    <context idref="terminology"/>
+    <output href="./multiterm-custom"/>
+    <publication transtype="multiterm-custom">
       <param name="debugging.mode" value="true"/>
     </publication>
   </deliverable>

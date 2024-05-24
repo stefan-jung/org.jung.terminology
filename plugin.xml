@@ -16,7 +16,7 @@
   <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,oxygen-termchecker,termbrowser-responsive"/>
+  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,multiterm-custom,oxygen-termchecker,termbrowser-responsive"/>
   
   <transtype name="tbx-min-v3-dca" extends="html5" desc="TBX-Min v3 DCA">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
@@ -587,6 +587,13 @@
   </transtype>
   
   <transtype name="multiterm" extends="html5" desc="MultiTerm XML">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
+  </transtype>
+
+  <transtype name="multiterm-custom" extends="html5" desc="MultiTerm XML (custom), this is invalid according to the MultiTerm schema, but seems to be the what MultiTerm actually needs.">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
       <val default="true">false</val>
       <val>true</val>
