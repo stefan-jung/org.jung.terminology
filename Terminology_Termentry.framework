@@ -68,26 +68,33 @@
 											<String>authorExtensionDescriptor/cssDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>13</Integer>
+											<Integer>12</Integer>
 										</field>
 										<field name="value">
-											<cssFile>
-												<field name="href">
-													<String>${baseFramework}/css/edit/style-basic.css</String>
-												</field>
-												<field name="title">
-													<String>Basic</String>
-												</field>
-												<field name="alternate">
-													<Boolean>false</Boolean>
-												</field>
-											</cssFile>
+											<null/>
 										</field>
 										<field name="patchHandling">
-											<String>addIndex</String>
+											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
+											<String>${baseFramework}/css/webauthor/inline-insertion-actions.css</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>11</Integer>
+										</field>
+										<field name="value">
 											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${baseFramework}/css/webauthor/profiling.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -122,6 +129,23 @@
 										</field>
 										<field name="anchor">
 											<String>${baseFramework}/css/hints/hints.css</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>8</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${baseFramework}/css/edit/alternate-fold-prolog.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -190,6 +214,23 @@
 										</field>
 										<field name="anchor">
 											<String>${baseFramework}/css/edit/alternate-coloured-revisions.css</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/cssDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>3</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${baseFramework}/css/edit/alternate-map-print-preview-layout-force-media-print.css</String>
 										</field>
 									</poPatch>
 									<poPatch>
