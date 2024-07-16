@@ -36,7 +36,7 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/tbx-core.css</String>
+											<String>${framework}/frameworks/tbx-core/css/tbx-core.css</String>
 										</field>
 										<field name="title">
 											<String>TBX-Core</String>
