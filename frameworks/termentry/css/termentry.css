@@ -131,6 +131,10 @@
         )
     );
 }
+*[class~="termentry/termBody"]:after(2) {
+    content:
+        oxy_xpath('if (following-sibling::*[contains(@class, " termentry/relations ")]) then "" else "No relations defined"');
+}
 
 /*********************************************
  * DEFINITION
