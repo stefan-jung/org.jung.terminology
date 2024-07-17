@@ -1,7 +1,6 @@
 @import url("flags.css");
 /* Using Google Fonts can cause incompatibility issues, because this implies that Google Fonts need to be configured
  * as trusted host. Further on, this could lead to data privacy issues, so we don't do this any longer. */
-/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');*/
 
 @namespace xml "http://www.w3.org/XML/1998/namespace";
 
