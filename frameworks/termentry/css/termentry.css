@@ -1139,19 +1139,17 @@
 }
 *[class~="termentry/domain"][class~="termentry/concept-domain"] {
     content:
-        oxy_combobox( 
-            edit, '@concept-domain',
-            columns, 30,
-            editable, true
-        ) !important;
+        oxy_popup(
+            edit, '@concept-domain'
+        );
+    padding-bottom: 5px;
 }
 *[class~="termentry/domain"][class~="termentry/term-domain"] {
     content:
-        oxy_combobox( 
-            edit, '@term-domain',
-            columns, 30,
-            editable, true
-        ) !important;
+        oxy_popup(
+            edit, '@term-domain'
+        );
+    padding-bottom: 5px;
 }
 
 /*********************************************
