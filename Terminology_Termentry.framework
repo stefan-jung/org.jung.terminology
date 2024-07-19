@@ -68,7 +68,7 @@
 											<String>classpath</String>
 										</field>
 										<field name="index">
-											<Integer>8</Integer>
+											<Integer>0</Integer>
 										</field>
 										<field name="value">
 											<String>${framework}/catalog.xml</String>
