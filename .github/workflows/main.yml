@@ -23,7 +23,7 @@ jobs:
           distribution: 'zulu'
       - name: DITA-OT
         run: |
-          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.1.2/dita-ot-4.1.2.zip
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.2.3/dita-ot-4.2.3.zip
           unzip dita-ot-4.2.3
           chmod +x dita-ot-4.2.3/bin/dita
           chmod +x dita-ot-4.2.3/bin/ant
