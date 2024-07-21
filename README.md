@@ -1,6 +1,7 @@
 org.jung.terminology
 ====================
 
+[![DITA-OT 4.2.3](https://img.shields.io/badge/DITA--OT-4.2.3-green.svg)](http://www.dita-ot.org)
 [![DITA-OT 4.1.2](https://img.shields.io/badge/DITA--OT-4.1.2-green.svg)](http://www.dita-ot.org)
 [![DITA-OT 4.0.2](https://img.shields.io/badge/DITA--OT-4.0.2-green.svg)](http://www.dita-ot.org)
 [![DITA-OT 3.7.4](https://img.shields.io/badge/DITA--OT-3.7.4-green.svg)](http://www.dita-ot.org) 
