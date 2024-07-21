@@ -16,6 +16,10 @@
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
       <termVariant>advanced driver assistance systems</termVariant>
+      <termContext>
+        <termContextText>foo</termContextText>
+        <termContextSource>bar</termContextSource>
+      </termContext>
     </fullForm>
     <acronym language="en-GB" usage="preferred">
       <termVariant>ADAS</termVariant>

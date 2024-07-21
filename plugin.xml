@@ -931,6 +931,7 @@
   
   <!-- Import Ant script -->
   <feature extension="ant.import" file="ant/build_dita2multiterm-mtf.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2multiterm-mtf-custom.xml"/>
   <feature extension="ant.import" file="ant/build_dita2oxygen-termchecker_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v2_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v3_template.xml"/>

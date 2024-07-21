@@ -10,7 +10,7 @@
         <xsl:param name="language-code" as="xs:string"/>
         <xsl:sequence select="
             if ($language-code = 'en-US') then 'EN-US'
-            else if ($language-code = 'fi-IF') then 'FI-FI'
+            else if ($language-code = 'fi-FI') then 'FI-FI'
             else if ($language-code = 'fr-FR') then 'FR-FR'
             else if ($language-code = 'cs-CZ') then 'CS-CZ'
             else if ($language-code = 'da-DK') then 'DA-DK'
@@ -53,7 +53,7 @@
             else if ($language-code = 'th-TH') then 'TH-TH'
             else if ($language-code = 'vi-VN') then 'VI-VN'
             else if ($language-code = 'en-GB') then 'EN-GB'
-            else 'UNDEFINED'
+            else $language-code || ' UNDEFINED'
             "/>
     </xsl:function>
     

@@ -14,10 +14,6 @@
                         <Boolean>false</Boolean>
                     </entry>
                     <entry>
-                        <String>keys.context</String>
-                        <String>${pdu}/samples/terminology.ditamap?oxycontextProjectParent=terminology.xml&amp;oxycontextID=terminology&amp;oxycontextName=Terminology&amp;oxycontextType=GlobalContext</String>
-                    </entry>
-                    <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>

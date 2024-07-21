@@ -195,6 +195,7 @@
           <value>notRecommended</value><a:documentation>The term must not be used.</a:documentation>
           <value>obsolete</value><a:documentation>The term is obsolete.</a:documentation>
           <value>preferred</value><a:documentation>The term is preferred.</a:documentation>
+          <value>toBeDiscussed</value><a:documentation>The usage of the term is not yet clear.</a:documentation>
         </choice>
       </attribute>
     </define>
