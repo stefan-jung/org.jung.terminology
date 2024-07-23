@@ -1570,22 +1570,46 @@
 /*********************************************
  * ANTONYMS
  *********************************************/
-*[class~="termentry/antonyms"]:before(10) {
-    content:
-    oxy_buttonGroup(
-        label, '${i18n(term.antonyms)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.antonym.add'),
-            oxy_action(id, 'term.antonyms.delete')
-        )
-    );
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
+/* Oxygen Content Fusion does not support keyrefs */
+@media oxygen and (platform: 'webapp') {
+    *[class~="termentry/antonyms"]:before(10) {
+        content:
+            oxy_buttonGroup(
+                label, '${i18n(term.antonyms)}',
+                transparent, 'true',
+                fontInherit, 'false',
+                actions,
+                oxy_action_list(
+                    oxy_action(id, 'term.antonym.add.href'),
+                    oxy_action(id, 'term.antonyms.delete')
+                )
+            );
+        border-bottom: 0.05rem solid #767676;
+        display: block;
+        padding-bottom: 5px;
+        margin-bottom: 2px;
+    }
+}
+/* Oxygen XML standalone does support keyrefs and hrefs */
+@media oxygen and (platform: 'standalone') {
+    *[class~="termentry/antonyms"]:before(10) {
+        content:
+            oxy_buttonGroup(
+                label, '${i18n(term.antonyms)}',
+                transparent, 'true',
+                fontInherit, 'false',
+                actions,
+                oxy_action_list(
+                    oxy_action(id, 'term.antonym.add'),
+                    oxy_action(id, 'term.antonym.add.href'),
+                    oxy_action(id, 'term.antonyms.delete')
+                )
+            );
+        border-bottom: 0.05rem solid #767676;
+        display: block;
+        padding-bottom: 5px;
+        margin-bottom: 2px;
+    }
 }
 *[class~="termentry/antonyms"] {
     -oxy-display-tags: none;
