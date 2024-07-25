@@ -7,7 +7,7 @@
     <!-- ================================================== -->
     <!-- OUTPUT                                             -->
     <!-- ================================================== -->
-    <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="true"/>
+    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
 
     <!-- ================================================== -->

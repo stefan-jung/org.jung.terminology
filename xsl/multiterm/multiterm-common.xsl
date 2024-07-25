@@ -108,12 +108,10 @@
         </descripGrp>
     </xsl:template>
     
-    <!--<fullForm usage="preferred" language="en-GB">
-        <termVariant>advanced driver assistance systems</termVariant>
-    </fullForm>-->
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')]" mode="termnotation" expand-text="yes">
         <xsl:param name="part-of-speech" select="'noun'"/>
-        <languageGrp type="{sj:language-name(@language)}" lang="{sj:language-code(@language)}">
+        <languageGrp>
+            <language type="{sj:language-name(@language)}" lang="{sj:language-code(@language)}"/>
             <termGrp>
                 <term><xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]"/></term>
                 <transacGrp>
@@ -127,12 +125,6 @@
                     <descrip type="Part of Speech">{$part-of-speech}</descrip>
                 </descripGrp>
                 <xsl:apply-templates mode="termcontext"/>
-                <!--<descripGrp>
-                    <descrip type="Context"></descrip>
-                    <descripGrp>
-                        <descrip type="Source"></descrip>
-                    </descripGrp>
-                </descripGrp>-->
             </termGrp>
         </languageGrp>
     </xsl:template>
