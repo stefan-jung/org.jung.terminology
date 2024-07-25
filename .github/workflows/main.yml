@@ -45,7 +45,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: org.jung.terminology-4-1-2
+          name: org.jung.terminology-4-2-3
           path: |
             4.2.3
             !4.2.3/**/*.html
