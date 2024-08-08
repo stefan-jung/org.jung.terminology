@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0" 
+    xmlns:sj="https://stefan-jung.org"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="xs">
@@ -15,6 +16,7 @@
     <!-- ================================================== -->
     <xsl:import href="multiterm-language-name.xsl"/>
     <xsl:import href="multiterm-language-code.xsl"/>
+    <xsl:import href="hash.xsl"/>
     
     
     <!-- ================================================== -->
@@ -39,11 +41,11 @@
     <xsl:mode name="definition" on-no-match="shallow-skip"/>
     <xsl:mode name="definitionText" on-no-match="shallow-skip"/>
     <xsl:mode name="definitionSource" on-no-match="shallow-skip"/>
-    
+
+
     <!-- ================================================== -->
     <!-- TEMPLATES                                          -->
     <!-- ================================================== -->
-
     <xsl:template match="/">
         <Schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
             <mtf>
@@ -60,17 +62,18 @@
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="t" select="xs:anyURI($dita.temp.dir.url || $filename)" as="xs:anyURI"/>
         <xsl:variable name="conceptNumber" select="count(preceding-sibling::*[contains(@class, ' termmap/termref ')]) + 1" as="xs:integer"/>
-        <xsl:apply-templates select="document($t)" mode="termentry">
+        <xsl:apply-templates select="document($t)" mode="termentry"/>
+<!--        <xsl:apply-templates select="document($t)" mode="termentry">
             <xsl:with-param name="conceptNumber" select="$conceptNumber" as="xs:integer"/>
-        </xsl:apply-templates>
+        </xsl:apply-templates>-->
     </xsl:template>
     
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry">
-        <xsl:param name="conceptNumber" as="xs:integer" required="true"/>
+        <!--<xsl:param name="conceptNumber" as="xs:integer" required="true"/>-->
         <xsl:variable name="termentry-root" select="." as="node()"/>
         <conceptGrp>
-            <concept><xsl:value-of select="$conceptNumber"/></concept>
+            <concept><xsl:value-of select="sj:hash-string(./@id)"/></concept>
             <system type="entryClass"/>
             <transacGrp>
                 <!--<transac type="origination">ST</transac>-->
