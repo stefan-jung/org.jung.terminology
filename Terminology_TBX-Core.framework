@@ -12,12 +12,12 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>Jung Terminology TBX-Basic 3</String>
+						<String>Jung Terminology TBX-Core 3</String>
 					</field>
 					<field name="schemaDescriptor">
 						<docTypeSchema>
 							<field name="type">
-								<Integer>6</Integer>
+								<Integer>4</Integer>
 							</field>
 							<field name="uri">
 								<String>${framework}/rng/TBXcoreStructV03.rng</String>
@@ -36,10 +36,10 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/tbx-basic.css</String>
+											<String>${framework}/frameworks/tbx-core/css/tbx-core.css</String>
 										</field>
 										<field name="title">
-											<String>TBX-Basic</String>
+											<String>TBX-Core</String>
 										</field>
 										<field name="alternate">
 											<Boolean>false</Boolean>
@@ -168,10 +168,10 @@
 						<documentTypeRule-array>
 							<documentTypeRule>
 								<field name="namespace">
-									<String>*urn:iso:std:iso:30042:ed-2*</String>
+									<String>*</String>
 								</field>
 								<field name="rootElem">
-									<String>*tbx*</String>
+									<String>tbx</String>
 								</field>
 								<field name="fileName">
 									<String>*</String>
@@ -183,13 +183,13 @@
 									<String></String>
 								</field>
 								<field name="attributeLocalName">
-									<String>*</String>
+									<String>type</String>
 								</field>
 								<field name="attributeNamespace">
 									<String>*</String>
 								</field>
 								<field name="attributeValue">
-									<String>*</String>
+									<String>TBX-Core</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>

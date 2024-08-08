@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ID Generation for DOCTALES Terminology Entries -->
+<!-- ID Generation for Terminology Entries -->
 <idGeneration>
     <autoGenerate>true</autoGenerate>
     <idAttribute>id</idAttribute>

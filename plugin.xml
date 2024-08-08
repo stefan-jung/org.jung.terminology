@@ -6,7 +6,7 @@
   <require plugin="org.dita.base"/>
   <require plugin="org.dita.xhtml"/>
 
-  <feature extension="dita.specialization.catalog.relative" file="catalog-dita.xml"/>
+  <feature extension="dita.specialization.catalog.relative" file="catalog.xml"/>
   
   <!-- Define parameters in 'insertParameters.xml' to pass them from Ant to XSLT. -->
   <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
@@ -16,7 +16,7 @@
   <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,oxygen-termchecker,termbrowser-responsive"/>
+  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,multiterm-custom,oxygen-termchecker,termbrowser-responsive"/>
   
   <transtype name="tbx-min-v3-dca" extends="html5" desc="TBX-Min v3 DCA">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
@@ -593,6 +593,13 @@
     </param>
   </transtype>
 
+  <transtype name="multiterm-custom" extends="html5" desc="MultiTerm XML (custom), this is invalid according to the MultiTerm schema, but seems to be the what MultiTerm actually needs.">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
+  </transtype>
+
   <!-- Add new transtype to generate Schematron rules for terminology checks. -->
   <transtype name="termchecker-dita" extends="html5" desc="Termchecker for DITA">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
@@ -924,6 +931,7 @@
   
   <!-- Import Ant script -->
   <feature extension="ant.import" file="ant/build_dita2multiterm-mtf.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2multiterm-mtf-custom.xml"/>
   <feature extension="ant.import" file="ant/build_dita2oxygen-termchecker_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v2_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2tbx-basic-v3_template.xml"/>

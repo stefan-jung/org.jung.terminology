@@ -53,7 +53,7 @@
             else if ($language-code = 'th-TH') then 'Thai (Thailand)'
             else if ($language-code = 'vi-VN') then 'Vietnamese (Vietnam)'
             else if ($language-code = 'en-GB') then 'English (Great Britain)'
-            else $language-code || ' UNDEFINED'
+            else 'UNDEFINED'
             "/>
     </xsl:function>
     

@@ -12,15 +12,15 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>Jung Terminology TBX-Min 3 DCA</String>
+						<String>Jung Terminology Multiterm</String>
 					</field>
 					<field name="schemaDescriptor">
 						<docTypeSchema>
 							<field name="type">
-								<Integer>9</Integer>
+								<Integer>2</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/nvdl/TBX-Min.nvdl</String>
+								<String>${frameworks}/multiterm-mtf/xsd/multiterm-mtf.xsd</String>
 							</field>
 						</docTypeSchema>
 					</field>
@@ -36,10 +36,10 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/tbx-min.css</String>
+											<String>${framework}/frameworks/multiterm-mtf/css/multiterm.css</String>
 										</field>
 										<field name="title">
-											<String>TBX-Min</String>
+											<String>Multiterm</String>
 										</field>
 										<field name="alternate">
 											<Boolean>false</Boolean>
@@ -171,7 +171,7 @@
 									<String>*</String>
 								</field>
 								<field name="rootElem">
-									<String>tbx</String>
+									<String>Schema</String>
 								</field>
 								<field name="fileName">
 									<String>*</String>
@@ -183,13 +183,13 @@
 									<String></String>
 								</field>
 								<field name="attributeLocalName">
-									<String>style</String>
+									<String>*</String>
 								</field>
 								<field name="attributeNamespace">
 									<String>*</String>
 								</field>
 								<field name="attributeValue">
-									<String>dca</String>
+									<String>*</String>
 								</field>
 							</documentTypeRule>
 						</documentTypeRule-array>

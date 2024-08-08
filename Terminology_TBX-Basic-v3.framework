@@ -12,15 +12,15 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>Jung Terminology Multiterm</String>
+						<String>Jung Terminology TBX-Basic 3</String>
 					</field>
 					<field name="schemaDescriptor">
 						<docTypeSchema>
 							<field name="type">
-								<Integer>2</Integer>
+								<Integer>6</Integer>
 							</field>
 							<field name="uri">
-								<String>${frameworks}/multiterm-mtf/xsd/multiterm-mtf.xsd</String>
+								<String>${framework}/rng/TBXcoreStructV03.rng</String>
 							</field>
 						</docTypeSchema>
 					</field>
@@ -36,10 +36,10 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/tbx-min.css</String>
+											<String>${framework}/frameworks/tbx-basic-v3/css/tbx-basic.css</String>
 										</field>
 										<field name="title">
-											<String>TBX-Min</String>
+											<String>TBX-Basic 3</String>
 										</field>
 										<field name="alternate">
 											<Boolean>false</Boolean>
@@ -168,10 +168,10 @@
 						<documentTypeRule-array>
 							<documentTypeRule>
 								<field name="namespace">
-									<String>*</String>
+									<String>*urn:iso:std:iso:30042:ed-2*</String>
 								</field>
 								<field name="rootElem">
-									<String>Schema</String>
+									<String>*tbx*</String>
 								</field>
 								<field name="fileName">
 									<String>*</String>

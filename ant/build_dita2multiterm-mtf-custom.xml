@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+    
+    <target name="dita2multiterm-custom"
+        depends="
+        html5.init,
+        build-init,
+        preprocess,
+        multiterm-custom"/>
+    
+    <target name="multiterm-custom" description="Create a Multiterm XML file">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <makeurl property="output.dir.url" file="${output.dir}"/>
+        <xslt 
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${output.dir}${file.separator}${basename}.xml"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/multiterm-custom/multiterm-custom.xsl"
+            destdir="${output.dir}">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+            <param name="output.dir.url" expression="${output.dir.url}"/>
+        </xslt>
+    </target>
+    
+</project>

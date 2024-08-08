@@ -12,7 +12,7 @@
   </definition>
  <termBody>
   <domains>
-   <domain domain-name="VW"/>
+   <domain concept-domain="VW"/>
   </domains>
   <agreedWith>
    <termCommitteeMember>Martin Winterkorn</termCommitteeMember>

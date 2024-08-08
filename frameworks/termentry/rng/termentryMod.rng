@@ -84,11 +84,11 @@
     <define name="termCommitteeMember">
       <ref name="termCommitteeMember.element"/>
     </define>
-    <define name="domains">
-      <ref name="domains.element"/>
+    <define name="concept-domains">
+      <ref name="concept-domains.element"/>
     </define>
-    <define name="domain">
-      <ref name="domain.element"/>
+    <define name="concept-domain">
+      <ref name="concept-domain.element"/>
     </define>
     <define name="partOfSpeech">
       <ref name="partOfSpeech.element"/>
@@ -137,6 +137,12 @@
     </define>
     <define name="termContextSource">
       <ref name="termContextSource.element"/>
+    </define>
+    <define name="term-domains">
+      <ref name="term-domains.element"/>
+    </define>
+    <define name="term-domain">
+      <ref name="term-domain.element"/>
     </define>
     <define name="termSource">
       <ref name="termSource.element"/>
@@ -189,6 +195,7 @@
           <value>notRecommended</value><a:documentation>The term must not be used.</a:documentation>
           <value>obsolete</value><a:documentation>The term is obsolete.</a:documentation>
           <value>preferred</value><a:documentation>The term is preferred.</a:documentation>
+          <value>toBeDiscussed</value><a:documentation>The usage of the term is not yet clear.</a:documentation>
         </choice>
       </attribute>
     </define>
@@ -605,7 +612,7 @@
           </choice>
         </zeroOrMore>
         <optional>
-          <ref name="domains"/>
+          <ref name="concept-domains"/>
         </optional>
         <optional>
           <ref name="agreedWith"/>
@@ -738,52 +745,101 @@
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Domains </a:documentation>
-      <define name="domains.content">
+      <a:documentation> LONG NAME: Concept Domains </a:documentation>
+      <define name="concept-domains.content">
         <oneOrMore>
-          <ref name="domain"/>
+          <ref name="concept-domain"/>
         </oneOrMore>
       </define>
-      <define name="domains.attributes">
+      <define name="concept-domains.attributes">
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="domains.element">
+      <define name="concept-domains.element">
         <element name="domains" dita:longName="Domains">
           <a:documentation>The &lt;domains> element contains at least one domain of the term.
             Category: Termentry elements</a:documentation>
-          <ref name="domains.attlist"/>
-          <ref name="domains.content"/>
+          <ref name="concept-domains.attlist"/>
+          <ref name="concept-domains.content"/>
         </element>
       </define>
-      <define name="domains.attlist" combine="interleave">
-        <ref name="domains.attributes"/>
+      <define name="concept-domains.attlist" combine="interleave">
+        <ref name="concept-domains.attributes"/>
       </define>
     </div>
     <div>
-      <a:documentation> LONG NAME: Domain </a:documentation>
-      <define name="domain.content">
+      <a:documentation> LONG NAME: Concept Domain </a:documentation>
+      <define name="concept-domain.content">
         <empty/>
       </define>
-      <define name="domain.attributes">
-        <attribute name="domain-name"/>
+      <define name="concept-domain.attributes">
+        <attribute name="concept-domain"/>
         <ref name="univ-atts"/>
         <optional>
           <attribute name="outputclass"/>
         </optional>
       </define>
-      <define name="domain.element">
+      <define name="concept-domain.element">
         <element name="domain" dita:longName="Domain">
           <a:documentation>The &lt;domain> element contains the domain of the term.
             Category: Termentry elements</a:documentation>
-          <ref name="domain.attlist"/>
-          <ref name="domain.content"/>
+          <ref name="concept-domain.attlist"/>
+          <ref name="concept-domain.content"/>
         </element>
       </define>
-      <define name="domain.attlist" combine="interleave">
-        <ref name="domain.attributes"/>
+      <define name="concept-domain.attlist" combine="interleave">
+        <ref name="concept-domain.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Domains </a:documentation>
+      <define name="term-domains.content">
+        <oneOrMore>
+          <ref name="term-domain"/>
+        </oneOrMore>
+      </define>
+      <define name="term-domains.attributes">
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="term-domains.element">
+        <element name="domains" dita:longName="Domains">
+          <a:documentation>The &lt;domains> element contains at least one domain of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="term-domains.attlist"/>
+          <ref name="term-domains.content"/>
+        </element>
+      </define>
+      <define name="term-domains.attlist" combine="interleave">
+        <ref name="term-domains.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Term Domain </a:documentation>
+      <define name="term-domain.content">
+        <empty/>
+      </define>
+      <define name="term-domain.attributes">
+        <attribute name="term-domain"/>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="term-domain.element">
+        <element name="domain" dita:longName="Domain">
+          <a:documentation>The &lt;domain> element contains the domain of the term.
+            Category: Termentry elements</a:documentation>
+          <ref name="term-domain.attlist"/>
+          <ref name="term-domain.content"/>
+        </element>
+      </define>
+      <define name="term-domain.attlist" combine="interleave">
+        <ref name="term-domain.attributes"/>
       </define>
     </div>
     <div>
@@ -1304,6 +1360,7 @@
         </zeroOrMore>
         <optional>
           <choice>
+            <ref name="term-domains"/>
             <ref name="annotation"/>
             <ref name="termContext"/>
             <ref name="termSource"/>
@@ -1594,16 +1651,28 @@
         <attribute name="class" a:defaultValue="- topic/shortdesc termentry/definitionText "/>
       </optional>
     </define>
-    <define name="domain.attlist" combine="interleave">
+    <define name="concept-domain.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/domain "/>
+        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/domain termentry/concept-domain "/>
       </optional>
     </define>
-    <define name="domains.attlist" combine="interleave">
+    <define name="concept-domains.attlist" combine="interleave">
       <ref name="global-atts"/>
       <optional>
-        <attribute name="class" a:defaultValue="- topic/div termentry/domains "/>
+        <attribute name="class" a:defaultValue="- topic/div termentry/domains termentry/domains termentry/concept-domains "/>
+      </optional>
+    </define>
+    <define name="term-domain.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/data concept/data termentry/domain termentry/term-domain "/>
+      </optional>
+    </define>
+    <define name="term-domains.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/div termentry/domains termentry/term-domains "/>
       </optional>
     </define>
     <define name="fullForm.attlist" combine="interleave">

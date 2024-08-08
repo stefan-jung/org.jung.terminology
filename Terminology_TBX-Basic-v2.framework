@@ -36,10 +36,10 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/tbx-basic.css</String>
+											<String>${framework}/frameworks/tbx-basic-v2/css/tbx-basic.css</String>
 										</field>
 										<field name="title">
-											<String>TBX-Basic</String>
+											<String>TBX-Basic 2</String>
 										</field>
 										<field name="alternate">
 											<Boolean>false</Boolean>

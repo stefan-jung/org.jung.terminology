@@ -7,8 +7,8 @@
     
     <!-- Menu entry -->
     <key value="term.terminology">
-        <val lang="en_US">DOCTALES Terminology</val>
-        <val lang="de_DE">DOCTALES Terminologie</val>
+        <val lang="en_US">Terminology</val>
+        <val lang="de_DE">Terminologie</val>
     </key>
     <key value="term.move.element.up">
         <val lang="en_US">Move element up.</val>
@@ -1057,7 +1057,7 @@
         <val lang="de_DE">Verwandte Begriffe</val>
     </key>
     <key value="term.relatedTerms.add">
-        <val lang="en_US">Add relatedTerms</val>
+        <val lang="en_US">Add related terms</val>
         <val lang="de_DE">Verwandte Begriffe einfügen</val>
     </key>
     <key value="term.relatedTerms.add_description">

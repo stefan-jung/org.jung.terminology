@@ -13,7 +13,7 @@
     <!-- ================================================== -->
     <!-- IMPORTS                                            -->
     <!-- ================================================== -->
-    <xsl:import href="multiterm-common.xsl"/>
+    <xsl:import href="../multiterm/multiterm-common.xsl"/>
     
     
     <!-- ================================================== -->
@@ -33,11 +33,9 @@
     <!-- ================================================== -->
 
     <xsl:template match="/">
-        <Schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-            <mtf>
-                <xsl:apply-templates mode="termref"/>
-            </mtf>
-        </Schema>
+        <mtf>
+            <xsl:apply-templates mode="termref"/>
+        </mtf>
     </xsl:template>
     
 </xsl:stylesheet>

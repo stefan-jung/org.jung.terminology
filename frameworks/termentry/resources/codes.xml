@@ -25,10 +25,10 @@
     <code>Cy-sr-SP</code>
     <code>Cy-uz-UZ</code>
     <code>da-DK</code>
-    <code>de</code>
-    <code>de-AT</code>
-    <code>de-CH</code>
-    <code>de-DE</code>
+    <code>de</code> <!-- German -->
+    <code>de-AT</code> <!-- German - Austria -->
+    <code>de-CH</code> <!-- German - Switzerland -->
+    <code>de-DE</code> <!-- German - Germany -->
     <code>de-LI</code>
     <code>de-LU</code>
     <code>div-MV</code>
@@ -122,6 +122,7 @@
     <code>sk-SK</code>
     <code>sl-SI</code>
     <code>sq-AL</code>
+    <code>sr-RS</code> <!-- Serbian - Serbia -->
     <code>sv-FI</code>
     <code>sv-SE</code>
     <code>sw-KE</code>

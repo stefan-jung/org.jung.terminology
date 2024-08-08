@@ -31,7 +31,8 @@
     <fullForm language="en-GB" usage="notRecommended">
       <termVariant>vehicle frame</termVariant>
     </fullForm>
-    <fullForm language="de-DE" usage="preferred">
+    <fullForm language="de-DE" usage="preferred"
+      class="- topic/section concept/section termentry/termNotation termentry/fullForm ">
       <termVariant>Fahrgestell</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="admitted">

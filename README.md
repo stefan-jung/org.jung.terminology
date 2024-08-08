@@ -1,6 +1,7 @@
 org.jung.terminology
 ====================
 
+[![DITA-OT 4.2.3](https://img.shields.io/badge/DITA--OT-4.2.3-green.svg)](http://www.dita-ot.org)
 [![DITA-OT 4.1.2](https://img.shields.io/badge/DITA--OT-4.1.2-green.svg)](http://www.dita-ot.org)
 [![DITA-OT 4.0.2](https://img.shields.io/badge/DITA--OT-4.0.2-green.svg)](http://www.dita-ot.org)
 [![DITA-OT 3.7.4](https://img.shields.io/badge/DITA--OT-3.7.4-green.svg)](http://www.dita-ot.org) 
@@ -60,7 +61,7 @@ The **TBXcoreStructV03.rng** is maintained in the GitHub repository [github.com/
 
 People who contribute to **org.doctales.terminology**:
 
-* [Stefan Eike](https://de.linkedin.com/in/stefan-eike-a02a9939) - Development, DITA Specialization, Content Design
+* [Stefan Jung](https://de.linkedin.com/in/stefan-jung-a02a9939) - Development, DITA Specialization, Content Design
 * [Radu Coravu](https://www.linkedin.com/in/radu-coravu-ba9b7bb) - Development
 * [Sascha Nothofer](https://de.linkedin.com/in/sascha-nothofer-32563811a) - Content Design
 * [Prof. Dr. Claudia Villiger](https://de.linkedin.com/in/claudia-villiger-6989b526) - Content Design

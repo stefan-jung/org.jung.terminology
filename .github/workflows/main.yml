@@ -8,9 +8,91 @@ on:
   workflow_dispatch:
   
 env:
-  DITA_OT_VERSION: 4.1.2
+  DITA_OT_VERSION: 4.2.3
 
 jobs:
+
+  dita-ot_4-2-3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'zulu'
+      - name: DITA-OT
+        run: |
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.2.3/dita-ot-4.2.3.zip
+          unzip -q dita-ot-4.2.3
+          chmod +x dita-ot-4.2.3/bin/dita
+          chmod +x dita-ot-4.2.3/bin/ant
+          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
+          dita-ot-4.2.3/bin/dita install org.jung.terminology.zip --force
+          dita-ot-4.2.3/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
+          dita-ot-4.2.3/bin/dita transtypes 
+      - name: Build test files
+        run: |
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.2.3 --processing-mode=strict --verbose
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: org.jung.terminology-4-2-3
+          path: |
+            4.2.3
+            !4.2.3/**/*.html
+            !4.2.3/**/*.js
+            !4.2.3/**/*.css
+
+  dita-ot_4-2-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Java 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'zulu'
+      - name: DITA-OT
+        run: |
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.2.1/dita-ot-4.2.1.zip
+          unzip -q dita-ot-4.2.1
+          chmod +x dita-ot-4.2.1/bin/dita
+          chmod +x dita-ot-4.2.1/bin/ant
+          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
+          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
+          dita-ot-4.2.1/bin/dita install org.jung.terminology.zip --force
+          dita-ot-4.2.1/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
+          dita-ot-4.2.1/bin/dita transtypes 
+      - name: Build test files
+        run: |
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.2.1 --processing-mode=strict --verbose
+          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.2.1 --processing-mode=strict --verbose
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: org.jung.terminology-4-2-1
+          path: |
+            4.2.1
+            !4.2.1/**/*.html
+            !4.2.1/**/*.js
+            !4.2.1/**/*.css
 
   dita-ot_4-1-2:
     runs-on: ubuntu-latest
@@ -24,13 +106,14 @@ jobs:
       - name: DITA-OT
         run: |
           curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.1.2/dita-ot-4.1.2.zip
-          unzip dita-ot-4.1.2
+          unzip -q dita-ot-4.1.2
           chmod +x dita-ot-4.1.2/bin/dita
           chmod +x dita-ot-4.1.2/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
           zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           dita-ot-4.1.2/bin/dita install org.jung.terminology.zip --force
           dita-ot-4.1.2/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
+          dita-ot-4.1.2/bin/dita transtypes
       - name: Build test files
         run: |
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.1.2 --processing-mode=strict --verbose
@@ -40,7 +123,8 @@ jobs:
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.1.2 --processing-mode=strict --verbose
-          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.1.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -63,13 +147,14 @@ jobs:
       - name: DITA-OT
         run: |
           curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.0.2/dita-ot-4.0.2.zip
-          unzip dita-ot-4.0.2
+          unzip -q dita-ot-4.0.2
           chmod +x dita-ot-4.0.2/bin/dita
           chmod +x dita-ot-4.0.2/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
           zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           dita-ot-4.0.2/bin/dita install org.jung.terminology.zip --force
           dita-ot-4.0.2/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
+          dita-ot-4.0.2/bin/dita transtypes
       - name: Build test files
         run: |
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.0.2 --processing-mode=strict --verbose
@@ -79,7 +164,7 @@ jobs:
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.0.2 --processing-mode=strict --verbose
-          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.0.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -102,13 +187,14 @@ jobs:
       - name: DITA-OT
         run: |
           curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/3.7.4/dita-ot-3.7.4.zip
-          unzip dita-ot-3.7.4
+          unzip -q dita-ot-3.7.4
           chmod +x dita-ot-3.7.4/bin/dita
           chmod +x dita-ot-3.7.4/bin/ant
           zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
           zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           dita-ot-3.7.4/bin/dita install org.jung.terminology.zip --force
           dita-ot-3.7.4/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
+          dita-ot-3.7.4/bin/dita transtypes
       - name: Build test files
         run: |
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=3.7.4 --processing-mode=strict --verbose
@@ -118,7 +204,7 @@ jobs:
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=3.7.4 --processing-mode=strict --verbose
-          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=3.7.4 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
