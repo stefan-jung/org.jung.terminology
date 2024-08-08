@@ -59,7 +59,6 @@
     
     <!-- Create rules for all termentry topics -->
     <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry">
-        <xsl:param name="conceptNumber" as="xs:integer" required="true"/>
         <xsl:variable name="termentry-root" select="." as="node()"/>
         <conceptGrp>
             <concept><xsl:value-of select="sj:hash-string(./@id)"/></concept>
