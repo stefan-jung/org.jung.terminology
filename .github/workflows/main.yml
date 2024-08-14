@@ -32,7 +32,7 @@ jobs:
           # dita-ot-4.2.3/bin/dita install org.jung.terminology.zip --force
           # dita-ot-4.2.3/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
 
-          rsync -aq --exclude='.git' . dita-ot-4.2.3/plugins/org.jung.terminology
+          rsync -aq --exclude='dita-ot-4.2.3' --exclude='.git' . dita-ot-4.2.3/plugins/org.jung.terminology
           rsync -aq webhelp-dummy-plugin/ dita-ot-4.2.3/plugins/org.jung.terminology-webhelp-dummy-plugin
           dita-ot-4.2.3/bin/dita --install
           dita-ot-4.2.3/bin/dita transtypes 
