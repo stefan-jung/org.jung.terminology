@@ -5,6 +5,10 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs">
     
+    <!-- 
+        This function maps the org.jung.terminology usage values
+        to the MultiTerm usage values.
+    -->
     <xsl:function name="sj:usage" as="xs:string">
         <xsl:param name="usage" as="xs:string"/>
         <xsl:sequence select="

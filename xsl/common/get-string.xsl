@@ -1,44 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
     xmlns:sj="https://stefan-jung.org"
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="sj xs xd">
+    exclude-result-prefixes="sj xs">
     
-    <xsl:param name="debugging.mode" select="'true'" as="xs:string"/>
+    <xsl:param name="debugging.mode" select="'false'" as="xs:string"/>
     
-    <xd:doc>
-        <xd:desc><xd:p>Function to get string from translation file.</xd:p></xd:desc>
-        <xd:param name="language"><xd:p>Language to be used.</xd:p></xd:param>
-        <xd:param name="string"><xd:p>Name of the string.</xd:p></xd:param>
-        <xd:return><xd:p>Returns the string in the specified language.</xd:p></xd:return>
-    </xd:doc>
+    <!--
+        Function to get string from translation file.
+        - language Language to be used.
+        - string   Name of the string.
+        Returns the string in the specified language.
+    -->
     <xsl:function name="sj:getTermbrowserString" as="xs:string" visibility="public">
         <xsl:param name="language"/>
         <xsl:param name="string"/>
         <xsl:sequence select="sj:getString('termbrowser', $language, $string)"/>
     </xsl:function>
     
-    <xd:doc>
-        <xd:desc><xd:p>Function to get string from translation file.</xd:p></xd:desc>
-        <xd:param name="language"><xd:p>Language to be used.</xd:p></xd:param>
-        <xd:param name="string"><xd:p>Name of the string.</xd:p></xd:param>
-        <xd:return><xd:p>Returns the string in the specified language.</xd:p></xd:return>
-    </xd:doc>
+    <!--
+        Function to get string from translation file.
+        - language Language to be used.
+        - string   Name of the string.
+        Returns the string in the specified language.
+    -->
     <xsl:function name="sj:getTermcheckerString" as="xs:string" visibility="public">
         <xsl:param name="language"/>
         <xsl:param name="string"/>
         <xsl:sequence select="sj:getString('termchecker', $language, $string)"/>
     </xsl:function>
 
-    <xd:doc>
-        <xd:desc><xd:p>Function to get string from translation file.</xd:p></xd:desc>
-        <xd:param name="output"><xd:p>"termbrowser" or "termchecker"</xd:p></xd:param>
-        <xd:param name="language"><xd:p>Language to be used.</xd:p></xd:param>
-        <xd:param name="string"><xd:p>Name of the string.</xd:p></xd:param>
-        <xd:return><xd:p>Returns the string in the specified language.</xd:p></xd:return>
-    </xd:doc>
+    <!--
+        Function to get string from translation file.
+        - output   "termbrowser" or "termchecker"
+        - language Language to be used.
+        - string   Name of the string.
+        Returns the string in the specified language.
+    -->
     <xsl:function name="sj:getString" as="xs:string" visibility="public">
         <xsl:param name="output" as="xs:string"/>
         <xsl:param name="language" as="xs:string"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="3.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:sj="https://stefan-jung.org"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="sj xs"
-    version="3.0">
+    exclude-result-prefixes="sj xs">
     
     <!-- This template is used by multiterm and multiterm-custom -->
     
