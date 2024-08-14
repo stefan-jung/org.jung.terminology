@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You can grab Saxon HE and xmlresolver from here: https://github.com/Saxonica/Saxon-HE/releases -->
+<project>
+    <path id="saxon">
+        <fileset dir="../lib/saxon-he/">
+            <include name="xmlresolver-5.2.2.jar"/>
+            <include name="saxon-he-12.5.jar"/>
+        </fileset>
+    </path>
+</project>

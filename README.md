@@ -12,7 +12,7 @@ org.jung.terminology
 
 - Create and change terms easily using specialized DITA topics (DTD/RNG). The new DITA `<termentry>` topic represents a single term. Terms are linked together to a terminology database using the `<termmap>` map.
 - Author terms easily using an &lt;oXygen/&gt; XML framework with author mode stylesheets, that simplify the editing of `<termentry>` and `<termmap>` topics.
-- Navigate through the terminology database with a classic or responsive terminology browser ([DEMO](https://doctales.github.io/samples/termbrowser-responsive/index.html)) based on the &lt;oXygen/&gt; webhelp transformation.
+- Navigate through the terminology database with a classic or responsive terminology browser ([DEMO](https://jung.github.io/samples/termbrowser-responsive/index.html)) based on the &lt;oXygen/&gt; webhelp transformation.
 - Check DITA or XLIFF files with a Schematron based terminology checker.
 - Export the terminology to *TBX-Basic* or *TBX-Min* for your Language Service Provider (LSP).
 
@@ -39,17 +39,26 @@ dita --install https://github.com/stefan-jung/org.jung.terminology/archive/maste
 
 1. In &lt;oXygen/&gt; open the menu `Options` > `Preferences`.
 2. In the preferences, open `Document Type Association` > `Locations`.
-3. Add the frameworks directory of the plugin in the DITA-OT as an additional framework directory, e.g. `/home/user/workspace/DITA/dita-ot/plugins/org.doctales.terminology/frameworks`.
+3. Add the frameworks directory of the plugin in the DITA-OT as an additional framework directory, e.g. `/home/user/workspace/DITA/dita-ot/plugins/org.jung.terminology/frameworks`.
 
 ## Using the Plugin
 
-Please refer to the [documentation](https://doctales.atlassian.net/wiki/x/AoAy).
+Please refer to the [documentation](https://jung.atlassian.net/wiki/x/AoAy).
 
 ## Licenses
 
-* **org.doctales.terminology** is available under the [Apache Public License (APL) 2](https://www.apache.org/licenses/LICENSE-2.0).
+* **org.jung.terminology** is available under the [Apache Public License (APL) 2](https://www.apache.org/licenses/LICENSE-2.0).
 * The plugin contains SVG flags taken from the [flag-icon-css](https://github.com/lipis/flag-icon-css) project, which is available under the [MIT license](https://opensource.org/licenses/MIT).
 * All TBX samples and grammar files are available under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The grammar files are provided in the repository [github.com/LTAC-Global](https://github.com/LTAC-Global). The sample files can be obtained from [tbx-info.net](https://www.tbxinfo.net).
+
+## Libraries
+
+| Library     | Description          | Website | License |
+|-------------|----------------------|---------|---------|
+| Ant Contrib | Apache Ant utilities | [ant-contrib.sourceforge.net](https://ant-contrib.sourceforge.net/) | Apache Software License |
+| Saxon HE    | XSLT processor       | [saxonica.com](https://www.saxonica.com/) | Mozilla Public License version 2.0 |
+| GraalVM Compiler, SubstrateVM, Tools, VM          | JavaScript VM | [graalvm.org](https://www.graalvm.org/) | GPL 2 with Classpath Exception |
+| GraalVM SDK, GraalWasm, Truffle Framework, TRegex | JavaScript VM | [graalvm.org](https://www.graalvm.org/) | Universal Permissive License   |
 
 # TBX-Core
 
@@ -59,7 +68,7 @@ The **TBXcoreStructV03.rng** is maintained in the GitHub repository [github.com/
 
 ## Contribution
 
-People who contribute to **org.doctales.terminology**:
+People who contribute(d) to **org.jung.terminology**:
 
 * [Stefan Jung](https://de.linkedin.com/in/stefan-jung-a02a9939) - Development, DITA Specialization, Content Design
 * [Radu Coravu](https://www.linkedin.com/in/radu-coravu-ba9b7bb) - Development

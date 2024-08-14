@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized xml:space="preserve">
+	<serializableOrderedMap>
+		<entry>
+			<String>document.types</String>
+			<documentTypeDescriptor-array>
+				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
+					<field name="extensionPatch">
+						<null/>
+					</field>
+					<field name="name">
+						<String>Jung Terminology Termextractor</String>
+					</field>
+					<field name="schemaDescriptor">
+						<null/>
+					</field>
+					<field name="classpath">
+						<String-array/>
+					</field>
+					<field name="parentClassLoaderID">
+						<null/>
+					</field>
+					<field name="authorExtensionDescriptor">
+						<authorExtension>
+							<field name="cssDescriptors">
+								<cssFile-array/>
+							</field>
+							<field name="mergeCSSsFromDocument">
+								<Boolean>false</Boolean>
+							</field>
+							<field name="multipleAlternateSelectionEnabled">
+								<Boolean>true</Boolean>
+							</field>
+							<field name="actionDescriptors">
+								<action-array/>
+							</field>
+							<field name="menubarDescriptor">
+								<menu>
+									<field name="label">
+										<String>Menu</String>
+									</field>
+									<field name="accessKey">
+										<null/>
+									</field>
+									<field name="iconPath">
+										<null/>
+									</field>
+									<field name="menuEntriesDescriptorList">
+										<menuEntry-array/>
+									</field>
+									<field name="context">
+										<null/>
+									</field>
+								</menu>
+							</field>
+							<field name="popupMenuDescriptor">
+								<menu>
+									<field name="label">
+										<String>Contextual menu</String>
+									</field>
+									<field name="accessKey">
+										<null/>
+									</field>
+									<field name="iconPath">
+										<null/>
+									</field>
+									<field name="menuEntriesDescriptorList">
+										<menuEntry-array/>
+									</field>
+									<field name="context">
+										<null/>
+									</field>
+								</menu>
+							</field>
+							<field name="toolbarDescriptor">
+								<toolbar>
+									<field name="id">
+										<String>Toolbar</String>
+									</field>
+									<field name="type">
+										<Integer>2</Integer>
+									</field>
+									<field name="largeIconPath">
+										<null/>
+									</field>
+									<field name="smallIconPath">
+										<null/>
+									</field>
+									<field name="toolbarEntriesDescriptorList">
+										<toolbarEntry-array/>
+									</field>
+								</toolbar>
+							</field>
+							<field name="additionalToolbarsDescriptors">
+								<null/>
+							</field>
+							<field name="contextualItems">
+								<contextProvider>
+									<field name="items">
+										<contextItem-array/>
+									</field>
+									<field name="removeItems">
+										<null/>
+									</field>
+								</contextProvider>
+							</field>
+							<field name="tableSupportClassName">
+								<null/>
+							</field>
+							<field name="tableCellSeparatorSupportClassName">
+								<null/>
+							</field>
+							<field name="tableColWidthSupportClassName">
+								<null/>
+							</field>
+							<field name="customReferencesResolver">
+								<null/>
+							</field>
+							<field name="editPropertiesHandler">
+								<null/>
+							</field>
+							<field name="authorExtensionStateListener">
+								<null/>
+							</field>
+							<field name="attributesRecognizer">
+								<null/>
+							</field>
+							<field name="authorActionEventHandler">
+								<null/>
+							</field>
+							<field name="authorImageDecorator">
+								<null/>
+							</field>
+						</authorExtension>
+					</field>
+					<field name="templatesLocations">
+						<String-array/>
+					</field>
+					<field name="xmlCatalogs">
+						<String-array/>
+					</field>
+					<field name="description">
+						<String></String>
+					</field>
+					<field name="doctypeRules">
+						<documentTypeRule-array/>
+					</field>
+					<field name="scenarios">
+						<scenario-array>
+							<antScenario>
+								<field name="additionalAntArgs">
+									<String></String>
+								</field>
+								<field name="buildTarget">
+									<String>termextractor</String>
+								</field>
+								<field name="buildFilePath">
+									<String>${frameworkDir}/ant/build_termextractor.xml</String>
+								</field>
+								<field name="ditaParams">
+									<list>
+										<antParameter>
+											<field name="name">
+												<String>search.string</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${ask('Comma-separated list of terms to extract', generic, 'default')}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>5</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
+												<String>source.language</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${ask('Language of source term', combobox, ('en-US':'English (USA)';'de-DE':'German (Germany)'), 'en-US')}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>5</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
+												<String>xliff-tbx.directory</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${ask('Select a random TBX/XLIFF file in your TBX/XLIFF directory', relative_url, '')}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>5</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+									</list>
+								</field>
+								<field name="jvmArgs">
+									<String>-Xmx256m -Dpolyglot.engine.WarnInterpreterOnly=false</String>
+								</field>
+								<field name="useCustomJavaHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customJavaHomeDir">
+									<String></String>
+								</field>
+								<field name="useCustomANTHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customANTHomeDir">
+									<String></String>
+								</field>
+								<field name="workingDir">
+									<String>${cfd}</String>
+								</field>
+								<field name="showConsoleAlways">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>Jung Terminology Termextractor</String>
+								</field>
+								<field name="baseURL">
+									<null/>
+								</field>
+								<field name="footerURL">
+									<null/>
+								</field>
+								<field name="fOPMethod">
+									<null/>
+								</field>
+								<field name="fOProcessorName">
+									<null/>
+								</field>
+								<field name="headerURL">
+									<null/>
+								</field>
+								<field name="inputXSLURL">
+									<null/>
+								</field>
+								<field name="inputXMLURL">
+									<null/>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>ANT</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputResource">
+									<null/>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<String></String>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>ANT</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</antScenario>
+						</scenario-array>
+					</field>
+					<field name="validationScenarios">
+						<validationScenario-array/>
+					</field>
+					<field name="defaultValidationScenarios">
+						<null/>
+					</field>
+					<field name="defaultTransformationScenarios">
+						<null/>
+					</field>
+					<field name="extensionsBundleClassName">
+						<null/>
+					</field>
+					<field name="useImposedInitialPage">
+						<Boolean>false</Boolean>
+					</field>
+					<field name="imposedInitialPage">
+						<String>Text</String>
+					</field>
+					<field name="elementLocatorExtension">
+						<null/>
+					</field>
+					<field name="schemaManagerFilterExtension">
+						<null/>
+					</field>
+					<field name="authorSWTDndExtension">
+						<null/>
+					</field>
+					<field name="textSWTDndExtension">
+						<null/>
+					</field>
+					<field name="authorSwingDndExtension">
+						<null/>
+					</field>
+					<field name="cssStylesFilterExtension">
+						<null/>
+					</field>
+					<field name="attributesValueEditor">
+						<null/>
+					</field>
+					<field name="priority">
+						<Integer>3</Integer>
+					</field>
+					<field name="xmlNodeCustomizerExtension">
+						<null/>
+					</field>
+					<field name="externalObjectInsertionHandler">
+						<null/>
+					</field>
+					<field name="customAttributeValueEditor">
+						<null/>
+					</field>
+					<field name="textModeExternalObjectInsertionHandler">
+						<null/>
+					</field>
+				</documentTypeDescriptor>
+			</documentTypeDescriptor-array>
+		</entry>
+	</serializableOrderedMap>
+</serialized>

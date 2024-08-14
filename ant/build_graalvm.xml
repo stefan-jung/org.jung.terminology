@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <path id="graal">
+        <fileset dir="../lib/graalvm/">
+            <include name="commons-io-2.15.0.jar"/>
+            <include name="graal-sdk-23.0.2.jar"/>
+            <include name="icu4j-74.1.jar"/>
+            <include name="js-23.0.2.jar"/>
+            <include name="js-scriptengine-23.0.2.jar"/>
+            <include name="regex-23.0.2.jar"/>
+            <include name="truffle-api-23.0.2.jar"/>
+        </fileset>
+    </path>
+</project>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This is the build script of the termextractor.
+    It is meant to be called by an Oxygen transformation scenario.
+    It takes a series of properties as input, like a directory with either XLIFF or TBX
+    files to extract terms from, the expected output format, and so forth.
+-->
+<project default="termextractor">
+    
+    <!-- Properties -->
+    <property name="debugging.mode" value="true"/>
+    
+    <!-- Includes -->
+    <include file="build_antcontrib.xml"/>
+    <include file="build_graalvm.xml"/>
+    <include file="build_saxon.xml"/>
+    
+    <!-- Imports -->
+    <import file="build_substring-before.xml"/>
+    <import file="build_temp-dir.xml"/>
+    
+    <!-- Create the output directory if it doesn't exist -->
+    <target name="-prepare">
+        <fail message="The required property &quot;search.string&quot; is not set.">
+            <condition>
+                <not>
+                    <isset property="search.string"/>
+                </not>
+            </condition>
+        </fail>
+        <fail message="The required property &quot;xliff-tbx.directory&quot; is not set.">
+            <condition>
+                <not>
+                    <isset property="xliff-tbx.directory"/>
+                </not>
+            </condition>
+        </fail>
+    </target>
+    
+    <!-- Transform .xlf files using the XSLT file -->
+    <target name="termextractor" depends="-prepare, -temp.dir">
+        <echo>xliff-tbx.directory = ${xliff-tbx.directory}</echo>
+        <basename file="${xliff-tbx.directory}" property="xliff-tbx.basename"/>
+        <echo>xliff-tbx.basename = "${xliff-tbx.basename}"</echo>
+        <makeurl file="${xliff-tbx.directory}" property="xliff-tbx.url" validate="true"/>
+        <echo>xliff-tbx.url = "${xliff-tbx.url}"</echo>
+        <substring-before input="${xliff-tbx.url}" string="${xliff-tbx.basename}" property="xliff-tbx.url.no-file"/>
+        <echo>xliff-tbx.url.no-file = "${xliff-tbx.url.no-file}"</echo>
+        <makeurl file="../xsl/termextractor/dummy.xml" property="dummy.file.url"/>
+        
+        <for list="${search.string}" delimiter="," param="term" trim="true">
+            <sequential>
+                <antcall target="-extract">
+                    <param name="term" value="@{term}"/>
+                </antcall>
+            </sequential>
+        </for>
+    </target>
+    
+    <target name="-extract">
+        <echo>Extracting term "${term}"</echo>
+        <propertyregex input="${xliff-tbx.url}" regexp="file:\/" replace="" property="xliff-tbx.directory.no.protocol"/>
+        <echo>output = "${jung.terminology.temp.dir}${file.separator}dummy.xml"</echo>
+        <xslt 
+            style="../xsl/termextractor/termextractor.xsl"
+            in="${xliff-tbx.directory.no.protocol}"
+            out="${jung.terminology.temp.dir}${file.separator}dummy.xml"
+            failonerror="true"
+            failontransformationerror="true">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <classpath refid="saxon"/>
+            <param name="search-string" expression="${term}"/>
+            <param name="xliff-directory" expression="${xliff-tbx.url.no-file}"/>
+            <param name="source.language" expression="${source.language}"/>
+            <param name="debugging.mode" expression="${debugging.mode}"/>
+        </xslt>
+    </target>
+  
+</project>

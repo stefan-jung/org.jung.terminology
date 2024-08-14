@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <scriptdef name="substring-before" language="javascript" classpathref="graal">
+        <attribute name="input"/>
+        <attribute name="string"/>
+        <attribute name="property"/>
+        <![CDATA[
+            var input = attributes.get("input");
+            var string = attributes.get("string");
+            var property = attributes.get("property");
+            
+            var index = input.indexOf(string);
+            var result = input.slice(0, index);
+            
+            project.setProperty(attributes.get("property"), result);
+        ]]>
+    </scriptdef>
+</project>

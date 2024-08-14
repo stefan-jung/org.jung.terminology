@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+    <target name="-temp.dir">
+        <condition property="isWindows">
+            <os family="windows"/>
+        </condition>
+        <condition property="isUnix">
+            <os family="unix"/>
+        </condition>
+        <property if:set="isWindows" name="jung.terminology.temp.dir" value="${user.home}${file.separator}AppData${file.separator}Roaming${file.separator}org.jung.terminology"/>
+        <property if:set="isUnix" name="jung.terminology.temp.dir" value="${user.home}${file.separator}.org.jung.terminology"/>
+        <echo>jung.terminology.temp.dir = "${jung.terminology.temp.dir}"</echo>
+        <mkdir dir="${jung.terminology.temp.dir}"/>
+    </target>
+</project>
