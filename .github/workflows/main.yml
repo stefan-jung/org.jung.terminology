@@ -27,11 +27,6 @@ jobs:
           unzip -q dita-ot-4.2.3
           chmod +x dita-ot-4.2.3/bin/dita
           chmod +x dita-ot-4.2.3/bin/ant
-          # zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          # zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
-          # dita-ot-4.2.3/bin/dita install org.jung.terminology.zip --force
-          # dita-ot-4.2.3/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
-
           rsync -aq --exclude='dita-ot-4.2.3' --exclude='.git' . dita-ot-4.2.3/plugins/org.jung.terminology
           rsync -aq webhelp-dummy-plugin/ dita-ot-4.2.3/plugins/org.jung.terminology-webhelp-dummy-plugin
           dita-ot-4.2.3/bin/dita --install
@@ -72,10 +67,9 @@ jobs:
           unzip -q dita-ot-4.2.1
           chmod +x dita-ot-4.2.1/bin/dita
           chmod +x dita-ot-4.2.1/bin/ant
-          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
-          dita-ot-4.2.1/bin/dita install org.jung.terminology.zip --force
-          dita-ot-4.2.1/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
+          rsync -aq --exclude='dita-ot-4.2.1' --exclude='.git' . dita-ot-4.2.1/plugins/org.jung.terminology
+          rsync -aq webhelp-dummy-plugin/ dita-ot-4.2.1/plugins/org.jung.terminology-webhelp-dummy-plugin
+          dita-ot-4.2.1/bin/dita --install
           dita-ot-4.2.1/bin/dita transtypes 
       - name: Build test files
         run: |
@@ -113,11 +107,10 @@ jobs:
           unzip -q dita-ot-4.1.2
           chmod +x dita-ot-4.1.2/bin/dita
           chmod +x dita-ot-4.1.2/bin/ant
-          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
-          dita-ot-4.1.2/bin/dita install org.jung.terminology.zip --force
-          dita-ot-4.1.2/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
-          dita-ot-4.1.2/bin/dita transtypes
+          rsync -aq --exclude='dita-ot-4.1.2' --exclude='.git' . dita-ot-4.1.2/plugins/org.jung.terminology
+          rsync -aq webhelp-dummy-plugin/ dita-ot-4.1.2/plugins/org.jung.terminology-webhelp-dummy-plugin
+          dita-ot-4.1.2/bin/dita --install
+          dita-ot-4.1.2/bin/dita transtypes 
       - name: Build test files
         run: |
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.1.2 --processing-mode=strict --verbose
@@ -154,11 +147,10 @@ jobs:
           unzip -q dita-ot-4.0.2
           chmod +x dita-ot-4.0.2/bin/dita
           chmod +x dita-ot-4.0.2/bin/ant
-          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
-          dita-ot-4.0.2/bin/dita install org.jung.terminology.zip --force
-          dita-ot-4.0.2/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
-          dita-ot-4.0.2/bin/dita transtypes
+          rsync -aq --exclude='dita-ot-4.0.2' --exclude='.git' . dita-ot-4.0.2/plugins/org.jung.terminology
+          rsync -aq webhelp-dummy-plugin/ dita-ot-4.0.2/plugins/org.jung.terminology-webhelp-dummy-plugin
+          dita-ot-4.0.2/bin/dita --install
+          dita-ot-4.0.2/bin/dita transtypes 
       - name: Build test files
         run: |
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.0.2 --processing-mode=strict --verbose
@@ -194,11 +186,10 @@ jobs:
           unzip -q dita-ot-3.7.4
           chmod +x dita-ot-3.7.4/bin/dita
           chmod +x dita-ot-3.7.4/bin/ant
-          zip -qq -r org.jung.terminology.zip . -x ./.git/**\*
-          zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
-          dita-ot-3.7.4/bin/dita install org.jung.terminology.zip --force
-          dita-ot-3.7.4/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
-          dita-ot-3.7.4/bin/dita transtypes
+          rsync -aq --exclude='dita-ot-3.7.4' --exclude='.git' . dita-ot-3.7.4/plugins/org.jung.terminology
+          rsync -aq webhelp-dummy-plugin/ dita-ot-3.7.4/plugins/org.jung.terminology-webhelp-dummy-plugin
+          dita-ot-3.7.4/bin/dita --install
+          dita-ot-3.7.4/bin/dita transtypes 
       - name: Build test files
         run: |
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=3.7.4 --processing-mode=strict --verbose
