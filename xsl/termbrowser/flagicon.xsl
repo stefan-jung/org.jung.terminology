@@ -2,34 +2,29 @@
 <xsl:stylesheet version="3.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    exclude-result-prefixes="xs xd">
+    exclude-result-prefixes="xd">
     
-    <xd:doc>
-        <xd:p>
-            This function creates a &lt;span> element representing a country flag.
-            The function is using https://github.com/lipis/flag-icons
-        </xd:p>
-        <xd:p>
-            Usually this should be: <xd:i>ISO-639-1 Language Code</xd:i> + "-" + <xd:i>ISO-3166 Country Code</xd:i>,
-            as explained in https://tools.ietf.org/html/bcp47
-        </xd:p>
-        <xd:p>Good resources are:</xd:p>
-        <xd:ul>
-            <xd:li><xd:a>https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx</xd:a></xd:li>
-            <xd:li><xd:a>https://www.andiamo.co.uk/resources/iso-language-codes</xd:a></xd:li>
-            <xd:li><xd:a>https://datahub.io/core/language-codes</xd:a>, section <xd:i>ietf-language-tags</xd:i></xd:li>
-            <xd:li><xd:a>https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html</xd:a></xd:li>
-        </xd:ul>
-        <xd:p>A good resource for language names is <xd:a>http://id.loc.gov/vocabulary/iso639-1.html</xd:a>.</xd:p>
-        <xd:param name="language">
-            <xd:p>Boolean</xd:p>
-        </xd:param>
-        <xd:param name="languageCode">
-            <xd:p>Language Code</xd:p>
-        </xd:param>
-        <xd:param type="string">The string to be processed.</xd:param>
-    </xd:doc>
+    <!--
+        This function creates a "span" element representing a country flag.
+        The function is using https://github.com/lipis/flag-icons
+        
+        Usually this should be: ISO-639-1 Language Code + "-" + ISO-3166 Country Code,
+        as explained in https://tools.ietf.org/html/bcp47
+        
+        Good resources are:
+        
+        - https://msdn.microsoft.com/de-de/library/ee825488(v=cs.20).aspx
+        - https://www.andiamo.co.uk/resources/iso-language-codes
+        - https://datahub.io/core/language-codes, section ietf-language-tags
+        - https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html
+        
+        A good resource for language names is http://id.loc.gov/vocabulary/iso639-1.html
+        
+        Parameters
+        - language     Language
+        - languageCode Language code
+        - string       The string to be processed.
+    -->
     <xsl:template name="getFlag">
         <xsl:param name="language" as="xs:string"/>
         <xsl:param name="languageCode" as="xs:boolean"/>
