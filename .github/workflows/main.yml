@@ -31,8 +31,8 @@ jobs:
           # zip -qq -r org.jung.terminology-webhelp-dummy-plugin.zip webhelp-dummy-plugin -x ./.git/**\*
           # dita-ot-4.2.3/bin/dita install org.jung.terminology.zip --force
           # dita-ot-4.2.3/bin/dita install org.jung.terminology-webhelp-dummy-plugin.zip --force
-          rsync -av --exclude='.git' . dita-ot-4.2.3/plugins/
-          dita --install
+          rsync -aq --exclude='.git' . dita-ot-4.2.3/plugins/
+          dita-ot-4.2.3/bin/dita --install
           dita-ot-4.2.3/bin/dita transtypes 
       - name: Build test files
         run: |
