@@ -8,6 +8,7 @@
     exclude-result-prefixes="related-links sj xd xs">
     
     <xsl:param name="ditamap"/>
+    <xsl:param name="debugging.mode" as="xs:string"/>
     
     <xsl:output method="xml" encoding="UTF-8" indent="true"/>
     
@@ -394,9 +395,9 @@
         <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
         <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
         <xsl:if test="$debugging.mode = 'true' and $s != $out">
-            <xsl:message>[DEBUG]: sj:jsonEscape(): Escaped literals in string</xsl:message>
-            <xsl:message>[DEBUG]      INPUT:  <xsl:value-of select="$s"/></xsl:message>
-            <xsl:message>[DEBUG]      OUTPUT: <xsl:value-of select="$out"/></xsl:message>
+            <xsl:message select="'[DEBUG]: sj:jsonEscape(): Escaped literals in string'"/>
+            <xsl:message select="'[DEBUG]      INPUT:  ' || $s"/>
+            <xsl:message select="'[DEBUG]      OUTPUT: ' || $out"/>
         </xsl:if>
         <xsl:sequence select="$out"/>
     </xsl:function>
