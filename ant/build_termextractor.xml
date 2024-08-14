@@ -5,7 +5,7 @@
     It takes a series of properties as input, like a directory with either XLIFF or TBX
     files to extract terms from, the expected output format, and so forth.
 -->
-<project default="termextractor">
+<project default="termextractor" xmlns:if="ant:if" xmlns:unless="ant:unless">
     
     <!-- Properties -->
     <property name="debugging.mode" value="true"/>
@@ -47,6 +47,9 @@
         <substring-before input="${xliff-tbx.url}" string="${xliff-tbx.basename}" property="xliff-tbx.url.no-file"/>
         <echo>xliff-tbx.url.no-file = "${xliff-tbx.url.no-file}"</echo>
         <makeurl file="../xsl/termextractor/dummy.xml" property="dummy.file.url"/>
+        <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}termextractor.txt"/>
+        <delete file="${output.file}" failonerror="false"/>
+        <delete file="${output.file}.temp" failonerror="false"/>
         
         <for list="${search.string}" delimiter="," param="term" trim="true">
             <sequential>
@@ -64,7 +67,7 @@
         <xslt 
             style="../xsl/termextractor/termextractor.xsl"
             in="${xliff-tbx.directory.no.protocol}"
-            out="${jung.terminology.temp.dir}${file.separator}dummy.xml"
+            out="${output.file}.temp"
             failonerror="true"
             failontransformationerror="true">
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>
@@ -74,6 +77,13 @@
             <param name="source.language" expression="${source.language}"/>
             <param name="debugging.mode" expression="${debugging.mode}"/>
         </xslt>
+        <condition property="output.file.available">
+            <available file="${output.file}"/>
+        </condition>
+        <move unless:set="output.file.available" file="${output.file}.temp" tofile="${output.file}" verbose="true"/>
+        <loadfile if:set="output.file.available" srcfile="${output.file}.temp" property="file"/>
+        <echo if:set="output.file.available" file="${output.file}" message="${file}" append="true"/>
+        <delete file="${output.file}.temp"/>
     </target>
   
 </project>
