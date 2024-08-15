@@ -459,6 +459,9 @@ a:hover, a:focus {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.termNotationsPerLanguageList .fi {
+  margin-right: 3.5em
+}
 
 /* Termstats and Semantic Net Icons */
 .logos {
