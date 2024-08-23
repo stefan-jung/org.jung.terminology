@@ -6,18 +6,15 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="sj xd xs">
     
-    <xd:doc>
-        <xd:desc>
-            This stylesheet is not part of the normal DITA-OT processing.
-            It iterates over all temporary DITA files and outputs an XML
-            file containing numbers of the terminology topics 
-            (e.g. number of terms by status).
-            
-            The XML file is (optionally) merged with previous statistics
-            by the terminology-stats-merge-xml.xsl stylesheet.
-        </xd:desc>
-    </xd:doc>
-    
+    <!--
+        This stylesheet is not part of the normal DITA-OT processing.
+        It iterates over all temporary DITA files and outputs an XML
+        file containing numbers of the terminology topics 
+        (e.g. number of terms by status).
+        
+        The XML file is (optionally) merged with previous statistics
+        by the terminology-stats-merge-xml.xsl stylesheet.
+    -->
     <xsl:output method="xml"
         encoding="UTF-8"
         indent="yes"
