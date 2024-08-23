@@ -164,6 +164,29 @@
 									<list>
 										<antParameter>
 											<field name="name">
+												<String>output.type</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${ask('Expected output type', combobox, ('txt':'Plain text';'csv':'CSV';'termentry':'Termentry topics';'all':'All output types'), 'all')}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>5</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
 												<String>search.string</String>
 											</field>
 											<field name="description">

@@ -14,6 +14,7 @@
     <xsl:param name="search-string" as="xs:string"/>
     <xsl:param name="source.language" as="xs:string"/>
     <xsl:param name="xliff-directory" as="xs:string"/>
+    <xsl:param name="output.type" as="xs:string"/>
     <xsl:param name="debugging.mode" as="xs:string"/>
     
     <!--<xsl:variable name="root" as="node()" select="/"/>-->
