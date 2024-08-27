@@ -1,4 +1,4 @@
-@import url("flags.css");
+/*@import url("flags.css");*/
 /* Using Google Fonts can cause incompatibility issues, because this implies that Google Fonts need to be configured
  * as trusted host. Further on, this could lead to data privacy issues, so we don't do this any longer. */
 
@@ -52,7 +52,7 @@
     -oxy-display-tags: none;
     display: block;
     font-family: Arial, sans-serif;
-    font-size: 1.0rem;
+    font-size: 0.9rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
@@ -144,10 +144,12 @@
     display: block;
     padding-bottom: 5px;
     margin-bottom: 2px;
+    padding-left: 5px;
+    background-color: rgba(240, 240, 240, 0.3);
     content:
     oxy_buttonGroup(
         label, '${i18n(term.definition)}',
-        transparent, 'true',
+        transparent, true,
         fontInherit, false,
         actions,
         oxy_action_list(
@@ -156,27 +158,13 @@
         )
     );
 }
-/**[class~="termentry/definition"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true
-    );
-}*/
 *[class~="termentry/definition"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     border-color: #3d3d3d;
     border-style: solid;
     border-width: 0.05rem;
+    border-radius: 5px;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 3.0em;
@@ -211,6 +199,8 @@
     display: block;
     padding-bottom: 5px;
     margin-bottom: 2px;
+    padding-left: 5px;
+    background-color: rgba(240, 240, 240, 0.3);
     content:
     oxy_buttonGroup(
         label, '${i18n(term.definitionSource)}',
@@ -224,28 +214,9 @@
         )
     );
 }
-/**[class~="termentry/definitionSource"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, true,
-        transparent, true
-    );
-}*/
-
 *[class~="termentry/definitionSource"] {
-    /*-oxy-display-tags: none;
-    -oxy-editable: true;
-    -oxy-placeholder-content: "${i18n(term.definitionSource.placeholder)}";
-    -oxy-show-placeholder: always;*/
     border-color: #3d3d3d;
+    border-radius: 5px;
     border-style: solid;
     border-width: 0.05rem;
     display: block;
@@ -318,12 +289,13 @@
  * FIG
  *********************************************/
 *[class~="topic/fig"]:before(10) {
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 0.8em;
     padding-bottom: 5px;
+    padding-left: 5px;
     margin-bottom: 2px;
-    font-size: 0.9rem;
-    font-weight: bold;
     content:
     oxy_buttonGroup(
         label, '${i18n(term.fig)}',
@@ -335,37 +307,22 @@
         )
     );
 }
-/**[class~="topic/fig"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="topic/fig"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    /*border-color: #3d3d3d;
+    border-color: #3d3d3d;
     border-style: solid;
-    border-width: 0.05rem;*/
+    border-width: 0.05rem;
+    border-radius: 5px;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    /*margin-left: 5px;
+    margin-right: 5px;*/
     margin-top: 5px;
     visibility: -oxy-collapse-text;
-    width: 99% !important;
+    /*width: 99% !important;*/
 }
 *[class~="topic/fig"] > *[class~="topic/title"]:before(10) {
     content: "${i18n(term.fig.title)}";
@@ -423,17 +380,12 @@
    -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    /*border-color: #3d3d3d;
-    border-style: solid;
-    border-width: 0.05rem;*/
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
-    /*width: 99% !important;
-    width: auto !important;*/
 }
 *[class~="topic/image"][href]:not([keyref]) {
     content: attr(href, url);
@@ -621,85 +573,6 @@
             columns, 40
         );
 }
-/* The reference name itself is now clickable. */
-/**[class~="termentry/sourceReference"]:after(1) {
-    display: inline;
-    content:
-    oxy_button(
-        actionID, 'term.open.url',
-        showIcon, true,
-        transparent, true
-    );
-}*/
-/**[class~="termentry/sourceReference"]:after(2) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="termentry/sourceReference"]:after(3) {
-    content: "${i18n(term.sourceReference.href)}";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-    .link();
-}*/
-/**[class~="termentry/sourceReference"]:after(4) {
-    content:
-    oxy_button(
-        actionID, 'term.url.reference'
-    );
-}*/
-/**[class~="termentry/sourceReference"]:after(5) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="termentry/sourceReference"]:after(6) {
-    content: "${i18n(term.sourceReference.format)}";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-    .link();
-}
-*[class~="termentry/sourceReference"]:after(7) {
-    content:
-    oxy_combobox(
-        edit, '@format',
-        columns, 13
-    );
-}
-*/
-/**[class~="termentry/sourceReference"]:after(8) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="termentry/sourceReference"]:after(9) {
-    content: "${i18n(term.sourceReference.scope)}";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-    .link();
-}
-*[class~="termentry/sourceReference"]:after(10) {
-    content:
-    oxy_combobox(
-        edit, '@scope',
-        columns, 13
-    ) !important;
-}*/
 
 /*********************************************
  * ALTERNATIVE DEFINITION
@@ -721,22 +594,6 @@
         )
     );
 }
-/**[class~="termentry/altDefinition"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="termentry/altDefinition"] {
     display: block;
     font-family: Arial, sans-serif;
@@ -790,22 +647,6 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-/**[class~="termentry/annotation"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="termentry/annotation"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -843,22 +684,6 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-/**[class~="termentry/termContext"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="termentry/termContext"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1038,22 +863,6 @@
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
-/**[class~="topic/note"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="topic/note"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1172,22 +981,6 @@
         )
     );
 }
-/**[class~="termentry/agreedWith"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="termentry/agreedWith"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
@@ -1250,76 +1043,244 @@
 /*********************************************
  * TERM NOTATION
  *********************************************/
-*[class~="termentry/termNotation"]:before(50) {
-    /*width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;*/
-    display: inline;
-    width: 150px;
-}
-/**[class~="termentry/termNotation"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
+*[class~="termentry/termNotation"]:before {
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
-}*/
-*[class~="termentry/termNotation"]:before(31) {
-    content: oxy_label(text, "${i18n(term.language)} ", styles, "font-weight: 600;");
-    font-size: 0.8em;
 }
-*[class~="termentry/termNotation"]:before(22) {
-    content: attr(language);
-    font-size: 0.8em;
-}
-*[class~="termentry/termNotation"]:focus:before(31) {
-    content: "${i18n(term.language)}: "
-    oxy_combobox(
-        edit, '@language',
-        editable, 'false',
-        columns, '8'
-    );
-}
-*[class~="termentry/termNotation"]:before(19) {
+*[class~="termentry/termNotation"]:before(10) {
+    padding-left: 5px;
+    background-color: rgba(240, 240, 240, 0.3);
+    border-bottom: 0.05rem solid #767676;
+    font-weight: bold;
     content:
-    oxy_label(text, "  ${i18n(term.usage)} ", styles, "font-weight: 600;")
-    oxy_xpath(" \
-        if (@usage = 'preferred') then '${i18n(term.usage.preferred)}' \
-        else if (@usage = 'admitted') then '${i18n(term.usage.admitted)}' \
-        else if (@usage = 'notRecommended') then '${i18n(term.usage.notRecommended)}' \
-        else if (@usage = 'obsolete') then '${i18n(term.usage.obsolete)}' \
-        else '' \
-        ");
+        oxy_buttonGroup(
+            label, oxy_xpath(" \
+                if (contains(@class, 'fullForm')) then '${i18n(term.fullForm)}' \
+                else if (contains(@class, 'abbreviation')) then '${i18n(term.abbreviation)}' \
+                else if (contains(@class, 'acronym')) then '${i18n(term.acronym)}' \
+                else if (contains(@class, 'verb')) then '${i18n(term.verb)}' \
+                else '' \
+                "),
+            transparent, 'true',
+            fontInherit, 'true',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.abbreviation.add'),
+                oxy_action(id, 'term.acronym.add'),
+                oxy_action(id, 'term.fullForm.add'),
+                oxy_action(id, 'term.verb.add'),
+                oxy_action(id, 'term.term-domains.add'),
+                oxy_action(id, 'term.abbreviation.renameTo'),
+                oxy_action(id, 'term.acronym.renameTo'),
+                oxy_action(id, 'term.verb.renameTo'),
+                oxy_action(id, 'term.fullForm.delete')
+            )
+        )
+        "   "
+        oxy_label(
+            text, "${i18n(term.language)} ",
+            styles, "font-weight: normal;"
+        )
+        oxy_url(oxy_xpath(" \
+            if (@language = 'af-ZA') then '../flag-icon-css/za.svg' \
+            else if (@language = 'ar-AE') then '../flag-icon-css/ae.svg' \
+            else if (@language = 'ar-BH') then '../flag-icon-css/bh.svg' \
+            else if (@language = 'ar-DZ') then '../flag-icon-css/dz.svg' \
+            else if (@language = 'ar-EG') then '../flag-icon-css/eg.svg' \
+            else if (@language = 'ar-IQ') then '../flag-icon-css/iq.svg' \
+            else if (@language = 'ar-JO') then '../flag-icon-css/jo.svg' \
+            else if (@language = 'ar-KW') then '../flag-icon-css/kw.svg' \
+            else if (@language = 'ar-LB') then '../flag-icon-css/lb.svg' \
+            else if (@language = 'ar-LY') then '../flag-icon-css/ly.svg' \
+            else if (@language = 'ar-MA') then '../flag-icon-css/ma.svg' \
+            else if (@language = 'ar-OM') then '../flag-icon-css/om.svg' \
+            else if (@language = 'ar-QA') then '../flag-icon-css/qa.svg' \
+            else if (@language = 'ar-SA') then '../flag-icon-css/sa.svg' \
+            else if (@language = 'ar-SY') then '../flag-icon-css/sy.svg' \
+            else if (@language = 'ar-TN') then '../flag-icon-css/tn.svg' \
+            else if (@language = 'ar-YE') then '../flag-icon-css/ye.svg' \
+            else if (@language = 'be-BY') then '../flag-icon-css/by.svg' \
+            else if (@language = 'bg-BG') then '../flag-icon-css/bg.svg' \
+            else if (@language = 'ca-ES') then '../flag-icon-css/es.svg' \
+            else if (@language = 'cs-CZ') then '../flag-icon-css/cz.svg' \
+            else if (@language = 'Cy-az-AZ') then '../flag-icon-css/az.svg' \
+            else if (@language = 'Cy-sr-SP') then '../flag-icon-css/sr.svg' \
+            else if (@language = 'Cy-uz-UZ') then '../flag-icon-css/uz.svg' \
+            else if (@language = 'da-DK') then '../flag-icon-css/dk.svg' \
+            else if (@language = 'de-AT') then '../flag-icon-css/at.svg' \
+            else if (@language = 'de-CH') then '../flag-icon-css/ch.svg' \
+            else if (@language = 'de-DE') then '../flag-icon-css/de.svg' \
+            else if (@language = 'de-LI') then '../flag-icon-css/li.svg' \
+            else if (@language = 'de-LU') then '../flag-icon-css/lu.svg' \
+            else if (@language = 'div-MV') then '../flag-icon-css/mv.svg' \
+            else if (@language = 'el-GR') then '../flag-icon-css/gr.svg' \
+            else if (@language = 'en-AU') then '../flag-icon-css/au.svg' \
+            else if (@language = 'en-BZ') then '../flag-icon-css/bz.svg' \
+            else if (@language = 'en-CA') then '../flag-icon-css/ca.svg' \
+            else if (@language = 'en-CB') then '../flag-icon-css/cb.svg' \
+            else if (@language = 'en-GB') then '../flag-icon-css/gb.svg' \
+            else if (@language = 'en-IE') then '../flag-icon-css/ie.svg' \
+            else if (@language = 'en-JM') then '../flag-icon-css/jm.svg' \
+            else if (@language = 'en-NZ') then '../flag-icon-css/nz.svg' \
+            else if (@language = 'en-PH') then '../flag-icon-css/ph.svg' \
+            else if (@language = 'en-TT') then '../flag-icon-css/tt.svg' \
+            else if (@language = 'en-US') then '../flag-icon-css/us.svg' \
+            else if (@language = 'en-ZA') then '../flag-icon-css/za.svg' \
+            else if (@language = 'en-ZW') then '../flag-icon-css/zw.svg' \
+            else if (@language = 'es-AR') then '../flag-icon-css/ar.svg' \
+            else if (@language = 'es-BO') then '../flag-icon-css/bo.svg' \
+            else if (@language = 'es-CL') then '../flag-icon-css/cl.svg' \
+            else if (@language = 'es-CO') then '../flag-icon-css/co.svg' \
+            else if (@language = 'es-CR') then '../flag-icon-css/cr.svg' \
+            else if (@language = 'es-DO') then '../flag-icon-css/do.svg' \
+            else if (@language = 'es-EC') then '../flag-icon-css/ec.svg' \
+            else if (@language = 'es-ES') then '../flag-icon-css/es.svg' \
+            else if (@language = 'es-GT') then '../flag-icon-css/gt.svg' \
+            else if (@language = 'es-HN') then '../flag-icon-css/hn.svg' \
+            else if (@language = 'es-MX') then '../flag-icon-css/mx.svg' \
+            else if (@language = 'es-NI') then '../flag-icon-css/ni.svg' \
+            else if (@language = 'es-PA') then '../flag-icon-css/pa.svg' \
+            else if (@language = 'es-PE') then '../flag-icon-css/pe.svg' \
+            else if (@language = 'es-PR') then '../flag-icon-css/pr.svg' \
+            else if (@language = 'es-PY') then '../flag-icon-css/py.svg' \
+            else if (@language = 'es-SV') then '../flag-icon-css/sv.svg' \
+            else if (@language = 'es-UY') then '../flag-icon-css/uy.svg' \
+            else if (@language = 'es-VE') then '../flag-icon-css/ve.svg' \
+            else if (@language = 'et-EE') then '../flag-icon-css/ee.svg' \
+            else if (@language = 'eu-ES') then '../flag-icon-css/es.svg' \
+            else if (@language = 'fa-IR') then '../flag-icon-css/ir.svg' \
+            else if (@language = 'fi-FI') then '../flag-icon-css/fi.svg' \
+            else if (@language = 'fo-FO') then '../flag-icon-css/fo.svg' \
+            else if (@language = 'fr-FR') then '../flag-icon-css/fr.svg' \
+            else if (@language = 'fr-BE') then '../flag-icon-css/be.svg' \
+            else if (@language = 'fr-CA') then '../flag-icon-css/ca.svg' \
+            else if (@language = 'fr-CH') then '../flag-icon-css/ch.svg' \
+            else if (@language = 'fr-FR') then '../flag-icon-css/fr.svg' \
+            else if (@language = 'fr-LU') then '../flag-icon-css/lu.svg' \
+            else if (@language = 'fr-MC') then '../flag-icon-css/mc.svg' \
+            else if (@language = 'gl-ES') then '../flag-icon-css/es.svg' \
+            else if (@language = 'gu-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'he-IL') then '../flag-icon-css/il.svg' \
+            else if (@language = 'hi-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'hr-HR') then '../flag-icon-css/hr.svg' \
+            else if (@language = 'hu-HU') then '../flag-icon-css/hu.svg' \
+            else if (@language = 'hy-AM') then '../flag-icon-css/am.svg' \
+            else if (@language = 'id-ID') then '../flag-icon-css/id.svg' \
+            else if (@language = 'is-IS') then '../flag-icon-css/is.svg' \
+            else if (@language = 'it-CH') then '../flag-icon-css/ch.svg' \
+            else if (@language = 'it-IT') then '../flag-icon-css/it.svg' \
+            else if (@language = 'ja-JP') then '../flag-icon-css/jp.svg' \
+            else if (@language = 'ka-GE') then '../flag-icon-css/ge.svg' \
+            else if (@language = 'kk-KZ') then '../flag-icon-css/kz.svg' \
+            else if (@language = 'kn-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'ko-KR') then '../flag-icon-css/kr.svg' \
+            else if (@language = 'kok-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'ky-KZ') then '../flag-icon-css/kz.svg' \
+            else if (@language = 'lt-LT') then '../flag-icon-css/lt.svg' \
+            else if (@language = 'Lt-az-AZ') then '../flag-icon-css/az.svg' \
+            else if (@language = 'Lt-sr-SP') then '../flag-icon-css/sr.svg' \
+            else if (@language = 'Lt-uz-UZ') then '../flag-icon-css/uz.svg' \
+            else if (@language = 'lv-LV') then '../flag-icon-css/lv.svg' \
+            else if (@language = 'mk-MK') then '../flag-icon-css/mk.svg' \
+            else if (@language = 'mn-MN') then '../flag-icon-css/mn.svg' \
+            else if (@language = 'mr-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'ms-BN') then '../flag-icon-css/bn.svg' \
+            else if (@language = 'ms-MY') then '../flag-icon-css/my.svg' \
+            else if (@language = 'nb-NO') then '../flag-icon-css/no.svg' \
+            else if (@language = 'nl-BE') then '../flag-icon-css/be.svg' \
+            else if (@language = 'nl-NL') then '../flag-icon-css/nl.svg' \
+            else if (@language = 'nn-NO') then '../flag-icon-css/no.svg' \
+            else if (@language = 'pa-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'pl-PL') then '../flag-icon-css/pl.svg' \
+            else if (@language = 'pt-BR') then '../flag-icon-css/br.svg' \
+            else if (@language = 'pt-PT') then '../flag-icon-css/pt.svg' \
+            else if (@language = 'ro-MO') then '../flag-icon-css/mo.svg' \
+            else if (@language = 'ro-RO') then '../flag-icon-css/ro.svg' \
+            else if (@language = 'ru-MO') then '../flag-icon-css/mo.svg' \
+            else if (@language = 'ru-RU') then '../flag-icon-css/ru.svg' \
+            else if (@language = 'sa-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'sk-SK') then '../flag-icon-css/sk.svg' \
+            else if (@language = 'sl-SI') then '../flag-icon-css/si.svg' \
+            else if (@language = 'sq-AL') then '../flag-icon-css/al.svg' \
+            else if (@language = 'sr-RS') then '../flag-icon-css/rs.svg' \
+            else if (@language = 'sv-FI') then '../flag-icon-css/fi.svg' \
+            else if (@language = 'sv-SE') then '../flag-icon-css/se.svg' \
+            else if (@language = 'sw-KE') then '../flag-icon-css/ke.svg' \
+            else if (@language = 'syr-SY') then '../flag-icon-css/sy.svg' \
+            else if (@language = 'ta-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'te-IN') then '../flag-icon-css/in.svg' \
+            else if (@language = 'th-TH') then '../flag-icon-css/th.svg' \
+            else if (@language = 'tr-TR') then '../flag-icon-css/tr.svg' \
+            else if (@language = 'tt-RU') then '../flag-icon-css/ru.svg' \
+            else if (@language = 'uk-UA') then '../flag-icon-css/ua.svg' \
+            else if (@language = 'ur-PK') then '../flag-icon-css/pk.svg' \
+            else if (@language = 'vi-VN') then '../flag-icon-css/vn.svg' \
+            else if (@language = 'zh-CHS') then '../flag-icon-css/cn.svg' \
+            else if (@language = 'zh-CHT') then '../flag-icon-css/cn.svg' \
+            else if (@language = 'zh-CN') then '../flag-icon-css/cn.svg' \
+            else if (@language = 'zh-HK') then '../flag-icon-css/hk.svg' \
+            else if (@language = 'zh-MO') then '../flag-icon-css/mo.svg' \
+            else if (@language = 'zh-SG') then '../flag-icon-css/sg.svg' \
+            else if (@language = 'zh-TW') then '../flag-icon-css/tw.svg' \
+            else '../flag-icon-css/us.svg' \
+        "))
+        oxy_label(
+            text, "  ${i18n(term.usage)} ",
+            styles, "font-weight: normal;"
+        )
+        oxy_xpath(" \
+            if (@usage = 'preferred') then '${i18n(term.usage.preferred)}' \
+            else if (@usage = 'admitted') then '${i18n(term.usage.admitted)}' \
+            else if (@usage = 'notRecommended') then '${i18n(term.usage.notRecommended)}' \
+            else if (@usage = 'obsolete') then '${i18n(term.usage.obsolete)}' \
+            else '' \
+            "
+        );
     font-size: 0.8em;
+    height: 11px;
+    display: block;
 }
-*[class~="termentry/termNotation"]:focus:before(19) {
-    content: oxy_label(text, "  ${i18n(term.usage)} ", styles, "font-weight: 600;")
-    oxy_combobox(
-        edit, '@usage',
-        editable, false,
-        values, 'admitted, notRecommended, obsolete, preferred',
-        labels, '${i18n(term.usage.admitted)}, ${i18n(term.usage.notRecommended)}, ${i18n(term.usage.obsolete)}, ${i18n(term.usage.preferred)}'
-        columns, 15
-    );
-    font-size: 0.8em;
-}
-*[class~="termentry/termNotation"]:focus:before(17) {
+*[class~="termentry/termNotation"]:focus:before(10) {
     content: 
+        oxy_buttonGroup(
+            label, oxy_xpath(" \
+                if (contains(@class, 'fullForm')) then '${i18n(term.fullForm)}' \
+                else if (contains(@class, 'abbreviation')) then '${i18n(term.abbreviation)}' \
+                else if (contains(@class, 'acronym')) then '${i18n(term.acronym)}' \
+                else if (contains(@class, 'verb')) then '${i18n(term.verb)}' \
+                else '' \
+                "),
+            transparent, 'true',
+            fontInherit, 'true',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.abbreviation.add'),
+                oxy_action(id, 'term.acronym.add'),
+                oxy_action(id, 'term.fullForm.add'),
+                oxy_action(id, 'term.verb.add'),
+                oxy_action(id, 'term.term-domains.add'),
+                oxy_action(id, 'term.abbreviation.renameTo'),
+                oxy_action(id, 'term.acronym.renameTo'),
+                oxy_action(id, 'term.verb.renameTo'),
+                oxy_action(id, 'term.fullForm.delete')
+            )
+        )
+        "   "
+        "${i18n(term.language)}: "
+        oxy_combobox(
+            edit, '@language',
+            editable, 'false',
+            columns, '8'
+        )
+        oxy_label(text, "  ${i18n(term.usage)} ", styles, "font-weight: 600;")
+        oxy_combobox(
+            edit, '@usage',
+            editable, false,
+            values, 'admitted, notRecommended, obsolete, preferred',
+            labels, '${i18n(term.usage.admitted)}, ${i18n(term.usage.notRecommended)}, ${i18n(term.usage.obsolete)}, ${i18n(term.usage.preferred)}'
+            columns, 15
+        )
         "               "
         oxy_button(
             actionID, 'term.move.element.up',
@@ -1335,25 +1296,12 @@
             transparent, true
         );
 }
-/**[class~="termentry/termNotation"]:focus:before(19) {
-    content: "  ${i18n(term.usage)} "
-    oxy_combobox(
-        edit, '@usage',
-        editable, false,
-        values, 'admitted, notRecommended, obsolete, preferred',
-        labels, '${i18n(term.usage.admitted)}, ${i18n(term.usage.notRecommended)}, ${i18n(term.usage.obsolete)}, ${i18n(term.usage.preferred)}'
-        columns, 15
-    );
-    font-size: 0.8em;
-}*/
-/**[class~="termentry/termNotation"]:first-of-type {
-    margin-top: 2.0em;
-}*/
 *[class~="termentry/termNotation"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
     border-color: #3d3d3d;
+    border-radius: 5px;
     border-style: solid;
     border-width: 0.05rem;
     color: #000000; /* Because of the background-color, this makes sense here. */
@@ -1369,108 +1317,14 @@
     background-color: #beffbe;
 }
 *[class~="termentry/termNotation"][usage~="admitted"] {
-    background-color: #feffbe;
+    background-color: #feffbe;    background-color: rgba(240, 240, 240, 0.3);
+    border-bottom: 0.05rem solid #767676;
+
 }
 *[class~="termentry/termNotation"][usage~="notRecommended"] {
     background-color: #ffbfbf;
 }
 
-
-/*********************************************
- * FULL FORM
- *********************************************/
-*[class~="termentry/fullForm"]:before(50) {
-    content:
-    oxy_buttonGroup(
-        label, '${i18n(term.fullForm)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.abbreviation.add'),
-            oxy_action(id, 'term.acronym.add'),
-            oxy_action(id, 'term.fullForm.add'),
-            oxy_action(id, 'term.verb.add'),
-            oxy_action(id, 'term.term-domains.add'),
-            oxy_action(id, 'term.abbreviation.renameTo'),
-            oxy_action(id, 'term.acronym.renameTo'),
-            oxy_action(id, 'term.verb.renameTo'),
-            oxy_action(id, 'term.fullForm.delete')
-        )
-    );
-}
-
-/*********************************************
- * ABBREVIATION
- *********************************************/
-*[class~="termentry/abbreviation"]:before(50) {
-    content:
-    oxy_buttonGroup(
-        label, '${i18n(term.abbreviation)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.abbreviation.add'),
-            oxy_action(id, 'term.acronym.add'),
-            oxy_action(id, 'term.fullForm.add'),
-            oxy_action(id, 'term.verb.add'),
-            oxy_action(id, 'term.term-domains.add'),
-            oxy_action(id, 'term.acronym.renameTo'),
-            oxy_action(id, 'term.fullForm.renameTo'),
-            oxy_action(id, 'term.verb.renameTo'),
-            oxy_action(id, 'term.abbreviation.delete')
-        )
-    );
-}
-
-/*********************************************
- * ACRONYM
- *********************************************/
-*[class~="termentry/acronym"]:before(50) {
-    content:
-    oxy_buttonGroup(
-        label, '${i18n(term.acronym)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.abbreviation.add'),
-            oxy_action(id, 'term.acronym.add'),
-            oxy_action(id, 'term.fullForm.add'),
-            oxy_action(id, 'term.verb.add'),
-            oxy_action(id, 'term.term-domains.add'),
-            oxy_action(id, 'term.abbreviation.renameTo'),
-            oxy_action(id, 'term.fullForm.renameTo'),
-            oxy_action(id, 'term.verb.renameTo'),
-            oxy_action(id, 'term.acronym.delete')
-        )
-    );
-}
-
-/*********************************************
- * VERB
- *********************************************/
-*[class~="termentry/verb"]:before(50) {
-    content:
-    oxy_buttonGroup(
-        label, '${i18n(term.verb)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.abbreviation.add'),
-            oxy_action(id, 'term.acronym.add'),
-            oxy_action(id, 'term.fullForm.add'),
-            oxy_action(id, 'term.verb.add'),
-            oxy_action(id, 'term.term-domains.add'),
-            oxy_action(id, 'term.abbreviation.renameTo'),
-            oxy_action(id, 'term.acronym.renameTo'),
-            oxy_action(id, 'term.fullForm.renameTo'),
-            oxy_action(id, 'term.verb.delete')
-        )
-    );
-}
 
 /*********************************************
  * TERM VARIANT
@@ -1507,7 +1361,6 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
-    /*width: 99% !important;*/
 }
 *[class~="termentry/termVariant"][case]:after(2) {
     content: " ";
@@ -1515,50 +1368,6 @@
     display: block;
     width: 100%;
 }
-/**[class~="termentry/termVariant"][case]:edit-mode:after(3) {
-    content: "${i18n(term.case)}";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-}
-*[class~="termentry/termVariant"][case]:edit-mode:after(4) {
-    content:
-    oxy_combobox(
-        edit, '@case',
-        editable, false,
-        columns, 20
-    );
-    width: 75%;
-    display: inline;
-    float: right;
-    -oxy-display-tags: none;
-}
-*[class~="termentry/termVariant"][case]:edit-mode:after(5) {
-    content: " ";
-    font-size: 3pt;
-    display: block;
-    width: 100%;
-}
-*[class~="termentry/termVariant"][number]:edit-mode:after(6) {
-    content: "${i18n(term.number)}";
-    width: 20%;
-    font-weight: normal;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-}
-*[class~="termentry/termVariant"][number]:edit-mode:after(7) {
-    content:
-    oxy_combobox(
-        edit, '@number',
-        editable, false,
-        columns, 20
-    );
-}*/
 
 /*********************************************
  * RELATIONS
@@ -1585,6 +1394,7 @@
                 )
             );
         border-bottom: 0.05rem solid #767676;
+        border-radius: 5px;
         display: block;
         padding-bottom: 5px;
         margin-bottom: 2px;
@@ -1934,22 +1744,6 @@
 /*********************************************
  * RELATIONS LINKLIST
  *********************************************/
-/**[class~="termentry/relations-linklist"]:before(2) {
-    color: transparent;
-    display: block;
-    margin-top: -28px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    text-align: right;
-    width: 100%;
-    content: oxy_button(
-        actionID, 'term.dummy',
-        showIcon, 'true',
-        transparent, 'true'
-    );
-}*/
-
 *[class~="termentry/relations-linklist"] {
     display: block;
     font-family: Arial, sans-serif;
@@ -1964,6 +1758,7 @@
     border-width: 0.05rem;
     border-style: solid;
     border-color: #3d3d3d;
+    border-radius: 5px;
     -oxy-show-placeholder: no !important;
 }
 /*********************************************
