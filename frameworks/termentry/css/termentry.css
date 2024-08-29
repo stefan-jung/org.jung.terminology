@@ -4,6 +4,10 @@
 
 @namespace xml "http://www.w3.org/XML/1998/namespace";
 
+* {
+    font-size: 10pt;
+}
+
 @media oxygen-high-contrast-black, oxygen-dark-theme {
     *[class~="termentry/definition"],
     *[class~="termentry/definitionText"],
@@ -95,8 +99,9 @@
             )
         );
     display: block;
-    font-size: 1.0rem;
+    font-size: 16px;
     margin-bottom: 2px;
+    margin-top: 16px;
     padding-bottom: 5px;
 }
 
@@ -107,12 +112,7 @@
     margin-top: 2.0em;
 }
 *[class~="termentry/termBody"]:after {
-    margin-top: 2em !important;
     border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
-    font-weight: bold;
     content:
     oxy_buttonGroup(
         label, '${i18n(term.relations)}',
@@ -129,6 +129,12 @@
             oxy_action(id, 'term.relations.delete')
         )
     );
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 2em !important;
+    padding-bottom: 5px;
 }
 *[class~="termentry/termBody"]:after(2) {
     content:
@@ -140,17 +146,18 @@
  *********************************************/
 *[class~="termentry/definition"]:before(10) {
     -oxy-display-tags: none;
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
-    padding-bottom: 5px;
+    font-size: 10px;
     margin-bottom: 2px;
+    padding-bottom: 3px;
     padding-left: 5px;
-    background-color: rgba(240, 240, 240, 0.3);
     content:
     oxy_buttonGroup(
         label, '${i18n(term.definition)}',
         transparent, true,
-        fontInherit, false,
+        fontInherit, true,
         actions,
         oxy_action_list(
             oxy_action(id, 'term.definitionSource.add'),
@@ -167,7 +174,6 @@
     border-radius: 5px;
     display: block;
     font-family: Arial, sans-serif;
-    margin-bottom: 3.0em;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
@@ -188,19 +194,19 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
-    width: 99% !important;
 }
 
 /*********************************************
  * DEFINITION SOURCE
  *********************************************/
 *[class~="termentry/definitionSource"]:before(10) {
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
-    padding-bottom: 5px;
+    font-size: 10px;
     margin-bottom: 2px;
+    padding-bottom: 3px;
     padding-left: 5px;
-    background-color: rgba(240, 240, 240, 0.3);
     content:
     oxy_buttonGroup(
         label, '${i18n(term.definitionSource)}',
@@ -255,8 +261,9 @@
     );
     border-bottom: 0.05rem solid #767676;
     display: block;
-    padding-bottom: 5px;
+    font-size: 10px;
     margin-bottom: 2px;
+    padding-bottom: 5px;
 }
 *[class~="topic/fig"][class~="equation-d/equation-figure"]:before {
     content: "" !important;
@@ -292,8 +299,8 @@
     background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
-    font-size: 0.8em;
-    padding-bottom: 5px;
+    font-size: 10px;
+    padding-bottom: 3px;
     padding-left: 5px;
     margin-bottom: 2px;
     content:
@@ -321,30 +328,29 @@
     /*margin-left: 5px;
     margin-right: 5px;*/
     margin-top: 5px;
-    visibility: -oxy-collapse-text;
+    /*visibility: -oxy-collapse-text;*/
     /*width: 99% !important;*/
 }
 *[class~="topic/fig"] > *[class~="topic/title"]:before(10) {
     content: "${i18n(term.fig.title)}";
     display: inline;
     font-family: Arial, sans-serif;
-    font-size: 0.7rem;
+    font-size: 10px;
     font-weight: normal;
     padding-left: 0.5em;
     padding-left: 5px;
     width: 20%;
 }
-*[class~="topic/fig"] > *[class~="topic/title"]:before(9) {
+/**[class~="topic/fig"] > *[class~="topic/title"]:before(9) {
     content:
     oxy_textfield(
         edit, '#text',
         columns, 60
     );
-}
+}*/
 *[class~="topic/fig"] > *[class~="topic/title"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
-    -oxy-show-placeholder: always;
     -oxy-show-placeholder: no !important;
     display: block;
     font-family: Arial, sans-serif;
@@ -360,6 +366,7 @@
  *********************************************/
 *[class~="topic/image"]:before(10) {
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
     content:
@@ -402,25 +409,24 @@
     oxy_buttonGroup(
         label, '${i18n(term.alt)}',
         transparent, 'true',
-        fontInherit, 'false',
+        fontInherit, 'true',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.alt.delete')
         )
     );
     width: 20%;
-    font-weight: normal;
+    font-size: 10px;
     display: inline;
     padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
+    font-size: 10px;
 }
 *[class~="topic/image"] > *[class~="topic/alt"] {
-    content:
+    /*content:
     oxy_textfield(
         edit, '#text',
         columns, 60
-    );
+    );*/
     width: 75%;
     display: inline;
     float: right;
@@ -433,6 +439,7 @@
 *[class~="termentry/termSource"]:before(10) {
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
     content:
@@ -481,12 +488,11 @@
             oxy_action(id, 'term.sourceName.delete')
         )
     );
-    width: 20%;
-    font-weight: normal;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
     display: inline;
     padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
+    width: 20%;
 }
 *[class~="termentry/sourceName"] {
     -oxy-display-tags: none;
@@ -580,6 +586,7 @@
 *[class~="termentry/altDefinition"]:before(10) {
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
     content:
@@ -642,10 +649,13 @@
             oxy_action(id, 'term.annotation.delete')
         )
     );
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
+    font-size: 10px;
+    height: 11px;
+    margin-bottom: 5px;
+    padding-left: 5px;
 }
 *[class~="termentry/annotation"] {
     -oxy-display-tags: none;
@@ -653,15 +663,17 @@
     -oxy-placeholder-content: "${i18n(term.annotation.placeholder)}";
     -oxy-show-placeholder: always;
     border-color: #3d3d3d;
+    border-radius: 5px;
     border-style: solid;
     border-width: 0.05rem;
-    display: block;
+    content: "  "; /* Add some indentation. We cannot use padding, because otherwise the :before(10) is also indented. */
+    /*display: block;*/
     font-family: Arial, sans-serif;
+    font-size: 13px;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
-    width: 99% !important;
 }
 
 /*********************************************
@@ -681,6 +693,7 @@
     );
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
@@ -716,6 +729,7 @@
     );
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
@@ -754,6 +768,7 @@
     );
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
@@ -779,37 +794,49 @@
  *********************************************/
 *[class~="termentry/partOfSpeech"]:before(10) {
     content:
-    oxy_buttonGroup(
-        label, '${i18n(term.partOfSpeech)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.partOfSpeech.delete')
+        oxy_buttonGroup(
+            label, '${i18n(term.partOfSpeech)}',
+            transparent, 'true',
+            fontInherit, 'false',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.partOfSpeech.delete')
+            )
         )
-    );
-}
-*[class~="termentry/partOfSpeech"]:before(7) {
-    content:
-    oxy_combobox(
-        edit, '@value',
-        editable, false,
-        values, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article, other',
-        labels, '${i18n(term.partOfSpeech.noun)}, ${i18n(term.partOfSpeech.pronoun)}, ${i18n(term.partOfSpeech.adjective)}, ${i18n(term.partOfSpeech.verb)}, ${i18n(term.partOfSpeech.adverb)}, ${i18n(term.partOfSpeech.preposition)}, ${i18n(term.partOfSpeech.conjunction)}, ${i18n(term.partOfSpeech.interjection)}, ${i18n(term.partOfSpeech.article)}, ${i18n(term.partOfSpeech.other)}',
-        columns, 15
-    );
+        "   "
+        oxy_popup(
+            edit, '@value',
+            values, 'noun, pronoun, adjective, verb, adverb, preposition, conjunction, interjection, article, other',
+            labels, '${i18n(term.partOfSpeech.noun)}, ${i18n(term.partOfSpeech.pronoun)}, ${i18n(term.partOfSpeech.adjective)}, ${i18n(term.partOfSpeech.verb)}, ${i18n(term.partOfSpeech.adverb)}, ${i18n(term.partOfSpeech.preposition)}, ${i18n(term.partOfSpeech.conjunction)}, ${i18n(term.partOfSpeech.interjection)}, ${i18n(term.partOfSpeech.article)}, ${i18n(term.partOfSpeech.other)}',
+            columns, 15,
+            selectionMode, 'single',
+            fontInherit, true
+        );
+            border-color: #3d3d3d;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.05rem;
+    display: block;
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 12px;
+    padding-left: 5px;
 }
 *[class~="termentry/partOfSpeech"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
     -oxy-show-placeholder: no !important;
-    display: block;
+/*    display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 15px;
+*/    
+
 }
 *[class~="termentry/partOfSpeech"]:after {
     content: " ";
@@ -822,7 +849,7 @@
     border-right: none;
     border-top: none;
     border-bottom: 0.05rem solid #767676;
-    font-size: 1.0rem;
+    font-size: 16px;
     font-weight: bold;
     content:
         oxy_buttonGroup(
@@ -838,8 +865,7 @@
             )
         );
     display: block;
-    margin-right: -1px;
-    margin-top: -2px;
+    margin-top: 8px;
     padding-top: 2.0em;
     width: 100%;
 }
@@ -860,6 +886,7 @@
     );
     border-bottom: 0.05rem solid #767676;
     display: block;
+    font-size: 10px;
     padding-bottom: 5px;
     margin-bottom: 2px;
 }
@@ -885,26 +912,30 @@
  *********************************************/
 *[class~="termentry/domains"]:before(10) {
     content:
-    oxy_buttonGroup(
-        label, '${i18n(term.domains)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.domain.add'),
-            oxy_action(id, 'term.domains.delete')
-        )
-    );
+        oxy_buttonGroup(
+            label, '${i18n(term.domains)}',
+            transparent, 'true',
+            fontInherit, 'false',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.domain.add'),
+                oxy_action(id, 'term.domains.delete')
+            )
+        );
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
     display: block;
-    padding-bottom: 5px;
+    font-size: 10px;
     margin-bottom: 2px;
+    padding-left: 5px;
+    padding-bottom: 5px;
 }
 *[class~="termentry/domains"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
     border-color: #3d3d3d;
+    border-radius: 5px;
     border-style: solid;
     border-width: 0.05rem;
     display: block;
@@ -933,8 +964,7 @@
         );
     display: inline;
     font-family: Arial, sans-serif;
-    font-size: 0.7rem;
-    font-weight: normal;
+    font-size: 10px;
     padding-left: 5px;
     width: 20%;
 }
@@ -965,27 +995,31 @@
  * AGREED WITH
  *********************************************/
 *[class~="termentry/agreedWith"]:before(10) {
+    background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
     content:
-    oxy_buttonGroup(
-        label, '${i18n(term.agreedWith)}',
-        transparent, 'true',
-        fontInherit, 'false',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.termCommitteeMember.add'),
-            oxy_action(id, 'term.agreedWith.delete')
-        )
-    );
+        oxy_buttonGroup(
+            label, '${i18n(term.agreedWith)}',
+            transparent, 'true',
+            fontInherit, 'false',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.termCommitteeMember.add'),
+                oxy_action(id, 'term.agreedWith.delete')
+            )
+        );
+    display: block;
+    font-size: 10px;
+    margin-bottom: 2px;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 *[class~="termentry/agreedWith"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
     border-color: #3d3d3d;
+    border-radius: 5px;
     border-style: solid;
     border-width: 0.05rem;
     display: block;
@@ -993,8 +1027,6 @@
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 5px;
-    width: 99% !important;
 }
 
 /*********************************************
@@ -1012,12 +1044,11 @@
             oxy_action(id, 'term.termCommitteeMember.delete')
         )
     );
-    width: 20%;
-    font-weight: normal;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
     display: inline;
     padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
+    width: 20%;
 }
 *[class~="termentry/termCommitteeMember"]:before(9) {
     width: 75%;
@@ -1043,16 +1074,11 @@
 /*********************************************
  * TERM NOTATION
  *********************************************/
-*[class~="termentry/termNotation"]:before {
-    background-color: rgba(240, 240, 240, 0.3);
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-}
 *[class~="termentry/termNotation"]:before(10) {
     padding-left: 5px;
     background-color: rgba(240, 240, 240, 0.3);
     border-bottom: 0.05rem solid #767676;
-    font-weight: bold;
+    font-size: 10px;
     content:
         oxy_buttonGroup(
             label, oxy_xpath(" \
@@ -1225,6 +1251,7 @@
             else if (@language = 'zh-TW') then '../flag-icon-css/tw.svg' \
             else '../flag-icon-css/us.svg' \
         "))
+        "   "
         oxy_label(
             text, "  ${i18n(term.usage)} ",
             styles, "font-weight: normal;"
@@ -1237,9 +1264,9 @@
             else '' \
             "
         );
-    font-size: 0.8em;
-    height: 11px;
     display: block;
+    font-size: 10px;
+    height: 11px;
 }
 *[class~="termentry/termNotation"]:focus:before(10) {
     content: 
@@ -1295,6 +1322,7 @@
             showText, false,
             transparent, true
         );
+    font-size: 10px;
 }
 *[class~="termentry/termNotation"] {
     -oxy-display-tags: none;
@@ -1306,23 +1334,21 @@
     border-width: 0.05rem;
     color: #000000; /* Because of the background-color, this makes sense here. */
     display: block;
-    font-family: Arial, sans-serif;
+    font-size: 10px;
     margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
-    /*width: 99% !important;*/
 }
 *[class~="termentry/termNotation"][usage~="preferred"] {
-    background-color: #beffbe;
+    background-color: rgba(0, 255, 0, 0.2);
 }
 *[class~="termentry/termNotation"][usage~="admitted"] {
-    background-color: #feffbe;    background-color: rgba(240, 240, 240, 0.3);
-    border-bottom: 0.05rem solid #767676;
+    background-color: rgba(255, 255, 0, 0.2);
 
 }
 *[class~="termentry/termNotation"][usage~="notRecommended"] {
-    background-color: #ffbfbf;
+    background-color: rgba(255, 0, 0, 0.2);
 }
 
 
@@ -1343,12 +1369,10 @@
             oxy_action(id, 'term.termVariant.delete')
         )
     );
-    width: 20%;
-    font-weight: normal;
+    font-size: 10px;
     display: inline;
     padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 0.7rem;
+    width: 20%;
 }
 *[class~="termentry/termVariant"] {
     -oxy-display-tags: none;
@@ -1377,6 +1401,44 @@
 }
 
 /*********************************************
+ * RELATIONS LINKLIST
+ * 
+ * This is the common selector for all 
+ * linktypes.
+ *********************************************/
+*[class~="termentry/relations-linklist"]:before(10) {
+    -oxy-display-tags: none;
+    background-color: rgba(240, 240, 240, 0.3);
+    border-bottom: 0.05rem solid #767676;
+    display: block;
+    font-size: 10px;
+    margin-bottom: 2px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+/*@media oxygen and (platform: 'webapp') {
+}*/
+
+*[class~="termentry/relations-linklist"] {
+display: block;
+    font-family: Arial, sans-serif;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 99% !important;
+    -oxy-display-tags: none;
+    -oxy-show-placeholder: always;
+    -oxy-editable: true;
+    border-width: 0.05rem;
+    border-style: solid;
+    border-color: #3d3d3d;
+    border-radius: 5px;
+    -oxy-show-placeholder: no !important;
+}
+
+
+/*********************************************
  * ANTONYMS
  *********************************************/
 /* Oxygen Content Fusion does not support keyrefs */
@@ -1393,11 +1455,6 @@
                     oxy_action(id, 'term.antonyms.delete')
                 )
             );
-        border-bottom: 0.05rem solid #767676;
-        border-radius: 5px;
-        display: block;
-        padding-bottom: 5px;
-        margin-bottom: 2px;
     }
 }
 /* Oxygen XML standalone does support keyrefs and hrefs */
@@ -1415,24 +1472,9 @@
                     oxy_action(id, 'term.antonyms.delete')
                 )
             );
-        border-bottom: 0.05rem solid #767676;
-        display: block;
-        padding-bottom: 5px;
-        margin-bottom: 2px;
     }
 }
 *[class~="termentry/antonyms"] {
-    -oxy-display-tags: none;
-    -oxy-editable: true;
-    -oxy-show-placeholder: always;
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    visibility: -oxy-collapse-text;
-    width: 99% !important;
 }
 /*********************************************
  * ANTONYM
@@ -1472,22 +1514,8 @@
             oxy_action(id, 'term.instancesOf.delete')
         )
     );
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
 }
 *[class~="termentry/instancesOf"] {
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
 }
 
 /*********************************************
@@ -1528,23 +1556,8 @@
             oxy_action(id, 'term.partsOf.delete')
         )
     );
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
 }
 *[class~="termentry/partsOf"] {
-    visibility: -oxy-collapse-text;
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
 }
 
 /*********************************************
@@ -1585,23 +1598,8 @@
             oxy_action(id, 'term.superordinateConcepts.delete')
         )
     );
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
 }
 *[class~="termentry/superordinateConcepts"] {
-    visibility: -oxy-collapse-text;
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
 }
 
 /*********************************************
@@ -1642,23 +1640,8 @@
             oxy_action(id, 'term.subordinateConcepts.delete')
         )
     );
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
 }
 *[class~="termentry/subordinateConcepts"] {
-    visibility: -oxy-collapse-text;
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
 }
 
 /*********************************************
@@ -1699,23 +1682,8 @@
             oxy_action(id, 'term.relatedTerms.delete')
         )
     );
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
 }
 *[class~="termentry/relatedTerms"] {
-    visibility: -oxy-collapse-text;
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
 }
 
 /*********************************************
@@ -1741,26 +1709,6 @@
     font-size: 0.7rem;
 }
 
-/*********************************************
- * RELATIONS LINKLIST
- *********************************************/
-*[class~="termentry/relations-linklist"] {
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 99% !important;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
-    border-width: 0.05rem;
-    border-style: solid;
-    border-color: #3d3d3d;
-    border-radius: 5px;
-    -oxy-show-placeholder: no !important;
-}
 /*********************************************
  * TERM RELATION
  *********************************************/
