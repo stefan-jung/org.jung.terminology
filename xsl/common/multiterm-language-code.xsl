@@ -21,7 +21,7 @@
             else if ($language-code = 'es-ES') then 'ES-ES'
             else if ($language-code = 'es-MX') then 'ES-MX'
             else if ($language-code = 'et-EE') then 'ET-EE'
-            else if ($language-code = 'fi-IF') then 'FI-FI'
+            else if ($language-code = 'fi-FI') then 'FI-FI'
             else if ($language-code = 'fr-CA') then 'FR-CA'
             else if ($language-code = 'fr-FR') then 'FR-FR'
             else if ($language-code = 'he-IL') then 'IW-IL' (: Deviation :)
