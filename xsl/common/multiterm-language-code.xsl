@@ -16,6 +16,7 @@
             else if ($language-code = 'da-DK') then 'DA-DK'
             else if ($language-code = 'de-DE') then 'DE-DE'
             else if ($language-code = 'el-GR') then 'EL-GR'
+            else if ($language-code = 'en-AU') then 'EN-AU'
             else if ($language-code = 'en-GB') then 'EN-GB'
             else if ($language-code = 'en-US') then 'EN-US'
             else if ($language-code = 'es-ES') then 'ES-ES'
@@ -36,6 +37,7 @@
             else if ($language-code = 'lt-LT') then 'LT-LT'
             else if ($language-code = 'lv-LV') then 'LV-LV'
             else if ($language-code = 'mk-MK') then 'MK-MK'
+            else if ($language-code = 'ms-MY') then 'MS-MY'
             else if ($language-code = 'nb-NO') then 'NO-NO' (: Deviation :)
             else if ($language-code = 'nl-NL') then 'NL-NL'
             else if ($language-code = 'pl-PL') then 'PL-PL'
