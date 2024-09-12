@@ -232,27 +232,16 @@
                 $( "#search-input" ).autocomplete({source: data});
             });
             
-            /* Found on https://stackoverflow.com/a/2970667 */
-            function camelize(str) {
-                return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-                    return index === 0 ? word.toLowerCase() : word.toUpperCase();
-                }).replace(/\s+/g, '');
+            function getTermID(str) {
+                return "trm_" + str.replace(/\s+/g, '');
             }
             
             function termFocus(term) {
-                console.log("termFocus");
-                var t = "TRM_" + camelize(term);
+                var t = getTermID(term);
                 network.fit();
-                var focusOptions = {
-                    scale: 0.7,
-                    locked: 'false',
-                    animation: {
-                        duration: 10,
-                        easingFunction: 'easeInQuad'
-                    }
-                };
-                network.focus(t, focusOptions);
-                network.selectNodes([t])
+                network.focus(t, {scale: 0.75});
+                network.selectNodes([t]);
+                loadTerm(t);
             }
 
         </script>
