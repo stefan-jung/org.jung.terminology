@@ -365,7 +365,14 @@
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
         <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
         
-        <xsl:value-of select="'{key: ''' || $key || ''', term: ' || '''' || $label || '''' || ', definition: ''' || sj:jsonEscape(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) || ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') || '''}, '"/>
+        <xsl:message select="'XXXXXXXXXX' || replace(normalize-unicode($filename), '.dita', '.html')"></xsl:message>
+        
+        <xsl:value-of select="
+            '{key: ''' || $key
+            || ''', term: ' || '''' || $label || ''''
+            || ', definition: ''' || sj:jsonEscape(document($filepath)/descendant::*[contains(@class, ' termentry/definitionText ')]) 
+            || ''', href: ''' || replace(normalize-unicode($filename), '.dita', '.html') 
+            || '''}, '"/>
     </xsl:template>
     
     <!-- Fall Through Templates -->

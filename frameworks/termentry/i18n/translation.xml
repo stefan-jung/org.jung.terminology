@@ -57,7 +57,7 @@
         <val lang="de_DE">Schlüsselreferenz ändern</val>
     </key>
     
-    <!-- Menu Buton Labels -->
+    <!-- Menu Button Labels -->
     <key value="term.termAdministration">
         <val lang="en_US">Term Administration</val>
         <val lang="de_DE">Term-Verwaltung</val>
@@ -129,6 +129,12 @@
     <key value="term.termref.sort">
         <val lang="en_US">Sort term references</val>
         <val lang="de_DE">Term-Referenzen sortieren</val>
+    </key>
+    
+    <!-- termentry > title -->
+    <key value="term.title">
+        <val lang="en_US">Name of the terminological concept</val>
+        <val lang="de_DE">Bezeichnung des terminologischen Konzepts</val>
     </key>
 
     <!-- definition -->

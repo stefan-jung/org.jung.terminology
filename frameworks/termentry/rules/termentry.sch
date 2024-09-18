@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xml:lang="en">
     <sch:ns uri="https://stefan-jung.org" prefix="sj"/>
     <sch:extends href="terminology.sch"/>
     
@@ -217,6 +217,27 @@
         </sch:diagnostic>
         <sch:diagnostic id="duplicate-partsof-de" xml:lang="de">
             Doppelte Teil-Von-Termbeziehung
+        </sch:diagnostic>
+    </sch:diagnostics>
+    
+    <sch:pattern id="termvariant-lang">
+        <sch:rule context="*[contains(@class, ' termentry/termVariant ')]" role="information">
+            <sch:let name="termNotationLanguage" value="parent::*[contains(@class, ' termentry/termNotation ')][1]/@language"/>
+            <sch:assert test="@xml:lang = $termNotationLanguage" diagnostics="termvariant-lang-en termvariant-lang-de" sqf:fix="set-termavariant-xml-lang"/>
+        <sqf:fix id="set-termavariant-xml-lang">
+            <sqf:description>
+                <sqf:title ref="termvariant-lang-en termvariant-lang-de"/>
+            </sqf:description>
+            <sqf:add node-type="attribute" target="xml:lang"><sch:value-of select="$termNotationLanguage"/></sqf:add>
+        </sqf:fix>
+        </sch:rule>
+    </sch:pattern>
+    <sch:diagnostics>
+        <sch:diagnostic id="termvariant-lang-en" xml:lang="en">
+            To use the language checker properly, you should set the xml:lang attribute to "<sch:value-of select="$termNotationLanguage"/>".
+        </sch:diagnostic>
+        <sch:diagnostic id="termvariant-lang-de" xml:lang="de">
+            Um die Rechtschreibprüfung korrekt zu nutzen, sollten Sie das xml:lang Attribut auf "<sch:value-of select="$termNotationLanguage"/>" setzen.
         </sch:diagnostic>
     </sch:diagnostics>
     
