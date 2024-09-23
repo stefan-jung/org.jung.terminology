@@ -80,7 +80,8 @@
         <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
-            <incorrect-term ignorecase="true" part-of-speech="noun" severity="info">
+            <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
+            <incorrect-term ignorecase="true" severity="info">
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
                 <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
                 <!--<link>https://www.example.com</link>-->
@@ -92,7 +93,8 @@
         <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
-            <incorrect-term ignorecase="true" part-of-speech="noun" severity="info">
+            <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
+            <incorrect-term ignorecase="true" severity="info">
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
                 <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
                 <!--<link>https://www.example.com</link>-->
@@ -104,7 +106,8 @@
         <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
-            <incorrect-term ignorecase="true" part-of-speech="noun" severity="warning">
+            <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
+            <incorrect-term ignorecase="true" severity="warning">
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
                 <xsl:for-each select="$root//*[contains(@class, ' termentry/termNotation ')][contains(@language, $language)][contains(@usage, 'preferred') or contains(@usage, 'admitted')]">
                     <suggestion format="text"><xsl:value-of select="normalize-space(./termVariant/text())"/></suggestion>
