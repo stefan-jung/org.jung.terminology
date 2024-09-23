@@ -369,10 +369,6 @@
  * IMAGE
  *********************************************/
 *[class~="topic/image"]:before(10) {
-    display: block;
-    font-size: 10px;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
     content:
     oxy_buttonGroup(
         label, '${i18n(term.image)}',
@@ -385,18 +381,30 @@
             oxy_action(id, 'term.image.delete')
         )
     );
+    background-color: rgba(240, 240, 240, 0.3);
+    border-bottom: 0.05rem solid #767676;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding-bottom: 3px;
+    padding-left: 5px;
     -oxy-show-placeholder: no !important;
 }
 *[class~="topic/fig"] > *[class~="topic/image"] {
-   -oxy-display-tags: none;
+    -oxy-display-tags: none;
     -oxy-editable: true;
-    -oxy-show-placeholder: always;
+    border-color: #3d3d3d;
+    border-style: solid;
+    border-width: 0.05rem;
+    border-radius: 5px;
     display: block;
     font-family: Arial, sans-serif;
-    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 100%;
 }
 *[class~="topic/image"][href]:not([keyref]) {
     content: attr(href, url);

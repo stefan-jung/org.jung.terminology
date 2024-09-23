@@ -62,15 +62,6 @@
             </div>
         </div>
         
-        <!-- New search function -->
-        <!--<div id="new-search">
-            <div id="project-label">Select a project (type &quot;j&quot; for a start):</div>
-            <img id="project-icon" class="ui-state-default"/>
-            <input id="project"/>
-            <input type="hidden" id="project-id"/>
-            <p id="project-description"></p>
-        </div>-->
-        
         <div id="wrapper">
             <div id="mynetwork">
                 <div class="vis network-frame" style="position: relative; overflow: hidden; user-select: none; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;">
@@ -246,34 +237,6 @@
 
         </script>
         
-        <!-- New search function -->
-        <!--<script>
-            $( function() {
-            var projects = [<xsl:apply-templates select="document($ditamap)" mode="new-semantic-net-search"/>];
-            
-            $( "#project" ).autocomplete({
-                minLength: 0,
-                source: projects,
-                focus: function( event, ui ) {
-                $( "#project" ).val( ui.item.label );
-                    return false;
-                },
-                select: function( event, ui ) {
-                    $( "#project" ).val( ui.item.label );
-                    $( "#project-id" ).val( ui.item.value );
-                    $( "#project-description" ).html( ui.item.desc );
-                    $( "#project-icon" ).attr( "src", "images/" + ui.item.icon );
-                    
-                    return false;
-                }
-            })
-            .autocomplete( "instance" )._renderItem = function( ul, item ) {
-            return $( "&lt;li>" )
-                .append( "<div>" + item.label + "<br/>" + item.desc + "</div>" )
-                .appendTo( ul );
-                };
-                } );
-        </script>-->
     </xsl:template>
     
     <!-- Generate data set for autocomplete search box -->
@@ -288,25 +251,6 @@
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
         <xsl:value-of select="'''' || $label || '''' || $delim || ' '"/>
     </xsl:template>
-    
-    <!--<xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="new-semantic-net-search">
-        <xsl:variable name="filename" select="@href" as="xs:string"/>
-        <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
-        <xsl:variable name="value" select="sj:termId(@keys)" as="xs:string"/>
-        <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])" as="xs:string"/>
-        <xsl:variable name="desc" select="sj:jsonEscape(document($filepath)/termentry/definition[1]/definitionText[1]/text()[1])" as="xs:string"/>
-        <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ',' else ''" as="xs:string"/>
-        <!-\-
-            {
-                value: "jquery",
-                label: "jQuery",
-                desc: "the write less, do more, JavaScript library",
-                icon: "jquery_32x32.png"
-            },
-        -\->
-        
-        <xsl:value-of select="'{value: ''' || $value || ''', label: ''' || $label || ''', desc: ' || $desc || ''', icon: '''}' || $delim"/>
-    </xsl:template>-->
     
     <!-- Generate nodes -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-nodes">
@@ -332,15 +276,6 @@
                 or contains(@class, 'termentry/instaceOf')
                 or contains(@class, 'termentry/partOf')
                 or contains(@class, 'termentry/relatedTerm')]">
-                <!--<xsl:variable name="relationString" select="
-                    if (contains(@class, 'antonym')) then 'IsAntonymOf'
-                    else if (contains(@class, 'superordinateConcept')) then 'IsHypernymOf'
-                    else if (contains(@class, 'hyponym')) then 'IsHyponymOf'
-                    else if (contains(@class, 'instanceOf')) then 'IsInstanceOf'
-                    else if (contains(@class, 'partOf')) then 'IsPartOf'
-                    else if (contains(@class, 'relatedTerm')) then 'IsRelatedTo'
-                    else 'IsRelatedTo'
-                    "/>-->
                 <xsl:variable name="labelString" select="
                     if (contains(@class, 'antonym')) then 'Is Antonym Of'
                     else if (contains(@class, 'superordinateConcept')) then 'Is Superordinate Concept Of'
@@ -364,8 +299,6 @@
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename" as="xs:string"/>
         <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
-        
-        <xsl:message select="'XXXXXXXXXX' || replace(normalize-unicode($filename), '.dita', '.html')"></xsl:message>
         
         <xsl:value-of select="
             '{key: ''' || $key
@@ -392,9 +325,7 @@
         <xsl:variable name="apos-escaped" select="'\\' || $apos" as="xs:string"/>
         <xsl:variable name="out" select="normalize-space(replace(replace($s, $quot, $quot-escaped), $apos, $apos-escaped))"/>
         <xsl:if test="$debugging.mode = 'true' and $s != $out">
-            <xsl:message select="'[DEBUG]: sj:jsonEscape(): Escaped literals in string'"/>
-            <xsl:message select="'[DEBUG]      INPUT:  ' || $s"/>
-            <xsl:message select="'[DEBUG]      OUTPUT: ' || $out"/>
+            <xsl:message select="'[DEBUG]: sj:jsonEscape(' || $s || ') returns ''' || $out || ''''"/>
         </xsl:if>
         <xsl:sequence select="$out"/>
     </xsl:function>
