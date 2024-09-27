@@ -8,6 +8,10 @@
     font-size: 10pt;
 }
 
+
+/*********************************************
+ * Dark Theme
+ *********************************************/
 @media oxygen-high-contrast-black, oxygen-dark-theme {
     *[class~="termentry/definition"],
     *[class~="termentry/definitionText"],
@@ -48,6 +52,23 @@
         color: orange !important;
     }
 }
+
+
+/*********************************************
+ * Common properties
+ *********************************************/
+
+*[class~="termentry/definition"],
+*[class~="termentry/termContextSource"],
+*[class~="termentry/termNotation"],
+*[class~="termentry/termSource"] {
+    border-color: #3d3d3d;
+    border-style: solid;
+    border-width: 0.05rem;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
 
 /*********************************************
  * TERMENTRY
@@ -171,10 +192,6 @@
 *[class~="termentry/definition"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
-    border-color: #3d3d3d;
-    border-style: solid;
-    border-width: 0.05rem;
-    border-radius: 5px;
     display: block;
     font-family: Arial, sans-serif;
     margin-left: 5px;
@@ -473,9 +490,6 @@
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    border-color: #3d3d3d;
-    border-style: solid;
-    border-width: 0.05rem;
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -1347,10 +1361,6 @@
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-show-placeholder: always;
-    border-color: #3d3d3d;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 0.05rem;
     color: #000000; /* Because of the background-color, this makes sense here. */
     display: block;
     font-size: 10px;
