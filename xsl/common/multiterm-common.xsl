@@ -58,34 +58,19 @@
     </xsl:template>
     
     <!-- Create rules for all termentry topics -->
-    <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry">
+    <xsl:template match="*[contains(@class, ' termentry/termentry ')]" mode="termentry" expand-text="yes">
         <xsl:variable name="termentry-root" select="." as="node()"/>
         <conceptGrp>
-            <concept><xsl:value-of select="sj:hash-string(./@id)"/></concept>
+            <concept>{sj:hash-string(./@id)}</concept>
             <system type="entryClass">Unspecified</system>
             <transacGrp>
                 <transac type="origination">ST</transac>
-                <date><xsl:value-of select="format-dateTime(current-dateTime(), $dateTimePattern)"/></date>
+                <date>{format-dateTime(current-dateTime(), $dateTimePattern)}</date>
             </transacGrp>
             <xsl:apply-templates mode="definition"/>
             <xsl:apply-templates mode="termnotation">
                 <xsl:with-param name="part-of-speech" select="//*[contains(@class, ' termentry/partOfSpeech ')]/@value"/>
             </xsl:apply-templates>
-            
-            <!--<xsl:variable name="languages">
-                <xsl:for-each select="distinct-values(//@language)">
-                    <xsl:value-of select="distinct-values(.) || ','"/>
-                </xsl:for-each>
-            </xsl:variable>
-            
-            <xsl:for-each select="tokenize($languages, ',')">
-                <xsl:variable name="language" select="normalize-space(.)"/>
-                <xsl:if test="$language != ''">
-                    <langSec xml:lang="{$language}">
-                        <xsl:apply-templates select="$termentry-root//*[contains(@class, ' termentry/termNotation ')][@language = $language]" mode="termNotation"/>
-                    </langSec>
-                </xsl:if>
-            </xsl:for-each>-->
         </conceptGrp>
     </xsl:template>
     
@@ -97,12 +82,12 @@
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/definitionText ')]" mode="definitionText" expand-text="yes">
-        <descrip type="Definition">{.}</descrip>
+        <descrip type="Definition">{normalize-space(.)}</descrip>
     </xsl:template>
     
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]" mode="definitionSource" expand-text="yes">
         <descripGrp>
-            <descrip type="Source">{.}</descrip>
+            <descrip type="Source">{normalize-space(.)}</descrip>
         </descripGrp>
     </xsl:template>
     
@@ -111,10 +96,10 @@
         <languageGrp>
             <language type="{sj:language-name(@language)}" lang="{sj:language-code(@language)}"/>
             <termGrp>
-                <term><xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]"/></term>
+                <term>{*[contains(@class, ' termentry/termVariant ')]}</term>
                 <transacGrp>
                     <transac type="origination">ST</transac>
-                    <date><xsl:value-of select="format-dateTime(current-dateTime(), $dateTimePattern)"/></date>
+                    <date>{format-dateTime(current-dateTime(), $dateTimePattern)}</date>
                 </transacGrp>
                 <descripGrp>
                     <descrip type="Usage">{sj:usage(@usage)}</descrip>
