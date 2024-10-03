@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="Ebene_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 24 24"
+   xml:space="preserve"
+   sodipodi:docname="harvester-icon.svg"
+   width="24"
+   height="24"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="harvester-icon-16.png"
+   inkscape:export-xdpi="64"
+   inkscape:export-ydpi="64"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs11" /><sodipodi:namedview
+   id="namedview9"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="6.9328383"
+   inkscape:cx="36.132388"
+   inkscape:cy="23.222812"
+   inkscape:window-width="1866"
+   inkscape:window-height="1009"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Ebene_1" />
+<style
+   type="text/css"
+   id="style2">
+	.st0{fill:#347439;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#347439;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;}
+</style>
+
+
+<g
+   inkscape:groupmode="layer"
+   id="layer3"
+   inkscape:label="s"
+   transform="translate(-4.3967378,-12.45)" /><g
+   id="g2845"
+   transform="matrix(0.25807865,0,0,0.25807865,-1.134704,1.6370269)"><path
+     class="st0"
+     d="m 72.706512,80.85 -68.1999996,0.2 v 6 H 94.206514 v -0.4 -2.2 0 z"
+     id="path6-3"
+     style="display:inline;fill:#155724;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
+     sodipodi:nodetypes="cccccccc" /><path
+     class="st0"
+     d="M 96.797639,77.25 74.097638,64.05 c -1.011821,5.782753 -2.370036,9.976582 -3.7,14.3 l 2.7,2.5 21.500001,3.6 v 0 z"
+     id="path6-6"
+     style="display:inline;fill:#4d4d4d;fill-opacity:1;stroke:#494949;stroke-opacity:1"
+     sodipodi:nodetypes="ccccccc" /><path
+     class="st0"
+     d="m 51.097638,60.05 c -3.1,0.1 -5.7,2.7 -5.7,5.9 0,3.4 2.8,5.9 6,5.8 3,-0.1 5.7,-2.6 5.7,-5.9 0,-3.3 -2.7,-5.9 -6,-5.8 z m 0.1,9.1 c -1.8,0 -3.3,-1.5 -3.3,-3.3 0,-1.8 1.5,-3.3 3.3,-3.3 1.8,0 3.3,1.5 3.3,3.3 0,1.9 -1.4,3.3 -3.3,3.3 z m 22.4,-49.8 -2.2,-3.1 h -1.5 -20.9 c -1,0 -1,0 -1,-1 v -2.3 H 4.8976379 l 0.1,55.6 v 0.3 h 21.4000001 1.6 0.3 l 1.4,-1.5 c 0,-2.1 0.4,-6 2.6,-10.3 2.2,-4.3 5.1,-6.7 5.8,-7.3 4.7,-3.8 9.7,-4.5 12,-4.7 v -0.1 h 12 0.3 c 0.1,0 0.2,0.1 0.2,0.2 0,0.3 0.2,0.3 0.4,0.3 h 2 c 0.2,0 0.3,0 0.3,-0.3 0,-0.2 0.1,-0.2 0.3,-0.2 h 0.2 v -4.9 c 0,-0.2 -0.1,-0.2 -0.3,-0.2 h -0.5 l 5.4,-17.7 h 1.2 v 0 h 0.7 z m -12.6,20.3 h -0.7 -10.1 -0.3 v -0.4 -12.2 c 0,-0.2 0.1,-4.7 0,-4.9 0,-0.2 0.1,-0.2 0.3,-0.2 h 16.1 z m -1.2,41.2 c 4.5,-2.8 7.3,-6.7 8.3,-11.8 0.9,-5.2 -0.3,-9.8 -3.6,-13.9 -5.8,-7.1 -16.5,-8.3 -23.7,-2.6 -3.9,3.1 -6.1,7.1 -6.5,12 -0.5,7.1 2.5,12.6 8.5,16.5 z m -8.7,-4.7 c -5.6,0 -10.2,-4.7 -10.2,-10.4 0,-5.6 4.6,-10.2 10.3,-10.2 5.4,-0.1 10.3,4.3 10.3,10.3 0.1,5.8 -4.6,10.4 -10.4,10.3 z"
+     id="path6"
+     style="display:inline;fill:#4d4d4d;fill-opacity:1;stroke:#494949;stroke-opacity:1"
+     sodipodi:nodetypes="cscscssssscccssccccccccsccccsssssscsscccccccccccscsccccccccccsccc" /></g></svg>
