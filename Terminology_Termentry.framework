@@ -7550,7 +7550,7 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>termhavester</String>
+													<String>termharvester</String>
 												</field>
 												<field name="name">
 													<String>Term harvester</String>
@@ -7580,7 +7580,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>scenarioNames</String>
-																		<String>Jung Terminology Termextractor</String>
+																		<String>Jung Terminology Term Harvester</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -8071,7 +8071,7 @@
 										<field name="value">
 											<menuItem>
 												<field name="actionID">
-													<String>termhavester</String>
+													<String>termharvester</String>
 												</field>
 											</menuItem>
 										</field>
@@ -9340,10 +9340,10 @@
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>termextractor</String>
+													<String>termharvester</String>
 												</field>
 												<field name="buildFilePath">
-													<String>${frameworkDir}/ant/build_termextractor.xml</String>
+													<String>${frameworkDir}/ant/build_termharvester.xml</String>
 												</field>
 												<field name="ditaParams">
 													<list>
@@ -9401,30 +9401,7 @@
 																<String></String>
 															</field>
 															<field name="value">
-																<String>${ask('Language of source term', combobox, ('en-US':'English (USA)';'de-DE':'German (Germany)'), 'en-US')}</String>
-															</field>
-															<field name="defaultValue">
-																<null/>
-															</field>
-															<field name="type">
-																<Integer>5</Integer>
-															</field>
-															<field name="possibleValues">
-																<null/>
-															</field>
-															<field name="possibleValuesDescriptions">
-																<null/>
-															</field>
-														</antParameter>
-														<antParameter>
-															<field name="name">
-																<String>xliff-tbx.directory</String>
-															</field>
-															<field name="description">
-																<String></String>
-															</field>
-															<field name="value">
-																<String>${ask('Select a random TBX/XLIFF file in your TBX/XLIFF directory', relative_url, '')}</String>
+																<String>${ask('Language of source term', combobox, ('en':'English';'en-US':'English (USA)';'de-DE':'German (Germany)'), 'en-US')}</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -9442,7 +9419,7 @@
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m -Dpolyglot.engine.WarnInterpreterOnly=false</String>
+													<String>-Xmx256m -Djava.awt.headless=false -Dpolyglot.engine.WarnInterpreterOnly=false</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -9466,7 +9443,7 @@
 													<null/>
 												</field>
 												<field name="name">
-													<String>Jung Terminology Termextractor</String>
+													<String>Jung Terminology Term Harvester</String>
 												</field>
 												<field name="baseURL">
 													<null/>

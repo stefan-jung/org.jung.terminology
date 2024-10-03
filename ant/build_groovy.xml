@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <!--
+        JARs:
+        https://mvnrepository.com/artifact/org.apache.groovy/groovy/4.0.23
+        https://mvnrepository.com/artifact/org.apache.groovy/groovy-ant/4.0.23
+    -->
+    <path id="groovy">
+        <fileset dir="../lib/groovy/">
+            <include name="groovy-4.0.23.jar"/>
+            <include name="groovy-ant-4.0.23.jar"/>
+        </fileset>
+    </path>
+    <taskdef name="groovy" classname="org.codehaus.groovy.ant.Groovy" classpathref="groovy"/>
+</project>
