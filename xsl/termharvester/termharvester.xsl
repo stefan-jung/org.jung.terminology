@@ -5,6 +5,11 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:2.0">
     
+    
+    <!-- ******************************************************************************** -->
+    <!-- IMPORTS                                                                          -->
+    <!-- ******************************************************************************** -->
+    
     <xsl:import href="camel-case.xsl"/>
     <xsl:import href="capitalize-first.xsl"/>
     <xsl:import href="remove-entity-from-filename.xsl"/>
@@ -19,6 +24,11 @@
     <xsl:import href="xliff-csv.xsl"/>
     <xsl:import href="xliff-txt.xsl"/>
     
+    
+    <!-- ******************************************************************************** -->
+    <!-- MODES                                                                            -->
+    <!-- ******************************************************************************** -->
+    
     <xsl:mode name="tmx-csv" on-no-match="shallow-skip"/>
     <xsl:mode name="tmx-termentry" on-no-match="shallow-skip"/>
     <xsl:mode name="tmx-txt" on-no-match="shallow-skip"/>
@@ -26,15 +36,31 @@
     <xsl:mode name="xliff-termentry" on-no-match="shallow-skip"/>
     <xsl:mode name="xliff-txt" on-no-match="shallow-skip"/>
     
+
+    <!-- ******************************************************************************** -->
+    <!-- PARAMETERS                                                                       -->
+    <!-- ******************************************************************************** -->
+    
     <!-- Define the string you are searching for -->
     <xsl:param name="term" as="xs:string"/>
     <xsl:param name="source.language" as="xs:string"/>
     <xsl:param name="tmx.xliff.dir" as="xs:string"/>
     <xsl:param name="output.type" as="xs:string"/>
+    
+    <!-- Can be (de)activated in the build_termharvester.xml -->
     <xsl:param name="debugging.mode" as="xs:string"/>
     
-    <!--<xsl:variable name="root" as="node()" select="/"/>-->
+    
+    <!-- ******************************************************************************** -->
+    <!-- VARIABLES                                                                        -->
+    <!-- ******************************************************************************** -->
+
     <xsl:variable name="LF" select="'&#xa;'" as="xs:string"/>
+
+
+    <!-- ******************************************************************************** -->
+    <!-- TEMPLATES                                                                        -->
+    <!-- ******************************************************************************** -->
     
     <!-- Template to process the collection of files -->
     <xsl:template match="/">

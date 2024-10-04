@@ -15,7 +15,7 @@
     
     <!-- Properties -->
     <property environment="env"/>
-    <property name="debugging.mode" value="true"/>
+    <property name="debugging.mode" value="false"/>
     
     <condition property="dbg">
         <equals arg1="${debugging.mode}" arg2="true"/>
@@ -97,14 +97,8 @@
             </condition>
         </fail>
         
-        
-        <!--<basename file="${tmx.xliff.dir}" property="xliff-tmx.basename"/>-->
-        <!--<echo>xliff-tmx.basename = "${xliff-tmx.basename}"</echo>-->
         <makeurl file="${tmx.xliff.dir.absolute.path}" property="xliff-tmx.url" validate="true"/>
         <echo if:set="dbg">xliff-tmx.url = "${xliff-tmx.url}"</echo>
-        <!--<substring-before input="${xliff-tmx.url}" string="${xliff-tmx.basename}" property="xliff-tmx.url.no-file"/>-->
-        <!--<echo>xliff-tmx.url.no-file = "${xliff-tmx.url.no-file}"</echo>-->
-        <!--<makeurl file="../xsl/termharvester/dummy.xml" property="dummy.file.url"/>-->
         <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}termharvester.txt"/>
         <delete file="${output.file}" failonerror="false"/>
         <delete file="${output.file}.temp" failonerror="false"/>

@@ -38,13 +38,12 @@
                             <sourceName><xsl:value-of select="sj:remove-entity-from-filename($file)"/></sourceName>
                         </termSource>
                     </fullForm>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] ' || ./@xml:lang || ' = ' || ./seg/text()"/>
+                    </xsl:if>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
-        
-        <xsl:if test="$debugging.mode = 'true'">
-            <xsl:message select="'[DEBUG] ' || $results"/>
-        </xsl:if>
         
         <xsl:sequence select="$results"/>
         
