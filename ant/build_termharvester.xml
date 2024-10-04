@@ -17,6 +17,10 @@
     <property environment="env"/>
     <property name="debugging.mode" value="true"/>
     
+    <condition property="dbg">
+        <equals arg1="${debugging.mode}" arg2="true"/>
+    </condition>
+    
     <!-- Includes -->
     <include file="build_antcontrib.xml"/>
     <include file="build_graalvm.xml"/>
@@ -67,7 +71,7 @@
             <path path="${tmx.xliff.dir}"/>
             <mapper type="glob" from="*" to="*"/>
         </pathconvert>
-        <echo>tmx.xliff.dir.absolute.path = ${tmx.xliff.dir.absolute.path}</echo>
+        <echo if:set="dbg">tmx.xliff.dir.absolute.path = ${tmx.xliff.dir.absolute.path}</echo>
         
         <resourcecount property="xlf.count">
             <fileset dir="${tmx.xliff.dir}">
@@ -97,7 +101,7 @@
         <!--<basename file="${tmx.xliff.dir}" property="xliff-tmx.basename"/>-->
         <!--<echo>xliff-tmx.basename = "${xliff-tmx.basename}"</echo>-->
         <makeurl file="${tmx.xliff.dir.absolute.path}" property="xliff-tmx.url" validate="true"/>
-        <echo>xliff-tmx.url = "${xliff-tmx.url}"</echo>
+        <echo if:set="dbg">xliff-tmx.url = "${xliff-tmx.url}"</echo>
         <!--<substring-before input="${xliff-tmx.url}" string="${xliff-tmx.basename}" property="xliff-tmx.url.no-file"/>-->
         <!--<echo>xliff-tmx.url.no-file = "${xliff-tmx.url.no-file}"</echo>-->
         <!--<makeurl file="../xsl/termharvester/dummy.xml" property="dummy.file.url"/>-->
@@ -120,7 +124,7 @@
         <xslt 
             style="../xsl/termharvester/termharvester.xsl"
             in="${tmx.xliff.dir}${file.separator}dummy-input.xml"
-            out="${tmx.xliff.dir}${file.separator}${term}.txt"
+            out="${tmx.xliff.dir}${file.separator}dummy-output.xml"
             failonerror="true"
             failontransformationerror="true">
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>
@@ -132,6 +136,7 @@
             <param name="output.type" expression="${output.type}"/>
         </xslt>
         <delete file="${tmx.xliff.dir}${file.separator}dummy-input.xml" failonerror="false" quiet="true" verbose="false"/>
+        <delete file="${tmx.xliff.dir}${file.separator}dummy-output.xml" failonerror="false" quiet="true" verbose="false"/>
     </target>
 
 </project>

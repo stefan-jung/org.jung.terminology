@@ -5,10 +5,19 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:2.0">
     
+    <xsl:import href="camel-case.xsl"/>
+    <xsl:import href="capitalize-first.xsl"/>
+    <xsl:import href="remove-entity-from-filename.xsl"/>
+    <xsl:import href="concept-id.xsl"/>
     <xsl:import href="find-string.xsl"/>
-    <xsl:import href="xliff-target.xsl"/>
     
-    <xsl:output method="text" encoding="UTF-16"/>
+    <xsl:import href="tmx-termentry.xsl"/>
+    <xsl:import href="tmx-csv.xsl"/>
+    <xsl:import href="tmx-txt.xsl"/>
+    
+    <xsl:import href="xliff-termentry.xsl"/>
+    <xsl:import href="xliff-csv.xsl"/>
+    <xsl:import href="xliff-txt.xsl"/>
     
     <xsl:mode name="tmx-csv" on-no-match="shallow-skip"/>
     <xsl:mode name="tmx-termentry" on-no-match="shallow-skip"/>
@@ -25,7 +34,7 @@
     <xsl:param name="debugging.mode" as="xs:string"/>
     
     <!--<xsl:variable name="root" as="node()" select="/"/>-->
-    <xsl:variable name="newline" select="'&#xa;'" as="xs:string"/>
+    <xsl:variable name="LF" select="'&#xa;'" as="xs:string"/>
     
     <!-- Template to process the collection of files -->
     <xsl:template match="/">
@@ -48,181 +57,193 @@
             <!--<xsl:message select="'[DEBUG] absolutePath = ''' || $absolutePath || ''''"/>-->
         </xsl:if>
         
-        <!-- Add the term in the source language -->
-        <xsl:sequence select="$source.language || ' = ' || $term || '&#xa;'"/>
+        <xsl:if test="$output.type = 'all' or $output.type = 'txt'">
+            <xsl:result-document encoding="UTF-16" href="{$baseURINoFile || '/' || $term || '.txt'}" method="text" indent="no">
 
-        <!-- Iterate over all .xlf files -->
-        <xsl:variable name="xlf-collection" select="collection($baseURINoFile || '?select=*.xlf')"/>
-        <xsl:for-each select="$xlf-collection">
-            
-            <xsl:variable name="filename" select="'[DEBUG] FILENAME: ' || tokenize(base-uri(.), '/')[last()]"/>
-            <xsl:if test="$debugging.mode = 'true'">
-                <xsl:message select="'[DEBUG] filename = ' || $filename"/>
-            </xsl:if>
-            
-            <xsl:variable name="result" select="sj:xliff-target(., $term, $source.language)"/>
-            <xsl:if test="$result != ''">
-                <xsl:if test="$debugging.mode = 'true'">
-                    <xsl:message select="array:get($result, 1) || '=' || array:get($result, 2)"/>
-                </xsl:if>
-                <xsl:sequence select="array:get($result, 1) || '=' || array:get($result, 2) || $newline"/>
-            </xsl:if>
-        </xsl:for-each>
-
-        <!-- Iterate over all .xliff files -->
-        <xsl:variable name="xliff-collection" select="collection($baseURINoFile || '?select=*.xliff')"/>
-        <xsl:for-each select="$xliff-collection">
-            <xsl:variable name="result" select="sj:xliff-target(., $term, $source.language)"/>
-            <xsl:if test="$result != ''">
-                <xsl:if test="$debugging.mode = 'true'">
-                    <xsl:message select="array:get($result, 1) || '=' || array:get($result, 2)"/>
-                </xsl:if>
-                <xsl:sequence select="array:get($result, 1) || '=' || array:get($result, 2) || $newline"/>
-            </xsl:if>
-        </xsl:for-each>
-        
-        <!-- Iterate over all .tmx files -->
-        <xsl:variable name="tmx-collection" select="collection($baseURINoFile || '?select=*.tmx')"/>
-        <xsl:for-each select="$tmx-collection">
-            <xsl:choose>
-                <xsl:when test="$output.type = 'all' or $output.type = 'txt'">
+                <!-- Add the term in the source language -->
+                <xsl:sequence select="$source.language || ' = ' || $term || '&#xa;'"/>
+               
+                <!-- Iterate over all .xlf files -->
+                <xsl:variable name="xlf-collection" select="collection($baseURINoFile || '?select=*.xlf')"/>
+                <xsl:for-each select="$xlf-collection">
+                    <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                    </xsl:if>
+                    <xsl:if test="$file = ''">
+                        <xsl:message select="'FILE IS EMPTY???'" terminate="yes"/>
+                    </xsl:if>
+                    
+                    <xsl:call-template name="xliff-txt">
+                        <xsl:with-param name="xliff" select="." as="document-node()"/>
+                        <xsl:with-param name="file" select="$file" as="xs:string"/>
+                        <xsl:with-param name="term" select="$term" as="xs:string"/>
+                        <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                    </xsl:call-template>
+                </xsl:for-each>
+                
+                <!-- Iterate over all .xliff files -->
+                <xsl:variable name="xliff-collection" select="collection($baseURINoFile || '?select=*.xliff')"/>
+                <xsl:for-each select="$xliff-collection">
+                    <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                    <xsl:if test="$file = ''">
+                        <xsl:message select="'FILE IS EMPTY???'" terminate="yes"/>
+                    </xsl:if>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                    </xsl:if>
+                    <xsl:call-template name="xliff-txt">
+                        <xsl:with-param name="xliff" select="." as="document-node()"/>
+                        <xsl:with-param name="file" select="$file" as="xs:string"/>
+                        <xsl:with-param name="term" select="$term" as="xs:string"/>
+                        <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                    </xsl:call-template>
+                </xsl:for-each>
+                
+                <!-- Iterate over all .tmx files -->
+                <xsl:variable name="tmx-collection" select="collection($baseURINoFile || '?select=*.tmx')"/>
+                <xsl:for-each select="$tmx-collection">
+                    <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                    </xsl:if>
                     <xsl:call-template name="tmx-txt">
                         <xsl:with-param name="tmx" select="." as="document-node()"/>
-                        <xsl:with-param name="term" select="$term"/>
-                        <xsl:with-param name="source.language" select="$source.language"/>
+                        <xsl:with-param name="file" select="$file" as="xs:string"/>
+                        <xsl:with-param name="term" select="$term" as="xs:string"/>
+                        <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
                     </xsl:call-template>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:for-each>
-    </xsl:template>
-    
-    
-    <!-- TMX txt -->
-    <xsl:template name="tmx-txt">
-        <xsl:param name="tmx" as="document-node()"/>
-        <xsl:param name="term"/>
-        <xsl:param name="source.language"/>
-        <xsl:apply-templates mode="tmx-txt">
-            <xsl:with-param name="tmx" select="$tmx"/>
-        </xsl:apply-templates>
-    </xsl:template>
-    
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="tmx-txt">
-        <xsl:param name="tmx" as="document-node()"/>
-        <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
-        <xsl:for-each select="$tu[1]/tuv">
-            <xsl:if test="./@xml:lang != $source.language">
-                <xsl:value-of select="./@xml:lang || ' = ' || ./seg/text() || '&#xa;'"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-    
-    
-    <!-- TMX csv -->
-    <xsl:template name="tmx-csv">
-        <xsl:param name="tmx" as="document-node()"/>
-        <xsl:param name="term"/>
-        <xsl:param name="source.language"/>
-        <xsl:apply-templates mode="tmx-csv">
-            <xsl:with-param name="tmx" select="$tmx"/>
-        </xsl:apply-templates>
-    </xsl:template>
-    
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="tmx-csv">
-        <xsl:param name="tmx" as="document-node()"/>
-        <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
-        <xsl:for-each select="$tu[1]/tuv">
-            <xsl:if test="./@xml:lang != $source.language">
-                <xsl:value-of select="./@xml:lang || ' = ' || ./seg/text() || '&#xa;'"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-    
-    
-    <!-- TMX termentry -->
-    <xsl:template name="tmx-termentry">
-        <xsl:param name="tmx" as="document-node()"/>
-        <xsl:param name="term"/>
-        <xsl:param name="source.language"/>
-        <xsl:apply-templates mode="tmx-termentry">
-            <xsl:with-param name="tmx" select="$tmx"/>
-        </xsl:apply-templates>
-    </xsl:template>
-    
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="tmx-termentry">
-        <xsl:param name="tmx" as="document-node()"/>
-        <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
-        <xsl:for-each select="$tu[1]/tuv">
-            <xsl:if test="./@xml:lang != $source.language">
-                <xsl:value-of select="./@xml:lang || ' = ' || ./seg/text() || '&#xa;'"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-
-
-    <!-- XLIFF txt -->
-    <xsl:template name="xliff-txt">
-        <xsl:param name="xliff" as="document-node()"/>
-        <xsl:param name="term"/>
-        <xsl:param name="source.language"/>
-        <xsl:apply-templates mode="xliff-txt">
-            <xsl:with-param name="tmx" select="$xliff"/>
-        </xsl:apply-templates>
-    </xsl:template>
-    
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="xliff-txt">
-        <xsl:param name="xliff" as="document-node()"/>
-        <xsl:variable name="result" select="sj:xliff-target(., $term, $source.language)"/>
-        <xsl:if test="$result != ''">
-            <xsl:if test="$debugging.mode = 'true'">
-                <xsl:message select="array:get($result, 1) || '=' || array:get($result, 2)"/>
-            </xsl:if>
-            <xsl:sequence select="array:get($result, 1) || '=' || array:get($result, 2) || $newline"/>
+                </xsl:for-each>
+                
+            </xsl:result-document> 
         </xsl:if>
+        
+        <xsl:if test="$output.type = 'all' or $output.type = 'csv'">
+            <xsl:result-document encoding="UTF-8" href="{$baseURINoFile || '/' || $term || '.csv'}" method="text">
+                
+                <!-- Add the term in the source language -->
+                <xsl:sequence select="$source.language || '&#x9;' || $term || '&#x9;' || '---' ||'&#xa;'"/>
+                
+                <!-- Iterate over all .xlf files -->
+                <xsl:variable name="xlf-collection" select="collection($baseURINoFile || '?select=*.xlf')"/>
+                <xsl:for-each select="$xlf-collection">
+                    <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                    </xsl:if>
+                    <xsl:call-template name="xliff-csv">
+                        <xsl:with-param name="xliff" select="." as="document-node()"/>
+                        <xsl:with-param name="file" select="$file" as="xs:string"/>
+                        <xsl:with-param name="term" select="$term" as="xs:string"/>
+                        <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                    </xsl:call-template>
+                </xsl:for-each>
+                
+                <!-- Iterate over all .xliff files -->
+                <xsl:variable name="xliff-collection" select="collection($baseURINoFile || '?select=*.xliff')"/>
+                <xsl:for-each select="$xliff-collection">
+                    <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                    </xsl:if>
+                    <xsl:call-template name="xliff-csv">
+                        <xsl:with-param name="xliff" select="." as="document-node()"/>
+                        <xsl:with-param name="file" select="$file" as="xs:string"/>
+                        <xsl:with-param name="term" select="$term" as="xs:string"/>
+                        <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                    </xsl:call-template>
+                </xsl:for-each>
+                
+                <!-- Iterate over all .tmx files -->
+                <xsl:variable name="tmx-collection" select="collection($baseURINoFile || '?select=*.tmx')"/>
+                <xsl:for-each select="$tmx-collection">
+                    <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                    <xsl:if test="$debugging.mode = 'true'">
+                        <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                    </xsl:if>
+                    <xsl:call-template name="tmx-csv">
+                        <xsl:with-param name="tmx" select="." as="document-node()"/>
+                        <xsl:with-param name="file" select="$file" as="xs:string"/>
+                        <xsl:with-param name="term" select="$term" as="xs:string"/>
+                        <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                    </xsl:call-template>
+                </xsl:for-each>
+                
+            </xsl:result-document> 
+        </xsl:if>
+        
+        <xsl:if test="$output.type = 'all' or $output.type = 'termentry'">
+            <xsl:result-document encoding="UTF-8" href="{$baseURINoFile || '/' || sj:concept-id($term) || '.dita'}" method="xml" indent="yes" exclude-result-prefixes="#all">
+                
+                <xsl:processing-instruction name="xml-model">
+                    <xsl:text>href="urn:jung:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:text>
+                </xsl:processing-instruction>
+                <xsl:processing-instruction name="xml-model">
+                    <xsl:text>href="urn:jung:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:text>
+                </xsl:processing-instruction>
+                <termentry id="{sj:concept-id($term)}">
+                    <title><xsl:value-of select="sj:capitalize-first($term)"/></title>
+                    <definition>
+                        <definitionText/>
+                        <definitionSource/>
+                    </definition>
+                    <termBody>
+                        <partOfSpeech value="noun"/>
+                        <fullForm language="{$source.language}" usage="preferred">
+                            <termVariant xml:lang="{$source.language}"><xsl:value-of select="$term"/></termVariant>
+                        </fullForm>
+                        
+                        <!-- Iterate over all .xlf files -->
+                        <xsl:variable name="xlf-collection" select="collection($baseURINoFile || '?select=*.xlf')"/>
+                        <xsl:for-each select="$xlf-collection">
+                            <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                            <xsl:if test="$debugging.mode = 'true'">
+                                <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                            </xsl:if>
+                            <xsl:call-template name="xliff-termentry">
+                                <xsl:with-param name="xliff" select="." as="document-node()"/>
+                                <xsl:with-param name="file" select="$file" as="xs:string"/>
+                                <xsl:with-param name="term" select="$term" as="xs:string"/>
+                                <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                            </xsl:call-template>
+                        </xsl:for-each>
+                        
+                        <!-- Iterate over all .xliff files -->
+                        <xsl:variable name="xliff-collection" select="collection($baseURINoFile || '?select=*.xliff')"/>
+                        <xsl:for-each select="$xliff-collection">
+                            <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                            <xsl:if test="$debugging.mode = 'true'">
+                                <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                            </xsl:if>
+                            <xsl:call-template name="xliff-termentry">
+                                <xsl:with-param name="xliff" select="." as="document-node()"/>
+                                <xsl:with-param name="file" select="$file" as="xs:string"/>
+                                <xsl:with-param name="term" select="$term" as="xs:string"/>
+                                <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                            </xsl:call-template>
+                        </xsl:for-each>
+                        
+                        <!-- Iterate over all .tmx files -->
+                        <xsl:variable name="tmx-collection" select="collection($baseURINoFile || '?select=*.tmx')"/>
+                        <xsl:for-each select="$tmx-collection">
+                            <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
+                            <xsl:if test="$debugging.mode = 'true'">
+                                <xsl:message select="'[DEBUG] --- ' || sj:remove-entity-from-filename($file) || ' ---'"/>
+                            </xsl:if>
+                            <xsl:call-template name="tmx-termentry">
+                                <xsl:with-param name="tmx" select="." as="document-node()"/>
+                                <xsl:with-param name="file" select="$file" as="xs:string"/>
+                                <xsl:with-param name="term" select="$term" as="xs:string"/>
+                                <xsl:with-param name="source.language" select="$source.language" as="xs:string"/>
+                            </xsl:call-template>
+                        </xsl:for-each>
+                        
+                    </termBody>
+                </termentry>
+                
+            </xsl:result-document> 
+        </xsl:if>
+        
     </xsl:template>
     
-    
-    <!-- XLIFF csv -->
-    <xsl:template name="xliff-csv">
-        <xsl:param name="xliff" as="document-node()"/>
-        <xsl:param name="term"/>
-        <xsl:param name="source.language"/>
-        <xsl:apply-templates mode="xliff-csv">
-            <xsl:with-param name="xliff" select="$xliff"/>
-        </xsl:apply-templates>
-    </xsl:template>
-    
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="xliff-csv">
-        <xsl:param name="xliff" as="document-node()"/>
-        <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
-        <xsl:for-each select="$tu[1]/tuv">
-            <xsl:if test="./@xml:lang != $source.language">
-                <xsl:value-of select="./@xml:lang || ' = ' || ./seg/text() || '&#xa;'"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-    
-    
-    <!-- TMX termentry -->
-    <xsl:template name="xliff-termentry">
-        <xsl:param name="xliff" as="document-node()"/>
-        <xsl:param name="term"/>
-        <xsl:param name="source.language"/>
-        <xsl:apply-templates mode="xliff-termentry">
-            <xsl:with-param name="xliff" select="$xliff"/>
-        </xsl:apply-templates>
-    </xsl:template>
-    
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="xliff-termentry">
-        <xsl:param name="xliff" as="document-node()"/>
-        <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
-        <xsl:for-each select="$tu[1]/tuv">
-            <xsl:if test="./@xml:lang != $source.language">
-                <xsl:value-of select="./@xml:lang || ' = ' || ./seg/text() || '&#xa;'"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-    
-    
-
 </xsl:stylesheet>
