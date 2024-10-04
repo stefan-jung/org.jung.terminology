@@ -321,6 +321,7 @@
     border-bottom: 0.05rem solid #767676;
     display: block;
     font-size: 10px;
+    font-weight: bold;
     padding-bottom: 3px;
     padding-left: 5px;
     margin-bottom: 2px;
@@ -357,7 +358,7 @@
     display: inline;
     font-family: Arial, sans-serif;
     font-size: 10px;
-    font-weight: normal;
+    font-weight: bold;
     padding-left: 0.5em;
     padding-left: 5px;
     width: 20%;
@@ -372,7 +373,8 @@
 *[class~="topic/fig"] > *[class~="topic/title"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
-    -oxy-show-placeholder: no !important;
+    -oxy-show-placeholder: always;
+    -oxy-placeholder-content: '${i18n(term.fig.title)}';
     display: block;
     font-family: Arial, sans-serif;
     margin-bottom: 5px;
@@ -390,7 +392,7 @@
     oxy_buttonGroup(
         label, '${i18n(term.image)}',
         transparent, 'true',
-        fontInherit, 'false',
+        fontInherit, 'true',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.imageReference.add'),
@@ -406,6 +408,7 @@
     margin-bottom: 2px;
     padding-bottom: 3px;
     padding-left: 5px;
+    width: 100%;
     -oxy-show-placeholder: no !important;
 }
 *[class~="topic/fig"] > *[class~="topic/image"] {
@@ -421,7 +424,7 @@
     margin-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
-    max-width: 100%;
+    width: auto;
 }
 *[class~="topic/image"][href]:not([keyref]) {
     content: attr(href, url);
@@ -446,6 +449,7 @@
     );
     width: 20%;
     font-size: 10px;
+    font-weight: bold;
     display: inline;
     padding-left: 5px;
     font-size: 10px;
@@ -469,13 +473,14 @@
     border-bottom: 0.05rem solid #767676;
     display: block;
     font-size: 10px;
+    font-weight: bold;
     padding-bottom: 5px;
     margin-bottom: 2px;
     content:
     oxy_buttonGroup(
         label, '${i18n(term.termSource)}',
         transparent, 'true',
-        fontInherit, 'false',
+        fontInherit, 'true',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.sourceName.add'),
