@@ -3,8 +3,16 @@
     <!-- Property to get the user's home directory -->
     <property name="user.home" value="${user.home}" />
     
+    <!-- OneDrive synchronized Desktop on a Swedish Windows computer. -->
+    <condition property="desktop.dir" value="${env.OneDriveCommercial}${file.separator}Skrivbordet">
+        <and>
+            <os family="windows"/>
+            <available type="dir" file="${env.OneDriveCommercial}${file.separator}Skrivbordet"/>
+        </and>
+    </condition>
+    
     <!-- Check if OS is Windows and define the desktop path accordingly -->
-    <condition property="desktop.dir" value="${user.home}\\Desktop">
+    <condition property="desktop.dir" value="${user.home}\Desktop">
         <os family="windows" />
     </condition>
     

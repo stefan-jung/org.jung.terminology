@@ -15,13 +15,13 @@
   <termBody>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>coachwork</termVariant>
+      <termVariant xml:lang="en-GB">coachwork</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
-      <termVariant>vehicle body</termVariant>
+      <termVariant xml:lang="en-GB">vehicle body</termVariant>
     </fullForm>
     <fullForm language="en-US" usage="preferred">
-      <termVariant>auto body</termVariant>
+      <termVariant xml:lang="en-US">auto body</termVariant>
     </fullForm>
   </termBody>
   <relations>

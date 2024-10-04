@@ -50,6 +50,7 @@
     <target name="termharvester" depends="-prepare, -temp.dir, -desktop.dir">
         
         <property name="tmx.xliff.dir" value="${desktop.dir}${file.separator}termharvester"/>
+        <makeurl file="${tmx.xliff.dir}" property="tmx.xliff.dir.url"/>
         <mkdir dir="${tmx.xliff.dir}"/>
 
         <!-- To make this work, we need -Djava.awt.headless=false as JVM argument. -->
@@ -152,16 +153,6 @@
             </sequential>
         </for>
     </target>
-    
-    <!--<target name="-extract-txt-all-files">
-        <foreach target="-extract-txt" param="file">
-            <fileset dir="${tmx.xliff.dir}" casesensitive="yes">
-                <include name="**/*.tmx"/>
-                <include name="**/*.xlf"/>
-                <include name="**/*.xliff"/>
-            </fileset>
-        </foreach>
-    </target>-->
     
     <target name="-extract-txt">
         <echo>Extracting term "${term}" as text</echo>
