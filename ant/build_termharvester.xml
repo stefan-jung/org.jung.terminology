@@ -105,60 +105,20 @@
         <delete file="${output.file}" failonerror="false"/>
         <delete file="${output.file}.temp" failonerror="false"/>
         
-        <condition property="isTXT">
-            <equals arg1="${output.type}" arg2="txt"/>
-        </condition>
-        <condition property="isCSV">
-            <equals arg1="${output.type}" arg2="csv"/>
-        </condition>
-        <condition property="isTermentry">
-            <equals arg1="${output.type}" arg2="termentry"/>
-        </condition>
-        <condition property="isAll">
-            <equals arg1="${output.type}" arg2="all"/>
-        </condition>
-        
-        <for if:set="isTXT" list="${search.string}" delimiter="," param="term" trim="true">
+        <for list="${search.string}" delimiter="," param="term" trim="true">
             <sequential>
-                <antcall target="-extract-txt">
-                    <param name="term" value="@{term}"/>
-                </antcall>
-            </sequential>
-        </for>
-        <for if:set="isCSV" list="${search.string}" delimiter="," param="term" trim="true">
-            <sequential>
-                <antcall target="-extract-csv">
-                    <param name="term" value="@{term}"/>
-                </antcall>
-            </sequential>
-        </for>
-        <for if:set="isTermentry" list="${search.string}" delimiter="," param="term" trim="true">
-            <sequential>
-                <antcall target="-extract-termentry">
-                    <param name="term" value="@{term}"/>
-                </antcall>
-            </sequential>
-        </for>
-        <for if:set="isAll" list="${search.string}" delimiter="," param="term" trim="true">
-            <sequential>
-                <antcall target="-extract-txt">
-                    <param name="term" value="@{term}"/>
-                </antcall>
-                <antcall target="-extract-csv">
-                    <param name="term" value="@{term}"/>
-                </antcall>
-                <antcall target="-extract-termentry">
+                <antcall target="-extract-term">
                     <param name="term" value="@{term}"/>
                 </antcall>
             </sequential>
         </for>
     </target>
     
-    <target name="-extract-txt">
-        <echo>Extracting term "${term}" as text</echo>
+    <target name="-extract-term">
+        <echo>Extracting term "${term}"</echo>
         <echo file="${tmx.xliff.dir}${file.separator}dummy-input.xml" append="false" force="true">&lt;dummy/></echo>
         <xslt 
-            style="../xsl/termharvester/termharvester-txt.xsl"
+            style="../xsl/termharvester/termharvester.xsl"
             in="${tmx.xliff.dir}${file.separator}dummy-input.xml"
             out="${tmx.xliff.dir}${file.separator}${term}.txt"
             failonerror="true"
@@ -166,7 +126,6 @@
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>
             <classpath refid="saxon"/>
             <param name="term" expression="${term}"/>
-            <!--<param name="xliff-directory" expression="${xliff-tmx.url.no-file}"/>-->
             <param name="tmx.xliff.dir" expression="${tmx.xliff.dir}"/>
             <param name="source.language" expression="${source.language}"/>
             <param name="debugging.mode" expression="${debugging.mode}"/>
@@ -175,61 +134,4 @@
         <delete file="${tmx.xliff.dir}${file.separator}dummy-input.xml" failonerror="false" quiet="true" verbose="false"/>
     </target>
 
-    <target name="-extract-csv">
-        <echo>Extracting term "${term}" as CSV</echo>
-        <!--<propertyregex input="${xliff-tmx.url}" regexp="file:\/" replace="" property="tmx.xliff.dir.no.protocol"/>
-        <echo>output = "${jung.terminology.temp.dir}${file.separator}dummy.xml"</echo>-->
-        <echo file="${tmx.xliff.dir}${file.separator}dummy-input.xml" append="false" force="true">&lt;dummy/></echo>
-        <xslt 
-            style="../xsl/termharvester/termharvester-csv.xsl"
-            in="${tmx.xliff.dir}${file.separator}dummy-input.xml"
-            out="${tmx.xliff.dir}${file.separator}${term}.csv"
-            failonerror="true"
-            failontransformationerror="true">
-            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-            <classpath refid="saxon"/>
-            <param name="term" expression="${term}"/>
-            <param name="tmx.xliff.dir" expression="${tmx.xliff.dir}"/>
-            <!--<param name="xliff-directory" expression="${xliff-tmx.url.no-file}"/>-->
-            <param name="source.language" expression="${source.language}"/>
-            <param name="debugging.mode" expression="${debugging.mode}"/>
-            <param name="output.type" expression="${output.type}"/>
-        </xslt>
-        <condition property="output.file.available">
-            <available file="${output.file}"/>
-        </condition>
-        <move unless:set="output.file.available" file="${output.file}.temp" tofile="${output.file}" verbose="true"/>
-        <loadfile if:set="output.file.available" srcfile="${output.file}.temp" property="file"/>
-        <echo if:set="output.file.available" file="${output.file}" message="${file}" append="true"/>
-        <delete file="${output.file}.temp"/>
-    </target>
-
-    <target name="-extract-termentry">
-        <echo>Extracting term "${term}" as termentry topic</echo>
-        <propertyregex input="${xliff-tmx.url}" regexp="file:\/" replace="" property="tmx.xliff.dir.no.protocol"/>
-        <echo>output = "${jung.terminology.temp.dir}${file.separator}dummy.xml"</echo>
-        <xslt 
-            style="../xsl/termharvester/termharvester-termentry.xsl"
-            in="${tmx.xliff.dir.no.protocol}"
-            out="${output.file}.temp"
-            failonerror="true"
-            failontransformationerror="true">
-            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-            <classpath refid="saxon"/>
-            <param name="term" expression="${term}"/>
-            <param name="directory" expression="${xliff-tmx.url.no-file}"/>
-            <param name="source.language" expression="${source.language}"/>
-            <param name="debugging.mode" expression="${debugging.mode}"/>
-            <param name="output.type" expression="${output.type}"/>
-            <param name="output.directory" expression="${jung.terminology.temp.dir}"/>
-        </xslt>
-        <condition property="output.file.available">
-            <available file="${output.file}"/>
-        </condition>
-        <move unless:set="output.file.available" file="${output.file}.temp" tofile="${output.file}" verbose="true"/>
-        <loadfile if:set="output.file.available" srcfile="${output.file}.temp" property="file"/>
-        <echo if:set="output.file.available" file="${output.file}" message="${file}" append="true"/>
-        <delete file="${output.file}.temp"/>
-    </target>
-  
 </project>
