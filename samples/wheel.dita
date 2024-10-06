@@ -12,10 +12,10 @@
  <termBody>
   <partOfSpeech/>
   <fullForm usage="preferred" language="en-GB">
-   <termVariant>wheel</termVariant>
+   <termVariant xml:lang="en-GB">wheel</termVariant>
   </fullForm>
   <fullForm usage="preferred" language="de-DE" id="fullForm_h35_rvk_tbb">
-   <termVariant>Rad</termVariant>
+   <termVariant xml:lang="de-DE">Rad</termVariant>
   </fullForm>
  </termBody>
 </termentry>
