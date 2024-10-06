@@ -9,7 +9,7 @@
     <xsl:function name="sj:language-code" as="xs:string">
         <xsl:param name="language-code" as="xs:string"/>
         <xsl:sequence select="
-            if ($language-code = 'ar-AE') then 'AR-AE'
+            if      ($language-code = 'ar-AE') then 'AR-AE'
             else if ($language-code = 'ar-EG') then 'AR-EG'
             else if ($language-code = 'bg-BG') then 'BG-BG'
             else if ($language-code = 'cs-CZ') then 'CS-CZ'

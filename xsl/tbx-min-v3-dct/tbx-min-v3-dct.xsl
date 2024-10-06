@@ -41,15 +41,15 @@
 
     <xsl:template match="/">
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch</xsl:attribute>
-            <xsl:attribute name="type">application/xml</xsl:attribute>
-            <xsl:attribute name="schematypens">http://purl.oclc.org/dsdl/schematron</xsl:attribute>
+            <xsl:attribute name="href" select="'https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCA/TBX-Min_DCA.sch'"/>
+            <xsl:attribute name="type" select="'application/xml'"/>
+            <xsl:attribute name="schematypens" select="'http://purl.oclc.org/dsdl/schematron'"/>
         </xsl:processing-instruction>
         <xsl:value-of select="$newline"/>
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX_Core_RNG/master/TBXcoreStructV03.rng</xsl:attribute>
-            <xsl:attribute name="type">application/xml</xsl:attribute>
-            <xsl:attribute name="schematypens">http://relaxng.org/ns/structure/1.0</xsl:attribute>
+            <xsl:attribute name="href" select="'https://raw.githubusercontent.com/LTAC-Global/TBX_Core_RNG/master/TBXcoreStructV03.rng'"/>
+            <xsl:attribute name="type" select="'application/xml'"/>
+            <xsl:attribute name="schematypens" select="'http://relaxng.org/ns/structure/1.0'"/>
         </xsl:processing-instruction>
         <xsl:value-of select="$newline"/>
         <tbx type="TBX-Min" style="dct" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2" xmlns:min="http://www.tbxinfo.net/ns/min">

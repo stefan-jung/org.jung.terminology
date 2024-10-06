@@ -91,29 +91,16 @@
         <xsl:variable name="sqfTitle">
             <xsl:choose>
                 <xsl:when test="self::*[contains(@class, ' termentry/fullForm ')]">
-                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedTerm')"/>
-                    <xsl:text>: '</xsl:text>
-                    <xsl:value-of select="$preferredTerm"/>
-                    <xsl:text>'</xsl:text>
+                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedTerm') || ': ''' || $preferredTerm || ''''"/>
                 </xsl:when>
                 <xsl:when test="self::*[contains(@class, ' termentry/abbreviation ')]">
-                    <xsl:value-of
-                        select="sj:getTermCheckerString($language, 'ReplaceWithAllowedAbbreviation')"/>
-                    <xsl:text>: '</xsl:text>
-                    <xsl:value-of select="$preferredTerm"/>
-                    <xsl:text>'</xsl:text>
+                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedAbbreviation') || ': ''' || $preferredTerm || ''''"/>
                 </xsl:when>
                 <xsl:when test="self::*[contains(@class, ' termentry/acronym ')]">
-                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedAcronym')"/>
-                    <xsl:text>: '</xsl:text>
-                    <xsl:value-of select="$preferredTerm"/>
-                    <xsl:text>'</xsl:text>
+                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedAcronym') || ': ''' || $preferredTerm || ''''"/>
                 </xsl:when>
               <xsl:when test="self::*[contains(@class, ' termentry/verb ')]">
-                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedVerb')"/>
-                    <xsl:text>: '</xsl:text>
-                    <xsl:value-of select="$preferredTerm"/>
-                    <xsl:text>'</xsl:text>
+                    <xsl:value-of select="sj:getTermCheckerString($language, 'ReplaceWithAllowedVerb') || ': ''' || $preferredTerm || ''''"/>
                 </xsl:when>
             </xsl:choose>
         </xsl:variable>
@@ -138,12 +125,8 @@
             
             <!-- Lowercased -->
             <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex">
-                    <xsl:text>(\b(</xsl:text><xsl:value-of select="$notRecommendedTermNormalized"/><xsl:text>)\b)</xsl:text>
-                </xsl:attribute>
-                <xsl:attribute name="select">
-                    <xsl:text>'</xsl:text><xsl:value-of select="$preferredTerm"/><xsl:text>'</xsl:text>
-                </xsl:attribute>
+                <xsl:attribute name="regex" select="'(\b(' || $notRecommendedTermNormalized || ')\b)'"/>
+                <xsl:attribute name="select" select="'''' || $preferredTerm || ''''"/>
             </xsl:element>
             
             <!-- Uppercased -->            
@@ -152,12 +135,8 @@
                 <xsl:variable name="uppercasedPreferredTerm" select="concat(upper-case(substring($preferredTerm,1,1)), substring($preferredTerm, 2), ' '[not(last())])"/>
                 
                 <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex">
-                        <xsl:text>(\b(</xsl:text><xsl:value-of select="$uppercasedNotRecommendedTerm"/><xsl:text>)\b)</xsl:text>
-                    </xsl:attribute>
-                    <xsl:attribute name="select">
-                        <xsl:text>'</xsl:text><xsl:value-of select="$uppercasedPreferredTerm"/><xsl:text>'</xsl:text>
-                    </xsl:attribute>
+                    <xsl:attribute name="regex" select="'(\b(' || $uppercasedNotRecommendedTerm || ')\b)'"/>
+                    <xsl:attribute name="select" select="'''' || $uppercasedPreferredTerm || ''''"/>
                 </xsl:element>
             </xsl:if>
             

@@ -25,14 +25,14 @@
     <!-- Match the root node of the DITA Map and create a Schematron root node -->
     <xsl:template match="/">
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic_DCT.sch</xsl:attribute>
-            <xsl:attribute name="type">application/xml</xsl:attribute>
-            <xsl:attribute name="schematypens">http://purl.oclc.org/dsdl/schematron</xsl:attribute>
+            <xsl:attribute name="href" select="'https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic_DCT.sch'"/>
+            <xsl:attribute name="type" select="'application/xml'"/>
+            <xsl:attribute name="schematypens" select="'http://purl.oclc.org/dsdl/schematron'"/>
         </xsl:processing-instruction>
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic.nvdl</xsl:attribute>
-            <xsl:attribute name="type">application/xml</xsl:attribute>
-            <xsl:attribute name="schematypens">http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0</xsl:attribute>
+            <xsl:attribute name="href" select="'https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic.nvdl'"/>
+            <xsl:attribute name="type" select="'application/xml'"/>
+            <xsl:attribute name="schematypens" select="'http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0'"/>
         </xsl:processing-instruction>
         <tbx style="dct" type="TBX-Basic" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2" xmlns:min="http://www.tbxinfo.net/ns/min" xmlns:basic="http://www.tbxinfo.net/ns/basic">
             <tbxHeader>

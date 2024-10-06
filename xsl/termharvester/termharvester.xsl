@@ -200,12 +200,13 @@
         
         <xsl:if test="$output.type = 'all' or $output.type = 'termentry'">
             <xsl:result-document encoding="UTF-8" href="{$baseURINoFile || '/' || sj:concept-id($term) || '.dita'}" method="xml" indent="yes" exclude-result-prefixes="#all">
-                
                 <xsl:processing-instruction name="xml-model">
-                    <xsl:text>href="urn:jung:dita:rng:termentry.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:text>
+                    <xsl:attribute name="href" select="'urn:jung:dita:rng:termentry.rng'"/>
+                    <xsl:attribute name="schematypens" select="'http://relaxng.org/ns/structure/1.0'"/>
                 </xsl:processing-instruction>
                 <xsl:processing-instruction name="xml-model">
-                    <xsl:text>href="urn:jung:dita:rng:termentry.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:text>
+                    <xsl:attribute name="href" select="'urn:jung:dita:rng:termentry.rng'"/>
+                    <xsl:attribute name="schematypens" select="'http://purl.oclc.org/dsdl/schematron'"/>
                 </xsl:processing-instruction>
                 <termentry id="{sj:concept-id($term)}">
                     <title><xsl:value-of select="sj:capitalize-first($term)"/></title>

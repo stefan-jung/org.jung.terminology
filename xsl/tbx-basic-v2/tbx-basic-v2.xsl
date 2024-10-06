@@ -13,9 +13,9 @@
 
     <xsl:template match="/">
         <xsl:processing-instruction name="xml-model">
-            <xsl:attribute name="href">https://raw.githubusercontent.com/byutrg/TBX-Spec/master/TBX-Basic/Validation/TBXBasicRNGV02.rng</xsl:attribute>
-            <xsl:attribute name="type">application/xml</xsl:attribute>
-            <xsl:attribute name="schematypens">http://relaxng.org/ns/structure/1.0</xsl:attribute>
+            <xsl:attribute name="href" select="'https://raw.githubusercontent.com/byutrg/TBX-Spec/master/TBX-Basic/Validation/TBXBasicRNGV02.rng'"/>
+            <xsl:attribute name="type" select="'application/xml'"/>
+            <xsl:attribute name="schematypens" select="'http://relaxng.org/ns/structure/1.0'"/>
         </xsl:processing-instruction>
         <martif type="TBX-Basic" xml:lang="en-GB">
             <martifHeader>

@@ -34,7 +34,6 @@
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
             <xsl:variable name="firstRecommendedTerm" select="normalize-space((preceding-sibling::* | following-sibling::*))"/>
-            <!--<xsl:variable name="sqfGroupName" select="sj:generateId($notRecommendedTerm, $termentryId, $termLanguageRegionCode)"/>-->
             <xsl:variable name="sqfGroupName" select="$termentryId || '-' || translate($notRecommendedTerm, ' ', '_') || '-' || generate-id()"/>
             
             <!-- 

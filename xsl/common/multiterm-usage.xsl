@@ -12,7 +12,7 @@
     <xsl:function name="sj:usage" as="xs:string">
         <xsl:param name="usage" as="xs:string"/>
         <xsl:sequence select="
-            if ($usage = 'admitted') then 'allowed'
+            if      ($usage = 'admitted') then 'allowed'
             else if ($usage = 'notRecommended') then 'not recommended'
             else if ($usage = 'obsolete') then 'obsolete'
             else if ($usage = 'preferred') then 'recommended'
