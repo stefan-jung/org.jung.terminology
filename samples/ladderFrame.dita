@@ -13,17 +13,15 @@
     <fig>
       <title>Bare ladder frame</title>
       <image
-        href="https://upload.wikimedia.org/wikipedia/commons/2/23/Auromobile_bare_chassis_frame.jpg" scope="external"
+        href="https://upload.wikimedia.org/wikipedia/commons/4/46/Developed_ladder_chassis_with_diagonal_cross-bracing_and_lightening_holes_%28Autocar_Handbook%2C_13th_ed%2C_1935%29.jpg" scope="external"
         width="300px">
-        <alt>By English: CZmarlin — Christopher Ziemnowicz, releases all rights but a photo credit
-          would be appreciated if this image is used anywhere other than Wikipedia. Please leave a
-          note at Wikipedia here. Thank you! (Own work) [CC BY-SA 3.0
-          (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</alt>
+        <alt> Developed ladder chassis with diagonal cross-bracing and lightening holes. Scan from
+          The Autocar (Thirteenth edition, circa 1935) Autocar Handbook, London: Iliffe &amp; Sons. </alt>
       </image>
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>ladder frame</termVariant>
+      <termVariant xml:lang="en-GB">ladder frame</termVariant>
     </fullForm>
  </termBody>
   <relations>

@@ -23,10 +23,13 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>axle</termVariant>
+      <termVariant xml:lang="en-GB">axle</termVariant>
+      <termSource>
+        <sourceName/>
+      </termSource>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Achse</termVariant>
+      <termVariant xml:lang="de-DE">Achse</termVariant>
     </fullForm>
   </termBody>
   <relations>

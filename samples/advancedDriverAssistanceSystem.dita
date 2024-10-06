@@ -15,13 +15,13 @@
   <termBody>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>advanced driver assistance systems</termVariant>
+      <termVariant xml:lang="en-GB">advanced driver assistance systems</termVariant>
     </fullForm>
     <acronym language="en-GB" usage="preferred">
-      <termVariant>ADAS</termVariant>
+      <termVariant xml:lang="en-GB">ADAS</termVariant>
     </acronym>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Fahrerassistenzsystem</termVariant>
+      <termVariant xml:lang="de-DE">Fahrerassistenzsystem</termVariant>
     </fullForm>
   </termBody>
 </termentry>

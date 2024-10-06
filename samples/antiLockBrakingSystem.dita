@@ -20,19 +20,19 @@
     </agreedWith>
     <partOfSpeech value="noun"/>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>anti-lock braking system</termVariant>
+      <termVariant xml:lang="en-GB">anti-lock braking system</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>anti-skid braking system</termVariant>
+      <termVariant xml:lang="en-GB">anti-skid braking system</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Antiblockiersystem</termVariant>
+      <termVariant xml:lang="de-DE">Antiblockiersystem</termVariant>
     </fullForm>
     <acronym language="en-GB" usage="preferred">
-      <termVariant>ABS</termVariant>
+      <termVariant xml:lang="en-GB">ABS</termVariant>
     </acronym>
     <acronym language="de-DE" usage="preferred">
-      <termVariant>ABS</termVariant>
+      <termVariant xml:lang="de-DE">ABS</termVariant>
     </acronym>
   </termBody>
   <relations>

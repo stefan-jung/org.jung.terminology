@@ -22,13 +22,13 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>engine </termVariant>
+      <termVariant xml:lang="en-GB">engine </termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>motor</termVariant>
+      <termVariant xml:lang="en-GB">motor</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Motor</termVariant>
+      <termVariant xml:lang="de-DE">Motor</termVariant>
     </fullForm>
   </termBody>
   <relations>

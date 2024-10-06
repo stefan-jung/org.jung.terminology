@@ -19,19 +19,19 @@
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>motorhome</termVariant>
+      <termVariant xml:lang="en-GB">motorhome</termVariant>
     </fullForm>
     <abbreviation language="en-GB" usage="preferred">
-      <termVariant>camper</termVariant>
+      <termVariant xml:lang="en-GB">camper</termVariant>
     </abbreviation>
     <fullForm language="en-US" usage="preferred">
-      <termVariant>recreational vehicle</termVariant>
+      <termVariant xml:lang="en-US">recreational vehicle</termVariant>
     </fullForm>
     <acronym language="en-US" usage="preferred">
-      <termVariant>RV</termVariant>
+      <termVariant xml:lang="en-US">RV</termVariant>
     </acronym>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Wohnwagen</termVariant>
+      <termVariant xml:lang="de-DE">Wohnwagen</termVariant>
     </fullForm>
  </termBody>
   <relations>

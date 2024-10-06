@@ -21,7 +21,7 @@
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>gas engine</termVariant>
+      <termVariant xml:lang="en-GB">gas engine</termVariant>
     </fullForm>
  </termBody>
   <relations>

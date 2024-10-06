@@ -23,16 +23,16 @@
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>lighting</termVariant>
+      <termVariant xml:lang="en-GB">lighting</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>lightning system</termVariant>
+      <termVariant xml:lang="en-GB">lightning system</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Beleuchtung</termVariant>
+      <termVariant xml:lang="de-DE">Beleuchtung</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Beleuchtungssystem</termVariant>
+      <termVariant xml:lang="de-DE">Beleuchtungssystem</termVariant>
     </fullForm>
  </termBody>
 </termentry>

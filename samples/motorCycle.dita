@@ -22,13 +22,13 @@
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>motorcycle</termVariant>
+      <termVariant xml:lang="en-GB">motorcycle</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>motor-bike</termVariant>
+      <termVariant xml:lang="en-GB">motor-bike</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>motorbike</termVariant>
+      <termVariant xml:lang="en-GB">motorbike</termVariant>
     </fullForm>
  </termBody>
 </termentry>

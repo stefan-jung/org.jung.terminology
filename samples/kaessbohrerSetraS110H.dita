@@ -15,10 +15,10 @@
  <termBody>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>Golden Eagle</termVariant>
+      <termVariant xml:lang="en-GB">Golden Eagle</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>Silver Eagle</termVariant>
+      <termVariant xml:lang="en-GB">Silver Eagle</termVariant>
     </fullForm>
  </termBody>
   <relations>

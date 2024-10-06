@@ -23,16 +23,16 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>internal combustion engine</termVariant>
+      <termVariant xml:lang="en-GB">internal combustion engine</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
-      <termVariant>motor</termVariant>
+      <termVariant xml:lang="en-GB">motor</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Verbrennungsmotor</termVariant>
+      <termVariant xml:lang="de-DE">Verbrennungsmotor</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Motor</termVariant>
+      <termVariant xml:lang="de-DE">Motor</termVariant>
     </fullForm>
   </termBody>
   <relations>

@@ -14,31 +14,31 @@
   <termBody>
     <partOfSpeech value="noun"/>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>electronic stability control</termVariant>
+      <termVariant xml:lang="en-GB">electronic stability control</termVariant>
     </fullForm>
     <acronym language="en-GB" usage="preferred">
-      <termVariant>ESC</termVariant>
+      <termVariant xml:lang="en-GB">ESC</termVariant>
     </acronym>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>electronic stability program</termVariant>
+      <termVariant xml:lang="en-GB">electronic stability program</termVariant>
     </fullForm>
     <acronym language="en-GB" usage="notRecommended">
-      <termVariant>ESP</termVariant>
+      <termVariant xml:lang="en-GB">ESP</termVariant>
     </acronym>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>dynamic stability control</termVariant>
+      <termVariant xml:lang="en-GB">dynamic stability control</termVariant>
     </fullForm>
     <acronym language="en-GB" usage="notRecommended">
-      <termVariant>DSC</termVariant>
+      <termVariant xml:lang="en-GB">DSC</termVariant>
     </acronym>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>elektronische Stabilitätskontrolle</termVariant>
+      <termVariant xml:lang="de-DE">elektronische Stabilitätskontrolle</termVariant>
     </fullForm>
     <acronym language="de-DE" usage="preferred">
-      <termVariant>ESP</termVariant>
+      <termVariant xml:lang="de-DE">ESP</termVariant>
     </acronym>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Fahrdynamikregelung</termVariant>
+      <termVariant xml:lang="de-DE">Fahrdynamikregelung</termVariant>
     </fullForm>
   </termBody>
   <relations>

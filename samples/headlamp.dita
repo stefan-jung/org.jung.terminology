@@ -23,7 +23,7 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>headlamp</termVariant>
+      <termVariant xml:lang="en-GB">headlamp</termVariant>
     </fullForm>
   </termBody>
   <relations>

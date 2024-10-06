@@ -22,14 +22,14 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>exhaust system</termVariant>
+      <termVariant xml:lang="en-GB">exhaust system</termVariant>
       <termSource>
         <sourceReference href="http://www.my-cardictionary.com/exhaust-system.html" format="html"
           scope="external">my-cardictionary.com</sourceReference>
       </termSource>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Abgasanlage</termVariant>
+      <termVariant xml:lang="de-DE">Abgasanlage</termVariant>
       <termSource>
         <sourceReference href="http://www.mein-autolexikon.de/abgasanlage.html" format="html"
           scope="external">mein-autolexikon.de</sourceReference>
