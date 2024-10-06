@@ -16,13 +16,13 @@
  <termBody>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-    <termVariant>motor vehicle</termVariant>
+    <termVariant xml:lang="en-GB">motor vehicle</termVariant>
   </fullForm>
   <fullForm language="de-DE" usage="preferred">
-    <termVariant>Kraftfahrzeug</termVariant>
+    <termVariant xml:lang="de-DE">Kraftfahrzeug</termVariant>
   </fullForm>
   <fullForm language="de-DE" usage="notRecommended">
-    <termVariant>Motorfahrzeug</termVariant>
+    <termVariant xml:lang="de-DE">Motorfahrzeug</termVariant>
   </fullForm>
  </termBody>
   <relations>

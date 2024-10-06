@@ -24,10 +24,10 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>turn signal</termVariant>
+      <termVariant xml:lang="en-GB">turn signal</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Blinker</termVariant>
+      <termVariant xml:lang="de-DE">Blinker</termVariant>
     </fullForm>
   </termBody>
   <relations>

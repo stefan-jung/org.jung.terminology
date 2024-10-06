@@ -23,26 +23,26 @@
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>motor vehicle chassis</termVariant>
+      <termVariant xml:lang="en-GB">motor vehicle chassis</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
-      <termVariant>chassis</termVariant>
+      <termVariant xml:lang="en-GB">chassis</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>vehicle frame</termVariant>
+      <termVariant xml:lang="en-GB">vehicle frame</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred"
       class="- topic/section concept/section termentry/termNotation termentry/fullForm ">
-      <termVariant>Fahrgestell</termVariant>
+      <termVariant xml:lang="de-DE">Fahrgestell</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="admitted">
-      <termVariant>Karosserie</termVariant>
+      <termVariant xml:lang="de-DE">Karosserie</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Rahmen</termVariant>
+      <termVariant xml:lang="de-DE">Rahmen</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Fahrwerk</termVariant>
+      <termVariant xml:lang="de-DE">Fahrwerk</termVariant>
     </fullForm>
  </termBody>
   <relations>

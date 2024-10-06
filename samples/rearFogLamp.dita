@@ -23,10 +23,10 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>rear fog lamp</termVariant>
+      <termVariant xml:lang="en-GB">rear fog lamp</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Nebelschlussleuchte</termVariant>
+      <termVariant xml:lang="de-DE">Nebelschlussleuchte</termVariant>
     </fullForm>
   </termBody>
   <relations>

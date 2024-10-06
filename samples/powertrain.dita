@@ -24,16 +24,16 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>powertrain</termVariant>
+      <termVariant xml:lang="en-GB">powertrain</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>drivetrain</termVariant>
+      <termVariant xml:lang="en-GB">drivetrain</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Antriebsstrang</termVariant>
+      <termVariant xml:lang="de-DE">Antriebsstrang</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Fahrwerk</termVariant>
+      <termVariant xml:lang="de-DE">Fahrwerk</termVariant>
     </fullForm>
   </termBody>
 </termentry>

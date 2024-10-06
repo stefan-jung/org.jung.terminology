@@ -25,10 +25,10 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>reversing lamp</termVariant>
+      <termVariant xml:lang="en-GB">reversing lamp</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Rückfahrlicht</termVariant>
+      <termVariant xml:lang="de-DE">Rückfahrlicht</termVariant>
     </fullForm>
   </termBody>
   <relations>

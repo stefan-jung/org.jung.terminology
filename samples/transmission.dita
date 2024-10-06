@@ -22,10 +22,10 @@
     </fig>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>transmission</termVariant>
+      <termVariant xml:lang="en-GB">transmission</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Getriebe</termVariant>
+      <termVariant xml:lang="de-DE">Getriebe</termVariant>
     </fullForm>
   </termBody>
   <relations>

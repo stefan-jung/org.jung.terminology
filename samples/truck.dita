@@ -21,19 +21,19 @@
     </fig>
     <partOfSpeech/>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Lastkraftwagen</termVariant>
+      <termVariant xml:lang="de-DE">Lastkraftwagen</termVariant>
     </fullForm>
     <acronym language="de-DE" usage="preferred">
-      <termVariant>LKW</termVariant>
+      <termVariant xml:lang="de-DE">LKW</termVariant>
     </acronym>
     <fullForm language="en-US" usage="preferred">
-      <termVariant>truck</termVariant>
+      <termVariant xml:lang="en-US">truck</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>lorry</termVariant>
+      <termVariant xml:lang="en-GB">lorry</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>truck</termVariant>
+      <termVariant xml:lang="en-GB">truck</termVariant>
     </fullForm>
   </termBody>
   <relations>

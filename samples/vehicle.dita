@@ -12,13 +12,13 @@
   <termBody>
     <partOfSpeech value="noun"/>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>vehicle</termVariant>
+      <termVariant xml:lang="en-GB">vehicle</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>car</termVariant>
+      <termVariant xml:lang="de-DE">car</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Fahrzeug</termVariant>
+      <termVariant xml:lang="de-DE">Fahrzeug</termVariant>
     </fullForm>
   </termBody>
   <relations>

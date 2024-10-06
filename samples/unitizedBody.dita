@@ -15,16 +15,16 @@
  <termBody>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>unitized body</termVariant>
+      <termVariant xml:lang="en-GB">unitized body</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
-      <termVariant>unibody</termVariant>
+      <termVariant xml:lang="en-GB">unibody</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Untergestell</termVariant>
+      <termVariant xml:lang="de-DE">Untergestell</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Fahrgestell</termVariant>
+      <termVariant xml:lang="de-DE">Fahrgestell</termVariant>
     </fullForm>
  </termBody>
   <relations>

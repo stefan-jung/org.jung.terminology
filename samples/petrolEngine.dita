@@ -23,19 +23,19 @@
     </fig>
   <partOfSpeech value="noun"/>
   <fullForm usage="preferred" language="en-GB">
-      <termVariant>petrol engine</termVariant>
+      <termVariant xml:lang="en-GB">petrol engine</termVariant>
     </fullForm>
     <abbreviation language="de-DE" usage="preferred">
-      <termVariant>Ottomotor</termVariant>
+      <termVariant xml:lang="de-DE">Ottomotor</termVariant>
     </abbreviation>
     <fullForm language="en-GB" usage="notRecommended">
-      <termVariant>Otto engine</termVariant>
+      <termVariant xml:lang="en-GB">Otto engine</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="admitted">
-      <termVariant>motor</termVariant>
+      <termVariant xml:lang="en-GB">motor</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>Motor</termVariant>
+      <termVariant xml:lang="de-DE">Motor</termVariant>
     </fullForm>
  </termBody>
   <relations>
