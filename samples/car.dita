@@ -22,13 +22,13 @@
   </domains>
   <partOfSpeech/>
   <fullForm usage="preferred" language="en-GB">
-   <termVariant>car</termVariant>
+   <termVariant xml:lang="en-GB">car</termVariant>
   </fullForm>
   <fullForm usage="notRecommended" language="de-DE">
-   <termVariant>Automobil</termVariant>
+   <termVariant xml:lang="de-DE">Automobil</termVariant>
   </fullForm>
   <abbreviation usage="preferred" language="de-DE">
-   <termVariant>Auto</termVariant>
+   <termVariant xml:lang="de-DE">Auto</termVariant>
   </abbreviation>
  </termBody>
  <relations>
