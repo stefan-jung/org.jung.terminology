@@ -23,17 +23,18 @@
         </xsl:apply-templates>
     </xsl:template>
     
-    <xsl:template match="xliff:source[normalize-space(.) = normalize-space($term)]" mode="xliff-csv">
+    <xsl:template match="xliff:source[lower-case(normalize-space(.)) = lower-case(normalize-space($term))]" mode="xliff-csv">
         <xsl:param name="xliff" as="document-node()"/>
         <xsl:param name="file" as="xs:string"/>
         
-        <xsl:variable name="target" select="normalize-space(following-sibling::xliff:target[1])" as="xs:string"/>
         <xsl:variable name="trgLang" select="/*[1]/@trgLang"/>
-        
-        <xsl:if test="$debugging.mode = 'true'">
-            <xsl:message select="$trgLang || $tab || $target"/>
-        </xsl:if>
-        <!--<xsl:sequence select="$result || ' (' || $file || ')&#13;'"/>-->
+        <xsl:variable name="target" as="xs:string" select="
+            if (contains($trgLang, 'de'))
+            then normalize-space(following-sibling::xliff:target[1])
+            else lower-case(normalize-space(following-sibling::xliff:target[1]))
+            "/>
+            
+        <xsl:message select="'[xliff-csv] ' || $trgLang || ' = ' || $target || ' (' || sj:remove-entity-from-filename($file) || ')'"/>
         <xsl:sequence select="$trgLang || $tab || $target || $tab || sj:remove-entity-from-filename($file) || '&#13;'"/>
     </xsl:template>
     

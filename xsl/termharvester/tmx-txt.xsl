@@ -21,20 +21,25 @@
         </xsl:apply-templates>
     </xsl:template>
     
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="tmx-txt">
+    <xsl:template match="seg[lower-case(normalize-space(.)) = lower-case(normalize-space($term))]" mode="tmx-txt">
         <xsl:param name="tmx" as="document-node()"/>
         <xsl:param name="file" as="xs:string"/>
+        
         <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
-        <xsl:variable name="results">
-            <xsl:for-each select="$tu[1]/tuv">
-                <xsl:if test="./@xml:lang != $source.language">
-                    <xsl:value-of select="./@xml:lang || ' = ' || ./seg/text() || ' (' || sj:remove-entity-from-filename($file) || ')' || '&#xa;'"/>
-                </xsl:if>
-            </xsl:for-each>
-        </xsl:variable>
-        <xsl:if test="$debugging.mode = 'true'">
-            <xsl:message select="'[DEBUG] ' || $results"/>
-        </xsl:if>
-        <xsl:sequence select="$results"/>
+        <xsl:variable name="filename" select="sj:remove-entity-from-filename($file)"/>
+        
+        <xsl:for-each select="$tu[1]/tuv">
+            <xsl:variable name="trgLang" select="./@xml:lang" as="xs:string"/>
+            <xsl:variable name="target" as="xs:string" select="
+                (: Nouns are capitalized only in German :)
+                if (contains($trgLang, 'de'))
+                then ./seg/text()
+                else lower-case(./seg/text())
+                "/>
+            <xsl:if test="$trgLang != $source.language">
+                <xsl:message select="'[tmx-txt] ' || $trgLang || ' = ' || $target || ' (' || $filename || ')'"/>
+                <xsl:sequence select="$trgLang || ' = ' || $target || ' (' || $filename || ')' || '&#xa;'"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>

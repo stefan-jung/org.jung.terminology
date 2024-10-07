@@ -3,8 +3,7 @@
     xmlns:sj="https://stefan-jung.org"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    exclude-result-prefixes="xs math">
+    exclude-result-prefixes="sj">
     
     <xsl:param name="debugging.mode" as="xs:string"/>
     <xsl:param name="file" as="xs:string"/>
@@ -24,23 +23,30 @@
         </xsl:apply-templates>
     </xsl:template>
     
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="tmx-termentry" expand-text="yes">
+    <xsl:template match="seg[lower-case(normalize-space(.)) = lower-case(normalize-space($term))]" mode="tmx-termentry" expand-text="yes">
         <xsl:param name="tmx" as="document-node()"/>
         <xsl:param name="file" as="xs:string"/>
+        
         <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
+        <xsl:variable name="filename" select="sj:remove-entity-from-filename($file)"/>
         
         <xsl:variable name="results">
             <xsl:for-each select="$tu[1]/tuv">
-                <xsl:if test="./@xml:lang != $source.language">
-                    <fullForm language="{./@xml:lang}" usage="preferred">
-                        <termVariant xml:lang="{./@xml:lang}"><xsl:value-of select="./seg/text()"/></termVariant>
+                <xsl:variable name="trgLang" select="./@xml:lang" as="xs:string"/>
+                <xsl:variable name="target" as="xs:string" select="
+                    (: Nouns are capitalized only in German :)
+                    if (contains($trgLang, 'de'))
+                    then ./seg/text()
+                    else lower-case(./seg/text())
+                    "/>
+                <xsl:if test="$trgLang != $source.language">
+                    <fullForm language="{$trgLang}" usage="preferred">
+                        <termVariant xml:lang="{$trgLang}"><xsl:value-of select="$target"/></termVariant>
                         <termSource>
-                            <sourceName><xsl:value-of select="sj:remove-entity-from-filename($file)"/></sourceName>
+                            <sourceName><xsl:value-of select="$filename"/></sourceName>
                         </termSource>
                     </fullForm>
-                    <xsl:if test="$debugging.mode = 'true'">
-                        <xsl:message select="'[DEBUG] ' || ./@xml:lang || ' = ' || ./seg/text()"/>
-                    </xsl:if>
+                    <xsl:message select="'[tmx-termentry] ' || $trgLang || ' = ' || $target || ' (' || $filename || ')'"/>
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>

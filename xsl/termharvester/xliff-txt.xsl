@@ -23,20 +23,16 @@
         </xsl:apply-templates>
     </xsl:template>
     
-    <xsl:template match="xliff:source[normalize-space(.) = normalize-space($term)]" mode="xliff-txt">
+    <xsl:template match="xliff:source[lower-case(normalize-space(.)) = lower-case(normalize-space($term))]" mode="xliff-txt">
         <xsl:param name="xliff" as="document-node()"/>
         <xsl:param name="file" as="xs:string"/>
         
+        <xsl:variable name="filename" select="sj:remove-entity-from-filename($file)"/>
         <xsl:variable name="target" select="normalize-space(following-sibling::xliff:target[1])" as="xs:string"/>
         <xsl:variable name="trgLang" select="/*[1]/@trgLang"/>
-        <xsl:variable name="result" select="$trgLang || ' = ' || $target"/>
         
-        <xsl:if test="$result != ''">
-            <xsl:if test="$debugging.mode = 'true'">
-                <xsl:message select="$result"/>
-            </xsl:if>
-            <xsl:sequence select="$result || ' (' || sj:remove-entity-from-filename($file) || ')&#13;'"/>
-        </xsl:if>
+        <xsl:message select="'[xliff-txt] ' || $trgLang || ' = ' || $target || ' (' || $filename || ')'"/>
+        <xsl:sequence select="$trgLang || ' = ' || $target || ' (' || $filename || ')&#13;'"/>
     </xsl:template>
     
 </xsl:stylesheet>

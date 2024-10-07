@@ -23,12 +23,25 @@
         </xsl:apply-templates>
     </xsl:template>
     
-    <xsl:template match="seg[normalize-space(.) = normalize-space($term)]" mode="tmx-csv">
+    <xsl:template match="seg[lower-case(normalize-space(.)) = lower-case(normalize-space($term))]" mode="tmx-csv">
         <xsl:param name="tmx" as="document-node()"/>
+        <xsl:param name="file" as="xs:string"/>
+        <xsl:variable name="filename" select="sj:remove-entity-from-filename($file)"/>
+        
         <xsl:variable name="tu" select="ancestor::tu[1]" as="node()"/>
         <xsl:for-each select="$tu[1]/tuv">
             <xsl:if test="./@xml:lang != $source.language">
-                <xsl:value-of select="./@xml:lang || $tab || ./seg/text() || $tab || sj:remove-entity-from-filename($file) || $LF"/>
+                
+                <xsl:variable name="trgLang" select="./@xml:lang" as="xs:string"/>
+                <xsl:variable name="target" as="xs:string" select="
+                    (: Nouns are capitalized only in German :)
+                    if (contains($trgLang, 'de'))
+                    then ./seg/text()
+                    else lower-case(./seg/text())
+                    "/>
+                
+                <xsl:sequence select="$trgLang || $tab || $target || $tab || $filename || $LF"/>
+                <xsl:message select="'[tmx-csv] ' || $trgLang || ' = ' || $target || ' (' || $filename || ')'"/>
             </xsl:if>
         </xsl:for-each>
     </xsl:template>
