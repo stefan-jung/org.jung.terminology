@@ -4,7 +4,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:2.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    exclude-result-prefixes="sj">
+    exclude-result-prefixes="sj xs">
     
     <xsl:param name="file" as="xs:string"/>
     <xsl:param name="term" as="xs:string"/>
