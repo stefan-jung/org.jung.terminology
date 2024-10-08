@@ -3,7 +3,7 @@
     xmlns:sj="https://stefan-jung.org"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="sj">
+    exclude-result-prefixes="sj xs">
     
     <xsl:param name="debugging.mode" as="xs:string"/>
     <xsl:param name="file" as="xs:string"/>
