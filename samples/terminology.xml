@@ -12,42 +12,31 @@
       <param name="webhelp.publishing.template" path="../publishing"/>
       <param name="webhelp.publishing.template.descriptor" value="termbrowser.opt"/>
       <param name="args.termstats" href="termstats.xml"/>
-      <param name="debugging.mode" value="true"/>
-      <param name="clean.temp" value="no"/>
     </publication>
   </deliverable>
   
   <deliverable name="Termchecker DITA" id="termchecker-dita">
     <context idref="terminology_context"/>
     <output href="./termchecker-dita"/>
-    <publication transtype="termchecker-dita">
-      <!--<param name="debugging.mode" value="true"/>
-      <param name="clean.temp" value="no"/>
-      <param name="dita.temp.dir" href="temp/termchecker-dita/"/>-->
-    </publication>
+    <publication transtype="termchecker-dita"/>
   </deliverable>
   
-  <deliverable name="Termchecker XLIFF" id="termchecker-xliff">
+  <!--<deliverable name="Termchecker XLIFF" id="termchecker-xliff">
     <context idref="terminology_context"/>
     <output href="./termchecker-xliff"/>
     <publication transtype="termchecker-xliff"/>
-  </deliverable>
+  </deliverable>-->
   
   <deliverable name="TBX Basic v2" id="tbx-basic-v2">
     <context idref="terminology_context"/>
     <output href="./tbx-basic-v2"/>
-    <publication transtype="tbx-basic-v2">
-      <param name="debugging.mode" value="true"/>
-      <param name="clean.temp" value="no"/>
-    </publication>
+    <publication transtype="tbx-basic-v2"/>
   </deliverable>
   
   <deliverable name="TBX Basic v3" id="tbx-basic-v3">
     <context idref="terminology_context"/>
     <output href="./tbx-basic-v3"/>
     <publication transtype="tbx-basic-v3">
-      <param name="debugging.mode" value="true"/>
-      <param name="clean.temp" value="no"/>
       <param name="main.language" value="en-GB"/>
     </publication>
   </deliverable>
@@ -73,17 +62,13 @@
   <deliverable name="Multiterm XML" id="multiterm-xml">
     <context idref="terminology_context"/>
     <output href="./multiterm"/>
-    <publication transtype="multiterm">
-      <param name="debugging.mode" value="true"/>
-    </publication>
+    <publication transtype="multiterm"/>
   </deliverable>
 
   <deliverable name="Multiterm XML Custom" id="multiterm-xml-custom">
     <context idref="terminology_context"/>
     <output href="./multiterm-custom"/>
-    <publication transtype="multiterm-custom">
-      <param name="debugging.mode" value="true"/>
-    </publication>
+    <publication transtype="multiterm-custom"/>
   </deliverable>
   
   <deliverable name="Oxygen Termchecker" id="oxygen-termchecker">
