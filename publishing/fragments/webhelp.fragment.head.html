@@ -1,33 +1,35 @@
-<!-- JQuery and JQuery UI -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
-    
-<!-- Bootstrap -->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"/>-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
-    
-<!-- flag-icon is used to render country flags in the terminology entry topics -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+<html>
+    <!-- JQuery and JQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
 
-<!-- vis.js is used to render the terminology semantic net -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.6/standalone/umd/vis-network.min.js"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet"/>
+    <!-- Bootstrap -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
 
-<!--
-    chart.js
+    <!-- flag-icon is used to render country flags in the terminology entry topics -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+
+    <!-- vis.js is used to render the terminology semantic net -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.6/standalone/umd/vis-network.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet"/>
+        
+    <!--
+        chart.js
+
+        chart.js is used to render the terminology statistics.
     
-    chart.js is used to render the terminology statistics.
+        The Oxygen Webhelp plugin is using require.js for asynchronous loading of JavaScript libraries.
+        The main benefit is, that the page is loaded and rendered while the JavaScript libraries are loaded.
+        The "normal way" is, that all CSS/JS libraries are loaded BEFORE the HTML content is rendered.
+        This slows down the rendering of the website.
     
-    The Oxygen Webhelp plugin is using require.js for asynchronous loading of JavaScript libraries.
-    The main benefit is, that the page is loaded and rendered while the JavaScript libraries are loaded.
-    The "normal way" is, that all CSS/JS libraries are loaded BEFORE the HTML content is rendered.
-    This slows down the rendering of the website.
-    
-    require.js can load only AMD modules, so be sure to require one of the UMD builds.
-    In order to use the time scale, you need to make sure one of the available date adapters and 
-    corresponding date library are fully loaded after requiring chart.js.
--->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"/>
+        require.js can load only AMD modules, so be sure to require one of the UMD builds.
+        In order to use the time scale, you need to make sure one of the available date adapters and 
+        corresponding date library are fully loaded after requiring chart.js.
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"/>
+</html>
