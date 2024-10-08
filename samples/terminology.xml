@@ -20,12 +20,11 @@
     <output href="./termchecker-dita"/>
     <publication transtype="termchecker-dita"/>
   </deliverable>
-  
-  <!--<deliverable name="Termchecker XLIFF" id="termchecker-xliff">
+  <deliverable name="Termchecker XLIFF" id="termchecker-xliff">
     <context idref="terminology_context"/>
     <output href="./termchecker-xliff"/>
     <publication transtype="termchecker-xliff"/>
-  </deliverable>-->
+  </deliverable>
   
   <deliverable name="TBX Basic v2" id="tbx-basic-v2">
     <context idref="terminology_context"/>

@@ -224,7 +224,7 @@
             });
             
             function getTermID(str) {
-                return "trm_" + str.replace(/\s+/g, '');
+                return str.replace(/\s+/g, '');
             }
             
             function termFocus(term) {
