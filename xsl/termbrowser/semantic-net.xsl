@@ -223,10 +223,12 @@
                 $( "#search-input" ).autocomplete({source: data});
             });
             
+            <xsl:value-of disable-output-escaping="yes" select="'
             function getTermID(term) {
                 var result = terms.find(item => item.term === term);
                 return result ? result.key : null;
             }
+            '"/>
             
             function termFocus(term) {
                 var t = getTermID(term);
