@@ -110,6 +110,9 @@ pre.screen {
 .frmBody, .shortdesc, #header #tocMenu, #header .navheader_parent_path, #header .link {
   padding-bottom: 0px;
 }
+.row.breadcrumb-sticky {
+    position: relative;
+}
 .title.sectiontitle {
   padding-bottom: 3px;
   padding-top: 3px;
