@@ -223,8 +223,9 @@
                 $( "#search-input" ).autocomplete({source: data});
             });
             
-            function getTermID(str) {
-                return str.replace(/\s+/g, '');
+            function getTermID(term) {
+                var result = terms.find(item => item.term === term);
+                return result ? result.key : null;
             }
             
             function termFocus(term) {
