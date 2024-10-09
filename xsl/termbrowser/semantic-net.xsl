@@ -11,7 +11,11 @@
     <!-- It seems this conflicts with a variable which has the same name in the Oxygen webhelp plugin. -->
     <!--<xsl:param name="debugging.mode" as="xs:string"/>-->
     
-    <xsl:output method="xml" encoding="UTF-8" indent="true"/>
+    <xsl:output method="xml" encoding="UTF-8" indent="true" use-character-maps="special-chars"/>
+    
+    <xsl:character-map name="special-chars">
+        <xsl:output-character character=">" string=">"/>
+    </xsl:character-map>
     
     <!-- Edges -->
     <!-- NOTE: Color codes are NOT suffixed with a semicolon. Write '#96c3ff', not '#96c3ff;'. -->
@@ -55,7 +59,7 @@
                         <xsl:value-of select="sj:getTermbrowserString($language, 'Term Notation')"/>
                     </label>
                     <input id="search-input" class="form-control autocomplete" type="text"><!-- --></input>
-                    <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus(document.getElementById('search-input').value.toLowerCase());">
+                    <button type="button" class="btn btn-default semantic-search-button" onclick="termFocus(document.getElementById('search-input').value);">
                         <xsl:value-of select="sj:getTermbrowserString($language, 'Search')"/>
                     </button>
                 </div>
@@ -223,12 +227,10 @@
                 $( "#search-input" ).autocomplete({source: data});
             });
             
-            <xsl:value-of disable-output-escaping="yes" select="'
             function getTermID(term) {
                 var result = terms.find(item => item.term === term);
                 return result ? result.key : null;
             }
-            '"/>
             
             function termFocus(term) {
                 var t = getTermID(term);
