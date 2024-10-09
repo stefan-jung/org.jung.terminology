@@ -137,7 +137,7 @@
                                     <String>${pd}</String>
                                 </field>
                                 <field name="showConsoleAlways">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="advancedOptionsMap">
                                     <null/>
