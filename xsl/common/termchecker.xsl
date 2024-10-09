@@ -61,12 +61,10 @@
     <!--
         Match the root node of the DITA Map and create a Schematron root node
     -->
-    <xsl:template match="/">
+    <xsl:template match="/" expand-text="yes">
         <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             xmlns:sqf="http://www.schematron-quickfix.com/validator/process" queryBinding="xslt2">
-            <sch:title>
-                <xsl:value-of select="sj:getTermCheckerString($language, 'Title')"/>
-            </sch:title>
+            <sch:title>{sj:getTermCheckerString($language, 'Title')}</sch:title>
             <sch:pattern>
                 <sch:rule context="*/text()"> 
                     <xsl:apply-templates/>
@@ -78,15 +76,13 @@
     <!--
         Create the Schematron Quick Fix.
     -->
-    <xsl:template name="createSqfFix">
+    <xsl:template name="createSqfFix" expand-text="yes">
         <xsl:param name="notRecommendedTerm" as="xs:string"/>
         <xsl:param name="preferredTerm" as="xs:string"/>
         <xsl:param name="termLanguage" as="xs:string"/>
         <xsl:param name="definition" as="xs:string"/>
         
-        <xsl:variable name="notRecommendedTermNormalized">
-            <xsl:value-of select="sj:normalizeString($notRecommendedTerm)"/>
-        </xsl:variable>
+        <xsl:variable name="notRecommendedTermNormalized" select="sj:normalizeString($notRecommendedTerm)"/>
         
         <xsl:variable name="sqfTitle">
             <xsl:choose>
@@ -108,39 +104,24 @@
         <xsl:variable name="counter" select="position()"/>
         <xsl:variable name="allowedFullForm" select="normalize-space(.)"/>
         
-        <xsl:element name="sqf:fix">
-            <xsl:attribute name="id" select="translate($notRecommendedTermNormalized, ' ', '_') || '-' || translate($preferredTerm, ' ', '_')"/>
-            <xsl:element name="sqf:description">
-                <xsl:element name="sqf:title">
-                    <xsl:value-of select="normalize-space($sqfTitle)"/>
-                </xsl:element>
-                <xsl:choose>
-                    <xsl:when test="$definition != ''">
-                        <xsl:element name="sqf:p">
-                            <xsl:value-of select="$definition"/>
-                        </xsl:element>
-                    </xsl:when>
-                </xsl:choose>
-            </xsl:element>
+        <sqf:fix id="{translate($notRecommendedTermNormalized, ' ', '_') || '-' || translate($preferredTerm, ' ', '_')}">
+            <sqf:description>
+                <sqf:title>{normalize-space($sqfTitle)}</sqf:title>
+                <xsl:if test="$definition != ''">
+                    <sqf:p>{$definition}</sqf:p>
+                </xsl:if>
+            </sqf:description>
             
             <!-- Lowercased -->
-            <xsl:element name="sqf:stringReplace">
-                <xsl:attribute name="regex" select="'(\b(' || $notRecommendedTermNormalized || ')\b)'"/>
-                <xsl:attribute name="select" select="'''' || $preferredTerm || ''''"/>
-            </xsl:element>
+            <sqf:stringReplace regex="{'(\b(' || $notRecommendedTermNormalized || ')\b)'}" select="{'''' || $preferredTerm || ''''}"/>
             
             <!-- Uppercased -->            
             <xsl:if test="not(sj:isUppercased($notRecommendedTerm))">
-                <xsl:variable name="uppercasedNotRecommendedTerm" select="concat(upper-case(substring($notRecommendedTermNormalized,1,1)), substring($notRecommendedTermNormalized, 2), ' '[not(last())])"/>
-                <xsl:variable name="uppercasedPreferredTerm" select="concat(upper-case(substring($preferredTerm,1,1)), substring($preferredTerm, 2), ' '[not(last())])"/>
-                
-                <xsl:element name="sqf:stringReplace">
-                    <xsl:attribute name="regex" select="'(\b(' || $uppercasedNotRecommendedTerm || ')\b)'"/>
-                    <xsl:attribute name="select" select="'''' || $uppercasedPreferredTerm || ''''"/>
-                </xsl:element>
+                <xsl:variable name="uppercasedNotRecommendedTerm" select="upper-case(substring($notRecommendedTermNormalized,1,1)) || substring($notRecommendedTermNormalized, 2), ' '[not(last())]"/>
+                <xsl:variable name="uppercasedPreferredTerm" select="upper-case(substring($preferredTerm, 1, 1)) || substring($preferredTerm, 2), ' '[not(last())]"/>
+                <sqf:stringReplace regex="{'(\b(' || $uppercasedNotRecommendedTerm || ')\b)'}" select="{'''' || $uppercasedPreferredTerm || ''''}"/>
             </xsl:if>
-            
-        </xsl:element>
+        </sqf:fix>            
     </xsl:template>
 
     <!--

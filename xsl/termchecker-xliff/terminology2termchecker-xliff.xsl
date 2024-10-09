@@ -7,9 +7,6 @@
     xmlns:sj="https://stefan-jung.org"
     exclude-result-prefixes="sj xs">
     
-    <!-- Import the DITA2XHTML stylesheet to use its templates -->
-    <!--<xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>-->
-    
     <!-- Import the generic termchecker templates -->
     <xsl:import href="../common/termchecker.xsl"/>
     
@@ -57,63 +54,17 @@
             <sch:report test="{$test}" role="warning" sqf:fix="{$sqfGroupName}">
                 <xsl:value-of select="sj:getString('termchecker', $language, 'The term') || ' ''' || $notRecommendedTerm || ''' ' || sj:getString('termchecker', $language, 'Is Not Allowed') || '. ' || sj:getString('termchecker', $language, 'ReplaceWithAllowedTerm') || ': '"/>
                 <xsl:for-each select="preceding-sibling::* | following-sibling::*">
-                    <xsl:choose>
-                        <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:text>'</xsl:text>
-                            <xsl:value-of select="*[contains(@class, 'termentry/termVariant')]"/>
-                            <xsl:text>'</xsl:text>
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')]">
-                                    <xsl:text>, </xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:when>
-                    </xsl:choose>
+                    <xsl:variable name="seperator" select="
+                        if (following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')])
+                        then ', '
+                        else ''
+                        "/>
+                    <xsl:if test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
+                        <xsl:value-of select="'''' || *[contains(@class, 'termentry/termVariant')] || '''' || $seperator"/>
+                    </xsl:if>
+                    
                 </xsl:for-each>
             </sch:report>
-            <!--<xsl:element name="sch:report">
-                <xsl:attribute name="test">
-                    <xsl:choose>
-                        <xsl:when test="$checkElements = 'source'">
-                            <xsl:text>contains(ancestor::*/@source-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') </xsl:text>
-                        </xsl:when>
-                        <xsl:when test="$checkElements = 'target'">
-                            <xsl:text>contains(ancestor::*/@target-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') </xsl:text>
-                        </xsl:when>
-                        <xsl:when test="$checkElements = 'both'">
-                            <xsl:text>(contains(ancestor::*/@source-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>') or contains(ancestor::*/@target-language, '</xsl:text><xsl:value-of select="$termLanguageRegionCode"/><xsl:text>')) </xsl:text>
-                        </xsl:when>
-                    </xsl:choose>
-                    <xsl:text>and matches(., '((\W|^)</xsl:text>
-                    <xsl:value-of select="$notRecommendedTerm"/>
-                    <xsl:text>(\W|$))', 'i') and </xsl:text>
-                    <xsl:value-of select="$parent"/>
-                </xsl:attribute>-->
-                <!--<xsl:attribute name="role">warning</xsl:attribute>
-                <xsl:attribute name="sqf:fix" select="$sqfGroupName"/>-->
-                <!--<xsl:value-of select="sj:getString($language, 'The term')"/>
-                <xsl:text> '</xsl:text>
-                <xsl:value-of select="$notRecommendedTerm"/>
-                <xsl:text>' </xsl:text>
-                <xsl:value-of select="sj:getString($language, 'IsNotAllowed')"/>-->
-                <!--<xsl:text>. </xsl:text>
-                <xsl:value-of select="sj:getString($language, 'ReplaceWithAllowedTerm')"/>-->
-                <!--<xsl:text>: </xsl:text>-->
-                <!--<xsl:for-each select="preceding-sibling::* | following-sibling::*">
-                    <xsl:choose>
-                        <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:text>'</xsl:text>
-                            <xsl:value-of select="*[contains(@class, 'termentry/termVariant')]"/>
-                            <xsl:text>'</xsl:text>
-                            <xsl:choose>
-                                <xsl:when test="following-sibling::*[(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')]">
-                                    <xsl:text>, </xsl:text>
-                                </xsl:when>
-                            </xsl:choose>
-                        </xsl:when>
-                    </xsl:choose>
-                </xsl:for-each>-->
-            <!--</xsl:element>-->
             
             <!-- Create a Schematron Quick Fix group that contains quick fixes for all allowed term variants -->
             <sqf:group id="{$sqfGroupName}">
@@ -122,7 +73,9 @@
                         <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
                             <xsl:message use-when="system-property('debug_on') = 'yes'">Generate SQF for term notation '<xsl:value-of select="$notRecommendedTerm"/>'</xsl:message>
                             <xsl:if test="not(*[contains(@class, 'termentry/termVariant')]) or *[contains(@class, 'termentry/termVariant')] = ''">
-                                <xsl:message terminate="yes">ERROR: Could not create SQF for not recommended term '<xsl:value-of select="$notRecommendedTerm"/>', because the preferred term is empty.</xsl:message>
+                                <xsl:message terminate="yes" select="
+                                    'ERROR: Could not create SQF for not recommended term ''' || $notRecommendedTerm || ''', because the preferred term is empty.'
+                                    "/>
                             </xsl:if>
                             <xsl:call-template name="createSqfFix">
                                 <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
@@ -134,25 +87,6 @@
                     </xsl:choose>
                 </xsl:for-each>
             </sqf:group>
-            <!--<xsl:element name="sqf:group">
-                <xsl:attribute name="id" select="$sqfGroupName"/>
-                <xsl:for-each select="preceding-sibling::* | following-sibling::*">
-                    <xsl:choose>
-                        <xsl:when test="(@language = $languageCode or @language = $language) and (@usage = 'preferred' or @usage = 'admitted')">
-                            <xsl:message use-when="system-property('debug_on') = 'yes'">Generate SQF for term notation '<xsl:value-of select="$notRecommendedTerm"/>'</xsl:message>
-                            <xsl:if test="not(*[contains(@class, 'termentry/termVariant')]) or *[contains(@class, 'termentry/termVariant')] = ''">
-                                <xsl:message terminate="yes">ERROR: Could not create SQF for not recommended term '<xsl:value-of select="$notRecommendedTerm"/>', because the preferred term is empty.</xsl:message>
-                            </xsl:if>
-                            <xsl:call-template name="createSqfFix">
-                                <xsl:with-param name="notRecommendedTerm" select="$notRecommendedTerm"/>
-                                <xsl:with-param name="preferredTerm" select="*[contains(@class, 'termentry/termVariant')]"/>
-                                <xsl:with-param name="termLanguage" select="$termLanguageRegionCode"/>
-                                <xsl:with-param name="definition" select="$definition"/>
-                            </xsl:call-template>
-                        </xsl:when>
-                    </xsl:choose>
-                </xsl:for-each>
-            </xsl:element>-->
             
         </xsl:for-each>
     </xsl:template>

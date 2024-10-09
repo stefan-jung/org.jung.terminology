@@ -5,12 +5,9 @@
     xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
     xmlns:sj="https://stefan-jung.org"
-    exclude-result-prefixes="xs">
+    exclude-result-prefixes="sj xs">
     
     <xsl:param name="language" as="xs:string"/>
-    
-    <!-- Import the DITA2XHTML stylesheet to use its templates -->
-    <!--<xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>-->
     
     <!-- Import the generic termchecker templates -->
     <xsl:import href="../common/termchecker.xsl"/>
@@ -86,7 +83,7 @@
     <xsl:function name="sj:getTest" as="xs:string">
         <xsl:param name="termLanguageRegionCode" as="xs:string"/>
         <xsl:param name="notRecommendedTerm" as="xs:string"/>
-        <xsl:sequence select="'contains(/*/@xml:lang, ' || $termLanguageRegionCode || ') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'')'"/>
+        <xsl:sequence select="'contains(/*/@xml:lang, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'')'"/>
     </xsl:function>
     
     <!-- Empty fall-through template for non-termentry topics -->
