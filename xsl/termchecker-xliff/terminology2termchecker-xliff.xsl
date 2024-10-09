@@ -8,7 +8,7 @@
     exclude-result-prefixes="sj xs">
     
     <!-- Import the DITA2XHTML stylesheet to use its templates -->
-    <xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>
+    <!--<xsl:import href="plugin:org.dita.xhtml:xsl/dita2xhtml.xsl"/>-->
     
     <!-- Import the generic termchecker templates -->
     <xsl:import href="../common/termchecker.xsl"/>
@@ -33,13 +33,11 @@
             <xsl:variable name="termLanguageRegionCode" select="normalize-space(@language)"/>
             <xsl:variable name="notRecommendedTerm" select="normalize-space(termVariant)"/>
             <xsl:variable name="sqfGroupName" select="$termentryId || '-' || translate($notRecommendedTerm, ' ', '_') || '-' || generate-id()"/>
-            <xsl:variable name="parent">
-                <xsl:choose>
-                    <xsl:when test="$checkElements = 'source'"><xsl:text>ancestor-or-self::*[name() = 'source']</xsl:text></xsl:when>
-                    <xsl:when test="$checkElements = 'target'"><xsl:text>ancestor-or-self::*[name() = 'target']</xsl:text></xsl:when>
-                    <xsl:when test="$checkElements = 'both'"><xsl:text>ancestor-or-self::*[name() = 'target' or 'source']</xsl:text></xsl:when>
-                </xsl:choose>
-            </xsl:variable>
+            <xsl:variable name="parent" select="
+                if ($checkElements = 'source') then 'ancestor-or-self::*[name() = ''source'']'
+                else if ($checkElements = 'target') then 'ancestor-or-self::*[name() = ''target'']'
+                else 'ancestor-or-self::*[name() = ''target'' or ''source'']'
+                "/>
 
             <!-- 
                 Create a report that will be reported if the tested topic: 
@@ -47,9 +45,13 @@
                 - the xml:lang attribute of the tested topic has the same value as the language attribute of the notRecommended term
             -->
             <xsl:variable name="test" select="
-                if ($checkElements = 'source') then 'contains(ancestor::*/@source-language, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
-                else if ($checkElements = 'target') then 'contains(ancestor::*/@target-language, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
-                else if ($checkElements = 'both') then '(contains(ancestor::*/@source-language, ''' ||$termLanguageRegionCode || ''') or contains(ancestor::*/@target-language, ''' || $termLanguageRegionCode ||  ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
+                if ($checkElements = 'source') 
+                then 'contains(ancestor::*/@source-language, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
+                else if ($checkElements = 'target') 
+                then 'contains(ancestor::*/@target-language, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
+                else if ($checkElements = 'both') 
+                then '(contains(ancestor::*/@source-language, ''' ||$termLanguageRegionCode || ''') or contains(ancestor::*/@target-language, ''' || $termLanguageRegionCode ||  ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
+                
                 else 'contains(ancestor::*/@source-language, ''' || $termLanguageRegionCode ||  ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'') and ' || $parent
                 "/>
             <sch:report test="{$test}" role="warning" sqf:fix="{$sqfGroupName}">
