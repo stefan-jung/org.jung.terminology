@@ -61,7 +61,9 @@
 *[class~="termentry/definition"],
 *[class~="termentry/definitionSource"],
 *[class~="termentry/domains"],
+*[class~="termentry/termContext"],
 *[class~="termentry/termContextSource"],
+*[class~="termentry/termContextText"],
 *[class~="termentry/termNotation"],
 *[class~="termentry/termSource"],
 *[class~="topic/fig"],
@@ -91,6 +93,9 @@
 *[class~="termentry/definition"]:before(10),
 *[class~="termentry/definitionSource"]:before(10),
 *[class~="termentry/domains"]:before(10),
+*[class~="termentry/termContext"]:before(10),
+*[class~="termentry/termContextSource"]:before(10),
+*[class~="termentry/termContextText"]:before(10),
 *[class~="termentry/termNotation"]:before(10),
 *[class~="termentry/termSource"]:before(10),
 *[class~="topic/fig"]:before(10), 
@@ -114,7 +119,8 @@
 /******************************************************************************************
  * Common properties for block elements w/o border and w/o :before(10) block
  ******************************************************************************************/
-*[class~="termentry/definitionText"] {
+*[class~="termentry/definitionText"],
+*[class~="termentry/termContextText"] {
     -oxy-display-tags: none;
     -oxy-editable: true;
     -oxy-placeholder-content: "${i18n(term.definitionText.placeholder)}";
@@ -308,6 +314,7 @@
 
 /*********************************************
  * DEFINITION TEXT
+ * The properties are defined in 'Common properties for block elements w/o border and w/o :before(10) block'
  *********************************************/
 *[class~="termentry/definitionText"] {
     -oxy-placeholder-content: "${i18n(term.definitionText.placeholder)}";
@@ -555,7 +562,7 @@
         oxy_buttonGroup(
             label, '${i18n(term.termContext)}',
             transparent, 'true',
-            fontInherit, 'false',
+            fontInherit, 'true',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.termContextText.add'),
@@ -572,7 +579,7 @@
         oxy_buttonGroup(
             label, '${i18n(term.termContextSource)}',
             transparent, 'true',
-            fontInherit, 'false',
+            fontInherit, 'true',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.sourceName.add'),
@@ -583,6 +590,16 @@
 }
 *[class~="termentry/termContextSource"] {
     -oxy-placeholder-content: "${i18n(term.termContextSource.placeholder)}";
+    -oxy-show-placeholder: always;
+}
+
+/*********************************************
+ * TERM CONTEXT TEXT
+ * 
+ * The properties are defined in 'Common properties for block elements w/o border and w/o :before(10) block'
+ *********************************************/
+*[class~="termentry/termContextText"] {
+    -oxy-placeholder-content: "${i18n(term.definitionText.placeholder)}";
     -oxy-show-placeholder: always;
 }
 
