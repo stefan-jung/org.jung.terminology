@@ -138,6 +138,7 @@
 /******************************************************************************************
  * Common properties for inline elements
  ******************************************************************************************/
+*[class~="termentry/domain"],
 *[class~="termentry/sourceName"],
 *[class~='termentry/sourceReference'],
 *[class~='termentry/termCommitteeMember'],
@@ -152,53 +153,24 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
-    width: 99% !important;
 }
 
 /******************************************************************************************
  * Common properties :before(10) for inline elements
  ******************************************************************************************/
+*[class~="termentry/domain"]:before(10),
 *[class~="termentry/sourceName"]:before(10),
 *[class~='termentry/sourceReference']:before(10),
 *[class~='termentry/termCommitteeMember']:before(10),
+*[class~="termentry/termRelation"]:before(10),
 *[class~="termentry/termVariant"]:before(10),
 *[class~="topic/fig"] > *[class~="topic/title"]:before(10) {
     display: inline;
     font-family: Arial, sans-serif;
     font-size: 10px;
     font-weight: bold;
-    padding-left: 0.5em;
     padding-left: 5px;
-    width: 20%;
-}
-
-/******************************************************************************************
- * Common properties for term relations
- ******************************************************************************************/
-*[class~="termentry/termRelation"] {
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    -oxy-display-tags: none;
-    -oxy-show-placeholder: always;
-    -oxy-editable: true;
-    -oxy-show-placeholder: no !important;
-    visibility: -oxy-collapse-text;
-}
-
-/******************************************************************************************
- * Common properties :before(10) for term relations
- ******************************************************************************************/
-*[class~="termentry/termRelation"]:before(10) {
-    width: 20%;
-    font-weight: bold;
-    display: inline;
-    padding-left: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 10px;
+    padding-right: 25px;
 }
 
 /******************************************************************************************
@@ -729,27 +701,29 @@
                 oxy_action(id, 'term.domain.delete')
             )
         );
-    display: inline;
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    padding-left: 5px;
-    width: 20%;
 }
-*[class~="termentry/domain"][class~="termentry/concept-domain"] {
-    width: 75%;
-    display: block;
-    float: right;
-    -oxy-display-tags: none;
-    visibility: -oxy-collapse-text;
-    -oxy-show-placeholder: no !important; 
+*[class~="termentry/domain"][class~="termentry/concept-domain"]:before(10) {
+    content:
+        oxy_buttonGroup(
+            label, '${i18n(term.domain)}',
+            transparent, 'true',
+            fontInherit, 'true',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.domain.add'),
+                oxy_action(id, 'term.domain.delete')
+            )
+        );
 }
 *[class~="termentry/domain"][class~="termentry/concept-domain"] {
     content:
         oxy_popup(
             edit, '@concept-domain'
         );
+    -oxy-display-tags: none;
+    -oxy-show-placeholder: no !important; 
     padding-bottom: 5px;
+    /*visibility: -oxy-collapse-text;*/
 }
 *[class~="termentry/domain"][class~="termentry/term-domain"] {
     content:
@@ -1266,6 +1240,24 @@
         );
 }
 
+*[class~='termentry/termRelation']:after {
+    content:
+        oxy_label(
+            text, " [",
+            styles, "color: gray;"
+        )
+        oxy_popup(
+            edit, '@keyref',
+            selectionMode, 'single',
+            fontInherit, true
+        )
+        oxy_label(
+            text, "]",
+            styles, "color: gray;"
+        )
+
+}
+
 /*********************************************
  * SUBORDINATE CONCEPTS
  *********************************************/
@@ -1339,23 +1331,25 @@
  *********************************************/
 *[class~="termentry/termRelation"][keyref]:before(7) {
     content:
-    oxy_button(
-        action, oxy_action(
-        name, oxy_getSomeText(oxy_link-text(), 150, true),
-        description, 'dddd',
-        operation, 'ro.sync.ecss.extensions.commons.operations.JSOperation',
-        arg-script, oxy_concat(
-            'function doOperation(){ var url = Packages.ro.sync.ecss.dita.DITAAccess.resolveKeyRef(new java.net.URL("',
-            oxy_base-uri(),
-            '"),"',
-            attr(keyref)
-            '", false); Packages.ro.sync.exml.workspace.api.PluginWorkspaceProvider.getPluginWorkspace().open(url); }'
-        )
-    ),
-    transparent, true);
-    width: 75%;
+        oxy_button(
+            action, oxy_action(
+                name, oxy_getSomeText(oxy_link-text(), 150, true),
+                description, 'dddd',
+                operation, 'ro.sync.ecss.extensions.commons.operations.JSOperation',
+                arg-script, oxy_concat(
+                    'function doOperation(){ var url = Packages.ro.sync.ecss.dita.DITAAccess.resolveKeyRef(new java.net.URL("',
+                    oxy_base-uri(),
+                    '"),"',
+                    attr(keyref)
+                    '", false); Packages.ro.sync.exml.workspace.api.PluginWorkspaceProvider.getPluginWorkspace().open(url); }'
+                )
+            ),
+            transparent, true
+        );
     display: inline;
     float: right;
+}
+*[class~="termentry/termRelation"]{
     -oxy-display-tags: none;
 }
 
