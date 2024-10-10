@@ -83,7 +83,7 @@
     <xsl:function name="sj:getTest" as="xs:string">
         <xsl:param name="termLanguageRegionCode" as="xs:string"/>
         <xsl:param name="notRecommendedTerm" as="xs:string"/>
-        <xsl:sequence select="'contains(/*/@xml:lang, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'')'"/>
+        <xsl:sequence select="'contains(ancestor-or-self::*[@xml:lang][1]/@xml:lang, ''' || $termLanguageRegionCode || ''') and matches(., ''((\W|^)' || $notRecommendedTerm || '(\W|$))'', ''i'')'"/>
     </xsl:function>
     
     <!-- Empty fall-through template for non-termentry topics -->
