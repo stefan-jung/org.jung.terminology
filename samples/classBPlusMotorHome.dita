@@ -20,24 +20,21 @@
         <alt>https://creativecommons.org/licenses/by-sa/3.0/deed.en</alt>
       </image>
     </fig>
-    <domains>
-      <domain concept-domain=""></domain>
-    </domains>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
-      <termVariant>coachbuilt motorhome</termVariant>
+      <termVariant xml:lang="en-GB">coachbuilt motorhome</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="preferred">
-      <termVariant>Class B+ motorhome</termVariant>
+      <termVariant xml:lang="en-GB">Class B+ motorhome</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="preferred">
-      <termVariant>teilintegriertes Wohnmobil</termVariant>
+      <termVariant xml:lang="de-DE">teilintegriertes Wohnmobil</termVariant>
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
-      <termVariant>Alkovenwohnmobil</termVariant>
-      <domains>
-        <domain term-domain="" concept-domain="product-development"/>
-      </domains>
+      <termVariant xml:lang="de-DE">Alkovenwohnmobil</termVariant>
+      <term-domains>
+        <term-domain term-domain="product-development"/>
+      </term-domains>
     </fullForm>
   </termBody>
   <relations>

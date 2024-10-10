@@ -1128,9 +1128,9 @@
         <optional>
           <ref name="sourceName"/>
         </optional>
-        <optional>
+        <zeroOrMore>
           <ref name="sourceReference"/>
-        </optional>
+        </zeroOrMore>
       </define>
       <define name="definitionSource.attributes">
         <ref name="univ-atts"/>
