@@ -758,8 +758,8 @@
         </optional>
       </define>
       <define name="concept-domains.element">
-        <element name="domains" dita:longName="Domains">
-          <a:documentation>The &lt;domains> element contains at least one domain of the term.
+        <element name="concept-domains" dita:longName="Domains">
+          <a:documentation>The &lt;concept-domains> element contains at least domain of the terminology concept.
             Category: Termentry elements</a:documentation>
           <ref name="concept-domains.attlist"/>
           <ref name="concept-domains.content"/>
@@ -782,8 +782,8 @@
         </optional>
       </define>
       <define name="concept-domain.element">
-        <element name="domain" dita:longName="Domain">
-          <a:documentation>The &lt;domain> element contains the domain of the term.
+        <element name="concept-domain" dita:longName="Domain">
+          <a:documentation>The &lt;concept-domain> element represents a single domain of a terminology concept.
             Category: Termentry elements</a:documentation>
           <ref name="concept-domain.attlist"/>
           <ref name="concept-domain.content"/>
@@ -807,8 +807,8 @@
         </optional>
       </define>
       <define name="term-domains.element">
-        <element name="domains" dita:longName="Domains">
-          <a:documentation>The &lt;domains> element contains at least one domain of the term.
+        <element name="term-domains" dita:longName="Domains">
+          <a:documentation>The &lt;term-domains> element contains at least one domain of the term.
             Category: Termentry elements</a:documentation>
           <ref name="term-domains.attlist"/>
           <ref name="term-domains.content"/>
@@ -831,8 +831,8 @@
         </optional>
       </define>
       <define name="term-domain.element">
-        <element name="domain" dita:longName="Domain">
-          <a:documentation>The &lt;domain> element contains the domain of the term.
+        <element name="term-domain" dita:longName="Term Domain">
+          <a:documentation>The &lt;term-domain> element contains the domain of the term.
             Category: Termentry elements</a:documentation>
           <ref name="term-domain.attlist"/>
           <ref name="term-domain.content"/>

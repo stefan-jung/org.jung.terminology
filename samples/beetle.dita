@@ -11,9 +11,6 @@
     </definitionSource>
   </definition>
  <termBody>
-  <domains>
-   <domain concept-domain="VW"/>
-  </domains>
   <agreedWith>
    <termCommitteeMember>Martin Winterkorn</termCommitteeMember>
   </agreedWith>

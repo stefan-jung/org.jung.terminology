@@ -20,6 +20,9 @@
         <alt>https://creativecommons.org/licenses/by-sa/3.0/deed.en</alt>
       </image>
     </fig>
+    <domains>
+      <domain concept-domain=""></domain>
+    </domains>
     <partOfSpeech value="noun"/>
     <fullForm usage="preferred" language="en-GB">
       <termVariant>coachbuilt motorhome</termVariant>
@@ -32,6 +35,9 @@
     </fullForm>
     <fullForm language="de-DE" usage="notRecommended">
       <termVariant>Alkovenwohnmobil</termVariant>
+      <domains>
+        <domain term-domain="" concept-domain="product-development"/>
+      </domains>
     </fullForm>
   </termBody>
   <relations>

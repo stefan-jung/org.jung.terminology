@@ -769,10 +769,10 @@
 													<String>${i18n(term.abbreviation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -919,10 +919,10 @@
 													<String>${i18n(term.acronym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1281,10 +1281,10 @@
 													<String>${i18n(term.abbreviation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2518,10 +2518,10 @@
 													<String>${i18n(term.definition.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2950,13 +2950,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.domains.add</String>
+													<String>term.concept-domains.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.domains.add)}</String>
+													<String>${i18n(term.concept-domains.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.domains.add_description)}</String>
+													<String>${i18n(term.concept-domains.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -2974,15 +2974,15 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>not(following-sibling::*[contains(@class, ' termentry/termBody ')][1]/*[contains(@class, ' termentry/domains ')])</String>
+																<String>not(following-sibling::*[contains(@class, ' termentry/termBody ')][1]/*[contains(@class, ' termentry/concept-domains ')])</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;domains>
-  &lt;domain concept-domain=""/>
-&lt;/domains></String>
+																		<String>&lt;concept-domains>
+  &lt;concept-domain concept-domain=""/>
+&lt;/concept-domains></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -3456,10 +3456,10 @@
 													<String>${i18n(term.agreedWith.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4675,10 +4675,10 @@
 													<String>${i18n(term.agreedWith.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4790,13 +4790,13 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.domain.add</String>
+													<String>term.concept-domain.add</String>
 												</field>
 												<field name="name">
 													<String>${i18n(term.domain.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.domain.add_description)}</String>
+													<String>${i18n(term.concept-domain.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -4814,13 +4814,13 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/domains ')]</String>
+																<String>self::*[contains(@class, ' termentry/concept-domains ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;domain value=""/></String>
+																		<String>&lt;concept-domain concept-domain=""/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -4838,13 +4838,13 @@
 														</actionMode>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/domain ')]</String>
+																<String>self::*[contains(@class, ' termentry/concept-domain ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;domain value=""/></String>
+																		<String>&lt;concept-domain concept-domain=""/></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -4884,19 +4884,19 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>term.domains.delete</String>
+													<String>term.concept-domain.delete</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.domains.delete)}</String>
+													<String>${i18n(term.concept-domain.delete)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.domains.delete_description)}</String>
+													<String>${i18n(term.concept-domain.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4908,7 +4908,7 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/domains ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/concept-domain ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -4942,68 +4942,6 @@
 										</field>
 										<field name="index">
 											<Integer>154</Integer>
-										</field>
-										<field name="value">
-											<action>
-												<field name="id">
-													<String>term.domain.delete</String>
-												</field>
-												<field name="name">
-													<String>${i18n(term.domain.delete)}</String>
-												</field>
-												<field name="description">
-													<String>${i18n(term.domain.delete_description)}</String>
-												</field>
-												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
-												</field>
-												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
-												</field>
-												<field name="accessKey">
-													<String></String>
-												</field>
-												<field name="accelerator">
-													<null/>
-												</field>
-												<field name="actionModes">
-													<actionMode-array>
-														<actionMode>
-															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/domain ')][1]</String>
-															</field>
-															<field name="argValues">
-																<serializableOrderedMap>
-																	<entry>
-																		<String>elementLocation</String>
-																		<String>.</String>
-																	</entry>
-																</serializableOrderedMap>
-															</field>
-															<field name="operationID">
-																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
-															</field>
-														</actionMode>
-													</actionMode-array>
-												</field>
-												<field name="enabledInReadOnlyContext">
-													<Boolean>false</Boolean>
-												</field>
-											</action>
-										</field>
-										<field name="patchHandling">
-											<String>addIndex</String>
-										</field>
-										<field name="anchor">
-											<null/>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/actionDescriptors</String>
-										</field>
-										<field name="index">
-											<Integer>155</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5065,7 +5003,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>156</Integer>
+											<Integer>155</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5127,7 +5065,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>157</Integer>
+											<Integer>156</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5189,7 +5127,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>158</Integer>
+											<Integer>157</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5251,7 +5189,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>159</Integer>
+											<Integer>158</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5308,7 +5246,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>160</Integer>
+											<Integer>159</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5365,7 +5303,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>161</Integer>
+											<Integer>160</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5427,7 +5365,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>162</Integer>
+											<Integer>161</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5493,7 +5431,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>163</Integer>
+											<Integer>162</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5559,7 +5497,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>164</Integer>
+											<Integer>163</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5573,10 +5511,10 @@
 													<String>${i18n(term.acronym.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5625,7 +5563,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>165</Integer>
+											<Integer>164</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5639,10 +5577,10 @@
 													<String>${i18n(term.abbreviation.renameTo)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5691,7 +5629,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>166</Integer>
+											<Integer>165</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5811,7 +5749,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>167</Integer>
+											<Integer>166</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5868,7 +5806,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>168</Integer>
+											<Integer>167</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5930,7 +5868,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>169</Integer>
+											<Integer>168</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -5987,7 +5925,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>170</Integer>
+											<Integer>169</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6053,7 +5991,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>171</Integer>
+											<Integer>170</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6110,7 +6048,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>172</Integer>
+											<Integer>171</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6172,7 +6110,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>173</Integer>
+											<Integer>172</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6234,7 +6172,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>174</Integer>
+											<Integer>173</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6296,7 +6234,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>175</Integer>
+											<Integer>174</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6358,7 +6296,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>176</Integer>
+											<Integer>175</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6420,7 +6358,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>177</Integer>
+											<Integer>176</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6434,10 +6372,10 @@
 													<String>${i18n(term.acronym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6482,7 +6420,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>178</Integer>
+											<Integer>177</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6544,7 +6482,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>179</Integer>
+											<Integer>178</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6558,10 +6496,10 @@
 													<String>${i18n(term.alt.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6606,7 +6544,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>180</Integer>
+											<Integer>179</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6620,10 +6558,10 @@
 													<String>${i18n(term.alt.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6676,7 +6614,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>181</Integer>
+											<Integer>180</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6754,7 +6692,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>182</Integer>
+											<Integer>181</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6816,7 +6754,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>183</Integer>
+											<Integer>182</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6886,7 +6824,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>184</Integer>
+											<Integer>183</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -6943,7 +6881,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>185</Integer>
+											<Integer>184</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7005,7 +6943,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>186</Integer>
+											<Integer>185</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7081,7 +7019,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>187</Integer>
+											<Integer>186</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7143,7 +7081,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>188</Integer>
+											<Integer>187</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7205,7 +7143,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>189</Integer>
+											<Integer>188</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7267,7 +7205,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>190</Integer>
+											<Integer>189</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7341,7 +7279,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>191</Integer>
+											<Integer>190</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7411,7 +7349,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>192</Integer>
+											<Integer>191</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7422,7 +7360,7 @@
 													<String>${i18n(term.domains.add)}</String>
 												</field>
 												<field name="description">
-													<String>${i18n(term.domains.add_description)}</String>
+													<String>${i18n(term.term-domains.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
 													<String>${framework}/framework/icons/add_20.png</String>
@@ -7446,9 +7384,9 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>fragment</String>
-																		<String>&lt;domains>
-  &lt;domain term-domain=""/>
-&lt;/domains></String>
+																		<String>&lt;term-domains>
+  &lt;term-domain term-domain=""/>
+&lt;/term-domains></String>
 																	</entry>
 																	<entry>
 																		<String>insertLocation</String>
@@ -7483,7 +7421,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>193</Integer>
+											<Integer>192</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7545,7 +7483,7 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
-											<Integer>194</Integer>
+											<Integer>193</Integer>
 										</field>
 										<field name="value">
 											<action>
@@ -7586,6 +7524,286 @@
 															</field>
 															<field name="operationID">
 																<String>ro.sync.ecss.extensions.commons.operations.ExecuteTransformationScenariosOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>194</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.concept-domains.delete</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.concept-domains.delete)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(term.concept-domains.delete_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/framework/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/framework/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/concept-domains ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>195</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.term-domains.delete</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.term-domains.delete)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(term.term-domains.delete_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/framework/icons/delete_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/framework/icons/delete_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/term-domains ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>196</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.term-domain.add</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.term-domain.add)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(term.term-domain.add_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/framework/icons/add_20.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/framework/icons/add_16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/term-domains ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;term-domain term-domain=""/></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/term-domain ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;term-domain term-domain=""/></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>After</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>197</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.term-domain.delete</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.term-domain.delete)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(term.term-domain.delete_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/term-domain ')][1]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
 															</field>
 														</actionMode>
 													</actionMode-array>

@@ -17,9 +17,9 @@
     <alt>By OSX (Own work) [Public domain], via Wikimedia Commons</alt>
    </image>
   </fig>
-  <domains>
-   <domain concept-domain="Car"/>
-  </domains>
+  <concept-domains>
+   <concept-domain concept-domain="marketing"/>
+  </concept-domains>
   <partOfSpeech/>
   <fullForm usage="preferred" language="en-GB">
    <termVariant xml:lang="en-GB">car</termVariant>

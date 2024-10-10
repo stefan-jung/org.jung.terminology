@@ -151,7 +151,7 @@
         <val lang="de_DE">Definition einfügen</val>
     </key>
     <key value="term.definition.delete">
-        <val lang="en_US">Delete definitiony</val>
+        <val lang="en_US">Delete definition</val>
         <val lang="de_DE">Definition löschen</val>
     </key>
     <key value="term.definition.delete_description">
@@ -495,46 +495,90 @@
         <val lang="de_DE">Geben Sie einen alternativen Text für das Bild ein. Der Text wird angezeigt, wenn das Bild nicht dargestellt werden kann.</val>
     </key>
 
-    <!-- domains -->
-    <key value="term.domains">
-        <val lang="en_US">Domains</val>
-        <val lang="de_DE">Domänen</val>
+    <!-- concept-domains -->
+    <key value="term.concept-domains">
+        <val lang="en_US">Concept Domains</val>
+        <val lang="de_DE">Konzept-Domänen</val>
     </key>
-    <key value="term.domains.add">
+    <key value="term.concept-domains.add">
         <val lang="en_US">Add Domains</val>
         <val lang="de_DE">Domänen einfügen</val>
     </key>
-    <key value="term.domains.add_description">
+    <key value="term.concept-domains.add_description">
         <val lang="en_US">Add Domains</val>
         <val lang="de_DE">Domänen einfügen</val>
     </key>
-    <key value="term.domains.delete">
+    <key value="term.concept-domains.delete">
         <val lang="en_US">Delete Domains</val>
         <val lang="de_DE">Domänen löschen</val>
     </key>
-    <key value="term.domains.delete_description">
+    <key value="term.concept-domains.delete_description">
         <val lang="en_US">Delete Domains</val>
         <val lang="de_DE">Domänen löschen</val>
     </key>
 
-    <!-- domain -->
-    <key value="term.domain">
+    <!-- term-domains -->
+    <key value="term.term-domains">
+        <val lang="en_US">Term Domains</val>
+        <val lang="de_DE">Term-Domänen</val>
+    </key>
+    <key value="term.term-domains.add">
+        <val lang="en_US">Add Domains</val>
+        <val lang="de_DE">Domänen einfügen</val>
+    </key>
+    <key value="term.term-domains.add_description">
+        <val lang="en_US">Add Domains</val>
+        <val lang="de_DE">Domänen einfügen</val>
+    </key>
+    <key value="term.term-domains.delete">
+        <val lang="en_US">Delete Domains</val>
+        <val lang="de_DE">Domänen löschen</val>
+    </key>
+    <key value="term.term-domains.delete_description">
+        <val lang="en_US">Delete Domains</val>
+        <val lang="de_DE">Domänen löschen</val>
+    </key>
+
+    <!-- concept-domain -->
+    <key value="term.concept-domain">
         <val lang="en_US">Domain</val>
         <val lang="de_DE">Domäne</val>
     </key>
-    <key value="term.domain.placeholder">
-        <val lang="en_US">Give a textual description of the term field.</val>
-        <val lang="de_DE">Beschreiben Sie das Fachgebiet des Begriffs.</val>
+    <key value="term.concept-domain.placeholder">
+        <val lang="en_US">Specify the domain here.</val>
+        <val lang="de_DE">Geben Sie hier die Domäne an.</val>
     </key>
-    <key value="term.domain.add">
+    <key value="term.concept-domain.add">
         <val lang="en_US">Add Domain</val>
         <val lang="de_DE">Domäne einfügen</val>
     </key>
-    <key value="term.domain.add_description">
+    <key value="term.concept-domain.add_description">
         <val lang="en_US">Add Domain</val>
         <val lang="de_DE">Domäne einfügen</val>
     </key>
-    <key value="term.domain.delete">
+    <key value="term.concept-domain.delete">
+        <val lang="en_US">Delete Domain</val>
+        <val lang="de_DE">Domäne löschen</val>
+    </key>
+
+    <!-- term-domain -->
+    <key value="term.term-domain">
+        <val lang="en_US">Domain</val>
+        <val lang="de_DE">Domäne</val>
+    </key>
+    <key value="term.term-domain.placeholder">
+        <val lang="en_US">Specify the domain here.</val>
+        <val lang="de_DE">Geben Sie hier die Domäne an.</val>
+    </key>
+    <key value="term.term-domain.add">
+        <val lang="en_US">Add Domain</val>
+        <val lang="de_DE">Domäne einfügen</val>
+    </key>
+    <key value="term.term-domain.add_description">
+        <val lang="en_US">Add Domain</val>
+        <val lang="de_DE">Domäne einfügen</val>
+    </key>
+    <key value="term.term-domain.delete">
         <val lang="en_US">Delete Domain</val>
         <val lang="de_DE">Domäne löschen</val>
     </key>

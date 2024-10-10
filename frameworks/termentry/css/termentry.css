@@ -31,8 +31,8 @@
     *[class~="termentry/termContextSource"],
     *[class~="termentry/partOfSpeech"],
     *[class~="topic/note"],
-    *[class~="termentry/domains"],
     *[class~="termentry/agreedWith"],
+    *[class~="termentry/concept-domains"],
     *[class~="termentry/termCommitteeMember"],
     *[class~="termentry/termNotation"],
     *[class~="termentry/antonyms"],
@@ -42,6 +42,7 @@
     *[class~="termentry/subordinateConcepts"],
     *[class~="termentry/relatedTerms"],
     *[class~="termentry/relations-linklist"],
+    *[class~="termentry/term-domains"],
     *[class~="termentry/termRelation"] {
         border-color: #767676;
     }
@@ -58,12 +59,13 @@
  * Common properties for block elements
  ******************************************************************************************/
 *[class~="termentry/annotation"],
+*[class~="termentry/concept-domains"],
 *[class~="termentry/definition"],
 *[class~="termentry/definitionSource"],
-*[class~="termentry/domains"],
 *[class~="termentry/termContext"],
 *[class~="termentry/termContextSource"],
 *[class~="termentry/termContextText"],
+*[class~="termentry/term-domains"],
 *[class~="termentry/termNotation"],
 *[class~="termentry/termSource"],
 *[class~="topic/fig"],
@@ -90,9 +92,10 @@
  ******************************************************************************************/
 *[class~="termentry/agreedWith"]:before(10),
 *[class~="termentry/annotation"]:before(10),
+*[class~="termentry/concept-domains"]:before(10),
 *[class~="termentry/definition"]:before(10),
 *[class~="termentry/definitionSource"]:before(10),
-*[class~="termentry/domains"]:before(10),
+*[class~="termentry/term-domains"]:before(10),
 *[class~="termentry/termContext"]:before(10),
 *[class~="termentry/termContextSource"]:before(10),
 *[class~="termentry/termContextText"]:before(10),
@@ -138,9 +141,10 @@
 /******************************************************************************************
  * Common properties for inline elements
  ******************************************************************************************/
-*[class~="termentry/domain"],
+*[class~="termentry/concept-domain"],
 *[class~="termentry/sourceName"],
 *[class~='termentry/sourceReference'],
+*[class~="termentry/term-domain"],
 *[class~='termentry/termCommitteeMember'],
 *[class~="termentry/termVariant"],
 *[class~="topic/fig"] > *[class~="topic/title"] {
@@ -158,9 +162,10 @@
 /******************************************************************************************
  * Common properties :before(10) for inline elements
  ******************************************************************************************/
-*[class~="termentry/domain"]:before(10),
+*[class~="termentry/concept-domain"]:before(10),
 *[class~="termentry/sourceName"]:before(10),
 *[class~='termentry/sourceReference']:before(10),
+*[class~="termentry/term-domain"]:before(10),
 *[class~='termentry/termCommitteeMember']:before(10),
 *[class~="termentry/termRelation"]:before(10),
 *[class~="termentry/termVariant"]:before(10),
@@ -226,6 +231,7 @@
             label, '${i18n(term.conceptLevel)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.definition.add'),
@@ -235,7 +241,7 @@
                 oxy_action(id, 'term.note.add'),
                 oxy_action(id, 'term.fig.add'),
                 oxy_action(id, 'term.annotation.add'),
-                oxy_action(id, 'term.domains.add')
+                oxy_action(id, 'term.concept-domains.add')
             )
         );
 }
@@ -278,6 +284,7 @@
             label, '${i18n(term.definition)}',
             transparent, true,
             fontInherit, true,
+            actionStyle, both,
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.definitionSource.add'),
@@ -670,52 +677,56 @@
 }
 
 /*********************************************
- * DOMAINS
+ * CONCEPT DOMAINS
  *********************************************/
-*[class~="termentry/domains"]:before(10) {
+*[class~="termentry/concept-domains"]:before(10) {
     content:
         oxy_buttonGroup(
-            label, '${i18n(term.domains)}',
+            label, '${i18n(term.concept-domains)}',
             transparent, 'true',
             fontInherit, 'true',
             actions,
             oxy_action_list(
-                oxy_action(id, 'term.domain.add'),
-                oxy_action(id, 'term.domains.delete')
+                oxy_action(id, 'term.concept-domain.add'),
+                oxy_action(id, 'term.concept-domains.delete')
             )
         );
 }
 
 /*********************************************
- * DOMAIN
+ * TERM DOMAINS
  *********************************************/
-*[class~="termentry/domain"]:before(10) {
+*[class~="termentry/term-domains"]:before(10) {
     content:
         oxy_buttonGroup(
-            label, '${i18n(term.domain)}',
+            label, '${i18n(term.term-domains)}',
             transparent, 'true',
             fontInherit, 'true',
             actions,
             oxy_action_list(
-                oxy_action(id, 'term.domain.add'),
-                oxy_action(id, 'term.domain.delete')
+                oxy_action(id, 'term.term-domain.add'),
+                oxy_action(id, 'term.term-domains.delete')
             )
         );
 }
-*[class~="termentry/domain"][class~="termentry/concept-domain"]:before(10) {
+
+/*********************************************
+ * CONCEPT DOMAIN
+ *********************************************/
+*[class~="termentry/concept-domain"]:before(10) {
     content:
         oxy_buttonGroup(
-            label, '${i18n(term.domain)}',
+            label, '${i18n(term.concept-domain)}',
             transparent, 'true',
             fontInherit, 'true',
             actions,
             oxy_action_list(
-                oxy_action(id, 'term.domain.add'),
-                oxy_action(id, 'term.domain.delete')
+                oxy_action(id, 'term.concept-domain.add'),
+                oxy_action(id, 'term.concept-domain.delete')
             )
         );
 }
-*[class~="termentry/domain"][class~="termentry/concept-domain"] {
+*[class~="termentry/concept-domain"] {
     content:
         oxy_popup(
             edit, '@concept-domain'
@@ -723,13 +734,31 @@
     -oxy-display-tags: none;
     -oxy-show-placeholder: no !important; 
     padding-bottom: 5px;
-    /*visibility: -oxy-collapse-text;*/
 }
-*[class~="termentry/domain"][class~="termentry/term-domain"] {
+
+/*********************************************
+ * TERM DOMAIN
+ *********************************************/
+*[class~="termentry/term-domain"]:before(10) {
+    content:
+        oxy_buttonGroup(
+            label, '${i18n(term.term-domain)}',
+            transparent, 'true',
+            fontInherit, 'true',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.term-domain.add'),
+                oxy_action(id, 'term.term-domain.delete')
+            )
+        );
+}
+*[class~="termentry/term-domain"] {
     content:
         oxy_popup(
             edit, '@term-domain'
         );
+    -oxy-display-tags: none;
+    -oxy-show-placeholder: no !important; 
     padding-bottom: 5px;
 }
 
