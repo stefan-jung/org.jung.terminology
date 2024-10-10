@@ -3,9 +3,7 @@
 <subjectScheme>
     <subjectHead>
         <subjectHeadMeta>
-            <navtitle>
-                Terminology Domains
-            </navtitle>
+            <navtitle> Terminology Domains </navtitle>
         </subjectHeadMeta>
     </subjectHead>
     <hasInstance>
@@ -71,10 +69,34 @@
                 </subjectdef>
             </subjectdef>
         </subjectdef>
-        
+
     </hasInstance>
-  <enumerationdef>
-    <attributedef name="termdomain"/>
-    <subjectdef keyref="termdomainValues"/>
-  </enumerationdef>
+    <subjectdef keys="concept-domain-values">
+        <topicmeta>
+            <navtitle>Concept Domain Values</navtitle>
+        </topicmeta>
+        <subjectdef keys="marketing">
+            <topicmeta>
+                <navtitle>Marketing</navtitle>
+            </topicmeta>
+        </subjectdef>
+        <subjectdef keys="product-development">
+            <topicmeta>
+                <navtitle>Product Development</navtitle>
+            </topicmeta>
+        </subjectdef>
+        <subjectdef keys="technical-documentation">
+            <topicmeta>
+                <navtitle>Technical Documentation</navtitle>
+            </topicmeta>
+        </subjectdef>
+    </subjectdef>
+    <enumerationdef>
+        <attributedef name="termdomain"/>
+        <subjectdef keyref="termdomainValues"/>
+    </enumerationdef>
+    <enumerationdef>
+        <attributedef name="concept-domain"/>
+        <subjectdef keyref="concept-domain-values"/>
+    </enumerationdef>
 </subjectScheme>
