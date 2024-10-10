@@ -113,6 +113,7 @@
     padding-top: 5px; /* This is to fix the appearance of the block in Content Fusion. */
     padding-bottom: 5px; /* This is to fix the appearance of the block in Content Fusion. */
     padding-left: 5px;
+    height: 15px; /* This is to fix the appearance of the block in Content Fusion. */
     line-height: 15px; /* This is to fix the appearance of the block in Content Fusion. */
 }
 

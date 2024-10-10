@@ -12,7 +12,7 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>Jung Terminology Termextractor</String>
+						<String>Jung Terminology Terminology Harvester</String>
 					</field>
 					<field name="schemaDescriptor">
 						<null/>
@@ -155,10 +155,10 @@
 									<String></String>
 								</field>
 								<field name="buildTarget">
-									<String>termextractor</String>
+									<String>termharvester</String>
 								</field>
 								<field name="buildFilePath">
-									<String>${frameworkDir}/ant/build_termextractor.xml</String>
+									<String>${frameworkDir}/ant/build_termharvester.xml</String>
 								</field>
 								<field name="ditaParams">
 									<list>
@@ -281,7 +281,7 @@
 									<null/>
 								</field>
 								<field name="name">
-									<String>Jung Terminology Termextractor</String>
+									<String>Jung Terminology Terminology Harvester</String>
 								</field>
 								<field name="baseURL">
 									<null/>
