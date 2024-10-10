@@ -347,7 +347,7 @@
 													<String>${i18n(term.move.element.up_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/up_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/up_24.png</String>
 												</field>
 												<field name="smallIconPath">
 													<String>${framework}/frameworks/termentry/icons/up_16.png</String>
@@ -417,7 +417,7 @@
 													<String>${i18n(term.move.element.down_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/down_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/down_24.png</String>
 												</field>
 												<field name="smallIconPath">
 													<String>${framework}/frameworks/termentry/icons/down_16.png</String>
@@ -487,10 +487,10 @@
 													<String>${i18n(term.element.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -549,10 +549,10 @@
 													<String>${i18n(term.termVariant.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -619,10 +619,10 @@
 													<String>${i18n(term.fullForm.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -769,10 +769,10 @@
 													<String>${i18n(term.abbreviation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -919,10 +919,10 @@
 													<String>${i18n(term.acronym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1069,10 +1069,10 @@
 													<String>${i18n(term.verb.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1219,10 +1219,10 @@
 													<String>${i18n(term.fullForm.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1281,10 +1281,10 @@
 													<String>${i18n(term.abbreviation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1343,10 +1343,10 @@
 													<String>${i18n(term.relatedTerm.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1405,10 +1405,10 @@
 													<String>${i18n(term.verb.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1467,10 +1467,10 @@
 													<String>${i18n(term.attribute.number.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1541,10 +1541,10 @@
 													<String>${i18n(term.attribute.case.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1615,10 +1615,10 @@
 													<String>${i18n(term.termVariant.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1677,10 +1677,10 @@
 													<String>${i18n(term.annotation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1771,10 +1771,10 @@
 													<String>${i18n(term.termContext.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1844,10 +1844,10 @@
 													<String>${i18n(term.termSource.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -1916,10 +1916,10 @@
 													<String>${i18n(term.antonyms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2038,10 +2038,10 @@
 													<String>${i18n(term.partsOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2158,10 +2158,10 @@
 													<String>${i18n(term.superordinateConcepts.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2278,10 +2278,10 @@
 													<String>${i18n(term.subordinateConcepts.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2398,10 +2398,10 @@
 													<String>${i18n(term.relatedTerms.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2518,10 +2518,10 @@
 													<String>${i18n(term.definition.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2594,10 +2594,10 @@
 													<String>${i18n(term.definition.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2656,10 +2656,10 @@
 													<String>${i18n(term.equation-figure.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2746,10 +2746,10 @@
 													<String>${i18n(term.note.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2816,10 +2816,10 @@
 													<String>${i18n(term.partOfSpeech.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2886,10 +2886,10 @@
 													<String>${i18n(term.fig.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -2959,10 +2959,10 @@
 													<String>${i18n(term.concept-domains.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3031,10 +3031,10 @@
 													<String>${i18n(term.definitionSource.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3104,10 +3104,10 @@
 													<String>${i18n(term.sourceName.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3174,10 +3174,10 @@
 													<String>${i18n(term.sourceReference.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3268,10 +3268,10 @@
 													<String>${i18n(term.sourceName.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3362,10 +3362,10 @@
 													<String>${i18n(term.sourceReference.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3456,10 +3456,10 @@
 													<String>${i18n(term.agreedWith.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3528,10 +3528,10 @@
 													<String>${i18n(term.relations.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3598,10 +3598,10 @@
 													<String>${i18n(term.definitionSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3660,10 +3660,10 @@
 													<String>${i18n(term.annotation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3722,10 +3722,10 @@
 													<String>${i18n(term.termContext.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3784,10 +3784,10 @@
 													<String>${i18n(term.termSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3846,10 +3846,10 @@
 													<String>${i18n(term.relations.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3924,10 +3924,10 @@
 													<String>${i18n(term.antonyms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -3986,10 +3986,10 @@
 													<String>${i18n(term.partsOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4048,10 +4048,10 @@
 													<String>${i18n(term.superordinateConcepts.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4110,10 +4110,10 @@
 													<String>${i18n(term.subordinateConcepts.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4172,10 +4172,10 @@
 													<String>${i18n(term.relatedTerms.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4234,10 +4234,10 @@
 													<String>${i18n(term.antonym.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4291,10 +4291,10 @@
 													<String>${i18n(term.partOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4348,10 +4348,10 @@
 													<String>${i18n(term.superordinateConcept.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4405,10 +4405,10 @@
 													<String>${i18n(term.subordinateConcept.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4462,10 +4462,10 @@
 													<String>${i18n(term.relatedTerm.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4519,10 +4519,10 @@
 													<String>${i18n(term.termRelation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4581,10 +4581,10 @@
 													<String>${i18n(term.termCommitteeMember.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4675,10 +4675,10 @@
 													<String>${i18n(term.agreedWith.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4737,10 +4737,10 @@
 													<String>${i18n(term.termCommitteeMember.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4793,16 +4793,16 @@
 													<String>term.concept-domain.add</String>
 												</field>
 												<field name="name">
-													<String>${i18n(term.domain.add)}</String>
+													<String>${i18n(term.concept-domain.add)}</String>
 												</field>
 												<field name="description">
 													<String>${i18n(term.concept-domain.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4893,10 +4893,10 @@
 													<String>${i18n(term.concept-domain.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -4955,10 +4955,10 @@
 													<String>${i18n(term.partOfSpeech.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5017,10 +5017,10 @@
 													<String>${i18n(term.termNotation.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5079,10 +5079,10 @@
 													<String>${i18n(term.fig.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5141,10 +5141,10 @@
 													<String>${i18n(term.note.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5203,7 +5203,7 @@
 													<String>${i18n(term.keyref.termRelation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_24.png</String>
 												</field>
 												<field name="smallIconPath">
 													<String>${framework}/framework/icons/link_16.png</String>
@@ -5260,10 +5260,10 @@
 													<String>${i18n(term.imageReference.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5317,10 +5317,10 @@
 													<String>${i18n(term.image.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5379,10 +5379,10 @@
 													<String>${i18n(term.fullForm.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5445,10 +5445,10 @@
 													<String>${i18n(term.verb.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5511,10 +5511,10 @@
 													<String>${i18n(term.acronym.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5577,10 +5577,10 @@
 													<String>${i18n(term.abbreviation.renameTo)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/replace-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5643,10 +5643,10 @@
 													<String>${i18n(term.instancesOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5763,10 +5763,10 @@
 													<String>${i18n(term.instanceOf.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5820,10 +5820,10 @@
 													<String>${i18n(term.instancesOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -5882,7 +5882,7 @@
 													<String>${i18n(term.termRelation.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_24.png</String>
 												</field>
 												<field name="smallIconPath">
 													<String>${framework}/framework/icons/link_16.png</String>
@@ -5939,7 +5939,7 @@
 													<String>${i18n(term.open.termRelation_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_24.png</String>
 												</field>
 												<field name="smallIconPath">
 													<String>${framework}/framework/icons/link_16.png</String>
@@ -6062,10 +6062,10 @@
 													<String>${i18n(term.superordinateConcept.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6124,10 +6124,10 @@
 													<String>${i18n(term.instanceOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6186,10 +6186,10 @@
 													<String>${i18n(term.antonym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6248,10 +6248,10 @@
 													<String>${i18n(term.partOf.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6310,10 +6310,10 @@
 													<String>${i18n(term.subordinateConcept.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6372,10 +6372,10 @@
 													<String>${i18n(term.acronym.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6434,10 +6434,10 @@
 													<String>${i18n(term.equation-figure.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6496,10 +6496,10 @@
 													<String>${i18n(term.alt.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6558,10 +6558,10 @@
 													<String>${i18n(term.alt.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6628,10 +6628,10 @@
 													<String>${i18n(term.termContextText.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6706,10 +6706,10 @@
 													<String>${i18n(term.termContextSource.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6768,10 +6768,10 @@
 													<String>${i18n(term.termContextText.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -6895,7 +6895,7 @@
 													<String></String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/link_20.png</String>
+													<String>${framework}/framework/icons/link_24.png</String>
 												</field>
 												<field name="smallIconPath">
 													<String>${framework}/framework/icons/link_16.png</String>
@@ -6957,10 +6957,10 @@
 													<String>${i18n(term.altDefinition.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7033,10 +7033,10 @@
 													<String>${i18n(term.altDefinition.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7095,10 +7095,10 @@
 													<String>${i18n(term.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/rename-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/rename-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7157,10 +7157,10 @@
 													<String>${i18n(term.renameTo_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/replace-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/replace-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7219,10 +7219,10 @@
 													<String>${i18n(term.url.reference_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/html5-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/html5-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7363,10 +7363,10 @@
 													<String>${i18n(term.term-domains.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7435,10 +7435,10 @@
 													<String>${i18n(term.antonym.add_description)} href</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7559,10 +7559,10 @@
 													<String>${i18n(term.concept-domains.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7621,10 +7621,10 @@
 													<String>${i18n(term.term-domains.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/delete_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7683,10 +7683,10 @@
 													<String>${i18n(term.term-domain.add_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/framework/icons/add_20.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/framework/icons/add_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7777,10 +7777,10 @@
 													<String>${i18n(term.term-domain.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete_24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>

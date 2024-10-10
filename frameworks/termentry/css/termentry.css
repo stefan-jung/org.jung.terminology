@@ -258,6 +258,7 @@
             label, '${i18n(term.relations)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.antonyms.add'),
@@ -311,6 +312,7 @@
            label, '${i18n(term.definitionSource)}',
            transparent, 'true',
            fontInherit, 'true',
+           actionStyle, 'both',
            actions,
            oxy_action_list(
                oxy_action(id, 'term.sourceName.add'),
@@ -340,6 +342,7 @@
             label, '${i18n(term.equation-figure)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.equation-figure.delete')
@@ -367,6 +370,7 @@
             label, '${i18n(term.fig)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.fig.delete')
@@ -386,6 +390,7 @@
         label, '${i18n(term.image)}',
         transparent, 'true',
         fontInherit, 'true',
+        actionStyle, 'both',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.imageReference.add'),
@@ -410,6 +415,7 @@
         label, '${i18n(term.alt)}',
         transparent, 'true',
         fontInherit, 'true',
+        actionStyle, 'both',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.alt.delete')
@@ -426,6 +432,7 @@
             label, '${i18n(term.termSource)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.sourceName.add'),
@@ -446,6 +453,7 @@
         label, '${i18n(term.sourceName)}',
         transparent, 'true',
         fontInherit, 'true',
+        actionStyle, 'both',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.sourceReference.renameTo'),
@@ -463,6 +471,7 @@
             label, '${i18n(term.sourceReference)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.sourceName.renameTo'),
@@ -528,6 +537,7 @@
         label, '${i18n(term.annotation)}',
         transparent, 'true',
         fontInherit, 'true',
+        actionStyle, 'both',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.annotation.delete')
@@ -544,6 +554,7 @@
             label, '${i18n(term.termContext)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.termContextText.add'),
@@ -561,6 +572,7 @@
             label, '${i18n(term.termContextSource)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.sourceName.add'),
@@ -593,6 +605,7 @@
             label, '${i18n(term.partOfSpeech)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.partOfSpeech.delete')
@@ -646,6 +659,7 @@
             label, '${i18n(term.termLevel)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.abbreviation.add'),
@@ -685,6 +699,7 @@
             label, '${i18n(term.concept-domains)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.concept-domain.add'),
@@ -702,6 +717,7 @@
             label, '${i18n(term.term-domains)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.term-domain.add'),
@@ -719,6 +735,7 @@
             label, '${i18n(term.concept-domain)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.concept-domain.add'),
@@ -745,6 +762,7 @@
             label, '${i18n(term.term-domain)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.term-domain.add'),
@@ -773,6 +791,7 @@
             label, '${i18n(term.agreedWith)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.termCommitteeMember.add'),
@@ -809,6 +828,7 @@
         label, '${i18n(term.termCommitteeMember)}',
         transparent, 'true',
         fontInherit, 'true',
+        actionStyle, 'both',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.termCommitteeMember.add'),
@@ -841,6 +861,7 @@
                 "),
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.abbreviation.add'),
@@ -1047,6 +1068,7 @@
             label, '${i18n(term.termVariant)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.termSource.add'),
@@ -1121,6 +1143,7 @@
                 label, '${i18n(term.antonyms)}',
                 transparent, 'true',
                 fontInherit, 'true',
+                actionStyle, 'both',
                 actions,
                 oxy_action_list(
                     oxy_action(id, 'term.antonym.add.href'),
@@ -1137,6 +1160,7 @@
                 label, '${i18n(term.antonyms)}',
                 transparent, 'true',
                 fontInherit, 'true',
+                actionStyle, 'both',
                 actions,
                 oxy_action_list(
                     oxy_action(id, 'term.antonym.add'),
@@ -1157,6 +1181,7 @@
             label, '${i18n(term.antonym)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.antonym.add'),
@@ -1174,6 +1199,7 @@
             label, '${i18n(term.instancesOf)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.instanceOf.add'),
@@ -1193,6 +1219,7 @@
             label, '${i18n(term.instanceOf)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.instanceOf.add'),
@@ -1210,6 +1237,7 @@
         label, '${i18n(term.partsOf)}',
         transparent, 'true',
         fontInherit, 'true',
+        actionStyle, 'both',
         actions,
         oxy_action_list(
             oxy_action(id, 'term.partOf.add'),
@@ -1227,6 +1255,7 @@
             label, '${i18n(term.partOf)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.partOf.add'),
@@ -1244,6 +1273,7 @@
             label, '${i18n(term.superordinateConcepts)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.superordinateConcept.add'),
@@ -1261,6 +1291,7 @@
             label, '${i18n(term.superordinateConcept)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.superordinateConcept.add'),
@@ -1296,6 +1327,7 @@
             label, '${i18n(term.subordinateConcepts)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.subordinateConcept.add'),
@@ -1313,6 +1345,7 @@
             label, '${i18n(term.subordinateConcept)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.subordinateConcept.add'),
@@ -1330,6 +1363,7 @@
             label, '${i18n(term.relatedTerms)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.relatedTerm.add'),
@@ -1347,6 +1381,7 @@
             label, '${i18n(term.relatedTerm)}',
             transparent, 'true',
             fontInherit, 'true',
+            actionStyle, 'both',
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.relatedTerm.add'),
