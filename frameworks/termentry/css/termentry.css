@@ -60,6 +60,7 @@
 *[class~="termentry/annotation"],
 *[class~="termentry/definition"],
 *[class~="termentry/definitionSource"],
+*[class~="termentry/domains"],
 *[class~="termentry/termContextSource"],
 *[class~="termentry/termNotation"],
 *[class~="termentry/termSource"],
@@ -89,6 +90,7 @@
 *[class~="termentry/annotation"]:before(10),
 *[class~="termentry/definition"]:before(10),
 *[class~="termentry/definitionSource"]:before(10),
+*[class~="termentry/domains"]:before(10),
 *[class~="termentry/termNotation"]:before(10),
 *[class~="termentry/termSource"]:before(10),
 *[class~="topic/fig"]:before(10), 
@@ -102,12 +104,11 @@
     display: block;
     font-size: 10px;
     font-weight: bold;
-    margin-bottom: 2px;
-    padding-bottom: 3px;
+    margin-bottom: 2px; 
+    padding-top: 5px; /* This is to fix the appearance of the block in Content Fusion. */
+    padding-bottom: 5px; /* This is to fix the appearance of the block in Content Fusion. */
     padding-left: 5px;
-    /*height: 15px !important; /\* This is to fix the appearance of the block in Content Fusion. *\/*/
-    line-height: 15px;
-    padding-top: 2px; /* This is to create a gap between the flag icon and the border. */
+    line-height: 15px; /* This is to fix the appearance of the block in Content Fusion. */
 }
 
 /******************************************************************************************
@@ -698,30 +699,6 @@
                 oxy_action(id, 'term.domains.delete')
             )
         );
-    background-color: rgba(240, 240, 240, 0.3);
-    border-bottom: 0.05rem solid #767676;
-    display: block;
-    font-size: 10px;
-    font-weight: bold;
-    margin-bottom: 2px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-}
-*[class~="termentry/domains"] {
-    -oxy-display-tags: none;
-    -oxy-editable: true;
-    -oxy-show-placeholder: always;
-    border-color: #3d3d3d;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 0.05rem;
-    display: block;
-    font-family: Arial, sans-serif;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    width: 99% !important;
 }
 
 /*********************************************
