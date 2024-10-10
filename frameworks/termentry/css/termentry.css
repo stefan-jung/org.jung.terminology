@@ -111,7 +111,7 @@
     font-weight: bold;
     margin-bottom: 2px; 
     padding-top: 5px; /* This is to fix the appearance of the block in Content Fusion. */
-    padding-bottom: 5px; /* This is to fix the appearance of the block in Content Fusion. */
+    padding-bottom: 15px; /* This is to fix the appearance of the block in Content Fusion. In Oxygen XML this looks bigger as in Content Fusion. It's a visual compromise. */
     padding-left: 5px;
     height: 15px; /* This is to fix the appearance of the block in Content Fusion. */
     line-height: 15px; /* This is to fix the appearance of the block in Content Fusion. */
@@ -201,6 +201,20 @@
     font-size: 10px;
 }
 
+/******************************************************************************************
+ * Common properties for the 'headings' "Concept Level", "Term Level" and "Term Relations"
+ ******************************************************************************************/
+*[class~="termentry/termentry"] > *[class~="topic/title"]:after,
+*[class~="termentry/partOfSpeech"]:after,
+*[class~="termentry/termBody"]:after {
+    border-bottom: 0.05rem solid #767676;
+    display: block;
+    font-size: 16px !important;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 16px;
+    padding-bottom: 5px;
+}
 
 /*********************************************
  * TERMENTRY
@@ -235,7 +249,6 @@
     font-weight: bold;
 }
 *[class~="termentry/termentry"] > *[class~="topic/title"]:after {
-    border-bottom: 0.05rem solid #767676;
     content:
         oxy_buttonGroup(
             label, '${i18n(term.conceptLevel)}',
@@ -253,11 +266,6 @@
                 oxy_action(id, 'term.domains.add')
             )
         );
-    display: block;
-    font-size: 16px;
-    margin-bottom: 2px;
-    margin-top: 16px;
-    padding-bottom: 5px;
 }
 
 /*********************************************
@@ -267,29 +275,22 @@
     margin-top: 2.0em;
 }
 *[class~="termentry/termBody"]:after {
-    border-bottom: 0.05rem solid #767676;
     content:
-    oxy_buttonGroup(
-        label, '${i18n(term.relations)}',
-        transparent, 'true',
-        fontInherit, 'true',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.antonyms.add'),
-            oxy_action(id, 'term.partsOf.add'),
-            oxy_action(id, 'term.instancesOf.add'),
-            oxy_action(id, 'term.superordinateConcepts.add'),
-            oxy_action(id, 'term.subordinateConcepts.add'),
-            oxy_action(id, 'term.relatedTerms.add'),
-            oxy_action(id, 'term.relations.delete')
-        )
-    );
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 2px;
-    margin-top: 2em !important;
-    padding-bottom: 5px;
+        oxy_buttonGroup(
+            label, '${i18n(term.relations)}',
+            transparent, 'true',
+            fontInherit, 'true',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.antonyms.add'),
+                oxy_action(id, 'term.partsOf.add'),
+                oxy_action(id, 'term.instancesOf.add'),
+                oxy_action(id, 'term.superordinateConcepts.add'),
+                oxy_action(id, 'term.subordinateConcepts.add'),
+                oxy_action(id, 'term.relatedTerms.add'),
+                oxy_action(id, 'term.relations.delete')
+            )
+        );
 }
 *[class~="termentry/termBody"]:after(2) {
     content:
@@ -660,13 +661,7 @@
 }
 
 /* This is a trick to simulate the term-level. */
-*[class~="termentry/partOfSpeech"]:after(100) {
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 0.05rem solid #767676;
-    font-size: 16px;
-    font-weight: bold;
+*[class~="termentry/partOfSpeech"]:after {
     content:
         oxy_buttonGroup(
             label, '${i18n(term.termLevel)}',
