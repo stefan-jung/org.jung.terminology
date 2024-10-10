@@ -105,6 +105,8 @@
     margin-bottom: 2px;
     padding-bottom: 3px;
     padding-left: 5px;
+    height: 15px !important; /* This is to fix the appearance of the block in Content Fusion. */
+    padding-top: 2px; /* This is to create a gap between the flag icon and the border. */
 }
 
 /******************************************************************************************
