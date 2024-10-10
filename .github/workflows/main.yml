@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: 'zulu'
@@ -43,7 +43,7 @@ jobs:
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.2.3 --processing-mode=strict --verbose
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: org.jung.terminology-4-2-3
           path: |
@@ -52,52 +52,12 @@ jobs:
             !4.2.3/**/*.js
             !4.2.3/**/*.css
 
-  dita-ot_4-2-1:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Java 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: 'zulu'
-      - name: DITA-OT
-        run: |
-          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.2.1/dita-ot-4.2.1.zip
-          unzip -q dita-ot-4.2.1
-          chmod +x dita-ot-4.2.1/bin/dita
-          chmod +x dita-ot-4.2.1/bin/ant
-          rsync -aq --exclude='dita-ot-4.2.1' --exclude='.git' . dita-ot-4.2.1/plugins/org.jung.terminology
-          rsync -aq webhelp-dummy-plugin/ dita-ot-4.2.1/plugins/org.jung.terminology-webhelp-dummy-plugin
-          dita-ot-4.2.1/bin/dita --install
-          dita-ot-4.2.1/bin/dita transtypes 
-      - name: Build test files
-        run: |
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.2.1 --processing-mode=strict --verbose
-          dita-ot-4.2.1/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.2.1 --processing-mode=strict --verbose
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: org.jung.terminology-4-2-1
-          path: |
-            4.2.1
-            !4.2.1/**/*.html
-            !4.2.1/**/*.js
-            !4.2.1/**/*.css
-
   dita-ot_4-1-2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Use Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: 'zulu'
@@ -123,7 +83,7 @@ jobs:
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.1.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: org.jung.terminology-4-1-2
           path: |
@@ -137,7 +97,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: 'zulu'
@@ -162,7 +122,7 @@ jobs:
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.0.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: org.jung.terminology-4-0-2
           path: |
@@ -176,7 +136,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use Java 17
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: 17
           distribution: 'zulu'
@@ -201,7 +161,7 @@ jobs:
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=3.7.4 --processing-mode=strict --verbose
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: org.jung.terminology-3-7-4
           path: |

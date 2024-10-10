@@ -173,7 +173,7 @@
         <xsl:param name="languageCode" as="xs:string"/>
         <!-- The ID has to be a unique valid NMTOKEN -->
         <!--<xsl:variable name="newID" select="replace(concat(concat($notRecommendedTerm, $id), $languageCode), '[^A-Za-z0-9,.-]','')"/>-->
-        <xsl:sequence select="replace($notRecommendedTerm || '-' || $id || '-' || $languageCode, '[^A-Za-z0-9,.-]','')"/>
+        <xsl:sequence select="replace($notRecommendedTerm || '-' || $id || '-' || $languageCode, '[^A-Za-z0-9,.-]', '')"/>
     </xsl:function>
 
 </xsl:stylesheet>
