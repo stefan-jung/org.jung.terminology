@@ -19,7 +19,9 @@
     
     <!-- Edges -->
     <!-- NOTE: Color codes are NOT suffixed with a semicolon. Write '#96c3ff', not '#96c3ff;'. -->
-    <xsl:param name="term.semantic-net.edges.color" as="xs:string" select="'#5a6e82'"/>
+    <xsl:param name="term.semantic-net.edges.color.color" as="xs:string" select="'#5a6e82'"/>
+    <xsl:param name="term.semantic-net.edges.color.highlight" as="xs:string" select="'#7c6fff'"/>
+    <xsl:param name="term.semantic-net.edges.color.hover" as="xs:string" select="'#1800ff'"/>
     <xsl:param name="term.semantic-net.edges.width" as="xs:string" select="'1'"/>
     
     <!-- Layout -->
@@ -128,10 +130,37 @@
                 edges: {
                     width: <xsl:value-of select="$term.semantic-net.edges.width"/>,
                     arrows: 'to',
-                    color: '<xsl:value-of select="$term.semantic-net.edges.color"/>'
+                    color: {
+                        color: '<xsl:value-of select="$term.semantic-net.edges.color.color"/>',
+                        highlight: '<xsl:value-of select="$term.semantic-net.edges.color.highlight"/>',
+                        hover: '<xsl:value-of select="$term.semantic-net.edges.color.hover"/>',
+                    }
                 },
                 layout: {
                     improvedLayout: <xsl:value-of select="$term.semantic-net.layout.improvedLayout"/>
+                },
+                nodes: {
+                    borderWidth: '<xsl:value-of select="$term.semantic-net.term.border.width"/>',
+                    borderWidthSelected: '<xsl:value-of select="$term.semantic-net.term.border.width.selected"/>',
+                    radius: 1500,
+                    color: {
+                        border: '<xsl:value-of select="$term.semantic-net.term.border.color"/>',
+                        background: '<xsl:value-of select="$term.semantic-net.term.background"/>',
+                        hover: {
+                            border: '<xsl:value-of select="$term.semantic-net.term.hover.border"/>',
+                            background: '<xsl:value-of select="$term.semantic-net.term.hover.background"/>',
+                        },
+                        highlight: {
+                            border: '<xsl:value-of select="$term.semantic-net.term.highlight.border"/>',
+                            background: '<xsl:value-of select="$term.semantic-net.term.highlight.background"/>',
+                        }
+                    },
+                    font: {
+                        color: '<xsl:value-of select="$term.semantic-net.term.font.color"/>',
+                        size: <xsl:value-of select="$term.semantic-net.term.font.size"/>,
+                        face: '<xsl:value-of select="$term.semantic-net.term.font.face"/>'
+                    },
+                    shape: 'box'
                 },
                 physics: {
                     forceAtlas2Based: {
@@ -147,31 +176,6 @@
                         enabled: <xsl:value-of select="$term.semantic-net.physics.stabilization.enabled"/>,
                         iterations: <xsl:value-of select="$term.semantic-net.physics.stabilization.iterations"/>,
                         updateInterval: <xsl:value-of select="$term.semantic-net.physics.stabilization.updateInterval"/>
-                    }
-                },
-                groups: {
-                    term: {
-                        borderWidth: '<xsl:value-of select="$term.semantic-net.term.border.width"/>',
-                        borderWidthSelected: '<xsl:value-of select="$term.semantic-net.term.border.width.selected"/>',
-                        radius: 1500,
-                        color: {
-                            border: '<xsl:value-of select="$term.semantic-net.term.border.color"/>',
-                            background: '<xsl:value-of select="$term.semantic-net.term.background"/>',
-                            hover: {
-                                border: '<xsl:value-of select="$term.semantic-net.term.hover.border"/>',
-                                background: '<xsl:value-of select="$term.semantic-net.term.hover.background"/>',
-                            },
-                            highlight: {
-                                border: '<xsl:value-of select="$term.semantic-net.term.highlight.border"/>',
-                                background: '<xsl:value-of select="$term.semantic-net.term.highlight.background"/>',
-                            }
-                        },
-                        font: {
-                            color: '<xsl:value-of select="$term.semantic-net.term.font.color"/>',
-                            size: <xsl:value-of select="$term.semantic-net.term.font.size"/>,
-                            face: '<xsl:value-of select="$term.semantic-net.term.font.face"/>'
-                        },
-                        shape: 'box'
                     }
                 }
             };
@@ -245,10 +249,6 @@
     </xsl:template>
     
     <!-- Generate data set for autocomplete search box -->
-    <!--
-        TODO: Populate also the @keys (which are used as term node IDs) to the search function, otherwise the search does not work.
-        See how to do that here: https://jqueryui.com/autocomplete/#custom-data
-    -->
     <xsl:template match="*[contains(@class, ' termmap/termref ')]" mode="semantic-net-search">
         <xsl:variable name="filename" select="@href" as="xs:string"/>
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
@@ -264,7 +264,7 @@
         <xsl:variable name="filepath" select="'file:///' || encode-for-uri(replace($temp.dir, '\\', '/')) || '/' || $filename"/>
         <xsl:variable name="label" select="sj:jsonEscape(document($filepath)/termentry/title[1]/text()[1])"/>
         <xsl:variable name="delim" select="if (following-sibling::*[contains(@class, ' termmap/termref ')]) then ', ' else ' '" as="xs:string"/>
-        <xsl:value-of select="'{id: ''' || $termId || ''', group: ''term'', label: ''' || $label || '''}' || $delim"/>
+        <xsl:value-of select="'{id: ''' || $termId || ''', label: ''' || $label || '''}' || $delim"/>
     </xsl:template>
     
     <!-- Generate edges between nodes -->

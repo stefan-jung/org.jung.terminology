@@ -952,8 +952,9 @@
       <val default="true">false</val>
       <val>true</val>
     </param>
-    <param name="generate-termstats" required="false" desc="Set this parameter to force the generation of a terminology statistics XML file. Usually the transtype tries to auto-detect if this should be done. The condition is fulfilled, if the transtype is 'termbrowser-responsive' and a &lt;termstatsref&gt; element needs to be available on the terminology map. But this does not work, if the transtype has been extended." type="enum">
-      <val>true</val>
+    
+    <param name="generate-termstats" desc="Set this parameter to force the generation of a terminology statistics XML file. Usually the transtype tries to auto-detect if this should be done. The condition is fulfilled, if the transtype is 'termbrowser-responsive' and a &lt;termstatsref&gt; element needs to be available on the terminology map. But this does not work, if the transtype has been extended." type="enum">
+      <val default="true">true</val>
       <val>false</val>
     </param>
     <param name="args.termstats" desc="Terminology statistics XML file from previous build" type="file"/>
@@ -961,21 +962,14 @@
       <val default="true">true</val>
       <val>false</val>
     </param>
-    <param name="term.semantic-net.edges.color" desc="Color of semantic net edges" type="string">
-      <val default="true">orange</val>
-    </param>
+    
+    <!-- Semantic net edges -->
+    <param name="term.semantic-net.edges.color.color" desc="Color of semantic net edges" type="string"/>
+    <param name="term.semantic-net.edges.color.highlight" desc="Color of semantic net edges when highlighted" type="string"/>
+    <param name="term.semantic-net.edges.color.hover" desc="Color of semantic net edges when hovered" type="string"/>
     <param name="term.semantic-net.edges.width" desc="Width of semantic net edges" type="string"/>
     
-    <param name="term.semantic-net.physics.stabilization.enabled" desc="Toggle the stabilization. This is an optional property. If undefined, it is automatically set to true when any of the properties of this object are defined." type="enum">
-      <val default="true">true</val>
-      <val>false</val>
-    </param>
-    <param name="term.semantic-net.physics.stabilization.iterations" desc="The physics module tries to stabilize the network on load up til a maximum number of iterations defined here. If the network stabilized with less, you are finished before the maximum number." type="string">
-      <val default="true">1000</val>
-    </param>
-    <param name="term.semantic-net.physics.stabilization.updateInterval" desc="When stabilizing, the DOM can freeze. You can chop the stabilization up into pieces to show a loading bar for instance. The interval determines after how many iterations the stabilizationProgress event is triggered." type="string">
-      <val default="true">50</val>
-    </param>
+    <!-- Semantic net physics -->
     <param name="term.semantic-net.physics.forceAtlas2Based.gravitationalConstant" desc="This is similar to the barnesHut method except that the falloff is linear instead of quadratic. The connectivity is also taken into account as a factor of the mass. If you want the repulsion to be stronger, decrease the value (so -1000, -2000)." type="string">
       <val default="true">-50</val>
     </param>
@@ -988,19 +982,42 @@
     <param name="term.semantic-net.physics.forceAtlas2Based.springConstant" desc="This is how 'sturdy' the springs are. Higher values mean stronger springs." type="string">
       <val default="true">0.08</val>
     </param>
+    <param name="term.semantic-net.physics.stabilization.enabled" desc="Toggle the stabilization. This is an optional property. If undefined, it is automatically set to true when any of the properties of this object are defined." type="enum">
+      <val default="true">true</val>
+      <val>false</val>
+    </param>
+    <param name="term.semantic-net.physics.stabilization.iterations" desc="The physics module tries to stabilize the network on load up til a maximum number of iterations defined here. If the network stabilized with less, you are finished before the maximum number." type="string">
+      <val default="true">1000</val>
+    </param>
+    <param name="term.semantic-net.physics.stabilization.updateInterval" desc="When stabilizing, the DOM can freeze. You can chop the stabilization up into pieces to show a loading bar for instance. The interval determines after how many iterations the stabilizationProgress event is triggered." type="string">
+      <val default="true">50</val>
+    </param>
     
-    <param name="term.semantic-net.term.border" desc="Semantic net term node border" type="string">
+    <!-- Semantic net term -->
+    <param name="term.semantic-net.term.border.color" desc="Semantic net term node border color" type="string">
+      <val default="true">#96c3ff</val>
+    </param>
+    <param name="term.semantic-net.term.border.width" desc="Semantic net term node border width" type="string">
       <val default="true">1</val>
     </param>
-    <param name="term.semantic-net.term.background" desc="Semantic net term node background" type="string">
-      <val default="true">yellow</val>
+    <param name="term.semantic-net.term.border.width.selected" desc="Semantic net selected term node border width" type="string">
+      <val default="true">1</val>
     </param>
-    <param name="term.semantic-net.term.font.color" desc="Semantic net term node font color" type="string">
-      <val default="true">#1471bb</val>
-    </param>
+    <param name="term.semantic-net.term.background" desc="Semantic net term node background" type="string"/>
+    <param name="term.semantic-net.term.font.color" desc="Semantic net term node font color" type="string"/>
     <param name="term.semantic-net.term.font.size" desc="Semantic net term node font size in px. Use only a digit." type="string">
       <val default="true">9</val>
     </param>
+    <param name="term.semantic-net.term.font.face" desc="Semantic net term node font face." type="string">
+      <val default="true">9</val>
+    </param>
+    <param name="term.semantic-net.term.hover.border" desc="Semantic net term hover border." type="string"/>
+    <param name="term.semantic-net.term.hover.background" desc="Semantic net term hover background." type="string"/>
+    <param name="term.semantic-net.term.hover.fontColor" desc="Semantic net term hover font color." type="string"/>
+    <param name="term.semantic-net.term.highlight.border" desc="Semantic net highlighted term border." type="string"/>
+    <param name="term.semantic-net.term.highlight.background" desc="Semantic net highlighted term background." type="string"/>
+    <param name="term.semantic-net.term.highlight.fontColor" desc="Semantic net highlighted term font color." type="string"/>
+    
   </transtype>
   
 </plugin>

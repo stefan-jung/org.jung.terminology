@@ -12,6 +12,9 @@
       <param name="webhelp.publishing.template" path="../publishing"/>
       <param name="webhelp.publishing.template.descriptor" value="termbrowser.opt"/>
       <param name="args.termstats" href="termstats.xml"/>
+      <param name="term.semantic-net.term.border.color" value="#b1ff00"/>
+      <param name="term.semantic-net.term.background" value="red"/>
+      <param name="term.semantic-net.physics.forceAtlas2Based.springLength" value="500"/>
     </publication>
   </deliverable>
   
