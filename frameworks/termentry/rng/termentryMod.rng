@@ -357,8 +357,9 @@
           <value>sl</value><a:documentation>Slovenian</a:documentation>
           <value>sq-AL</value><a:documentation>Albanian - Albania</a:documentation>
           <value>sq</value><a:documentation>Albanian</a:documentation>
-          <value>sr-RS</value><a:documentation>Serbian - Serbia</a:documentation>
           <value>sr</value><a:documentation>Serbian</a:documentation>
+          <value>sr-Latn-RS</value><a:documentation>Serbian (Latin) - Serbia</a:documentation>
+          <value>sr-RS</value><a:documentation>Serbian - Serbia</a:documentation>
           <value>sv-FI</value><a:documentation>Swedish - Finland</a:documentation>
           <value>sv-SE</value><a:documentation>Swedish - Sweden</a:documentation>
           <value>sv</value><a:documentation>Swedish</a:documentation>
