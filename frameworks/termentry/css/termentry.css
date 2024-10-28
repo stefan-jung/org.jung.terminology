@@ -8,7 +8,6 @@
     font-size: 10pt;
 }
 
-
 /*********************************************
  * Dark Theme
  *********************************************/
@@ -216,6 +215,14 @@
     text-decoration-line: none;
     text-decoration-style: solid;*/
     width: 768px;
+}
+*[class~="termentry/termentry"]:after {
+    content: "org.jung.terminology is developed with ♥️ by Stefan Jung";
+    link: url('https://stefan-jung.org/plugins/terminology');
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 9px;
 }
 *[class~="termentry/termentry"] > *[class~="topic/title"] {
     -oxy-display-tags: none;
