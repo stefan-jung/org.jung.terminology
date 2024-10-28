@@ -1360,12 +1360,16 @@
           <ref name="termVariant"/>
         </zeroOrMore>
         <optional>
-          <choice>
-            <ref name="term-domains"/>
-            <ref name="annotation"/>
-            <ref name="termContext"/>
-            <ref name="termSource"/>
-          </choice>
+          <ref name="term-domains"/>
+        </optional>
+        <optional>
+          <ref name="annotation"/>
+        </optional>
+        <optional>
+          <ref name="termContext"/>
+        </optional>
+        <optional>
+          <ref name="termSource"/>
         </optional>
       </define>
     </div>
