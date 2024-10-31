@@ -876,10 +876,11 @@
                 oxy_action(id, 'term.fullForm.add'),
                 oxy_action(id, 'term.verb.add'),
                 oxy_action(id, 'term.term-domains.add'),
+                oxy_action(id, 'term.fullForm.renameTo'),
                 oxy_action(id, 'term.abbreviation.renameTo'),
                 oxy_action(id, 'term.acronym.renameTo'),
                 oxy_action(id, 'term.verb.renameTo'),
-                oxy_action(id, 'term.fullForm.delete')
+                oxy_action(id, 'term.termNotation.delete')
             )
         )
         "   "

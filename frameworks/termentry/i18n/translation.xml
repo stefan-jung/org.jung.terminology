@@ -518,23 +518,31 @@
     </key>
 
     <!-- term-domains -->
-    <key value="term.term-domains">
+    <key value="term.termdomains">
         <val lang="en_US">Term Domains</val>
         <val lang="de_DE">Term-Domänen</val>
     </key>
-    <key value="term.term-domains.add">
+    <key value="term.domains.add">
         <val lang="en_US">Add Domains</val>
         <val lang="de_DE">Domänen einfügen</val>
     </key>
-    <key value="term.term-domains.add_description">
+    <key value="term.termdomain">
+        <val lang="en_US">Term Domain</val>
+        <val lang="de_DE">Term-Domäne</val>
+    </key>
+    <key value="term.termdomain.add">
+        <val lang="en_US">Add new term domain</val>
+        <val lang="de_DE">Neue Term-Domäne einfügen</val>
+    </key>
+    <key value="term.termdomains.add_description">
         <val lang="en_US">Add Domains</val>
         <val lang="de_DE">Domänen einfügen</val>
     </key>
-    <key value="term.term-domains.delete">
+    <key value="term.termdomains.delete">
         <val lang="en_US">Delete Domains</val>
         <val lang="de_DE">Domänen löschen</val>
     </key>
-    <key value="term.term-domains.delete_description">
+    <key value="term.termdomains.delete_description">
         <val lang="en_US">Delete Domains</val>
         <val lang="de_DE">Domänen löschen</val>
     </key>
@@ -581,6 +589,16 @@
     <key value="term.term-domain.delete">
         <val lang="en_US">Delete Domain</val>
         <val lang="de_DE">Domäne löschen</val>
+    </key>
+    
+    <!-- termNotation -->
+    <key value="term.termNotation.delete">
+        <val lang="en_US">Delete term</val>
+        <val lang="de_DE">Term löschen</val>
+    </key>
+    <key value="term.termNotation.delete_description">
+        <val lang="en_US">Delete term</val>
+        <val lang="de_DE">Term löschen</val>
     </key>
 
     <!-- fullForm -->
@@ -1122,7 +1140,6 @@
         <val lang="en_US">Delete links to related terms</val>
         <val lang="de_DE">Links auf verwandte Begriffe löschen</val>
     </key>
-    
     <key value="term.termVariant">
         <val lang="en_US">Term</val>
         <val lang="de_DE">Term</val>
@@ -1206,10 +1223,6 @@
     <key value="term.developedBy">
         <val lang="en_US">Developed by</val>
         <val lang="de_DE">Entwickelt von</val>
-    </key>
-    <key value="term.termdomain">
-        <val lang="en_US">Term Domain</val>
-        <val lang="de_DE">Term Domain</val>
     </key>
     
     <!-- General Descriptions -->
