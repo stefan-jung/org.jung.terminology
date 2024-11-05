@@ -107,7 +107,7 @@
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
             <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
-            <incorrect-term ignorecase="true" severity="warning">
+            <incorrect-term ignorecase="true" severity="error">
                 <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
                 <xsl:for-each select="$root//*[contains(@class, ' termentry/termNotation ')][contains(@language, $language)][contains(@usage, 'preferred') or contains(@usage, 'admitted')]">
                     <suggestion format="text"><xsl:value-of select="normalize-space(./termVariant/text())"/></suggestion>
