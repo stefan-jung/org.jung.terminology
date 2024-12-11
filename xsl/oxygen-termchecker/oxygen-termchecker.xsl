@@ -76,43 +76,47 @@
         </xsl:apply-templates>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'preferred']" mode="preferred-term">
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'preferred']" mode="preferred-term" expand-text="yes">
         <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
             <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
             <incorrect-term ignorecase="true" severity="info">
-                <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
-                <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
+                <match type="whole-word">{./termVariant/text()}</match>
+                <message>{./termVariant/text() || ': ' || normalize-space(preceding::definitionText[1]/text())}</message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted']" mode="preferred-term">
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'admitted']" mode="preferred-term" expand-text="yes">
         <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
             <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
             <incorrect-term ignorecase="true" severity="info">
-                <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
-                <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
+                <match type="whole-word">{./termVariant/text()}</match>
+                <!-- Show the term also in the message, because in batch terminology validation, the user
+                    only sees the content of <message> in the Results view. -->
+                <message>{./termVariant/text() || ': ' || normalize-space(preceding::definitionText[1]/text())}</message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended']" mode="deprecated-term">
+    <xsl:template match="*[contains(@class, ' termentry/termNotation ')][@usage = 'notRecommended']" mode="deprecated-term" expand-text="yes">
         <xsl:param name="root" as="node()"/>
         <xsl:param name="language" as="xs:string"/>
         <xsl:if test="@language = $language">
             <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
             <incorrect-term ignorecase="true" severity="error">
-                <match type="whole-word"><xsl:value-of select="./termVariant/text()"/></match>
+                <match type="whole-word">{./termVariant/text()}</match>
                 <xsl:for-each select="$root//*[contains(@class, ' termentry/termNotation ')][contains(@language, $language)][contains(@usage, 'preferred') or contains(@usage, 'admitted')]">
-                    <suggestion format="text"><xsl:value-of select="normalize-space(./termVariant/text())"/></suggestion>
+                    <suggestion format="text">{normalize-space(./termVariant/text())}</suggestion>
                 </xsl:for-each>
-                <message><xsl:value-of select="'Definition: ' || normalize-space(preceding::definitionText[1]/text())"/></message>
+                <!-- Show the term also in the message, because in batch terminology validation, the user
+                    only sees the content of <message> in the Results view. -->
+                <message>{./termVariant/text() ||': ' || normalize-space(preceding::definitionText[1]/text())}</message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
