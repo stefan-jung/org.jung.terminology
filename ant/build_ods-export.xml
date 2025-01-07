@@ -36,7 +36,7 @@
         ================================================================================ 
     -->
     <property environment="env"/>
-    <property name="debugging.mode" value="true"/>
+    <property name="debugging.mode" value="false"/>
     <condition property="dbg">
         <equals arg1="${debugging.mode}" arg2="true"/>
     </condition>
@@ -87,7 +87,26 @@
         <copy file="../templates/export.ods" tofile="${ods-export.temp.dir}${file.separator}export.ods"/>
         
         <zip destfile="${ods-export.temp.dir}${file.separator}export.ods" basedir="${ods.dir}" compress="false" update="true"/>
-        <echo if:true="${debugging.mode}" message="+ [DEBUG] Created ODS file '${ods-export.temp.dir}${file.separator}export.ods'"/>
+        <echo message="Created ODS file '${ods-export.temp.dir}${file.separator}export.ods'"/>
+        
+        <!-- Open file -->
+        <condition property="linux">
+            <os family="unix"/>
+        </condition>
+        <exec if:true="${linux}" executable="xdg-open">
+            <arg value="${ods-export.temp.dir}${file.separator}export.ods"/>
+        </exec>
+        <condition property="windows">
+            <os family="windows"/>
+        </condition>
+        <exec if:true="${windows}" executable="cmd.exe">
+            <arg value="/c" />
+            <arg value="start" />
+            <arg value="" /> <!-- Empty argument for a new command window -->
+            <!--<arg value="path\\to\\your\\file"/>-->
+            <arg value="${ods-export.temp.dir}${file.separator}export.ods"/>
+        </exec>
+        
     </target>
 
 </project>
