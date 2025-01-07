@@ -66,8 +66,8 @@
         <mkdir dir="${ods.dir}"/>
         
         <!-- Extract the ODS template -->
-        <unzip src="../templates/export.ods" dest="${ods.dir}"/>
-        <echo if:true="${debugging.mode}" message="+ [DEBUG] Unzip ODS template in '${ods.dir}'"/>
+        <!--<unzip src="../templates/export.ods" dest="${ods.dir}"/>
+        <echo if:true="${debugging.mode}" message="+ [DEBUG] Unzip ODS template in '${ods.dir}'"/>-->
         
         <xslt 
             in="${termmap}"
@@ -84,7 +84,9 @@
         
         <!-- Create a valid ODS file from the ODS directory -->
         <!-- We must not compress the file -->
-        <zip destfile="${ods-export.temp.dir}${file.separator}export.ods" basedir="${ods.dir}" compress="false"/>
+        <copy file="../templates/export.ods" tofile="${ods-export.temp.dir}${file.separator}export.ods"/>
+        
+        <zip destfile="${ods-export.temp.dir}${file.separator}export.ods" basedir="${ods.dir}" compress="false" update="true"/>
         <echo if:true="${debugging.mode}" message="+ [DEBUG] Created ODS file '${ods-export.temp.dir}${file.separator}export.ods'"/>
     </target>
 
