@@ -9,7 +9,10 @@
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
     exclude-result-prefixes="xs math">
     
+    <xsl:param name="language" as="xs:string"/>
+    
     <xsl:template match="/">
+        <xsl:message select="'+ [DEBUG] language = ''' || $language || ''''"/>
         <office:document-content xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0"
             xmlns:css3t="http://www.w3.org/TR/css3-text/" xmlns:grddl="http://www.w3.org/2003/g/data-view#"
             xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

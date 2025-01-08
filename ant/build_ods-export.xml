@@ -36,7 +36,7 @@
         ================================================================================ 
     -->
     <property environment="env"/>
-    <property name="debugging.mode" value="false"/>
+    <property name="debugging.mode" value="true"/>
     <condition property="dbg">
         <equals arg1="${debugging.mode}" arg2="true"/>
     </condition>
@@ -49,6 +49,7 @@
     -->
     <target name="ods-export" depends="-temp.dir">
         <fail unless="termmap" message="The mandatory property 'termmap' is not set."/>
+        <fail unless="language" message="The mandatory property 'language' is not set."/>
         
         <!-- Subdirectory in the  temporary directory of the terminology plugin. -->
         <property name="ods-export.temp.dir" value="${jung.terminology.temp.dir}${file.separator}ods-export"/>
@@ -75,7 +76,7 @@
             style="../xsl/ods-export/ods-export.xsl">
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>
             <classpath refid="saxon"/>
-            <param name="language" expression="de-DE"/>
+            <param name="language" expression="${language}"/>
         </xslt>
         <echo if:true="${debugging.mode}" message="+ [DEBUG] Transform terminology to '${ods-export.temp.dir}${file.separator}ods.xml'"/>
         

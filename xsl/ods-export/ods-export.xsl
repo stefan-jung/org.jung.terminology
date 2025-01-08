@@ -21,7 +21,7 @@
     <xsl:import href="ods-root.xsl"/>
     
     <!-- Language to be exported. Unless set, all languages are exported. -->
-    <xsl:param name="language" as="xs:string" select="'de-DE'"/>
+    <xsl:param name="language" as="xs:string" select="'all'"/>
     
     <xsl:template match="*[(self::termref) and @href]">
         <xsl:variable name="docPath" select="resolve-uri(@href, base-uri())"/>
@@ -47,10 +47,10 @@
                     <text:p>{ancestor::termentry/title/text()}</text:p>
                 </table:table-cell>
                 <table:table-cell office:value-type="string" table:style-name="ce1">
-                    <text:p>{ancestor::termentry/definition/defintionText/text()}</text:p>
+                    <text:p>{ancestor::termentry/definition/definitionText/text()}</text:p>
                 </table:table-cell>
                 <table:table-cell office:value-type="string" table:style-name="ce1">
-                    <text:p>{ancestor::termentry/definition/defintionSource/text()}</text:p>
+                    <text:p>{ancestor::termentry/definition/definitionSource/text()}</text:p>
                 </table:table-cell>
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{@language}</text:p>
