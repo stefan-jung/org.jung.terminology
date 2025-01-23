@@ -1382,6 +1382,10 @@
 
 /*********************************************
  * RELATED TERM
+ * We cannot use the action term.relatedTerm.add
+ * here, because Oxygen drops the key reference in
+ * the preceding fullForm element and we cannot
+ * specify the insert position. 
  *********************************************/
 *[class~="termentry/relatedTerm"]:before(10) {
     content:
@@ -1392,7 +1396,6 @@
             actionStyle, 'both',
             actions,
             oxy_action_list(
-                oxy_action(id, 'term.relatedTerm.add'),
                 oxy_action(id, 'term.relatedTerm.delete')
             )
         );
@@ -1423,6 +1426,7 @@
 }
 *[class~="termentry/termRelation"]{
     -oxy-display-tags: none;
+    display: block;
 }
 
 /* Korean */
