@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <!-- Counterpart to <makeurl>, found in https://stackoverflow.com/a/26548024 -->
+    <scriptdef name="makepath" language="javascript" classpathref="graal">
+        <attribute name="url"/>
+        <attribute name="property"/>
+        <![CDATA[
+            var decodedUrl = decodeURIComponent(attributes.get("url"));
+            var path = decodedUrl.replace(/^[^:]+:\/+/g, "");
+            self.project.setProperty( attributes.get("property"), path )
+        ]]>
+    </scriptdef>
+</project>

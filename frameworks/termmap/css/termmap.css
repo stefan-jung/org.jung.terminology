@@ -41,9 +41,9 @@
         -oxy-editable: true;
         -oxy-show-placeholder: always;
         -oxy-show-placeholder: no;
-        border-color: #3d3d3d;
+        /*border-color: #3d3d3d;
         border-style: solid;
-        border-width: 0.05rem;
+        border-width: 0.05rem;*/
         display: block;
         font-family: Arial, sans-serif;
         margin-bottom: 5px;
@@ -53,15 +53,24 @@
         width: 99% !important;
     }
     
-    *[class~="termmap/termref"]:not([href=""]):before {
-        border-bottom: 0.05rem solid #767676;
+    *[class~="termmap/termref"]:not([href=""]):before(5) {
         font-weight: bold;
         link: attr(href);
         content: 
             oxy_buttonGroup(
                 label, oxy_getSomeText(oxy_link-text(attr(href)), 150, true),
                 actionIDs, 'term.termref.add, term.termref.delete', 'term.termref.edit.href'
-            )
+            );
+        display: inline;
+        font-size: 0.75rem;
+        margin-bottom: 2px;
+        padding-bottom: 5px;
+        width: 300px;
+    }
+    *[class~="termmap/termref"]:not([href=""]):before(4) {
+        font-weight: bold;
+        link: attr(href);
+        content: 
             oxy_urlChooser(
                 edit, '@href',
                 columns, 5

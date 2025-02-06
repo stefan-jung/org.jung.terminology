@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This Apache Ant script operates on the <termmap>.
+    It iterates over all <termentry> topics and looks
+    at an OpenDocument Spreadsheet (ODS) file and imports all terms from it.
+-->
+<project basedir="." name="OpenDocument Spreadsheet (ODS) Import" default="ods-import" xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+
+<!-- ================================================================================
+     Includes
+     ================================================================================ -->
+    <include file="build_antcontrib.xml"/>
+    <include file="build_saxon.xml"/>
+    <include file="build_graalvm.xml"/>
+    
+
+<!-- ================================================================================
+     Imports
+     ================================================================================ -->
+    <import file="build_temp-dir.xml"/>
+    <import file="build_makepath.xml"/>
+    
+    
+<!-- ================================================================================
+     Properties
+     ================================================================================ -->
+    <property environment="env"/>
+    <property name="debugging.mode" value="false"/>
+    <condition property="dbg">
+        <equals arg1="${debugging.mode}" arg2="true"/>
+    </condition>
+    
+    
+<!-- ================================================================================
+     Targets
+     ================================================================================ -->
+    <target name="ods-import" depends="-temp.dir">
+        <fail unless="termmap" message="The mandatory property 'termmap' is not set."/>
+        <echo if:true="${dbg}" message="+ [DEBUG] termmap = ${termmap}"/>
+        
+        <fail unless="ods.file" message="The mandatory property 'ods.file' is not set."/>
+        <echo if:true="${dbg}" message="+ [DEBUG] ods.file = ${ods.file}"/>
+        
+        <fail unless="language" message="The mandatory property 'language' is not set."/>
+        <echo if:true="${dbg}" message="+ [DEBUG] language = ${language}"/>
+        
+        <fail unless="import" message="The mandatory property 'import' is not set."/>
+        <echo if:true="${dbg}" message="+ [DEBUG] import = ${import}"/>
+        
+        <echo if:true="${dbg}" message="+ [DEBUG] ods.file = ${ods.file}"/>
+        
+        <!--<makeurl file="${ods.file}" validate="true" property="ods.file.url"/>
+        <echo if:true="${dbg}" message="+ [DEBUG] ods.file.url = ${ods.file.url}"/>-->
+        <makepath url="${ods.file}" property="ods.path"/>
+        <echo if:true="${dbg}" message="+ [DEBUG] ods.path = ${ods.path}"/>
+        
+        <!-- Subdirectory in the  temporary directory of the terminology plugin. -->
+        <property name="ods-import.temp.dir" value="${jung.terminology.temp.dir}${file.separator}ods-import"/>
+        <echo if:true="${dbg}" message="+ [DEBUG] ods-import.temp.dir = ${ods-import.temp.dir}"/>
+        
+        <!-- Delete the directory, if it exists. -->
+        <delete dir="${ods-import.temp.dir}" failonerror="false"/>
+        
+        <!-- Create a new temporary directory. -->
+        <mkdir dir="${ods-import.temp.dir}"/>
+        
+        <!-- In this directory we extract the ODS file. -->
+        <property name="ods.dir" value="${ods-import.temp.dir}${file.separator}ods"/>
+        <echo if:true="${dbg}" message="+ [DEBUG] ods.dir = ${ods.dir}"/>
+        <mkdir dir="${ods.dir}"/>
+        
+        <!-- Extract the ODS file -->
+        <unzip src="${ods.path}" dest="${ods.dir}"/>
+        <echo if:true="${dbg}" message="+ [DEBUG] Unzip ODS file in '${ods.dir}'"/>
+        
+        <dirname file="${termmap}" property="termmap.dir"/>
+        <echo if:true="${dbg}" message="+ [DEBUG] termmap '${termmap.dir}'"/>
+        
+                
+        <for param="file">
+            <path>
+                <fileset dir="${termmap.dir}" includes="**/*.dita" excludes="**/temp/*"/>
+            </path>
+            <sequential>
+                <echo if:true="${dbg}">Analyzing @{file}</echo>
+                <basename file="@{file}" property="termentry.topic"/>
+                <echo if:true="${dbg}" message="+ [DEBUG] termentry.topic = ${termentry.topic}"/>
+                <xslt style="../xsl/ods-import/ods-import.xsl"
+                    in="@{file}"
+                    out="${ods.dir}${file.separator}${termentry.topic}"
+                    force="true"
+                    failOnError="false">
+                    <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+                    <classpath refid="saxon"/>
+                    <param name="debugging" expression="${dbg}"/>
+                    <param name="content.xml" expression="${ods.dir}${file.separator}content.xml"/>
+                    <param name="language" expression="${language}"/>
+                    <param name="import" expression="${import}"/>
+                </xslt>
+                <!-- We don't simply copy the file back, we do a sort when copying it. -->
+                <!--<copy file="${ods.dir}${file.separator}${termentry.topic}" tofile="@{file}" overwrite="true"/>-->
+                <xslt style="../xsl/ods-import/sort.xsl"
+                    in="${ods.dir}${file.separator}${termentry.topic}"
+                    out="@{file}"
+                    force="true"
+                    failOnError="false">
+                    <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+                    <classpath refid="saxon"/>
+                </xslt>
+                <var name="termentry.topic" unset="true"/>
+            </sequential>
+        </for>
+        
+    </target>
+
+</project>

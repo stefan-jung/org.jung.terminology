@@ -14,4 +14,14 @@
         <val lang="en_US">Import OpenDocument Spreadsheet (ODS)</val>
         <val lang="de_DE">OpenDocument Spreadsheet (ODS) importieren</val>
     </key>
+    <key value="term.termref.add">
+        <comment>Add a term reference</comment>
+        <val lang="en_US">Add term reference</val>
+        <val lang="de_DE">Term-Referenz einfügen</val>
+    </key>
+    <key value="term.termref.delete">
+        <comment>Delete a term reference</comment>
+        <val lang="en_US">Delete term reference</val>
+        <val lang="de_DE">Term-Referenz löschen</val>
+    </key>
 </translation> 

@@ -5,48 +5,35 @@
     a list of terms in all languages or in a specific language.
     This might be useful, if you'd like to provide a full list
     of terms in a certain languages for a translator to review.
-    
-    Afterwards, we create an Excel .xlsx file from our XML data.
-    An Excel .xlsx file is technically just a ZIP file with some 
-    XML files and other data. Therefore, we need an Apache Ant
-    script to do this and cannot implement this in pure XSLT.
 -->
-<project basedir="." name="Excel Export" default="ods-export" xmlns:if="ant:if" xmlns:unless="ant:unless">
+<project basedir="." name="OpenDocument Spreadsheet (ODS) Export" default="ods-export" xmlns:if="ant:if" xmlns:unless="ant:unless">
 
 
-    <!-- 
-        ================================================================================
-        Includes
-        ================================================================================ 
-    -->
+<!-- ================================================================================
+     Includes
+     ================================================================================ -->
     <include file="build_saxon.xml"/>
     
 
-    <!-- 
-        ================================================================================
-        Imports
-        ================================================================================ 
-    -->
+<!-- ================================================================================
+     Imports
+     ================================================================================ -->
     <import file="build_temp-dir.xml"/>
     
     
-    <!-- 
-        ================================================================================
-        Properties
-        ================================================================================ 
-    -->
+<!-- ================================================================================
+     Properties
+     ================================================================================ -->
     <property environment="env"/>
-    <property name="debugging.mode" value="true"/>
+    <property name="debugging.mode" value="false"/>
     <condition property="dbg">
         <equals arg1="${debugging.mode}" arg2="true"/>
     </condition>
     
     
-    <!-- 
-        ================================================================================
-        Targets
-        ================================================================================ 
-    -->
+<!-- ================================================================================
+     Targets
+     ================================================================================ -->
     <target name="ods-export" depends="-temp.dir">
         <fail unless="termmap" message="The mandatory property 'termmap' is not set."/>
         <fail unless="language" message="The mandatory property 'language' is not set."/>
@@ -66,10 +53,6 @@
         <echo if:true="${debugging.mode}" message="+ [DEBUG] ods.dir = ${ods.dir}"/>
         <mkdir dir="${ods.dir}"/>
         
-        <!-- Extract the ODS template -->
-        <!--<unzip src="../templates/export.ods" dest="${ods.dir}"/>
-        <echo if:true="${debugging.mode}" message="+ [DEBUG] Unzip ODS template in '${ods.dir}'"/>-->
-        
         <xslt 
             in="${termmap}"
             out="${ods.dir}${file.separator}content.xml"
@@ -80,13 +63,8 @@
         </xslt>
         <echo if:true="${debugging.mode}" message="+ [DEBUG] Transform terminology to '${ods-export.temp.dir}${file.separator}ods.xml'"/>
         
-        <!-- Copy ODS XML to ODS directory -->
-        <!--<copy file="${ods-export.temp.dir}${file.separator}ods.xml" tofile="'${ods.dir}${file.separator}content.xml"/>-->
-        
-        <!-- Create a valid ODS file from the ODS directory -->
-        <!-- We must not compress the file -->
+        <!-- Create a valid ODS file from the ODS directory. We must not compress the file -->
         <copy file="../templates/export.ods" tofile="${ods-export.temp.dir}${file.separator}export.ods"/>
-        
         <zip destfile="${ods-export.temp.dir}${file.separator}export.ods" basedir="${ods.dir}" compress="false" update="true"/>
         <echo message="Created ODS file '${ods-export.temp.dir}${file.separator}export.ods'"/>
         
@@ -101,10 +79,10 @@
             <os family="windows"/>
         </condition>
         <exec if:true="${windows}" executable="cmd.exe">
-            <arg value="/c" />
-            <arg value="start" />
-            <arg value="" /> <!-- Empty argument for a new command window -->
-            <!--<arg value="path\\to\\your\\file"/>-->
+            <arg value="/c"/>
+            <arg value="start"/>
+            <!-- Empty argument for a new command window -->
+            <arg value=""/>
             <arg value="${ods-export.temp.dir}${file.separator}export.ods"/>
         </exec>
         

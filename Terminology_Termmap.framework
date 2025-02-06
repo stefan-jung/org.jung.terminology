@@ -2037,6 +2037,29 @@ Priority "High" is required!</String>
 													<list>
 														<antParameter>
 															<field name="name">
+																<String>import</String>
+															</field>
+															<field name="description">
+																<String>Should all imported terms be added to the termentry topics or should all imported terms replace all terms in this languages.</String>
+															</field>
+															<field name="value">
+																<String>${ask('Import', radio, ('add':'Add';'replace':'Replace'), 'add')}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+														<antParameter>
+															<field name="name">
 																<String>language</String>
 															</field>
 															<field name="description">
@@ -2044,6 +2067,29 @@ Priority "High" is required!</String>
 															</field>
 															<field name="value">
 																<String>${ask('Language', input_type, 'de-DE')}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+														<antParameter>
+															<field name="name">
+																<String>ods.file</String>
+															</field>
+															<field name="description">
+																<String>Ask for the ODS file to import.</String>
+															</field>
+															<field name="value">
+																<String>${ask('ODS file', url)}</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
@@ -2084,7 +2130,7 @@ Priority "High" is required!</String>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m</String>
+													<String>-Xmx256m -Dpolyglot.engine.WarnInterpreterOnly=false</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
