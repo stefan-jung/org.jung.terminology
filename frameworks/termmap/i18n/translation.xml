@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translation>
+    <languageList>
+        <language description="English" lang="en_US"/>
+        <language description="German" lang="de_DE"/>
+    </languageList>
+    <key value="termmap.ods.export">
+        <comment>Export an ODS file from Termmap.</comment>
+        <val lang="en_US">Export OpenDocument Spreadsheet (ODS)</val>
+        <val lang="de_DE">OpenDocument Spreadsheet (ODS) exportieren</val>
+    </key>
+    <key value="termmap.ods.import">
+        <comment>Import an ODS file from Termmap.</comment>
+        <val lang="en_US">Import OpenDocument Spreadsheet (ODS)</val>
+        <val lang="de_DE">OpenDocument Spreadsheet (ODS) importieren</val>
+    </key>
+</translation> 

@@ -7781,10 +7781,10 @@
 													<String>${i18n(term.term-domain.delete_description)}</String>
 												</field>
 												<field name="largeIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -17489,19 +17489,19 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 													<String>insert.choicetable</String>
 												</field>
 												<field name="alias">
-													<String></String>
+													<null/>
 												</field>
 												<field name="replacementFor">
-													<null/>
+													<String>choicetable</String>
 												</field>
 												<field name="replacedElementNs">
-													<null/>
+													<String></String>
 												</field>
 												<field name="displayOnlyWhenElementAllowed">
 													<Boolean>false</Boolean>
 												</field>
 												<field name="useReplaceElementName">
-													<Boolean>false</Boolean>
+													<Boolean>true</Boolean>
 												</field>
 											</contextItem>
 											<contextItem>
@@ -17686,16 +17686,6 @@ self::image[empty(parent::imagemap)] or oxy:current-selected-element()[self::ima
 												</field>
 												<field name="renderName">
 													<String>row</String>
-												</field>
-											</contextRemoveItem>
-											<contextRemoveItem>
-												<field name="targets">
-													<list>
-														<Integer>0</Integer>
-													</list>
-												</field>
-												<field name="renderName">
-													<String>choicetable</String>
 												</field>
 											</contextRemoveItem>
 										</contextRemoveItem-array>
