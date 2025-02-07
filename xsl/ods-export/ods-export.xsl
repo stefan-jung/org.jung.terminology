@@ -20,8 +20,16 @@
     
     <xsl:import href="ods-root.xsl"/>
     
-    <!-- Language to be exported. Unless set, all languages are exported. -->
-    <xsl:param name="language" as="xs:string" select="'all'"/>
+    <xsl:param name="debugging.mode" as="xs:string"/>
+    
+    <!-- Languge code of the main terms. -->
+    <xsl:param name="main.language" as="xs:string" select="'en-US'"/>
+    
+    <!-- Language code of the terms to be exported. Unless set, all languages are exported. -->
+    <xsl:param name="term.language" as="xs:string" select="'all'"/>
+    
+    <!-- Terms to be exported. Possible values are: "existing", "missing", "both" -->
+    <xsl:param name="export" as="xs:string" select="'both'"/>
     
     <xsl:template match="*[(self::termref) and @href]">
         <xsl:variable name="docPath" select="resolve-uri(@href, base-uri())"/>
@@ -31,47 +39,150 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="fullForm[@language]" expand-text="yes">
-        <xsl:variable name="processTerm" as="xs:boolean" select="
-            if ($language = 'all') then true()
-            else if ($language = @language) then true()
-            else false()
-            "/>
-        <xsl:if test="$processTerm">
-            <!--<term language="{@language}">{termVariant/text()}</term>-->
+    <!--
+        If the we don't have any terms in the target language and export = "all" or export = "missing",
+        then create a table row and fill the cells with concept-level data.
+    -->
+    <xsl:template match="termBody" expand-text="yes">
+        <xsl:variable name="mainTerm" as="xs:string" select="ancestor::termentry/title/text()"/>
+        <xsl:variable name="termsInLanguage" as="xs:integer" select="count(//fullForm[@language = $term.language])"/>
+        
+        <xsl:if test="$debugging.mode = 'true'">
+            <xsl:message select="'+ [DEBUG] ********************************************************************************'"/>
+            <xsl:message select="'+ [DEBUG] mainTerm = ' || $mainTerm"/>
+            <xsl:message select="'+ [DEBUG] termsInLanguage = ' || $termsInLanguage"/>
+        </xsl:if>
+        
+        <xsl:if test="$termsInLanguage = 0 and ($export = 'both' or $export = 'missing')">
             <table:table-row table:style-name="ro1">
+                
+                <!-- Concept ID -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{ancestor::termentry/@id}</text:p>
                 </table:table-cell>
+                
+                <!-- Main Term -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
-                    <text:p>{ancestor::termentry/title/text()}</text:p>
+                    <text:p>{$mainTerm}</text:p>
                 </table:table-cell>
+                
+                <!-- Definition Text -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{ancestor::termentry/definition/definitionText/text()}</text:p>
                 </table:table-cell>
+                
+                <!-- Definition Source -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{ancestor::termentry/definition/definitionSource/text()}</text:p>
                 </table:table-cell>
+                
+                <!-- Language Code -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
-                    <text:p>{@language}</text:p>
+                    <text:p>{$term.language}</text:p>
                 </table:table-cell>
+                
+                <!-- Term -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p></text:p>
+                </table:table-cell>
+                
+                <!-- Usage -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p>preferred</text:p>
+                </table:table-cell>
+                
+                <!-- Source of Term -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p></text:p>
+                </table:table-cell>
+                
+                <!-- Context -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p></text:p>
+                </table:table-cell>
+                
+                <!-- Source of Context -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p></text:p>
+                </table:table-cell>
+                
+                <table:table-cell table:number-columns-repeated="16374"/>
+            </table:table-row> 
+        </xsl:if>
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    
+    <xsl:template match="fullForm[@language]" expand-text="yes">
+        <xsl:variable name="mainTerm" as="xs:string" select="ancestor::termentry/title/text()"/>
+        <xsl:variable name="processTerm" as="xs:boolean" select="
+            if (@language = $term.language and ($export = 'both' or $export = 'existing')) then true()
+            else false()
+            "/>
+        
+        <xsl:if test="$debugging.mode = 'true'">
+            <xsl:message select="'+ [DEBUG] ********************************************************************************'"/>
+            <xsl:message select="'+ [DEBUG] mainTerm = ' || $mainTerm"/>
+            <xsl:message select="'+ [DEBUG] processTerm = ' || $processTerm"/>
+        </xsl:if>
+        
+        <xsl:if test="$processTerm">
+            <table:table-row table:style-name="ro1">
+                
+                <!-- Concept ID -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p>{ancestor::termentry/@id}</text:p>
+                </table:table-cell>
+                
+                <!-- Main Term -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p>{$mainTerm}</text:p>
+                </table:table-cell>
+                
+                <!-- Definition Text -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p>{ancestor::termentry/definition/definitionText/text()}</text:p>
+                </table:table-cell>
+                
+                <!-- Definition Source -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p>{ancestor::termentry/definition/definitionSource/text()}</text:p>
+                </table:table-cell>
+                
+                <!-- Language Code -->
+                <table:table-cell office:value-type="string" table:style-name="ce1">
+                    <text:p>{if (($export = 'both' or $export = 'missing') and @language != $term.language)
+                        then $term.language
+                        else @language}</text:p>
+                </table:table-cell>
+                
+                <!-- Term -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{termVariant/text()}</text:p>
                 </table:table-cell>
+                
+                <!-- Usage -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{@usage}</text:p>
                 </table:table-cell>
+                
+                <!-- Source of Term -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{termSource/sourceName/text()}</text:p>
                 </table:table-cell>
+                
+                <!-- Context -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{termContext/termContextText/text()}</text:p>
                 </table:table-cell>
+                
+                <!-- Source of Context -->
                 <table:table-cell office:value-type="string" table:style-name="ce1">
                     <text:p>{termContext/termContextSource/sourceName/text()}</text:p>
                 </table:table-cell>
+                
                 <table:table-cell table:number-columns-repeated="16374"/>
-            </table:table-row>
+            </table:table-row> 
         </xsl:if>
     </xsl:template>
     

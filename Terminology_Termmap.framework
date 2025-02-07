@@ -1858,13 +1858,59 @@ Priority "High" is required!</String>
 													<list>
 														<antParameter>
 															<field name="name">
-																<String>language</String>
+																<String>export</String>
 															</field>
 															<field name="description">
 																<String></String>
 															</field>
 															<field name="value">
-																<String>${ask('Language', input_type, 'de-DE')}</String>
+																<String>${ask('Which terms should be exported?', radio, ('existing':'Existing';'missing':'Missing';'both':'Both'), 'both')}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+														<antParameter>
+															<field name="name">
+																<String>main.language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${ask('Language code of the main term.', input_type, 'en-US')}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+														<antParameter>
+															<field name="name">
+																<String>term.language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${ask('Language code of the terms to be exported. To export all languages, type in "all".', input_type, 'de-DE')}</String>
 															</field>
 															<field name="defaultValue">
 																<null/>
