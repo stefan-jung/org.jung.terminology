@@ -669,6 +669,7 @@
             actionStyle, 'both',
             actions,
             oxy_action_list(
+                oxy_action(id, 'term.sort'),
                 oxy_action(id, 'term.abbreviation.add'),
                 oxy_action(id, 'term.acronym.add'),
                 oxy_action(id, 'term.fullForm.add'),

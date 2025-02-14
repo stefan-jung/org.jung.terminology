@@ -7888,6 +7888,80 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>199</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.sort</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.sort)}</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/frameworks/termentry/icons/sort-24.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/frameworks/termentry/icons/sort-16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>action</String>
+																		<String>Replace</String>
+																	</entry>
+																	<entry>
+																		<String>script</String>
+																		<String>${framework}/frameworks/termentry/xsl/sortTerm.xsl</String>
+																	</entry>
+																	<entry>
+																		<String>sourceLocation</String>
+																		<String>//termBody</String>
+																	</entry>
+																	<entry>
+																		<String>targetLocation</String>
+																		<String>//termBody</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>authorExtensionDescriptor/menubarDescriptor/label</String>
 										</field>
 										<field name="index">

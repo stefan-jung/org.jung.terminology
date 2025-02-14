@@ -113,6 +113,11 @@
         <val lang="de_DE">Sonstiges</val>
     </key>
     
+    <key value="term.sort">
+        <val lang="en_US">Sort terms</val>
+        <val lang="de_DE">Terme sortieren</val>
+    </key>
+    
     <!-- termref -->
     <key value="term.map.termref">
         <val lang="en_US">Term Reference</val>
