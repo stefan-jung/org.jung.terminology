@@ -414,6 +414,23 @@
 }
 
 /*********************************************
+ * KEY REFERENCES
+ *********************************************/
+@media oxygen{
+    *[keyref]:before,
+    *[keyref][href]:before{
+        link: oxy_concat("", attr(keyref, keyref));
+        text-decoration: none;
+    }
+    *[keyref][keyref=""][href]:before {
+        link: attr(href);
+    }
+    *[keyref][keyref][keyref]:empty {
+        content: oxy_label(text, oxy_getSomeText(oxy_link-text(), 150, true), background-color, rgb(240, 240, 240));
+    }
+}
+ 
+/*********************************************
  * ALT
  *********************************************/
 *[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
