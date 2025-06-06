@@ -7297,10 +7297,10 @@
 													<String></String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/positron-ai-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/positron-ai-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -7979,10 +7979,10 @@
 													<String></String>
 												</field>
 												<field name="largeIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/positron-ai-24.png</String>
 												</field>
 												<field name="smallIconPath">
-													<String></String>
+													<String>${framework}/frameworks/termentry/icons/positron-ai-16.png</String>
 												</field>
 												<field name="accessKey">
 													<String></String>
@@ -8008,7 +8008,7 @@
 																	</entry>
 																	<entry>
 																		<String>sourceLocation</String>
-																		<String>.</String>
+																		<String>/*[1]</String>
 																	</entry>
 																	<entry>
 																		<String>targetLocation</String>
