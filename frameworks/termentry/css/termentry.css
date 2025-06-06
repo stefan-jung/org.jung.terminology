@@ -296,6 +296,7 @@
             actions,
             oxy_action_list(
                 oxy_action(id, 'term.definitionSource.add'),
+                oxy_action(id, 'term.definition.generate-with-ai'),
                 oxy_action(id, 'term.definition.delete')
             )
         );

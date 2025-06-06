@@ -7962,6 +7962,80 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>200</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.definition.generate-with-ai</String>
+												</field>
+												<field name="name">
+													<String>Generate definition with Positron AI</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::definition</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>action</String>
+																		<String>Replace</String>
+																	</entry>
+																	<entry>
+																		<String>script</String>
+																		<String>${framework}\frameworks\termentry\xsl\generateDefinitionWithAI.xsl</String>
+																	</entry>
+																	<entry>
+																		<String>sourceLocation</String>
+																		<String>.</String>
+																	</entry>
+																	<entry>
+																		<String>targetLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>authorExtensionDescriptor/menubarDescriptor/label</String>
 										</field>
 										<field name="index">
