@@ -83,6 +83,7 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
+    /*padding-left: 5px;*/ /* Unfortunately this shifts the panel as well. */ 
     padding-bottom: 5px;
 }
 
@@ -462,11 +463,13 @@
             oxy_action_list(
                 oxy_action(id, 'term.sourceName.add'),
                 oxy_action(id, 'term.url.reference'),
-                oxy_action(id, 'term.sourceName.delete'),
-                oxy_action(id, 'term.sourceReference.delete'),
                 oxy_action(id, 'term.termSource.delete')
             )
         );
+}
+*[class~="termentry/termSource"]:empty {
+    -oxy-placeholder-content: "${i18n(term.termSource.add_description)}";
+    -oxy-show-placeholder: always;
 }
 
 /*********************************************
@@ -1485,4 +1488,16 @@
  *********************************************/
 *[class~="topic/abstract"]:before {
     content: "";
+}
+
+/*********************************************
+ * XREF
+ *********************************************/
+*[class~="topic/xref"][href]:before {
+    content: url('../icons/link_12.png');
+    -oxy-link: attr(href);
+}
+*[class~="topic/xref"][href]:empty {
+    -oxy-placeholder-content: attr(href);
+    -oxy-show-placeholder:always;
 }

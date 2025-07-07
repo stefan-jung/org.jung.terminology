@@ -1875,7 +1875,7 @@
 																	</entry>
 																	<entry>
 																		<String>insertPosition</String>
-																		<String>Before</String>
+																		<String>Inside as last child</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -3119,7 +3119,9 @@
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String>self::*[contains(@class, ' termentry/definitionSource ') or contains(@class, ' termentry/termContextSource ')][1]</String>
+																<String>self::*[contains(@class, ' termentry/definitionSource ') 
+or contains(@class, ' termentry/termContextSource ') 
+or contains(@class, ' termentry/termSource ')][1]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>

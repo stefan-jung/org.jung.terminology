@@ -202,32 +202,32 @@
     
     <!-- sourceName -->
     <key value="term.sourceName">
-        <val lang="en_US">Printed Source</val>
-        <val lang="de_DE">Literaturquelle</val>
+        <val lang="en_US">Source</val>
+        <val lang="de_DE">Quelle</val>
     </key>
     <key value="term.sourceName.add">
-        <val lang="en_US">Add printed source</val>
-        <val lang="de_DE">Literaturquelle einfügen</val>
+        <val lang="en_US">Add source</val>
+        <val lang="de_DE">Quelle einfügen</val>
     </key>
     <key value="term.sourceName.add_description">
-        <val lang="en_US">Add printed source</val>
-        <val lang="de_DE">Literaturquelle einfügen</val>
+        <val lang="en_US">Add source</val>
+        <val lang="de_DE">Quelle einfügen</val>
     </key>
     <key value="term.sourceName.placeholder">
-        <val lang="en_US">Enter the name of the printed source.</val>
-        <val lang="de_DE">Geben Sie den Namen der Literaturquelle ein.</val>
+        <val lang="en_US">Enter the name of the source.</val>
+        <val lang="de_DE">Geben Sie den Namen der Quelle ein.</val>
     </key>
     <key value="term.sourceName.renameTo">
         <val lang="en_US">Rename element to &lt;sourceName&gt;</val>
         <val lang="de_DE">Element umbenennen in &lt;sourceName&gt;</val>
     </key>
     <key value="term.sourceName.delete">
-        <val lang="en_US">Delete printed source</val>
-        <val lang="de_DE">Literaturquelle löschen</val>
+        <val lang="en_US">Delete source name</val>
+        <val lang="de_DE">Quelle löschen</val>
     </key>
     <key value="term.sourceName.delete_description">
-        <val lang="en_US">Delete printed source</val>
-        <val lang="de_DE">Literaturquelle löschen</val>
+        <val lang="en_US">Delete source name</val>
+        <val lang="de_DE">Quelle löschen</val>
     </key>
 
     <!-- sourceReference -->
@@ -1196,10 +1196,6 @@
     <key value="term.sourceReference">
         <val lang="en_US">Internet Source</val>
         <val lang="de_DE">Internetquelle</val>
-    </key>
-    <key value="term.sourceName">
-        <val lang="en_US">Printed Source</val>
-        <val lang="de_DE">Literaturquelle</val>
     </key>
     <key value="term.usage">
         <val lang="en_US">Usage</val>
