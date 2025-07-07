@@ -7922,7 +7922,7 @@ or contains(@class, ' termentry/termSource ')][1]</String>
 													<actionMode-array>
 														<actionMode>
 															<field name="xpathCondition">
-																<String></String>
+																<String>self::*[contains(@class, ' termentry/partOfSpeech ')]</String>
 															</field>
 															<field name="argValues">
 																<serializableOrderedMap>
@@ -7936,11 +7936,11 @@ or contains(@class, ' termentry/termSource ')][1]</String>
 																	</entry>
 																	<entry>
 																		<String>sourceLocation</String>
-																		<String>//termBody</String>
+																		<String>parent::*[contains(@class, ' termentry/termBody ')]</String>
 																	</entry>
 																	<entry>
 																		<String>targetLocation</String>
-																		<String>//termBody</String>
+																		<String>parent::*[contains(@class, ' termentry/termBody ')]</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>

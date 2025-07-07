@@ -3,15 +3,26 @@
     
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     
-    <xsl:preserve-space elements="*"/>
+    <xsl:mode on-no-match="shallow-copy"/>
+    
+    <xsl:template match="@class"/>
+    <xsl:template match="processing-instruction('xml-model')"/>
     
     <!-- Identity template to copy elements -->
-    <xsl:template match="node()">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
+    <xsl:template match="termBody">
+        <termBody>
+            <!-- Copy annotation and partOfSpeech as-is -->
+            <xsl:copy-of select="annotation"/>
+            <xsl:copy-of select="concept-domains"/>
+            <xsl:copy-of select="partOfSpeech"/>
+            
+            <!-- Sort and output fullForm elements -->
+            <xsl:for-each select="fullForm">
+                <xsl:sort select="@language" data-type="text" order="ascending"/>
+                <xsl:copy-of select="."/>
+            </xsl:for-each>
+        </termBody>
     </xsl:template>
     
-    <!-- TODO: Implement sorting -->
     
 </xsl:stylesheet>
