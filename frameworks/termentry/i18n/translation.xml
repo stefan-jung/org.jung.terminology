@@ -721,6 +721,10 @@
         <val lang="en_US">Delete term context</val>
         <val lang="de_DE">Term-Kontext löschen</val>
     </key>
+    <key value="term.contextText.placeholder">
+        <val lang="en_US">Context of the term</val>
+        <val lang="de_DE">Kontext des Terms</val>
+    </key>
     
     <!-- termContextText -->
     <key value="term.termContextText">

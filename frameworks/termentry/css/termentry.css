@@ -620,7 +620,7 @@
  * The properties are defined in 'Common properties for block elements w/o border and w/o :before(10) block'
  *********************************************/
 *[class~="termentry/termContextText"] {
-    -oxy-placeholder-content: "${i18n(term.definitionText.placeholder)}";
+    -oxy-placeholder-content: "${i18n(term.contextText.placeholder)}";
     -oxy-show-placeholder: always;
 }
 
