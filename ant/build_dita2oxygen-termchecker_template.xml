@@ -8,7 +8,7 @@
         preprocess,
         oxygen-termchecker"/>
     
-    <target name="oxygen-termchecker" description="Create a Oxygem Termchecker file">
+    <target name="oxygen-termchecker" description="Create a Oxygen Termchecker file">
         <basename property="basename" file="${args.input}" suffix=".ditamap"/>
         <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
         <makeurl property="output.dir.url" file="${output.dir}"/>
