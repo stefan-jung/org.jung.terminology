@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:if="ant:if" xmlns:unless="ant:unless">
+    
+    <target name="dita2terminology-json"
+        depends="
+        html5.init,
+        build-init,
+        preprocess,
+        terminology-json"/>
+    
+    <target name="terminology-json" description="Create bilingual output for AI translation">
+        <basename property="basename" file="${args.input}" suffix=".ditamap"/>
+        <makeurl property="dita.temp.dir.url" file="${dita.temp.dir}"/>
+        <makeurl property="output.dir.url" file="${output.dir}"/>
+        <xslt 
+            in="${dita.temp.dir}${file.separator}${basename}.ditamap"
+            out="${output.dir}${file.separator}${basename}.xml"
+            style="${dita.plugin.org.jung.terminology.dir}/xsl/terminology-json/terminology-json.xsl"
+            destdir="${output.dir}">
+            <xmlcatalog refid="dita.catalog"/>
+            <param name="dita.temp.dir.url" expression="${dita.temp.dir.url}"/>
+            <param name="output.dir.url" expression="${output.dir.url}"/>
+            <param name="source.language" expression="${source.language}"/>
+        </xslt>
+        
+        <!-- We can safely delete this file, because we get one terminology JSON file per language-code. -->
+        <delete file="${output.dir}${file.separator}${basename}.xml"/>
+    </target>
+    
+</project>

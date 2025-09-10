@@ -16,7 +16,7 @@
   <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,multiterm-custom,oxygen-termchecker,termbrowser-responsive"/>
+  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,multiterm-custom,oxygen-termchecker,termbrowser-responsive,terminology-json"/>
   
   <transtype name="tbx-min-v3-dca" extends="html5" desc="TBX-Min v3 DCA">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
@@ -913,7 +913,7 @@
     <param name="main.language" desc="Which is the main language, used for definitions, and so forth" type="string"/>
   </transtype>
   
-  <!-- Add new transtype to generate a TBX file for the Language Service Provider. -->
+  <!-- Transtype to generate an XML file for the Oxygen Terminology Checker add-on -->
   <transtype name="oxygen-termchecker" extends="html5" desc="Oxygen Termchecker">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
       <val default="true">false</val>
@@ -928,6 +928,15 @@
       <val>false</val>
     </param>
   </transtype>
+
+  <!-- Transtype to generate bilingual output in JSON format for AI translation -->
+  <transtype name="terminology-json" extends="html5" desc="Terminology JSON">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
+    <param name="source.language" desc="Language code of the source language" type="string"/>
+  </transtype>
   
   <!-- Import Ant script -->
   <feature extension="ant.import" file="ant/build_dita2multiterm-mtf.xml"/>
@@ -940,6 +949,7 @@
   <feature extension="ant.import" file="ant/build_dita2termbrowser_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2termchecker-dita_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2termchecker-xliff_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2terminology-json_template.xml"/>
 
   <!-- Overriding XSLT -->
   <feature extension="dita.xsl.html5" file="xsl/termbrowser/termbrowser.xsl"/>

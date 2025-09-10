@@ -75,5 +75,13 @@
     <output href="./oxygen-termchecker"/>
     <publication transtype="oxygen-termchecker"/>
   </deliverable>
+
+  <deliverable name="Terminology JSON" id="terminology-json">
+    <context idref="terminology_context"/>
+    <output href="./terminology-json"/>
+    <publication transtype="terminology-json">
+      <param name="source.language" value="en-GB"/>
+    </publication>
+  </deliverable>
   
 </project>
