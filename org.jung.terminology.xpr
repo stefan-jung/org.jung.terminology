@@ -18,11 +18,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>samples/terminology.ditamap</String>
+                                    <String>build_install.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>3/org.jung.terminology/Terminology_Termmap.framework/Jung Terminology Map/ODS Export</String>
+                                        <String>Install org.jung.terminology</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -79,26 +79,6 @@
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>xsl/semantic-net.xsl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Install org.jung.terminology</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>ANT</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>build_install.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
