@@ -84,8 +84,8 @@ jobs:
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.2.3 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.2.3 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.2.3 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -126,8 +126,8 @@ jobs:
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.1.2 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.1.2 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.1.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -167,8 +167,8 @@ jobs:
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.0.2 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.0.2 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.0.2 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -208,8 +208,8 @@ jobs:
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=3.7.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=3.7.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=3.7.4 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
