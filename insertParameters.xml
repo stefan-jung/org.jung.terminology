@@ -13,7 +13,7 @@
     <!-- Parameters for TBX-Basic -->
     <param name="main.language" expression="${main.language}" if:set="main.language"/>
     
-    <!-- Parameter for TBX-Min, terminology-json -->
+    <!-- Parameter for TBX-Min, terminology-json, terminology-xml -->
     <param name="source.language" expression="${source.language}" if:set="source.language"/>
 
     <!-- Parameter for TBX-Min -->

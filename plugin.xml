@@ -16,7 +16,7 @@
   <!--<feature extension="depend.preprocess.post" value="generate-termstats"/>-->
   
   <!-- Add new transtypes. -->
-  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,multiterm-custom,oxygen-termchecker,termbrowser-responsive,terminology-json"/>
+  <feature extension="dita.conductor.transtype.check" value="tbx-min-v3-dca,tbx-min-v3-dct,termchecker-dita,termchecker-xliff,tbx-basic-v2,tbx-basic-v3,multiterm,multiterm-custom,oxygen-termchecker,termbrowser-responsive,terminology-json,terminology-xml"/>
   
   <transtype name="tbx-min-v3-dca" extends="html5" desc="TBX-Min v3 DCA">
     <param name="debugging.mode" desc="Debugging mode" type="enum">
@@ -937,6 +937,15 @@
     </param>
     <param name="source.language" desc="Language code of the source language" type="string"/>
   </transtype>
+
+  <!-- Transtype to generate bilingual output in XML format for AI translation -->
+  <transtype name="terminology-xml" extends="html5" desc="Terminology XML">
+    <param name="debugging.mode" desc="Debugging mode" type="enum">
+      <val default="true">false</val>
+      <val>true</val>
+    </param>
+    <param name="source.language" desc="Language code of the source language" type="string"/>
+  </transtype>
   
   <!-- Import Ant script -->
   <feature extension="ant.import" file="ant/build_dita2multiterm-mtf.xml"/>
@@ -950,6 +959,7 @@
   <feature extension="ant.import" file="ant/build_dita2termchecker-dita_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2termchecker-xliff_template.xml"/>
   <feature extension="ant.import" file="ant/build_dita2terminology-json_template.xml"/>
+  <feature extension="ant.import" file="ant/build_dita2terminology-xml_template.xml"/>
 
   <!-- Overriding XSLT -->
   <feature extension="dita.xsl.html5" file="xsl/termbrowser/termbrowser.xsl"/>

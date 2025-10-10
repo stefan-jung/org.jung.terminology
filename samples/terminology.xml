@@ -83,5 +83,13 @@
       <param name="source.language" value="en-GB"/>
     </publication>
   </deliverable>
+
+  <deliverable name="Terminology XML" id="terminology-xml">
+    <context idref="terminology_context"/>
+    <output href="./terminology-xml"/>
+    <publication transtype="terminology-xml">
+      <param name="source.language" value="en-GB"/>
+    </publication>
+  </deliverable>
   
 </project>

@@ -1073,6 +1073,18 @@
             columns, 20,
             selectionMode, 'single',
             fontInherit, 'false'
+        )
+        "   "
+        oxy_label(
+            text, "  ${i18n(term.termdomain)} ",
+            styles, "font-weight: bold;"
+        )
+        " "
+        oxy_popup(
+            edit, '@termdomain',
+            resultSeparator, '|',
+            selectionMode, 'multiple',
+            fontInherit, true
         );
     display: block;
     font-size: 10px;
