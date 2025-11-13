@@ -13,7 +13,9 @@
     
     <xsl:template match="definition">
         
-        <xsl:variable name="concept-term" select="//title[1]/text()" as="xs:string"/>
+        <!--<xsl:variable name="concept-term" select="//title[1]/text()" as="xs:string"/>-->
+        <xsl:variable name="concept-term" select="
+            //*[contains(@class, ' termentry/termNotation ')][1]/*[contains(@class, ' termentry/termVariant ')][1]/text()" as="xs:string"/>
         
         <xsl:value-of _disable-output-escaping="yes" select="ai:transform-content(
             'Please write a definition for ''' || $concept-term || ''' and tell me the source of definition. '
