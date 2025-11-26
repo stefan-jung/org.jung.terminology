@@ -27,7 +27,19 @@
         <delete file="${output.dir}${file.separator}${basename}.md"/>
         <delete dir="${output.dir}">
             <include name="**/*.xml"/>
+            <include name="**/*.svg"/>
+            <include name="**/*.gif"/>
+            <include name="**/*.jpg"/>
+            <include name="**/*.png"/>
+            <include name="**/*.pdf"/>
         </delete>
+        <!-- Delete subdirectories, if any. -->
+        <delete>
+            <dirset dir="${output.dir}">
+                <include name="**" />
+            </dirset>
+        </delete>
+        
     </target>
     
 </project>
