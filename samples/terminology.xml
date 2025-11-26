@@ -91,5 +91,13 @@
       <param name="source.language" value="en-GB"/>
     </publication>
   </deliverable>
+
+  <deliverable name="Terminology Markdown" id="terminology-md">
+    <context idref="terminology_context"/>
+    <output href="./terminology-md"/>
+    <publication transtype="terminology-md">
+      <param name="source.language" value="en-GB"/>
+    </publication>
+  </deliverable>
   
 </project>
