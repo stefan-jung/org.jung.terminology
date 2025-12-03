@@ -36,14 +36,14 @@
                 <xsl:variable name="target" as="xs:string" select="
                     (: Nouns are capitalized only in German :)
                     if (contains($trgLang, 'de'))
-                    then ./seg/text()
-                    else lower-case(./seg/text())
+                    then ./seg[1]/text()
+                    else lower-case(./seg[1]/text())
                     "/>
                 <xsl:if test="$trgLang != $source.language">
                     <fullForm language="{$trgLang}" usage="preferred">
                         <termVariant xml:lang="{$trgLang}"><xsl:value-of select="$target"/></termVariant>
                         <termSource>
-                            <sourceName><xsl:value-of select="$filename"/></sourceName>
+                            <sourceName>{$filename}</sourceName>
                         </termSource>
                     </fullForm>
                     <xsl:message select="'[tmx-termentry] ' || $trgLang || ' = ' || $target || ' (' || $filename || ')'"/>

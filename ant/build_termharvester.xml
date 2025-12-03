@@ -132,5 +132,25 @@
         <delete file="${tmx.xliff.dir}${file.separator}dummy-input.xml" failonerror="false" quiet="true" verbose="false"/>
         <delete file="${tmx.xliff.dir}${file.separator}dummy-output.xml" failonerror="false" quiet="true" verbose="false"/>
     </target>
+    
+    <target name="gather-main-ids" depends="-temp.dir">
+        <echo>Gather main IDs</echo>
+        <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}main-terms.txt"/>
+        <xslt 
+            style="../xsl/termharvester/extract-main-terms.xsl"
+            in="${termmap}"
+            out="${output.file}"
+            failonerror="true"
+            failontransformationerror="true">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <classpath refid="saxon"/>
+            <param name="language" expression="${language}"/>
+        </xslt>
+        <!-- Open file -->
+        <exec executable="cmd" failonerror="true">
+            <arg value="/c"/>
+            <arg value="${output.file}"/>
+        </exec>
+    </target>
 
 </project>

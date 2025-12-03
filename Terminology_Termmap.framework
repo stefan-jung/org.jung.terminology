@@ -468,6 +468,68 @@
 											<String>authorExtensionDescriptor/actionDescriptors</String>
 										</field>
 										<field name="index">
+											<Integer>33</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>main.terms</String>
+												</field>
+												<field name="name">
+													<String>Gather main terms</String>
+												</field>
+												<field name="description">
+													<String></String>
+												</field>
+												<field name="largeIconPath">
+													<String></String>
+												</field>
+												<field name="smallIconPath">
+													<String></String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String></String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>scenarioNames</String>
+																		<String>Gather main IDs</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.ExecuteTransformationScenariosOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
 											<Integer>19</Integer>
 										</field>
 										<field name="value">
@@ -1183,75 +1245,28 @@
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[1]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>5</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>insert.topicgroup</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[1]/menuEntriesDescriptorList</String>
+											<String>authorExtensionDescriptor/menubarDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
 											<Integer>4</Integer>
 										</field>
 										<field name="value">
-											<null/>
+											<menuItem>
+												<field name="actionID">
+													<String>main.terms</String>
+												</field>
+											</menuItem>
 										</field>
 										<field name="patchHandling">
-											<String>removeIndex</String>
+											<String>addIndex</String>
 										</field>
 										<field name="anchor">
-											<String>insert.topichead</String>
+											<null/>
 										</field>
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[1]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>3</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>reuse.content</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[1]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>1</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>insert.topicref</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[2]/menuEntriesDescriptorList</String>
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
 										</field>
 										<field name="index">
 											<Integer>7</Integer>
@@ -1263,92 +1278,7 @@
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>show.table.properties</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[2]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>5</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>delete.table.row</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[2]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>4</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>delete.table.column</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[2]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>3</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>insert.table.column</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[2]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>2</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>insert.table.row</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList/[2]/menuEntriesDescriptorList</String>
-										</field>
-										<field name="index">
-											<Integer>0</Integer>
-										</field>
-										<field name="value">
-											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>insert.table</String>
+											<String>show.key.definition</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -1366,6 +1296,112 @@
 										</field>
 										<field name="anchor">
 											<String>search.references</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>5</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>4</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>generate.ids</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>4</Integer>
+										</field>
+										<field name="value">
+											<menuItem>
+												<field name="actionID">
+													<String>main.terms</String>
+												</field>
+											</menuItem>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(relationship.table)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>1</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(insert)}</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/popupMenuDescriptor/menuEntriesDescriptorList</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>${i18n(paste.special)}</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -1543,6 +1579,23 @@
 											<String>authorExtensionDescriptor/contextualItems/items</String>
 										</field>
 										<field name="index">
+											<Integer>2</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>insert.topicref</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/contextualItems/items</String>
+										</field>
+										<field name="index">
 											<Integer>1</Integer>
 										</field>
 										<field name="value">
@@ -1553,6 +1606,23 @@
 										</field>
 										<field name="anchor">
 											<String>insert.table</String>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/contextualItems/items</String>
+										</field>
+										<field name="index">
+											<Integer>0</Integer>
+										</field>
+										<field name="value">
+											<null/>
+										</field>
+										<field name="patchHandling">
+											<String>removeIndex</String>
+										</field>
+										<field name="anchor">
+											<String>insert.new.dita.resource</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -1841,7 +1911,7 @@ Priority "High" is required!</String>
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>14</Integer>
+											<Integer>12</Integer>
 										</field>
 										<field name="value">
 											<antScenario>
@@ -2066,7 +2136,7 @@ Priority "High" is required!</String>
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>15</Integer>
+											<Integer>13</Integer>
 										</field>
 										<field name="value">
 											<antScenario>
@@ -2291,33 +2361,178 @@ Priority "High" is required!</String>
 											<String>scenarios</String>
 										</field>
 										<field name="index">
-											<Integer>12</Integer>
+											<Integer>14</Integer>
 										</field>
 										<field name="value">
-											<null/>
+											<antScenario>
+												<field name="additionalAntArgs">
+													<String></String>
+												</field>
+												<field name="buildTarget">
+													<String>gather-main-ids</String>
+												</field>
+												<field name="buildFilePath">
+													<String>${frameworkDir}/ant/build_termharvester.xml</String>
+												</field>
+												<field name="ditaParams">
+													<list>
+														<antParameter>
+															<field name="name">
+																<String>language</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${ask('Language', input_type, 'en-US')}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+														<antParameter>
+															<field name="name">
+																<String>termmap</String>
+															</field>
+															<field name="description">
+																<String></String>
+															</field>
+															<field name="value">
+																<String>${cf}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
+													</list>
+												</field>
+												<field name="jvmArgs">
+													<String>-Xmx256m -Dpolyglot.engine.WarnInterpreterOnly=false</String>
+												</field>
+												<field name="useCustomJavaHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customJavaHomeDir">
+													<String></String>
+												</field>
+												<field name="useCustomANTHome">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="customANTHomeDir">
+													<String></String>
+												</field>
+												<field name="workingDir">
+													<String>${frameworkDir}/ant</String>
+												</field>
+												<field name="showConsoleAlways">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="advancedOptionsMap">
+													<null/>
+												</field>
+												<field name="name">
+													<String>Gather main IDs</String>
+												</field>
+												<field name="baseURL">
+													<null/>
+												</field>
+												<field name="footerURL">
+													<null/>
+												</field>
+												<field name="fOPMethod">
+													<null/>
+												</field>
+												<field name="fOProcessorName">
+													<null/>
+												</field>
+												<field name="headerURL">
+													<null/>
+												</field>
+												<field name="inputXSLURL">
+													<null/>
+												</field>
+												<field name="inputXMLURL">
+													<null/>
+												</field>
+												<field name="defaultScenario">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="isFOPPerforming">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="type">
+													<String>ANT</String>
+												</field>
+												<field name="saveAs">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="openInBrowser">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="outputResource">
+													<null/>
+												</field>
+												<field name="openOtherLocationInBrowser">
+													<Boolean>true</Boolean>
+												</field>
+												<field name="locationToOpenInBrowserURL">
+													<String></String>
+												</field>
+												<field name="openInEditor">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInHTMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInXMLPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInSVGPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="showInResultSetPane">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="useXSLTInput">
+													<Boolean>false</Boolean>
+												</field>
+												<field name="xsltParams">
+													<list/>
+												</field>
+												<field name="cascadingStylesheets">
+													<String-array/>
+												</field>
+												<field name="xslTransformer">
+													<String>ANT</String>
+												</field>
+												<field name="extensionURLs">
+													<String-array/>
+												</field>
+											</antScenario>
 										</field>
 										<field name="patchHandling">
-											<String>removeIndex</String>
+											<String>addIndex</String>
 										</field>
 										<field name="anchor">
-											<String>DITA Map PDF - based on XSL-FO</String>
-										</field>
-									</poPatch>
-									<poPatch>
-										<field name="fieldPath">
-											<String>scenarios</String>
-										</field>
-										<field name="index">
-											<Integer>11</Integer>
-										</field>
-										<field name="value">
 											<null/>
-										</field>
-										<field name="patchHandling">
-											<String>removeIndex</String>
-										</field>
-										<field name="anchor">
-											<String>DITA Map Metrics Report</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -2334,7 +2549,7 @@ Priority "High" is required!</String>
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>DITA Map InDesign</String>
+											<String>DITA Map PDF - based on XSL-FO</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -2351,7 +2566,7 @@ Priority "High" is required!</String>
 											<String>removeIndex</String>
 										</field>
 										<field name="anchor">
-											<String>DITA Map Kindle</String>
+											<String>DITA Map Metrics Report</String>
 										</field>
 									</poPatch>
 									<poPatch>
@@ -8339,348 +8554,6 @@ self::*[contains(@class," map/reltable ")]][1]
 								</field>
 								<field name="name">
 									<String>DITA Map Eclipse Help</String>
-								</field>
-								<field name="baseURL">
-									<null/>
-								</field>
-								<field name="footerURL">
-									<null/>
-								</field>
-								<field name="fOPMethod">
-									<null/>
-								</field>
-								<field name="fOProcessorName">
-									<null/>
-								</field>
-								<field name="headerURL">
-									<null/>
-								</field>
-								<field name="inputXSLURL">
-									<null/>
-								</field>
-								<field name="inputXMLURL">
-									<null/>
-								</field>
-								<field name="defaultScenario">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="isFOPPerforming">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="type">
-									<String>DITAMAP</String>
-								</field>
-								<field name="saveAs">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="openInBrowser">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="outputResource">
-									<null/>
-								</field>
-								<field name="openOtherLocationInBrowser">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="locationToOpenInBrowserURL">
-									<String></String>
-								</field>
-								<field name="openInEditor">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="showInHTMLPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInXMLPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInSVGPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInResultSetPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useXSLTInput">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="xsltParams">
-									<list/>
-								</field>
-								<field name="cascadingStylesheets">
-									<String-array/>
-								</field>
-								<field name="xslTransformer">
-									<String>DITA-OT</String>
-								</field>
-								<field name="extensionURLs">
-									<String-array/>
-								</field>
-							</ditaScenario>
-							<ditaScenario>
-								<field name="useXEP">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useAntennaHouse">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useDITAScript">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="baseDir">
-									<String>${cfd}</String>
-								</field>
-								<field name="outputDir">
-									<String>${cfd}/out/kindle</String>
-								</field>
-								<field name="tempDir">
-									<String>${cfd}/temp/kindle</String>
-								</field>
-								<field name="transtype">
-									<String>kindle</String>
-								</field>
-								<field name="filters">
-									<ditavalFilters>
-										<field name="useDitavalFilePath">
-											<Boolean>false</Boolean>
-										</field>
-										<field name="useAppliedConditionSet">
-											<Boolean>true</Boolean>
-										</field>
-										<field name="appliedConditionSet">
-											<null/>
-										</field>
-										<field name="ditavalFilePath">
-											<null/>
-										</field>
-										<field name="simpleFiltersList">
-											<list/>
-										</field>
-									</ditavalFilters>
-								</field>
-								<field name="addOxygenJars">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="skinCssFile">
-									<null/>
-								</field>
-								<field name="lastCustomSkinCssPath">
-									<null/>
-								</field>
-								<field name="publishingTemplateDataPO">
-									<null/>
-								</field>
-								<field name="oxygenFeedbackPO">
-									<null/>
-								</field>
-								<field name="additionalAntArgs">
-									<String></String>
-								</field>
-								<field name="buildTarget">
-									<String></String>
-								</field>
-								<field name="buildFilePath">
-									<String></String>
-								</field>
-								<field name="ditaParams">
-									<list/>
-								</field>
-								<field name="jvmArgs">
-									<String></String>
-								</field>
-								<field name="useCustomJavaHome">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="customJavaHomeDir">
-									<String></String>
-								</field>
-								<field name="useCustomANTHome">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="customANTHomeDir">
-									<String></String>
-								</field>
-								<field name="workingDir">
-									<null/>
-								</field>
-								<field name="showConsoleAlways">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="advancedOptionsMap">
-									<null/>
-								</field>
-								<field name="name">
-									<String>DITA Map Kindle</String>
-								</field>
-								<field name="baseURL">
-									<null/>
-								</field>
-								<field name="footerURL">
-									<null/>
-								</field>
-								<field name="fOPMethod">
-									<null/>
-								</field>
-								<field name="fOProcessorName">
-									<null/>
-								</field>
-								<field name="headerURL">
-									<null/>
-								</field>
-								<field name="inputXSLURL">
-									<null/>
-								</field>
-								<field name="inputXMLURL">
-									<null/>
-								</field>
-								<field name="defaultScenario">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="isFOPPerforming">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="type">
-									<String>DITAMAP</String>
-								</field>
-								<field name="saveAs">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="openInBrowser">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="outputResource">
-									<null/>
-								</field>
-								<field name="openOtherLocationInBrowser">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="locationToOpenInBrowserURL">
-									<String></String>
-								</field>
-								<field name="openInEditor">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInHTMLPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInXMLPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInSVGPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="showInResultSetPane">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useXSLTInput">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="xsltParams">
-									<list/>
-								</field>
-								<field name="cascadingStylesheets">
-									<String-array/>
-								</field>
-								<field name="xslTransformer">
-									<String>DITA-OT</String>
-								</field>
-								<field name="extensionURLs">
-									<String-array/>
-								</field>
-							</ditaScenario>
-							<ditaScenario>
-								<field name="useXEP">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useAntennaHouse">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="useDITAScript">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="baseDir">
-									<String>${cfd}</String>
-								</field>
-								<field name="outputDir">
-									<String>${cfd}/out/indesign</String>
-								</field>
-								<field name="tempDir">
-									<String>${cfd}/temp/indesign</String>
-								</field>
-								<field name="transtype">
-									<String>indesign</String>
-								</field>
-								<field name="filters">
-									<ditavalFilters>
-										<field name="useDitavalFilePath">
-											<Boolean>false</Boolean>
-										</field>
-										<field name="useAppliedConditionSet">
-											<Boolean>true</Boolean>
-										</field>
-										<field name="appliedConditionSet">
-											<null/>
-										</field>
-										<field name="ditavalFilePath">
-											<null/>
-										</field>
-										<field name="simpleFiltersList">
-											<list/>
-										</field>
-									</ditavalFilters>
-								</field>
-								<field name="addOxygenJars">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="skinCssFile">
-									<null/>
-								</field>
-								<field name="lastCustomSkinCssPath">
-									<null/>
-								</field>
-								<field name="publishingTemplateDataPO">
-									<null/>
-								</field>
-								<field name="oxygenFeedbackPO">
-									<null/>
-								</field>
-								<field name="additionalAntArgs">
-									<String></String>
-								</field>
-								<field name="buildTarget">
-									<String></String>
-								</field>
-								<field name="buildFilePath">
-									<String></String>
-								</field>
-								<field name="ditaParams">
-									<list/>
-								</field>
-								<field name="jvmArgs">
-									<String></String>
-								</field>
-								<field name="useCustomJavaHome">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="customJavaHomeDir">
-									<String></String>
-								</field>
-								<field name="useCustomANTHome">
-									<Boolean>false</Boolean>
-								</field>
-								<field name="customANTHomeDir">
-									<String></String>
-								</field>
-								<field name="workingDir">
-									<null/>
-								</field>
-								<field name="showConsoleAlways">
-									<Boolean>true</Boolean>
-								</field>
-								<field name="advancedOptionsMap">
-									<null/>
-								</field>
-								<field name="name">
-									<String>DITA Map InDesign</String>
 								</field>
 								<field name="baseURL">
 									<null/>
