@@ -11,8 +11,6 @@
 -->
 <project default="termharvester" xmlns:if="ant:if" xmlns:unless="ant:unless" basedir=".">
     
-    
-    
     <!-- Properties -->
     <property environment="env"/>
     <property name="debugging.mode" value="false"/>
@@ -51,44 +49,51 @@
         <echo>debugging.mode = "${debugging.mode}"</echo>
     </target>
     
-    <target name="termharvester" depends="-prepare, -temp.dir, -desktop.dir">
+    <target name="-termharvester.dirs">
+        <property name="termharvester.tmx-xliff.dir" value="${desktop.dir}${file.separator}termharvester${file.separator}tmx-xliff"/>
+        <echo>termharvester.tmx-xliff.dir = "${termharvester.tmx-xliff.dir}</echo>
+        <makeurl file="${termharvester.tmx-xliff.dir}" property="tmx.xliff.dir.url"/>
+        <mkdir dir="${termharvester.tmx-xliff.dir}"/>
         
-        <property name="tmx.xliff.dir" value="${desktop.dir}${file.separator}termharvester"/>
-        <makeurl file="${tmx.xliff.dir}" property="tmx.xliff.dir.url"/>
-        <mkdir dir="${tmx.xliff.dir}"/>
-
+        <property name="termharvester.terms.dir" value="${desktop.dir}${file.separator}termharvester${file.separator}terms"/>
+        <mkdir dir="${termharvester.terms.dir}"/>
+        <echo>termharvester.terms.dir = "${termharvester.terms.dir}"</echo>
+    </target>
+    
+    <target name="termharvester" depends="-prepare, -temp.dir, -desktop.dir, -termharvester.dirs">
+        
         <!-- To make this work, we need -Djava.awt.headless=false as JVM argument. -->
-        <groovy>
+        <!--<groovy>
             import javax.swing.JOptionPane;
-            def tmxXliffDir = project.getProperty("tmx.xliff.dir");
+            def tmxXliffDir = project.getProperty("termharvester.tmx-xliff.dir");
             def title = "Term Harvester";
             def message = "The Term Harvester is looking for XLIFF (.xlf, .xliff) and TMX (.tmx) files in the directory:\n\n" + tmxXliffDir;
             JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);
-        </groovy>
+        </groovy>-->
         
-        <echo>tmx.xliff.dir = ${tmx.xliff.dir}</echo>
-        <pathconvert property="tmx.xliff.dir.absolute.path">
-            <path path="${tmx.xliff.dir}"/>
+        <echo>termharvester.tmx-xliff.dir = ${termharvester.tmx-xliff.dir}</echo>
+        <pathconvert property="termharvester.tmx-xliff.dir.absolute.path">
+            <path path="${termharvester.tmx-xliff.dir}"/>
             <mapper type="glob" from="*" to="*"/>
         </pathconvert>
-        <echo if:set="dbg">tmx.xliff.dir.absolute.path = ${tmx.xliff.dir.absolute.path}</echo>
+        <echo if:set="dbg">termharvester.tmx-xliff.dir.absolute.path = ${termharvester.tmx-xliff.dir.absolute.path}</echo>
         
         <resourcecount property="xlf.count">
-            <fileset dir="${tmx.xliff.dir}">
+            <fileset dir="${termharvester.tmx-xliff.dir}">
                 <include name="*.xlf"/>
                 <include name="*.xliff"/>
             </fileset>
         </resourcecount>
-        <echo>Found "${xlf.count}" XLIFF (.xlf, .xliff) file(s) in directory "${tmx.xliff.dir}"</echo>
+        <echo>Found "${xlf.count}" XLIFF (.xlf, .xliff) file(s) in directory "${termharvester.tmx-xliff.dir}"</echo>
         
         <resourcecount property="tmx.count">
-            <fileset dir="${tmx.xliff.dir}">
+            <fileset dir="${termharvester.tmx-xliff.dir}">
                 <include name="*.tmx"/>
             </fileset>
         </resourcecount>
-        <echo>Found "${tmx.count}" TMX (.tmx) file(s) in directory "${tmx.xliff.dir}"</echo>
+        <echo>Found "${tmx.count}" TMX (.tmx) file(s) in directory "${termharvester.tmx-xliff.dir}"</echo>
         
-        <fail message="Did not find TMX or XLIFF files in ${tmx.xliff.dir}">
+        <fail message="Did not find TMX or XLIFF files in ${termharvester.tmx-xliff.dir}">
             <condition>
                 <and>
                     <equals arg1="${tmx.count}" arg2="0"/>
@@ -97,8 +102,8 @@
             </condition>
         </fail>
         
-        <makeurl file="${tmx.xliff.dir.absolute.path}" property="xliff-tmx.url" validate="true"/>
-        <echo if:set="dbg">xliff-tmx.url = "${xliff-tmx.url}"</echo>
+        <!--<makeurl file="${tmx.xliff.dir.absolute.path}" property="xliff-tmx.url" validate="true"/>
+        <echo if:set="dbg">xliff-tmx.url = "${xliff-tmx.url}"</echo>-->
         <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}termharvester.txt"/>
         <delete file="${output.file}" failonerror="false"/>
         <delete file="${output.file}.temp" failonerror="false"/>
@@ -114,26 +119,32 @@
     
     <target name="-extract-term">
         <echo>Extracting term "${term}"</echo>
-        <echo file="${tmx.xliff.dir}${file.separator}dummy-input.xml" append="false" force="true">&lt;dummy/></echo>
+        
+        <echo>termharvester.tmx-xliff.dir = "${termharvester.tmx-xliff.dir}</echo>
+        <echo>source.language = "${source.language}"</echo>
+        <echo>debugging.mode = "${debugging.mode}</echo>
+        <echo>output.type = "${output.type}</echo>
+        
+        <echo file="${termharvester.terms.dir}${file.separator}dummy-input.xml" append="false" force="true">&lt;dummy/></echo>
         <xslt 
             style="../xsl/termharvester/termharvester.xsl"
-            in="${tmx.xliff.dir}${file.separator}dummy-input.xml"
-            out="${tmx.xliff.dir}${file.separator}dummy-output.xml"
+            in="${termharvester.terms.dir}${file.separator}dummy-input.xml"
+            out="${termharvester.terms.dir}${file.separator}dummy-output.xml"
             failonerror="true"
             failontransformationerror="true">
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>
             <classpath refid="saxon"/>
             <param name="term" expression="${term}"/>
-            <param name="tmx.xliff.dir" expression="${tmx.xliff.dir}"/>
+            <param name="tmx.xliff.dir" expression="${termharvester.tmx-xliff.dir}"/>
             <param name="source.language" expression="${source.language}"/>
             <param name="debugging.mode" expression="${debugging.mode}"/>
             <param name="output.type" expression="${output.type}"/>
         </xslt>
-        <delete file="${tmx.xliff.dir}${file.separator}dummy-input.xml" failonerror="false" quiet="true" verbose="false"/>
-        <delete file="${tmx.xliff.dir}${file.separator}dummy-output.xml" failonerror="false" quiet="true" verbose="false"/>
+        <delete file="${termharvester.terms.dir}${file.separator}dummy-input.xml" failonerror="false" quiet="true" verbose="false"/>
+        <delete file="${termharvester.terms.dir}${file.separator}dummy-output.xml" failonerror="false" quiet="true" verbose="false"/>
     </target>
     
-    <target name="gather-main-ids" depends="-temp.dir">
+    <target name="-gather-main-ids" depends="-temp.dir">
         <echo>Gather main IDs</echo>
         <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}main-terms.txt"/>
         <xslt 
@@ -146,11 +157,57 @@
             <classpath refid="saxon"/>
             <param name="language" expression="${language}"/>
         </xslt>
-        <!-- Open file -->
-        <exec executable="cmd" failonerror="true">
-            <arg value="/c"/>
-            <arg value="${output.file}"/>
-        </exec>
+        <!-- Load ${terms} property, which contains a comma-separated list of main terms --> 
+        <loadproperties srcfile="${output.file}"/>
+    </target>
+    
+    <target name="-harvester-properties">
+        <property name="output.type" value="termentry"/>
+        <property name="search.string" value="${terms}"/>
+        <property name="source.language" value="${language}"/>
+        <echo>output.type = "${output.type}"</echo>
+        <echo>search.string = "${search.string}"</echo>
+        <echo>source.language = "${source.language}"</echo>
+    </target>
+    
+    <target name="-integrate-harvested-terms">
+        <echo>language = "${language}"</echo>
+        <echo>terms = "${terms}</echo>
+        
+        <!-- Iterate over <termentry> topics and add harvested terms. -->
+        <dirname property="termmap.dir" file="${termmap}"/>
+        <property name="topics.dir" value="${termmap.dir}${file.separator}topics"/>
+        <echo>termmap.dir = "${termmap.dir}"</echo>
+        <echo>topics.dir = "${topics.dir}</echo>
+        
+        <for param="file">
+            <path>
+                <fileset dir="${topics.dir}">
+                    <include name="**/*.dita"/>
+                </fileset>
+            </path>
+            <sequential>
+                <var name="topic.basename" unset="true"/>
+                <basename property="topic.basename" file="@{file}"/>
+                <xslt style="../xsl/termharvester/add-harvested-terms.xsl"
+                    in="@{file}"
+                    out="${jung.terminology.temp.dir}${file.separator}${topic.basename}"
+                    force="true"
+                    failOnError="true">
+                    <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+                    <classpath refid="saxon"/>
+                    <param name="debugging" expression="${dbg}"/>
+                    <param name="termharvested.file" expression="${termharvester.terms.dir}${file.separator}${topic.basename}"/>
+                </xslt>
+            </sequential>
+        </for>
+    </target>
+    
+    <target name="harvest-terms-and-update-topics" depends="
+        -gather-main-ids,
+        -harvester-properties,
+        termharvester,
+        -integrate-harvested-terms">
     </target>
 
 </project>

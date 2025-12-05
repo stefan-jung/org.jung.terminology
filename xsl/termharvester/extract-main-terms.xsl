@@ -18,7 +18,7 @@
                 <xsl:value-of select="string-join($doc//fullForm[@usage = 'preferred'][@language = $language][1]/termVariant[1]/text()) || ','"/>
             </xsl:for-each>
         </xsl:variable>
-        <xsl:sequence select="$terms"/>
+        <xsl:sequence select="'terms=' || $terms"/>
     </xsl:template>
 
 </xsl:stylesheet>

@@ -473,10 +473,10 @@
 										<field name="value">
 											<action>
 												<field name="id">
-													<String>main.terms</String>
+													<String>harvest.terms.and.update.topics</String>
 												</field>
 												<field name="name">
-													<String>Gather main terms</String>
+													<String>Harvest terms from translation memory and update Termentry topics</String>
 												</field>
 												<field name="description">
 													<String></String>
@@ -503,7 +503,7 @@
 																<serializableOrderedMap>
 																	<entry>
 																		<String>scenarioNames</String>
-																		<String>Gather main IDs</String>
+																		<String>Harvest terms from translation memory and update Termentry topics</String>
 																	</entry>
 																</serializableOrderedMap>
 															</field>
@@ -1253,7 +1253,7 @@
 										<field name="value">
 											<menuItem>
 												<field name="actionID">
-													<String>main.terms</String>
+													<String>harvest.terms.and.update.topics</String>
 												</field>
 											</menuItem>
 										</field>
@@ -1342,7 +1342,7 @@
 										<field name="value">
 											<menuItem>
 												<field name="actionID">
-													<String>main.terms</String>
+													<String>harvest.terms.and.update.topics</String>
 												</field>
 											</menuItem>
 										</field>
@@ -2369,7 +2369,7 @@ Priority "High" is required!</String>
 													<String></String>
 												</field>
 												<field name="buildTarget">
-													<String>gather-main-ids</String>
+													<String>harvest-terms-and-update-topics</String>
 												</field>
 												<field name="buildFilePath">
 													<String>${frameworkDir}/ant/build_termharvester.xml</String>
@@ -2425,7 +2425,7 @@ Priority "High" is required!</String>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx256m -Dpolyglot.engine.WarnInterpreterOnly=false</String>
+													<String>-Xmx4096m -Djava.awt.headless=false -Dpolyglot.engine.WarnInterpreterOnly=false</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
@@ -2449,7 +2449,7 @@ Priority "High" is required!</String>
 													<null/>
 												</field>
 												<field name="name">
-													<String>Gather main IDs</String>
+													<String>Harvest terms from translation memory and update Termentry topics</String>
 												</field>
 												<field name="baseURL">
 													<null/>
@@ -2524,7 +2524,9 @@ Priority "High" is required!</String>
 													<String>ANT</String>
 												</field>
 												<field name="extensionURLs">
-													<String-array/>
+													<String-array>
+														<String>${framework}/lib/groovy/*.jar</String>
+													</String-array>
 												</field>
 											</antScenario>
 										</field>
