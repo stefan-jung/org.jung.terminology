@@ -188,8 +188,7 @@
                 </script>
                 
                 <echo/>
-                <echo/>
-                <echo>========================================================================================================================</echo>
+                <echo>********************************************************************************</echo>
                 <echo/>
                 <var name="topic.basename" unset="true"/>
                 <basename property="topic.basename" file="@{file}"/>
@@ -208,9 +207,7 @@
                 <loadproperties srcfile="${jung.terminology.temp.dir}${file.separator}main-term.properties"/>
                 
                 <echo/>
-                <echo>********************************************************************************</echo>
                 <echo>   ${main.term}</echo>
-                <echo>********************************************************************************</echo>
                 <echo/>
                 <xslt style="../xsl/termharvester/harvest-and-integrate.xsl"
                     in="@{file}"
@@ -233,7 +230,7 @@
                     project.setProperty('harvestTermTimer', (new Date().getTime() - harvestTermTimerStart) / 1000)
                 </script>
                 <echo/>
-                <echo> *** Harvested "${main.term}" terms in ${harvestTermTimer} seconds ***</echo>
+                <echo>Harvested "${main.term}" terms in ${harvestTermTimer} seconds</echo>
                 
                 <!-- Unset the main.term and timer --> 
                 <var name="main.term" unset="true"/>
