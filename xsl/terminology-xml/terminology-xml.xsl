@@ -57,7 +57,7 @@
             normalize-space(.//*[contains(@class, ' termentry/termNotation ')]
             [@usage='preferred']
             [@language=$target.language][1]/*[contains(@class, ' termentry/termVariant ')][1]/text())"/>
-        <xsl:if test="$term.source != '' and $term.target != ''">
+        <xsl:if test="$term.source != '' and $term.target != '' and ($term.source != $term.target)">
             <term>
                 <source>{$term.source}</source>
                 <target>{$term.target}</target>
