@@ -2425,7 +2425,7 @@ Priority "High" is required!</String>
 													</list>
 												</field>
 												<field name="jvmArgs">
-													<String>-Xmx4096m -Djava.awt.headless=false -Dpolyglot.engine.WarnInterpreterOnly=false</String>
+													<String>-Xmx16384m -Djava.awt.headless=false -Dpolyglot.engine.WarnInterpreterOnly=false</String>
 												</field>
 												<field name="useCustomJavaHome">
 													<Boolean>false</Boolean>
