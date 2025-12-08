@@ -181,7 +181,15 @@
                 </fileset>
             </path>
             <sequential>
+                
+                <!-- Set timer -->
+                <script language="javascript" classpathref="graal">
+                    project.setProperty('harvestTermTimerStart', new Date().getTime());
+                </script>
+                
                 <echo/>
+                <echo/>
+                <echo>================================================================================</echo>
                 <echo/>
                 <var name="topic.basename" unset="true"/>
                 <basename property="topic.basename" file="@{file}"/>
@@ -221,8 +229,17 @@
                 <!-- Overwrite the original file. -->
                 <move file="${jung.terminology.temp.dir}${file.separator}${topic.basename}" tofile="@{file}" overwrite="true"/>
                 
-                <!-- Unset the main.term --> 
+                <script language="javascript" classpathref="graal">
+                    project.setProperty('harvestTermTimer', (new Date().getTime() - harvestTermTimerStart) / 1000)
+                </script>
+                <echo/>
+                <echo> ✓ Harvested "${main.term}" terms in ${harvestTermTimer} seconds</echo>
+                <echo/>
+                
+                <!-- Unset the main.term and timer --> 
                 <var name="main.term" unset="true"/>
+                <var name="harvestTermTimerStart" unset="true"/>
+                <var name="harvestTermTimer" unset="true"/>
             </sequential>
         </for>
     </target>
