@@ -189,7 +189,7 @@
                 
                 <echo/>
                 <echo/>
-                <echo>================================================================================</echo>
+                <echo>========================================================================================================================</echo>
                 <echo/>
                 <var name="topic.basename" unset="true"/>
                 <basename property="topic.basename" file="@{file}"/>
@@ -233,8 +233,7 @@
                     project.setProperty('harvestTermTimer', (new Date().getTime() - harvestTermTimerStart) / 1000)
                 </script>
                 <echo/>
-                <echo> ✓ Harvested "${main.term}" terms in ${harvestTermTimer} seconds</echo>
-                <echo/>
+                <echo> *** Harvested "${main.term}" terms in ${harvestTermTimer} seconds ***</echo>
                 
                 <!-- Unset the main.term and timer --> 
                 <var name="main.term" unset="true"/>
