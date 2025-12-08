@@ -96,8 +96,6 @@
             </condition>
         </fail>
         
-        <!--<makeurl file="${tmx-xliff.dir.absolute.path}" property="xliff-tmx.url" validate="true"/>
-        <echo if:set="dbg">xliff-tmx.url = "${xliff-tmx.url}"</echo>-->
         <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}termharvester.txt"/>
         <delete file="${output.file}" failonerror="false"/>
         <delete file="${output.file}.temp" failonerror="false"/>
@@ -175,39 +173,6 @@
         <echo>tmx-xliff.dir.url = "${tmx-xliff.dir.url}"</echo>
     </target>
     
-    <!--<target name="-integrate-harvested-terms">
-        <echo>language = "${language}"</echo>
-        <echo>terms = "${terms}"</echo>
-        
-        <!-\- Iterate over <termentry> topics and add harvested terms. -\->
-        <dirname property="termmap.dir" file="${termmap}"/>
-        <property name="topics.dir" value="${termmap.dir}${file.separator}topics"/>
-        <echo>termmap.dir = "${termmap.dir}"</echo>
-        <echo>topics.dir = "${topics.dir}"</echo>
-        
-        <for param="file">
-            <path>
-                <fileset dir="${topics.dir}">
-                    <include name="**/*.dita"/>
-                </fileset>
-            </path>
-            <sequential>
-                <var name="topic.basename" unset="true"/>
-                <basename property="topic.basename" file="@{file}"/>
-                <xslt style="../xsl/termharvester/add-harvested-terms.xsl"
-                    in="@{file}"
-                    out="${jung.terminology.temp.dir}${file.separator}${topic.basename}"
-                    force="true"
-                    failOnError="true">
-                    <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-                    <classpath refid="saxon"/>
-                    <param name="debugging" expression="${dbg}"/>
-                    <param name="termharvested.file" expression="${terms.dir}${file.separator}${topic.basename}"/>
-                </xslt>
-            </sequential>
-        </for>
-    </target>-->
-    
     <target name="-harvest-and-integrate">
         <for param="file">
             <path>
@@ -216,6 +181,8 @@
                 </fileset>
             </path>
             <sequential>
+                <echo/>
+                <echo/>
                 <var name="topic.basename" unset="true"/>
                 <basename property="topic.basename" file="@{file}"/>
                 
@@ -231,12 +198,13 @@
                     <param name="source.language" expression="en-US"/>
                 </xslt>
                 <loadproperties srcfile="${jung.terminology.temp.dir}${file.separator}main-term.properties"/>
+                
                 <echo/>
                 <echo>********************************************************************************</echo>
                 <echo>   ${main.term}</echo>
                 <echo>********************************************************************************</echo>
                 <echo/>
-                <xslt style="../xsl/termharvester/new-termharvester.xsl"
+                <xslt style="../xsl/termharvester/harvest-and-integrate.xsl"
                     in="@{file}"
                     out="${jung.terminology.temp.dir}${file.separator}${topic.basename}"
                     force="true"
@@ -250,6 +218,8 @@
                     <param name="topics.dir" expression="${topics.dir}"/>
                     <param name="termharvested.file" expression="${terms.dir}${file.separator}${topic.basename}"/>
                 </xslt>
+                <!-- Overwrite the original file. -->
+                <move file="${jung.terminology.temp.dir}${file.separator}${topic.basename}" tofile="@{file}" overwrite="true"/>
                 
                 <!-- Unset the main.term --> 
                 <var name="main.term" unset="true"/>
