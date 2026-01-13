@@ -75,7 +75,7 @@
         
         <!-- Replacement map -->
         <xsl:variable name="replacements" as="map(xs:string, xs:string)" select="map{
-            '''' : '&amp;pos;' (: apostrophe :) 
+            '''' : '&amp;apos;' (: apostrophe :) 
         }"/>
         
         <!-- Build alternation from the map keys; escape regex meta if needed -->
