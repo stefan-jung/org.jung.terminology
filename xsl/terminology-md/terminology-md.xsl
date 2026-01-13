@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="3.0"
+    xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns:sj="https://stefan-jung.org"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="xs">
@@ -51,16 +53,50 @@
     <xsl:template match="termentry" mode="termentry" expand-text="yes">
         <xsl:param name="target.language" as="xs:string"/>
         <xsl:variable name="term.source" select="
+            sj:entity(
             normalize-space(.//*[contains(@class, ' termentry/termNotation ')]
             [@usage='preferred']
-            [@language=$source.language][1]/*[contains(@class, ' termentry/termVariant ')][1]/text())"/>
+            [@language=$source.language][1]/*[contains(@class, ' termentry/termVariant ')][1]/text())
+            )"/>
         <xsl:variable name="term.target" select="
+            sj:entity(
             normalize-space(.//*[contains(@class, ' termentry/termNotation ')]
             [@usage='preferred']
-            [@language=$target.language][1]/*[contains(@class, ' termentry/termVariant ')][1]/text())"/>
+            [@language=$target.language][1]/*[contains(@class, ' termentry/termVariant ')][1]/text())
+            )"/>
         <xsl:if test="($term.source != '' and $term.target != '') and ($term.source != $term.target)">
             <xsl:sequence select="$newline || $term.source || ' =&gt; ' || $term.target"/>
         </xsl:if>
     </xsl:template>
+    
+    <!-- This functions converts problematic characters to their entity representations. -->
+    <xsl:function name="sj:entity" as="xs:string">
+        <xsl:param name="in" as="xs:string"/>
+        
+        <!-- Replacement map -->
+        <xsl:variable name="replacements" as="map(xs:string, xs:string)" select="map{
+            '''' : '&amp;pos;' (: apostrophe :) 
+        }"/>
+        
+        <!-- Build alternation from the map keys; escape regex meta if needed -->
+        <xsl:variable name="pattern" select="
+            string-join(
+                for $k in map:keys($replacements)
+                return replace($k, '([.^$|?*+(){}\[\]\\])', '\\$1'), '|'
+            )"/>
+        
+        <xsl:variable name="out">
+            <xsl:analyze-string select="$in" regex="{$pattern}">
+                <xsl:matching-substring>
+                    <xsl:value-of select="map:get($replacements, .)"/>
+                </xsl:matching-substring>
+                <xsl:non-matching-substring>
+                    <xsl:value-of select="."/>
+                </xsl:non-matching-substring>
+            </xsl:analyze-string>
+        </xsl:variable>
+        <xsl:sequence select="string($out)"/>
+        
+    </xsl:function>
     
 </xsl:stylesheet>
