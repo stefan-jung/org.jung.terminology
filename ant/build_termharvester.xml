@@ -13,7 +13,7 @@
     
     <!-- Properties -->
     <property environment="env"/>
-    <property name="debugging.mode" value="true"/>
+    <property name="debugging.mode" value="false"/>
     
     <condition property="dbg">
         <equals arg1="${debugging.mode}" arg2="true"/>
@@ -49,28 +49,31 @@
         <echo>debugging.mode = "${debugging.mode}"</echo>
     </target>
     
-    <target name="-termharvester.dirs">
-        <mkdir dir="${tmx-xliff.dir}"/>
-        <mkdir dir="${terms.dir}"/>
-    </target>
-    
-    <target name="termharvester" depends="-prepare, -temp.dir, -desktop.dir, -termharvester.dirs">
+    <target name="termharvester" depends="-prepare, -temp.dir, -desktop.dir">
         
-        <!-- To make this work, we need -Djava.awt.headless=false as JVM argument. -->
-        <!--<groovy>
-            import javax.swing.JOptionPane;
-            def tmxXliffDir = project.getProperty("tmx-xliff.dir");
-            def title = "Term Harvester";
-            def message = "The Term Harvester is looking for XLIFF (.xlf, .xliff) and TMX (.tmx) files in the directory:\n\n" + tmxXliffDir;
-            JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);
-        </groovy>-->
+        <echo>tmx-xliff.file = ${tmx-xliff.file}</echo>
         
+        <propertyregex
+            property="tmx-xliff.file.path.1"
+            input="${tmx-xliff.file}"
+            regexp="^file:/+"
+            replace=""
+        />
+        
+        <propertyregex
+            property="tmx-xliff.file.path"
+            input="${tmx-xliff.file.path.1}"
+            regexp="%20"
+            replace=" "
+        />
+        
+        <echo>tmx-xliff.file.path = ${tmx-xliff.file.path}</echo>
+        
+        <dirname property="tmx-xliff.dir" file="${tmx-xliff.file.path}"/>
         <echo>tmx-xliff.dir = ${tmx-xliff.dir}</echo>
-        <pathconvert property="tmx-xliff.dir.absolute.path">
-            <path path="${tmx-xliff.dir}"/>
-            <mapper type="glob" from="*" to="*"/>
-        </pathconvert>
-        <echo if:set="dbg">tmx-xliff.dir.absolute.path = ${tmx-xliff.dir.absolute.path}</echo>
+        
+        <makeurl file="${tmx-xliff.dir}" property="tmx-xliff.dir.url" validate="true"/>
+        <echo>tmx-xliff.dir.url = ${tmx-xliff.dir.url}</echo>
         
         <resourcecount property="xlf.count">
             <fileset dir="${tmx-xliff.dir}">
@@ -95,6 +98,12 @@
                 </and>
             </condition>
         </fail>
+        
+        <property name="terms.dir" value="${tmx-xliff.dir}${file.separator}terms"/>
+        <echo>terms.dir = ${terms.dir}</echo>
+        <mkdir dir="${terms.dir}"/>
+        <makeurl file="${terms.dir}" property="terms.dir.url" validate="true"/>
+        <echo>terms.dir.url = ${terms.dir.url}</echo>
         
         <property name="output.file" value="${jung.terminology.temp.dir}${file.separator}termharvester.txt"/>
         <delete file="${output.file}" failonerror="false"/>
@@ -127,7 +136,10 @@
             <factory name="net.sf.saxon.TransformerFactoryImpl"/>
             <classpath refid="saxon"/>
             <param name="term" expression="${term}"/>
-            <param name="tmx-xliff.dir" expression="${tmx-xliff.dir.url}"/>
+            <param name="terms.dir" expression="${terms.dir}"/>
+            <param name="terms.dir.url" expression="${terms.dir.url}"/>
+            <param name="tmx-xliff.dir" expression="${tmx-xliff.dir}"/>
+            <param name="tmx-xliff.dir.url" expression="${tmx-xliff.dir.url}"/>
             <param name="source.language" expression="${source.language}"/>
             <param name="debugging.mode" expression="${debugging.mode}"/>
             <param name="output.type" expression="${output.type}"/>
@@ -159,8 +171,6 @@
         <property name="source.language" value="${language}"/>
         <dirname property="termmap.dir" file="${termmap}"/>
         <property name="topics.dir" value="${termmap.dir}${file.separator}topics"/>
-        <property name="tmx-xliff.dir" value="${desktop.dir}${file.separator}termharvester${file.separator}tmx-xliff"/>
-        <makeurl file="${tmx-xliff.dir}" property="tmx-xliff.dir.url"/>
         <property name="terms.dir" value="${desktop.dir}${file.separator}termharvester${file.separator}terms"/>
         
         <echo>output.type = "${output.type}"</echo>

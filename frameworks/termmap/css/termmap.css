@@ -1,24 +1,22 @@
 @media oxygen {
+
     *[class~="termmap/termmap"] {
         -oxy-display-tags: none;
         display: block;
-        font-family: Arial, sans-serif;
-        font-size: 1.0rem;
+        font-family: Arial , sans-serif;
+        font-size: 0.9rem;
         font-style: normal;
         font-weight: 400;
         line-height: 1.2;
         margin-bottom: 24px;
-        margin-left: auto;
+        margin-left: 3.0em;
         margin-right: auto;
         margin-top: 24px;
         min-height: 378px;
         outline-width: 0;
         padding-bottom: 80px;
         padding-top: 32px;
-        text-decoration-color: rgba(0,0,0,1.0);
-        text-decoration-line: none;
-        text-decoration-style: solid;
-        width: 80%;
+        width: 768px;
     }
     
     *[class~="termmap/termmap"] > *[class~="topic/title"] {
@@ -41,36 +39,22 @@
         -oxy-editable: true;
         -oxy-show-placeholder: always;
         -oxy-show-placeholder: no;
-        /*border-color: #3d3d3d;
-        border-style: solid;
-        border-width: 0.05rem;*/
         display: block;
         font-family: Arial, sans-serif;
-        margin-bottom: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-bottom: 2px;
         margin-top: 5px;
-        width: 99% !important;
     }
-    
-    *[class~="termmap/termref"]:not([href=""]):before(5) {
-        font-weight: bold;
-        link: attr(href);
+    *[class~="termmap/termref"]:hover:focus, 
+    *[class~="termmap/termref"]:focus {
         content: 
+            oxy_label(
+                text, "• ",
+                color, inherit
+            )
             oxy_buttonGroup(
                 label, oxy_getSomeText(oxy_link-text(attr(href)), 150, true),
                 actionIDs, 'term.termref.add, term.termref.delete', 'term.termref.edit.href'
-            );
-        display: inline;
-        font-size: 0.75rem;
-        margin-bottom: 2px;
-        padding-bottom: 5px;
-        width: 300px;
-    }
-    *[class~="termmap/termref"]:not([href=""]):before(4) {
-        font-weight: bold;
-        link: attr(href);
-        content: 
+            )
             oxy_urlChooser(
                 edit, '@href',
                 columns, 5
@@ -85,18 +69,14 @@
                 edit, "@termdomain", 
                 columns, 20
             );
-        display: inline;
-        font-size: 0.75rem;
-        margin-bottom: 2px;
-        padding-bottom: 5px;
     }
-    *[class~="termmap/termref"][href=""]:before {
+    *[class~="termmap/termref"][href=""]:hover:focus, 
+    *[class~="termmap/termref"][href=""]:focus {
         content: 
-            oxy_buttonGroup(
-                label, '${i18n(term.map.termref)}',
-                actionIDs, 'term.termref.add, term.termref.delete', 'term.termref.edit.href'
+            oxy_label(
+                text, "• ",
+                color, inherit
             )
-            "\Ahref "
             oxy_urlChooser(
                 edit, '@href',
                 columns, 30
@@ -111,5 +91,40 @@
                 edit, "@termdomain", 
                 columns, 20
             );
+    }
+    *[class~="termmap/termref"] {
+        content:
+            oxy_label(
+                text, "• ",
+                color, inherit
+            )
+            attr(keys);
+    }
+    *[class~="termmap/termref"]:hover {
+        content:
+            oxy_label(
+                text, "• ",
+                styles, "font-weight: normal;"
+            )
+            attr(keys)
+            "   "
+            oxy_label(
+                text, oxy_getSomeText(oxy_link-text(attr(href)), 150, true),
+                styles, "font-weight: bold;"
+            );
+    }
+    *[class~="termmap/termref"][termdomain] {
+        content:
+            oxy_label(
+                text, "• ",
+                color, inherit
+            )
+            attr(keys)
+            oxy_label(
+                text, " termdomain",
+                width, 10em,
+                color, inherit
+            )
+            attr(termdomain);
     }
 }

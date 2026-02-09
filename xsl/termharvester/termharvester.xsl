@@ -44,7 +44,8 @@
     <!-- Define the string you are searching for -->
     <xsl:param name="term" as="xs:string"/>
     <xsl:param name="source.language" as="xs:string"/>
-    <xsl:param name="tmx.xliff.dir" as="xs:string"/>
+    <xsl:param name="tmx-xliff.dir" as="xs:string"/>
+    <xsl:param name="tmx-xliff.dir.url" as="xs:string"/>
     <xsl:param name="output.type" as="xs:string"/>
     
     <!-- Can be (de)activated in the build_termharvester.xml -->
@@ -77,7 +78,7 @@
         <xsl:if test="$debugging.mode = 'true'">
             <xsl:message select="'[DEBUG] baseURI = ''' || $baseURI || ''''"/>
             <xsl:message select="'[DEBUG] baseURINoFile = ''' || $baseURINoFile || ''''"/>
-            <xsl:message select="'[DEBUG] xliff-directory = ''' || $tmx.xliff.dir || ''''"/>
+            <xsl:message select="'[DEBUG] xliff-directory = ''' || $tmx-xliff.dir || ''''"/>
             <xsl:message select="'[DEBUG] search-string = ''' || $term || ''''"/>
             <xsl:message select="'[DEBUG] output.type = ''' || $output.type || ''''"/>
             <!--<xsl:message select="'[DEBUG] absolutePath = ''' || $absolutePath || ''''"/>-->
@@ -90,7 +91,7 @@
                 <xsl:sequence select="$source.language || ' = ' || $term || '&#xa;'"/>
                
                 <!-- Iterate over all .xlf files -->
-                <xsl:variable name="xlf-collection" select="collection($baseURINoFile || '?select=*.xlf')"/>
+                <xsl:variable name="xlf-collection" select="collection($tmx-xliff.dir.url || '?select=*.xlf')"/>
                 <xsl:for-each select="$xlf-collection">
                     <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
                     <xsl:if test="$debugging.mode = 'true'">
@@ -109,7 +110,7 @@
                 </xsl:for-each>
                 
                 <!-- Iterate over all .xliff files -->
-                <xsl:variable name="xliff-collection" select="collection($baseURINoFile || '?select=*.xliff')"/>
+                <xsl:variable name="xliff-collection" select="collection($tmx-xliff.dir.url || '?select=*.xliff')"/>
                 <xsl:for-each select="$xliff-collection">
                     <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
                     <xsl:if test="$file = ''">
@@ -141,7 +142,8 @@
                     </xsl:call-template>
                 </xsl:for-each>
                 
-            </xsl:result-document> 
+            </xsl:result-document>
+            <xsl:message select="'Write: ' || $baseURINoFile || '/' || $term || '.txt'"/>
         </xsl:if>
         
         <xsl:if test="$output.type = 'all' or $output.type = 'csv'">
@@ -196,6 +198,7 @@
                 </xsl:for-each>
                 
             </xsl:result-document> 
+            <xsl:message select="'Write: ' || $baseURINoFile || '/' || $term || '.csv'"/>
         </xsl:if>
         
         <xsl:if test="$output.type = 'all' or $output.type = 'termentry'">
@@ -215,7 +218,7 @@
                         </fullForm>
                         
                         <!-- Iterate over all .xlf files -->
-                        <xsl:variable name="xlf-collection" select="collection($baseURINoFile || '?select=*.xlf')"/>
+                        <xsl:variable name="xlf-collection" select="collection($tmx-xliff.dir.url || '?select=*.xlf')"/>
                         <xsl:for-each select="$xlf-collection">
                             <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
                             <xsl:if test="$debugging.mode = 'true'">
@@ -230,7 +233,7 @@
                         </xsl:for-each>
                         
                         <!-- Iterate over all .xliff files -->
-                        <xsl:variable name="xliff-collection" select="collection($baseURINoFile || '?select=*.xliff')"/>
+                        <xsl:variable name="xliff-collection" select="collection($tmx-xliff.dir.url || '?select=*.xliff')"/>
                         <xsl:for-each select="$xliff-collection">
                             <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
                             <xsl:if test="$debugging.mode = 'true'">
@@ -245,7 +248,7 @@
                         </xsl:for-each>
                         
                         <!-- Iterate over all .tmx files -->
-                        <xsl:variable name="tmx-collection" select="collection($baseURINoFile || '?select=*.tmx')"/>
+                        <xsl:variable name="tmx-collection" select="collection($tmx-xliff.dir.url || '?select=*.tmx')"/>
                         <xsl:for-each select="$tmx-collection">
                             <xsl:variable name="file" select="tokenize(base-uri(.), '/')[last()]"/>
                             <xsl:if test="$debugging.mode = 'true'">
@@ -262,7 +265,8 @@
                     </termBody>
                 </termentry>
                 
-            </xsl:result-document> 
+            </xsl:result-document>
+            <xsl:message select="'Write: ' || $baseURINoFile || '/' || sj:concept-id($term) || '.dita'"/>
         </xsl:if>
         
     </xsl:template>

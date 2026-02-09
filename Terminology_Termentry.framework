@@ -9850,6 +9850,29 @@ or contains(@class, ' termentry/termSource ')][1]</String>
 																<null/>
 															</field>
 														</antParameter>
+														<antParameter>
+															<field name="name">
+																<String>tmx-xliff.file</String>
+															</field>
+															<field name="description">
+																<String>Choose a random file of the directory containing the TMX and XLIFF files. All files in this directory will be processed.</String>
+															</field>
+															<field name="value">
+																<String>${ask('Select a TMX/XLIFF file in the directory containing the TMX/XLIFF files', url, 'C:\example.tmx')}</String>
+															</field>
+															<field name="defaultValue">
+																<null/>
+															</field>
+															<field name="type">
+																<Integer>5</Integer>
+															</field>
+															<field name="possibleValues">
+																<null/>
+															</field>
+															<field name="possibleValuesDescriptions">
+																<null/>
+															</field>
+														</antParameter>
 													</list>
 												</field>
 												<field name="jvmArgs">
