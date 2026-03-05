@@ -13,23 +13,26 @@
     
     <xsl:template match="definition">
         
-        <!--<xsl:variable name="concept-term" select="//title[1]/text()" as="xs:string"/>-->
         <xsl:variable name="concept-term" as="xs:string" select="
             (: Try to use the first termNonation :)
             if (//*[contains(@class, ' termentry/termNotation ')][1]/*[contains(@class, ' termentry/termVariant ')][1]/text() != '')
             then //*[contains(@class, ' termentry/termNotation ')][1]/*[contains(@class, ' termentry/termVariant ')][1]/text()
-            else //title[1]
+            else //title[1]/text()
             "/>
         
-        <xsl:value-of _disable-output-escaping="yes" select="ai:transform-content(
+        <xsl:value-of _disable-output-escaping="yes" select="
+            ai:transform-content(
             'Please write a definition for ''' || $concept-term || ''' and tell me the source of definition. '
             || 'Please create an XML root element called ''definition''. '
             || 'In this element create a child element called ''definitionText''. '
             || 'Place the definition in the XML element ''definitionText''. '
+            (: It's good style to not mention the term itself in the definition. :)
+            || 'Do not mention the term itself in the definition. If the word is, for instance, an appliance, call it an ''appliance''.'
             || 'Create another child element of ''definition'' called ''definitionSource''. '
             || 'Create a child element of ''definitionSource'' called ''sourceName''. '
-            || 'Place the source of the definition in the ''sourceName'' element. Please return the result as pure valid XML.'
-            || 'Do not use any entities.', .)"></xsl:value-of>
+            || 'Place the source of the definition in the ''sourceName'' element. Please return the result as pure valid XML. Escape special characters as Unicode entities.',
+            .)
+            "/>
         
     </xsl:template>
     

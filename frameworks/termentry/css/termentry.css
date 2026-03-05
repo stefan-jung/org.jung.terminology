@@ -430,6 +430,9 @@
     *[keyref][keyref][keyref]:empty {
         content: oxy_label(text, oxy_getSomeText(oxy_link-text(), 150, true), background-color, rgb(240, 240, 240));
     }
+    *[keyref][keyref][keyref]:empty {
+        -oxy-link : oxy_concat("" , attr(keyref , keyref)) ;
+    }
 }
  
 /*********************************************
@@ -1432,12 +1435,13 @@
                 oxy_action(id, 'term.relatedTerm.delete')
             )
         );
+    -oxy-link : oxy_concat("" , attr(keyref , keyref)) ;
 }
 
 /*********************************************
  * TERM RELATION
  *********************************************/
-*[class~="termentry/termRelation"][keyref]:before(7) {
+/**[class~="termentry/termRelation"][keyref]:before(7) {
     content:
         oxy_button(
             action, oxy_action(
@@ -1456,7 +1460,7 @@
         );
     display: inline;
     float: right;
-}
+}*/
 *[class~="termentry/termRelation"]{
     -oxy-display-tags: none;
     display: block;
