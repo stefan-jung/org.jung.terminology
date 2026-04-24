@@ -5,15 +5,14 @@
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    exclude-result-prefixes="related-links sj xd xs">
+    exclude-result-prefixes="related-links sj xd xs" 
+    expand-text="yes">
     
     <!-- Definition -->
     <xsl:template match="*[contains(@class, ' termentry/definition ')]">
         <div class="card definition">
             <div class="card-body">
-                <h5 class="card-title">
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Definition')"/>
-                </h5>
+                <h5 class="card-title">{sj:getTermbrowserString($language, 'Definition')}</h5>
                 <xsl:apply-templates/>
             </div>
         </div>
@@ -28,9 +27,9 @@
 
     <!-- Definition Source -->
     <xsl:template match="*[contains(@class, ' termentry/definitionSource ')]">
-        <blockquote class="blockquote">
-            <xsl:value-of select="sj:getTermbrowserString($language, 'Definition Source') || sj:getTermbrowserString($language, 'Delimiter String')"/>
-            <xsl:apply-templates/>
+        <blockquote class="blockquote">{
+            sj:getTermbrowserString($language, 'Definition Source') || sj:getTermbrowserString($language, 'Delimiter String')
+        }<xsl:apply-templates/>
         </blockquote>
     </xsl:template>
     
@@ -38,9 +37,7 @@
     <xsl:template match="*[contains(@class, ' termentry/altDefinition ')]">
         <div class="card definition">
             <div class="card-body">
-                <h5 class="card-title">
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Alternative Definition')"/>
-                </h5>
+                <h5 class="card-title">{sj:getTermbrowserString($language, 'Alternative Definition')}</h5>
                 <xsl:apply-templates/>
             </div>
         </div>
@@ -57,12 +54,19 @@
     <xsl:template match="*[contains(@class, ' termentry/annotation ')][ancestor::*[contains(@class, ' termentry/termBody ')]]">
         <div class="panel panel-default annotation">
             <div class="panel-heading">
-                <h3 class="panel-title">
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Annotation')"/>
-                </h3>
+                <h3 class="panel-title">{sj:getTermbrowserString($language, 'Annotation')}</h3>
             </div>
             <div class="panel-body">
                 <xsl:apply-templates/>
+            </div>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="*[contains(@class, ' termentry/conceptTicket')]">
+        <div class="card definition">
+            <div class="card-body">
+                <h5 class="card-title">{sj:getTermbrowserString($language, 'Concept Ticket')}</h5>
+                <a href="{@href}" target="_blank">{if (./text() != '') then ./text() else @href}</a>
             </div>
         </div>
     </xsl:template>
@@ -73,30 +77,14 @@
             <table class="termTable table table-striped table-bordered table-hover table-condensed">
                 <thead class="thead-light">
                     <tr>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Type')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Language')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Usage')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Domain')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Source')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Context')"/>
-                        </th>
-                        <th class="termTable" scope="col">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Term Annotations')"/>
-                        </th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Type')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Language')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Usage')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Domain')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Source')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Context')}</th>
+                        <th class="termTable" scope="col">{sj:getTermbrowserString($language, 'Term Annotations')}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -109,26 +97,15 @@
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')]">
         <tr>
             <!-- Term -->
-            <td class="termTable">
-                <xsl:value-of select="*[contains(@class, ' termentry/termVariant ')]"/>
-            </td>
+            <td class="termTable">{*[contains(@class, ' termentry/termVariant ')]}</td>
             <!-- Type -->
-            <td class="termTable">
-                <xsl:choose>
-                    <xsl:when test="contains(@class, ' termentry/fullForm ')">
-                        <xsl:value-of select="sj:getTermbrowserString($language, 'Full Form')"/>
-                    </xsl:when>
-                    <xsl:when test="contains(@class, ' termentry/abbreviation ')">
-                        <xsl:value-of select="sj:getTermbrowserString($language, 'Abbreviation')"/>
-                    </xsl:when>
-                    <xsl:when test="contains(@class, ' termentry/acronym ')">
-                        <xsl:value-of select="sj:getTermbrowserString($language, 'Acronym')"/>
-                    </xsl:when>
-                    <xsl:when test="contains(@class, ' termentry/verb ')">
-                        <xsl:value-of select="sj:getTermbrowserString($language, 'Verb')"/>
-                    </xsl:when>
-                </xsl:choose>
-            </td>
+            <td class="termTable">{
+                if (contains(@class, ' termentry/fullForm ')) then sj:getTermbrowserString($language, 'Full Form')
+                else if (contains(@class, ' termentry/abbreviation ')) then sj:getTermbrowserString($language, 'Abbreviation')
+                else if (contains(@class, ' termentry/acronym ')) then sj:getTermbrowserString($language, 'Acronym')
+                else if (contains(@class, ' termentry/verb ')) then sj:getTermbrowserString($language, 'Verb')
+                else 'UNDEFINED'
+            }</td>
             <!-- Language -->
             <td class="termTable">
                 <xsl:call-template name="getFlag">
@@ -140,24 +117,16 @@
             <td class="termTable">
                 <xsl:choose>
                     <xsl:when test="contains(@usage, 'preferred')">
-                        <div class="alert alert-success">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Preferred')"/>
-                        </div>
+                        <div class="alert alert-success">{sj:getTermbrowserString($language, 'Usage Preferred')}</div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'notRecommended')">
-                        <div class="alert alert-danger">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Deprecated')"/>
-                        </div>
+                        <div class="alert alert-danger">{sj:getTermbrowserString($language, 'Usage Deprecated')}</div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'admitted')">
-                        <div class="alert alert-warning">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Admitted')"/>
-                        </div>
+                        <div class="alert alert-warning">{sj:getTermbrowserString($language, 'Usage Admitted')}</div>
                     </xsl:when>
                     <xsl:when test="contains(@usage, 'obsolete')">
-                        <div class="alert alert-info">
-                            <xsl:value-of select="sj:getTermbrowserString($language, 'Usage Obsolete')"/>
-                        </div>
+                        <div class="alert alert-info">{sj:getTermbrowserString($language, 'Usage Obsolete')}</div>
                     </xsl:when>
                 </xsl:choose>
             </td>
@@ -188,9 +157,7 @@
     <xsl:template match="*[contains(@class, ' termentry/agreedWith ')]">
         <div class="panel panel-default agreedWith">
             <div class="panel-heading">
-                <h3 class="panel-title">
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Agreed With')"/>
-                </h3>
+                <h3 class="panel-title">{sj:getTermbrowserString($language, 'Agreed With')}</h3>
             </div>
             <div class="panel-body">
                 <ul class="list-unstyled">
@@ -284,9 +251,7 @@
     <xsl:template match="*[contains(@class, ' termentry/antonyms ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
-                <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Antonyms')"/>
-                </strong>
+                <strong>{sj:getTermbrowserString($language, 'Antonyms')}</strong>
             </div>
             <div class="linklist">
                 <xsl:apply-templates select="." mode="processlinklist"/>
@@ -297,9 +262,7 @@
     <xsl:template match="*[contains(@class, ' termentry/superordinateConcepts ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
-                <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Superordinate Concepts')"/>
-                </strong>
+                <strong>{sj:getTermbrowserString($language, 'Superordinate Concepts')}</strong>
             </div>
             <div class="linklist">
                 <xsl:apply-templates select="." mode="processlinklist"/>
@@ -310,9 +273,7 @@
     <xsl:template match="*[contains(@class, ' termentry/subordinateConcepts ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
-                <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Subordinate Concepts')"/>
-                </strong>
+                <strong>{sj:getTermbrowserString($language, 'Subordinate Concepts')}</strong>
             </div>
             <div class="linklist">
                 <xsl:apply-templates select="." mode="processlinklist"/>
@@ -323,9 +284,7 @@
     <xsl:template match="*[contains(@class, ' termentry/instancesOf ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
-                <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Instances Of')"/>
-                </strong>
+                <strong>{sj:getTermbrowserString($language, 'Instances Of')}</strong>
             </div>
             <div class="linklist">
                 <xsl:apply-templates select="." mode="processlinklist"/>
@@ -336,9 +295,7 @@
     <xsl:template match="*[contains(@class, ' termentry/partsOf ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
-                <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Parts Of')"/>
-                </strong>
+                <strong>{sj:getTermbrowserString($language, 'Parts Of')}</strong>
             </div>
             <div class="linklist">
                 <xsl:apply-templates select="." mode="processlinklist"/>
@@ -349,9 +306,7 @@
     <xsl:template match="*[contains(@class, ' termentry/relatedTerms ')]">
         <div class="linklist linklist relinfo">
             <div class="relatedTermsHeader">
-                <strong>
-                    <xsl:value-of select="sj:getTermbrowserString($language, 'Related Terms')"/>
-                </strong>
+                <strong>{sj:getTermbrowserString($language, 'Related Terms')}</strong>
             </div>
             <div class="linklist">
                 <xsl:apply-templates select="." mode="processlinklist"/>

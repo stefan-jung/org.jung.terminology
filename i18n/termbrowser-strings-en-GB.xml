@@ -10,6 +10,7 @@
     <str name="Antonym">Antonym</str>
     <str name="Antonyms">Antonyms</str>
     <str name="Chronological Sequence">Chronological Sequence</str>
+    <str name="Concept Ticket">Concept Ticket</str>
     <str name="Definition Source">Source of Definition</str>
     <str name="Definition">Definition</str>
     <str name="Delimiter String">: </str>
