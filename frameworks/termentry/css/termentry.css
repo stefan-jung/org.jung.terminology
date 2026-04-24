@@ -247,7 +247,7 @@
             oxy_action_list(
                 oxy_action(id, 'term.definition.add'),
                 oxy_action(id, 'term.agreedWith.add'),
-                oxy_action(id, 'term.ticket.add'),
+                oxy_action(id, 'term.conceptTicket.add'),
                 oxy_action(id, 'term.altDefinition.add'),
                 oxy_action(id, 'term.equation-figure.add'),
                 oxy_action(id, 'term.note.add'),
