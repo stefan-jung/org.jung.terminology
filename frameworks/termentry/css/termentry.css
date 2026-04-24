@@ -25,6 +25,7 @@
     *[class~="termentry/altDefinition"],
     *[class~="termentry/altDefinitionText"],
     *[class~="termentry/annotation"],
+    *[class~="termentry/conceptTicket"],
     *[class~="termentry/termContext"],
     *[class~="termentry/termContextText"],
     *[class~="termentry/termContextSource"],
@@ -67,6 +68,7 @@
 *[class~="termentry/term-domains"],
 *[class~="termentry/termNotation"],
 *[class~="termentry/termSource"],
+*[class~="termentry/conceptTicket"],
 *[class~="topic/fig"],
 *[class~="topic/fig"][class~="equation-d/equation-figure"],
 *[class~="topic/fig"] > *[class~="topic/image"],
@@ -183,6 +185,7 @@
  ******************************************************************************************/
 *[class~="termentry/termentry"] > *[class~="topic/title"]:after,
 *[class~="termentry/partOfSpeech"]:after,
+*[class~="termentry/conceptTicket"]:after,
 *[class~="termentry/termBody"]:after {
     border-bottom: 0.05rem solid #767676;
     display: block;
@@ -244,6 +247,7 @@
             oxy_action_list(
                 oxy_action(id, 'term.definition.add'),
                 oxy_action(id, 'term.agreedWith.add'),
+                oxy_action(id, 'term.ticket.add'),
                 oxy_action(id, 'term.altDefinition.add'),
                 oxy_action(id, 'term.equation-figure.add'),
                 oxy_action(id, 'term.note.add'),
@@ -625,6 +629,61 @@
 *[class~="termentry/termContextText"] {
     -oxy-placeholder-content: "${i18n(term.contextText.placeholder)}";
     -oxy-show-placeholder: always;
+}
+
+/*********************************************
+ * CONCEPT TICKET
+ *********************************************/
+*[class~="termentry/conceptTicket"]:before(10) {
+    content:
+        oxy_buttonGroup(
+            label, '${i18n(term.conceptTicket)}',
+            transparent, 'true',
+            fontInherit, 'true',
+            actionStyle, 'both',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.conceptTicket.delete')
+            )
+        );
+    display: inline;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    padding-left: 5px;
+    -oxy-link: attr(href)
+}
+*[class~="termentry/conceptTicket"][class~="topic/xref"]:before {
+    display: none;
+}
+*[class~="termentry/conceptTicket"]:focus:before(10) {
+    content:
+        oxy_buttonGroup(
+            label, '${i18n(term.conceptTicket)}',
+            transparent, 'true',
+            fontInherit, 'true',
+            actionStyle, 'both',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.conceptTicket.delete')
+            )
+        )
+        oxy_urlChooser(
+            edit, '@href',
+            columns, 40
+        );
+    display: inline;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    padding-left: 5px;
+    -oxy-link: attr(href)
+}
+*[class~="termentry/conceptTicket"] {
+    -oxy-link: attr(href);
+    text-decoration: underline;
 }
 
 /*********************************************

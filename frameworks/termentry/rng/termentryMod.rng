@@ -90,6 +90,9 @@
     <define name="concept-domain">
       <ref name="concept-domain.element"/>
     </define>
+    <define name="conceptTicket">
+      <ref name="conceptTicket.element"/>
+    </define>
     <define name="partOfSpeech">
       <ref name="partOfSpeech.element"/>
     </define>
@@ -616,6 +619,9 @@
           <ref name="concept-domains"/>
         </optional>
         <optional>
+          <ref name="conceptTicket"/>
+        </optional>
+        <optional>
           <ref name="agreedWith"/>
         </optional>
         <ref name="partOfSpeech"/>
@@ -695,6 +701,51 @@
       </define>
       <define name="definitionText.attlist" combine="interleave">
         <ref name="definitionText.attributes"/>
+      </define>
+    </div>
+    <div>
+      <a:documentation> LONG NAME: Concept Ticket </a:documentation>
+      <define name="conceptTicket.content">
+        <text/>
+      </define>
+      <define name="conceptTicket.attributes">
+        <optional>
+          <attribute name="href"/>
+        </optional>
+        <optional>
+          <attribute name="keyref"/>
+        </optional>
+        <optional>
+          <attribute name="type"/>
+        </optional>
+        <optional>
+          <attribute name="format"/>
+        </optional>
+        <optional>
+          <attribute name="scope">
+            <choice>
+              <value>external</value>
+              <value>local</value>
+              <value>peer</value>
+              <value>-dita-use-conref-target</value>
+            </choice>
+          </attribute>
+        </optional>
+        <ref name="univ-atts"/>
+        <optional>
+          <attribute name="outputclass"/>
+        </optional>
+      </define>
+      <define name="conceptTicket.element">
+        <element name="conceptTicket" dita:longName="Concept Ticket">
+          <a:documentation>The &lt;conceptTicket> element represents a reference to a ticket in a task management system, which represents the terminology concept and can be used to manage the status and track discussions.
+            Category: Termentry elements</a:documentation>
+          <ref name="conceptTicket.attlist"/>
+          <ref name="conceptTicket.content"/>
+        </element>
+      </define>
+      <define name="conceptTicket.attlist" combine="interleave">
+        <ref name="conceptTicket.attributes"/>
       </define>
     </div>
     <div>
@@ -1666,6 +1717,12 @@
       <ref name="global-atts"/>
       <optional>
         <attribute name="class" a:defaultValue="- topic/div termentry/domains termentry/domains termentry/concept-domains "/>
+      </optional>
+    </define>
+    <define name="conceptTicket.attlist" combine="interleave">
+      <ref name="global-atts"/>
+      <optional>
+        <attribute name="class" a:defaultValue="- topic/xref concept/xref termentry/conceptTicket "/>
       </optional>
     </define>
     <define name="term-domain.attlist" combine="interleave">

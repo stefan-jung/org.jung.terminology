@@ -8038,6 +8038,138 @@ or contains(@class, ' termentry/termSource ')][1]</String>
 									</poPatch>
 									<poPatch>
 										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>201</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.conceptTicket.add</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.conceptTicket)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(term.conceptTicket.add_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/frameworks/termentry/icons/add-24.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/frameworks/termentry/icons/add-16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>not(//conceptTicket)</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>fragment</String>
+																		<String>&lt;conceptTicket href="" format="html" scope="external">${caret}&lt;/conceptTicket></String>
+																	</entry>
+																	<entry>
+																		<String>insertLocation</String>
+																		<String>//*[contains(@class, ' termentry/termBody ')][1]</String>
+																	</entry>
+																	<entry>
+																		<String>insertPosition</String>
+																		<String>Inside as last child</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
+											<String>authorExtensionDescriptor/actionDescriptors</String>
+										</field>
+										<field name="index">
+											<Integer>202</Integer>
+										</field>
+										<field name="value">
+											<action>
+												<field name="id">
+													<String>term.conceptTicket.delete</String>
+												</field>
+												<field name="name">
+													<String>${i18n(term.conceptTicket.delete)}</String>
+												</field>
+												<field name="description">
+													<String>${i18n(term.conceptTicket.delete_description)}</String>
+												</field>
+												<field name="largeIconPath">
+													<String>${framework}/frameworks/termentry/icons/delete-24.png</String>
+												</field>
+												<field name="smallIconPath">
+													<String>${framework}/frameworks/termentry/icons/delete-16.png</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="accelerator">
+													<null/>
+												</field>
+												<field name="actionModes">
+													<actionMode-array>
+														<actionMode>
+															<field name="xpathCondition">
+																<String>self::*[contains(@class, ' termentry/conceptTicket ')]</String>
+															</field>
+															<field name="argValues">
+																<serializableOrderedMap>
+																	<entry>
+																		<String>elementLocation</String>
+																		<String>.</String>
+																	</entry>
+																</serializableOrderedMap>
+															</field>
+															<field name="operationID">
+																<String>ro.sync.ecss.extensions.commons.operations.DeleteElementOperation</String>
+															</field>
+														</actionMode>
+													</actionMode-array>
+												</field>
+												<field name="enabledInReadOnlyContext">
+													<Boolean>false</Boolean>
+												</field>
+											</action>
+										</field>
+										<field name="patchHandling">
+											<String>addIndex</String>
+										</field>
+										<field name="anchor">
+											<null/>
+										</field>
+									</poPatch>
+									<poPatch>
+										<field name="fieldPath">
 											<String>authorExtensionDescriptor/menubarDescriptor/label</String>
 										</field>
 										<field name="index">

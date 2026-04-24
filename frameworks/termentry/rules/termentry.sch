@@ -241,4 +241,21 @@
         </sch:diagnostic>
     </sch:diagnostics>
     
+    <sch:pattern id="conceptTicket-duplicate">
+        <sch:rule context="conceptTicket">
+            <sch:let name="conceptTicketCount" value="count(//conceptTicket)"/>
+            <sch:report test="xs:integer($conceptTicketCount) gt 1" diagnostics="conceptTicket-duplicate-en conceptTicket-duplicate-de">
+                Only one &lt;conceptTicket> element is permitted per topic.
+            </sch:report>
+        </sch:rule>
+    </sch:pattern>
+    <sch:diagnostics>
+        <sch:diagnostic id="conceptTicket-duplicate-en" xml:lang="en">
+            Only one &lt;conceptTicket> element is permitted per topic.
+        </sch:diagnostic>
+        <sch:diagnostic id="conceptTicket-duplicate-de" xml:lang="de">
+            Nur ein &lt;conceptTicket> Element ist pro Topic zulässig.
+        </sch:diagnostic>
+    </sch:diagnostics>
+    
 </sch:schema>

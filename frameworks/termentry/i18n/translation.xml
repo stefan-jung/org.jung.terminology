@@ -353,6 +353,28 @@
         <val lang="en_US">Enter the alternative definition of the concept.</val>
         <val lang="de_DE">Geben Sie die alternative Definition des Begriffs ein.</val>
     </key>
+    
+    <!-- conceptTicket -->
+    <key value="term.conceptTicket">
+        <val lang="en_US">Concept ticket</val>
+        <val lang="de_DE">Begriffsticket</val>
+    </key>
+    <key value="term.conceptTicket.add">
+        <val lang="en_US">Add concept ticket reference</val>
+        <val lang="de_DE">Begriffsticket-Referenz einfügen</val>
+    </key>
+    <key value="term.conceptTicket.add_description">
+        <val lang="en_US">A concept ticket reference links to a ticket in a task management system, which represents the terminology concept and can be used to manage the status and track discussions.</val>
+        <val lang="de_DE">Eine Begriffsticket-Referenz verweist auf ein Ticket in einem Aufgabenmanagementsystem, das das Terminologiekonzept repräsentiert und zur Statusverwaltung und Nachverfolgung von Diskussionen verwendet werden kann.</val>
+    </key>
+    <key value="term.conceptTicket.delete">
+        <val lang="en_US">Delete concept ticket reference</val>
+        <val lang="de_DE">Begriffsticket-Referenz löschen</val>
+    </key>
+    <key value="term.conceptTicket.delete_description">
+        <val lang="en_US">Delete concept ticket reference</val>
+        <val lang="de_DE">Begriffsticket-Referenz löschen</val>
+    </key>
 
     <!-- agreedWith -->
     <key value="term.agreedWith">
