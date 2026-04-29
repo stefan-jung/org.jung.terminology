@@ -83,7 +83,7 @@
             <!-- SJ: I had to remove the part-of-speech="noun" attribute, otherwise the termchecker does not work anymore. -->
             <incorrect-term ignorecase="true" severity="info">
                 <match type="whole-word">{./termVariant/text()}</match>
-                <message>{./termVariant/text() || ': ' || normalize-space(preceding::definitionText[1]/text())}</message>
+                <message>{./termVariant/text() || ': ' || normalize-space(string-join(preceding::definitionText[1]/text()))}</message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
@@ -98,7 +98,7 @@
                 <match type="whole-word">{./termVariant/text()}</match>
                 <!-- Show the term also in the message, because in batch terminology validation, the user
                     only sees the content of <message> in the Results view. -->
-                <message>{./termVariant/text() || ': ' || normalize-space(preceding::definitionText[1]/text())}</message>
+                <message>{./termVariant/text() || ': ' || normalize-space(string-join(preceding::definitionText[1]/text()))}</message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
@@ -112,11 +112,11 @@
             <incorrect-term ignorecase="true" severity="error">
                 <match type="whole-word">{./termVariant/text()}</match>
                 <xsl:for-each select="$root//*[contains(@class, ' termentry/termNotation ')][contains(@language, $language)][contains(@usage, 'preferred') or contains(@usage, 'admitted')]">
-                    <suggestion format="text">{normalize-space(./termVariant/text())}</suggestion>
+                    <suggestion format="text">{normalize-space(string-join(./termVariant/text()))}</suggestion>
                 </xsl:for-each>
                 <!-- Show the term also in the message, because in batch terminology validation, the user
                     only sees the content of <message> in the Results view. -->
-                <message>{./termVariant/text() ||': ' || normalize-space(preceding::definitionText[1]/text())}</message>
+                <message>{./termVariant/text() ||': ' || normalize-space(string-join(preceding::definitionText[1]/text()))}</message>
                 <!--<link>https://www.example.com</link>-->
             </incorrect-term>
         </xsl:if>
