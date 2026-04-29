@@ -95,17 +95,18 @@
     </xsl:template>
        
     <xsl:template match="*[contains(@class, ' termentry/termNotation ')]">
+        <xsl:variable name="label" as="xs:string" select="
+            if (contains(@class, ' termentry/fullForm ')) then sj:getTermbrowserString($language, 'Full Form')
+            else if (contains(@class, ' termentry/abbreviation ')) then sj:getTermbrowserString($language, 'Abbreviation')
+            else if (contains(@class, ' termentry/acronym ')) then sj:getTermbrowserString($language, 'Acronym')
+            else if (contains(@class, ' termentry/verb ')) then sj:getTermbrowserString($language, 'Verb')
+            else 'UNDEFINED'
+            "/>
         <tr>
             <!-- Term -->
             <td class="termTable">{*[contains(@class, ' termentry/termVariant ')]}</td>
             <!-- Type -->
-            <td class="termTable">{
-                if (contains(@class, ' termentry/fullForm ')) then sj:getTermbrowserString($language, 'Full Form')
-                else if (contains(@class, ' termentry/abbreviation ')) then sj:getTermbrowserString($language, 'Abbreviation')
-                else if (contains(@class, ' termentry/acronym ')) then sj:getTermbrowserString($language, 'Acronym')
-                else if (contains(@class, ' termentry/verb ')) then sj:getTermbrowserString($language, 'Verb')
-                else 'UNDEFINED'
-            }</td>
+            <td class="termTable">{$label}</td>
             <!-- Language -->
             <td class="termTable">
                 <xsl:call-template name="getFlag">

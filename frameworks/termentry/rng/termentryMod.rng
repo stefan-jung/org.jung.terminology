@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="urn:oasis:names:tc:dita:rng:vocabularyModuleDesc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" 
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/">
   <moduleDesc xmlns="http://dita.oasis-open.org/architecture/2005/">
     <moduleTitle>DITA Termentry</moduleTitle>
     <headerComment xml:space="preserve">
@@ -205,6 +208,10 @@
     <define name="languageSelection-atts">
       <attribute name="language" a:defaultValue="en-GB">
         <a:documentation>The language of the term</a:documentation>
+        <!-- 
+          ISO 639 Language Codes: https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
+          ISO 3166 Country Codes: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
+        -->
         <choice>
           <value>af-ZA</value><a:documentation>Afrikaans - South Africa</a:documentation>
           <value>ar-AE</value><a:documentation>Arabic - United Arab Emirates</a:documentation>
@@ -337,6 +344,8 @@
           <value>ms-BN</value><a:documentation>Malay - Brunei</a:documentation>
           <value>ms-MY</value><a:documentation>Malay - Malaysia</a:documentation>
           <value>ms</value><a:documentation>Malay</a:documentation>
+          <value>mt</value><a:documentation>Maltese</a:documentation>
+          <value>mt-MT</value><a:documentation>Maltese (Malta)</a:documentation>
           <value>nb-NO</value><a:documentation>Norwegian (Bokmål) - Norway</a:documentation>
           <value>nl-BE</value><a:documentation>Dutch - Belgium</a:documentation>
           <value>nl-NL</value><a:documentation>Dutch - Netherlands</a:documentation>
