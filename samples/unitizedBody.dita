@@ -29,7 +29,7 @@
  </termBody>
   <relations>
     <antonyms>
-      <antonym keyref="ladderFrame"/>
+      <antonym keyref="ladderFrame" termdomain="product-development"/>
     </antonyms>
     <superordinateConcepts>
       <superordinateConcept keyref="chassis"/>

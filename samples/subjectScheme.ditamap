@@ -7,96 +7,29 @@
         </subjectHeadMeta>
     </subjectHead>
     <hasInstance>
-        <subjectdef keys="termdomainValues">
-            <subjectdef keys="manufacturer">
+        <subjectdef keys="termdomains">
+            <subjectdef keys="marketing">
                 <topicmeta>
-                    <navtitle>Manufacturer</navtitle>
+                    <navtitle>Marketing</navtitle>
+                    <shortdesc>Concept/Term is used by Marketing.</shortdesc>
                 </topicmeta>
-                <subjectdef keys="ford">
-                    <topicmeta>
-                        <navtitle>Ford</navtitle>
-                    </topicmeta>
-                </subjectdef>
-                <subjectdef keys="vw">
-                    <topicmeta>
-                        <navtitle>Volkswagen</navtitle>
-                    </topicmeta>
-                </subjectdef>
-                <subjectdef keys="setra">
-                    <topicmeta>
-                        <navtitle>Setra</navtitle>
-                    </topicmeta>
-                </subjectdef>
             </subjectdef>
-            <subjectdef keys="TransportationCategory">
+            <subjectdef keys="technical-documentation">
                 <topicmeta>
-                    <navtitle>Transportation Category</navtitle>
+                    <navtitle>Technical Documentation</navtitle>
+                    <shortdesc>Concept/Term is used by Technical Documentation.</shortdesc>
                 </topicmeta>
-                <subjectdef keys="cargo">
-                    <topicmeta>
-                        <navtitle>Cargo</navtitle>
-                    </topicmeta>
-                </subjectdef>
-                <subjectdef keys="persons">
-                    <topicmeta>
-                        <navtitle>Persons</navtitle>
-                    </topicmeta>
-                    <subjectdef keys="private">
-                        <topicmeta>
-                            <navtitle>Private</navtitle>
-                        </topicmeta>
-                    </subjectdef>
-                    <subjectdef keys="public">
-                        <topicmeta>
-                            <navtitle>public</navtitle>
-                        </topicmeta>
-                    </subjectdef>
-                </subjectdef>
-                <subjectdef keys="Fun">
-                    <topicmeta>
-                        <navtitle>Sport</navtitle>
-                    </topicmeta>
-                    <subjectdef keys="sport">
-                        <topicmeta>
-                            <navtitle>Sport</navtitle>
-                        </topicmeta>
-                    </subjectdef>
-                    <subjectdef keys="vacation">
-                        <topicmeta>
-                            <navtitle>Vacation</navtitle>
-                        </topicmeta>
-                    </subjectdef>
-                </subjectdef>
+            </subjectdef>
+            <subjectdef keys="product-development">
+                <topicmeta>
+                    <navtitle>Product Development</navtitle>
+                    <shortdesc>Concept/Term is used by Product Development.</shortdesc>
+                </topicmeta>
             </subjectdef>
         </subjectdef>
-
     </hasInstance>
-    <subjectdef keys="concept-domain-values">
-        <topicmeta>
-            <navtitle>Concept Domain Values</navtitle>
-        </topicmeta>
-        <subjectdef keys="marketing">
-            <topicmeta>
-                <navtitle>Marketing</navtitle>
-            </topicmeta>
-        </subjectdef>
-        <subjectdef keys="product-development">
-            <topicmeta>
-                <navtitle>Product Development</navtitle>
-            </topicmeta>
-        </subjectdef>
-        <subjectdef keys="technical-documentation">
-            <topicmeta>
-                <navtitle>Technical Documentation</navtitle>
-            </topicmeta>
-        </subjectdef>
-    </subjectdef>
     <enumerationdef>
         <attributedef name="termdomain"/>
-        <subjectdef keyref="termdomainValues"/>
-    </enumerationdef>
-    <enumerationdef>
-        <attributedef name="concept-domain"/>
-        <subjectdef keyref="concept-domain-values"/>
+        <subjectdef keyref="termdomains"/>
     </enumerationdef>
 </subjectScheme>

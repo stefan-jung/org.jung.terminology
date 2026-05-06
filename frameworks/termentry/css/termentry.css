@@ -444,16 +444,16 @@
  *********************************************/
 *[class~="topic/image"] > *[class~="topic/alt"]:before(10) {
     content:
-    oxy_buttonGroup(
-        label, '${i18n(term.alt)}',
-        transparent, 'true',
-        fontInherit, 'true',
-        actionStyle, 'both',
-        actions,
-        oxy_action_list(
-            oxy_action(id, 'term.alt.delete')
-        )
-    );
+        oxy_buttonGroup(
+            label, '${i18n(term.alt)}',
+            transparent, 'true',
+            fontInherit, 'true',
+            actionStyle, 'both',
+            actions,
+            oxy_action_list(
+                oxy_action(id, 'term.alt.delete')
+            )
+        );
 }
 
 /*********************************************
@@ -1568,8 +1568,9 @@
  * XREF
  *********************************************/
 *[class~="topic/xref"][href]:before {
-    content: url('../icons/link_12.png');
+    content: url('../icons/link_12.png') " ";
     -oxy-link: attr(href);
+    text-decoration: none;
 }
 *[class~="topic/xref"][href]:empty {
     -oxy-placeholder-content: attr(href);

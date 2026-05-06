@@ -21,8 +21,8 @@
       </image>
     </fig>
     <partOfSpeech value="noun"/>
-    <fullForm language="en-GB" usage="preferred">
-      <termVariant xml:lang="en-GB">engine </termVariant>
+    <fullForm language="en-GB" usage="preferred" termdomain="marketing">
+      <termVariant xml:lang="en-GB" >engine</termVariant>
     </fullForm>
     <fullForm language="en-GB" usage="notRecommended">
       <termVariant xml:lang="en-GB">motor</termVariant>

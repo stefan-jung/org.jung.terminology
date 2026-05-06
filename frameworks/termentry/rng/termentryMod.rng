@@ -445,6 +445,9 @@
     </define>
     <define name="termLink-atts">
       <optional>
+        <attribute name="termdomain"/>
+      </optional>
+      <optional>
         <attribute name="href"/>
       </optional>
       <attribute name="keyref"/>
@@ -559,6 +562,9 @@
       <optional>
         <attribute name="spectitle"/>
       </optional>
+      <!--<optional>
+        <attribute name="termdomain"/>
+      </optional>-->
     </define>
   </div>
   
@@ -1632,6 +1638,9 @@
       </define>
       <define name="relatedTerm.attributes">
         <ref name="termLink-atts"/>
+        <!--<optional>
+          <attribute name="termdomain"/>
+        </optional>-->
       </define>
       <define name="relatedTerm.element">
         <element name="relatedTerm" dita:longName="Related Term">

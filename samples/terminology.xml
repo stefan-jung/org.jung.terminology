@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="https://www.dita-ot.org/project">
-  
-  <context name="Terminology" id="terminology_context">
+
+  <!-- Contexts -->
+  <context name="Terminology - Complete" id="terminology-complete_context">
     <input href="terminology.ditamap"/>
+  </context>
+  <context name="Terminology - Marketing" id="terminology-marketing_context">
+    <input href="terminology.ditamap"/>
+    <profile>
+      <ditaval href="ditaval/marketing.ditaval"/>
+    </profile>
+  </context>
+  <context name="Terminology - Technical Documentation" id="terminology-technical-documentation_context">
+    <input href="terminology.ditamap"/>
+    <profile>
+      <ditaval href="ditaval/technical-documentation.ditaval"/>
+    </profile>
+  </context>
+  <context name="Terminology - Product Development" id="terminology-product-development_context">
+    <input href="terminology.ditamap"/>
+    <profile>
+      <ditaval href="ditaval/product-development.ditaval"/>
+    </profile>
   </context>
   
   <deliverable name="Termbrowser" id="tmb">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./termbrowser"/>
     <publication transtype="termbrowser-responsive">
       <param name="webhelp.publishing.template" path="../publishing"/>
@@ -16,24 +35,24 @@
   </deliverable>
   
   <deliverable name="Termchecker DITA" id="termchecker-dita">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./termchecker-dita"/>
     <publication transtype="termchecker-dita"/>
   </deliverable>
   <deliverable name="Termchecker XLIFF" id="termchecker-xliff">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./termchecker-xliff"/>
     <publication transtype="termchecker-xliff"/>
   </deliverable>
   
   <deliverable name="TBX Basic v2" id="tbx-basic-v2">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./tbx-basic-v2"/>
     <publication transtype="tbx-basic-v2"/>
   </deliverable>
   
   <deliverable name="TBX Basic v3" id="tbx-basic-v3">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./tbx-basic-v3"/>
     <publication transtype="tbx-basic-v3">
       <param name="main.language" value="en-GB"/>
@@ -41,7 +60,7 @@
   </deliverable>
   
   <deliverable name="TBX Min v3 DCA" id="tbx-min-v3-dca">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./tbx-min-v3-dca"/>
     <publication transtype="tbx-min-v3-dca">
       <param name="source.language" value="en-US"/>
@@ -50,7 +69,7 @@
   </deliverable>
   
   <deliverable name="TBX Min v3 DCT" id="tbx-min-v3-dct">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./tbx-min-v3-dct"/>
     <publication transtype="tbx-min-v3-dct">
       <param name="source.language" value="en-US"/>
@@ -59,25 +78,43 @@
   </deliverable>
   
   <deliverable name="Multiterm XML" id="multiterm-xml">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./multiterm"/>
     <publication transtype="multiterm"/>
   </deliverable>
 
   <deliverable name="Multiterm XML Custom" id="multiterm-xml-custom">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./multiterm-custom"/>
     <publication transtype="multiterm-custom"/>
   </deliverable>
   
-  <deliverable name="Oxygen Termchecker" id="oxygen-termchecker">
-    <context idref="terminology_context"/>
-    <output href="./oxygen-termchecker"/>
+  <deliverable name="Oxygen Termchecker - Complete" id="oxygen-termchecker-complete">
+    <context idref="terminology-complete_context"/>
+    <output href="./oxygen-termchecker/complete"/>
+    <publication transtype="oxygen-termchecker"/>
+  </deliverable>
+
+  <deliverable name="Oxygen Termchecker - Marketing" id="oxygen-termchecker-marketing">
+    <context idref="terminology-marketing_context"/>
+    <output href="./oxygen-termchecker/marketing"/>
+    <publication transtype="oxygen-termchecker"/>
+  </deliverable>
+
+  <deliverable name="Oxygen Termchecker - Technical Documentation" id="oxygen-termchecker-technical-documentation">
+    <context idref="terminology-technical-documentation_context"/>
+    <output href="./oxygen-termchecker/technical-documentation"/>
+    <publication transtype="oxygen-termchecker"/>
+  </deliverable>
+
+  <deliverable name="Oxygen Termchecker - Product Development" id="oxygen-termchecker-product-development">
+    <context idref="terminology-product-development_context"/>
+    <output href="./oxygen-termchecker/product-development"/>
     <publication transtype="oxygen-termchecker"/>
   </deliverable>
 
   <deliverable name="Terminology JSON" id="terminology-json">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./terminology-json"/>
     <publication transtype="terminology-json">
       <param name="source.language" value="en-GB"/>
@@ -85,15 +122,15 @@
   </deliverable>
 
   <deliverable name="Terminology XML" id="terminology-xml">
-    <context idref="terminology_context"/>
+    <context idref="terminology-complete_context"/>
     <output href="./terminology-xml"/>
     <publication transtype="terminology-xml">
       <param name="source.language" value="en-GB"/>
     </publication>
   </deliverable>
 
-  <deliverable name="Terminology Markdown" id="terminology-md">
-    <context idref="terminology_context"/>
+  <deliverable name="Terminology Markdown" id="terminology-markdown">
+    <context idref="terminology-complete_context"/>
     <output href="./terminology-md"/>
     <publication transtype="terminology-md">
       <param name="source.language" value="en-GB"/>

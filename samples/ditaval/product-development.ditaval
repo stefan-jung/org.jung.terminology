@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<val>
+    <prop action="exclude" att="termdomain"/>
+    <prop action="include" att="termdomain" val="product-development"/>
+    <prop action="include" att="deliveryTarget"/>
+</val>

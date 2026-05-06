@@ -6,14 +6,14 @@
     <termref href="advancedDriverAssistanceSystem.dita" keys="advancedDriverAssistanceSystem"/>
     <termref href="antiLockBrakingSystem.dita" keys="antiLockBrakingSystem"/>
     <termref href="axle.dita" keys="axle"/>
-    <termref href="beetle.dita" keys="beetle" termdomain="vw"/>
+    <termref href="beetle.dita" keys="beetle"/>
     <termref href="brakeLight.dita" keys="brakeLight"/>
-    <termref href="bus.dita" keys="bus" termdomain="persons public"/>
-    <termref href="car.dita" keys="car" termdomain="persons private"/>
+    <termref href="bus.dita" keys="bus"/>
+    <termref href="car.dita" keys="car"/>
     <termref href="chassis.dita" keys="chassis"/>
-    <termref href="classBMotorHome.dita" keys="classBMotorHome" termdomain="private vacation"/>
-    <termref href="classBPlusMotorHome.dita" keys="classBPlusMotorHome" termdomain="private vacation"/>
-    <termref href="classCMotorHome.dita" keys="classCMotorHome" termdomain="private vacation"/>
+    <termref href="classBMotorHome.dita" keys="classBMotorHome"/>
+    <termref href="classBPlusMotorHome.dita" keys="classBPlusMotorHome"/>
+    <termref href="classCMotorHome.dita" keys="classCMotorHome"/>
     <termref href="coachwork.dita" keys="coachwork"/>
     <termref href="dieselEngine.dita" keys="dieselEngine"/>
     <termref href="electronicStabilityControl.dita" keys="electronicStabilityControl"/>
@@ -22,10 +22,10 @@
     <termref href="gasengine.dita" keys="gasengine"/>
     <termref href="headlamp.dita" keys="headlamp"/>
     <termref href="internalCombustionEngine.dita" keys="internalCombustionEngine"/>
-    <termref href="kaessbohrerSetraS110H.dita" termdomain="setra" keys="kaessbohrerSetraS110H"/>
-    <termref href="ladderFrame.dita" keys="ladderFrame"/>
+    <termref href="kaessbohrerSetraS110H.dita" keys="kaessbohrerSetraS110H"/>
+    <termref href="ladderFrame.dita" keys="ladderFrame" termdomain="product-development"/>
     <termref href="lighting.dita" keys="lighting"/>
-    <termref href="motorCycle.dita" termdomain="private sport" keys="motorCycle"/>
+    <termref href="motorCycle.dita" keys="motorCycle"/>
     <termref href="motorHome.dita" keys="motorHome"/>
     <termref href="motorVehicle.dita" keys="motorVehicle"/>
     <termref href="petrolEngine.dita" keys="petrolEngine"/>
@@ -34,7 +34,7 @@
     <termref href="rearPositionLamp.dita" keys="rearPositionLamp"/>
     <termref href="reversingLamp.dita" keys="reversingLamp"/>
     <termref href="transmission.dita" keys="transmission"/>
-    <termref href="truck.dita" keys="truck" termdomain="cargo"/>
+    <termref href="truck.dita" keys="truck"/>
     <termref href="turnSignal.dita" keys="turnSignal"/>
     <termref href="unitizedBody.dita" keys="unitizedBody"/>
     <termref href="vehicle.dita" keys="vehicle"/>
