@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
 
 env:
-  DITA_OT_VERSION: 4.3.4
+  DITA_OT_VERSION: 4.3.5
 
 jobs:
 
-  dita-ot_4-3-4:
+  dita-ot_4-3-5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,36 +23,39 @@ jobs:
           distribution: 'zulu'
       - name: DITA-OT
         run: |
-          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.3.4/dita-ot-4.3.4.zip
-          unzip -q dita-ot-4.3.4
-          chmod +x dita-ot-4.3.4/bin/dita
-          chmod +x dita-ot-4.3.4/bin/ant
-          rsync -aq --exclude='dita-ot-4.3.4' --exclude='.git' . dita-ot-4.3.4/plugins/org.jung.terminology
-          rsync -aq webhelp-dummy-plugin/ dita-ot-4.3.4/plugins/org.jung.terminology-webhelp-dummy-plugin
-          dita-ot-4.3.4/bin/dita --install
-          dita-ot-4.3.4/bin/dita transtypes 
+          curl --location --remote-name https://github.com/dita-ot/dita-ot/releases/download/4.3.5/dita-ot-4.3.5.zip
+          unzip -q dita-ot-4.3.5
+          chmod +x dita-ot-4.3.5/bin/dita
+          chmod +x dita-ot-4.3.5/bin/ant
+          rsync -aq --exclude='dita-ot-4.3.5' --exclude='.git' . dita-ot-4.3.5/plugins/org.jung.terminology
+          rsync -aq webhelp-dummy-plugin/ dita-ot-4.3.5/plugins/org.jung.terminology-webhelp-dummy-plugin
+          dita-ot-4.3.5/bin/dita --install
+          dita-ot-4.3.5/bin/dita transtypes 
       - name: Build test files
         run: |
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.3.4 --processing-mode=strict --verbose
-          dita-ot-4.3.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.3.4 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=termchecker-dita --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=termchecker-xliff --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v2 --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-complete --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-marketing --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-technical-documentation --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-product-development --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.3.5 --processing-mode=strict --verbose
+          dita-ot-4.3.5/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.3.5 --processing-mode=strict --verbose
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: org.jung.terminology-4-3-4
+          name: org.jung.terminology-4-3-5
           path: |
-            4.3.4
-            !4.3.4/**/*.html
-            !4.3.4/**/*.js
-            !4.3.4/**/*.css
+            4.3.5
+            !4.3.5/**/*.html
+            !4.3.5/**/*.js
+            !4.3.5/**/*.css
 
   dita-ot_4-2-3:
     runs-on: ubuntu-latest
@@ -81,7 +84,10 @@ jobs:
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.2.3 --processing-mode=strict --verbose
-          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-complete --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-marketing --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-technical-documentation --output=4.2.3 --processing-mode=strict --verbose
+          dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-product-development --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.2.3 --processing-mode=strict --verbose
           dita-ot-4.2.3/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.2.3 --processing-mode=strict --verbose
@@ -123,7 +129,10 @@ jobs:
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.1.2 --processing-mode=strict --verbose
-          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-complete --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-marketing --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-technical-documentation --output=4.1.2 --processing-mode=strict --verbose
+          dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-product-development --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.1.2 --processing-mode=strict --verbose
           dita-ot-4.1.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.1.2 --processing-mode=strict --verbose
@@ -165,7 +174,10 @@ jobs:
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=4.0.2 --processing-mode=strict --verbose
-          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-complete --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-marketing --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-technical-documentation --output=4.0.2 --processing-mode=strict --verbose
+          dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-product-development --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=4.0.2 --processing-mode=strict --verbose
           dita-ot-4.0.2/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=4.0.2 --processing-mode=strict --verbose
@@ -206,7 +218,10 @@ jobs:
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-basic-v3 --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dca --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=tbx-min-v3-dct --output=3.7.4 --processing-mode=strict --verbose
-          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-complete --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-marketing --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-technical-documentation --output=3.7.4 --processing-mode=strict --verbose
+          dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=oxygen-termchecker-product-development --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=multiterm-xml-custom --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-json --output=3.7.4 --processing-mode=strict --verbose
           dita-ot-3.7.4/bin/dita --project=samples/terminology.xml --deliverable=terminology-xml --output=3.7.4 --processing-mode=strict --verbose
