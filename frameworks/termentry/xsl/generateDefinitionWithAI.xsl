@@ -20,7 +20,9 @@
             else //title[1]/text()
             "/>
         
-        <xsl:value-of _disable-output-escaping="yes" select="
+        <xsl:value-of disable-output-escaping="yes" select="
+            replace(
+            replace(
             ai:transform-content(
             'Please write a definition for ''' || $concept-term || ''' and tell me the source of definition. '
             || 'Please create an XML root element called ''definition''. '
@@ -31,7 +33,8 @@
             || 'Create another child element of ''definition'' called ''definitionSource''. '
             || 'Create a child element of ''definitionSource'' called ''sourceName''. '
             || 'Place the source of the definition in the ''sourceName'' element. Please return the result as pure valid XML. Escape special characters as Unicode entities.',
-            .)
+            .), '```xml', '')
+            , '```', '')
             "/>
         
     </xsl:template>
