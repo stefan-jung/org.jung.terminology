@@ -32,7 +32,7 @@
             || 'Do not mention the term itself in the definition. If the word is, for instance, an appliance, call it an ''appliance''.'
             || 'Create another child element of ''definition'' called ''definitionSource''. '
             || 'Create a child element of ''definitionSource'' called ''sourceName''. '
-            || 'Place the source of the definition in the ''sourceName'' element. Please return the result as pure valid XML. Escape special characters as Unicode entities.',
+            || 'Place the source of the definition in the ''sourceName'' element. Please return the result as pure valid XML.',
             .), '```xml', '')
             , '```', '')
             "/>

@@ -258,4 +258,32 @@
         </sch:diagnostic>
     </sch:diagnostics>
     
+    <sch:pattern>
+        <!--
+            We intentionally match here on @class to find FullForm, Abbreviation,
+            and so forth.
+        -->
+        <sch:rule context="*[contains(@class, ' termentry/termNotation ')]">
+            <sch:let name="language" value="@language"/>
+            <sch:let name="usage" value="@usage"/>
+            <sch:let name="term" value="normalize-space(./termVariant/text())"/>
+            
+            <sch:report test="following-sibling::*
+                [contains(@class, ' termentry/termNotation ')]
+                [@language = $language]
+                [@usage = $usage]
+                [termVariant/text() = $term]
+                "
+                diagnostics="duplicate-term-en duplicate-term-de"/>
+        </sch:rule>
+    </sch:pattern>
+    <sch:diagnostics>
+        <sch:diagnostic id="duplicate-term-en" xml:lang="en">
+            Found duplicate term "<sch:value-of select="$term"/>" (language: "<sch:value-of select="$language"/>", usage: <sch:value-of select="$usage"/>)
+        </sch:diagnostic>
+        <sch:diagnostic id="duplicate-term-de" xml:lang="de">
+            Doppelter Term "<sch:value-of select="$term"/>" (Sprache: "<sch:value-of select="$language"/>", Verwendung: <sch:value-of select="$usage"/>)
+        </sch:diagnostic>
+    </sch:diagnostics>
+    
 </sch:schema>
