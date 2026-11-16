@@ -303,6 +303,8 @@
           <value>fr-LU</value><a:documentation>French - Luxembourg</a:documentation>
           <value>fr-MC</value><a:documentation>French - Monaco</a:documentation>
           <value>fr</value><a:documentation>French</a:documentation>
+          <value>ga</value><a:documentation>Irish</a:documentation>
+          <value>ga-IE</value><a:documentation>Irish - Ireland</a:documentation>
           <value>gl-ES</value><a:documentation>Galician - Galician</a:documentation>
           <value>gu-IN</value><a:documentation>Gujarati - India</a:documentation>
           <value>he-IL</value><a:documentation>Hebrew - Israel</a:documentation>

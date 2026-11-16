@@ -274,7 +274,15 @@
                 [@usage = $usage]
                 [termVariant/text() = $term]
                 "
+                sqf:fix="delete-duplicate"
+                sqf:default-fix="delete-duplicate"
                 diagnostics="duplicate-term-en duplicate-term-de"/>
+            <sqf:fix id="delete-duplicate">
+                <sqf:description>
+                    <sqf:title>Delete duplicate term</sqf:title>
+                </sqf:description>
+                <sqf:delete match="."/>
+            </sqf:fix>
         </sch:rule>
     </sch:pattern>
     <sch:diagnostics>
