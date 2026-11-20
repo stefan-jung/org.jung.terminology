@@ -12,6 +12,10 @@
  * Dark Theme
  *********************************************/
 @media oxygen-high-contrast-black, oxygen-dark-theme {
+
+    * {
+        color: #ffffff;
+    }
     *[class~="termentry/definition"],
     *[class~="termentry/definitionText"],
     *[class~="termentry/definitionSource"],
@@ -432,7 +436,10 @@
         link: attr(href);
     }
     *[keyref][keyref][keyref]:empty {
-        content: oxy_label(text, oxy_getSomeText(oxy_link-text(), 150, true), background-color, rgb(240, 240, 240));
+        content:
+            oxy_label(
+                text, oxy_getSomeText(oxy_link-text(), 150, true)
+            );
     }
     *[keyref][keyref][keyref]:empty {
         -oxy-link : oxy_concat("" , attr(keyref , keyref)) ;
@@ -1056,6 +1063,7 @@
             else if (@language = 'fr-FR') then '../flag-icon-css/fr.svg' \
             else if (@language = 'fr-LU') then '../flag-icon-css/lu.svg' \
             else if (@language = 'fr-MC') then '../flag-icon-css/mc.svg' \
+            else if (@language = 'ga-IE') then '../flag-icon-css/ie.svg' \
             else if (@language = 'gl-ES') then '../flag-icon-css/es.svg' \
             else if (@language = 'gu-IN') then '../flag-icon-css/in.svg' \
             else if (@language = 'he-IL') then '../flag-icon-css/il.svg' \
